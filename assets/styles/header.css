@@ -37,3 +37,8 @@ body {
 .link:hover {
     font-weight: 700;
 }
+
+.anchor-tag {
+    text-decoration: none;
+    color: black;
+}
