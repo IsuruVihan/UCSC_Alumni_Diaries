@@ -23,15 +23,31 @@ if (x.innerHTML === "Step 1 : Enter your email address") {
    }
 */
 
-function validateemail()  {  
+/*function ValidateEmail(inputText){
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(inputText.value.match(mailformat))
+    {
+        alert("Valid email address!");
+        document.form-mail.email.focus();
+        return true;
+    }
+    else{
+        alert("You have entered an invalid email address!");
+        document.form-mail.email.focus();
+        return false;
+        }
+}
+*/
 
-    let x=document.form-mail.email.value;  
-    let atposition=x.indexOf("@");  
-    let dotposition=x.lastIndexOf(".");  
 
-    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
-        alert("Please enter a valid e-mail address");  
-    return false;  
-    }  
-}  
+function checkEmail() {
 
+    var email = document.getElementById('email');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+ }
+}
