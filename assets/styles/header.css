@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-    box-shadow: 0 0 3px gray;
+    box-shadow: 0 0 10px lightgray;
     padding: 0.5em 2em;
     display: flex;
 }
