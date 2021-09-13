@@ -3,9 +3,9 @@
 
 <div class='reset-password'>
     <div class=img>
-        <img src='../assets/images/logo.jpeg' alt='logo' width='150' height='150'> <br>
+<!--        <img src='../assets/images/logo.jpeg' alt='logo' width='150' height='150'> <br>-->
     </div>
-    <p class='title'>Reset Password</p>
+    <h1 class='title'>Reset Password</h1>
     <form id='form' action="#" method="POST" class='reset-password-form'>
         <div class='container1'>
           <div class='labels'>
