@@ -38,10 +38,6 @@
     transition: all ease-in-out 0.5s;
 }
 
-.card:hover, .details:hover {
-    box-shadow: 1px 2px 4px #ff7875;
-}
-
 .title {
     font-weight: 600;
     font-size: 1.2em;
@@ -73,12 +69,6 @@
     height: 25px;
 }
 
-.btn:hover {
-    background: #ff7875;
-    border-color: #ff7875;
-    color: white;
-}
-
 .filter-btn {
     width: 32%;
     margin-top: 0.5em;
@@ -86,9 +76,27 @@
     border: 1px solid gray;
 }
 
-.view-btn {
+.filter-btn:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.view-btn, .delete-btn {
     background: #595959;
     border: 1px solid #595959;
+}
+
+.view-btn:hover {
+    background: #ff7875;
+    border-color: #ff7875;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #cf1322;
+    border-color: #cf1322;
+    color: white;
 }
 
 .input-field {
@@ -127,6 +135,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: all ease-in-out 0.5s;
+}
+
+.result:hover {
+    box-shadow: 0 0 5px lightgray;
 }
 
 .request-id {

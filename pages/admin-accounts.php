@@ -34,43 +34,43 @@
         </div>
         <div class='results'>
             <div class='result'>
-                <p class='request-id'>ID 1</p>
+                <p class='request-id'>RequestID 1</p>
                 <div class='buttons'>
                     <button class='view-btn btn'>View</button>
                 </div>
             </div>
             <div class='result'>
-                <p class='request-id'>ID 2</p>
+                <p class='request-id'>RequestID 2</p>
                 <div class='buttons'>
                     <button class='view-btn btn'>View</button>
                 </div>
             </div>
             <div class='result'>
-                <p class='request-id'>ID 3</p>
+                <p class='request-id'>RequestID 3</p>
                 <div class='buttons'>
                     <button class='view-btn btn'>View</button>
                 </div>
             </div>
             <div class='result'>
-                <p class='request-id'>ID 4</p>
+                <p class='request-id'>RequestID 4</p>
                 <div class='buttons'>
                     <button class='view-btn btn'>View</button>
                 </div>
             </div>
             <div class='result'>
-                <p class='request-id'>ID 5</p>
+                <p class='request-id'>RequestID 5</p>
                 <div class='buttons'>
                     <button class='view-btn btn'>View</button>
                 </div>
             </div>
             <div class='result'>
-                <p class='request-id'>ID 6</p>
+                <p class='request-id'>RequestID 6</p>
                 <div class='buttons'>
                     <button class='view-btn btn'>View</button>
                 </div>
             </div>
             <div class='result'>
-                <p class='request-id'>ID 7</p>
+                <p class='request-id'>RequestID 7</p>
                 <div class='buttons'>
                     <button class='view-btn btn'>View</button>
                 </div>
@@ -78,13 +78,231 @@
         </div>
     </div>
     <div class='card rejected-requests'>
-
+        <div class='title'>
+            Rejected Requests
+        </div>
+        <div class='filter'>
+            <div class='col1'>
+                <input class='input-field' type='text' placeholder='First Name' />
+                <input class='input-field' type='text' placeholder='Last Name' />
+                <select class='input-field'>
+                    <option value='All'>All</option>
+                    <option value='2018/2019'>2018/2019</option>
+                    <option value='2018/2019'>2019/2020</option>
+                    <option value='2018/2019'>2020/2021</option>
+                </select>
+            </div>
+            <div class='col2'>
+                <button class='filter-btn btn'>Filter</button>
+            </div>
+        </div>
+        <div class='results'>
+            <div class='result'>
+                <p class='request-id'>RequestID 1</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>RequestID 2</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>RequestID 3</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>RequestID 4</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>RequestID 5</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>RequestID 6</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>RequestID 7</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class='card registered'>
-
+        <div class='title'>
+            Registered
+        </div>
+        <div class='filter'>
+            <div class='col1'>
+                <input class='input-field' type='text' placeholder='First Name' />
+                <input class='input-field' type='text' placeholder='Last Name' />
+                <select class='input-field'>
+                    <option value='All'>All</option>
+                    <option value='2018/2019'>2018/2019</option>
+                    <option value='2018/2019'>2019/2020</option>
+                    <option value='2018/2019'>2020/2021</option>
+                </select>
+            </div>
+            <div class='col2'>
+                <button class='filter-btn btn'>Filter</button>
+            </div>
+        </div>
+        <div class='results'>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class='card banned'>
-    
+        <div class='title'>
+            Banned
+        </div>
+        <div class='filter'>
+            <div class='col1'>
+                <input class='input-field' type='text' placeholder='First Name' />
+                <input class='input-field' type='text' placeholder='Last Name' />
+                <select class='input-field'>
+                    <option value='All'>All</option>
+                    <option value='2018/2019'>2018/2019</option>
+                    <option value='2018/2019'>2019/2020</option>
+                    <option value='2018/2019'>2020/2021</option>
+                </select>
+            </div>
+            <div class='col2'>
+                <button class='filter-btn btn'>Filter</button>
+            </div>
+        </div>
+        <div class='results'>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+            <div class='result'>
+                <p class='request-id'>FirstName</p>
+                <p class='request-id'>LastName</p>
+                <p class='request-id'>Batch</p>
+                <div class='buttons'>
+                    <button class='view-btn btn'>View</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class='details'>
 
