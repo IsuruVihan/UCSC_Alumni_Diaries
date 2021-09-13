@@ -51,3 +51,21 @@ function checkEmail() {
     return false;
  }
 }
+
+function container_2Show() {
+    var x = document.getElementById("container-2");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function container_1Hide() {
+    var y = document.getElementById("container-1");
+    if (y.style.display === "flex") {
+      y.style.display = "none";
+    } else {
+      y.style.display = "flex";
+    }
+  }
