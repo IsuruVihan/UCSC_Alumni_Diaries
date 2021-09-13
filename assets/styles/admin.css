@@ -4,6 +4,7 @@
     height: 15vh;
     margin-top: 7vh;
     padding-left: 6.7em;
+    background: #fafafa;
 }
 
 .breadcrumb {
@@ -23,6 +24,7 @@
     align-items: center;
     height: 50vh;
     gap: 1.5em;
+    background: #fafafa;
 }
 
 .card-link {
@@ -31,6 +33,7 @@
 
 .card {
     cursor: pointer;
+    background: white;
     box-shadow: 4px 8px 16px lightgray;
     border-radius: 10px;
     width: 13vw;
