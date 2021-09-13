@@ -25,6 +25,10 @@
     gap: 1.5em;
 }
 
+.card-link {
+    text-decoration: none;
+}
+
 .card {
     cursor: pointer;
     box-shadow: 4px 8px 16px lightgray;
@@ -44,6 +48,7 @@
 }
 
 .title {
+    color: black;
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
