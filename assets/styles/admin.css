@@ -1,14 +1,19 @@
-.main-title-container {
+.main-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    margin-top: 8vh;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 7vh;
+    padding-left: 6.7em;
+}
+
+.breadcrumb {
+    cursor: pointer;
 }
 
 .main-title {
     font-weight: 700;
     font-size: 2em;
+    margin: 0;
 }
 
 .admin {
@@ -16,11 +21,12 @@
     justify-content: center;
     align-items: center;
     height: 50vh;
+    gap: 1.5em;
 }
 
 .card {
     cursor: pointer;
-    box-shadow: 1px 2px 4px gray;
+    box-shadow: 1px 2px 4px lightgray;
     border-radius: 10px;
     width: 13vw;
     height: 45vh;
@@ -29,14 +35,15 @@
     padding: 0 0.5em;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    transition: all ease-in-out 0.5s;
 }
 
 .card:hover {
-    box-shadow: 1px 2px 4px lightcoral;
+    box-shadow: 1px 2px 4px gray;
 }
 
 .title {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2em;
+    align-items: flex-start;
 }
