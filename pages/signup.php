@@ -1,7 +1,99 @@
+
+<link rel='stylesheet' href='../assets/styles/signup.css' /> 
+
 <?php include('../components/header.php'); ?>
 
-<div class='signup'>
-	Signup
+<div class='conatiner01'>
+<div class='container'>
+    <div class='title'>Sign Up</div>
+    <form action='#'>
+    
+        <div class='input_box'>
+        <span class='details'>Name with Initials</span>
+        <input type='text' placeholder='Name with initials'>
+        </div>
+        <div class='user_details'>
+        <div class='input_box'>
+        <span class='details'>First Name</span>
+        <input type='text' placeholder='First Name'>
+        </div>
+        <div class='input_box'>
+        <span class='details' >Last Name</span>
+        <input type='text' placeholder='Last Name'>
+        </div>
+        <div class='input_box'>
+        <span class='details' > NIC</span>
+        <input type='text' placeholder='NIC'>
+        </div>
+        <div class='input_box'>
+        <span class='details'>Email</span>
+        <input type='email' placeholder='Email'>
+        </div>
+        <div class='input_box'>
+        <span class='details'>Index Number</span>
+        <input type='text' placeholder='Index Number'>
+        </div>
+
+        <div class='input_box'>
+        <span class='details'>Contact Number</span>
+        <input type='text' placeholder='Contact Number'>
+</div> 
+</div>
+<div class='user_details01'>
+<div class='input_box'>  
+      <div class='labels'>
+            <label>Gender</label>
+          </div>
+        <select class='Gender' >
+          <option value='D' class='option01'>Select Gender</option> 
+           <option value='N'>Male</option>   
+          <option value='f'>Female</option>
+</select>
+</div>
+<div class='input_box'>
+<div class='labels'>
+            <label>Batch</label>
+          </div>
+        <select class='Batch'>
+            <option value='G' class='option01'>Select Batch</option> 
+              <option value="01">2004/2005</option>
+              <option value="02">2005/2006</option>
+              <option value="03">2006/2007</option>
+              <option value="04">2007/2008</option>
+              <option value="05">2008/2009</option>
+              <option value="06">2009/2010</option>
+              <option value="07">2010/2011</option>
+              <option value="08">2011/2012</option>
+              <option value="09">2012/2013</option>
+              <option value="10">2013/2014</option>
+              <option value="01">20014/2015</option>
+              <option value="02">2016/2017</option>
+              <option value="03">2018/2019</option>
+              <option value="04">2019/2020</option>
+              <option value="05">2020/2021</option>
+              <option value="06">2021/2022</option>
+              <option value="07">2022/2023</option>
+
+</select>
+</div>
+
+
+</div>
+     <div class='input_box'>
+        <span class='details'>Address</span>
+        <input type='text' placeholder='NIC'>
+        </div>
+          
+        <div class='buttons'>
+        <input type='submit' value='Sign Up' class='btn'>  
+                <input type='reset' value='Cancel' class='btn_cancel' />
+             
+ </div>
+ <p>Already have an account? <a href='login.php'>log in</a> </p>
+            
+      </form> 
+
+</div>
 </div>
 
 <?php include('../components/footer.php'); ?>
