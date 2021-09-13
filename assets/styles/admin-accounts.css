@@ -49,6 +49,9 @@
     flex-direction: column;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 3px;
 }
 
 .col1 {
@@ -147,14 +150,6 @@
     display: none;
 }
 
-.request-id {
-
-}
-
-.buttons {
-
-}
-
 .account-requests {
     grid-column-start: col1;
     grid-column-end: col2;
@@ -199,4 +194,54 @@
     grid-row-start: row1;
     grid-row-end: row3;
     margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-title {
+    margin-bottom: 0.6em;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.row-1, .row-2 {
+    display: flex;
+}
+
+.row-1 {
+    height: 60%;
+    margin-bottom: 10px;
+}
+
+.row-2 {
+    height: 40%;
+}
+
+.container-1, .container-2 {
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.container-1 {
+    width: 30%;
+    margin-right: 10px;
+}
+
+.container-2 {
+    width: 70%;
+}
+
+.contributions, .involved-projects {
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px;
+}
+
+.contributions {
+    margin-right: 10px;
 }

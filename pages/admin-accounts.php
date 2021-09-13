@@ -1,5 +1,6 @@
-<link rel='stylesheet' href='../assets/styles/admin-accounts.css' />
-<link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css' integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
+<link rel='stylesheet' href='../assets/styles/admin-accounts.css'/>
+<link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+      integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 <script src='../js/admin-accounts.js'></script>
 
 <?php include('../components/header.php'); ?>
@@ -20,8 +21,8 @@
         </div>
         <div class='filter'>
             <div class='col1'>
-                <input class='input-field' type='text' placeholder='First Name' />
-                <input class='input-field' type='text' placeholder='Last Name' />
+                <input class='input-field' type='text' placeholder='First Name'/>
+                <input class='input-field' type='text' placeholder='Last Name'/>
                 <select class='input-field'>
                     <option value='All'>All</option>
                     <option value='2018/2019'>2018/2019</option>
@@ -84,8 +85,8 @@
         </div>
         <div class='filter'>
             <div class='col1'>
-                <input class='input-field' type='text' placeholder='First Name' />
-                <input class='input-field' type='text' placeholder='Last Name' />
+                <input class='input-field' type='text' placeholder='First Name'/>
+                <input class='input-field' type='text' placeholder='Last Name'/>
                 <select class='input-field'>
                     <option value='All'>All</option>
                     <option value='2018/2019'>2018/2019</option>
@@ -155,8 +156,8 @@
         </div>
         <div class='filter'>
             <div class='col1'>
-                <input class='input-field' type='text' placeholder='First Name' />
-                <input class='input-field' type='text' placeholder='Last Name' />
+                <input class='input-field' type='text' placeholder='First Name'/>
+                <input class='input-field' type='text' placeholder='Last Name'/>
                 <select class='input-field'>
                     <option value='All'>All</option>
                     <option value='2018/2019'>2018/2019</option>
@@ -233,8 +234,8 @@
         </div>
         <div class='filter'>
             <div class='col1'>
-                <input class='input-field' type='text' placeholder='First Name' />
-                <input class='input-field' type='text' placeholder='Last Name' />
+                <input class='input-field' type='text' placeholder='First Name'/>
+                <input class='input-field' type='text' placeholder='Last Name'/>
                 <select class='input-field'>
                     <option value='All'>All</option>
                     <option value='2018/2019'>2018/2019</option>
@@ -306,7 +307,25 @@
         </div>
     </div>
     <div class='details'>
-
+        <div class='details-title'>
+            Details
+        </div>
+        <div class='row-1'>
+            <div class='container-1'>
+                Container-1
+            </div>
+            <div class='container-2'>
+                Container-2
+            </div>
+        </div>
+        <div class='row-2'>
+            <div class='contributions'>
+                Contributions
+            </div>
+            <div class='involved-projects'>
+                Involved Projects
+            </div>
+        </div>
     </div>
 </div>
 
