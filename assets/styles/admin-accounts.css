@@ -139,7 +139,12 @@
 }
 
 .result:hover {
-    box-shadow: 0 0 5px lightgray;
+    box-shadow: 0 0 5px gray;
+    cursor: pointer;
+}
+
+.buttons {
+    display: none;
 }
 
 .request-id {
