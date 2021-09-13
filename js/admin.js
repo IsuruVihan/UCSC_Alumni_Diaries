@@ -41,3 +41,22 @@ const wordList = [
         ]
     }
 ];
+
+const setDescription = (id) => {
+    let words;
+    wordList.map((set) => {
+        if (set.id === id) {
+            words = set.words;
+        }
+    });
+    return displayDescription(id, words);
+}
+
+const displayDescription = (id, words) => {
+    const element = document.getElementById(id);
+    words.map((word) => {
+        setTimeout(function () {
+            element.innerHTML = word;
+        }, 1500);
+    });
+}

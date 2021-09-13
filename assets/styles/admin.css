@@ -18,6 +18,7 @@
 
 .admin {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 50vh;
@@ -26,7 +27,7 @@
 
 .card {
     cursor: pointer;
-    box-shadow: 1px 2px 4px lightgray;
+    box-shadow: 4px 8px 16px lightgray;
     border-radius: 10px;
     width: 13vw;
     height: 45vh;
@@ -45,5 +46,29 @@
 .title {
     font-weight: 600;
     font-size: 1.2em;
-    align-items: flex-start;
+    text-align: center;
+}
+
+.list {
+    position: relative;
+    top: 1.5em;
+    font-size: 12px;
+    color: gray;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.list > li {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 3px 15px;
+    padding: 1px 0;
+    transition: all ease-in-out 0.5s;
+}
+
+.list > li:hover {
+    color: white;
+    background: gray;
 }

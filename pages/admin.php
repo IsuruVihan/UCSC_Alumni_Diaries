@@ -19,9 +19,14 @@
         <div class='img-container'>
             <img src='../assets/gifs/alumnus.gif' alt='accounts' width='100%' />
         </div>
-        <p class='description' id='accounts-description'>
-        
-        </p>
+        <div class='description' id='accounts-description'>
+            <ul class='list'>
+                <li>Account Requests</li>
+                <li>Rejected Requests</li>
+                <li>Registered Members</li>
+                <li>Banned Accounts</li>
+            </ul>
+        </div>
     </div>
     <div class='card' id='reports-card'>
         <p class='title'>
@@ -30,9 +35,12 @@
         <div class='img-container'>
             <img src='../assets/gifs/reports.gif' alt='reports' width='100%' />
         </div>
-        <p class='description' id='reports-description'>
-
-        </p>
+        <div class='description' id='reports-description'>
+            <ul class='list'>
+                <li>Post Reports</li>
+                <li>Comment Reports</li>
+            </ul>
+        </div>
     </div>
     <div class='card' id='subscriptions-card'>
         <p class='title'>
@@ -41,9 +49,13 @@
         <div class='img-container'>
             <img src='../assets/gifs/subscriptions.gif' alt='subscriptions' width='100%' />
         </div>
-        <p class='description' id='subscriptions-description'>
-
-        </p>
+        <div class='description' id='subscriptions-description'>
+            <ul class='list'>
+                <li>Subscriptions to be Accept</li>
+                <li>Subscription Done</li>
+                <li>Subscription Status</li>
+            </ul>
+        </div>
     </div>
     <div class='card' id='spendings-card'>
         <p class='title'>
@@ -52,20 +64,28 @@
         <div class='img-container'>
             <img src='../assets/gifs/spendings.gif' alt='spendings' width='100%' />
         </div>
-        <p class='description' id='spendings-description'>
-
-        </p>
+        <div class='description' id='spendings-description'>
+            <ul class='list'>
+                <li>Cash Spent</li>
+                <li>Items Spent</li>
+            </ul>
+        </div>
     </div>
-    <div class='card' id='inventory-card' onmouseover="DisplayDescription('inventory-description')">
+    <div class='card' id='inventory-card'>
         <p class='title'>
             Inventory
         </p>
         <div class='img-container'>
             <img src='../assets/gifs/inventory.gif' alt='inventory' width='100%' />
         </div>
-        <p class='description' id='inventory-description'>
-
-        </p>
+        <div class='description' id='inventory-description'>
+            <ul class='list'>
+                <li>Available Assets</li>
+                <li>Transferred Assets</li>
+                <li>Assets to be Accept</li>
+                <li>Assets Received</li>
+            </ul>
+        </div>
     </div>
 </div>
 
