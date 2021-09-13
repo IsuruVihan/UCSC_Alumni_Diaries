@@ -29,10 +29,11 @@
 .card {
     display: flex;
     flex-direction: column;
+    background: white;
 }
 
 .card, .details {
-    box-shadow: 1px 2px 4px gray;
+    box-shadow: 1px 2px 4px lightgray;
     border-radius: 10px;
     padding: 20px;
     transition: all ease-in-out 0.5s;
@@ -79,7 +80,7 @@
     border: 1px solid gray;
 }
 
-.filter-btn:hover {
+.filter-btn:hover, .recharge-report-btn:hover {
     background: white;
     border-color: black;
     color: black;
@@ -91,14 +92,14 @@
 }
 
 .view-btn:hover {
-    background: #ff7875;
-    border-color: #ff7875;
+    background: #096dd9;
+    border-color: #096dd9;
     color: white;
 }
 
 .delete-btn:hover {
-    background: #cf1322;
-    border-color: #cf1322;
+    background: #f5222d;
+    border-color: #f5222d;
     color: white;
 }
 
@@ -189,6 +190,7 @@
 }
 
 .details {
+    background: white;
     grid-column-start: col3;
     grid-column-end: col4;
     grid-row-start: row1;
@@ -220,7 +222,7 @@
 
 .container-1, .container-2 {
     display: flex;
-    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
     border-radius: 5px;
     padding: 10px;
 }
@@ -228,15 +230,146 @@
 .container-1 {
     width: 30%;
     margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.section-2, .section-3 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user-pic {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.subscription-type, .due-date, .account-type {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    text-align: center;
+}
+
+.recharge-report-btn {
+    width: 100%;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+.sec-row-1, .sec-row-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accept-btn, .remove-btn, .ban-btn, .unban-btn {
+    width: 45%;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+.accept-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.remove-btn:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+}
+
+.ban-btn:hover {
+    background: #fa8c16;
+    border: 1px solid #fa8c16;
+}
+
+.unban-btn:hover {
+    background: #096dd9;
+    border: 1px solid #096dd9;
 }
 
 .container-2 {
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mid-sec-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-name, .last-name, .gender, .batch, .nic, .contact-number, .email {
+    width: 50%;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+}
+
+.full-name, .email {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+}
+
+.address {
+    width: 100%;
+    height: 150px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+}
+
+.first-name, .gender, .nic {
+    margin-right: 5px;
+}
+
+.last-name, .batch, .contact-number {
+    margin-left: 5px;
 }
 
 .contributions, .involved-projects {
     display: flex;
-    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
     border-radius: 5px;
     width: 50%;
     padding: 10px;
