@@ -6,10 +6,11 @@ body {
 }
 .conatiner01 {
   display: flex;
-  height: 100vh;
+  height: 120vh;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  border: 1px solid #fff;
 }
 .container {
   max-width: 500px;
@@ -18,7 +19,7 @@ body {
   justify-content: space-between;
   border-radius: 16px;
   background-color: #fff;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #ced4da;
   border-radius: 16px;
   margin-bottom: 20px;
 }
@@ -29,28 +30,29 @@ body {
   font-weight: bold;
   text-align: center;
 }
-.input-box {
-  padding: 10px;
-  margin: 6px 0;
-  border-radius: 4px;
-  border: 1px solid #ced4da;
-  background-color: #fff;
+.input_box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: none;
   box-sizing: border-box;
-  font-size: 14px;
-  cursor: text;
 }
 .input_box input {
   height: 45px;
-  width: 98%;
+  width: 100%;
   outline: none;
   border: 1px solid #ced4da;
   background-color: #fff;
   font-weight: 700;
-  font-size: 0.8em;
-  color: #333;
+  font-size: 0.9rem;
   display: inline-block;
   line-height: normal;
 }
+
 .input_box input::placeholder {
   color: #aaa;
   font-weight: 500;
@@ -67,31 +69,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-right: 20px;
 }
-
 .user_details .input_box {
-  width: 48%;
-  justify-content: space-between;
-  font-size: 14px;
-}
-.user_details .input_box input {
-  height: 45px;
-  width: 106%;
-  outline: none;
-  border: 1px solid #ced4da;
-  background-color: #fff;
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: #333;
-}
-.labels {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-weight: 700;
+  width: 45%;
 }
 
 .user_details01 {
@@ -100,27 +80,26 @@ body {
   justify-content: space-between;
 }
 .user_details01 .input_box {
-  width: 50%;
-  justify-content: space-between;
-  font-size: 14px;
+  width: 45%;
 }
 .input_box select {
   height: 45px;
-  width: 98%;
+  width: 100%;
   outline: none;
   border: 1px solid #ced4da;
   background-color: #fff;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #aaa;
 }
+
 .buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .btn {
-  width: 47%;
+  width: 42%;
   background-color: #f34e57;
   border: none;
   outline: none;
@@ -129,7 +108,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
-  margin-left: 1px;
+  margin-left: 10px;
   margin-top: 10px;
   cursor: pointer;
   transition: 0.5s;
@@ -139,7 +118,7 @@ body {
   background-color: #e59b9b;
 }
 .btn_cancel {
-  width: 47%;
+  width: 42%;
   background-color: #662626;
   border: none;
   outline: none;
@@ -148,7 +127,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
-  margin-right: 1px;
+  margin-right: 10px;
   margin-top: 10px;
   cursor: pointer;
   transition: 0.5s;
@@ -156,70 +135,6 @@ body {
 .btn_cancel:hover {
   background-color: #e59797;
 }
-
-/* form .input_box input {
-  width: 94%;
-  height: 45px;
+p {
+  text-align: center;
 }
-form .input_box .details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-weight: bold;
-}
-.container form .user_details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: 120px;
-  margin-left: 0;
-}
-
-.user_details .input_box .details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-weight: bold;
-}
-.user_details .input_box input {
-  height: 45px;
-  width: 140%;
-  outline: none;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  padding-left: 15px;
-  font-size: 16px;
-}
-.Gender {
-  height: 45px;
-  width: 200%;
-  outline: none;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  padding-left: 15px;
-  font-size: 16px;
-  margin-right: 20px;
-  margin-left: 21px;
-}
-
-.btn {
-  width: 100%;
-  background-color: #f34e57;
-  border: none;
-  outline: none;
-  height: 49px;
-  border-radius: 15px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-right: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.btn:hover {
-  background-color: #e59b9b;
-} */

@@ -10,40 +10,39 @@
     
         <div class='input_box'>
         <span class='details'>Name with Initials</span>
-        <input type='text' placeholder='Name with initials'>
+        <input type='text' placeholder=' Enter Your Name with initials'>
         </div>
         <div class='user_details'>
         <div class='input_box'>
         <span class='details'>First Name</span>
-        <input type='text' placeholder='First Name'>
+        <input type='text' placeholder='Enter Your First Name'>
         </div>
         <div class='input_box'>
         <span class='details' >Last Name</span>
-        <input type='text' placeholder='Last Name'>
+        <input type='text' placeholder='Enter Your Last Name'>
         </div>
         <div class='input_box'>
         <span class='details' > NIC</span>
-        <input type='text' placeholder='NIC'>
+        <input type='text' placeholder='Enter Your NIC'>
         </div>
         <div class='input_box'>
         <span class='details'>Email</span>
-        <input type='email' placeholder='Email'>
+        <input type='email' placeholder='Enter Your Email Address'>
         </div>
         <div class='input_box'>
         <span class='details'>Index Number</span>
-        <input type='text' placeholder='Index Number'>
+        <input type='text' placeholder='Enter Your Index Number'>
         </div>
 
         <div class='input_box'>
         <span class='details'>Contact Number</span>
-        <input type='text' placeholder='Contact Number'>
+        <input type='text' placeholder='Enter Your Contact Number'>
 </div> 
 </div>
 <div class='user_details01'>
 <div class='input_box'>  
-      <div class='labels'>
-            <label>Gender</label>
-          </div>
+     
+          <span class='details' >Gender</span>
         <select class='Gender' >
           <option value='D' class='option01'>Select Gender</option> 
            <option value='N'>Male</option>   
@@ -51,9 +50,8 @@
 </select>
 </div>
 <div class='input_box'>
-<div class='labels'>
-            <label>Batch</label>
-          </div>
+
+          <span class='details' >Batch</span>
         <select class='Batch'>
             <option value='G' class='option01'>Select Batch</option> 
               <option value="01">2004/2005</option>
@@ -81,7 +79,7 @@
 </div>
      <div class='input_box'>
         <span class='details'>Address</span>
-        <input type='text' placeholder='NIC'>
+        <input type='text' placeholder='Enter Your Address'>
         </div>
           
         <div class='buttons'>
