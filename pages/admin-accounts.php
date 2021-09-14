@@ -362,10 +362,162 @@
         </div>
         <div class='row-2'>
             <div class='contributions'>
-                Contributions
+                <div class='contributions-title'>
+                    Contributions
+                </div>
+                <div class='list'>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='amount'>
+                            Amount
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class='involved-projects'>
-                Involved Projects
+                <div class='involved-projects-title'>
+                    Involved Projects
+                </div>
+                <div class='list'>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='position'>
+                            Position
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='position'>
+                            Position
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='position'>
+                            Position
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='position'>
+                            Position
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='position'>
+                            Position
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='position'>
+                            Position
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='position'>
+                            Position
+                        </div>
+                    </div>
+                    <div class='result'>
+                        <div class='project-name'>
+                            Project Name
+                        </div>
+                        <div class='position'>
+                            Position
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
