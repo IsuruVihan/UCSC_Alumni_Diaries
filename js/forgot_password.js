@@ -1,40 +1,28 @@
 
-function myFunction(){
-let x = document.getElementById("myDIV");
-if (x.innerHTML === "Step 1 : Enter your email address") {
-    x.innerHTML = "Step 2 : Enter the OTP";
-    return;
-} 
-    x.innerHTML = "Step 1 : Enter your email address";
-    
+const myFunction = () => {
+    const z = document.getElementById("myDIV");
+    z.innerHTML = "Step 2 : Enter the OTP";
 }
 
-function checkEmail() {
-
-    var email = document.getElementById('email');
-    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
+const checkEmail = () => {
+    const email = document.getElementById('email');
+    const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     if (!filter.test(email.value)) {
-    alert('Please provide a valid email address');
-    email.focus;
-    return false;
- }
+        alert('Please provide a valid email address');
+        email.focus;
+    } else {
+        myFunction();
+        container_2Show();
+        container_1Hide();
+    }
 }
 
-function container_2Show() {
-    var x = document.getElementById("container-2");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
+const container_2Show = () => {
+    const x = document.getElementById("container-2");
+    x.style.display = "block";
+}
 
-  function container_1Hide() {
-    var y = document.getElementById("container-1");
-    if (y.style.display === "flex") {
-      y.style.display = "none";
-    } else {
-      y.style.display = "flex";
-    }
-  }
+const container_1Hide = () => {
+    const y = document.getElementById("container-1");
+    y.style.display = "none";
+}
