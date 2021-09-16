@@ -14,7 +14,15 @@
     </p>
 </div>
 <div class='not-started-yet-projects'>
-    Not started yet projects
+    <div class='projects-list'>
+    
+    </div>
+    <div class='project-details'>
+
+    </div>
+    <div class='project-committee'>
+
+    </div>
 </div>
 
 <?php include('../components/footer.php'); ?>

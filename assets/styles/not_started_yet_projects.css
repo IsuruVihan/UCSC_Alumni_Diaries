@@ -18,5 +18,28 @@
 }
 
 .not-started-yet-projects {
+    border: 2px solid red;
+    background: #fafafa;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: [col1] 35% [col2] 30% [col3] 35% [col4];
+    margin: 0 6.7em 10vh;
+}
 
+.projects-list {
+    border: 2px solid orange;
+    grid-column-start: col1;
+    grid-column-end: col2;
+}
+
+.project-details {
+    border: 2px solid blue;
+    grid-column-start: col2;
+    grid-column-end: col3;
+}
+
+.project-committee {
+    border: 2px solid green;
+    grid-column-start: col3;
+    grid-column-end: col4;
 }
