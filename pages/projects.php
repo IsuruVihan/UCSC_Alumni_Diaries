@@ -27,7 +27,7 @@
             </div>
         </div>
     </a>
-    <a class='card-link' href='./admin-reports.php'>
+    <a class='card-link' href='./ongoing-projects.php'>
         <div class='card' id='reports-card'>
             <p class='title'>
                 Ongoing
@@ -42,7 +42,7 @@
             </div>
         </div>
     </a>
-    <a class='card-link' href='./admin-subscriptions.php'>
+    <a class='card-link' href='./closed-projects.php'>
         <div class='card' id='subscriptions-card'>
             <p class='title'>
                 Closed
@@ -57,7 +57,7 @@
             </div>
         </div>
     </a>
-    <a class='card-link' href='./admin-project-spendings.php'>
+    <a class='card-link' href='./completed-projects.php'>
         <div class='card' id='spendings-card'>
             <p class='title'>
                 Completed
