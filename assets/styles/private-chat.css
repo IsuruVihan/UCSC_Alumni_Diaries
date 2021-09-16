@@ -1,0 +1,47 @@
+.main-container {
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+.private-chat {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: #fafafa;
+    border:3px solid blue ;
+    grid-template-columns: [line1] 30% [line2] 40% [line3] 30% [line4];
+    margin: 0 6.7em 10vh;
+}
+.chat-list {
+    border: 3px solid green;
+    grid-column-start: line1;
+    grid-column-end: line2;
+    height: 80vh;
+    padding-left: 1.5em;
+}
+.chat{
+    border: 3px solid darkred;
+    grid-column-start: line2;
+    grid-column-end: line3;
+    height: 80vh;
+    padding-left: 1.5em;
+}
+.available-users {
+    border: 3px solid purple;
+    grid-column-start: line3;
+    grid-column-end: line4;
+    height: 80vh;
+    padding-left: 1.5em;
+}
