@@ -14,7 +14,8 @@
     </p>
 </div>
 
-<div class='suggestions'>
+<div class='main-box'>
+<div class='suggestions-form'>
 	<div class='card suggestions-box'>
 		<div class='title'>
             Any Suggestions?        
@@ -24,6 +25,16 @@
 
     </div>
 
+</div>
+
+<div class='suggestions-list-item'>
+	<div class='card suggestions-box'>
+		<div class='title'>
+            Suggestions List
+
+	
+
+    </div>
 </div>
 
 <?php include('../components/footer.php'); ?>

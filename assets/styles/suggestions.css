@@ -17,12 +17,22 @@
     margin: 0;
 }
 
-.suggestions {
+.main-box {
     background: #fafafa;
-    height: 50vh;
+    height: 150vh;
+    display: grid;
+    grid-template-rows: [row1] 50% [row2] 50% [row3];
+    margin-bottom: 2.5em;
+    margin-top: 2.5em;
+    
+   
+}
+
+.suggestions-form{
+    background: #fafafa;
+    height: 60vh;
     display: grid;
     grid-template-columns: [col1] 100% [col2];
-    margin-top: 2.5em;
     margin-left: 25.5em;
     margin-right: 25.5em;
     
@@ -42,6 +52,17 @@
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
+}
+
+.suggestions-list-item{
+    background: #fafafa;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: [col1] 100% [col2];
+    margin-top: 0.5em;
+    margin-left: 25.5em;
+    margin-right: 25.5em;
+        
 }
 
 .full-name, .email {
