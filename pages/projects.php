@@ -12,7 +12,7 @@
     </p>
 </div>
 <div class='projects'>
-    <a class='card-link' href='./admin-accounts.php'>
+    <a class='card-link' href='./not-started-yet-projects.php'>
         <div class='card' id='accounts-card'>
             <p class='title'>
                 Not Started Yet
