@@ -1,7 +1,7 @@
 <?php include('../components/header.php'); ?>
 <link rel='stylesheet' href='../assets/styles/private-chat.css'/>
 
-<div class='main-container'
+<div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> / Private Chat
     </p>
@@ -14,6 +14,16 @@
         <div class='chat-list-title'>
             Chat List
         </div>
+        <div class='filter-field'>
+            <div class='col1'>
+                <input class='input' type='text' placeholder='First Name'/>
+                <input class='input' type='text' placeholder='Last Name'/>
+            </div>
+            <div class='col2'>
+                <button class="filter-btn btn">Filter</button>
+            </div>
+        </div>
+
         <div class='chat-list-container'>
             <div class='chat-list-item'>
             </div>
