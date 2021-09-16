@@ -1,0 +1,45 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+.wall{
+    border: 2px solid red;
+    padding-left: 6.7em;
+    padding-right: 6.7em;
+    display: grid;
+    grid-template-columns: [line1] 30% [line2] 70% [line3] ;
+    grid-template-rows: [rowline1]1fr[rowline2];
+    height:80%;
+    
+}
+.important-notice{
+    border: 3px solid blue;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.common-wall{
+    border: 3px solid green;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+}
+
