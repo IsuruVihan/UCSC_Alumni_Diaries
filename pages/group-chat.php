@@ -13,5 +13,10 @@
         <i class="fas fa-comments"></i> Group Chat
     </p>
 </div>
+<div class='group-chat'>
+   <div class='chat-list'>
+       </div>
+ </div>
+
 
 <?php include('../components/footer.php'); ?>

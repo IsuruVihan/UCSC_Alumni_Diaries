@@ -5,7 +5,7 @@
   margin-top: 5vh;
   padding-left: 6.7em;
   background: #fafafa;
-  border: 2pc rgb(223, 19, 19) solid;
+  border: 2px rgb(223, 19, 19) solid;
 }
 
 .breadcrumb {
@@ -16,4 +16,22 @@
   font-weight: 700;
   font-size: 2em;
   margin: 0;
+}
+.group-chat {
+  background: #fafafa;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: [line1] 27% [line2] 46% [line3] 27% [col4];
+  grid-template-rows: [row1] 50% [row2] 50% [row3];
+  margin: 0 6.7em 10vh;
+  border: #430fd1 solid;
+}
+.chat-list {
+  grid-column-start: line1;
+  grid-column-end: line2;
+  grid-row-start: row1;
+  grid-row-end: row2;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border: 2px #ec14be solid;
 }
