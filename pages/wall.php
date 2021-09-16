@@ -1,5 +1,7 @@
 <?php include('../components/header.php'); ?>
 <link rel="stylesheet" href="../assets/styles/wall.css">
+<link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+      integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
 <div class='main-container'>
     <p class='breadcrumb'>
@@ -7,15 +9,15 @@
         Wall
     </p>
     <p class='main-title'>
-        <i class="fas fa-users-cog"></i> Wall
+	<i class="fa fa-globe"></i></i> Wall
     </p>
 </div>
 <div class='wall'>
 	<div class="important-notice">
 		<p class="title">Important Notices</p>
 		<div class="filter-box">
-                <button class='filter-btn btn'>Filter</button>
-				<button class='filter-btn btn'>Filter</button>
+                <button class='filter-btn btn'>Starred</button>
+				<button class='filter-btn btn'>All</button>
 		</div>
 		
 
