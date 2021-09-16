@@ -15,7 +15,7 @@
             <label>Email</label>
           </div>
           <div class='input-field'>
-            <input id='email' type='text' placeholder='Enter Email' />
+            <input id='email' type='text' placeholder='Enter Email' name='email'/>
           </div>
         </div>
         <div class='container2'>
@@ -23,14 +23,16 @@
             <label>Password</label>
         </div>
           <div class='input-field'>
-            <input id='confirmPassword' type='password' placeholder='Enter Password'/>
+            <input id='password' type='password' placeholder='Enter Password' name='password'/>
           </div>
         </div>
-
         
+        <div id="error"> </div>
+
+       
         <div class='check-box' align='left';>
                   <input type='checkbox' id='checkbox'>
-                  <label for="checkbox">Remember me</label>
+                  <label for="checkbox"> <b> Remember me </b> </label>
                 </div> 
         
 
@@ -50,11 +52,12 @@
             
                 <center> 
                 
-                <a class='loginpagelink' href='#'> Forgot Password? </a> <br>
-                <p> Not one of us yet? <a class='loginpagelink' href='signup.php'> Sign Up </a> </p>
+                <a class='loginpagelink' href='#'> <b> Forgot Password? </b> </a> <br>
+                <p> <b> Not one of us yet? </b> <a class='loginpagelink' href='signup.php'> <b> Sign Up </b> </a> </p>
                 </center>
         
     </form>
 </div>
+<script defer src='../js/login.js'> </script>
 
 <?php include('../components/footer.php'); ?>
