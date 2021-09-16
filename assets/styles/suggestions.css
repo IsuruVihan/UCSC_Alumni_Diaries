@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -65,7 +68,7 @@
         
 }
 
-.full-name, .email {
+.full-name {
     width: 100%;
     height: 40px;
     background: white;
@@ -73,5 +76,117 @@
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
+    margin-top: 2.0em;
+    text-align: center;
 }
   
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-name::placeholder {
+    text-align: center;
+    font-family: "Nunito", serif;
+
+}
+
+.title-field {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.sub-cont{
+    display: grid;
+    grid-template-columns: [col1] 40% [col2] 60% [col3];
+    margin-top: 1em;
+    
+}
+
+.image-field {
+    grid-column-start: [col1];
+    grid-column-end: [col2];
+    width: 100%;
+    height: 80px;
+    background: white;
+    /* border: 1px solid lightgray; */
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin-top: 1em;
+    padding-left: 11.5px;
+    padding-top: 30px;
+
+}
+
+::-webkit-file-upload-button {
+    background: gray;
+    color: white;
+    padding: 8px;
+    font-size: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-color: black;
+    transition: all 0.15s ease;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    line-height: 1.5;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    width: 50%;
+    
+}
+
+::-webkit-file-upload-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: black;
+
+}
+
+.comment {
+    grid-column-start: [col2];
+    grid-column-end: [col3];
+    width: 100%;
+    height: 130px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: left;
+}
+
+.submit-btn {
+    width: 50%;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    height:35px;
+    margin-left: 25%;
+}
+
+.submit-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: black;
+}
+

@@ -20,6 +20,25 @@
 		<div class='title'>
             Any Suggestions?        
 		</div>
+        <div class='fields'>
+            <form action='suggestions.php'>
+                <input type='text' class='full-name details-field'  placeholder='Your Name' >
+                <input type='text' class='title-field details-field'  placeholder='Email' >
+                <input type='text' class='title-field details-field'  placeholder='Title' >
+                <div class='sub-cont'>
+                    <input type='file' class='image-field' name='suggestion-image' accept='image/*'> 
+                    <textarea class='comment'>
+                    Enter your suggestions here... </textarea>
+                </div>
+                </div>
+                <div class='submit-button'>
+                    <input type='submit' class='submit-btn' value='Submit'>
+                </div>
+            </form>
+        </div>
+
+        </div>
+
 
 	
 
