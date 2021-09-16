@@ -86,13 +86,22 @@
 .input:hover {
     border-color: #ffccc7;
 }
+.input-avu{
+    width: 32%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+}
+.input-avu:hover {
+    border-color: #ffccc7;
+}
 
 .chat-list-container {
     border: 3px solid black;
-    /*display: flex;*/
-    /*flex-direction: column;*/
     justify-content: flex-start;
-
     overflow: hidden;
     overflow-y: scroll;
     height: 100%;
@@ -126,7 +135,7 @@
 .chat-title{
     /*border: 1px solid lightgray;*/
     border-radius: 5px;
-    height: 10vh;
+    height: 13vh;
     margin: 5px;
     /*justify-content: center;*/
     /*align-items: center;*/
@@ -138,13 +147,15 @@
 .chat-body{
     /*border: 1px solid lightgray;*/
     border-radius: 5px;
-    height: 40vh;
+    height: 42vh;
     /*padding: 5px;*/
     /*justify-content: center;*/
     /*align-items: center;*/
     /*gap: 5px;*/
     border: 3px solid paleturquoise;
-    margin: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     /*margin-bottom: 5px;*/
 }
 .input-field{
@@ -156,7 +167,9 @@
     /*align-items: center;*/
     /*gap: 5px;*/
     border: 3px solid rosybrown;
-    margin: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     /*margin-bottom: 5px;*/
 }
 

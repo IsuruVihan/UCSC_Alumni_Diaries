@@ -53,6 +53,19 @@
         <div class='available-users-title'>
             Available Users
             <div class='filter-field'>
+                <div class='col1'>
+                    <input class='input-avu' type='text' placeholder='First Name'/>
+                    <input class='input-avu' type='text' placeholder='Last Name'/>
+                    <select class='input-avu'>
+                        <option value='All'>All</option>
+                        <option value='2018/2019'>2018/2019</option>
+                        <option value='2018/2019'>2019/2020</option>
+                        <option value='2018/2019'>2020/2021</option>
+                    </select>
+                </div>
+                <div class='col2'>
+                    <button class="filter-btn btn">Filter</button>
+                </div>
             </div>
         </div>
         <div class='available-users-container'>
