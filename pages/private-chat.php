@@ -11,13 +11,58 @@
 </div>
 <div class='private-chat'>
     <div class='chat-list'>
-
+        <div class='chat-list-title'>
+            Chat List
+        </div>
+        <div class='chat-list-container'>
+            <div class='chat-list-item'>
+            </div>
+            <div class='chat-list-item'>
+            </div>
+            <div class='chat-list-item'>
+            </div>
+            <div class='chat-list-item'>
+            </div>
+           <div class='chat-list-item'>
+           </div>
+           <div class='chat-list-item'>
+           </div>
+           <div class='chat-list-item'>
+           </div>
+        </div>
     </div>
     <div class='chat'>
-
+        <div class='chat-title'>
+        </div>
+        <div class='chat-body'>
+        </div>
+        <div class='input-field'>
+        </div>
     </div>
     <div class='available-users'>
-
+        <div class='available-users-title'>
+            Available Users
+            <div class='filter-field'>
+            </div>
+        </div>
+        <div class='available-users-container'>
+             <div class='available-users-item'>
+             </div>
+             <div class='available-users-item'>
+             </div>
+             <div class='available-users-item'>
+             </div>
+             <div class='available-users-item'>
+             </div>
+            <div class='available-users-item'>
+            </div>
+            <div class='available-users-item'>
+            </div>
+            <div class='available-users-item'>
+            </div>
+            <div class='available-users-item'>
+            </div>
+        </div>
     </div>
 </div>
 
