@@ -22,22 +22,24 @@
 
 .main-box {
     background: #fafafa;
-    height: 150vh;
+    height: 150vh; 
     display: grid;
     grid-template-rows: [row1] 50% [row2] 50% [row3];
-    margin-bottom: 2.5em;
-    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
     
    
 }
 
 .suggestions-form{
+    grid-row-start: row1;
+    grid-row-end: row2;
     background: #fafafa;
     height: 60vh;
     display: grid;
     grid-template-columns: [col1] 100% [col2];
-    margin-left: 25.5em;
-    margin-right: 25.5em;
+    margin-left: 30.5em;
+    margin-right: 30.5em;
     
 }
 .card {
@@ -55,17 +57,20 @@
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .suggestions-list-item{
+    grid-row-start: row2;
+    grid-row-end: row3;
     background: #fafafa;
     height: 60vh;
-    display: grid;
+    display: grid; 
     grid-template-columns: [col1] 100% [col2];
-    margin-top: 0.5em;
-    margin-left: 25.5em;
-    margin-right: 25.5em;
-        
+    /* margin-top: 0.2em; */
+    margin-left: 30.5em;
+    margin-right: 30.5em;
+    /* margin-bottom: 2.5px;*/
 }
 
 .full-name {
@@ -76,21 +81,33 @@
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    margin-top: 2.0em;
+    /* margin-top: 8px; */
     text-align: center;
+    margin-bottom: 10px;
 }
+
+.full-name:hover{
+    border-color: #ffccc7;
+}
+
   
 .details-field {
     border: 1px solid lightgray;
     border-radius: 5px;
-    align-items: center;
-    justify-content: center;
+   
 }
 
-.full-name::placeholder {
-    text-align: center;
+.full-name,.title-field::placeholder {
+    text-align: left;
     font-family: "Nunito", serif;
+    padding-left: 10px;
 
+}
+
+.email-field::placeholder{
+    text-align: left;
+    font-family: "Nunito", serif;
+    padding-left: 10px;
 }
 
 .title-field {
@@ -101,30 +118,51 @@
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    margin-top: 1em;
+    /* margin-top: 1em; */
     text-align: center;
 }
 
-.sub-cont{
+.title-field:hover{
+    border-color: #ffccc7;
+}
+
+.email-field {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    /* margin-top: 1em; */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.email-field:hover{
+    border-color: #ffccc7;
+}
+
+/* .sub-cont{
     display: grid;
     grid-template-columns: [col1] 40% [col2] 60% [col3];
     margin-top: 1em;
     
-}
+} */
 
 .image-field {
-    grid-column-start: [col1];
-    grid-column-end: [col2];
+    /* grid-column-start: col1;
+    grid-column-end: col2; */
     width: 100%;
-    height: 80px;
+    /* height: 80px; */
     background: white;
     /* border: 1px solid lightgray; */
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
     margin-top: 1em;
-    padding-left: 11.5px;
-    padding-top: 30px;
+    /* padding-left: 11.5px; */
+    /* padding-top: 30px; */
 
 }
 
@@ -149,8 +187,10 @@
     vertical-align: middle;
     user-select: none;
     border: 1px solid transparent;
-    width: 50%;
-    
+    width: 30%;
+    /* margin-left: 35%; */
+    height: 35px;
+    font-family: 'Nunito' serif;
 }
 
 ::-webkit-file-upload-button:hover {
@@ -161,32 +201,44 @@
 }
 
 .comment {
-    grid-column-start: [col2];
-    grid-column-end: [col3];
+    /* grid-column-start: col2;
+    grid-column-end: col3; */
     width: 100%;
-    height: 130px;
+    height: 140px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
     text-align: left;
+    margin-top: 1em;
+}
+
+.comment:hover{
+    border-color: #ffccc7;
 }
 
 .submit-btn {
-    width: 50%;
+    width: 30%;
     background: gray;
     color: white;
     border: 1px solid gray;
     border-radius: 5px;
     cursor: pointer;
     height:35px;
-    margin-left: 25%;
+    margin-left: 35%;
 }
 
 .submit-btn:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border-color: black;
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.submit-button{
+    margin-top: 1em;
+}
+
+.suggestion-form-label{
+    color: rgb(36, 32, 32);
 }
 
