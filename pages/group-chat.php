@@ -15,7 +15,20 @@
 </div>
 <div class='group-chat'>
    <div class='chat-list'>
+
        </div>
+       <div class='chat-wall'>
+
+         </div>
+         <div class='available-users'>
+
+            </div>
+            <div class='create-group'>
+
+                </div>
+                <div class='edit-group'>
+
+                   </div>
  </div>
 
 
