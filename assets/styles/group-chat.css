@@ -1,0 +1,70 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  margin-top: 5vh;
+  padding-left: 6.7em;
+  background: #fafafa;
+  border: 2px rgb(223, 19, 19) solid;
+}
+
+.breadcrumb {
+  cursor: pointer;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 2em;
+  margin: 0;
+}
+.group-chat {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: [line1] 27% [line2] 46% [line3] 27% [col4];
+  grid-template-rows: [row1] 50% [row2] 25% [row3] 25%[row4];
+  margin: 0 6.7em 10vh;
+  border: 2px #5411c0 solid;
+}
+.chat-list {
+  grid-column-start: line1;
+  grid-column-end: line2;
+  grid-row-start: row1;
+  grid-row-end: row4;
+  margin-right: 5px;
+  border: 2px #0ce961 solid;
+}
+.chat-wall {
+  grid-column-start: line2;
+  grid-column-end: line3;
+  grid-row-start: row1;
+  grid-row-end: row4;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 2px #79ce17 solid;
+}
+.available-users {
+  grid-column-start: line3;
+  grid-column-end: line4;
+  grid-row-start: row1;
+  grid-row-end: row2;
+  margin-left: 5px;
+  border: 2px #0c6ce9 solid;
+}
+.create-group {
+  grid-column-start: line3;
+  grid-column-end: line4;
+  grid-row-start: row2;
+  grid-row-end: row3;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 2px #06deee solid;
+}
+.edit-group {
+  grid-column-start: line3;
+  grid-column-end: line4;
+  grid-row-start: row3;
+  grid-row-end: row4;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 2px #e9d30c solid;
+}
