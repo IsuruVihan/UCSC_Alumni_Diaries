@@ -1,0 +1,22 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+
+.closed-projects {
+
+}
