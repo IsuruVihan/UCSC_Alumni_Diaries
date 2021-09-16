@@ -43,3 +43,27 @@
     text-align: center;
 }
 
+.filter-box{
+    border:1px solid black;
+    height:8%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+}
+
+.filter-btn {
+    width: 32%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    background: gray;
+    border: 1px solid gray;
+}

@@ -13,7 +13,10 @@
 <div class='wall'>
 	<div class="important-notice">
 		<p class="title">Important Notices</p>
-		
+		<div class="filter-box">
+                <button class='filter-btn btn'>Filter</button>
+				<button class='filter-btn btn'>Filter</button>
+		</div>
 		
 
 	</div>
