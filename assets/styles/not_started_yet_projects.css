@@ -41,6 +41,33 @@
     grid-row-end: row2;
     margin-left: 5px;
     margin-right: 5px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.status {
+    margin-top: 0.5em;
+    color: gray;
+}
+
+.description {
+    height: 90em;
+    text-align: justify-all;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 1em;
+}
+
+.coordinator {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.coord-image {
+    border-radius: 100%;
 }
 
 .project-committee {
@@ -175,4 +202,10 @@
 .result:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
+}
+
+.detail-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
 }
