@@ -25,13 +25,10 @@
   margin: 0 6.7em 10vh;
   border: 2px #5411c0 solid;
 }
-.chat-list {
-  grid-column-start: line1;
-  grid-column-end: line2;
-  grid-row-start: row1;
-  grid-row-end: row4;
-  margin-right: 5px;
-  border: 2px #0ce961 solid;
+.card {
+  display: flex;
+  flex-direction: column;
+  background: white;
 }
 .filter {
   display: flex;
@@ -41,6 +38,68 @@
   border: 1px solid rgb(124, 6, 6);
   border-radius: 5px;
   padding: 3px;
+}
+.col01 {
+  display: flex;
+  justify-content: space-between;
+}
+.col02 {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: all ease-in-out 0.1s;
+  height: 25px;
+}
+
+.filter-btn {
+  width: 32%;
+  margin-top: 0.5em;
+  background: gray;
+  border: 1px solid gray;
+}
+.filter-btn:hover {
+  background: white;
+  border-color: black;
+  color: black;
+}
+.input-field {
+  width: 32%;
+  height: 25px;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  font-family: "Nunito", serif;
+}
+.input-field:hover {
+  border-color: #ffccc7;
+}
+.chats {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.chat-list {
+  grid-column-start: line1;
+  grid-column-end: line2;
+  grid-row-start: row1;
+  grid-row-end: row4;
+  margin-right: 5px;
+  border: 2px #dae90c solid;
 }
 
 .chat-wall {
@@ -67,7 +126,7 @@
   grid-row-end: row3;
   margin-left: 5px;
   margin-top: 5px;
-  border: 2px #06deee solid;
+  border: 2px #c7196a solid;
 }
 .edit-group {
   grid-column-start: line3;
@@ -76,5 +135,5 @@
   grid-row-end: row4;
   margin-left: 5px;
   margin-top: 5px;
-  border: 2px #e9d30c solid;
+  border: 2px #ee0505 solid;
 }

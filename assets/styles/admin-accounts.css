@@ -153,6 +153,7 @@
 .buttons {
   display: none;
 }
+
 .account-requests {
   grid-column-start: col1;
   grid-column-end: col2;
