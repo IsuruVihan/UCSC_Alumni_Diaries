@@ -15,8 +15,23 @@
 </div>
 <div class='group-chat'>
    <div class='chat-list'>
+   <div class='title'>
+            Chat List
+        </div>
+       <div class='filter'>
+           <div class='col01'>
+                 <input class='input-field' type='text' placeholder=' Name'/>
+                 <input class='input-field' type='text' placeholder=' Name'/>
 
+            
+                <div class='col2'>
+                      <button class='filter-btn btn'>Filter</button>
+                </div>  
+
+            </div>
+     
        </div>
+</div>
        <div class='chat-wall'>
 
          </div>

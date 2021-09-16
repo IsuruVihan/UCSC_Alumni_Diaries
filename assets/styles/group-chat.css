@@ -33,6 +33,16 @@
   margin-right: 5px;
   border: 2px #0ce961 solid;
 }
+.filter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  border: 1px solid rgb(124, 6, 6);
+  border-radius: 5px;
+  padding: 3px;
+}
+
 .chat-wall {
   grid-column-start: line2;
   grid-column-end: line3;
