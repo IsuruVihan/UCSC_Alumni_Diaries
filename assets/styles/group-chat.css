@@ -126,15 +126,15 @@
   
 
 }
+
 .chat-list{
   grid-column-start: line1;
   grid-column-end: line2;
   grid-row-start: row1;
   grid-row-end: row4;
   margin-right: 5px;
-  
-
 }
+
 .chat-wall{
   grid-column-start: line2;
   grid-column-end: line3;
@@ -144,6 +144,39 @@
   margin-left:5px;
   border: 2px green solid;
 
+}
+.chat-wall-grid{
+  background: #fafafa;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: [row1] 10% [row2] 37.5% [row3] 15%[row4]37.5%[row5];
+ 
+
+}
+.group-info{
+  grid-row-start: row1;
+  grid-row-end: row2;
+  border: 2px pink solid;
+
+}
+.receive-message{
+  grid-row-start: row2;
+  grid-row-end: row3;
+  border: 2px red solid;
+  margin-top:2px;
+
+}
+.enter-message{
+  grid-row-start: row3;
+  grid-row-end: row4;
+  border: 2px purple solid;
+  margin-top:2px;
+}
+.participants{
+  grid-row-start: row4;
+  grid-row-end: row5;
+  border: 2px orange solid;
+  margin-top:2px;
 }
 .available-users{
   grid-column-start: line3;
