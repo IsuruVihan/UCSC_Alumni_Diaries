@@ -102,6 +102,9 @@
             <button class='submit-new-project-name btn'>Edit</button>
             <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
         </div>
+        <div class='project-status'>
+            Not Started Yet
+        </div>
     </div>
     <div class='card project-committee'>
         <div class='title'>

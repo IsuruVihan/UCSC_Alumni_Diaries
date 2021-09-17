@@ -203,3 +203,12 @@
     background: #f5222d;
     border: 1px solid #f5222d;
 }
+
+.project-status {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    color: gray;
+    margin-top: 0.8em;
+}
