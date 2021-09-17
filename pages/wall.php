@@ -41,6 +41,28 @@
 				</div>
 			</form>
 		</div>
+		<div class="create-notice-box">
+			<div class="box-title">
+			Edit Important Notice
+			</div>
+			<form action="" id="create-notice">
+				<div class="row-1">
+					<input class='input-field-title' type='text' placeholder='Title'/>
+					<p class="field-header"> date</p>	 
+				</div>
+				<div class="row-2">
+					<label for="myFile" class='filter-btn btn'>
+					<input type="file" id="myFile" name="filename" hidden>
+					Edit Upload</label>
+				</div>
+				<div class="row-3">
+				<input class='input-field-message' type='text' placeholder='Message'/>
+				</div>
+				<div class="row-4">
+					<button class='filter-btn btn'>Edit Notice</button>
+				</div>
+			</form>
+		</div>
 
 
 	</div>
