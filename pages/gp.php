@@ -20,6 +20,12 @@
     <div class='available-users'>
 
     </div>
+    <div class='create-chat'>
+
+</div>
+<div class='edit-chat'>
+
+</div>
 </div>
 
 <?php include('../components/footer.php'); ?>
