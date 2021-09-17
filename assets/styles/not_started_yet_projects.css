@@ -176,3 +176,30 @@
     box-shadow: 0 0 5px gray;
     cursor: pointer;
 }
+
+.edit-btn:hover {
+    cursor: pointer;
+    color: #fa8c16;
+}
+
+.edit-project-name-div {
+    display: none;
+    justify-content: space-evenly;
+}
+
+.submit-new-project-name, .cancel-btn {
+    width: 20%;
+    background: gray;
+    border: 1px solid gray;
+}
+
+.submit-new-project-name:hover {
+    background: #fa8c16;
+    border: 1px solid #fa8c16;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+}

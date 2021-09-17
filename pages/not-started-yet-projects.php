@@ -93,8 +93,14 @@
         </div>
     </div>
     <div class='card project-details'>
-        <div class='title'>
+        <div class='title project-name-div' id='project-name-div'>
             Project Name
+            <i class='fas fa-edit edit-btn' onclick='DisplayEditProjectNameDiv()'></i>
+        </div>
+        <div class='edit-project-name-div' id='edit-project-name-div'>
+            <input type='text' placeholder='Enter new project name' value="Project Name" class='new-project-name input-field' id='new-project-name'/>
+            <button class='submit-new-project-name btn'>Edit</button>
+            <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
         </div>
     </div>
     <div class='card project-committee'>
