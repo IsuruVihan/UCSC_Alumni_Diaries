@@ -17,37 +17,41 @@
     margin: 0;
 }
 .wall{
-    border: 2px solid red;
+    
     margin-left: 6.7em;
     margin-right: 6.7em;
     display: grid;
     grid-template-columns: [line1] 30% [line2] 70% [line3] ;
     grid-template-rows: [rowline1]1fr[rowline2];
     height: 100vh;
-    
+    gap:15px;
 }
 .important-notice{
-    border: 3px solid blue;
+    box-shadow: 1px 2px 4px lightgray;
     display: flex;
     flex-direction: column;  
-      
+    transition: all ease-in-out 0.5s;
+    padding: 20px;
+    background: white;
 }
 
 .common-wall{
     border: 3px solid green;
+    padding: 20px;
 }
 
-.title {
+.grid-title {
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
-    border: 1px solid red;
+    margin: 5px;
+
 }
 
 .filter-box{
-    border:1px solid black;
+    border: 1px solid lightgray;
     padding: 3px 3px;
-    margin: 0.8em 0;
+    margin: 0.8em 3px;
     display: flex;
     flex-direction: row;
     border-radius: 5px;
@@ -63,9 +67,87 @@
 }
 
 .filter-btn {
-    width: 45%;
+    width: 38%;
     background: gray;
     border: 1px solid gray;
+    font-family: 'Nunito';
+ 
+}
+.create-notice-box{
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    margin: 0.8em 0;
+}
+.box-title{
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    margin:0.8em 0;
+}
+.row-1{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    
+}
+.row-2{
+    
+    justify-content: center;
+    display: flex; 
+}
+.row-2 > label{
+    text-align: center;
+    margin: 0.8em 0;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 3px;
+
+}
+.row-3{
+    
+    justify-content: center;
+    display: flex;
+    
+}
+.row-4{
+    margin-top: 0.8em;
+    justify-content: center;
+    display: flex;
+    padding: 5px 0;
+}
+.field-header{
+    border: 1px solid lightgray;
+    color: gray;
+    margin: 0 0.8em;
+    border-radius: 5px;
+    width: 50%;
     
     
+}
+.input-field-title {
+    width: 100%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin:0 0.8em;
+}
+.input-field-message{
+    width: 100%;
+    height: 100px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin:0 0.8em ;
 }
