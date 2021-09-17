@@ -32,6 +32,9 @@
     grid-row-start: row1;
     grid-row-end: row2;
     margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .project-details {
@@ -41,6 +44,9 @@
     grid-row-end: row2;
     margin-left: 5px;
     margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .project-committee {
@@ -66,8 +72,6 @@
 .filter {
     display: flex;
     flex-direction: column;
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 3px;
@@ -184,16 +188,16 @@
 
 .edit-project-name-div {
     display: none;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.submit-new-project-name, .cancel-btn {
+.submit-new-project-name, .submit-new-project-description, .cancel-btn {
     width: 20%;
     background: gray;
     border: 1px solid gray;
 }
 
-.submit-new-project-name:hover {
+.submit-new-project-name:hover, .submit-new-project-description:hover {
     background: #fa8c16;
     border: 1px solid #fa8c16;
     color: white;
@@ -204,11 +208,64 @@
     border: 1px solid #f5222d;
 }
 
-.project-status {
+.project-status, .project-description {
     border: 1px solid lightgray;
     border-radius: 5px;
     text-align: center;
     padding: 5px;
     color: gray;
-    margin-top: 0.8em;
+    /*margin-top: 0.8em;*/
+}
+
+.project-description {
+    height: 50%;
+    text-align: justify;
+    padding: 10px;
+}
+
+.edit-project-description {
+    display: none;
+    flex-direction: column;
+    height: 60%;
+    margin-top: 10px;
+}
+
+.new-project-description {
+    height: 30em;
+    padding: 10px;
+    resize: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.new-project-description:hover {
+    border: 1px solid #ffccc7;
+}
+
+.btn-set {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+}
+
+.des-edit {
+    float: right;
+}
+
+.coord {
+    border: 1px solid lightgray;
+    height: 7vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coord-pic {
+    padding: 0;
+    margin: 0;
+}
+
+.edit-coord-btn {
+    display: none;
 }

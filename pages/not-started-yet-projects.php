@@ -95,15 +95,36 @@
     <div class='card project-details'>
         <div class='title project-name-div' id='project-name-div'>
             Project Name
-            <i class='fas fa-edit edit-btn' onclick='DisplayEditProjectNameDiv()'></i>
+            <i class='fas fa-edit edit-btn' title='Edit project name' onclick='DisplayEditProjectNameDiv()'></i>
         </div>
         <div class='edit-project-name-div' id='edit-project-name-div'>
-            <input type='text' placeholder='Enter new project name' value="Project Name" class='new-project-name input-field' id='new-project-name'/>
+            <input type='text' placeholder='Enter new project name' value="Project Name"
+                   class='new-project-name input-field' id='new-project-name'/>
             <button class='submit-new-project-name btn'>Edit</button>
             <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
         </div>
         <div class='project-status'>
             Not Started Yet
+        </div>
+        <div class='project-description' id='project-description'>
+            Project description comes here...
+            <br/><br/>
+            <i class='fas fa-edit edit-btn des-edit' title='Edit project description'
+               onclick='DisplayEditProjectDescriptionDiv()'></i>
+        </div>
+        <div class='edit-project-description' id='edit-project-description'>
+            <textarea class='new-project-description'></textarea>
+            <div class='btn-set'>
+                <button class='submit-new-project-description btn'>Edit</button>
+                <button class='cancel-btn btn' onclick='HideEditProjectDescriptionDiv()'>Cancel</button>
+            </div>
+        </div>
+        <div class='coord' onmouseover='DisplayEditCoordBtn()' onmouseout='HideEditCoordBtn()'>
+            <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic' />
+            <p class='coord-fname'>First Name</p>
+            <p class='coord-lname'>Last Name</p>
+            <i class='fas fa-edit edit-btn edit-coord-btn' id='edit-coord-btn' title='Change project coordinator'
+               onclick='DisplayEditProjectDescriptionDiv()'></i>
         </div>
     </div>
     <div class='card project-committee'>
