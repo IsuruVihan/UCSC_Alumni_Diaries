@@ -23,9 +23,19 @@
                 <button class="filter-btn btn">Filter</button>
             </div>
         </div>
-
         <div class='chat-list-container'>
             <div class='chat-list-item'>
+                <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                <div class='names-btn-container'>
+                    <div class='names-container'>
+                        <div class='first-name'>First Name</div>
+                        <div class='last-name'>Last Name</div>
+                    </div>
+                    <div class='btn-container'>
+                        <button class="view-btn btn">View</button>
+                        <button class="delete-btn btn">Delete</button>
+                    </div>
+                </div>
             </div>
             <div class='chat-list-item'>
             </div>
