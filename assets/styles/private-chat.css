@@ -20,13 +20,14 @@
     align-items: center;
     height: 80vh;
     background: #fafafa;
-    border:3px solid blue ;
+    /*border:3px solid blue ;*/
     grid-template-columns: [line1] 27% [line2] 46% [line3] 27% [line4];
     grid-template-rows: [row1] 100% [row2];
     margin: 0 6.7em 10vh;
 }
 .chat-list {
-    border: 3px solid green;
+    border: 1px solid lightgray;
+    border-radius: 5px;
     grid-column-start: line1;
     grid-column-end: line2;
     grid-row-start: row1;
@@ -36,7 +37,7 @@
     /*padding-right: 1.5em;*/
     display: flex;
     flex-direction: column;
-    /*margin: 5px;*/
+    margin-right: 10px;
     /*margin-bottom: 5px;*/
 }
 .chat-list-title{
@@ -62,7 +63,8 @@
     height: 25px;
 }
 
-.filter-btn {
+.filter-btn,.view-btn,
+.delete-btn{
     width: 32%;
     margin-top: 0.5em;
     background: gray;
@@ -72,6 +74,17 @@
     background: white;
     border-color: black;
     color: black;
+}
+.view-btn:hover {
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #f5222d;
+    border-color: #f5222d;
+    color: white;
 }
 
 .input{
@@ -100,34 +113,80 @@
 }
 
 .chat-list-container {
-    border: 3px solid black;
-    justify-content: flex-start;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
     overflow: hidden;
     overflow-y: scroll;
     height: 100%;
-    margin:20px;
+    margin:10px;
 }
 
 .chat-list-item{
-    height: 15%;
-    border: 3px solid deeppink;
+    height: 17%;
+    border: 2px solid lightgray;
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     transition: all ease-in-out 0.5s;
     margin: 5px;
+    padding: 3px;
+}
+
+.names-btn-container{
+    display:flex;
+    flex-direction: column;
+    width:70%;
+    height: 100%;
+    align-items: center;
+}
+
+.names-container{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    margin-bottom: 4px;
+    align-items: center;
+}
+
+.btn-container{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: space-around;
+}
+
+.first-name,.last-name {
+    width: 100%;
+    height: 60%;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin: 3px;
+    text-align: center;
+}
+
+.user-pic {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .chat{
-    border: 3px solid darkred;
+    /*border: 3px solid darkred;*/
+    border: 1px solid lightgray;
+    border-radius: 5px;
     grid-column-start: line2;
     grid-column-end: line3;
     grid-row-start: row1;
     grid-row-end: row2;
     height: 100%;
     /*padding: 0.5em;*/
-    margin-right: 5px;
+    margin-right: 10px;
     /*margin-bottom: 5px;*/
     display:grid;
 }
@@ -174,7 +233,8 @@
 }
 
 .available-users {
-    border: 3px solid green;
+    border: 1px solid lightgray;
+    border-radius: 5px;
     grid-column-start: line3;
     grid-column-end: line4;
     grid-row-start: row1;
@@ -199,30 +259,31 @@
 .filter-field {
     display: flex;
     flex-direction: column;
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
+    /*margin-top: 0.8em;*/
+    /*margin-bottom: 0.8em;*/
     border: 1px solid lightgray;
     border-radius: 5px;
-    padding: 2px
+    padding: 2px;
+    margin: 0.8em;
 }
 .available-users-container{
-    border: 3px solid black;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    justify-content: flex-start;
-
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
     overflow: hidden;
     overflow-y: scroll;
     height: 100%;
-    margin:20px;
+    margin:10px;
 }
 .available-users-item {
-    height: 15%;
-    border: 3px solid deeppink;
+    height: 17%;
+    border: 2px solid lightgray;
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     transition: all ease-in-out 0.5s;
     margin: 5px;
+    padding: 3px;
 }
