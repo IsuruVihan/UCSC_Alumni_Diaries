@@ -51,34 +51,47 @@
                 </div>
                 <div class='chats'>
                     <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
-                    <div class='list-items'>chat</div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
+                    <div class='list-items'></div>
             </div>    
         </div>
 
-        <div class='card chat-wall'>
-            <div class='chat-wall-grid'>
-            <div class='group-info'></div>
-            <div class='receive-message'></div>
-            <div class='enter-message'></div>
-            <div class='participants'></div>
+        <div class='chat-wall'>
+           
+            <div class='row-01'>
+             <div class='wall-view'>   
+            <!-- <div class='buttons' id=''>
+                    <button class='Edit-btn btn'>Edit</button>
+                </div> -->
+                </div>
 </div>
+            <div class='row-02'></div>
+            <div class='row-03'></div>
+            <div class='row-04'></div>
+
     </div>
     <div class='card available-users'>
     <div class='title'>Available Users</div>

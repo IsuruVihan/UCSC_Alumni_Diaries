@@ -32,7 +32,7 @@
   flex-direction: column;
   background: white;
 } 
-.card {
+.card,.chat-wall {
   box-shadow: 1px 2px 4px lightgray;
   border-radius: 10px;
   padding: 20px;
@@ -120,11 +120,9 @@
   border-radius: 5px;
   display: flex;
   justify-content: flex-start;
-  align-items:flex-start;
+  align-items:center;
   transition: all ease-in-out 0.5s;
   padding:5px;
-  
-
 }
 
 .chat-list{
@@ -136,16 +134,59 @@
 }
 
 .chat-wall{
+  background: white;
   grid-column-start: line2;
   grid-column-end: line3;
   grid-row-start: row1;
   grid-row-end: row4;
   margin-right: 5px;
   margin-left:5px;
-  border: 2px green solid;
+  /* border: 2px green solid; */
+  display: flex;
+  flex-direction: column;
 
 }
-.chat-wall-grid{
+
+.row-01,
+.row-02,
+.row-03,
+.row-04{
+display: flex;
+border: 1px solid lightgray;
+border-radius: 2px;
+box-shadow: 1px 2px 4px lightgray;
+
+}
+.row-01 {
+  height: 10%;
+  /* margin-bottom: 10px; */
+  /* border: 2px red solid;  */
+}
+
+.row-02 {
+  height: 37.5%;
+  /* border: 2px green solid; */
+  margin-top:2px;
+}
+
+.row-03{
+  height: 15%;
+  /* border: 2px green solid; */
+  margin-top:2px;
+
+}
+  .row-04 {
+    height: 37.5%;
+    /* border: 2px green solid; */
+    margin-top:2px;
+
+  }
+  
+/* .buttons {
+  display: none;
+} */
+
+/* .chat-wall-grid{
   background: #fafafa;
   height: 100vh;
   display: grid;
@@ -177,14 +218,14 @@
   grid-row-end: row5;
   border: 2px orange solid;
   margin-top:2px;
-}
+} */
 .available-users{
   grid-column-start: line3;
   grid-column-end: line4;
   grid-row-start: row1;
   grid-row-end: row2;
   margin-left: 5px;
-  border: 2px #0c6ce9 solid;
+  /* border: 2px #0c6ce9 solid; */
 
 }
 .create-group{
