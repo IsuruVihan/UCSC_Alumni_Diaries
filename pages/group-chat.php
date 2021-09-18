@@ -51,8 +51,12 @@
                 </div>
                 <div class='chats'>
                     <div class='list-items'>
-                        
-                    </div>
+                             <img src='../assets/images/user-default.png' width='100%' class='user-pic' alt='user-pic' />
+                            <div class='names'>
+                                    <div class='first-name'>First Name</div>
+                                    <div class='first-name'>First Name</div> 
+                            </div>
+                        </div>
                     <div class='list-items'></div>
                     <div class='list-items'></div>
                     <div class='list-items'></div>
