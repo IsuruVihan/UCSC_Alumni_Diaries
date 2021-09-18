@@ -50,7 +50,9 @@
                     </div>  
                 </div>
                 <div class='chats'>
-                    <div class='list-items'>chat</div>
+                    <div class='list-items'>
+                        
+                    </div>
                     <div class='list-items'></div>
                     <div class='list-items'></div>
                     <div class='list-items'></div>
