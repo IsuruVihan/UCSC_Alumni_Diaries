@@ -7,7 +7,7 @@
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> /
-        <a href='admin.php'>Admin</a> / Accounts
+        <a href='admin.php'>Admin</a> / Group Chat
     </p>
     <p class='main-title'>
         <i class="fas fa-comments"></i> Group Chat
@@ -51,57 +51,73 @@
                 </div>
                 <div class='chats'>
                     <div class='list-items'>
-                            
-                                <div class='pic'>
-                                    <img src='../assets/images/user-default.png' width='23%' class='user-pic' alt='user-pic' >
+                            <img src='../assets/images/user-default.png' width='27%' height='' class='user-pic' alt='user-pic' >
+                        <div class='name-buttons'>
+                            <div class='name'> Name</div>
+                                <div class='buttons'>
+                                    <button class='view-btn btn'>View</button>
+                                    <button class='delete-btn btn'>Delete</button> 
+                                </div>
+                            </div>
+                        </div>
+                    <div class='list-items'>
+                        <img src='../assets/images/user-default.png' width='27%' height='' class='user-pic' alt='user-pic' >
+                            <div class='name-buttons'>
+                                <div class='name'> Name</div>
+                                    <div class='buttons'>
+                                        <button class='view-btn btn'>View</button>
+                                        <button class='delete-btn btn'>Delete</button> 
                                     </div>
-                                    <div class='names'>
-                                     <div class='name'> Name</div>
-                                   
-                                    </div>  
-                            <div class='buttons'>  
-                                <button class='view-btn btn'>View</button>
-                                <button class='delete-btn btn'>Delete</button> 
-                              
-                            </div> 
-                    </div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div>
-                    <div class='list-items'></div> 
-            </div>    
+                                </div>
+                            </div>
+                            <div class='list-items'>
+                        <img src='../assets/images/user-default.png' width='27%' height='' class='user-pic' alt='user-pic' >
+                            <div class='name-buttons'>
+                                <div class='name'> Name</div>
+                                    <div class='buttons'>
+                                        <button class='view-btn btn'>View</button>
+                                        <button class='delete-btn btn'>Delete</button> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='list-items'>
+                        <img src='../assets/images/user-default.png' width='27%' height='' class='user-pic' alt='user-pic' >
+                            <div class='name-buttons'>
+                                <div class='name'> Name</div>
+                                    <div class='buttons'>
+                                        <button class='view-btn btn'>View</button>
+                                        <button class='delete-btn btn'>Delete</button> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='list-items'>
+                        <img src='../assets/images/user-default.png' width='27%' height='' class='user-pic' alt='user-pic' >
+                            <div class='name-buttons'>
+                                <div class='name'> Name</div>
+                                    <div class='buttons'>
+                                        <button class='view-btn btn'>View</button>
+                                        <button class='delete-btn btn'>Delete</button> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='list-items'>
+                        <img src='../assets/images/user-default.png' width='27%' height='' class='user-pic' alt='user-pic' >
+                            <div class='name-buttons'>
+                                <div class='name'> Name</div>
+                                    <div class='buttons'>
+                                        <button class='view-btn btn'>View</button>
+                                        <button class='delete-btn btn'>Delete</button> 
+                                    </div>
+                                </div>
+                            </div>
+                    </div>         
         </div>
 
         <div class='chat-wall'>
-           
             <div class='row-01'>
-             <div class='wall-view'>   
-            <!-- <div class='buttons' id=''>
-                    <button class='Edit-btn btn'>Edit</button>
-                </div> -->
+                <div class='wall-view'>   
                 </div>
-</div>
+        </div>
             <div class='row-02'></div>
             <div class='row-03'></div>
             <div class='row-04'></div>
@@ -142,7 +158,7 @@
                                  <button class='filter-btn btn'>Filter</button>   
                                </div>  
                            </div>
-                           <div class='chats'>
+                           <!-- <div class='chats'>
                                <div class='list-items'>chat</div>
                                <div class='list-items'>chat</div>
                                <div class='list-items'>chat</div>
@@ -162,7 +178,7 @@
                                <div class='list-items'>chat</div>
                                <div class='list-items'>chat</div>
                                <div class='list-items'>chat</div>
-                       </div>    
+                       </div>     -->
 </div> 
     <div class='create-group'>
 </div> 

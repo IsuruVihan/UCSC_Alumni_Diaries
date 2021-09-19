@@ -5,8 +5,7 @@
   margin-top: 5vh;
   padding-left: 6.7em;
   background: #fafafa;
-  border: 8px orange solid;
-  border: 2px rgb(223, 19, 19) solid;
+  margin-bottom: 5px;
 }
 
 .breadcrumb {
@@ -20,7 +19,7 @@
 }
 .group-chat-grid {
   background: #fafafa;
-  height: 80vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: [line1] 27% [line2] 46% [line3] 27% [line4];
   grid-template-rows: [row1] 50% [row2] 25% [row3] 25%[row4];
@@ -48,7 +47,7 @@
   flex-direction: column;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
-  border: 1px solid rgb(221, 13, 13);
+  border: 1px solid lightgray;
   border-radius: 5px;
   padding: 5px;
 }
@@ -109,40 +108,52 @@
   overflow-y: scroll;
 }
 .list-items {
-
-
-  /* width: 100%;
-  height: 25%; */
-  /* border: 1px solid lightgray;
-  border-radius: 5px;
-  display: flex; */
-  /* justify-content: space-around;
-  align-items: center;
-  transition: all ease-in-out 0.5s; */
-/* }
-.names {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.2em;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
-}
-.buttons { */
-  /* display: flex; */
-  /* text-align: center;
-} */
-/* .first-name,
-.last-name {
+  height: 17%;
   border: 1px solid lightgray;
   border-radius: 5px;
-  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
 }
+.name-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+}
+.name {
+  width: 99%;
+  height: 100%;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 0.5em; */
+  /* padding: 5px; */
+}
+.user-pic {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .view-btn,
 .delete-btn {
   background: #595959;
   border: 1px solid #595959;
-} */
-/* 
+}
+
 .view-btn:hover {
   background: #096dd9;
   border-color: #096dd9;
@@ -155,11 +166,6 @@
   color: white;
 }
 
-.user-pic {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  text-align: center;
-} */
 .chat-list {
   grid-column-start: line1;
   grid-column-end: line2;
@@ -191,24 +197,25 @@
   box-shadow: 1px 2px 4px lightgray;
 }
 .row-01 {
-  height: 10%;
+  height: 8%;
+
   /* margin-bottom: 10px; */
   /* border: 2px red solid;  */
 }
 
 .row-02 {
-  height: 37.5%;
+  height: 42%;
   /* border: 2px green solid; */
   margin-top: 2px;
 }
 
 .row-03 {
-  height: 15%;
+  height: 8%;
   /* border: 2px green solid; */
   margin-top: 2px;
 }
 .row-04 {
-  height: 37.5%;
+  height: 42%;
   /* border: 2px green solid; */
   margin-top: 2px;
 }
