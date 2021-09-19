@@ -23,7 +23,7 @@
                             <input class='input-field' type='text' placeholder='First Name'/>
                             <input class='input-field' type='text' placeholder='Last Name'/>
                         <select class='input-field'>
-                            <option value='Batch'>Batch</option>
+                            <option value='All'>All</option>
                             <option value='2004/2005'>2004/2005</option>
                             <option value='2005/2006'>2005/2006</option>
                             <option value='2006/2007'>2006/2007</option>
@@ -51,12 +51,20 @@
                 </div>
                 <div class='chats'>
                     <div class='list-items'>
-                             <img src='../assets/images/user-default.png' width='100%' class='user-pic' alt='user-pic' />
-                            <div class='names'>
-                                    <div class='first-name'>First Name</div>
-                                    <div class='first-name'>First Name</div> 
-                            </div>
-                        </div>
+                            
+                                <div class='pic'>
+                                    <img src='../assets/images/user-default.png' width='23%' class='user-pic' alt='user-pic' >
+                                    </div>
+                                    <div class='names'>
+                                     <div class='name'> Name</div>
+                                   
+                                    </div>  
+                            <div class='buttons'>  
+                                <button class='view-btn btn'>View</button>
+                                <button class='delete-btn btn'>Delete</button> 
+                              
+                            </div> 
+                    </div>
                     <div class='list-items'></div>
                     <div class='list-items'></div>
                     <div class='list-items'></div>
@@ -81,7 +89,7 @@
                     <div class='list-items'></div>
                     <div class='list-items'></div>
                     <div class='list-items'></div>
-                    <div class='list-items'></div>
+                    <div class='list-items'></div> 
             </div>    
         </div>
 
@@ -108,7 +116,7 @@
                                        <input class='input-field' type='text' placeholder='First Name'/>
                                        <input class='input-field' type='text' placeholder='Last Name'/>
                                    <select class='input-field'>
-                                       <option value='Batch'>Batch</option>
+                                       <option value='All'>All</option>
                                        <option value='2004/2005'>2004/2005</option>
                                        <option value='2005/2006'>2005/2006</option>
                                        <option value='2006/2007'>2006/2007</option>
