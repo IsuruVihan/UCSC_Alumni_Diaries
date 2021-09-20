@@ -14,10 +14,10 @@
     </p>
 </div>  
     <div class='group-chat-grid'>
-        <div class='card chat-list'>
+            <div class='card chat-list'>
                         <div class='title'>Chat List</div>    
                     <div class='filter'>
-                         <div class='box-01'>
+                        <div class='box-01'>
                                <input class='input-field' type='text' placeholder='First Name'/>
                                 <input class='input-field' type='text' placeholder='Last Name'/>
                             <select class='input-field'>
@@ -42,9 +42,9 @@
                                 <option value='2022/2023'>2022/2023</option>
                             </select>
                         </div> 
-                      <div class='box-02'> 
-                         <button class='filter-btn btn'>Filter</button>   
-                      </div>  
+                         <div class='box-02'> 
+                           <button class='filter-btn btn'>Filter</button>   
+                         </div>  
                     </div>
                 <div class='chats'>
                     <div class='list-items'>
@@ -126,16 +126,14 @@
                                     <button class='delete-btn btn'>Delete</button> 
                                 </div>
                         </div>
-                    </div>
-                          
+                    </div>      
                 </div>         
             </div>
-
-        <div class='chat-wall'>
+            <div class='chat-wall'>
             <div class='row-01'>
                 <div class='wall-view'>   
                 </div>
-        </div>
+              </div>
             <div class='row-02'></div>
             <div class='row-03'></div>
             <div class='row-04'></div>
