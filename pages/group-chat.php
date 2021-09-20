@@ -54,6 +54,7 @@
                             <img src='../assets/images/user-default.png' width='27%' height='' class='user-pic' alt='user-pic' >
                         <div class='name-buttons'>
                             <div class='name'> Name</div>
+                        
                                 <div class='buttons'>
                                     <button class='view-btn btn'>View</button>
                                     <button class='delete-btn btn'>Delete</button> 
