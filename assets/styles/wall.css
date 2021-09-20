@@ -49,13 +49,15 @@
 }
 
 .filter-box{
+    
     border: 1px solid lightgray;
     padding: 3px 3px;
     margin: 0.8em 3px;
     display: flex;
     flex-direction: row;
     border-radius: 5px;
-    justify-content: space-between;  
+    justify-content: space-between;
+    border: 1px solid green;  
 }
 
 .btn {
@@ -84,6 +86,7 @@
     margin: 0.8em 0;
 }
 .box-title{
+    border: 1px solid black;
     font-weight: 600;
     font-size: 1em;
     text-align: center;
@@ -95,6 +98,10 @@
     flex-direction: row;
     justify-content:space-around;
     
+}
+
+.row-1-gap{
+    margin-top:1em;
 }
 .row-2{
     
@@ -120,6 +127,13 @@
     justify-content: center;
     display: flex;
     padding: 5px 0;
+}
+
+.row-4 > button{
+    flex-direction: row;
+    align-items: space-between;
+    width: 30%;
+    margin:0 0.4em ;
 }
 .field-header{
     border: 1px solid lightgray;
@@ -150,4 +164,79 @@
     font-family: "Nunito", serif;
     text-align: center;
     margin:0 0.8em ;
+}
+
+.notice-box{
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    margin: 0.8em 0;
+}
+
+.image-box{
+    border: 2px solid red;
+    
+    height: 100px;
+    align-items: center;
+    margin: 0 120px;
+}
+
+.box-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.create-post-box{
+    border:  1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0.8em 3px;
+}
+
+
+.report-box{
+    border:  1px solid blue;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0.8em 3px;
+}
+.post-report{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.comment-report{
+    border: 1px solid black;
+    margin: 0.8em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-left{
+border: 1px solid blue;
+display: flex;
+flex-direction: row;
+width: 35%;
+}
+.filter-left > button{
+    margin:0 3px;
+}
+
+.filter-right{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    
+}
+
+.filter-right > button{
+    margin:0 3px;
 }

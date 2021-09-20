@@ -5,8 +5,7 @@
   margin-top: 5vh;
   padding-left: 6.7em;
   background: #fafafa;
-  border:8px orange solid;
-  border: 2px rgb(223, 19, 19) solid;
+  margin-bottom: 5px;
 }
 
 .breadcrumb {
@@ -20,48 +19,45 @@
 }
 .group-chat-grid {
   background: #fafafa;
-  height: 80vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: [line1] 27% [line2] 46% [line3] 27% [line4];
   grid-template-rows: [row1] 50% [row2] 25% [row3] 25%[row4];
   margin: 0 6.7em 10vh;
-  
 }
 .card {
   display: flex;
   flex-direction: column;
   background: white;
-} 
-.card {
+}
+.card,
+.chat-wall {
   box-shadow: 1px 2px 4px lightgray;
   border-radius: 10px;
   padding: 20px;
   transition: all ease-in-out 0.5s;
 }
-.title{
+.title {
   font-weight: 600;
   font-size: 1.2em;
   text-align: center;
 }
-.filter{
+.filter {
   display: flex;
   flex-direction: column;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 3px;
+  padding: 5px;
 }
 .box-01 {
   display: flex;
   justify-content: space-between;
-  
 }
 .box-02 {
   display: flex;
   justify-content: center;
-  
-  
 }
 .btn {
   cursor: pointer;
@@ -78,8 +74,7 @@
   border: 1px solid gray;
 }
 
-.filter-btn:hover,
-.recharge-report-btn:hover {
+.filter-btn:hover {
   background: white;
   border-color: black;
   color: black;
@@ -97,37 +92,80 @@
 
 .input-field:hover {
   border-color: #ffccc7;
-
 }
-.chats{
+.chats {
   border: 1px solid lightgray;
   border-radius: 5px;
   height: 100%;
-  padding: 5px;
+  padding: 3px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 5px;
+  padding: 3px;
+  gap: 2px;
   overflow: hidden;
   overflow-y: scroll;
-
 }
-.list-items{
-  width: 100%;
-  height: 15%;
+.list-items {
+  height: 20%;
   border: 1px solid lightgray;
   border-radius: 5px;
   display: flex;
-  justify-content: flex-start;
-  align-items:flex-start;
-  transition: all ease-in-out 0.5s;
-  padding:5px;
-  
-
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  padding: 6px;
+}
+.name-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+}
+.name {
+  width: 100%;
+  height: 60%;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  text-align: center;
+  font-family: "Nunito", serif;
+}
+.buttons {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3em;
+}
+.user-pic {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.chat-list{
+.view-btn,
+.delete-btn {
+  background: #595959;
+  border: 1px solid #595959;
+}
+
+.view-btn:hover {
+  background: #096dd9;
+  border-color: #096dd9;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #f5222d;
+  border-color: #f5222d;
+  color: white;
+}
+
+.chat-list {
   grid-column-start: line1;
   grid-column-end: line2;
   grid-row-start: row1;
@@ -135,17 +173,57 @@
   margin-right: 5px;
 }
 
-.chat-wall{
+.chat-wall {
+  background: white;
   grid-column-start: line2;
   grid-column-end: line3;
   grid-row-start: row1;
   grid-row-end: row4;
   margin-right: 5px;
-  margin-left:5px;
-  border: 2px green solid;
-
+  margin-left: 5px;
+  /* border: 2px green solid; */
+  display: flex;
+  flex-direction: column;
 }
-.chat-wall-grid{
+
+.row-01,
+.row-02,
+.row-03,
+.row-04 {
+  display: flex;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  box-shadow: 1px 2px 4px lightgray;
+}
+.row-01 {
+  height: 8%;
+
+  /* margin-bottom: 10px; */
+  /* border: 2px red solid;  */
+}
+
+.row-02 {
+  height: 42%;
+  /* border: 2px green solid; */
+  margin-top: 2px;
+}
+
+.row-03 {
+  height: 8%;
+  /* border: 2px green solid; */
+  margin-top: 2px;
+}
+.row-04 {
+  height: 42%;
+  /* border: 2px green solid; */
+  margin-top: 2px;
+}
+
+/* .buttons {
+  display: none;
+} */
+
+/* .chat-wall-grid{
   background: #fafafa;
   height: 100vh;
   display: grid;
@@ -177,17 +255,16 @@
   grid-row-end: row5;
   border: 2px orange solid;
   margin-top:2px;
-}
-.available-users{
+} */
+.available-users {
   grid-column-start: line3;
   grid-column-end: line4;
   grid-row-start: row1;
   grid-row-end: row2;
   margin-left: 5px;
-  border: 2px #0c6ce9 solid;
-
+  /* border: 2px #0c6ce9 solid; */
 }
-.create-group{
+.create-group {
   grid-column-start: line3;
   grid-column-end: line4;
   grid-row-start: row2;
@@ -195,9 +272,8 @@
   margin-left: 5px;
   margin-top: 5px;
   border: 2px #c7196a solid;
-
 }
-.edit-group{
+.edit-group {
   grid-column-start: line3;
   grid-column-end: line4;
   grid-row-start: row3;
@@ -206,10 +282,6 @@
   margin-top: 5px;
   border: 2px #ee0505 solid;
 }
-
-
-
-
 
 /* }
 .card {
