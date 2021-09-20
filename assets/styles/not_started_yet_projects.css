@@ -56,6 +56,16 @@
     grid-row-start: row1;
     grid-row-end: row2;
     margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.available-members {
+    grid-column-start: col3;
+    grid-column-end: col4;
+    grid-row-start: row2;
+    grid-row-end: row3;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .card {
@@ -293,12 +303,12 @@
     padding: 3px;
 }
 
-.start-btn, .delete-btn, .remove-btn {
+.start-btn, .delete-btn, .remove-btn, .add-btn {
     border: 1px solid gray;
     background: gray;
 }
 
-.start-btn:hover {
+.start-btn:hover, .add-btn:hover {
     background: #237804;
     border: 1px solid #237804;
 }
@@ -308,6 +318,6 @@
     border: 1px solid #f5222d;
 }
 
-.remove-btn {
+.remove-btn, .add-btn {
     display: none;
 }

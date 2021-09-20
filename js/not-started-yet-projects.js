@@ -43,3 +43,11 @@ const DisplayRemoveMemberBtn = (id) => {
 const HideRemoveMemberBtn = (id) => {
     document.getElementById(id).style.display = 'none';
 }
+
+const DisplayAddMemberBtn = (id) => {
+    document.getElementById(id).style.display = 'block';
+}
+
+const HideAddMemberBtn = (id) => {
+    document.getElementById(id).style.display = 'none';
+}

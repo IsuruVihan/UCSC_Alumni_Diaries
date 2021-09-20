@@ -173,6 +173,48 @@
             </div>
         </div>
     </div>
+    <div class='card available-members'>
+        <div class='title'>
+            Available Members
+        </div>
+        <div class='results'>
+            <div class='result2' onmouseover="DisplayAddMemberBtn('mem-add-1')"
+                 onmouseout="HideAddMemberBtn('mem-add-1')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='mem-add-1'>Add</button>
+            </div>
+            <div class='result2' onmouseover="DisplayAddMemberBtn('mem-add-2')"
+                 onmouseout="HideAddMemberBtn('mem-add-2')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='mem-add-2'>Add</button>
+            </div>
+            <div class='result2' onmouseover="DisplayAddMemberBtn('mem-add-3')"
+                 onmouseout="HideAddMemberBtn('mem-add-3')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='mem-add-3'>Add</button>
+            </div>
+            <div class='result2' onmouseover="DisplayAddMemberBtn('mem-add-4')"
+                 onmouseout="HideAddMemberBtn('mem-add-4')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='mem-add-4'>Add</button>
+            </div>
+            <div class='result2' onmouseover="DisplayAddMemberBtn('mem-add-5')"
+                 onmouseout="HideAddMemberBtn('mem-add-5')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='mem-add-5'>Add</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php include('../components/footer.php'); ?>
