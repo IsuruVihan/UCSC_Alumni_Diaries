@@ -119,6 +119,11 @@
     </div>
     <div class='chat'>
         <div class='chat-title'>
+            <img src='../assets/images/user-default.png' width="8%" class='user-pic' alt='user-pic'>
+            <div class='chat-name-container'>
+                <div class='first-name'>First Name</div>
+                <div class='last-name'>Last Name</div>
+            </div>
         </div>
         <div class='chat-body'>
         </div>
