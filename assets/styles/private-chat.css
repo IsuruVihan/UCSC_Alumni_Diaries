@@ -146,9 +146,11 @@
 .names-btn-container{
     display:flex;
     flex-direction: column;
-    width:70%;
-    height: 100%;
+    width:100%;
+    height:100%;
     align-items: center;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 .names-container{
@@ -157,24 +159,25 @@
     display:flex;
     margin-bottom: 4px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .btn-container{
     width: 100%;
     height: 100%;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .first-name,.last-name {
-    width: 100%;
+    width: 48%;
     height: 60%;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    margin: 3px;
+    /*margin-top: 3px;*/
     text-align: center;
 }
 
