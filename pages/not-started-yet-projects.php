@@ -130,32 +130,6 @@
             <button class='start-btn btn'>Start Project</button>
             <button class='delete-btn btn'>Delete Project</button>
         </div>
-        <div class='status detail-field'>
-            Not Started Yet
-        </div>
-        <div class='description detail-field'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus massa in velit interdum tincidunt. In
-            non quam luctus, ultricies mi a, interdum enim. Nulla sed tellus quis lectus dictum ullamcorper. Suspendisse
-            potenti. Aenean nec quam at nisl elementum feugiat sit amet quis ipsum. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Aenean quis leo bibendum sem egestas elementum
-            elementum maximus risus. Donec vitae est in metus placerat sollicitudin vel in quam. Donec rhoncus facilisis
-            imperdiet. Donec finibus enim eu enim tempor, eget pulvinar urna hendrerit.
-
-            Curabitur nec posuere urna, eget pulvinar velit. Phasellus dapibus nisl eget neque tincidunt dictum. Integer
-            augue quam, porta vel tristique commodo, aliquam ultricies magna. Ut augue erat, maximus dignissim dapibus
-            id, vestibulum sit amet elit. Suspendisse in velit eros. Praesent lorem elit, aliquam ac nunc at, vehicula
-            interdum arcu. Integer venenatis suscipit tincidunt. Curabitur efficitur nec ipsum nec porta. Curabitur sed
-            eros facilisis, efficitur libero quis, imperdiet sapien.
-        </div>
-        <div class='coordinator detail-field'>
-            <img class='coord-image' src='../assets/images/user-default.png' alt='çoordinator' width='30%' />
-            <p class='coord-first-name'>
-                Coordinator's First Name
-            </p>
-            <p class='coord-last-name'>
-                Coordinator's Last Name
-            </p>
-        </div>
     </div>
     <div class='card project-committee' id='committee-members'>
         <div class='title'>

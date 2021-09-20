@@ -45,9 +45,33 @@
     margin-left: 5px;
     margin-right: 5px;
     display: flex;
-    flex-direction: column;
     gap: 10px;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.status {
+    margin-top: 0.5em;
+    color: gray;
+}
+
+.description {
+    height: 90em;
+    text-align: justify-all;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 1em;
+}
+
+.coordinator {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.coord-image {
+    border-radius: 100%;
 }
 
 .project-committee {
