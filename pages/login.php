@@ -52,7 +52,7 @@
             
                 <center> 
                 
-                <a class='loginpagelink' href='fogot'> <b> Forgot Password? </b> </a> <br>
+                <a class='loginpagelink' href='forgot_password.php'> <b> Forgot Password? </b> </a> <br>
                 <p> <b> Not one of us yet? </b> <a class='loginpagelink' href='signup.php'> <b> Sign Up </b> </a> </p>
                 </center>
         
