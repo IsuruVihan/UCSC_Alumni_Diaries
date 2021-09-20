@@ -27,7 +27,8 @@
 }
 .chat-list {
     border: 1px solid lightgray;
-    border-radius: 5px;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
     grid-column-start: line1;
     grid-column-end: line2;
     grid-row-start: row1;
@@ -64,17 +65,19 @@
 }
 
 .filter-btn,.view-btn,
-.delete-btn{
+.delete-btn,.add-btn{
     width: 32%;
     margin-top: 0.5em;
     background: gray;
     border: 1px solid gray;
 }
+
 .filter-btn:hover {
     background: white;
     border-color: black;
     color: black;
 }
+
 .view-btn:hover {
     background: #096dd9;
     border-color: #096dd9;
@@ -85,6 +88,11 @@
     background: #f5222d;
     border-color: #f5222d;
     color: white;
+}
+
+.add-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
 }
 
 .input{
@@ -138,9 +146,11 @@
 .names-btn-container{
     display:flex;
     flex-direction: column;
-    width:70%;
-    height: 100%;
+    width:100%;
+    height:100%;
     align-items: center;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 .names-container{
@@ -149,24 +159,25 @@
     display:flex;
     margin-bottom: 4px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .btn-container{
     width: 100%;
     height: 100%;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .first-name,.last-name {
-    width: 100%;
+    width: 48%;
     height: 60%;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    margin: 3px;
+    /*margin-top: 3px;*/
     text-align: center;
 }
 
@@ -177,9 +188,9 @@
 }
 
 .chat{
-    /*border: 3px solid darkred;*/
     border: 1px solid lightgray;
-    border-radius: 5px;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
     grid-column-start: line2;
     grid-column-end: line3;
     grid-row-start: row1;
@@ -234,7 +245,8 @@
 
 .available-users {
     border: 1px solid lightgray;
-    border-radius: 5px;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
     grid-column-start: line3;
     grid-column-end: line4;
     grid-row-start: row1;
@@ -286,4 +298,10 @@
     transition: all ease-in-out 0.5s;
     margin: 5px;
     padding: 3px;
+}
+
+.chat-list-item:hover,
+.available-users-item:hover {
+    box-shadow: 0 0 5px gray;
+    cursor: pointer;
 }
