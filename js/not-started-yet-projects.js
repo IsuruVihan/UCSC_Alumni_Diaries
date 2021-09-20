@@ -51,3 +51,21 @@ const DisplayAddMemberBtn = (id) => {
 const HideAddMemberBtn = (id) => {
     document.getElementById(id).style.display = 'none';
 }
+
+const OnClickChangeCoordinator = () => {
+    document.getElementById('committee-members').style.visibility = 'hidden';
+    document.getElementById('available-members').style.visibility = 'hidden';
+    document.getElementById('change-coordinator').style.visibility = 'visible';
+}
+
+const OnClickAddNewCoordinator = () => {
+    document.getElementById('change-coordinator').style.visibility = 'hidden';
+    document.getElementById('committee-members').style.visibility = 'visible';
+    document.getElementById('available-members').style.visibility = 'visible';
+}
+
+const CloseChangeCoordinator = () => {
+    document.getElementById('change-coordinator').style.visibility = 'hidden';
+    document.getElementById('committee-members').style.visibility = 'visible';
+    document.getElementById('available-members').style.visibility = 'visible';
+}

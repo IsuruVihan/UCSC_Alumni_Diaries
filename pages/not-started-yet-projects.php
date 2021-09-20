@@ -124,14 +124,14 @@
             <p class='coord-fname'>First Name</p>
             <p class='coord-lname'>Last Name</p>
             <i class='fas fa-edit edit-btn edit-coord-btn' id='edit-coord-btn' title='Change project coordinator'
-               onclick='DisplayEditProjectDescriptionDiv()'></i>
+               onclick='OnClickChangeCoordinator()'></i>
         </div>
         <div class='start-delete'>
             <button class='start-btn btn'>Start Project</button>
             <button class='delete-btn btn'>Delete Project</button>
         </div>
     </div>
-    <div class='card project-committee'>
+    <div class='card project-committee' id='committee-members'>
         <div class='title'>
             Committee Members
         </div>
@@ -173,7 +173,7 @@
             </div>
         </div>
     </div>
-    <div class='card available-members'>
+    <div class='card available-members' id='available-members'>
         <div class='title'>
             Available Members
         </div>
@@ -212,6 +212,49 @@
                 <div class='fname'>First Name</div>
                 <div class='lname'>Last Name</div>
                 <button class='add-btn btn' id='mem-add-5'>Add</button>
+            </div>
+        </div>
+    </div>
+    <div class='card change-coordinator' id='change-coordinator'>
+        <div class='title new-coord-title'>
+            Select New Coordinator
+            <button class='btn cancel-btn' onclick='CloseChangeCoordinator()'>Cancel</button>
+        </div>
+        <div class='results'>
+            <div class='result' onmouseover="DisplayAddMemberBtn('coord-add-1')"
+                 onmouseout="HideAddMemberBtn('coord-add-1')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='coord-add-1' onclick="OnClickAddNewCoordinator()">Add</button>
+            </div>
+            <div class='result' onmouseover="DisplayAddMemberBtn('coord-add-2')"
+                 onmouseout="HideAddMemberBtn('coord-add-2')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='coord-add-2' onclick="OnClickAddNewCoordinator()">Add</button>
+            </div>
+            <div class='result' onmouseover="DisplayAddMemberBtn('coord-add-3')"
+                 onmouseout="HideAddMemberBtn('coord-add-3')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='coord-add-3' onclick="OnClickAddNewCoordinator()">Add</button>
+            </div>
+            <div class='result' onmouseover="DisplayAddMemberBtn('coord-add-4')"
+                 onmouseout="HideAddMemberBtn('coord-add-4')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='coord-add-4' onclick="OnClickAddNewCoordinator()">Add</button>
+            </div>
+            <div class='result' onmouseover="DisplayAddMemberBtn('coord-add-5')"
+                 onmouseout="HideAddMemberBtn('coord-add-5')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='add-btn btn' id='coord-add-5' onclick="OnClickAddNewCoordinator()">Add</button>
             </div>
         </div>
     </div>

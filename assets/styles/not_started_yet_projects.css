@@ -51,6 +51,7 @@
 }
 
 .project-committee {
+    display: block;
     grid-column-start: col3;
     grid-column-end: col4;
     grid-row-start: row1;
@@ -60,12 +61,22 @@
 }
 
 .available-members {
+    display: block;
     grid-column-start: col3;
     grid-column-end: col4;
     grid-row-start: row2;
     grid-row-end: row3;
     margin-left: 5px;
     margin-top: 5px;
+}
+
+.change-coordinator {
+    grid-column-start: col3;
+    grid-column-end: col4;
+    grid-row-start: row1;
+    grid-row-end: row3;
+    visibility: hidden;
+    /*margin-left: 5px;*/
 }
 
 .card {
@@ -320,4 +331,11 @@
 
 .remove-btn, .add-btn {
     display: none;
+}
+
+.new-coord-title {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
