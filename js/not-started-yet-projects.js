@@ -35,3 +35,11 @@ const DisplayEditCoordBtn = () => {
 const HideEditCoordBtn = () => {
     document.getElementById('edit-coord-btn').style.display = 'none';
 }
+
+const DisplayRemoveMemberBtn = (id) => {
+    document.getElementById(id).style.display = 'block';
+}
+
+const HideRemoveMemberBtn = (id) => {
+    document.getElementById(id).style.display = 'none';
+}

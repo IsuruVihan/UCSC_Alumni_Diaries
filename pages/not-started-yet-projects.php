@@ -120,7 +120,7 @@
             </div>
         </div>
         <div class='coord' onmouseover='DisplayEditCoordBtn()' onmouseout='HideEditCoordBtn()'>
-            <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic' />
+            <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
             <p class='coord-fname'>First Name</p>
             <p class='coord-lname'>Last Name</p>
             <i class='fas fa-edit edit-btn edit-coord-btn' id='edit-coord-btn' title='Change project coordinator'
@@ -134,6 +134,43 @@
     <div class='card project-committee'>
         <div class='title'>
             Committee Members
+        </div>
+        <div class='results'>
+            <div class='result2' onmouseover="DisplayRemoveMemberBtn('mem-rem-1')"
+                 onmouseout="HideRemoveMemberBtn('mem-rem-1')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='remove-btn btn' id='mem-rem-1'>Remove</button>
+            </div>
+            <div class='result2' onmouseover="DisplayRemoveMemberBtn('mem-rem-2')"
+                 onmouseout="HideRemoveMemberBtn('mem-rem-2')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='remove-btn btn' id='mem-rem-2'>Remove</button>
+            </div>
+            <div class='result2' onmouseover="DisplayRemoveMemberBtn('mem-rem-3')"
+                 onmouseout="HideRemoveMemberBtn('mem-rem-3')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='remove-btn btn' id='mem-rem-3'>Remove</button>
+            </div>
+            <div class='result2' onmouseover="DisplayRemoveMemberBtn('mem-rem-4')"
+                 onmouseout="HideRemoveMemberBtn('mem-rem-4')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='remove-btn btn' id='mem-rem-4'>Remove</button>
+            </div>
+            <div class='result2' onmouseover="DisplayRemoveMemberBtn('mem-rem-5')"
+                 onmouseout="HideRemoveMemberBtn('mem-rem-5')">
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+                <button class='remove-btn btn' id='mem-rem-5'>Remove</button>
+            </div>
         </div>
     </div>
 </div>
