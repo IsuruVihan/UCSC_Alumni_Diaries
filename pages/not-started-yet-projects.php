@@ -126,6 +126,10 @@
             <i class='fas fa-edit edit-btn edit-coord-btn' id='edit-coord-btn' title='Change project coordinator'
                onclick='DisplayEditProjectDescriptionDiv()'></i>
         </div>
+        <div class='start-delete'>
+            <button class='start-btn btn'>Start Project</button>
+            <button class='delete-btn btn'>Delete Project</button>
+        </div>
     </div>
     <div class='card project-committee'>
         <div class='title'>
