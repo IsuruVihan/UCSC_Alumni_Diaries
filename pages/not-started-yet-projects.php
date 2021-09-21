@@ -17,7 +17,7 @@
 <div class='not-started-yet-projects'>
     <div class='card projects-list'>
         <div class='title'>
-            Related Projects
+            Related Not Started Yet Projects
         </div>
         <div class='filter'>
             <div class='col1'>
@@ -103,9 +103,9 @@
             <button class='submit-new-project-name btn'>Edit</button>
             <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
         </div>
-        <div class='project-status'>
-            Not Started Yet
-        </div>
+<!--        <div class='project-status'>-->
+<!--            Not Started Yet-->
+<!--        </div>-->
         <div class='project-description' id='project-description'>
             Project description comes here...
             <br/><br/>
