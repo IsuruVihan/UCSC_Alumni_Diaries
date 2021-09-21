@@ -148,7 +148,8 @@
 }
 
 .view-btn,
-.delete-btn {
+.delete-btn,
+.edit-btn {
   background: #595959;
   border: 1px solid #595959;
 }
@@ -163,6 +164,8 @@
   background: #f5222d;
   border-color: #f5222d;
   color: white;
+}
+.edit-btn {
 }
 
 .chat-list {
