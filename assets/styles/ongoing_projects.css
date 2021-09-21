@@ -18,5 +18,70 @@
 }
 
 .ongoing-projects {
+    border: 2px solid red;
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    display: grid;
+    grid-template-columns: [col1] 30% [col2] 20% [col3] 20% [col4] 30% [col5];
+    grid-template-rows: [row1] 50% [row2] 50% [row3] 50% [row4] 50% [row5];
+}
 
+.projects-list, .project-details, .committee-members, .cash, .items, .cash-spent, .items-spent, .committee-chat {
+    border: 1px solid blue;
+}
+
+.projects-list {
+    grid-column-start: col1;
+    grid-column-end: col2;
+    grid-row-start: row1;
+    grid-row-end: row3;
+}
+
+.project-details {
+    grid-column-start: col2;
+    grid-column-end: col3;
+    grid-row-start: row1;
+    grid-row-end: row3;
+}
+
+.committee-members {
+    grid-column-start: col3;
+    grid-column-end: col4;
+    grid-row-start: row1;
+    grid-row-end: row3;
+}
+
+.cash {
+    grid-column-start: col4;
+    grid-column-end: col5;
+    grid-row-start: row1;
+    grid-row-end: row2;
+}
+
+.items {
+    grid-column-start: col4;
+    grid-column-end: col5;
+    grid-row-start: row2;
+    grid-row-end: row3;
+}
+
+.cash-spent {
+    grid-column-start: col4;
+    grid-column-end: col5;
+    grid-row-start: row3;
+    grid-row-end: row4;
+}
+
+.items-spent {
+    grid-column-start: col4;
+    grid-column-end: col5;
+    grid-row-start: row4;
+    grid-row-end: row5;
+}
+
+.committee-chat {
+    grid-column-start: col1;
+    grid-column-end: col4;
+    grid-row-start: row3;
+    grid-row-end: row5;
 }
