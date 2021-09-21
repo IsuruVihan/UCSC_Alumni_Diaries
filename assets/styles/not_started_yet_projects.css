@@ -103,12 +103,6 @@
     /*margin-left: 5px;*/
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    background: white;
-}
-
 .title {
     font-weight: 600;
     font-size: 1.2em;
@@ -233,7 +227,7 @@
     transition: all ease-in-out 0.5s;
 }
 
-.result:hover {
+.result:hover, .result2:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
 }
