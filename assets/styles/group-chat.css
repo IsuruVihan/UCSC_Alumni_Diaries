@@ -148,8 +148,7 @@
 }
 
 .view-btn,
-.delete-btn,
-.edit-btn {
+.delete-btn {
   background: #595959;
   border: 1px solid #595959;
 }
@@ -164,9 +163,6 @@
   background: #f5222d;
   border-color: #f5222d;
   color: white;
-}
-.edit-btn:hover {
-  color: #fa8c16;
 }
 
 .chat-list {
@@ -222,6 +218,16 @@
   border-radius: 5px;
   text-align: center;
   margin-right: 5px;
+}
+.edit-btn {
+  width: 15%;
+  background: #595959;
+  border: 1px solid #595959;
+}
+.edit-btn:hover {
+  background: #fa8c16;
+  border-color: #fa8c16;
+  color: white;
 }
 .row-02 {
   height: 42%;
