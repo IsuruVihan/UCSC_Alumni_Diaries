@@ -105,7 +105,7 @@ body,
     color: #f34e57;
     text-align: left;
     margin:10px;
-}
+} 
 
 .btn-solid-login{
     width: 80%;
@@ -147,3 +147,9 @@ body,
     background-color: #e59797;
 } 
 
+#error {
+    position: relative;
+    color: #f34e57;
+    text-align: left;
+    margin:10px;
+}
