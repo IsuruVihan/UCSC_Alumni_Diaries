@@ -49,6 +49,7 @@
     grid-row-end: row2;
     margin-left: 5px;
     margin-bottom: 5px;
+    margin-right: 5px;
 }
 
 .project-committee {
@@ -58,6 +59,7 @@
     grid-row-end: row3;
     margin-left: 5px;
     margin-top: 5px;
+    margin-right: 5px;
 }
 
 .cash {
@@ -65,6 +67,66 @@
     grid-column-end: col4;
     grid-row-start: row1;
     grid-row-end: row2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.summary {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.available-cash-div, .spent-cash-div {
+    width: 48%;
+    text-align: center;
+}
+
+.available-cash-input, .spent-cash-input {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    width: 100%;
+}
+
+.transaction {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.row-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.amount-input, .description-input {
+    width: 40%;
+}
+
+.bill-btn {
+    width: 15%;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gen-report-div {
+    text-align: center;
 }
 
 .items {
@@ -206,19 +268,30 @@
     border: 1px solid #595959;
 }
 
-.view-btn:hover {
+.gen-rep-btn, .spend-btn {
+    background: gray;
+    border: 1px solid gray;
+}
+
+.view-btn:hover, .gen-rep-btn:hover {
     background: #096dd9;
     border-color: #096dd9;
     color: white;
 }
 
-.filter-btn {
+.spend-btn:hover {
+    background: #fa8c16;
+    color: white;
+    border: 1px solid #fa8c16;
+}
+
+.filter-btn, .bill-btn {
     width: 15%;
     background: gray;
     border: 1px solid gray;
 }
 
-.filter-btn:hover {
+.filter-btn:hover, .bill-btn:hover {
     background: white;
     border-color: black;
     color: black;

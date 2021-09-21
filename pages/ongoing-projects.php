@@ -96,9 +96,9 @@
         <div class='title project-name-div' id='project-name-div'>
             Project Name
         </div>
-<!--        <div class='project-status'>-->
-<!--            Not Started Yet-->
-<!--        </div>-->
+        <!--        <div class='project-status'>-->
+        <!--            Not Started Yet-->
+        <!--        </div>-->
         <div class='project-description' id='project-description'>
             Project description comes here...
         </div>
@@ -144,8 +144,34 @@
             </div>
         </div>
     </div>
-    <div class='cash'>
-        Cash
+    <div class='card cash'>
+        <div class='title'>
+            Cash
+        </div>
+        <div class='summary'>
+            <div class='available-cash-div'>
+                Available (Rs.) <br/>
+                <div class='available-cash-input'>10000</div>
+            </div>
+            <div class='spent-cash-div'>
+                Spent (Rs.) <br/>
+                <div class='spent-cash-input'>4500</div>
+            </div>
+        </div>
+        <div class='transaction'>
+            <div class='row-1'>
+                <input type='text' placeholder='Rs.' class='amount-input input-field'/>
+                <input type='text' placeholder='Description' class='description-input input-field'/>
+                <input type='file' class='bill-input' id='bill-input' style='display: none'/>
+                <button onclick="document.getElementById('bill-input').click()" class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='row-2'>
+                <button class='spend-btn btn'>Spend</button>
+            </div>
+        </div>
+        <div class='gen-report-div'>
+            <button class='btn gen-rep-btn'>Generate Report</button>
+        </div>
     </div>
     <div class='items'>
         Items
