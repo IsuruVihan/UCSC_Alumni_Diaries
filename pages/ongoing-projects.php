@@ -173,8 +173,51 @@
             <button class='btn gen-rep-btn'>Generate Report</button>
         </div>
     </div>
-    <div class='items'>
-        Items
+    <div class='card items'>
+        <div class='title'>
+            Items
+        </div>
+        <div class='results2'>
+            <div class='result3'>
+                <div class='item-details'>
+                    <div class='detail-field'>Item Name</div>
+                    <div class='detail-field'>Available Qty</div>
+                    <div class='detail-field'>Spent Qty</div>
+                </div>
+                <div class='transaction'>
+                    <div class='row-1'>
+                        <input type='text' placeholder='Qty' class='amount-input input-field'/>
+                        <input type='text' placeholder='Description' class='description-input input-field'/>
+                        <input type='file' class='bill-input' id='bill-input' style='display: none'/>
+                        <button onclick="document.getElementById('bill-input').click()" class='btn bill-btn'>Bill</button>
+                    </div>
+                    <div class='row-2'>
+                        <button class='spend-btn btn'>Spend</button>
+                    </div>
+                </div>
+            </div>
+            <div class='result3'>
+                <div class='item-details'>
+                    <div class='detail-field'>Item Name</div>
+                    <div class='detail-field'>Available Qty</div>
+                    <div class='detail-field'>Spent Qty</div>
+                </div>
+                <div class='transaction'>
+                    <div class='row-1'>
+                        <input type='text' placeholder='Qty' class='amount-input input-field'/>
+                        <input type='text' placeholder='Description' class='description-input input-field'/>
+                        <input type='file' class='bill-input' id='bill-input' style='display: none'/>
+                        <button onclick="document.getElementById('bill-input').click()" class='btn bill-btn'>Bill</button>
+                    </div>
+                    <div class='row-2'>
+                        <button class='spend-btn btn'>Spend</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='gen-report-div'>
+            <button class='btn gen-rep-btn'>Generate Report</button>
+        </div>
     </div>
     <div class='cash-spent'>
         Cash Spent
