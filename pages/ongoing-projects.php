@@ -15,28 +15,28 @@
 </div>
 <div class='ongoing-projects'>
     <div class='project-list'>
-     akjfb
+        Project List
     </div>
     <div class='project-details'>
-    [weojfwe
+        Project Details
     </div>
     <div class='committee-members'>
-    [wef[pwef
+        Committee Members
     </div>
     <div class='cash'>
-    [owe[ew
+        Cash
     </div>
     <div class='items'>
-[weof[wekf
+        Items
     </div>
     <div class='cash-spent'>
-]pwekfp]wef
+        Cash Spent
     </div>
     <div class='items-spent'>
-[wekfpwef
+        Items Spent
     </div>
     <div class='committee-chat'>
-    wmefo[mwe
+        Committee Chat
     </div>
 </div>
 
