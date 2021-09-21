@@ -27,7 +27,7 @@
     grid-template-rows: [row1] 15em [row2] 15em [row3] 15em [row4] 15em [row5];
 }
 
-.projects-list, .project-details, .committee-members, .cash, .items, .cash-spent, .items-spent, .committee-chat {
+.projects-list, .project-details, .project-committee, .cash, .items, .cash-spent, .items-spent, .committee-chat {
     border: 1px solid blue;
     display: flex;
     flex-direction: column;
@@ -48,13 +48,16 @@
     grid-row-start: row1;
     grid-row-end: row2;
     margin-left: 5px;
+    margin-bottom: 5px;
 }
 
-.committee-members {
+.project-committee {
     grid-column-start: col2;
     grid-column-end: col3;
     grid-row-start: row2;
     grid-row-end: row3;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .cash {
@@ -170,7 +173,18 @@
     transition: all ease-in-out 0.5s;
 }
 
-.result:hover {
+.result2 {
+    width: 100%;
+    height: 30%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+}
+
+.result:hover, .result2:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
 }
@@ -228,7 +242,7 @@
 .coord {
     border: 1px solid lightgray;
     border-radius: 5px;
-    height: 6vh;
+    height: 4vh;
     padding: 10px;
     display: flex;
     justify-content: space-between;

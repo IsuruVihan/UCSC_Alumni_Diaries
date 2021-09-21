@@ -112,8 +112,37 @@
             <button class='delete-btn btn'>Close Project</button>
         </div>
     </div>
-    <div class='committee-members'>
-        Committee Members
+    <div class='card project-committee' id='committee-members'>
+        <div class='title'>
+            Committee Members
+        </div>
+        <div class='results'>
+            <div class='result2'>
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+            </div>
+            <div class='result2'>
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+            </div>
+            <div class='result2'>
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+            </div>
+            <div class='result2'>
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+            </div>
+            <div class='result2'>
+                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+                <div class='fname'>First Name</div>
+                <div class='lname'>Last Name</div>
+            </div>
+        </div>
     </div>
     <div class='cash'>
         Cash
