@@ -165,7 +165,8 @@
   border-color: #f5222d;
   color: white;
 }
-.edit-btn {
+.edit-btn:hover {
+  color: #fa8c16;
 }
 
 .chat-list {
