@@ -222,10 +222,69 @@
         </div>
     </div>
     <div class='card cash-spent'>
-        Cash Spent
+        <div class='title'>
+            Cash Spent
+        </div>
+        <div class='results'>
+            <div class='result4'>
+                <div>Amount (Rs.)</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='result4'>
+                <div>Amount (Rs.)</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='result4'>
+                <div>Amount (Rs.)</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='result4'>
+                <div>Amount (Rs.)</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='result4'>
+                <div>Amount (Rs.)</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+        </div>
+        <div class='gen-report-div'>
+            <button class='btn gen-rep-btn'>Generate Report</button>
+        </div>
     </div>
     <div class='card items-spent'>
-        Items Spent
+        <div class='title'>
+            Items Spent
+        </div>
+        <div class='results'>
+            <div class='result4'>
+                <div>ItemName</div>
+                <div>Qty</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='result4'>
+                <div>ItemName</div>
+                <div>Qty</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='result4'>
+                <div>ItemName</div>
+                <div>Qty</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='result4'>
+                <div>ItemName</div>
+                <div>Qty</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+            <div class='result4'>
+                <div>ItemName</div>
+                <div>Qty</div>
+                <button class='btn bill-btn'>Bill</button>
+            </div>
+        </div>
+        <div class='gen-report-div'>
+            <button class='btn gen-rep-btn'>Generate Report</button>
+        </div>
     </div>
     <div class='card committee-chat'>
         <div class='title'>

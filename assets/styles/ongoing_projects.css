@@ -193,9 +193,10 @@
 
 .sent-message {
     border: 1px solid #237804;
+    opacity: 70%;
     background: #237804;
     color: white;
-    border-radius: 5px;
+    border-radius: 20px;
     max-width: 80%;
     overflow-wrap: break-word;
     text-align: left;
@@ -207,9 +208,10 @@
 
 .received-message {
     border: 1px solid #434343;
+    opacity: 70%;
     background: #434343;
     color: white;
-    border-radius: 5px;
+    border-radius: 20px;
     max-width: 80%;
     overflow-wrap: break-word;
     text-align: left;
@@ -403,6 +405,18 @@
     transition: all ease-in-out 0.5s;
 }
 
+.result4 {
+    width: 100%;
+    height: 40%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    gap: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
 .item-details {
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -411,7 +425,7 @@
     justify-content: space-evenly;
 }
 
-.result:hover, .result2:hover, .result3:hover, .create-message-div:hover {
+.result:hover, .result2:hover, .result3:hover, .result4:hover, .create-message-div:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
 }
