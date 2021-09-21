@@ -18,7 +18,7 @@
 }
 
 .ongoing-projects {
-    /*border: 2px solid red;*/
+    border: 2px solid red;
     margin-left: 6.7em;
     margin-right: 6.7em;
     margin-bottom: 5em;
@@ -28,7 +28,7 @@
 }
 
 .projects-list, .project-details, .committee-members, .cash, .items, .cash-spent, .items-spent, .committee-chat {
-    /*border: 1px solid blue;*/
+    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -39,6 +39,7 @@
     grid-column-end: col2;
     grid-row-start: row1;
     grid-row-end: row3;
+    margin-right: 5px;
 }
 
 .project-details {
@@ -46,6 +47,7 @@
     grid-column-end: col3;
     grid-row-start: row1;
     grid-row-end: row2;
+    margin-left: 5px;
 }
 
 .committee-members {
@@ -206,4 +208,59 @@
     background: white;
     border-color: black;
     color: black;
+}
+
+.project-status, .project-description {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    color: gray;
+    /*margin-top: 0.8em;*/
+}
+
+.project-description {
+    height: 40%;
+    text-align: justify;
+    padding: 10px;
+}
+
+.coord {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 6vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coord-pic {
+    padding: 0;
+    margin: 0;
+}
+
+.start-delete {
+    height: 4vh;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+.start-btn, .delete-btn {
+    border: 1px solid gray;
+    background: gray;
+}
+
+.start-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.delete-btn:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
 }

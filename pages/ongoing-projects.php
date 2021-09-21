@@ -92,8 +92,25 @@
             </div>
         </div>
     </div>
-    <div class='project-details'>
-        Project Details
+    <div class='card project-details'>
+        <div class='title project-name-div' id='project-name-div'>
+            Project Name
+        </div>
+<!--        <div class='project-status'>-->
+<!--            Not Started Yet-->
+<!--        </div>-->
+        <div class='project-description' id='project-description'>
+            Project description comes here...
+        </div>
+        <div class='coord'>
+            <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
+            <p class='coord-fname'>First Name</p>
+            <p class='coord-lname'>Last Name</p>
+        </div>
+        <div class='start-delete'>
+            <button class='start-btn btn'>Complete Project</button>
+            <button class='delete-btn btn'>Close Project</button>
+        </div>
     </div>
     <div class='committee-members'>
         Committee Members

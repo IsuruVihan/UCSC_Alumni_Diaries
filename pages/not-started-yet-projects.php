@@ -103,9 +103,9 @@
             <button class='submit-new-project-name btn'>Edit</button>
             <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
         </div>
-        <div class='project-status'>
-            Not Started Yet
-        </div>
+<!--        <div class='project-status'>-->
+<!--            Not Started Yet-->
+<!--        </div>-->
         <div class='project-description' id='project-description'>
             Project description comes here...
             <br/><br/>

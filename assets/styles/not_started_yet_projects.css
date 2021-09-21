@@ -269,7 +269,7 @@
 }
 
 .project-description {
-    height: 40%;
+    height: 50vh;
     text-align: justify;
     padding: 10px;
 }
@@ -277,7 +277,7 @@
 .edit-project-description {
     display: none;
     flex-direction: column;
-    height: 40%;
+    height: 35vh;
     margin-top: 10px;
 }
 
