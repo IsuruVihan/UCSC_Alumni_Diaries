@@ -1,5 +1,7 @@
 <?php include('../components/header.php'); ?>
 <link rel='stylesheet' href='../assets/styles/private-chat.css'/>
+<link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+      integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
 <div class='main-container'>
     <p class='breadcrumb'>
@@ -128,6 +130,18 @@
         <div class='chat-body'>
         </div>
         <div class='input-field'>
+            <div class='text-area'>
+                <textarea class='txt-area' placeholder='Enter Message...' rows='4' cols='50'>
+                </textarea>
+            </div>
+            <div class='btn-container-input-field'>
+                <label for='file-input'><i id='previewImg' class='fas fa-paperclip'></i>
+                </label>
+                <input id='file-input' type='file' style='display: none;' />
+                <label for='submit-input'><i class="fas fa-paper-plane"></i>
+                </label>
+                <input id='submit-input' type='submit' style='display: none;' />
+            </div>
         </div>
     </div>
     <div class='available-users'>
@@ -237,5 +251,7 @@
         </div>
     </div>
 </div>
+
+<!--<script src='../js/private-chat.js'></script>-->
 
 <?php include('../components/footer.php'); ?>

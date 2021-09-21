@@ -199,13 +199,15 @@
     /*padding: 0.5em;*/
     margin-right: 10px;
     /*margin-bottom: 5px;*/
-    display:grid;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
 }
 
 .chat-title{
     border: 2px solid lightgray;
     border-radius: 5px;
-    height: 50%;
+    height: 10%;
     margin: 5px;
     display: flex;
     flex-direction: row;
@@ -226,30 +228,84 @@
 .chat-body{
     /*border: 1px solid lightgray;*/
     border-radius: 5px;
-    height: 42vh;
+    height: 65%;
     /*padding: 5px;*/
     /*justify-content: center;*/
     /*align-items: center;*/
     /*gap: 5px;*/
     border: 3px solid paleturquoise;
-    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    /*margin-bottom: 5px;*/
+    margin-bottom: 5px;
 }
 .input-field{
-    /*border: 1px solid lightgray;*/
     border-radius: 5px;
-    height: 15vh;
-    /*padding: 5px;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*gap: 5px;*/
-    border: 3px solid rosybrown;
+    height: 15%;
+    border: 2px solid lightgray;
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
-    /*margin-bottom: 5px;*/
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text-area{
+    border-radius: 30px;
+    height: 60%;
+    width: 80%;
+    border: 2px solid lightgray;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-area{
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    resize: none;
+    height: 100%;
+    width: 80%;
+    /*overflow: auto;*/
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+.fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 36px;
+    color: gray;
+}
+
+.fas:hover {
+
+    color: lightgray;
+}
+
+.txt-area::placeholder{
+    color: gray;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.btn-container-input-field{
+    width: 20%;
+    height: 50%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .available-users {
@@ -314,3 +370,4 @@
     box-shadow: 0 0 5px gray;
     cursor: pointer;
 }
+
