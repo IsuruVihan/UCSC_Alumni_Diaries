@@ -180,8 +180,6 @@
   grid-row-start: row1;
   grid-row-end: row4;
   margin-right: 5px;
-  margin-left: 5px;
-  /* border: 2px green solid; */
   display: flex;
   flex-direction: column;
 }
@@ -196,15 +194,33 @@
   box-shadow: 1px 2px 4px lightgray;
 }
 .row-01 {
-  height: 8%;
-
-  /* margin-bottom: 10px; */
-  /* border: 2px red solid;  */
+  height: 7%;
+  padding: 5px;
 }
-
+.top-window {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.group-name {
+  width: 30%;
+  height: 50%;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  text-align: center;
+  font-family: "Nunito", serif;
+}
+.group-pic {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 5px;
+}
 .row-02 {
   height: 42%;
-  /* border: 2px green solid; */
   margin-top: 2px;
 }
 
@@ -217,52 +233,6 @@
   height: 42%;
   /* border: 2px green solid; */
   margin-top: 2px;
-}
-
-/* .buttons {
-  display: none;
-} */
-
-/* .chat-wall-grid{
-  background: #fafafa;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: [row1] 10% [row2] 37.5% [row3] 15%[row4]37.5%[row5];
- 
-
-}
-.group-info{
-  grid-row-start: row1;
-  grid-row-end: row2;
-  border: 2px pink solid;
-
-}
-.receive-message{
-  grid-row-start: row2;
-  grid-row-end: row3;
-  border: 2px red solid;
-  margin-top:2px;
-
-}
-.enter-message{
-  grid-row-start: row3;
-  grid-row-end: row4;
-  border: 2px purple solid;
-  margin-top:2px;
-}
-.participants{
-  grid-row-start: row4;
-  grid-row-end: row5;
-  border: 2px orange solid;
-  margin-top:2px;
-} */
-.available-users {
-  grid-column-start: line3;
-  grid-column-end: line4;
-  grid-row-start: row1;
-  grid-row-end: row2;
-  margin-left: 5px;
-  /* border: 2px #0c6ce9 solid; */
 }
 .create-group {
   grid-column-start: line3;

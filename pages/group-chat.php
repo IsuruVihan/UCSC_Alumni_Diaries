@@ -131,9 +131,11 @@
             </div>
             <div class='chat-wall'>
                 <div class='row-01'>
-                   <img src='../assets/images/user-default.png' width='9%' class="group-pic" alt='user-pic' >    
-                   <div class='group-name'> Name</div>
-                   <button class='Edit-btn btn'>Edit</button>   
+                   <img src='../assets/images/user-default.png' width='9%' class='group-pic' alt='user-pic' >
+                   <div class='top-window'>    
+                        <div class='group-name'> Group Name</div>
+                        <button class='Edit-btn btn'>Edit</button> 
+                    </div>      
                 </div>
             <div class='row-02'></div>
             <div class='row-03'></div>
