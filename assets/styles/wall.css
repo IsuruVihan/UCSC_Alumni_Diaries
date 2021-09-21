@@ -33,11 +33,15 @@
     transition: all ease-in-out 0.5s;
     padding: 20px;
     background: white;
+    border-radius: 10px;
 }
 
 .common-wall{
-    border: 3px solid green;
+    box-shadow: 1px 2px 4px lightgray;
     padding: 20px;
+    background: white;
+    transition: all ease-in-out 0.5s;
+    border-radius: 10px;
 }
 
 .grid-title {
@@ -49,7 +53,7 @@
 }
 
 .filter-box{
-    
+    box-shadow: 1px 2px 4px lightgray;
     border: 1px solid lightgray;
     padding: 3px 3px;
     margin: 0.8em 3px;
@@ -57,7 +61,8 @@
     flex-direction: row;
     border-radius: 5px;
     justify-content: space-between;
-    border: 1px solid green;  
+    background: white;
+    
 }
 
 .btn {
@@ -86,7 +91,6 @@
     margin: 0.8em 0;
 }
 .box-title{
-    border: 1px solid black;
     font-weight: 600;
     font-size: 1em;
     text-align: center;
@@ -97,11 +101,12 @@
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-    
+       
 }
 
 .row-1-gap{
     margin-top:1em;
+    
 }
 .row-2{
     
@@ -178,11 +183,13 @@
 }
 
 .image-box{
-    border: 2px solid red;
-    
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
     height: 100px;
     align-items: center;
-    margin: 0 120px;
+    margin: 0.8em 120px;
 }
 
 .box-row{
@@ -192,35 +199,82 @@
     
 }
 .create-post-box{
-    border:  1px solid red;
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     margin: 0.8em 3px;
+
 }
-
-
-.report-box{
-    border:  1px solid blue;
+.row-0{
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin: 0.8em 3px;
+    flex-direction: row;
+    
 }
+.create-post-title{
+    margin: 0.8em;
+    text-align: center;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+   
+}
+.create-post-content{
+    height: 100px; 
+    width: 100%;
+    margin: 0.8em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    text-align: center;
+}
+
+.create-post-buttons{
+    margin: 0.8em;
+    display: flex;
+    justify-content: space-between;
+}
+
 .post-report{
-    border: 1px solid black;
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
+    margin: 0.8em auto;
+    width: 60%;
+    height: 20%;
+    border-radius: 5px;
+    padding: 3px;
+}
+.input-field-report{
+    
+    height: 100px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin:0 0.8em ;
 }
 .comment-report{
-    border: 1px solid black;
-    margin: 0.8em 0;
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid lightgray;
+    margin: 0.8em auto;
     display: flex;
     flex-direction: column;
+    width: 60%;
+    height: 50%;
+    border-radius: 5px;
+    padding: 3px;
 }
 
 .filter-left{
-border: 1px solid blue;
 display: flex;
 flex-direction: row;
 width: 35%;
@@ -230,7 +284,6 @@ width: 35%;
 }
 
 .filter-right{
-    border: 1px solid blue;
     display: flex;
     flex-direction: row;
     width: 40%;
@@ -239,4 +292,152 @@ width: 35%;
 
 .filter-right > button{
     margin:0 3px;
+}
+.post-box{
+    border: 1px solid orchid ;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* post content grid*/
+.post-content{
+    border: 1px solid brown;
+    display: grid;
+    margin: 0.8em;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    " . dp . fname lname time . . dlt "
+    " . dp . title title title title title title "
+    " pic pic pic txt txt txt txt txt txt "
+    " pic pic pic txt txt txt txt txt txt "
+    " pic pic pic txt txt txt txt txt txt "
+    " pic pic pic txt txt txt txt txt txt"
+    " . . . report . like like-count dislike dislike-count"
+    ;
+}
+
+.dp-box{
+    border: 1px solid black;
+    grid-area: dp;
+}
+.pic-box{
+    border: 1px solid red; 
+    grid-area: pic;
+}
+.f-name{
+    border: 1px solid brown;
+    grid-area: fname;
+}
+.l-name{
+    border: 1px solid red;
+    grid-area: lname;
+}
+.post-time{
+    border: 1px solid red;
+    grid-area: time;
+}
+.post-delete{
+    border: 1px solid red;
+    grid-area: dlt;
+}
+.post-title{
+    border: 1px solid red;
+    grid-area: title;
+}
+.post-text{
+    border: 1px solid red;
+    grid-area: txt;
+}
+.report-btn{
+    border: 1px solid black;
+    grid-area: report;
+}
+.post-like{
+    border: 1px solid black;
+    grid-area: like;
+}
+.post-like-count{
+    border: 1px solid black;
+    grid-area: like-count;
+}
+.post-dislike{
+    border: 1px solid black;
+    grid-area: dislike;
+}
+.post-dislike-count{
+    border: 1px solid black;
+    grid-area: dislike-count;
+}
+/*post comment grid*/
+.comment-box{
+    border: 2px solid yellowgreen;
+    height: 40%;
+    margin: 0.8em;
+    display: flex;
+    flex-direction: column;
+}
+.comment-content{
+    border: 2px solid black;
+    display: grid;
+    margin: 0.8em;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-areas: 
+    "  .  c-fname c-lname c-time c-edit  c-dlt c-report"
+    "  c-dp c-txt c-txt c-txt c-txt . . "
+    "  c-dp c-txt c-txt c-txt c-txt like-count like "
+    "  c-dp c-txt c-txt c-txt c-txt dislike-count dislike "
+    ;
+
+}
+.comment-dp{
+    border: 2px solid yellowgreen;
+    grid-area: c-dp;
+    
+}
+.c-fname{
+    border: 1px solid red;
+    grid-area: c-fname;
+}
+.c-lname{
+    border: 1px solid red;
+    grid-area: c-lname;
+}
+.c-time{
+    border: 1px solid red;
+    grid-area: c-time;
+}
+.c-edit{
+    border: 1px solid red;
+    grid-area: c-edit;
+}
+.c-dlt{
+    border: 1px solid red;
+    grid-area: c-dlt;
+} 
+.c-report{
+    border: 1px solid red;
+    grid-area: c-report;
+}
+.c-txt{
+    border: 1px solid red;
+    grid-area: c-txt;
+}
+.c-like-count{
+    border: 1px solid red;
+    grid-area: like-count;
+}
+.c-like{
+    border: 1px solid red;
+    grid-area: like;
+}
+.c-dislike{
+    border: 1px solid red;
+    grid-area: dislike;
+}
+.c-dislike-count{
+    border: 1px solid red;
+    grid-area: dislike-count;
 }
