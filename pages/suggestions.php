@@ -49,12 +49,13 @@
                         <div class='pro-pic'>
                             <div class='tandp'>
                                 <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
-                                <div class='timestamp'> Time </div>
+                                
                             </div>
                         </div> 
                         <div class='ntt'>
                             <div class='titlesl list-details'> Title </div>
                             <div class='fullname list-details'> Full Name </div>
+                            <div class='timestamp list-details'> Time </div>
                         </div>
                     </div>
                     <div class='sugestedcontent'> 
@@ -70,12 +71,13 @@
                         <div class='pro-pic'>
                             <div class='tandp'>
                                 <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
-                                <div class='timestamp'> Time </div>
+                                
                             </div>
                         </div> 
                         <div class='ntt'>
                             <div class='titlesl list-details'> Title </div>
                             <div class='fullname list-details'> Full Name </div>
+                            <div class='timestamp list-details'> Time </div>
                         </div>
                     </div>
                     <div class='sugestedcontent'> 
@@ -91,12 +93,13 @@
                         <div class='pro-pic'>
                             <div class='tandp'>
                                 <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
-                                <div class='timestamp'> Time </div>
+                                
                             </div>
                         </div> 
                         <div class='ntt'>
                             <div class='titlesl list-details'> Title </div>
                             <div class='fullname list-details'> Full Name </div>
+                            <div class='timestamp list-details'> Time </div>
                         </div>
                     </div>
                     <div class='sugestedcontent'> 
@@ -112,12 +115,13 @@
                         <div class='pro-pic'>
                             <div class='tandp'>
                                 <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
-                                <div class='timestamp'> Time </div>
+                                
                             </div>
                         </div> 
                         <div class='ntt'>
                             <div class='titlesl list-details'> Title </div>
                             <div class='fullname list-details'> Full Name </div>
+                            <div class='timestamp list-details'> Time </div>
                         </div>
                     </div>
                     <div class='sugestedcontent'> 
@@ -129,26 +133,26 @@
                     </div>
             </div>
             <div class='flexbox-item'>
-            <div class='suggests'>
+                <div class='suggests'>
                         <div class='pro-pic'>
                             <div class='tandp'>
                                 <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
-                                <div class='timestamp'> Time </div>
+                                
                             </div>
                         </div> 
                         <div class='ntt'>
                             <div class='titlesl list-details'> Title </div>
                             <div class='fullname list-details'> Full Name </div>
+                            <div class='timestamp list-details'> Time </div>
                         </div>
-                    </div>
-                    <div class='sugestedcontent'> 
+                </div>
+                <div class='sugestedcontent'> 
                         <div class='attachment'> Attachment </div>
                         <div class='description'> Suggestion </div>
-                    </div>
-                    <div class='deletecontainer'>
+                </div>
+                <div class='deletecontainer'>
                         <input type='reset' class='delete-btn' value='Delete'>
-                    </div>
-            </div>
+                </div>
         </div>
         </div>
     </div>

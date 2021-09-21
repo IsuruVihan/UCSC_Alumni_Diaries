@@ -81,6 +81,7 @@
     color: gray;
     font-family: "Nunito", serif; 
     margin-bottom: 1em;
+    
 }
 
 .details-field {
@@ -160,7 +161,7 @@
     /* grid-column-start: col2;
     grid-column-end: col3; */
     width: 100%;
-    height: 245px;
+    height: 296px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -235,7 +236,7 @@
  }
 
  .flexbox-item {
-    width:95.5%;
+    width:96%;
     /* height:20%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -243,7 +244,7 @@
     justify-content: space-around;
     align-items: center;
     transition: all ease-in-out 0.5s; */
-    height: 345px;
+    height: 390px;
     /* border: 3px solid rgb(92, 24, 218); */
     border-radius: 5px;
     display: flex;
@@ -260,16 +261,16 @@
 
 .tandp {
     display: grid;
-    grid-template-rows: [roo1] 70% [roo2] 30% [roo3];
+    grid-template-rows: [roo1] 100% [roo2];
     /* border: 3px solid red; */
-    padding: 2px;
+    /* padding: 2px; */
 }
 
 .suggests {
     grid-row-start: r1;
     grid-row-end: r2;
     display:grid;
-    grid-template-columns: [co1] 15% [co2] 85% [co3];
+    grid-template-columns: [co1] 25% [co2] 75% [co3] ;
     /* border: 3px solid yellow;  */
     /* border:0px;  */
     padding: 2px;
@@ -282,15 +283,16 @@
     grid-column-end: co2;
     /* border: 3px solid rgb(168, 95, 26); */
     /* height: 50px; */
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
+
 } 
 
 .ntt {
     grid-column-start: co2;
     grid-column-end: c03;
     display: grid;
-    grid-template-rows: [ro1] 50% [ro2] 50% [ro3];
+    grid-template-rows: [ro1] 33.3% [ro2] 33.3% [ro3] 33.3% [ro4];
     /* border: 3px solid black; */
     padding: 2px;
 
@@ -307,9 +309,13 @@
     color: gray;
     font-family: "Nunito", serif;
     /* border: 3px solid plum; */
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 4px;
-    margin-top: 3px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     
     
 }
@@ -333,7 +339,11 @@
     color: gray;
     font-family: "Nunito", serif;
     /* border: 3px solid plum; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
     text-align: center;
+    justify-content: center;
     
 }
 
@@ -343,9 +353,9 @@
 }
 
 .timestamp {
-    grid-row-start: roo2;
-    grid-row-end: roo3;
-    width: 85%;
+    grid-row-start: ro3;
+    grid-row-end: ro4;
+    width: 50%;
     height: 20px;
     background: white;
     border: 1px solid lightgray;
@@ -353,10 +363,15 @@
     color: gray;
     font-family: "Nunito", serif;
     /* border: 3px solid plum; */
+    /* text-align: center; */
+    /* padding: 2px; */
+    /* justify-content: space-around; */
+    /* padding-left: 1px; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
     text-align: center;
-    padding: 2px;
-    justify-content: space-around;
-    /* padding-left: 2px; */
+    justify-content: center;
 }
 
 /* .subcontainer{
@@ -386,9 +401,13 @@
     color: gray;
     font-family: "Nunito", serif;
     /* border: 3px solid rgb(129, 27, 129); */
-    text-align: center;
+    /* text-align: center; */
     padding: 2px;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .attachment, .details{
@@ -398,7 +417,7 @@
 .description{
     grid-column-start: c2;
     grid-column-end: c3;
-    width: 97.7%;
+    width: 97.8%;
     height: 150px;
     background: white;
     border: 1px solid lightgray;
@@ -406,15 +425,19 @@
     color: gray;
     font-family: "Nunito", serif;
     /* border: 3px solid rgb(75, 216, 99); */
-    text-align: center;
     padding: 2px;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .deletecontainer {
     grid-column-start: c3;
     grid-column-end: c4;
     /* border: 3px solid rgb(134, 11, 11); */
+    align-items: center;
 
 }
 
@@ -428,7 +451,7 @@
     height:35px;
     margin-left: 35%;
     font-family: 'Nunito', serif;
-    margin-top: 13px;
+    margin-top: 20px;
    
 }
 
