@@ -14,17 +14,18 @@
     font-size: 2em;
     margin: 0;
 }
+
 .private-chat {
     display: grid;
     justify-content: center;
     align-items: center;
     height: 80vh;
     background: #fafafa;
-    /*border:3px solid blue ;*/
     grid-template-columns: [line1] 27% [line2] 46% [line3] 27% [line4];
     grid-template-rows: [row1] 100% [row2];
     margin: 0 6.7em 10vh;
 }
+
 .chat-list {
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px lightgray;
@@ -34,28 +35,28 @@
     grid-row-start: row1;
     grid-row-end: row2;
     height: 100%;
-    /*padding-left: 1.5em;*/
-    /*padding-right: 1.5em;*/
     display: flex;
     flex-direction: column;
     margin-right: 10px;
-    /*margin-bottom: 5px;*/
 }
+
 .chat-list-title{
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
-    /*height: 10%;*/
 }
+
 .col1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
 .col2 {
     display: flex;
     justify-content: center;
 }
+
 .btn {
     cursor: pointer;
     border-radius: 5px;
@@ -104,10 +105,12 @@
     color: gray;
     font-family: "Nunito", serif;
 }
+
 .input:hover {
     border-color: #ffccc7;
 }
-.input-avu{
+
+.input-avu {
     width: 32%;
     height: 25px;
     background: white;
@@ -116,6 +119,7 @@
     color: gray;
     font-family: "Nunito", serif;
 }
+
 .input-avu:hover {
     border-color: #ffccc7;
 }
@@ -177,7 +181,6 @@
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    /*margin-top: 3px;*/
     text-align: center;
 }
 
@@ -198,7 +201,6 @@
     height: 100%;
     padding: 5px;
     margin-right: 10px;
-    /*margin-bottom: 5px;*/
     display:flex;
     flex-direction: column;
     gap:5px;
@@ -375,33 +377,27 @@
     grid-row-start: row1;
     grid-row-end: row2;
     height: 100%;
-    /*padding-left: 1.5em;*/
-    /*padding-right: 1.5em;*/
     display: flex;
     flex-direction: column;
-    /*margin: 5px;*/
-    /*margin-bottom: 5px;*/
 }
 
 .available-users-title{
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
-    /*height: 100%;*/
 }
 
 
 .filter-field {
     display: flex;
     flex-direction: column;
-    /*margin-top: 0.8em;*/
-    /*margin-bottom: 0.8em;*/
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 2px;
     margin: 0.8em;
 }
-.available-users-container{
+
+.available-users-container {
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-around;
@@ -409,8 +405,9 @@
     overflow: hidden;
     overflow-y: scroll;
     height: 100%;
-    margin:10px;
+    margin: 10px;
 }
+
 .available-users-item {
     height: 17%;
     border: 2px solid lightgray;
