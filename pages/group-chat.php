@@ -129,7 +129,7 @@
                     </div>      
                 </div>         
             </div>
-            <div class='chat-wall'>
+         <div class='chat-wall'>
                 <div class='row-01'>
                    <img src='../assets/images/user-default.png' width='9%' class='group-pic' alt='user-pic' >
                    <div class='top-window'>    
@@ -249,7 +249,15 @@
                         </div>
                     </div>
                 </div>
-                        <div class='row-03'></div>
+                  
+                <div class='create-message-div'>
+                   <textarea class='chat-message'></textarea>
+                    <div class='button-set'>
+                       <i class='fas fa-paper-plane chat-icon send-icon'></i>
+                       <i class='fas fa-paperclip chat-icon attach-icon'></i>
+                       <i class='fas fa-times-circle chat-icon clear-icon'></i>
+                    </div>
+                </div>
                 <div class='row-04'>
                     <div class='participants'>
                       <div class='title-02'>Participants</div> 
@@ -281,69 +289,64 @@
                                         </select>
                                     </div> 
                                         <div class='box-02'> 
-                                        <button class='filter-btn btn'>Filter</button>   
-                                    </div>  
-                                </div>
-
+                                          <button class='filter-btn btn'>Filter</button>   
+                                       </div>  
+                              </div>
                              <div class='participants-list'>
-                               <div class='list'> 
+                                <div class='list'> 
                                  <img src='../assets/images/user-default.png' width='9%' height='' class='participants-pic' alt='user-pic' >
-                               <div class='p-name-buttons'>
-                               <div class='p-first-name'>First Name</div>
-                               <div class='p-last-name'>last Name</div>
-                               </div>
+                                   <div class='p-name-buttons'>
+                                        <div class='p-first-name'>First Name</div>
+                                        <div class='p-last-name'>last Name</div>
+                                    </div>
                                <button class='remove-btn btn'>Remove</button> 
-                            
                             </div>
-                               <div class='list'>
+                            <div class='list'>
                                <img src='../assets/images/user-default.png' width='9%' height='' class='participants-pic' alt='user-pic' >
                                <div class='p-name-buttons'>
-                               <div class='p-first-name'>First Name</div>
-                               <div class='p-last-name'>last Name</div>
-                               </div>
-                               <button class='remove-btn btn'>Remove</button> 
-                               </div>
-                               <div class='list'>
+                                 <div class='p-first-name'>First Name</div>
+                                  <div class='p-last-name'>last Name</div>
+                                </div>
+                                 <button class='remove-btn btn'>Remove</button> 
+                            </div>
+                            <div class='list'>
                                <img src='../assets/images/user-default.png' width='9%' height='' class='participants-pic' alt='user-pic' >
-                               <div class='p-name-buttons'>
-                               <div class='p-first-name'>First Name</div>
-                               <div class='p-last-name'>last Name</div>
-                               </div>
-                               <button class='remove-btn btn'>Remove</button> 
-                               </div>
-                               <div class='list'>
+                                <div class='p-name-buttons'>
+                                    <div class='p-first-name'>First Name</div>
+                                    <div class='p-last-name'>last Name</div>
+                                </div>
+                                 <button class='remove-btn btn'>Remove</button> 
+                            </div>
+                            <div class='list'>
+                              <img src='../assets/images/user-default.png' width='9%' height='' class='participants-pic' alt='user-pic' >
+                                <div class='p-name-buttons'>
+                                    <div class='p-first-name'>First Name</div>
+                                    <div class='p-last-name'>last Name</div>
+                                </div>
+                                  <button class='remove-btn btn'>Remove</button> 
+                            </div>
+                            <div class='list'>
                                <img src='../assets/images/user-default.png' width='9%' height='' class='participants-pic' alt='user-pic' >
-                               <div class='p-name-buttons'>
-                               <div class='p-first-name'>First Name</div>
-                               <div class='p-last-name'>last Name</div>
-                               </div>
-                               <button class='remove-btn btn'>Remove</button> 
-                               </div>
-                               <div class='list'>
+                                <div class='p-name-buttons'>
+                                    <div class='p-first-name'>First Name</div>
+                                    <div class='p-last-name'>last Name</div>
+                                </div>
+                                 <button class='remove-btn btn'>Remove</button> 
+                            </div>
+                            <div class='list'>
                                <img src='../assets/images/user-default.png' width='9%' height='' class='participants-pic' alt='user-pic' >
-                               <div class='p-name-buttons'>
-                               <div class='p-first-name'>First Name</div>
-                               <div class='p-last-name'>last Name</div>
+                              <div class='p-name-buttons'>
+                                <div class='p-first-name'>First Name</div>
+                                <div class='p-last-name'>last Name</div>
                                </div>
-                               <button class='remove-btn btn'>Remove</button> 
-                               </div>
-                               <div class='list'>
-                               <img src='../assets/images/user-default.png' width='9%' height='' class='participants-pic' alt='user-pic' >
-                               <div class='p-name-buttons'>
-                               <div class='p-first-name'>First Name</div>
-                               <div class='p-last-name'>last Name</div>
-                               </div>
-                               <button class='remove-btn btn'>Remove</button> 
-
-                               </div>
+                                <button class='remove-btn btn'>Remove</button> 
+                            </div>
                                
-                       </div>   
-
-                   </div>
-                    </div>    
+                    </div>   
                  </div>
-                      
-            
+           </div>    
+         </div>
+                    
             <div class='card available-users'>
             <div class='title'>Available Users</div>
                                 
@@ -380,7 +383,7 @@
                                     </div>  
                                 </div>
                            <div class='chats'>
-                               <div class='list-items'>chat</div>
+                              
                                <div class='list-items'>chat</div>
                                <div class='list-items'>chat</div>
                                <div class='list-items'>chat</div>
@@ -400,13 +403,12 @@
                                <div class='list-items'>chat</div>
                                <div class='list-items'>chat</div>
                        </div>    
-</div> 
-    <div class='create-group'>
-</div> 
-    <div class='edit-group'>
-</div> 
- 
-</div>
+                           </div> 
+                        <div class='create-group'>
+                  </div> 
+                 <div class='edit-group'>
+                    </div> 
+    </div>
 
 
 <?php include('../components/footer.php'); ?>
