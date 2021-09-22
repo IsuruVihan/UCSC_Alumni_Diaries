@@ -18,5 +18,213 @@
 }
 
 .closed-projects {
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    display: grid;
+    grid-template-columns: [col1] 30% [col2] 27% [col3] 27% [col4] 16% [col5];
+    grid-template-rows: [row1] 6em [row2] 25em [row3];
+}
 
+.projects-list {
+    grid-column-start: col1;
+    grid-column-end: col2;
+    grid-row-start: row1;
+    grid-row-end: row3;
+    margin-right: 5px;
+}
+
+.project-details {
+    grid-column-start: col2;
+    grid-column-end: col3;
+    grid-row-start: row1;
+    grid-row-end: row3;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.project-committee {
+    grid-column-start: col3;
+    grid-column-end: col4;
+    grid-row-start: row1;
+    grid-row-end: row3;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.expenditures {
+    grid-column-start: col4;
+    grid-column-end: col5;
+    grid-row-start: row1;
+    grid-row-end: row2;
+    margin-left: 5px;
+}
+
+.projects-list, .committee-members, .project-details, .expenditures {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all ease-in-out 0.5s;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.col1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col2, .col3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field {
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+}
+
+.input-field:hover {
+    border-color: #ffccc7;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+}
+
+.filter-btn, .bill-btn {
+    width: 15%;
+    background: gray;
+    border: 1px solid gray;
+}
+
+.filter-btn:hover, .bill-btn:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.results {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.result {
+    width: 100%;
+    height: 15%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+}
+
+.result2 {
+    width: 100%;
+    height: 30%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+}
+
+.result:hover, .result2:hover, .result3:hover, .result4:hover, .create-message-div:hover {
+    box-shadow: 0 0 5px gray;
+    cursor: pointer;
+}
+
+.buttons {
+    display: none;
+}
+
+.view-btn {
+    background: #595959;
+    border: 1px solid #595959;
+}
+
+.view-btn:hover, .gen-rep-btn:hover {
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
+}
+
+.project-status, .project-description {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    color: gray;
+    /*margin-top: 0.8em;*/
+}
+
+.project-description {
+    height: 60%;
+    text-align: justify;
+    padding: 10px;
+}
+
+.coord {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 4vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coord-pic {
+    padding: 0;
+    margin: 0;
+}
+
+.gen-rep-btn, .spend-btn {
+    background: gray;
+    border: 1px solid gray;
+}
+
+.gen-report-div {
+    text-align: center;
 }
