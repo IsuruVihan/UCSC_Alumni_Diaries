@@ -199,11 +199,27 @@
     border-radius: 20px;
     max-width: 80%;
     overflow-wrap: break-word;
-    text-align: left;
+    text-align: justify;
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 3px;
+}
+
+.delete-msg-container {
+    text-align: right;
+}
+
+.delete-msg-icon {
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    border-radius: 100%;
+    opacity: 60%;
+}
+
+.delete-msg-icon:hover {
+    color: white;
+    opacity: 100%;
 }
 
 .received-message {
@@ -214,7 +230,7 @@
     border-radius: 20px;
     max-width: 80%;
     overflow-wrap: break-word;
-    text-align: left;
+    text-align: justify;
     padding: 10px;
     display: flex;
     flex-direction: column;

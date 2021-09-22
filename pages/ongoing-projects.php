@@ -1,7 +1,6 @@
 <link rel='stylesheet' href='../assets/styles/ongoing_projects.css'/>
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
-<script src='../js/ongoing-projects.js'></script>
 
 <?php include('../components/header.php'); ?>
 
@@ -290,9 +289,12 @@
         <div class='title'>
             Committee Chat
         </div>
-        <div class='results3'>
+        <div class='results3' id='message-list'>
             <div class='sent-message-line'>
                 <div class='sent-message'>
+                    <div class='delete-msg-container'>
+                        <i class='fas fa-times-circle delete-msg-icon'></i>
+                    </div>
                     <div class='content'>
                         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
                         classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
@@ -324,6 +326,9 @@
             </div>
             <div class='sent-message-line'>
                 <div class='sent-message'>
+                    <div class='delete-msg-container'>
+                        <i class='fas fa-times-circle delete-msg-icon'></i>
+                    </div>
                     <div class='content'>
                         Hello Machan
                     </div>
@@ -355,6 +360,9 @@
             </div>
             <div class='sent-message-line'>
                 <div class='sent-message'>
+                    <div class='delete-msg-container'>
+                        <i class='fas fa-times-circle delete-msg-icon'></i>
+                    </div>
                     <div class='content'>
                         Hello Machan
                     </div>
@@ -365,6 +373,9 @@
             </div>
             <div class='sent-message-line'>
                 <div class='sent-message'>
+                    <div class='delete-msg-container'>
+                        <i class='fas fa-times-circle delete-msg-icon'></i>
+                    </div>
                     <div class='content'>
                         Hello Machan
                     </div>
@@ -397,5 +408,7 @@
         </div>
     </div>
 </div>
+
+<script src='../js/ongoing-projects.js'></script>
 
 <?php include('../components/footer.php'); ?>
