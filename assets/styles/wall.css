@@ -295,80 +295,139 @@ width: 35%;
 }
 .post-box{
     border: 1px solid orchid ;
-    height: 75%;
+    
     display: flex;
     flex-direction: column;
     
 }
 /* post content grid*/
 .post-content{
-    border: 1px solid brown;
+    
+    border: 1px solid lightgray;
+    border-radius: 10px;
     display: grid;
     margin: 0.8em;
+    padding: 0.8em;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    " . dp . fname lname time . . dlt "
+    " . dp . fname lname lname time  . dlt "
     " . dp . title title title title title title "
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt"
-    " . . . report . like like-count dislike dislike-count"
+    " . . . . report  like like-count dislike dislike-count"
     ;
+    place-self: center;
+    gap: 5px 5px;
 }
-
+.post-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+  }
 .dp-box{
-    border: 1px solid black;
+    border: 1px solid lightgray;
     grid-area: dp;
+    border-radius: 40%;
 }
 .pic-box{
-    border: 1px solid red; 
+    border: 1px solid lightgray; 
     grid-area: pic;
+    border-radius: 10px;
 }
 .f-name{
-    border: 1px solid brown;
     grid-area: fname;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    width: 100%;
+    
 }
 .l-name{
-    border: 1px solid red;
+    
     grid-area: lname;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
 }
 .post-time{
-    border: 1px solid red;
+    
     grid-area: time;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
 }
 .post-delete{
-    border: 1px solid red;
+    width: 100%;
     grid-area: dlt;
 }
 .post-title{
-    border: 1px solid red;
+    width: 100%;
     grid-area: title;
-}
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+}   
 .post-text{
-    border: 1px solid red;
+    
     grid-area: txt;
+    height: 100%;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+   
 }
 .report-btn{
-    border: 1px solid black;
+    width: 100%;
     grid-area: report;
+    justify-self: end;
 }
 .post-like{
-    border: 1px solid black;
+    border: 1px solid lightgray;
     grid-area: like;
+    width: 60%;
+    justify-self: right;
+    align-self: flex-start; 
+    
 }
 .post-like-count{
-    border: 1px solid black;
+    
     grid-area: like-count;
+    width: fit-content;
+    align-self: flex-start;
+    height: 23px;
+    border: 1px solid lightgray;
 }
 .post-dislike{
-    border: 1px solid black;
+    border: 1px solid lightgray;
     grid-area: dislike;
+    width: 60%;
+    justify-self: right;
+    align-self: flex-start; 
+    
 }
 .post-dislike-count{
-    border: 1px solid black;
+    border: 1px solid lightgray;
     grid-area: dislike-count;
+    width: fit-content;
+    align-self: flex-start;
+    height: 23px;
 }
 /*post comment grid*/
 .comment-box{
@@ -380,6 +439,7 @@ width: 35%;
 }
 .comment-content{
     border: 2px solid black;
+    padding: 0.8em;
     display: grid;
     margin: 0.8em;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -388,7 +448,7 @@ width: 35%;
     "  .  c-fname c-lname c-time c-edit  c-dlt c-report"
     "  c-dp c-txt c-txt c-txt c-txt . . "
     "  c-dp c-txt c-txt c-txt c-txt like-count like "
-    "  c-dp c-txt c-txt c-txt c-txt dislike-count dislike "
+    "  . c-txt c-txt c-txt c-txt dislike-count dislike "
     ;
 
 }
@@ -398,8 +458,14 @@ width: 35%;
     
 }
 .c-fname{
-    border: 1px solid red;
     grid-area: c-fname;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    width: 100%;
 }
 .c-lname{
     border: 1px solid red;

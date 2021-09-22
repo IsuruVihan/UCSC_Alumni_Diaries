@@ -123,18 +123,19 @@
 		<div class="post-box">
 			<div class="post-content">
 				<img src="" alt="" class="dp-box">
-				<div class="f-name">First Name</div>
-				<div class="l-name">Last Name</div>
-				<div class="post-time">Timestamp</div>
-				<div class="post-delete">delete</div>
-				<img src="" alt="" class="pic-box">
-				<div class="post-title"> Title </div>
-				<div class="post-text"></div>
-				<div class="report-btn">Report</div>
-				<div class="post-like">Like</div>
-				<div class="post-like-count">Like Count</div>
-				<div class="post-dislike">Dislike</div>
-				<div class="post-dislike-count">Dislike Count</div>
+				<div class="f-name ">First Name</div>
+				<div class='l-name post-field '>Last Name</div>
+				<div class='post-time post-field '>Timestamp</div>
+				<button class='filter-btn btn post-delete'>Delete</button>
+				<img src='' alt='' class='pic-box'>
+				<div class='post-title post-field '> Title </div>
+				<div class="post-text post-field "></div>				
+				<button class='filter-btn btn report-btn'>Report</button>
+				<button class='filter-btn btn post-like'>Like</button>
+				<div class="post-like-count post-field">111</div>
+				<button class='filter-btn btn post-dislike'>Dislike</button>
+				<div class="post-dislike-count post-field">112</div>
+				
 			</div>
 			<!--Post report -->				
 			<div class="post-report">
