@@ -294,8 +294,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 3px;
-  gap: 2px;
+  padding: 5px;
+  gap: 5px;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -306,8 +306,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 5px;
-  padding: 6px;
+  padding: 5px;
 }
 .participants-pic {
   border: 1px solid lightgray;
