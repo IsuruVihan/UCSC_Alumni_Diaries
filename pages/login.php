@@ -28,7 +28,6 @@
         </div>
         
         <div id="error"> </div>
-
        
         <div class='check-box' align='left';>
                   <input type='checkbox' id='checkbox'>
