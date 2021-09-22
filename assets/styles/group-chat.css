@@ -148,7 +148,8 @@
 }
 
 .view-btn,
-.delete-btn {
+.delete-btn,
+.remove-btn {
   background: #595959;
   border: 1px solid #595959;
 }
@@ -164,7 +165,10 @@
   border-color: #f5222d;
   color: white;
 }
-
+.remove-btn:hover {
+  background: #f5222d;
+  border: 1px solid #f5222d;
+}
 .chat-list {
   grid-column-start: line1;
   grid-column-end: line2;
@@ -241,8 +245,106 @@
 }
 .row-04 {
   height: 42%;
-  /* border: 2px green solid; */
   margin-top: 2px;
+}
+
+.participants {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid lightgrey;
+  padding: 8px;
+}
+
+.title-02 {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+}
+.Participants-filter {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  align-content: center;
+}
+.participants-field {
+  width: 32%;
+  height: 25px;
+  display: flex;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  font-family: "Nunito", serif;
+}
+
+.participants-field {
+  border-color: #ffccc7;
+}
+.p_box-01 {
+  display: flex;
+  justify-content: space-between;
+}
+.participants-list {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px;
+  gap: 2px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.list {
+  height: 25%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  padding: 6px;
+}
+.participants-pic {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  text-align: center;
+}
+.p-name-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+  justify-content: flex-start;
+}
+.p-first-name {
+  width: 40%;
+  height: 60%;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  color: gray;
+  text-align: center;
+  font-family: "Nunito", serif;
+  margin-right: 5px;
+}
+.p-last-name {
+  width: 40%;
+  height: 60%;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  color: gray;
+  text-align: center;
+  font-family: "Nunito", serif;
 }
 .create-group {
   grid-column-start: line3;
