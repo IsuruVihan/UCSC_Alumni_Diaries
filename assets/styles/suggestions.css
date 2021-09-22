@@ -22,28 +22,26 @@
 
 .main-box {
     background: #fafafa;
-    height: 150vh; 
+    height: 200vh; 
     display: grid;
     grid-template-rows: [row1] 50% [row2] 50% [row3];
     margin-bottom: 1.5em;
     margin-top: 1.5em;
-    
-   
+    /* border: 3px solid blue; */
 }
 
-.suggestions-form{
+.suggestions-form {
     grid-row-start: row1;
     grid-row-end: row2;
     background: #fafafa;
-    height: 60vh;
-    display: grid;
-    grid-template-columns: [col1] 100% [col2];
     margin-left: 30.5em;
     margin-right: 30.5em;
-    
+    /* border: 3px solid red; */
 }
+
 .card {
     background: white;
+    height: 94%;
 }
 
 .card, .details {
@@ -51,26 +49,27 @@
     border-radius: 10px;
     padding: 20px;
     transition: all ease-in-out 0.5s;
+} 
+
+.suggestions-list-item {
+    grid-row-start: row2;
+    grid-row-end: row3;
+    background: #fafafa;
+    margin-left: 25.5em;
+    margin-right: 25.5em;
+    /* border: 3px solid rgb(47, 192, 144); */
 }
 
 .title {
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
-.suggestions-list-item{
-    grid-row-start: row2;
-    grid-row-end: row3;
-    background: #fafafa;
-    height: 60vh;
-    display: grid; 
-    grid-template-columns: [col1] 100% [col2];
-    /* margin-top: 0.2em; */
-    margin-left: 30.5em;
-    margin-right: 30.5em;
-    /* margin-bottom: 2.5px;*/
+.suggestion-form-label{
+    color: rgb(36, 32, 32);
 }
 
 .full-name {
@@ -80,49 +79,17 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif;
-    /* margin-top: 8px; */
-    text-align: center;
-    margin-bottom: 10px;
+    font-family: "Nunito", serif; 
+    margin-bottom: 1em;
+    
 }
 
-.full-name:hover{
-    border-color: #ffccc7;
-}
-
-  
 .details-field {
     border: 1px solid lightgray;
     border-radius: 5px;
-   
 }
 
-.full-name,.title-field::placeholder {
-    text-align: left;
-    font-family: "Nunito", serif;
-    padding-left: 10px;
-
-}
-
-.email-field::placeholder{
-    text-align: left;
-    font-family: "Nunito", serif;
-    padding-left: 10px;
-}
-
-.title-field {
-    width: 100%;
-    height: 40px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    /* margin-top: 1em; */
-    text-align: center;
-}
-
-.title-field:hover{
+.full-name:hover{
     border-color: #ffccc7;
 }
 
@@ -134,63 +101,45 @@
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    /* margin-top: 1em; */
-    text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 
-.email-field:hover{
-    border-color: #ffccc7;
-}
-
-/* .sub-cont{
-    display: grid;
-    grid-template-columns: [col1] 40% [col2] 60% [col3];
-    margin-top: 1em;
-    
-} */
-
-.image-field {
-    /* grid-column-start: col1;
-    grid-column-end: col2; */
+.title-field {
     width: 100%;
-    /* height: 80px; */
+    height: 40px;
     background: white;
-    /* border: 1px solid lightgray; */
+    border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    margin-top: 1em;
-    /* padding-left: 11.5px; */
-    /* padding-top: 30px; */
-
+    margin-bottom: 0.5em; 
 }
 
 ::-webkit-file-upload-button {
     background: gray;
     color: white;
     padding: 8px;
-    font-size: 10px;
+    font-size: 12px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-color: black;
     transition: all 0.15s ease;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     box-sizing: border-box;
     outline: none;
     cursor: pointer;
     line-height: 1.5;
-    display: inline-block;
-    font-weight: bold;
+    /* display: inline-block; */
+    /* font-weight: bold; */
     text-align: center;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     vertical-align: middle;
     user-select: none;
     border: 1px solid transparent;
-    width: 30%;
+    width: 50%;
     /* margin-left: 35%; */
     height: 35px;
-    font-family: 'Nunito' serif;
+    font-family: 'Nunito', serif;
 }
 
 ::-webkit-file-upload-button:hover {
@@ -199,20 +148,29 @@
     border-color: black;
 
 }
+.image-field { 
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin-top: 1em;
+    background: white;
+    /* width: 100%; */
+}
 
-.comment {
+.comment { 
     /* grid-column-start: col2;
     grid-column-end: col3; */
     width: 100%;
-    height: 140px;
+    height: 296px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
     text-align: left;
-    margin-top: 1em;
-}
+    margin-top: 1.5em;
+    resize: none;
+} 
 
 .comment:hover{
     border-color: #ffccc7;
@@ -227,6 +185,7 @@
     cursor: pointer;
     height:35px;
     margin-left: 35%;
+    font-family: 'Nunito', serif;
 }
 
 .submit-btn:hover {
@@ -238,7 +197,267 @@
     margin-top: 1em;
 }
 
-.suggestion-form-label{
-    color: rgb(36, 32, 32);
+.email-field:hover{
+    border-color: #ffccc7;
+}
+
+.title-field:hover{
+    border-color: #ffccc7;
+} 
+
+.full-name,.title-field,.email-field::placeholder {
+    text-align: left;
+    font-family: "Nunito", serif;
+    padding-left: 10px;
+
+}
+
+.flexbox-container{ 
+     /* display: flex;
+    flex-direction: column; */
+    /* border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 85%;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px; */
+    /* overflow: hidden;
+    overflow-y: scroll; */
+    /* border: 3px solid black; */
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 580px;
+    margin: 20px;
+    /* width: 100%; */
+ }
+
+ .flexbox-item {
+    width:96%;
+    /* height:20%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all ease-in-out 0.5s; */
+    height: 390px;
+    /* border: 3px solid rgb(92, 24, 218); */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    transition: all ease-in-out 0.5s;
+    margin: 5px;
+    padding:5px;
+    padding-top: 1em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.tandp {
+    display: grid;
+    grid-template-rows: [roo1] 100% [roo2];
+    /* border: 3px solid red; */
+    /* padding: 2px; */
+}
+
+.suggests {
+    grid-row-start: r1;
+    grid-row-end: r2;
+    display:grid;
+    grid-template-columns: [co1] 25% [co2] 75% [co3] ;
+    /* border: 3px solid yellow;  */
+    /* border:0px;  */
+    padding: 2px;
+    /* height: 50px; */
+    
+}
+
+.pro-pic{
+    grid-column-start: co1;
+    grid-column-end: co2;
+    /* border: 3px solid rgb(168, 95, 26); */
+    /* height: 50px; */
+    /* align-items: center;
+    justify-content: center; */
+
+} 
+
+.ntt {
+    grid-column-start: co2;
+    grid-column-end: c03;
+    display: grid;
+    grid-template-rows: [ro1] 33.3% [ro2] 33.3% [ro3] 33.3% [ro4];
+    /* border: 3px solid black; */
+    padding: 2px;
+
+}
+
+.titlesl {
+    grid-row-start: ro1;
+    grid-row-end: ro2;
+    width: 97.7%;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    /* border: 3px solid plum; */
+    /* text-align: center; */
+    margin-bottom: 4px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+
+.list-details{
+    text-align: left;
+    font-family: "Nunito", serif;
+    padding-left: 10px;
+    text-align: center;
+
+}
+
+.fullname {
+    grid-row-start: ro2;
+    grid-row-end: ro3;
+    width: 97.7%;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    /* border: 3px solid plum; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.img {
+    grid-row-start: roo1;
+    grid-row-end: roo2;
+}
+
+.timestamp {
+    grid-row-start: ro3;
+    grid-row-end: ro4;
+    width: 50%;
+    height: 20px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    /* border: 3px solid plum; */
+    /* text-align: center; */
+    /* padding: 2px; */
+    /* justify-content: space-around; */
+    /* padding-left: 1px; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* .subcontainer{
+    display: grid;
+    grid-template-rows: [r1] 30% [r2] 50% [r3] 20% [r4];
+    border: 3px solid violet;
+} */
+
+.sugestedcontent {
+    /* grid-row-start: r2;
+    grid-row-end: r3; */
+    display: grid;
+    grid-template-columns: [c1] 40% [c2] 60% [c3];
+    /* border: 3px solid green; */
+    padding: 2px;
+
+}
+
+.attachment{
+    grid-column-start: c1;
+    grid-column-end: c2;
+    width: 94%;
+    height: 150px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    /* border: 3px solid rgb(129, 27, 129); */
+    /* text-align: center; */
+    padding: 2px;
+    /* justify-content: space-around; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.attachment, .details{
+    justify-content: center;
+}
+
+.description{
+    grid-column-start: c2;
+    grid-column-end: c3;
+    width: 97.8%;
+    height: 150px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    /* border: 3px solid rgb(75, 216, 99); */
+    padding: 2px;
+    /* justify-content: space-around; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.deletecontainer {
+    grid-column-start: c3;
+    grid-column-end: c4;
+    /* border: 3px solid rgb(134, 11, 11); */
+    align-items: center;
+
+}
+
+.delete-btn {
+    width: 30%;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    height:35px;
+    margin-left: 35%;
+    font-family: 'Nunito', serif;
+    margin-top: 20px;
+   
+}
+
+.delete-btn:hover {
+    background: #f5222d;
+    border-color: #f5222d;
+    color: white;
 }
 
