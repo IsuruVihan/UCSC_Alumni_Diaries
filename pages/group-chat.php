@@ -173,6 +173,7 @@
                                         <button class='filter-btn btn'>Filter</button>   
                                     </div>  
                                 </div>
+
                              <div class='participants-list'>
                                <div class='list'> 
                                  <img src='../assets/images/user-default.png' width='9%' height='' class='participants-pic' alt='user-pic' >

@@ -247,10 +247,9 @@
   height: 42%;
   margin-top: 2px;
 }
-
 .participants {
   width: 100%;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   background: white;
   border: 1px solid lightgrey;
@@ -263,16 +262,11 @@
   text-align: center;
 }
 .Participants-filter {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
   border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 5px;
-  align-content: center;
-}
+  padding:5px;
+  margin-bottom:5px;
+  border-radius:5px;
+} 
 .participants-field {
   width: 32%;
   height: 25px;
@@ -284,9 +278,10 @@
   font-family: "Nunito", serif;
 }
 
-.participants-field {
+.participants-field:hover {
   border-color: #ffccc7;
 }
+
 .p_box-01 {
   display: flex;
   justify-content: space-between;
