@@ -380,29 +380,70 @@
                                     </div> 
                                         <div class='box-02'> 
                                         <button class='filter-btn btn'>Filter</button>   
-                                    </div>  
+                                    </div> 
+                                    </div>
+                                    <div class='chats'>
+                                    <div class='available-users-item'>
+                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                                       <div class='a-conatiner'>
+                                             <div class='available-container'>
+                                               <div class='a-first-name'>First Name</div>
+                                               <div class='a-last-name'>Last Name</div>
+                                              </div>
+                                        <div class='add-btn-container'>
+                                           <button class="add-btn btn">Add</button>
+                                        </div>
+                                 </div>
+                                 </div>
+                                 <div class='available-users-item'>
+                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                                       <div class='a-conatiner'>
+                                             <div class='available-container'>
+                                               <div class='a-first-name'>First Name</div>
+                                               <div class='a-last-name'>Last Name</div>
+                                              </div>
+                                        <div class='add-btn-container'>
+                                           <button class="add-btn btn">Add</button>
+                                        </div>
+                                 </div>
+                                 </div>
+                                 <div class='available-users-item'>
+                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                                       <div class='a-conatiner'>
+                                             <div class='available-container'>
+                                               <div class='a-first-name'>First Name</div>
+                                               <div class='a-last-name'>Last Name</div>
+                                              </div>
+                                        <div class='add-btn-container'>
+                                           <button class="add-btn btn">Add</button>
+                                        </div>
+                                 </div>
+                                 </div>
+                                 <div class='available-users-item'>
+                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                                       <div class='a-conatiner'>
+                                             <div class='available-container'>
+                                               <div class='a-first-name'>First Name</div>
+                                               <div class='a-last-name'>Last Name</div>
+                                              </div>
+                                        <div class='add-btn-container'>
+                                           <button class="add-btn btn">Add</button>
+                                        </div>
+                                 </div>
+                                 </div>
+                                 <div class='available-users-item'>
+                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                                       <div class='a-conatiner'>
+                                             <div class='available-container'>
+                                               <div class='a-first-name'>First Name</div>
+                                               <div class='a-last-name'>Last Name</div>
+                                              </div>
+                                        <div class='add-btn-container'>
+                                           <button class="add-btn btn">Add</button>
+                                        </div>
+                                 </div>
+                                 </div>
                                 </div>
-                           <div class='chats'>
-                              
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                               <div class='list-items'>chat</div>
-                       </div>    
                            </div> 
                         <div class='create-group'>
                   </div> 

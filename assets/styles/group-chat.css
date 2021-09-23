@@ -55,7 +55,8 @@
   display: flex;
   justify-content: space-between;
 }
-.box-02 {
+.box-02,
+.add-btn-container {
   display: flex;
   justify-content: center;
 }
@@ -93,7 +94,8 @@
 .input-field:hover {
   border-color: #ffccc7;
 }
-.chats {
+.chats,
+.avalable-user-list {
   border: 1px solid lightgray;
   border-radius: 5px;
   height: 100%;
@@ -188,18 +190,18 @@
   flex-direction: column;
 }
 .row-01,
-.row_02, 
+.row_02,
 .row-03,
-.row-04{
+.row-04 {
   display: flex;
   border: 1px solid lightgray;
   border-radius: 5px;
   /* box-shadow: 1px 2px 4px lightgray; */
-} 
+}
 .row-01 {
   height: 7%;
   padding: 5px;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 .top-window {
   display: flex;
@@ -232,14 +234,13 @@
   background: #fa8c16;
   border-color: #fa8c16;
   color: white;
- } 
+}
 
-
- .row-02 {
+.row-02 {
   height: 42%;
   margin-top: 2px;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
 }
 .result3 {
   width: 100%;
@@ -251,7 +252,7 @@
   padding: 3px;
   gap: 10px;
   transition: all ease-in-out 0.5s;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 .results3 {
   border: 1px solid lightgray;
@@ -324,7 +325,8 @@
   gap: 3px;
 }
 
-.sender-name, .time {
+.sender-name,
+.time {
   font-size: 0.5em;
 }
 
@@ -335,8 +337,8 @@
 .content {
   font-weight: bold;
 }
-.row_03{
-padding:5px;
+.row_03 {
+  padding: 5px;
 }
 .chat-message {
   resize: none;
@@ -344,8 +346,7 @@ padding:5px;
   border: 1px solid lightgray;
   border-radius: 5px;
   padding: 5px;
-
-} 
+}
 .create-message-div {
   display: flex;
   justify-content: space-between;
@@ -354,8 +355,8 @@ padding:5px;
   height: 15%;
   transition: all ease-in-out 0.5s;
   padding: 5px;
-  margin-top:20px;
-  margin-bottom:5px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 .chat-message {
   resize: none;
@@ -404,12 +405,12 @@ padding:5px;
   height: 40%;
   margin-top: 2px;
 }
- .participants {
+.participants {
   width: 100%;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   padding: 8px;
-} 
+}
 
 .title-02 {
   font-weight: 600;
@@ -418,10 +419,10 @@ padding:5px;
 }
 .Participants-filter {
   border: 1px solid lightgray;
-  padding:5px;
-  margin-bottom:5px;
-  border-radius:5px;
-} 
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
 .participants-field {
   width: 32%;
   height: 25px;
@@ -454,7 +455,8 @@ padding:5px;
   overflow: hidden;
   overflow-y: scroll;
 }
-.list {
+.list,
+.available-users-item {
   height: 25%;
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -512,6 +514,36 @@ padding:5px;
   margin-left: 5px;
   margin-top: 5px;
   border: 2px #ee0505 solid;
+}
+.a-conatiner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.available-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 4px;
+  align-items: center;
+  justify-content: space-between;
+}
+.a-first-name,
+.a-last-name {
+  width: 50%;
+  height: 100%;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  font-family: "Nunito", serif;
+  /*margin-top: 3px;*/
+  text-align: center;
 }
 
 /* }
