@@ -131,6 +131,7 @@
 				<div class='post-title post-field '> Title </div>
 				<div class="post-text post-field "></div>				
 				<button class='filter-btn btn report-btn'>Report</button>
+				<button class='filter-btn btn comment-btn'>Comment</button>
 				<button class='filter-btn btn post-like'>Like</button>
 				<div class="post-like-count post-field">111</div>
 				<button class='filter-btn btn post-dislike'>Dislike</button>
@@ -146,7 +147,7 @@
 					<button class='filter-btn btn'>Cancel </button>
 				</div>
 			</div>
-
+			<!--comments -->
 			<div class="comment-box">
 				<div class="box-title">Comments</div>
 				<div class="comment-content">
@@ -154,14 +155,16 @@
 					<div class="c-fname">First Name</div>
 					<div class="c-lname">Last Name</div>
 					<div class="c-time">Timestamp</div>
-					<div class="c-edit">Edit</div>
-					<div class="c-dlt">delete</div>
-					<div class="c-report">Report</div>
+					<div class="comment-buttons">
+						<div class='filter-btn btn c-edit'>Edit</div>
+						<div class='filter-btn btn c-dlt'>delete</div>
+						<div class='filter-btn btn c-report'>Report</div>
+					</div>
 					<div class="c-txt"></div>
-					<div class="c-like-count">Like count</div>
-					<div class="c-like">Like </div>
-					<div class="c-dislike-count">Disike count</div>
-					<div class="c-dislike">Disike </div>
+					<button class='c-like filter-btn btn'>Like</button>
+					<div class='c-like-count'>112</div>
+					<button class='c-dislike filter-btn btn'>Dislike </button>
+					<div class='c-dislike-count'>111 </div>
 				</div>
 				<!--Comment report -->				
 				<div class="comment-report">

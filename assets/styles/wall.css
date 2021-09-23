@@ -294,15 +294,14 @@ width: 35%;
     margin:0 3px;
 }
 .post-box{
-    border: 1px solid orchid ;
-    
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
-    
+    border-radius: 10px;
 }
 /* post content grid*/
-.post-content{
-    
+.post-content{  
     border: 1px solid lightgray;
     border-radius: 10px;
     display: grid;
@@ -317,7 +316,7 @@ width: 35%;
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt"
-    " . . . . report  like like-count dislike dislike-count"
+    " . . . report comment  like like-count dislike dislike-count "
     ;
     place-self: center;
     gap: 5px 5px;
@@ -398,6 +397,11 @@ width: 35%;
     grid-area: report;
     justify-self: end;
 }
+.comment-btn{
+    width: 100%;
+    grid-area: comment;
+    justify-self: end;
+}
 .post-like{
     border: 1px solid lightgray;
     grid-area: like;
@@ -431,31 +435,34 @@ width: 35%;
 }
 /*post comment grid*/
 .comment-box{
-    border: 2px solid yellowgreen;
+    border: 1px solid lightgray;
+    border-radius: 10px;
     height: 40%;
     margin: 0.8em;
     display: flex;
     flex-direction: column;
 }
 .comment-content{
-    border: 2px solid black;
+    border: 1px solid lightgray;
+    border-radius: 10px;
     padding: 0.8em;
     display: grid;
     margin: 0.8em;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr  ;
     grid-template-areas: 
-    "  .  c-fname c-lname c-time c-edit  c-dlt c-report"
-    "  c-dp c-txt c-txt c-txt c-txt . . "
-    "  c-dp c-txt c-txt c-txt c-txt like-count like "
-    "  . c-txt c-txt c-txt c-txt dislike-count dislike "
+    "  .  c-fname c-lname c-lname c-time  c-button c-button"
+    "  c-dp c-txt c-txt c-txt c-txt like like-count "
+    "  c-dp c-txt c-txt c-txt c-txt  dislike dislike-count"
+    "  . c-txt c-txt c-txt c-txt  . . "
     ;
-
+    gap: 5px 5px;
 }
-.comment-dp{
-    border: 2px solid yellowgreen;
+.comment-dp{   
     grid-area: c-dp;
-    
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;   
 }
 .c-fname{
     grid-area: c-fname;
@@ -464,46 +471,87 @@ width: 35%;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif;
     width: 100%;
 }
 .c-lname{
-    border: 1px solid red;
     grid-area: c-lname;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray; 
+    width: 100%;
 }
 .c-time{
-    border: 1px solid red;
     grid-area: c-time;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    width: 100%;
+}
+.comment-buttons{
+    display: flex;
+    flex-direction: row; 
+    grid-area:c-button; 
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;  
 }
 .c-edit{
-    border: 1px solid red;
-    grid-area: c-edit;
+     margin:0 0.2em;
+    
 }
 .c-dlt{
-    border: 1px solid red;
-    grid-area: c-dlt;
+    margin:0 0.2em;
 } 
-.c-report{
-    border: 1px solid red;
-    grid-area: c-report;
+.c-report{    
+    margin:0 0.2em;
 }
 .c-txt{
-    border: 1px solid red;
     grid-area: c-txt;
+    height: 100%;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin:0;
 }
 .c-like-count{
-    border: 1px solid red;
+    border: 1px solid lightgray;
     grid-area: like-count;
+    height: 23px;
+    border-radius: 5px;
+    justify-self: start;
+    align-self: end;
+    padding: 2px;
+    width: 50%;
+    text-align: center;
 }
 .c-like{
-    border: 1px solid red;
+    width: 60%;
     grid-area: like;
+    place-self: end;
+    height: 29px;
 }
 .c-dislike{
-    border: 1px solid red;
+    width: 60%;
     grid-area: dislike;
+    justify-self: end;
+    height: 29px;
+    margin: 0;
 }
 .c-dislike-count{
-    border: 1px solid red;
+    margin: 0;
+    border: 1px solid lightgray;
     grid-area: dislike-count;
+    height: 23px;
+    border-radius: 5px;
+    justify-self: start;
+    padding: 2px;
+    width: 50%;
+    text-align: center;
 }
