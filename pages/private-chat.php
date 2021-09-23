@@ -360,4 +360,6 @@
     </div>
 </div>
 
+<script src='../js/private-chat.js'></script>
+
 <?php include('../components/footer.php'); ?>
