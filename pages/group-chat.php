@@ -340,18 +340,15 @@
                                 <div class='p-last-name'>last Name</div>
                                </div>
                                 <button class='remove-btn btn'>Remove</button> 
-                            </div>
-                               
-                    </div>   
-                 </div>
-           </div>    
-         </div>
-                    
-            <div class='card available-users'>
-            <div class='title'>Available Users</div>
-                                
-                
-                                <div class='filter'>
+                                    </div>
+                                    
+                            </div>   
+                        </div>
+                </div>    
+                </div>
+                        <div class='card available-users'>
+                        <div class='title'>Available Users</div>
+                                  <div class='filter'>
                                     <div class='box-01'>
                                             <input class='input-field' type='text' placeholder='First Name'/>
                                             <input class='input-field' type='text' placeholder='Last Name'/>
@@ -382,73 +379,96 @@
                                         <button class='filter-btn btn'>Filter</button>   
                                     </div> 
                                     </div>
-                                    <div class='chats'>
-                                    <div class='available-users-item'>
-                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
-                                       <div class='a-conatiner'>
-                                             <div class='available-container'>
-                                               <div class='a-first-name'>First Name</div>
-                                               <div class='a-last-name'>Last Name</div>
-                                              </div>
-                                        <div class='add-btn-container'>
-                                           <button class="add-btn btn">Add</button>
-                                        </div>
-                                 </div>
-                                 </div>
-                                 <div class='available-users-item'>
-                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
-                                       <div class='a-conatiner'>
-                                             <div class='available-container'>
-                                               <div class='a-first-name'>First Name</div>
-                                               <div class='a-last-name'>Last Name</div>
-                                              </div>
-                                        <div class='add-btn-container'>
-                                           <button class="add-btn btn">Add</button>
-                                        </div>
-                                 </div>
-                                 </div>
-                                 <div class='available-users-item'>
-                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
-                                       <div class='a-conatiner'>
-                                             <div class='available-container'>
-                                               <div class='a-first-name'>First Name</div>
-                                               <div class='a-last-name'>Last Name</div>
-                                              </div>
-                                        <div class='add-btn-container'>
-                                           <button class="add-btn btn">Add</button>
-                                        </div>
-                                 </div>
-                                 </div>
-                                 <div class='available-users-item'>
-                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
-                                       <div class='a-conatiner'>
-                                             <div class='available-container'>
-                                               <div class='a-first-name'>First Name</div>
-                                               <div class='a-last-name'>Last Name</div>
-                                              </div>
-                                        <div class='add-btn-container'>
-                                           <button class="add-btn btn">Add</button>
-                                        </div>
-                                 </div>
-                                 </div>
-                                 <div class='available-users-item'>
-                                         <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
-                                       <div class='a-conatiner'>
-                                             <div class='available-container'>
-                                               <div class='a-first-name'>First Name</div>
-                                               <div class='a-last-name'>Last Name</div>
-                                              </div>
-                                        <div class='add-btn-container'>
-                                           <button class="add-btn btn">Add</button>
-                                        </div>
-                                 </div>
-                                 </div>
-                                </div>
-                           </div> 
-                        <div class='create-group'>
+                                    <div class='available-users-container'>
+            <div class='available-users-item'>
+                <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                <div class='names-btn-container01'>
+                    <div class='names-container02'>
+                        <div class='a-first-name'>First Name</div>
+                        <div class='a-last-name'>Last Name</div>
+                    </div>
+                    <div class='btn-container03'>
+                        <button class="add-btn btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class='available-users-item'>
+                <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                <div class='names-btn-container01'>
+                    <div class='names-container02'>
+                        <div class='a-first-name'>First Name</div>
+                        <div class='a-last-name'>Last Name</div>
+                    </div>
+                    <div class='btn-container03'>
+                        <button class="add-btn btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class='available-users-item'>
+                <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                <div class='names-btn-container01'>
+                    <div class='names-container02'>
+                        <div class='a-first-name'>First Name</div>
+                        <div class='a-last-name'>Last Name</div>
+                    </div>
+                    <div class='btn-container03'>
+                        <button class="add-btn btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class='available-users-item'>
+                <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                <div class='names-btn-container01'>
+                    <div class='names-container02'>
+                        <div class='a-first-name'>First Name</div>
+                        <div class='a-last-name'>Last Name</div>
+                    </div>
+                    <div class='btn-container03'>
+                        <button class="add-btn btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class='available-users-item'>
+                <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                <div class='names-btn-container01'>
+                    <div class='names-container02'>
+                        <div class='a-first-name'>First Name</div>
+                        <div class='a-last-name'>Last Name</div>
+                    </div>
+                    <div class='btn-container03'>
+                        <button class="add-btn btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class='available-users-item'>
+                <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                <div class='names-btn-container01'>
+                    <div class='names-container02'>
+                        <div class='a-first-name'>First Name</div>
+                        <div class='a-last-name'>Last Name</div>
+                    </div>
+                    <div class='btn-container03'>
+                        <button class="add-btn btn">Add</button>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </div>
+    
+                        <div class='card create-group'>
+
+                        <div class='title'>Create Group</div>
+                        
+                         <div class='create-group-container'>
+                         <img src='../assets/images/user-default.png' width="26%" class='user-pic' alt='user-pic'>
+                         <input class='group-name' type='text' placeholder='Group Name'/>
+                         </div>
+                         <div class='box-02'>
+                         <button class="create-btn btn">Create</button>
+                         <div>
+                         </div>
                   </div> 
-                 <div class='edit-group'>
-                    </div> 
+                 
     </div>
 
 
