@@ -131,20 +131,19 @@
                 </div>         
             </div>
          <div class='chat-wall'>
-                <div class='row-01'>
+                   <div class='row-01'>   
                 <div class='title project-name-div' id='project-name-div'>
-                 Group Name
-            <i class='fas fa-edit edit-btn' title='Edit project name' onclick='DisplayEditProjectNameDiv()'></i>
-            </div>
-            
-                   <div class='edit-project-name-div' id='edit-project-name-div'>
-                   <img src='../assets/images/user-default.png' width='9%' class='group-pic' alt='user-pic' >
-            <input type='text' placeholder='Enter new group name' value="Group Name"
+            Project Name
+            <i class='fas fa-edit icon-btn' title='Edit Group' onclick='DisplayEditProjectNameDiv()'></i>
+        </div>
+        <div class='edit-project-name-div' id='edit-project-name-div'>
+        <img src='../assets/images/user-default.png' width='10%' height='' class='user-pic' alt='user-pic' >
+            <input type='text' placeholder='Enter new Group name' value=" Group Name"
                    class='new-project-name input-field' id='new-project-name'/>
-            <button class='submit-new-project-name btn'>Edit</button>
+            <button class='edit-btn btn'>Edit</button>
             <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
-        </div>    
-                </div>
+        </div>  
+                </div> 
                 <div class='row-02'>
                     <div class='results3' id='message-list'>
                       <div class='sent-message-line'>

@@ -153,7 +153,9 @@
 .delete-btn,
 .remove-btn,
 .add-btn,
-.create-btn {
+.create-btn,
+.edit-btn,
+.cancel-btn {
   background: #595959;
   border: 1px solid #595959;
 }
@@ -181,6 +183,20 @@
   background: #6547d1;
   border: 1px solid #6547d1;
 }
+.edit-btn:hover,
+.icon-btn:hover {
+  background: #fa8c16;
+  border-color: #fa8c16;
+  color: white;
+}
+.cancel-btn:hover {
+  background: #f5222d;
+  border: 1px solid #f5222d;
+}
+.edit-btn,
+.cancel-btn {
+  width: 15%;
+}
 .chat-list {
   grid-column-start: line1;
   grid-column-end: line2;
@@ -199,7 +215,7 @@
   display: flex;
   flex-direction: column;
 }
-.row-01,
+
 .row_02,
 .row-03,
 .row-04 {
@@ -210,40 +226,7 @@
 }
 .row-01 {
   height: 7%;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-.top-window {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-.group-name {
-  width: 30%;
-  height: 50%;
-  background: white;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  color: gray;
-  text-align: center;
-  font-family: "Nunito", serif;
-}
-.group-pic {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  text-align: center;
-  margin-right: 5px;
-}
-.edit-btn {
-  width: 15%;
-  background: #595959;
-  border: 1px solid #595959;
-}
-.edit-btn:hover {
-  background: #fa8c16;
-  border-color: #fa8c16;
-  color: white;
+  margin-bottom: 9px;
 }
 
 .row-02 {
@@ -511,18 +494,16 @@
   grid-column-end: line4;
   grid-row-start: row2;
   grid-row-end: row3;
-  margin-left: 5px;
+  /* margin-left: 5px; */
   margin-top: 5px;
-  border: 1px solid lightgrey;
 }
 .available-users {
   grid-column-start: line3;
   grid-column-end: line4;
   grid-row-start: row1;
   grid-row-end: row2;
-  margin-left: 5px;
+  /* margin-left: 5px; */
   margin-top: 5px;
-  border: 1px solid lightgrey;
 }
 .available-users-container {
   border: 1px solid lightgray;
@@ -606,4 +587,8 @@
   height: 70%;
   margin-right: 15%;
   margin-top: 2%;
+}
+.edit-project-name-div {
+  display: none;
+  justify-content: space-evenly;
 }
