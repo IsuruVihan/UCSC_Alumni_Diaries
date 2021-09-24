@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../assets/styles/group-chat.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
-
+      <script src='../js/group-project.js'></script>
 <?php include('../components/header.php'); ?>
 
 <div class='main-container'>
@@ -124,6 +124,7 @@
                                 <div class='buttons'>
                                     <button class='view-btn btn'>View</button>
                                     <button class='delete-btn btn'>Delete</button> 
+                                    
                                 </div>
                         </div>
                     </div>      
@@ -131,11 +132,18 @@
             </div>
          <div class='chat-wall'>
                 <div class='row-01'>
+                <div class='title project-name-div' id='project-name-div'>
+                 Group Name
+            <i class='fas fa-edit edit-btn' title='Edit project name' onclick='DisplayEditProjectNameDiv()'></i>
+            </div>
+            
+                   <div class='edit-project-name-div' id='edit-project-name-div'>
                    <img src='../assets/images/user-default.png' width='9%' class='group-pic' alt='user-pic' >
-                   <div class='top-window'>    
-                        <div class='group-name'> Group Name</div>
-                        <button class='Edit-btn btn'>Edit</button> 
-                    </div>      
+            <input type='text' placeholder='Enter new group name' value="Group Name"
+                   class='new-project-name input-field' id='new-project-name'/>
+            <button class='submit-new-project-name btn'>Edit</button>
+            <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
+        </div>    
                 </div>
                 <div class='row-02'>
                     <div class='results3' id='message-list'>
@@ -344,7 +352,7 @@
                                     
                             </div>   
                         </div>
-                    </div>    
+                </div>    
                 </div>
                         <div class='card available-users'>
                         <div class='title'>Available Users</div>
