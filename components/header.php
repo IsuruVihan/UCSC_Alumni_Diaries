@@ -40,7 +40,7 @@
             <a href='../pages/wall.php' class='anchor-tag'>Wall</a>
         </li>
         <li class='link'>
-            <a href='../pages/chat.php' class='anchor-tag'>Chat</a>
+            <a href='../pages/chat-navigation.php' class='anchor-tag'>Chat</a>
         </li>
         <li class='link'>
             <a href='../pages/admin.php' class='anchor-tag'>Admin</a>
