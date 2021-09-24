@@ -22,7 +22,7 @@
   height: 120vh;
   display: grid;
   grid-template-columns: [line1] 27% [line2] 46% [line3] 27% [line4];
-  grid-template-rows: [row1] 50% [row2] 25% [row3] 25%[row4];
+  grid-template-rows: [row1] 80% [row2] 20% [row3];
   margin: 0 6.7em 10vh;
 }
 .card {
@@ -90,7 +90,8 @@
   font-family: "Nunito", serif;
 }
 
-.input-field:hover {
+.input-field:hover,
+.g-name:hover {
   border-color: #ffccc7;
 }
 .chats {
@@ -176,11 +177,15 @@
   background: #237804;
   border: 1px solid #237804;
 }
+.create-btn:hover {
+  background: #6547d1;
+  border: 1px solid #6547d1;
+}
 .chat-list {
   grid-column-start: line1;
   grid-column-end: line2;
   grid-row-start: row1;
-  grid-row-end: row4;
+  grid-row-end: row3;
   margin-right: 5px;
 }
 
@@ -189,7 +194,7 @@
   grid-column-start: line2;
   grid-column-end: line3;
   grid-row-start: row1;
-  grid-row-end: row4;
+  grid-row-end: row3;
   margin-right: 5px;
   display: flex;
   flex-direction: column;
@@ -504,8 +509,8 @@
 .create-group {
   grid-column-start: line3;
   grid-column-end: line4;
-  grid-row-start: row3;
-  grid-row-end: row4;
+  grid-row-start: row2;
+  grid-row-end: row3;
   margin-left: 5px;
   margin-top: 5px;
   border: 1px solid lightgrey;
@@ -514,7 +519,7 @@
   grid-column-start: line3;
   grid-column-end: line4;
   grid-row-start: row1;
-  grid-row-end: row3;
+  grid-row-end: row2;
   margin-left: 5px;
   margin-top: 5px;
   border: 1px solid lightgrey;
@@ -578,13 +583,27 @@
   text-align: center;
   font-size: 15px;
 }
-.create-group-container {
+.list-items-02 {
+  height: 100%;
+  /* border: 1px solid lightgray; */
+  border-radius: 5px;
   display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
 }
-.group-name {
-  width: 60%;
-  height: 60%;
+.buttons-create {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
+}
+.create-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 70%;
+  margin-right: 15%;
+  margin-top: 2%;
 }

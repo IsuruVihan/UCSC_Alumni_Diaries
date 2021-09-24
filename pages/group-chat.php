@@ -344,7 +344,7 @@
                                     
                             </div>   
                         </div>
-                </div>    
+                    </div>    
                 </div>
                         <div class='card available-users'>
                         <div class='title'>Available Users</div>
@@ -452,23 +452,23 @@
                     </div>
                 </div>
             </div>
-       </div>
-   </div>
-    
-                        <div class='card create-group'>
-
-                        <div class='title'>Create Group</div>
-                        
-                         <div class='create-group-container'>
-                         <img src='../assets/images/user-default.png' width="26%" class='user-pic' alt='user-pic'>
-                         <input class='group-name' type='text' placeholder='Group Name'/>
-                         </div>
-                         <div class='box-02'>
-                         <button class="create-btn btn">Create</button>
-                         <div>
-                         </div>
-                  </div> 
-                 
+          </div>
+      </div>
+            <div class='card create-group'>
+                <div class='title'>Create Group</div>
+                    <div class='list-items-02'>
+                        <img src='../assets/images/user-default.png' width='30%' height='' class='user-pic' alt='user-pic' >
+                        <div class='create-buttons'>
+                            <div class='name'>Group Name</div>
+                                <div class='buttons-create'>
+                                    <button class='create-btn btn'>Create</button>
+                                   
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+                </div>                   
+            </div>           
     </div>
 
 
