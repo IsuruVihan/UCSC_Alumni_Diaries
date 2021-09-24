@@ -133,7 +133,7 @@
          <div class='chat-wall'>
                    <div class='row-01'>   
                 <div class='title project-name-div' id='project-name-div'>
-            Project Name
+           Group Name
             <i class='fas fa-edit icon-btn' title='Edit Group' onclick='DisplayEditProjectNameDiv()'></i>
         </div>
         <div class='edit-project-name-div' id='edit-project-name-div'>
