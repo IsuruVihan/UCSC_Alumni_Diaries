@@ -5,7 +5,8 @@
 
 <div class='main-container'>
     <p class='breadcrumb'>
-        <a href='home.php'>Home</a> / Private Chat
+        <a href='home.php'>Home</a> /
+        <a href='chat.php'>Chat</a> / Private Chat
     </p>
     <p class='main-title'>
         <i class='fa fa-comment'></i>
