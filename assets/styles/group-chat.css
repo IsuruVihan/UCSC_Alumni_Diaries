@@ -221,6 +221,7 @@
   grid-row-start: row1;
   grid-row-end: row3;
   margin-right: 5px;
+  margin-left: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -503,7 +504,7 @@
   grid-column-end: line4;
   grid-row-start: row2;
   grid-row-end: row3;
-  /* margin-left: 5px; */
+  margin-left: 5px;
   margin-top: 5px;
 }
 .available-users {
@@ -511,8 +512,8 @@
   grid-column-end: line4;
   grid-row-start: row1;
   grid-row-end: row2;
-  /* margin-left: 5px; */
-  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 .available-users-container {
   border: 1px solid lightgray;

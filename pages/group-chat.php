@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../assets/styles/group-chat.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
-      <script src='../js/group-project.js'></script>
+      
 <?php include('../components/header.php'); ?>
 
 <div class='main-container'>
@@ -478,5 +478,6 @@
             </div>           
     </div>
 
+<script src='../js/group-project.js'></script>
 
 <?php include('../components/footer.php'); ?>
