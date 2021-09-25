@@ -7,7 +7,7 @@
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> /
-        <a href='admin.php'>Admin</a> / Group Chat
+        <a href='chat.php'>Chat</a> / Group Chat
     </p>
     <p class='main-title'>
         <i class="fas fa-comments"></i> Group Chat
