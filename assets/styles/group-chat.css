@@ -66,7 +66,12 @@
   transition: all ease-in-out 0.1s;
   height: 25px;
 }
-
+.icon-btn {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all ease-in-out 0.1s;
+  height: 25px;
+}
 .filter-btn {
   width: 32%;
   margin-top: 0.5em;
@@ -80,6 +85,15 @@
   color: black;
 }
 
+.input-field-01 {
+  width: 45%;
+  height: 25px;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  font-family: "Nunito", serif;
+}
 .input-field {
   width: 32%;
   height: 25px;
@@ -89,9 +103,7 @@
   color: gray;
   font-family: "Nunito", serif;
 }
-
-.input-field:hover,
-.g-name:hover {
+.input-field:hover {
   border-color: #ffccc7;
 }
 .chats {
@@ -183,11 +195,15 @@
   background: #6547d1;
   border: 1px solid #6547d1;
 }
-.edit-btn:hover,
-.icon-btn:hover {
+.edit-btn:hover {
   background: #fa8c16;
   border-color: #fa8c16;
   color: white;
+}
+.icon-btn:hover {
+  background: #fa8c16;
+  color: white;
+  border-color: #fa8c16;
 }
 .cancel-btn:hover {
   background: #f5222d;

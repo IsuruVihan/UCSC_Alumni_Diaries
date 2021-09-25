@@ -18,9 +18,9 @@
                         <div class='title'>Chat List</div>    
                     <div class='filter'>
                         <div class='box-01'>
-                               <input class='input-field' type='text' placeholder='First Name'/>
-                                <input class='input-field' type='text' placeholder='Last Name'/>
-                            <select class='input-field'>
+                               <input class='input-field-01' type='text' placeholder='First Name'/>
+                                <input class='input-field-01' type='text' placeholder='Last Name'/>
+                            <!-- <select class='input-field'>
                                 <option value='All'>All</option>
                                 <option value='2004/2005'>2004/2005</option>
                                 <option value='2005/2006'>2005/2006</option>
@@ -40,7 +40,7 @@
                                 <option value='2020/2021'>2020/2021</option>
                                 <option value='2021/2022'>2021/2022</option>
                                 <option value='2022/2023'>2022/2023</option>
-                            </select>
+                            </select> -->
                         </div> 
                          <div class='box-02'> 
                            <button class='filter-btn btn'>Filter</button>   
@@ -134,7 +134,7 @@
                    <div class='row-01'>   
                 <div class='title project-name-div' id='project-name-div'>
            Group Name
-            <i class='fas fa-edit icon-btn' title='Edit Group' onclick='DisplayEditProjectNameDiv()'></i>
+            <i class='fas fa-edit icon-btn ' title='Edit Group' onclick='DisplayEditProjectNameDiv()'></i>
         </div>
         <div class='edit-project-name-div' id='edit-project-name-div'>
         <img src='../assets/images/user-default.png' width='10%' height='' class='user-pic' alt='user-pic' >
@@ -293,7 +293,7 @@
                                             <option value='2021/2022'>2021/2022</option>
                                             <option value='2022/2023'>2022/2023</option>
                 
-                                        </select>
+                                        </select> 
                                     </div> 
                                         <div class='box-02'> 
                                           <button class='filter-btn btn'>Filter</button>   
