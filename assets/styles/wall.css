@@ -80,6 +80,12 @@
     font-family: 'Nunito';
  
 }
+
+.filter-btn:hover {
+  background: white;
+  border-color: black;
+  color: black;
+}
 .create-notice-box{
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px lightgray;
@@ -397,11 +403,21 @@ width: 35%;
     grid-area: report;
     justify-self: end;
 }
+.report-btn:hover {
+    background: #f5222d;
+    border-color: #f5222d;
+    color: white;
+  }
 .comment-btn{
     width: 100%;
     grid-area: comment;
     justify-self: end;
 }
+.comment-btn:hover {
+    background: #237804;
+    border-color: #237804;
+    color: white;
+  }
 .post-like{
     border: 1px solid lightgray;
     grid-area: like;
@@ -409,6 +425,11 @@ width: 35%;
     justify-self: right;
     align-self: flex-start; 
     
+}
+.post-like:hover{
+    background: #096dd9;
+    border: 1px solid #096dd9;
+    color: white;
 }
 .post-like-count{
     
@@ -418,6 +439,7 @@ width: 35%;
     height: 23px;
     border: 1px solid lightgray;
 }
+
 .post-dislike{
     border: 1px solid lightgray;
     grid-area: dislike;
@@ -425,6 +447,11 @@ width: 35%;
     justify-self: right;
     align-self: flex-start; 
     
+}
+.post-dislike:hover{
+  background: #f5222d;
+  border: 1px solid #f5222d;
+  color: white;
 }
 .post-dislike-count{
     border: 1px solid lightgray;
@@ -501,14 +528,34 @@ width: 35%;
 }
 .c-edit{
      margin:0 0.2em;
-    
+    height:20px;
+    font-size: 14px;
 }
+.c-edit:hover {
+    background: #fa8c16;
+    border: 1px solid #fa8c16;
+    color: white;
+  }
 .c-dlt{
     margin:0 0.2em;
+    height:20px;
+    font-size: 14px;
 } 
+.c-dlt:hover {
+background: #9b131a;
+  border: 1px solid #9b131a;
+  color: white;
+  }
 .c-report{    
     margin:0 0.2em;
+    height:20px;
+    font-size: 14px;
 }
+.c-report:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+    color: white;
+ }
 .c-txt{
     grid-area: c-txt;
     height: 100%;
@@ -523,7 +570,7 @@ width: 35%;
 .c-like-count{
     border: 1px solid lightgray;
     grid-area: like-count;
-    height: 23px;
+    height: 20px;
     border-radius: 5px;
     justify-self: start;
     align-self: end;
@@ -535,20 +582,30 @@ width: 35%;
     width: 60%;
     grid-area: like;
     place-self: end;
-    height: 29px;
+    height: 23px;
 }
+.c-like:hover {
+    background: #096dd9;
+    border: 1px solid #096dd9;
+    color: white;
+  }
 .c-dislike{
     width: 60%;
     grid-area: dislike;
     justify-self: end;
-    height: 29px;
+    height: 23px;
     margin: 0;
 }
+.c-dislike:hover {
+    background: #096dd9;
+    border: 1px solid #096dd9;
+    color: white;
+  }
 .c-dislike-count{
     margin: 0;
     border: 1px solid lightgray;
     grid-area: dislike-count;
-    height: 23px;
+    height: 20px;
     border-radius: 5px;
     justify-self: start;
     padding: 2px;

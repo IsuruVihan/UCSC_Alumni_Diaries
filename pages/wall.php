@@ -19,7 +19,7 @@
                 <button class='filter-btn btn'>Starred</button>
 				<button class='filter-btn btn'>All</button>
 		</div>
-		<!--Ecreate important notices -->
+		<!--Create important notices -->
 		<div class="create-notice-box">
 			<div class="box-title">
 			Create Important Notice
