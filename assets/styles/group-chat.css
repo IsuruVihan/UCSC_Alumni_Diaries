@@ -66,12 +66,6 @@
   transition: all ease-in-out 0.1s;
   height: 25px;
 }
-.icon-btn {
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all ease-in-out 0.1s;
-  height: 25px;
-}
 .filter-btn {
   width: 32%;
   margin-top: 0.5em;
@@ -201,9 +195,8 @@
   color: white;
 }
 .icon-btn:hover {
-  background: #fa8c16;
-  color: white;
-  border-color: #fa8c16;
+  cursor: pointer;
+  color: #fa8c16;
 }
 .cancel-btn:hover {
   background: #f5222d;
