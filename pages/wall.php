@@ -30,12 +30,13 @@
 					<p class="field-header"> date</p>	 
 				</div>
 				<div class="row-2">
-					<label for="myFile" class='filter-btn btn'>
+					<label for="myFile" class='filter-btn btn upload-btn'>
 					<input type="file" id="myFile" name="filename" hidden>
 					Upload Picture</label>
 				</div>
 				<div class="row-3">
 				<input class='input-field-message' type='text' placeholder='Message'/>
+				<textarea name="" id="" cols="30" rows="10"></textarea>
 				</div>
 				<div class="row-4">
 					<button class='filter-btn btn'>Create Notice</button>
@@ -53,7 +54,7 @@
 					<p class="field-header"> date</p>	 
 				</div>
 				<div class="row-2">
-					<label for="myFile" class='filter-btn btn'>
+					<label for="myFile" class='filter-btn btn upload-btn'>
 					<input type="file" id="myFile" name="filename" hidden>
 					Edit Upload</label>
 				</div>

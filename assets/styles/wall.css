@@ -86,6 +86,14 @@
   border-color: black;
   color: black;
 }
+
+.upload-btn{
+    height: 20px;
+    font-size: 12px;
+    width: fit-content;
+    padding: 0 3px;
+}
+
 .create-notice-box{
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px lightgray;
@@ -377,6 +385,12 @@ width: 35%;
 .post-delete{
     width: 100%;
     grid-area: dlt;
+    
+}
+.post-delete:hover{
+    background: #9b131a;
+    border: 1px solid #9b131a;
+    color: white;
 }
 .post-title{
     width: 100%;
@@ -421,7 +435,7 @@ width: 35%;
 .post-like{
     border: 1px solid lightgray;
     grid-area: like;
-    width: 60%;
+    width: 65%;
     justify-self: right;
     align-self: flex-start; 
     
@@ -443,14 +457,14 @@ width: 35%;
 .post-dislike{
     border: 1px solid lightgray;
     grid-area: dislike;
-    width: 60%;
+    width: 65%;
     justify-self: right;
     align-self: flex-start; 
     
 }
 .post-dislike:hover{
-  background: #f5222d;
-  border: 1px solid #f5222d;
+  background: #096dd9;
+  border: 1px solid #096dd9;
   color: white;
 }
 .post-dislike-count{
