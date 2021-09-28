@@ -117,7 +117,7 @@
 				</div>
 			<div class="create-post-buttons">
 				<button class='filter-btn btn'>Submit </button>
-				<button class='filter-btn btn'>Cancel </button>
+				<button class='filter-btn btn' onclick='HideCreatePost ()'>Cancel </button>
 			</div>	
 		</div>
 		<!--Filter box -->	
@@ -145,7 +145,7 @@
 				<div class='post-title post-field '> Title </div>
 				<div class="post-text post-field "></div>				
 				<button class='filter-btn btn report-btn' onclick='DisplayPostReport()'>Report</button>
-				<button class='filter-btn btn show-comment-btn' onclick='DisplayComment()'>Show Comment</button>
+				<button class='filter-btn btn show-comment-btn' onclick='DisplayComments()'>Show Comment</button>
 				<button class='filter-btn btn comment-btn' onclick='DisplayAddComment()'>Comment</button>
 				<div class="like-dislike-cell">
 					<button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>
@@ -156,44 +156,49 @@
 			</div>
 			<!--Post report -->				
 			<div class='post-report' id='post-report'>
-				<div class="box-title">Report Post</div>
-				<textarea class="report-txt" placeholder="Your content goes here"></textarea>
-				<div class="create-post-buttons">
+				<div class='box-title'>Report Post</div>
+				<textarea class='report-txt' placeholder='Your content goes here'></textarea>
+				<div class='create-post-buttons'>
 					<button class='filter-btn btn'>Submit </button>
 					<button class='filter-btn btn'>Cancel </button>
 				</div>
 			</div>
-			<!--comments -->
-			<div class='comment-box' id='show-comment'>
-				<div class="box-title comment-title" >Comments</div>
+			<!--add comments -->
 					<div class='add-comment' id='add-comment'>
-						<div class="comment-content" >
-							<img src="" alt="" class="comment-dp">
-							<input class="c-fname " placeholder='First Name'>
-							<input class="c-lname" placeholder='Last Name'>
-							<div class="c-time">Timestamp</div>
-							<div class="comment-buttons">
-								<div class='filter-btn btn c-edit'>Edit</div>
-								<div class='filter-btn btn c-dlt'>delete</div>
-								<div class='filter-btn btn c-report' onclick='DisplayCommentReport()'>Report</div>
+						<div class='box-title ' >Add Comment</div>
+						<div class='comment-content' >
+							<img src='' alt='' class='comment-dp'>
+							<input class='c-fname' placeholder='First Name'>
+							<input class='c-lname' placeholder='Last Name'>
+							<div class='c-time'>Timestamp</div>
+							<div class='comment-buttons'>
+								<div class='c-edit'></div>
+								<button class='filter-btn btn c-dlt'>Add</button>
+								<button class='filter-btn btn c-report' onclick='HideAddComment ()'>Cancel</button>
 							</div>
-							<textarea class="c-txt" placeholder='Enter yor comment here'></textarea>
+							<textarea class='c-txt' placeholder='Enter yor comment here'></textarea>
 							<div class='like-box'>
 								
 							</div>	
 						</div>
-					</div>		
-				
-				<!--comment show-->
-					<div class="comment-content">
-						<img src="" alt="" class="comment-dp">
-						<div class="c-fname " >First Name</div>
-						<div class="c-lname" >Last Name</div>
-						<div class="c-time">Timestamp</div>
-						<div class="comment-buttons">
-								<div class='filter-btn btn c-edit'>Edit</div>
-								<div class='filter-btn btn c-dlt'>delete</div>
-								<div class='filter-btn btn c-report' onclick='DisplayCommentReport()'>Report</div>
+					</div>	
+
+
+			<div class='comment-box' id='show-comment'>
+				<div class='comments-row'>
+					<div class='box-title' >Comments</div>	
+					<button class='filter-btn btn hide-cmnt-btn' onclick=' HideComments()'>Hide Comments</button>	
+				</div>		
+						<!--comment show-->
+				 <div class='comment-content'>
+						<img src='' alt='' class='comment-dp'>
+						<div class='c-fname ' >First Name</div>
+						<div class='c-lname' >Last Name</div>
+						<div class='c-time'>Timestamp</div>
+						<div class='comment-buttons'>
+								<button class='filter-btn btn c-edit'>Edit</button>
+								<button class='filter-btn btn c-dlt'>delete</button>
+								<button class='filter-btn btn c-report' onclick='DisplayCommentReport()'>Report</button>
 						</div>
 						<div class='c-txt'>Enter yor comment here</div>
 						<div class='like-box'> 
@@ -206,7 +211,7 @@
 								<div class='c-dislike-count'>111 </div>
 							</div>	
 						</div>
-					</div>
+				 </div>
 					<!--comment report-->
 					<div class='comment-report' id='comment-report'>
 						<div class="box-title">Report Comment</div>

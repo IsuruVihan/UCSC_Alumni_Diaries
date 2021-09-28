@@ -1,22 +1,35 @@
-const MarkAsStarred= () => {
+const MarkAsStarred = () => {
     document.getElementById('star-div-off').style.display = "none";
     document.getElementById('star-div-on').style.display = "block";
 }
 
-const DisplayCreatePost= () => {
+const DisplayCreatePost = () => {
     document.getElementById('create-post-box').style.display = "flex";   
 }
+const HideCreatePost = () => {
+    document.getElementById('create-post-box').style.display = "none";   
+}
 
-const DisplayComment= () => {
+const DisplayComments = () => {
     document.getElementById('show-comment').style.display = "flex";  
 }
 
-const DisplayAddComment= () => {
+const DisplayAddComment = () => {
     document.getElementById('add-comment').style.display = "flex";  
 }
-const DisplayPostReport= () => {
+
+const DisplayPostReport = () => {
     document.getElementById('post-report').style.display = "flex";   
 }
-const DisplayCommentReport= () => {
+
+const DisplayCommentReport = () => {
     document.getElementById('comment-report').style.display = "flex";   
+}
+
+const HideComments = () => {
+    document.getElementById('show-comment').style.display = "none";  
+}
+
+const HideAddComment = () => {
+    document.getElementById('add-comment').style.display = "none";  
 }

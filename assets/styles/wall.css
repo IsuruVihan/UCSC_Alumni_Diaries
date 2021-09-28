@@ -593,6 +593,9 @@ width: 35%;
 .add-comment{
     display: none;
     flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 0.8em;
 }
 
 .comment-content{
@@ -668,12 +671,12 @@ width: 35%;
     flex-direction: row; 
     grid-area:c-button; 
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;  
 }
 .c-edit{
      margin:0 0.2em;
-    height:20px;
+    height:23px;
     font-size: 14px;
 }
 .c-edit:hover {
@@ -683,18 +686,18 @@ width: 35%;
   }
 .c-dlt{
     margin:0 0.2em;
-    height:20px;
+    height:23px;
     font-size: 14px;
     text-align: center;
 } 
 .c-dlt:hover {
-background: #9b131a;
-  border: 1px solid #9b131a;
+background: #237804;
+  border: 1px solid #237804;
   color: white;
   }
 .c-report{    
     margin:0 0.2em;
-    height:20px;
+    height:23px;
     font-size: 14px;
 }
 .c-report:hover {
@@ -764,4 +767,18 @@ background: #9b131a;
     display: flex;
     flex-direction: column;
     
+}
+.comments-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.hide-cmnt-btn{
+ margin-top: 0.8em;
+  width: fit-content;
+  margin-left: 21em;
+}
+
+.comments-row > .box-title {
+    margin-left: 21em;
 }
