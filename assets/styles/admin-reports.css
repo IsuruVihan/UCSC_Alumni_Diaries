@@ -28,6 +28,9 @@
     /* grid-template-rows: [row1] 100% [row2]; */
     grid-template-columns: [col1] 50% [col2] 50% [col3];
     /* border: 3px solid blueviolet; */
+    padding-left: 6.7em;
+    padding-right: 6.7em;
+    font-size: 15px;
     
 }
 
@@ -36,7 +39,7 @@
     grid-column-end: col2;
     background: #fafafa;
     /* border: 3px solid red; */
-    padding: 10px;
+    padding-right: 10px;
 }
 
 .card {
@@ -99,6 +102,7 @@
     display: grid;
     grid-template-columns: [c1] 30% [c2] 70% [c3];
     /* border: 3px solid green; */
+    padding-right: 5px;
     /* border: 1px solid lightgray; */
 
 }
@@ -114,7 +118,7 @@
     grid-column-end: c3;
     /* border: 3px solid palevioletred; */
     display: grid;
-    grid-template-rows: [ro1] 30% [ro2] 30% [ro3] 40% [ro4];
+    grid-template-rows: [ro1] 33.3% [ro2] 33.3% [ro3] 33.3% [ro4];
 }
 
 .reporter-name{
@@ -130,9 +134,11 @@
     grid-column-start: cc1;
     grid-column-end: cc2;
     /* border: 3px solid blue; */
-    display: flex;
+    /* display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    padding-right: 5px;
 }
 
 .first-name{
@@ -150,7 +156,7 @@
 }
 
 .list-details{
-    text-align: left;
+
     font-family: "Nunito", serif;
     padding-left: 10px;
     text-align: center;
@@ -164,6 +170,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 5px;
 }
 
 .last-name{
@@ -178,6 +185,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-top: 3px;
 }
 
 .report-post{
@@ -194,8 +202,11 @@
     grid-column-end: ccc2;
     /* border: 3px solid rgb(255, 0, 221); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding-right: 5px;
+    padding-top: 9px;
 }
 
 .post-id{
@@ -217,8 +228,11 @@
     grid-column-end: ccc3;
     /* border: 3px solid rgb(57, 191, 231); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding-left: 5px;
+    padding-top: 9px;
 }
 
 .post-owner{
@@ -241,6 +255,10 @@
     /* border: 3px solid darkgreen; */
     display: grid;
     grid-template-rows: [rr1] 100% [rr2];
+    padding-top: 6px;
+    
+    
+    
 }
 
 .report-cause{
@@ -248,13 +266,19 @@
     grid-row-end: rr2;
     /* border: 3px solid rgb(48, 6, 145); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    justify-content: left;
+    padding-top: 9px;
+    
+    
 }
 
 .the-cause{
-    width:97%;
-    height: 55px;
+    width:99%;
+    height: 70px;
+    resize: none;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -264,7 +288,10 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-}
+    font-size: 15px;
+} 
+
+
 
 .rdelete {
     display: grid;
@@ -274,20 +301,23 @@
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content:right;
+    padding-right: 6px;
+    padding-top: 10px;
 }
 
 .delete-btn {
-    width: 30%;
+    width: 15%;
     background: gray;
     color: white;
     border: 1px solid gray;
     border-radius: 5px;
     cursor: pointer;
     height:35px;
-    /* margin-left: 35%; */
+    /* margin-right: 50px; */
     font-family: 'Nunito', serif;
     /* margin-top: 20px; */
+    
     
    
 }
@@ -303,7 +333,7 @@
     grid-column-end: col3;
     background: #fafafa;
     /* border: 3px solid rgb(5, 185, 20); */
-    padding: 10px;
+    padding-left: 10px;
 }
 
 .c-reporter{
@@ -328,8 +358,11 @@
     grid-column-end: ccc2;
     /* border: 3px solid blue; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding-right: 5px;
+    padding-top: 6px;
 }
 
 .cfirst-name{
@@ -362,6 +395,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 5px;
 }
 
 .clast-name{
@@ -376,6 +410,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-top: 13px;
 }
 
 .c-report-comment{
@@ -392,8 +427,11 @@
     grid-column-end: ccc2;
     /* border: 3px solid rgb(255, 0, 221); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding-right: 5px;
+    padding-top: 8px;
 }
 
 .cpost-id{
@@ -415,8 +453,11 @@
     grid-column-end: ccc3;
     /* border: 3px solid rgb(57, 191, 231); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding-left: 5px;
+    padding-top: 8px;
 }
 
 .cpost-owner{
@@ -447,8 +488,11 @@
     grid-column-end: ccc2;
     /* border: 3px solid rgb(255, 0, 221); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding-right: 5px;
+    padding-top: 10px;
 }
 
 .rcowner{
@@ -456,8 +500,11 @@
     grid-column-end: ccc3;
     /* border: 3px solid rgb(14, 1, 12); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding-left: 5px;
+    padding-top: 10px;
 }
 
 .rcause{
@@ -473,13 +520,17 @@
     grid-row-end: rr2;
     /* border: 3px solid rgb(48, 6, 145); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding-top: 12px;
+
 }
 
 .thee-cause{
-    width:97%;
-    height: 30px;
+    width:99%;
+    height: 70px;
+    resize: none;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -489,5 +540,13 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+    font-size: 15px;
+
 }
 
+.alllabels{
+    font-weight: 600;
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+}

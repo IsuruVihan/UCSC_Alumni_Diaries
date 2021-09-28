@@ -31,28 +31,33 @@
                         <div class='reporter'>
                             <div class='reporter-name'>
                                 <div class='fname'>
+                                    <label class='alllabels'> Reporter Name </label>
                                     <div class='first-name list-details'> First Name (Reporter)
                                     </div>
                                 </div>
                                 <div class='lname'>
+                                    <label class='alllabels'>    </label>
                                     <div class='last-name list-details'> Last Name (Reporter)
                                     </div>
                                 </div>
                             </div>
                             <div class='report-post'>
                                 <div class='id'>
+                                    <label class='alllabels'> Reported Post ID </label>
                                     <div class='post-id list-details'> Reported Post ID
                                     </div> 
                                 </div>
                                 <div class='owner'>
+                                    <label class='alllabels'> Post Owner </label>
                                     <div class='post-owner list-details'> Post Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='cause'>
                                 <div class='report-cause'>
-                                    <div class='the-cause list-details'> Cause for Reporting
-                                    </div>
+                                    <label class='alllabels'> Cause for Reporting </label>
+                                    <textarea class='the-cause list-details'> Cause for Reporting
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
@@ -69,28 +74,76 @@
                         <div class='reporter'>
                             <div class='reporter-name'>
                                 <div class='fname'>
+                                    <label class='alllabels'> Reporter Name </label>
                                     <div class='first-name list-details'> First Name (Reporter)
                                     </div>
                                 </div>
                                 <div class='lname'>
+                                    <label class='alllabels'>    </label>
                                     <div class='last-name list-details'> Last Name (Reporter)
                                     </div>
                                 </div>
                             </div>
                             <div class='report-post'>
                                 <div class='id'>
+                                    <label class='alllabels'> Reported Post ID </label>
                                     <div class='post-id list-details'> Reported Post ID
                                     </div> 
                                 </div>
                                 <div class='owner'>
+                                    <label class='alllabels'> Post Owner </label>
                                     <div class='post-owner list-details'> Post Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='cause'>
                                 <div class='report-cause'>
-                                    <div class='the-cause list-details'> Cause for Reporting
+                                    <label class='alllabels'> Cause for Reporting </label>
+                                    <textarea class='the-cause list-details'> Cause for Reporting
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='rdelete'>
+                    <input type='reset' class='delete-btn' value='Delete'>
+                    </div>
+                </div> 
+                <div class='flexbox-item'>
+                    <div class='rdetails'>
+                        <div class='propic'>
+                        <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                        </div>
+                        <div class='reporter'>
+                            <div class='reporter-name'>
+                                <div class='fname'>
+                                    <label class='alllabels'> Reporter Name </label>
+                                    <div class='first-name list-details'> First Name (Reporter)
                                     </div>
+                                </div>
+                                <div class='lname'>
+                                    <label class='alllabels'>    </label>
+                                    <div class='last-name list-details'> Last Name (Reporter)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='report-post'>
+                                <div class='id'>
+                                    <label class='alllabels'> Reported Post ID </label>
+                                    <div class='post-id list-details'> Reported Post ID
+                                    </div> 
+                                </div>
+                                <div class='owner'>
+                                    <label class='alllabels'> Post Owner </label>
+                                    <div class='post-owner list-details'> Post Owner
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='cause'>
+                                <div class='report-cause'>
+                                    <label class='alllabels'> Cause for Reporting </label>
+                                    <textarea class='the-cause list-details'> Cause for Reporting
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
@@ -107,28 +160,33 @@
                         <div class='reporter'>
                             <div class='reporter-name'>
                                 <div class='fname'>
+                                    <label class='alllabels'> Reporter Name </label>
                                     <div class='first-name list-details'> First Name (Reporter)
                                     </div>
                                 </div>
                                 <div class='lname'>
+                                    <label class='alllabels'>    </label>
                                     <div class='last-name list-details'> Last Name (Reporter)
                                     </div>
                                 </div>
                             </div>
                             <div class='report-post'>
                                 <div class='id'>
+                                    <label class='alllabels'> Reported Post ID </label>
                                     <div class='post-id list-details'> Reported Post ID
                                     </div> 
                                 </div>
                                 <div class='owner'>
+                                    <label class='alllabels'> Post Owner </label>
                                     <div class='post-owner list-details'> Post Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='cause'>
                                 <div class='report-cause'>
-                                    <div class='the-cause list-details'> Cause for Reporting
-                                    </div>
+                                    <label class='alllabels'> Cause for Reporting </label>
+                                    <textarea class='the-cause list-details'> Cause for Reporting
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
@@ -136,49 +194,13 @@
                     <div class='rdelete'>
                     <input type='reset' class='delete-btn' value='Delete'>
                     </div>
-                </div>   
-                <div class='flexbox-item'>
-                    <div class='rdetails'>
-                        <div class='propic'>
-                        <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
-                        </div>
-                        <div class='reporter'>
-                            <div class='reporter-name'>
-                                <div class='fname'>
-                                    <div class='first-name list-details'> First Name (Reporter)
-                                    </div>
-                                </div>
-                                <div class='lname'>
-                                    <div class='last-name list-details'> Last Name (Reporter)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='report-post'>
-                                <div class='id'>
-                                    <div class='post-id list-details'> Reported Post ID
-                                    </div> 
-                                </div>
-                                <div class='owner'>
-                                    <div class='post-owner list-details'> Post Owner
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='cause'>
-                                <div class='report-cause'>
-                                    <div class='the-cause list-details'> Cause for Reporting
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='rdelete'>
-                    <input type='reset' class='delete-btn' value='Delete'>
-                    </div>
-                </div>   
+                </div> 
 
             </div>
         </div>
     </div>
+
+
 
     <div class='comment-reports'>
         <div class='card reports'>
@@ -194,6 +216,7 @@
                         <div class='c-reporter'>
                             <div class='c-reporter-name'>
                                 <div class='cfname'>
+                                    <label class='alllabels'> Reporter Name </label>
                                     <div class='cfirst-name list-details'> First Name (Reporter)
                                     </div>
                                 </div>
@@ -204,28 +227,33 @@
                             </div>
                             <div class='c-report-comment'>
                                 <div class='cid'>
+                                    <label class='alllabels'> Repoted Post ID </label>
                                     <div class='cpost-id list-details'> Reported Post ID
                                     </div>
                                 </div>
                                 <div class='cowner'>
+                                    <label class='alllabels'> Post Owner </label>
                                     <div class='cpost-owner list-details'> Post Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='commentdetails'>
                                 <div class='rcid'>
+                                    <label class='alllabels'> Reported Comment ID </label>
                                     <div class='cpost-id list-details'> Reported Comment ID
                                     </div>
                                 </div>
                                 <div class='rcowner'>
+                                    <label class='alllabels'> Comment Owner </label>
                                     <div class='cpost-id list-details'> Comment Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='rcause'>
                                 <div class='report-cause'>
-                                    <div class='thee-cause list-details'> Cause for Reporting
-                                    </div>
+                                    <label class='alllabels'> Cause for Reporting </label>
+                                    <textarea class='thee-cause list-details'> Cause for Reporting
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
@@ -242,6 +270,7 @@
                         <div class='c-reporter'>
                             <div class='c-reporter-name'>
                                 <div class='cfname'>
+                                    <label class='alllabels'> Reporter Name </label>
                                     <div class='cfirst-name list-details'> First Name (Reporter)
                                     </div>
                                 </div>
@@ -252,28 +281,33 @@
                             </div>
                             <div class='c-report-comment'>
                                 <div class='cid'>
+                                    <label class='alllabels'> Repoted Post ID </label>
                                     <div class='cpost-id list-details'> Reported Post ID
                                     </div>
                                 </div>
                                 <div class='cowner'>
+                                    <label class='alllabels'> Post Owner </label>
                                     <div class='cpost-owner list-details'> Post Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='commentdetails'>
                                 <div class='rcid'>
+                                    <label class='alllabels'> Reported Comment ID </label>
                                     <div class='cpost-id list-details'> Reported Comment ID
                                     </div>
                                 </div>
                                 <div class='rcowner'>
+                                    <label class='alllabels'> Comment Owner </label>
                                     <div class='cpost-id list-details'> Comment Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='rcause'>
                                 <div class='report-cause'>
-                                    <div class='thee-cause list-details'> Cause for Reporting
-                                    </div>
+                                    <label class='alllabels'> Cause for Reporting </label>
+                                    <textarea class='thee-cause list-details'> Cause for Reporting
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
@@ -290,6 +324,7 @@
                         <div class='c-reporter'>
                             <div class='c-reporter-name'>
                                 <div class='cfname'>
+                                    <label class='alllabels'> Reporter Name </label>
                                     <div class='cfirst-name list-details'> First Name (Reporter)
                                     </div>
                                 </div>
@@ -300,28 +335,33 @@
                             </div>
                             <div class='c-report-comment'>
                                 <div class='cid'>
+                                    <label class='alllabels'> Repoted Post ID </label>
                                     <div class='cpost-id list-details'> Reported Post ID
                                     </div>
                                 </div>
                                 <div class='cowner'>
+                                    <label class='alllabels'> Post Owner </label>
                                     <div class='cpost-owner list-details'> Post Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='commentdetails'>
                                 <div class='rcid'>
+                                    <label class='alllabels'> Reported Comment ID </label>
                                     <div class='cpost-id list-details'> Reported Comment ID
                                     </div>
                                 </div>
                                 <div class='rcowner'>
+                                    <label class='alllabels'> Comment Owner </label>
                                     <div class='cpost-id list-details'> Comment Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='rcause'>
                                 <div class='report-cause'>
-                                    <div class='thee-cause list-details'> Cause for Reporting
-                                    </div>
+                                    <label class='alllabels'> Cause for Reporting </label>
+                                    <textarea class='thee-cause list-details'> Cause for Reporting
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
@@ -338,6 +378,7 @@
                         <div class='c-reporter'>
                             <div class='c-reporter-name'>
                                 <div class='cfname'>
+                                    <label class='alllabels'> Reporter Name </label>
                                     <div class='cfirst-name list-details'> First Name (Reporter)
                                     </div>
                                 </div>
@@ -348,28 +389,33 @@
                             </div>
                             <div class='c-report-comment'>
                                 <div class='cid'>
+                                    <label class='alllabels'> Repoted Post ID </label>
                                     <div class='cpost-id list-details'> Reported Post ID
                                     </div>
                                 </div>
                                 <div class='cowner'>
+                                    <label class='alllabels'> Post Owner </label>
                                     <div class='cpost-owner list-details'> Post Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='commentdetails'>
                                 <div class='rcid'>
+                                    <label class='alllabels'> Reported Comment ID </label>
                                     <div class='cpost-id list-details'> Reported Comment ID
                                     </div>
                                 </div>
                                 <div class='rcowner'>
+                                    <label class='alllabels'> Comment Owner </label>
                                     <div class='cpost-id list-details'> Comment Owner
                                     </div>
                                 </div>
                             </div>
                             <div class='rcause'>
                                 <div class='report-cause'>
-                                    <div class='thee-cause list-details'> Cause for Reporting
-                                    </div>
+                                    <label class='alllabels'> Cause for Reporting </label>
+                                    <textarea class='thee-cause list-details'> Cause for Reporting
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
