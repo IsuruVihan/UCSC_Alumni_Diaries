@@ -37,6 +37,7 @@
 }
 
 .common-wall{
+    
     box-shadow: 1px 2px 4px lightgray;
     padding: 20px;
     background: white;
@@ -100,6 +101,16 @@
     border-radius: 10px;
     transition: all ease-in-out 0.5s;
     display: flex;
+    flex-direction: column;
+    padding: 3px;
+    margin: 0.8em 0;
+}
+.edit-notice-box{
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    display: none;
     flex-direction: column;
     padding: 3px;
     margin: 0.8em 0;
@@ -399,11 +410,13 @@ width: 35%;
     margin:0 3px;
 }
 .post-box{
+    
     box-shadow: 1px 2px 4px lightgray;
     border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    margin-bottom: 0.8em;
 }
 /* post content grid*/
 .post-content{  
