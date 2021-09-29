@@ -1,0 +1,161 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+
+.alumnus-container{
+    border: 1px solid blue;
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+}
+.grid-title{
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.grid-container{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2fr 5.5fr;
+    grid-template-rows: 5.5fr 5.5fr;
+    grid-template-areas:'a-data  a-details a-details a-list ' 
+    'a-contribution a-contribution a-involved-project a-list';
+    margin: 0.8em;
+    padding: 5px;
+    gap:10px ;
+}
+.account-details-container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    grid-area:a-data; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0.8em 0;
+}
+.alumni-details-container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    grid-area:a-details;
+    padding: 0.8em;
+    gap: 10px;
+}
+.r-alumni-list-container{
+    border: 1px solid rgb(114, 1, 80);
+    grid-area:a-list;
+}
+.contributions-container{
+    border: 1px solid rgb(0, 0, 0);
+    grid-area:a-contribution;
+}
+.involved-projects-container{
+    border: 1px solid rgb(22, 108, 189);
+    grid-area:a-involved-project;
+}
+.img-container{
+    border: 1px solid lightgray;
+    border-radius: 40px;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 0.4em ;
+}
+.acdc-text-field{
+    width: 90%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2em;
+    border: 1px solid lightgray;
+    height: 40px;
+    background: white;
+    font-size: 0.8em;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+}
+.acdc-div-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 0.2em;
+    padding:5px 0;
+    margin-top: 20px;
+}
+.container-heading{
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    
+}
+.container-heading > .aldc-row1{
+    margin-top: 2em;
+}
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    margin: 5px 0;
+    
+  }
+
+  .full-name,
+  .email,.gender,.batch,.address {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+  }
+
+  .aldc-row1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.8em;
+  }
+
+.first-name,
+.nic,.last-name,
+.contact-number{
+  width: 50%;
+  height: 40px;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  font-family: "Nunito", serif;
+}
+
+.first-name,
+.nic{
+    margin-right: 5px;
+}
+
+.last-name,
+.contact-number{
+    margin-left: 5px;
+}
