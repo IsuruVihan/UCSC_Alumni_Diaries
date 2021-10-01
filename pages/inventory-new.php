@@ -153,10 +153,14 @@
                     Cash
             </div>
             <div class='filter-field'>
-                <div class='col4'>
-                    <input class='input-avu4' type='text' placeholder='From'/>
-                    <input class='input-avu4' type='text' placeholder='To'/>
-                    <select class='input-avu4'>
+                <div class='col3'>
+                    <input class='input-avu2' type='text' placeholder='From'
+                           onmouseup="(this.type='date')">
+                    <input class='input-avu2' type='text' placeholder='To'
+                           onmouseup="(this.type='date')">
+                </div>
+                <div class='col3'>
+                    <select class='input-avu2'>
                         <option value="" disabled selected hidden>Transfer To</option>
                         <option value='2018/2019'>2018/2019</option>
                         <option value='2018/2019'>2019/2020</option>
@@ -242,19 +246,23 @@
                 Items
             </div>
             <div class='filter-field'>
-                <div class='col4'>
-                    <input class='input-avu4' type='text' placeholder='From'/>
-                    <input class='input-avu4' type='text' placeholder='To'/>
-                    <select class='input-avu4'>
+                <div class='col3'>
+                    <input class='input-avu2' type='text' placeholder='Item Name'/>
+                    <input class='input-avu2' type='text' placeholder='Received From'/>
+                </div>
+                <div class='col3'>
+                    <input class='input-avu2' type='text' placeholder='From'
+                           onmouseup="(this.type='date')">
+                    <input class='input-avu2' type='text' placeholder='To'
+                           onmouseup="(this.type='date')">
+                </div>
+                <div class='col3'>
+                    <select class='input-avu2'>
                         <option value="" disabled selected hidden>Transfer To</option>
                         <option value='2018/2019'>2018/2019</option>
                         <option value='2018/2019'>2019/2020</option>
                         <option value='2018/2019'>2020/2021</option>
                     </select>
-                </div>
-                <div class='col3'>
-                    <input class='input-avu2' type='text' placeholder='Item Name'/>
-                    <input class='input-avu2' type='text' placeholder='Received From'/>
                 </div>
                 <div class='col2'>
                     <button class="filter-btn btn">Filter</button>
@@ -339,18 +347,22 @@
                 </div>
                 <div class='filter-field'>
                     <div class='col3'>
-                        <input class='input-avu2' type='text' placeholder='Donner Name'/>
-                        <input class='input-avu2' type='text' placeholder='Donner Email'/>
+                        <input class='input-avu2' type='text' placeholder='Donor Name'/>
+                        <input class='input-avu2' type='text' placeholder='Donor Email'/>
                     </div>
-                    <div class='col4'>
-                        <select class='input-avu4'>
+                    <div class='col3'>
+                        <input class='input-avu2' type='text' placeholder='From'
+                               onmouseup="(this.type='date')">
+                        <input class='input-avu2' type='text' placeholder='To'
+                               onmouseup="(this.type='date')">
+                    </div>
+                    <div class='col3'>
+                        <select class='input-avu2'>
                             <option value="" disabled selected hidden>For</option>
                             <option value='2018/2019'>2018/2019</option>
                             <option value='2018/2019'>2019/2020</option>
                             <option value='2018/2019'>2020/2021</option>
                         </select>
-                        <input class='input-avu4' type='text' placeholder='From'/>
-                        <input class='input-avu4' type='text' placeholder='To'/>
                     </div>
                     <div class='col2'>
                         <button class="filter-btn btn">Filter</button>
@@ -360,36 +372,10 @@
                     <div class='to-be-acc-cash-item'>
                         <div class='sec-1'>
                             <div class='sec-2'>
-                                Donner Name
+                                Donor Name
                             </div>
                             <div class='sec-2'>
-                                Donner Email
-                            </div>
-                        </div>
-                        <div class='sec-1'>
-                            <div class='sec-2'>
-                                For
-                            </div>
-                            <div class='sec-2'>
-                                Amount
-                            </div>
-                        </div>
-                        <div class='btn-container'>
-                            <button class='bill-btn btn'>Bill</button>
-                            <button class="accept-btn btn">Accept</button>
-                            <button class="delete-btn btn">Delete</button>
-                        </div>
-                        <div class='sec-3'>
-                            time
-                        </div>
-                    </div>
-                    <div class='to-be-acc-cash-item'>
-                        <div class='sec-1'>
-                            <div class='sec-2'>
-                                Donner Name
-                            </div>
-                            <div class='sec-2'>
-                                Donner Email
+                                Donor Email
                             </div>
                         </div>
                         <div class='sec-1'>
@@ -412,10 +398,36 @@
                     <div class='to-be-acc-cash-item'>
                         <div class='sec-1'>
                             <div class='sec-2'>
-                                Donner Name
+                                Donor Name
                             </div>
                             <div class='sec-2'>
-                                Donner Email
+                                Donor Email
+                            </div>
+                        </div>
+                        <div class='sec-1'>
+                            <div class='sec-2'>
+                                For
+                            </div>
+                            <div class='sec-2'>
+                                Amount
+                            </div>
+                        </div>
+                        <div class='btn-container'>
+                            <button class='bill-btn btn'>Bill</button>
+                            <button class="accept-btn btn">Accept</button>
+                            <button class="delete-btn btn">Delete</button>
+                        </div>
+                        <div class='sec-3'>
+                            time
+                        </div>
+                    </div>
+                    <div class='to-be-acc-cash-item'>
+                        <div class='sec-1'>
+                            <div class='sec-2'>
+                                Donor Name
+                            </div>
+                            <div class='sec-2'>
+                                Donor Email
                             </div>
                         </div>
                         <div class='sec-1'>
@@ -443,18 +455,22 @@
                 </div>
                 <div class='filter-field'>
                     <div class='col3'>
-                        <input class='input-avu2' type='text' placeholder='Donner Name'/>
-                        <input class='input-avu2' type='text' placeholder='Donner Email'/>
+                        <input class='input-avu2' type='text' placeholder='Donor Name'/>
+                        <input class='input-avu2' type='text' placeholder='Donor Email'/>
                     </div>
-                    <div class='col4'>
-                        <select class='input-avu4'>
+                    <div class='col3'>
+                        <input class='input-avu2' type='text' placeholder='From'
+                               onmouseup="(this.type='date')">
+                        <input class='input-avu2' type='text' placeholder='To'
+                               onmouseup="(this.type='date')">
+                    </div>
+                    <div class='col3'>
+                        <select class='input-avu2'>
                             <option value="" disabled selected hidden>For</option>
                             <option value='2018/2019'>2018/2019</option>
                             <option value='2018/2019'>2019/2020</option>
                             <option value='2018/2019'>2020/2021</option>
                         </select>
-                        <input class='input-avu4' type='text' placeholder='From'/>
-                        <input class='input-avu4' type='text' placeholder='To'/>
                     </div>
                     <div class='col2'>
                         <button class="filter-btn btn">Filter</button>
@@ -464,10 +480,10 @@
                     <div class='to-be-acc-items-item'>
                         <div class='sec-1'>
                             <div class='sec-2'>
-                                Donner Name
+                                Donor Name
                             </div>
                             <div class='sec-2'>
-                                Donner Email
+                                Donor Email
                             </div>
                         </div>
                         <div class='sec-1'>
@@ -492,10 +508,10 @@
                     <div class='to-be-acc-items-item'>
                         <div class='sec-1'>
                             <div class='sec-2'>
-                                Donner Name
+                                Donor Name
                             </div>
                             <div class='sec-2'>
-                                Donner Email
+                                Donor Email
                             </div>
                         </div>
                         <div class='sec-1'>
@@ -520,10 +536,10 @@
                     <div class='to-be-acc-items-item'>
                         <div class='sec-1'>
                             <div class='sec-2'>
-                                Donner Name
+                                Donor Name
                             </div>
                             <div class='sec-2'>
-                                Donner Email
+                                Donor Email
                             </div>
                         </div>
                         <div class='sec-1'>
@@ -564,12 +580,16 @@
                     </div>
                     <div class='cash-received-filter-field'>
                         <div class='col4'>
-                            <input class='input-avu3' type='text' placeholder='Donner Name'/>
-                            <input class='input-avu3' type='text' placeholder='Donner Email'/>
+                            <input class='input-avu2' type='text' placeholder='Donor Name'/>
+                            <input class='input-avu2' type='text' placeholder='Donor Email'/>
                         </div>
-                        <div class='col4'>
-                            <input class='input-avu3' type='text' placeholder='From'/>
-                            <input class='input-avu3' type='text' placeholder='To'/>
+                        <div class='col3'>
+                            <input class='input-avu3' type='text' placeholder='From'
+                                   onmouseup="(this.type='date')">
+                        </div>
+                        <div class='col3'>
+                            <input class='input-avu3' type='text' placeholder='To'
+                                   onmouseup="(this.type='date')">
                         </div>
                         <div class='col2'>
                             <button class='filter-btn btn'>Filter</button>
@@ -580,10 +600,10 @@
                         <div class='received-cash-item'>
                             <div class='sec-1'>
                                 <div class='sec-2'>
-                                    Donner Name
+                                    Donor Name
                                 </div>
                                 <div class='sec-2'>
-                                    Donner Email
+                                    Donor Email
                                 </div>
                             </div>
                             <div class='sec-1'>
@@ -604,10 +624,10 @@
                         <div class='received-cash-item'>
                             <div class='sec-1'>
                                 <div class='sec-2'>
-                                    Donner Name
+                                    Donor Name
                                 </div>
                                 <div class='sec-2'>
-                                    Donner Email
+                                    Donor Email
                                 </div>
                             </div>
                             <div class='sec-1'>
@@ -628,10 +648,10 @@
                         <div class='received-cash-item'>
                             <div class='sec-1'>
                                 <div class='sec-2'>
-                                    Donner Name
+                                    Donor Name
                                 </div>
                                 <div class='sec-2'>
-                                    Donner Email
+                                    Donor Email
                                 </div>
                             </div>
                             <div class='sec-1'>
@@ -657,13 +677,19 @@
                     </div>
                     <div class='cash-received-filter-field'>
                         <div class='col3'>
-                            <input class='input-avu2' type='text' placeholder='Donner Name'/>
-                            <input class='input-avu2' type='text' placeholder='Donner Email'/>
+                            <input class='input-avu2' type='text' placeholder='Donor Name'/>
+                            <input class='input-avu2' type='text' placeholder='Donor Email'/>
                         </div>
-                        <div class='col4'>
-                            <input class='input-avu4' type='text' placeholder='From'/>
-                            <input class='input-avu4' type='text' placeholder='To'/>
-                            <select class='input-avu4'>
+                        <div class='col3'>
+                            <input class='input-avu3' type='text' placeholder='From'
+                                   onmouseup="(this.type='date')">
+                        </div>
+                        <div class='col3'>
+                            <input class='input-avu3' type='text' placeholder='To'
+                                   onmouseup="(this.type='date')">
+                        </div>
+                        <div class='col3'>
+                            <select class='input-avu3'>
                                 <option value="" disabled selected hidden>Project</option>
                                 <option value='2018/2019'>2018/2019</option>
                                 <option value='2018/2019'>2019/2020</option>
@@ -679,10 +705,10 @@
                         <div class='received-cash-item'>
                             <div class='sec-1'>
                                 <div class='sec-2'>
-                                    Donner Name
+                                    Donor Name
                                 </div>
                                 <div class='sec-2'>
-                                    Donner Email
+                                    Donor Email
                                 </div>
                             </div>
                             <div class='sec-1'>
@@ -706,10 +732,10 @@
                         <div class='received-cash-item'>
                             <div class='sec-1'>
                                 <div class='sec-2'>
-                                    Donner Name
+                                    Donor Name
                                 </div>
                                 <div class='sec-2'>
-                                    Donner Email
+                                    Donor Email
                                 </div>
                             </div>
                             <div class='sec-1'>
@@ -733,10 +759,10 @@
                         <div class='received-cash-item'>
                             <div class='sec-1'>
                                 <div class='sec-2'>
-                                    Donner Name
+                                    Donor Name
                                 </div>
                                 <div class='sec-2'>
-                                    Donner Email
+                                    Donor Email
                                 </div>
                             </div>
                             <div class='sec-1'>
@@ -767,12 +793,14 @@
             </div>
             <div class='subscriptions-filter-field'>
                 <div class='col3'>
-                    <input class='input-avu2' type='text' placeholder='Donner Name'/>
-                    <input class='input-avu2' type='text' placeholder='Donner Email'/>
+                    <input class='input-avu2' type='text' placeholder='Donor Name'/>
+                    <input class='input-avu2' type='text' placeholder='Donor Email'/>
                 </div>
                 <div class='col4'>
-                    <input class='input-avu4' type='text' placeholder='From'/>
-                    <input class='input-avu4' type='text' placeholder='To'/>
+                    <input class='input-avu4' type='text' placeholder='From'
+                           onmouseup="(this.type='date')">
+                    <input class='input-avu4' type='text' placeholder='To'
+                           onmouseup="(this.type='date')">
                     <select class='input-avu4'>
                         <option value="" disabled selected hidden>Project</option>
                         <option value='2018/2019'>2018/2019</option>
@@ -785,35 +813,14 @@
                     <button class='subscriptions-gen-repo-btn btn'>Generate Report</button>
                 </div>
             </div>
-            <div class='received-cash-container'>
-                <div class='received-cash-item'>
+            <div class='subscriptions-container'>
+                <div class='subscription-item'>
                     <div class='sec-1'>
                         <div class='sec-2'>
-                            Donner Name
+                            Donor Name
                         </div>
                         <div class='sec-2'>
-                            Donner Email
-                        </div>
-                    </div>
-                    <div class='sec-1'>
-                        <div class='sec-2'>
-                            Item Name
-                        </div>
-                        <div class='sec-2'>
-                            Item Quantity
-                        </div>
-                    </div>
-                    <div class='sec-3'>
-                        time
-                    </div>
-                </div>
-                <div class='received-cash-item'>
-                    <div class='sec-1'>
-                        <div class='sec-2'>
-                            Donner Name
-                        </div>
-                        <div class='sec-2'>
-                            Donner Email
+                            Donor Email
                         </div>
                     </div>
                     <div class='sec-1'>
@@ -828,13 +835,34 @@
                         time
                     </div>
                 </div>
-                <div class='received-cash-item'>
+                <div class='subscription-item'>
                     <div class='sec-1'>
                         <div class='sec-2'>
-                            Donner Name
+                            Donor Name
                         </div>
                         <div class='sec-2'>
-                            Donner Email
+                            Donor Email
+                        </div>
+                    </div>
+                    <div class='sec-1'>
+                        <div class='sec-2'>
+                            Item Name
+                        </div>
+                        <div class='sec-2'>
+                            Item Quantity
+                        </div>
+                    </div>
+                    <div class='sec-3'>
+                        time
+                    </div>
+                </div>
+                <div class='subscription-item'>
+                    <div class='sec-1'>
+                        <div class='sec-2'>
+                            Donor Name
+                        </div>
+                        <div class='sec-2'>
+                            Donor Email
                         </div>
                     </div>
                     <div class='sec-1'>
@@ -857,8 +885,8 @@
             </div>
             <div class='subscriptions-filter-field'>
                 <div class='col4'>
-                    <input class='input-avu4' type='text' placeholder='First Name'/>
-                    <input class='input-avu4' type='text' placeholder='Last Name'/>
+                    <input class='input-avu4' type='text' placeholder='Last Name'>
+                    <input class='input-avu4' type='text' placeholder='First name'>
                     <select class='input-avu4'>
                         <option value="" disabled selected hidden>Batch</option>
                         <option value='All'>All</option>
@@ -875,9 +903,11 @@
                         <option value='2018/2019'>2019/2020</option>
                         <option value='2018/2019'>2020/2021</option>
                     </select>
-                    <input class='input-avu4' type='text' placeholder='From'/>
-                    <input class='input-avu4' type='text' placeholder='To'/>
-                </div>
+                    <input class='input-avu4' type='text' placeholder='From'
+                           onmouseup="(this.type='date')">
+                    <input class='input-avu4' type='text' placeholder='To'
+                           onmouseup="(this.type='date')">
+                </div> 
                 <div class='subs-filter-btn-container'>
                     <button class='subscriptions-filter-btn btn'>Filter</button>
                     <button class='subscriptions-gen-repo-btn btn'>Generate Report</button>

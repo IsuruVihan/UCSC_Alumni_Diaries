@@ -19,7 +19,7 @@
 .inventory{
     /*border: 3px solid red;*/
     display: grid;
-    height: 150vh;
+    height: 190vh;
     background: #fafafa;
     grid-template-columns: [line1] 27.5% [line2] 27.5% [line3] 45% [line4];
     grid-template-rows: [row1] 65% [row2] 35% [row3];
@@ -97,7 +97,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 30%;
+    height: 20%;
     width: 100%;
     background: white;
 }
@@ -189,14 +189,14 @@
 .submit-btn,
 .filter-btn{
     width: 22%;
-    margin-top: 0.5em;
+    margin-top: 10px;
     background: gray;
     border: 1px solid gray;
 }
 
 .generate-reports-btn{
     width: 50%;
-    margin-top: 0.5em;
+    margin-top: 10px;
     background: gray;
     border: 1px solid gray;
     /*height: 100%;*/
@@ -219,7 +219,7 @@
     box-shadow: 1px 2px 4px lightgrey;
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 80%;
     width: 100%;
     background-color: white;
     padding-top: 20px;
@@ -232,12 +232,12 @@
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 70%;
+    height: 80%;
     margin:20px;
 }
 
 .available-items-card{
-    height: 35%;
+    height: 25%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -311,7 +311,8 @@
     height: 47%;
     /*width: 90%;*/
     background: white;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
+    margin-top: 5px;
     padding-right: 5px;
     padding-left: 5px;
 }
@@ -350,14 +351,14 @@
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 40%;
-    margin:5px;
+    height: 47%;
+    /*margin:5px;*/
     padding: 3px;
 }
 
 .cash-transfers-item,
 .item-transfers-item{
-    height: 96%;
+    height: 75%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -397,8 +398,8 @@
     display: flex;
     /*flex-direction: row;*/
     justify-content: center;
-    margin-top: 5px;
-    height: 10%;
+    margin-top: 7px;
+    height: 8%;
     width: 60%;
     text-align: center;
     align-items: center;
@@ -414,7 +415,7 @@
 }
 
 .to-be-acc-item{
-    height: 98%;
+    height: 100%;
     width: 50%;
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -424,21 +425,21 @@
     /*justify-content: space-evenly;*/
     /*align-items: center;*/
     transition: all ease-in-out 0.5s;
-    padding: 3px;
+    padding: 4px;
     margin: 3px;
 }
 
 .to-be-acc-cash-item,
 .to-be-acc-items-item,
 .received-cash-item{
-    height: 110%;
-    width: 97%;
+    height: 60%;
+    width: 96%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 2px;
+    padding: 3px;
     align-items: center;
     transition: all ease-in-out 0.5s;
     margin: 3px;
@@ -485,12 +486,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 31.25%;
+    height: 35%;
     /*width: 100%;*/
     background: white;
     padding: 3px;
-    margin-bottom: 10px;
-    margin-top: 5px;
+    margin-bottom: 7px;
+    margin-top: 7px;
 }
 
 .cash-for-association,
@@ -519,7 +520,7 @@
 }
 
 .input-avu3{
-    width: 48%;
+    width: 54%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
@@ -545,12 +546,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 31.25%;
+    height: 30%;
     /*width: 100%;*/
     background: white;
     padding-right: 5px;
     padding-left: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .subscriptions{
@@ -560,15 +561,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 31.25%;
+    height: 30%;
     /*width: 100%;*/
     background: white;
     padding-right: 5px;
     padding-left: 5px;
+    margin-top: 5px;
     /*margin-bottom: 8px;*/
 }
 
 .subscriptions-filter-field{
+    height: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -578,7 +581,8 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     /*padding: 2px;*/
-    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .input-avu4{
@@ -626,7 +630,7 @@
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 40%;
+    height: 50%;
     margin:5px;
     padding: 3px;
 }
@@ -637,7 +641,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 100%;
+    height: 45%;
     /*width: 100%;*/
     background: white;
     padding: 3px;
