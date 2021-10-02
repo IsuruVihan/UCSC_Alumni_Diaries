@@ -1,0 +1,345 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+
+.alumnus-container{
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    border-radius: 10px;
+    
+    background: #fafafa;
+}
+.grid-title{
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.field-hover:hover{
+    border-color: #ffccc7;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: [col1]1fr[col2] 1.5fr [col3] 2fr[col4] 3fr[col4]  ;
+    grid-template-rows: [row1]0.4fr[row2] 0.25fr[row3] ;
+    grid-template-areas:'a-data a-details a-details  a-list ' 
+    'a-contribution a-contribution  a-involved-project a-list';
+    
+    margin-bottom: 0;
+    padding: 5px;
+    gap:10px ;
+    
+}
+.account-details-container{
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    border-radius: 10px;
+    grid-area:a-data; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    padding:0.8em 0;
+    
+    
+}
+.alumni-details-container{
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    border-radius: 5px;
+    grid-area:a-details;
+    padding: 0.8em;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  
+}
+.r-alumni-list-container{
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    grid-area:a-list;
+    border-radius: 10px;
+    padding: 0.8em 0;
+    height: 82%; 
+}
+
+.contributions-container{
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    grid-area:a-contribution;
+    padding: 0.8em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    height: 70%;
+}
+.contribution-box{
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em;
+    border-radius: 5px;  
+    height: 85%;
+    overflow-y:scroll;
+}
+
+.involved-projects-container{
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    grid-area:a-involved-project;
+    padding: 0.8em;
+    border-radius: 10px;
+    height: 70%;
+}
+.img-container{
+    border: 1px solid lightgray;
+    border-radius: 40px;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 0.4em ;
+}
+.acdc-text-field{
+    width: 90%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.4em;
+    border: 1px solid lightgray;
+    height: 30px;
+    background: white;
+    font-size: 0.8em;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+}
+.acdc-btn{
+    margin: 0.2em 0.8em;
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito';
+    width: 80%;
+}
+.acdc-btn:hover{
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
+}
+.rm-ban-btn{
+    margin: 0.2em 0.8em;
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito';
+    width: 90%;
+}
+.acdc-div-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top:0.4em;
+    margin-bottom: 0.2em;
+    padding:5px 0;
+    
+}
+.acdc-div-container > button{
+    width: 90%;
+}
+    
+.container-heading{
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    
+}
+.container-heading + div{
+    margin-top: 1em;
+    
+}
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    
+    
+  }
+
+  .full-name,
+  .email,.gender,.batch,.address {
+    width: 100%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+  }
+
+  .address{
+      height: 70px;
+  }
+  .aldc-row1 {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+.first-name,
+.nic,.last-name,
+.contact-number{
+  width: 50%;
+  height: 30px;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  font-family: "Nunito", serif;
+}
+
+.first-name,
+.nic{
+    margin-right: 5px;
+}
+
+.last-name,
+.contact-number{
+    margin-left: 5px; 
+}
+
+.contribution-row1{
+    display: flex;
+    height: 25px;
+    justify-content: space-around;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin-bottom: 0.8em;
+}
+.involved-projects-row{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgray;
+    height: 25px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 0.8em;
+}
+.involved-projects-box{
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em;
+    border-radius: 5px;
+    height: 85%;
+    overflow-y:scroll;
+}
+.filter-container{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgray;
+    margin: 0.8em;
+    padding: 3px;
+    border-radius: 5px;
+}
+.filter-container-col1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 2.7em;
+}
+.filter-container-col2{
+    display: flex;
+    flex-direction: row;
+}
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+}
+
+.filter-btn {
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito';
+    width: 100%;
+}
+
+.filter-btn:hover {
+  background: white;
+  border-color: black;
+  color: black;
+}
+.input-field-title {
+    width: 80%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin:0 0.2em;
+    text-align: center;
+}
+.alumni-list-box{
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    margin: 0.8em;
+    border-radius: 5px;
+    height: 90%;
+    overflow-y: scroll;
+}
+.alumni-box-row{
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0.4em 0.8em;
+}
+.list-prof-pic{
+    border: 1px solid lightgray;
+    width: 60px;
+    height: 60px;
+    border-radius:20px;
+}
+.list-detail-field{    
+}
+.view-btn{
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito';
+    width: fit-content;
+}
+.view-btn:hover {
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
+}
