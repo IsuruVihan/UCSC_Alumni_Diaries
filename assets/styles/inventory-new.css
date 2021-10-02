@@ -203,14 +203,19 @@
 }
 
 .submit-btn:hover,
-.generate-reports-btn:hover,
-.subscriptions-gen-repo-btn:hover,
 .filter-btn:hover,
 .subscriptions-filter-btn:hover,
 .bill-btn:hover{
     background: white;
     border-color: black;
     color: black;
+}
+
+.generate-reports-btn:hover,
+.subscriptions-gen-repo-btn:hover{
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
 }
 
 .available-items{
