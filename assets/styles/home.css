@@ -1,0 +1,44 @@
+.home {
+    /*background: white;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.white-space {
+    height: 5em;
+    background: white;
+    margin-top: 5px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 4em;
+    font-weight: 800;
+    background: white;
+}
+
+.text {
+    padding: 1em 8em;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: white;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.para {
+    display: flex;
+    text-align: justify;
+    box-shadow: 1px 2px 4px lightgray;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.para-text {
+    display: flex;
+    align-items: center;
+    padding-right: 8em;
+}
