@@ -22,12 +22,6 @@
   text-align: center;
   margin-top: 5px;
 }
-.title-01 {
-  font-weight: 600;
-  font-size: 1.2em;
-  text-align: center;
-  margin-top: 5px;
-}
 .our-projects {
   background: #fafafa;
   height: 80vh;
@@ -80,6 +74,7 @@
   justify-content: space-evenly;
   border: 1px solid lightgray;
   border-radius: 5px;
+  margin-top: 10px;
 }
 .box-02 {
   display: flex;
@@ -136,10 +131,10 @@
   background: #595959;
   border: 1px solid #595959;
 }
+
 .submit-btn:hover {
-  background: #5cd909;
-  border-color: #5cd909;
-  color: white;
+  background: #237804;
+  border: 1px solid #237804;
 }
 .cancel-btn:hover {
   background: #f5222d;
@@ -176,7 +171,7 @@
 .scroll-02 {
   border: 1px solid lightgray;
   border-radius: 5px;
-  height: 58%;
+  height: 50%;
   padding: 5px;
   display: flex;
   flex-direction: column;
@@ -185,8 +180,9 @@
   gap: 5px;
   overflow: hidden;
   overflow-y: scroll;
-  margin-top: 10px;
+  margin-top: 5px;
 }
+
 .project-description {
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -216,6 +212,12 @@
   align-items: center;
   transition: all ease-in-out 0.5s;
 }
+.list:hover,
+.list-01:hover {
+  box-shadow: 0 0 5px gray;
+  cursor: pointer;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -235,14 +237,13 @@
 }
 .sub-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  height: 100%;
+  gap: 3px;
 }
-.row-01,
-.row-02 {
-  width: 44%;
-  height: 58%;
-  background: white;
+.section-01,
+.section-02 {
+  width: 50%;
+  border: 1px solid lightgray;
   box-shadow: 1px 2px 4px lightgray;
   border-radius: 10px;
   padding: 20px;
@@ -252,11 +253,11 @@
 .container-03 {
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 3px;
 }
 .container-01 {
   height: 42%;
   justify-content: space-around;
+  padding: 3px;
 }
 .container-02 {
   margin-top: 5px;
@@ -269,4 +270,5 @@
   margin-top: 5px;
   height: 42%;
   justify-content: space-around;
+  padding: 3px;
 }
