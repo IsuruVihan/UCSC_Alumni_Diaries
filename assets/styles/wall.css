@@ -240,8 +240,8 @@
     color: white;
 }
 .dlt-btn:hover{
-    background: #9b131a;
-    border: 1px solid #9b131a;
+    background: #f5222d;
+    border: 1px solid #f5222d;
     color: white; 
 }
 
@@ -492,8 +492,8 @@ width: 35%;
     
 }
 .post-delete:hover{
-    background: #9b131a;
-    border: 1px solid #9b131a;
+    background: #f5222d;
+    border: 1px solid #f5222d;
     color: white;
 }
 .post-title{
