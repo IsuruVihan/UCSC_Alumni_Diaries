@@ -21,7 +21,7 @@
     margin-left: 6.7em;
     margin-right: 6.7em;
     border-radius: 10px;
-    padding: 20px;
+    
     background: #fafafa;
 }
 .grid-title{
@@ -36,7 +36,7 @@
     grid-template-rows: [row1]0.4fr[row2] 0.25fr[row3] ;
     grid-template-areas:'a-data a-details a-details  a-list ' 
     'a-contribution a-contribution  a-involved-project a-list';
-    margin: 0.8em;
+    
     margin-bottom: 0;
     padding: 5px;
     gap:10px ;
