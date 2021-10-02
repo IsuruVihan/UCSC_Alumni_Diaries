@@ -132,9 +132,16 @@
     width: 80%;
 }
 .acdc-btn:hover{
-    background: white;
-  border-color: black;
-  color: black;
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
+}
+.rm-ban-btn{
+    margin: 0.2em 0.8em;
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito';
+    width: 90%;
 }
 .acdc-div-container{
     width: 90%;
@@ -328,7 +335,7 @@
     width: fit-content;
 }
 .view-btn:hover {
-    background: white;
-    border-color: black;
-    color: black;
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
 }

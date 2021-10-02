@@ -22,8 +22,8 @@
 
 			</div>
 			<div class='acdc-text-field'>Account Type</div>
-			<button class='btn acdc-btn'>Remove Account </button>
-			<button class='btn acdc-btn'>Ban Account</button>
+			<button class='btn rm-ban-btn'>Remove Account </button>
+			<button class='btn  rm-ban-btn'>Ban Account</button>
 			<div class='acdc-div-container'>
 					<div class='acdc-text-field'>Subscription Type</div>
 					<div class='acdc-text-field'>Due Date </div>
