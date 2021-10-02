@@ -21,9 +21,15 @@ const DisplayAddComment = () => {
 const DisplayPostReport = () => {
     document.getElementById('post-report').style.display = "flex";   
 }
+const HidePostReport = () => {
+    document.getElementById('post-report').style.display = "none";  
+}
 
 const DisplayCommentReport = () => {
     document.getElementById('comment-report').style.display = "flex";   
+}
+const HideCommentReport = () => {
+    document.getElementById('comment-report').style.display = "none";   
 }
 
 const HideComments = () => {
@@ -40,3 +46,4 @@ const ShowEditNotice = () => {
 const HideEditNotice = () => {
     document.getElementById('edit-notice-box').style.display = "none";  
 }
+

@@ -110,7 +110,7 @@
 			<input type="text" placeholder="Title" class="create-post-title">
 			<div class="row-0">
 				<div class="image-box">
-				<!--	<img src="../assets/images/logo.jpeg" alt=""  width="300" height="200" >-->
+				
 				</div>
 				<textarea class="create-post-text" placeholder="Your content goes here"></textarea>	
 			</div>
@@ -161,10 +161,10 @@
 			<!--Post report -->				
 			<div class='post-report' id='post-report'>
 				<div class='box-title'>Report Post</div>
-				<textarea class='report-txt' placeholder='Your content goes here'></textarea>
+				<textarea class='report-txt field-hover' placeholder='Your content goes here'></textarea>
 				<div class='create-post-buttons'>
 					<button class='filter-btn btn'>Submit </button>
-					<button class='filter-btn btn'>Cancel </button>
+					<button class='filter-btn btn' onclick='HidePostReport()'>Cancel </button>
 				</div>
 			</div>
 			<!--add comments -->
@@ -172,15 +172,15 @@
 						<div class='box-title ' >Add Comment</div>
 						<div class='comment-content' >
 							<img src='' alt='' class='comment-dp'>
-							<input class='c-fname' placeholder='First Name'>
-							<input class='c-lname' placeholder='Last Name'>
+							<input class='c-fname field-hover' placeholder='First Name'>
+							<input class='c-lname field-hover' placeholder='Last Name'>
 							<div class='c-time'>Timestamp</div>
 							<div class='comment-buttons'>
 								<div class='c-edit'></div>
 								<button class='filter-btn btn c-dlt'>Add</button>
 								<button class='filter-btn btn c-report' onclick='HideAddComment ()'>Cancel</button>
 							</div>
-							<textarea class='c-txt' placeholder='Enter yor comment here'></textarea>
+							<textarea class='c-txt field-hover' placeholder='Enter yor comment here'></textarea>
 							<div class='like-box'>
 								
 							</div>	
@@ -219,10 +219,10 @@
 					<!--comment report-->
 					<div class='comment-report' id='comment-report'>
 						<div class="box-title">Report Comment</div>
-						<textarea class="report-txt" placeholder="Your content goes here"></textarea>
+						<textarea class="report-txt field-hover" placeholder="Your content goes here"></textarea>
 						<div class="create-post-buttons">
 							<button class='filter-btn btn'>Submit </button>
-							<button class='filter-btn btn'>Cancel </button>
+							<button class='filter-btn btn' onclick='HideCommentReport()'>Cancel </button>
 						</div>
 					</div>	
 			</div>
