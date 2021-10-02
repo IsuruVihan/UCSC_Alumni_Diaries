@@ -434,7 +434,7 @@ width: 35%;
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt"
-    " .   report show-cmnt show-cmnt comment  like-dislike-cell like-dislike-cell like-dislike-cell like-dislike-cell"
+    " report show-cmnt show-cmnt comment . like-dislike-cell like-dislike-cell like-dislike-cell like-dislike-cell"
     ;
     place-self: center;
     gap: 5px 5px;
