@@ -101,7 +101,7 @@
 	<div class="common-wall">
 	
 		<div class="wall-top-row">
-			<p class="grid-title">Common Wall</p>
+			<p class="grid-title">Wall</p>
 			<button class='create-post-button filter-btn btn' onclick='DisplayCreatePost()'>Create Post</button>
 		</div>
 		<!--Create post -->		
