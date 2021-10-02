@@ -50,9 +50,9 @@
 			<header class='container-heading'>Registered Alumni List </header>
 			<div class='filter-container'>
 				<div class='filter-container-col1'>
-					<input type='text' placeholder='First Name' class='input-field-title'>
-					<input type='text' placeholder='Last Name' class='input-field-title'>
-					<select class='input-field-title'>
+					<input type='text' placeholder='First Name' class='input-field-title field-hover'>
+					<input type='text' placeholder='Last Name' class='input-field-title field-hover'>
+					<select class='input-field-title field-hover'>
 						<option value='All'>All</option>
 						<option value='2018/2019'>2018/2019</option>
 						<option value='2018/2019'>2019/2020</option>
