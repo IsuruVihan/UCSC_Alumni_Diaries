@@ -1,0 +1,273 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+.admin-project-spendings{
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    border-radius: 10px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: row;   
+}
+
+.container-row{ 
+    border: 1px solid rgb(20, 19, 19);
+}
+.container-col-1{
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    border-radius: 10px;
+    margin: 0.8em;  
+}
+.scroll-box1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0.8em;
+    overflow-y: scroll;
+    height: 80%;
+}
+.container-col-2{  
+    display: flex;
+    flex-direction: column;  
+    width: 60%;
+    margin: 0.8em;
+}
+.cash-spendings{
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 0.8em;
+    height: 40%
+}
+.item-spendings{ 
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    border-radius: 10px; 
+    margin-top: 0.8em;   
+}
+.filter-box{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin:  0.8em;
+    justify-content: space-between;
+    padding:  3px 0;
+}
+.date-field{
+    width: 45%;   
+}
+.text-field{
+    width: 45%;
+}
+.drop-down{
+    width: 45%;
+    margin: 0 0.8em;
+}
+.input-field {
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin: 0 0.8em;
+  }
+  
+.input-field:hover {
+    border-color: #ffccc7;
+  }
+
+.filter-btn {
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito';
+    width: 45%;
+    margin: 0 0.8em;
+    border-radius: 5px;
+}
+
+.filter-btn:hover {
+  background: white;
+  border-color: black;
+  color: black;
+}
+.container-heading{
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 1.6em;
+    
+}
+.project-description{
+    border: 1px solid lightgray;
+    margin: 0.8em;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.project-detail-box{
+    display: flex;
+    flex-direction: column;
+    margin:3px;
+}
+.project-detail-box-col1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    margin:3px;
+}
+.project-detail-box-col2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:5px 3px ; 
+}
+.p-name{
+    grid-area: name;
+    height: 35px;
+    width: 100%;
+}
+.p-s-date{
+    grid-area: s-date; 
+    height: 35px;
+    width: 40%;
+}
+.p-e-date{
+    grid-area: e-date; 
+    height: 35px;
+    width: 40%;
+}
+.p-cordi{
+    grid-area: coordinator; 
+    height: 35px;
+    width: 100%
+}
+.p-description{
+    grid-area: description;
+    height: 70px;
+    width: 50%;
+  }
+
+.p-view{
+    grid-area: view;
+    height: 35px;
+    margin-left: 0.8em;
+}
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    margin: 0 3px;
+  }
+ .view-btn{
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito';
+    width: fit-content;   
+}
+.view-btn:hover,.generate-report-btn:hover {
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
+}
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+}
+.cash-spendings-row1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    margin: 0 0.8em;
+    border-radius: 10px;
+    margin-top: 0.8em;
+    overflow-y: scroll;
+    height: 60%; 
+}
+.cash-spendings-row2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    margin: 0.8em;
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+.spend-detail{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0.8em;
+    padding: 5px;
+}
+.cash-spend-description{
+    height: 35px;
+    width: 100%; 
+    margin: 3px 5px;
+    text-align: center;
+}
+.timestamp,.bill-attach,.cost{
+    margin: 3px 5px;
+    width: 30%;
+    height: 35px;
+    text-align: center;
+}
+.qty{
+    margin: 3px 5px;
+    width: 20%;
+    height: 35px;
+    text-align: center;
+}
+.item-name{
+    margin: 3px 5px;
+    width: 40%;
+    height: 35px;
+    text-align: center;
+}
+.generate-report-btn{
+    background: gray;
+    border: 1px solid gray;
+    height: 35px;
+    color: white;
+    width: 40%;
+    margin: 0 0.8em;
+    border-radius: 5px;
+}
+.total{
+    margin: 3px 5px;
+    width: 40%;
+    height: 35px;
+    text-align: center;
+}
+.item-spend-row{
+    border: none;
+    display: flex;
+    justify-content: center;
+}
