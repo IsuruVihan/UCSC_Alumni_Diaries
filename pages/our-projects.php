@@ -115,9 +115,9 @@
    <div class='card container02'>
         <div class='sub-container'>
             <div class='section-01'>
-                <div class='title'>
+               <div class='title'>
                     Project Name
-                </div>
+                </div> 
                 <div class='filter-01'>  
                     <div class='box-01'>
                         <div class='text'>
