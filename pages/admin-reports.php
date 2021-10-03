@@ -56,8 +56,8 @@
                             <div class='cause'>
                                 <div class='report-cause'>
                                     <label class='alllabels'> Cause for Reporting </label>
-                                    <textarea class='the-cause list-details'> Cause for Reporting
-                                    </textarea>
+                                    <div class='the-cause list-details'> Cause for Reporting
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -99,8 +99,8 @@
                             <div class='cause'>
                                 <div class='report-cause'>
                                     <label class='alllabels'> Cause for Reporting </label>
-                                    <textarea class='the-cause list-details'> Cause for Reporting
-                                    </textarea>
+                                    <div class='the-cause list-details'> Cause for Reporting
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -142,8 +142,8 @@
                             <div class='cause'>
                                 <div class='report-cause'>
                                     <label class='alllabels'> Cause for Reporting </label>
-                                    <textarea class='the-cause list-details'> Cause for Reporting
-                                    </textarea>
+                                    <div class='the-cause list-details'> Cause for Reporting
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -185,8 +185,8 @@
                             <div class='cause'>
                                 <div class='report-cause'>
                                     <label class='alllabels'> Cause for Reporting </label>
-                                    <textarea class='the-cause list-details'> Cause for Reporting
-                                    </textarea>
+                                    <div class='the-cause list-details'> Cause for Reporting
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -252,8 +252,8 @@
                             <div class='rcause'>
                                 <div class='report-cause'>
                                     <label class='alllabels'> Cause for Reporting </label>
-                                    <textarea class='thee-cause list-details'> Cause for Reporting
-                                    </textarea>
+                                    <div class='thee-cause list-details'> Cause for Reporting
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -306,8 +306,8 @@
                             <div class='rcause'>
                                 <div class='report-cause'>
                                     <label class='alllabels'> Cause for Reporting </label>
-                                    <textarea class='thee-cause list-details'> Cause for Reporting
-                                    </textarea>
+                                    <div class='thee-cause list-details'> Cause for Reporting
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -360,8 +360,8 @@
                             <div class='rcause'>
                                 <div class='report-cause'>
                                     <label class='alllabels'> Cause for Reporting </label>
-                                    <textarea class='thee-cause list-details'> Cause for Reporting
-                                    </textarea>
+                                    <div class='thee-cause list-details'> Cause for Reporting
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -414,8 +414,8 @@
                             <div class='rcause'>
                                 <div class='report-cause'>
                                     <label class='alllabels'> Cause for Reporting </label>
-                                    <textarea class='thee-cause list-details'> Cause for Reporting
-                                    </textarea>
+                                    <div class='thee-cause list-details'> Cause for Reporting
+                                    </div>
                                 </div>
                             </div>
                         </div>

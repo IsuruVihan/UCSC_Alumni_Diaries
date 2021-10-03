@@ -98,6 +98,8 @@
     padding-bottom: 1em;
 }
 
+
+
 .rdetails {
     display: grid;
     grid-template-columns: [c1] 30% [c2] 70% [c3];
@@ -118,7 +120,7 @@
     grid-column-end: c3;
     /* border: 3px solid palevioletred; */
     display: grid;
-    grid-template-rows: [ro1] 33.3% [ro2] 33.3% [ro3] 33.3% [ro4];
+    grid-template-rows: [ro1] 24.5% [ro2] 24.5% [ro3] 51% [ro4];
 }
 
 .reporter-name{
@@ -143,7 +145,7 @@
 
 .first-name{
     width:93%;
-    height: 40px;
+    height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -175,7 +177,7 @@
 
 .last-name{
     width:93%;
-    height: 40px;
+    height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -185,7 +187,8 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-top: 3px;
+    margin-top: 6px;
+    resize: none;
 }
 
 .report-post{
@@ -211,7 +214,7 @@
 
 .post-id{
     width:93%;
-    height: 40px;
+    height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -237,7 +240,7 @@
 
 .post-owner{
     width:93%;
-    height: 40px;
+    height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -276,8 +279,8 @@
 }
 
 .the-cause{
-    width:99%;
-    height: 70px;
+    width:96.1%;
+    height: 120px;
     resize: none;
     background: white;
     border: 1px solid lightgray;
@@ -289,6 +292,8 @@
     text-align: center;
     justify-content: center;
     font-size: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
 } 
 
 
@@ -341,7 +346,7 @@
     grid-column-end: c3;
     /* border: 3px solid palevioletred; */
     display: grid;
-    grid-template-rows: [roo1] 25% [roo2] 25% [roo3] 25% [roo4] 25% [roo5];
+    grid-template-rows: [roo1] 24.5% [roo2] 24.5% [roo3] 24.5% [roo4] 26.5% [roo5];
 }
 
 .c-reporter-name{
@@ -410,7 +415,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-top: 13px;
+    margin-top: 7px;
 }
 
 .c-report-comment{
@@ -528,8 +533,8 @@
 }
 
 .thee-cause{
-    width:99%;
-    height: 70px;
+    width:96.1%;
+    height: 100px;
     resize: none;
     background: white;
     border: 1px solid lightgray;
@@ -541,6 +546,8 @@
     text-align: center;
     justify-content: center;
     font-size: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
 
 }
 
