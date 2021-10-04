@@ -16,24 +16,24 @@
     font-size: 2em;
     margin: 0;
 }
-.admin-project-spendings{
+
+.admin-project-spendings{ 
     margin-left: 6.7em;
     margin-right: 6.7em;
     border-radius: 10px;
     background: #fafafa;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.5fr;
     grid-template-areas: 'all-project cash-spending'
                          'all-project  item-spending';
-    height: 120vh;                         
-    
+    height: 140vh;  /*Height added to fill the gap between footer and containers*/                      
 }
 .container-col-1{
     box-shadow: 1px 2px 4px lightgray;
     background: white;
     border-radius: 10px;
-    margin: 0.8em;  
+    margin:  0.8em 0;  
     grid-area: all-project;
     height: 89%;
     
@@ -47,26 +47,23 @@
     overflow-y: scroll;
     height: 80%;
 }
-.container-col-2{  
-    display: flex;
-    flex-direction: column;  
-    margin: 0.8em;
-}
+
 .cash-spendings{
     box-shadow: 1px 2px 4px lightgray;
     background: white;
     border-radius: 10px;
-    margin-bottom: 0.8em;
-    height: 50%;
+    margin: 0.8em;
     grid-area:cash-spending;
+    height: 95%;
+ 
 }
 .item-spendings{ 
     box-shadow: 1px 2px 4px lightgray;
     background: white;
     border-radius: 10px; 
-    margin-top: 0.8em; 
+    margin: 0.8em;
     grid-area:item-spending;  
-    
+    height: 80%;
 }
 .filter-box{
     border: 1px solid lightgray;
@@ -147,13 +144,7 @@
     justify-content: center;  
    
 }
-/*.project-detail-box-col2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin:5px 3px ; 
-}*/
+
 .details-field {
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -218,6 +209,13 @@
     transition: all ease-in-out 0.1s;
     height: 25px;
 }
+.cash-spend-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:0.5fr 0.5fr;
+    grid-template-areas: 'detail'
+                         'gen-btn';
+}
 .cash-spendings-row1{
     display: flex;
     flex-direction: column;
@@ -226,37 +224,84 @@
     border-radius: 10px;
     margin-top: 0.8em;
     overflow-y: scroll;
-    height: 60%; 
+    height: 200px; 
+    grid-area: detail;
 }
 .cash-spendings-row2{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     border: 1px solid lightgray;
     margin: 0.8em;
     padding: 3px 5px;
     border-radius: 10px;
+    grid-area: gen-btn;
+    margin-top: 2em;
+   
+}
+.item-spendings-row1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    margin: 0 0.8em;
+    border-radius: 10px;
+    margin-top: 0.8em;
+    overflow-y: scroll;
+    height: 250px; 
+    grid-area: detail;
+}
+.item-spendings-row2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    margin: 0.8em;
+    padding: 3px 5px;
+    border-radius: 10px;
+    grid-area: gen-btn;
+
+}
+.spend-detail-flex{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0.4em 0.8em;
+    padding: 5px;
 }
 .spend-detail{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+.item-spend-detail{
     border: 1px solid lightgray;
     border-radius: 5px;
-    margin: 0.8em;
-    padding: 5px;
+    margin:0.4em 0.8em;
 }
 .cash-spend-description{
     height: 35px;
-    width: 100%; 
-    margin: 3px 5px;
+    margin: 3px;
     text-align: center;
 }
-.timestamp,.bill-attach,.cost{
+.timestamp,.cost{
     margin: 3px 5px;
     width: 30%;
     height: 35px;
     text-align: center;
+}
+.bill-attach{
+    margin: 3px 5px;
+    width: 30%;
+    height: 35px;
+    text-align: center;
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito';
+    border-radius: 5px;
+}
+.bill-attach:hover{
+    background: white;
+    border-color: black;
+     color: black;
 }
 .qty{
     margin: 3px 5px;
@@ -289,4 +334,5 @@
     border: none;
     display: flex;
     justify-content: center;
+    margin-top: 2em;
 }

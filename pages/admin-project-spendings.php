@@ -127,80 +127,196 @@
                       <div class='p-cordi details-field'>Coordinator</div>                                        
                   </div>
                </div>
+               <div class='project-description'>
+                  <div class='project-detail-box'>
+                    <div class='project-detail-box-col1'>
+                      <div class='p-name details-field'>Project Name</div>
+                      <div class='p-s-date details-field'>Start Date</div>
+                      <div class='p-e-date details-field'>End Date</div>
+                      <button class='p-view view-btn btn'>View</button>
+                    </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
+                  </div>
+               </div>
+               <div class='project-description'>
+                  <div class='project-detail-box'>
+                    <div class='project-detail-box-col1'>
+                      <div class='p-name details-field'>Project Name</div>
+                      <div class='p-s-date details-field'>Start Date</div>
+                      <div class='p-e-date details-field'>End Date</div>
+                      <button class='p-view view-btn btn'>View</button>
+                    </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
+                  </div>
+               </div>
               
               
             </div>
          </div>
-        <div class='container-col-2'>
-            <div class='cash-spendings'>  
-              <div class='container-heading'>Cash Spendings</div>
+        
+          <div class='cash-spendings'>  
+            <div class='container-heading'>Cash Spendings</div>
+            <div class='cash-spend-grid'>
               <div class='cash-spendings-row1'>
+                <div class='spend-detail-flex'>
                   <div class='spend-detail'>
-                    <div class='cash-spend-description details-field '>Description</div>
                     <div class='details-field timestamp'>Timestamp</div>
-                    <div class='details-field bill-attach'>Bill </div>
-                    <div class='details-field cost'>Cost</div>
-                 </div>
-                 <div class='spend-detail'>
-                    <div class='cash-spend-description details-field '>Description</div>
-                    <div class='details-field timestamp'>Timestamp</div>
-                    <div class='details-field bill-attach'>Bill </div>
-                    <div class='details-field cost'>Cost</div>
-                 </div>
-                  <div class='spend-detail'>
-                    <div class='cash-spend-description details-field '>Description</div>
-                    <div class='details-field timestamp'>Timestamp</div>
-                    <div class='details-field bill-attach'>Bill </div>
+                    <button class='btn bill-attach'>Bill </button>
                     <div class='details-field cost'>Cost</div>
                   </div>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                <div class='spend-detail-flex'>
                   <div class='spend-detail'>
-                    <div class='cash-spend-description details-field '>Description</div>
                     <div class='details-field timestamp'>Timestamp</div>
-                    <div class='details-field bill-attach'>Bill </div>
+                    <button class='btn bill-attach'>Bill </button>
                     <div class='details-field cost'>Cost</div>
                   </div>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                <div class='spend-detail-flex'>
                   <div class='spend-detail'>
-                    <div class='cash-spend-description details-field '>Description</div>
                     <div class='details-field timestamp'>Timestamp</div>
-                    <div class='details-field bill-attach'>Bill </div>
+                    <button class='btn bill-attach'>Bill </button>
                     <div class='details-field cost'>Cost</div>
                   </div>
-               </div>  
-               <div class='cash-spendings-row2'>
-                 <button class='generate-report-btn btn'>Generate Report</button>
-                 <div class='details-field total'>Sub Total</div>
-               </div> 
-          </div>
-           <div class='item-spendings'>
-                  <div class='container-heading'>Item Spendings</div>
-                <div class='cash-spendings-row1'>
-                      <div class='spend-detail'>
-                          <div class='details-field item-name'>Item Name</div>
-                          <div class='cash-spend-description details-field '>Description</div>
-                          <div class='details-field timestamp'>Timestamp</div>
-                          <div class='details-field bill-attach'>Bill </div>
-                          <div class='details-field qty'>Qty</div>
-                        </div>
-                        <div class='spend-detail'>
-                          <div class='details-field item-name'>Item Name</div>
-                          <div class='cash-spend-description details-field '>Description</div>
-                          <div class='details-field timestamp'>Timestamp</div>
-                          <div class='details-field bill-attach'>Bill </div>
-                          <div class='details-field qty'>Qty</div>
-                        </div>
-                        <div class='spend-detail'>
-                          <div class='details-field item-name'>Item Name</div>
-                          <div class='cash-spend-description details-field '>Description</div>
-                          <div class='details-field timestamp'>Timestamp</div>
-                          <div class='details-field bill-attach'>Bill </div>
-                          <div class='details-field qty'>Qty</div>
-                        </div>
-                 </div>
-                  <div class='cash-spendings-row2 item-spend-row'>
-                      <button class='generate-report-btn btn'>Generate Report</button>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                <div class='spend-detail-flex'>
+                  <div class='spend-detail'>
+                    <div class='details-field timestamp'>Timestamp</div>
+                    <button class='btn bill-attach'>Bill </button>
+                    <div class='details-field cost'>Cost</div>
                   </div>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                <div class='spend-detail-flex'>
+                  <div class='spend-detail'>
+                    <div class='details-field timestamp'>Timestamp</div>
+                    <button class='btn bill-attach'>Bill </button>
+                    <div class='details-field cost'>Cost</div>
+                  </div>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                <div class='spend-detail-flex'>
+                  <div class='spend-detail'>
+                    <div class='details-field timestamp'>Timestamp</div>
+                    <button class='btn bill-attach'>Bill </button>
+                    <div class='details-field cost'>Cost</div>
+                  </div>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                <div class='spend-detail-flex'>
+                  <div class='spend-detail'>
+                    <div class='details-field timestamp'>Timestamp</div>
+                    <button class='btn bill-attach'>Bill </button>
+                    <div class='details-field cost'>Cost</div>
+                  </div>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                <div class='spend-detail-flex'>
+                  <div class='spend-detail'>
+                    <div class='details-field timestamp'>Timestamp</div>
+                    <button class='btn bill-attach'>Bill </button>
+                    <div class='details-field cost'>Cost</div>
+                  </div>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                <div class='spend-detail-flex'>
+                  <div class='spend-detail'>
+                    <div class='details-field timestamp'>Timestamp</div>
+                    <button class='btn bill-attach'>Bill </button>
+                    <div class='details-field cost'>Cost</div>
+                  </div>
+                  <div class='cash-spend-description details-field '>Description</div>
+                </div>
+                
+                
+                
+                
+              </div>
+              <div class='cash-spendings-row2'>
+                <button class='generate-report-btn btn'>Generate Report</button>
+                <div class='details-field total'>Sub Total</div>
+              </div> 
+            </div> 
+          </div>  
+
+          <div class='item-spendings'>
+            <div class='container-heading'>Item Spendings</div>
+              <div class='item-spendings-row1'>
+                  <div class='item-spend-detail'>
+                    <div class='spend-detail'>
+                      <div class='details-field item-name'>Item Name</div>                  
+                      <div class='details-field timestamp'>Timestamp</div>
+                      <button class='btn bill-attach'>Bill </button>
+                      <div class='details-field qty'>Qty</div>
+                    </div>
+                    <div class='cash-spend-description details-field '>Description</div>
+                  </div>
+                  <div class='item-spend-detail'>
+                    <div class='spend-detail'>
+                      <div class='details-field item-name'>Item Name</div>                  
+                      <div class='details-field timestamp'>Timestamp</div>
+                      <button class='btn bill-attach'>Bill </button>
+                      <div class='details-field qty'>Qty</div>
+                    </div>
+                    <div class='cash-spend-description details-field '>Description</div>
+                  </div>
+                  <div class='item-spend-detail'>
+                    <div class='spend-detail'>
+                      <div class='details-field item-name'>Item Name</div>                  
+                      <div class='details-field timestamp'>Timestamp</div>
+                      <button class='btn bill-attach'>Bill </button>
+                      <div class='details-field qty'>Qty</div>
+                    </div>
+                    <div class='cash-spend-description details-field '>Description</div>
+                  </div>
+                  <div class='item-spend-detail'>
+                    <div class='spend-detail'>
+                      <div class='details-field item-name'>Item Name</div>                  
+                      <div class='details-field timestamp'>Timestamp</div>
+                      <button class='btn bill-attach'>Bill </button>
+                      <div class='details-field qty'>Qty</div>
+                    </div>
+                    <div class='cash-spend-description details-field '>Description</div>
+                  </div>
+                  <div class='item-spend-detail'>
+                    <div class='spend-detail'>
+                      <div class='details-field item-name'>Item Name</div>                  
+                      <div class='details-field timestamp'>Timestamp</div>
+                      <button class='btn bill-attach'>Bill </button>
+                      <div class='details-field qty'>Qty</div>
+                    </div>
+                    <div class='cash-spend-description details-field '>Description</div>
+                  </div>
+                  <div class='item-spend-detail'>
+                    <div class='spend-detail'>
+                      <div class='details-field item-name'>Item Name</div>                  
+                      <div class='details-field timestamp'>Timestamp</div>
+                      <button class='btn bill-attach'>Bill </button>
+                      <div class='details-field qty'>Qty</div>
+                    </div>
+                    <div class='cash-spend-description details-field '>Description</div>
+                  </div>
+                  <div class='item-spend-detail'>
+                    <div class='spend-detail'>
+                      <div class='details-field item-name'>Item Name</div>                  
+                      <div class='details-field timestamp'>Timestamp</div>
+                      <button class='btn bill-attach'>Bill </button>
+                      <div class='details-field qty'>Qty</div>
+                    </div>
+                    <div class='cash-spend-description details-field '>Description</div>
+                  </div>
+              </div>
+              <div class='item-spendings-row2 item-spend-row'>
+                <button class='generate-report-btn btn'>Generate Report</button>
+              </div>
              </div>
-        </div>
+          </div>
+        
 </div>
 
 <?php include('../components/footer.php'); ?>
