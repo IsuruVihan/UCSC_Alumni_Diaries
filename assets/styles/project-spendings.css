@@ -35,7 +35,7 @@
     border-radius: 10px;
     margin:  0.8em 0;  
     grid-area: all-project;
-    height: 89%;
+    height: 100%;
     
 }
 .scroll-box1{
@@ -63,7 +63,7 @@
     border-radius: 10px; 
     margin: 0.8em;
     grid-area:item-spending;  
-    height: 80%;
+    height: 100%;
 }
 .filter-box{
     border: 1px solid lightgray;
@@ -224,7 +224,7 @@
     border-radius: 10px;
     margin-top: 0.8em;
     overflow-y: scroll;
-    height: 200px; 
+    height: 250px; 
     grid-area: detail;
 }
 .cash-spendings-row2{
@@ -278,19 +278,19 @@
     margin:0.4em 0.8em;
 }
 .cash-spend-description{
-    height: 35px;
+    height: 70px;
     margin: 3px;
     text-align: center;
 }
 .timestamp,.cost{
     margin: 3px 5px;
-    width: 30%;
+    width: 40%;
     height: 35px;
     text-align: center;
 }
 .bill-attach{
     margin: 3px 5px;
-    width: 30%;
+    width: 15%;
     height: 35px;
     text-align: center;
     background: gray;

@@ -163,8 +163,9 @@
                 <div class='spend-detail-flex'>
                   <div class='spend-detail'>
                     <div class='details-field timestamp'>Timestamp</div>
-                    <button class='btn bill-attach'>Bill </button>
                     <div class='details-field cost'>Cost</div>
+                    <button class='btn bill-attach'>Bill </button>
+                    
                   </div>
                   <div class='cash-spend-description details-field '>Description</div>
                 </div>
