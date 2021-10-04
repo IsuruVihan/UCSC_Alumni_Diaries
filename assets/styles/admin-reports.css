@@ -20,25 +20,24 @@
 }
 
 .main-box {
-    background: fafafa;
+    background: #fafafa;
     margin-bottom: 1.5em;
     margin-top: 0.2em;
     height: 100vh;
     display: grid;
     /* grid-template-rows: [row1] 100% [row2]; */
     grid-template-columns: [col1] 50% [col2] 50% [col3];
-    /* border: 3px solid blueviolet; */
+    /*border: 3px sol*/
     padding-left: 6.7em;
     padding-right: 6.7em;
     font-size: 15px;
-    
+
 }
 
 .post-reports {
     grid-column-start: col1;
     grid-column-end: col2;
     background: #fafafa;
-    /* border: 3px solid red; */
     padding-right: 10px;
 }
 
@@ -299,14 +298,14 @@
 
 
 .rdelete {
-    display: grid;
-    grid-template-rows: [rrr1] 100% [rrr2]; 
+    /*display: grid;*/
+    /*grid-template-rows: [rrr1] 100% [rrr2]; */
     /* border: 3px solid rgb(172, 30, 108); */
-    height: 60px;
+    /*height: 60px;*/
     display: flex;
     align-items: center;
-    text-align: center;
-    justify-content:right;
+    /*text-align: center;*/
+    justify-content: flex-end;
     padding-right: 6px;
     padding-top: 10px;
 }

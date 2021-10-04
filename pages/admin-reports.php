@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class='rdelete'>
-                    <input type='reset' class='delete-btn' value='Delete'>
+                        <input type='reset' class='delete-btn' value='Delete'>
                     </div>
                 </div>   
                 <div class='flexbox-item'>
