@@ -651,9 +651,9 @@
     grid-row-end: rw4;
     /* border: 3px solid purple; */
     display: flex;
-    text-align: center;
+    /*text-align: center;*/
     align-items: center;
-    justify-content: right;
+    justify-content: center;
 }
 
 .filtermain2{
@@ -790,7 +790,7 @@
 .flexbox-container2{
     grid-row-start: rw2;
     grid-row-end: rw3;
-    /* height: 98%; */
+     height: 98%;
     /* border: rgb(52, 3, 143) 3px solid; */
     border: 1px solid lightgray;
     border-radius: 5px;
