@@ -13,19 +13,21 @@
 </div>
 <div class='admin-project-spendings'>
     
-        <div class='container-col-1'>
-          <div class='container-heading'>All Projects</div>
+         <div class='container-col-1'>
+           <div class='container-heading'>All Projects</div>
               <div class='filter-box'>
-                  <input class='input-field date-field' type='date' />To
-                  <input class='input-field date-field' type='date' />
-                  <input class='input-field text-field' type='text' placeholder='Coordinator '/> 
-                  <select class='input-field drop-down'>
-                      <option value="All Projects">All Projects</option>
-                      <option value="All Projects">Not Yet Started Projects</option>
-                      <option value="All Projects">Ongoing Projects</option>
-                      <option value="All Projects">Completed Projects</option>
-                      <option value="All Projects">Closed Projects</option>
-                  </select>
+                  <div class='filter-row1'>
+                    <input class='input-field date-field' type='date' />To
+                    <input class='input-field date-field' type='date' />
+                    <input class='input-field text-field' type='text' placeholder='Coordinator '/> 
+                    <select class='input-field drop-down'>
+                        <option value="All Projects">All Projects</option>
+                        <option value="All Projects">Not Yet Started Projects</option>
+                        <option value="All Projects">Ongoing Projects</option>
+                        <option value="All Projects">Completed Projects</option>
+                        <option value="All Projects">Closed Projects</option>
+                    </select>
+                  </div>
                   <button class='filter-btn btn'>Filter</button>
               </div>
             <div class='scroll-box1'>  
@@ -35,86 +37,100 @@
                       <div class='p-name details-field'>Project Name</div>
                       <div class='p-s-date details-field'>Start Date</div>
                       <div class='p-e-date details-field'>End Date</div>
-                      <div class='p-cordi details-field'>Coordinator</div>
-                    </div>  
-                    <div class='project-detail-box-col2'>
-                      <div class='p-description details-field '>Description</div>
                       <button class='p-view view-btn btn'>View</button>
                     </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
                   </div>
-              </div>
-              <div class='project-description'>
+               </div>
+               <div class='project-description'>
                   <div class='project-detail-box'>
                     <div class='project-detail-box-col1'>
                       <div class='p-name details-field'>Project Name</div>
                       <div class='p-s-date details-field'>Start Date</div>
                       <div class='p-e-date details-field'>End Date</div>
-                      <div class='p-cordi details-field'>Coordinator</div>
-                    </div>  
-                    <div class='project-detail-box-col2'>
-                      <div class='p-description details-field '>Description</div>
                       <button class='p-view view-btn btn'>View</button>
                     </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
                   </div>
-              </div>
-              <div class='project-description'>
+               </div>
+               <div class='project-description'>
                   <div class='project-detail-box'>
                     <div class='project-detail-box-col1'>
                       <div class='p-name details-field'>Project Name</div>
                       <div class='p-s-date details-field'>Start Date</div>
                       <div class='p-e-date details-field'>End Date</div>
-                      <div class='p-cordi details-field'>Coordinator</div>
-                    </div>  
-                    <div class='project-detail-box-col2'>
-                      <div class='p-description details-field '>Description</div>
                       <button class='p-view view-btn btn'>View</button>
                     </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
                   </div>
-              </div>
-              <div class='project-description'>
+               </div>
+               <div class='project-description'>
                   <div class='project-detail-box'>
                     <div class='project-detail-box-col1'>
                       <div class='p-name details-field'>Project Name</div>
                       <div class='p-s-date details-field'>Start Date</div>
                       <div class='p-e-date details-field'>End Date</div>
-                      <div class='p-cordi details-field'>Coordinator</div>
-                    </div>  
-                    <div class='project-detail-box-col2'>
-                      <div class='p-description details-field '>Description</div>
                       <button class='p-view view-btn btn'>View</button>
                     </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
                   </div>
-              </div>
-              <div class='project-description'>
+               </div>
+               <div class='project-description'>
                   <div class='project-detail-box'>
                     <div class='project-detail-box-col1'>
                       <div class='p-name details-field'>Project Name</div>
                       <div class='p-s-date details-field'>Start Date</div>
                       <div class='p-e-date details-field'>End Date</div>
-                      <div class='p-cordi details-field'>Coordinator</div>
-                    </div>  
-                    <div class='project-detail-box-col2'>
-                      <div class='p-description details-field '>Description</div>
                       <button class='p-view view-btn btn'>View</button>
                     </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
                   </div>
-              </div>
-              <div class='project-description'>
+               </div>
+               <div class='project-description'>
                   <div class='project-detail-box'>
                     <div class='project-detail-box-col1'>
                       <div class='p-name details-field'>Project Name</div>
                       <div class='p-s-date details-field'>Start Date</div>
                       <div class='p-e-date details-field'>End Date</div>
-                      <div class='p-cordi details-field'>Coordinator</div>
-                    </div>  
-                    <div class='project-detail-box-col2'>
-                      <div class='p-description details-field '>Description</div>
                       <button class='p-view view-btn btn'>View</button>
                     </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
                   </div>
-              </div>
+               </div>
+               <div class='project-description'>
+                  <div class='project-detail-box'>
+                    <div class='project-detail-box-col1'>
+                      <div class='p-name details-field'>Project Name</div>
+                      <div class='p-s-date details-field'>Start Date</div>
+                      <div class='p-e-date details-field'>End Date</div>
+                      <button class='p-view view-btn btn'>View</button>
+                    </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
+                  </div>
+               </div>
+               <div class='project-description'>
+                  <div class='project-detail-box'>
+                    <div class='project-detail-box-col1'>
+                      <div class='p-name details-field'>Project Name</div>
+                      <div class='p-s-date details-field'>Start Date</div>
+                      <div class='p-e-date details-field'>End Date</div>
+                      <button class='p-view view-btn btn'>View</button>
+                    </div>  
+                      <div class='p-description details-field '>Description</div>
+                      <div class='p-cordi details-field'>Coordinator</div>                                        
+                  </div>
+               </div>
+              
+              
             </div>
-        </div>
+         </div>
         <div class='container-col-2'>
             <div class='cash-spendings'>  
               <div class='container-heading'>Cash Spendings</div>

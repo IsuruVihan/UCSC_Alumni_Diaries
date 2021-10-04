@@ -21,18 +21,22 @@
     margin-right: 6.7em;
     border-radius: 10px;
     background: #fafafa;
-    display: flex;
-    flex-direction: row;   
-}
-
-.container-row{ 
-    border: 1px solid rgb(20, 19, 19);
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'all-project cash-spending'
+                         'all-project  item-spending';
+    height: 120vh;                         
+    
 }
 .container-col-1{
     box-shadow: 1px 2px 4px lightgray;
     background: white;
     border-radius: 10px;
     margin: 0.8em;  
+    grid-area: all-project;
+    height: 89%;
+    
 }
 .scroll-box1{
     display: flex;
@@ -46,7 +50,6 @@
 .container-col-2{  
     display: flex;
     flex-direction: column;  
-    width: 60%;
     margin: 0.8em;
 }
 .cash-spendings{
@@ -54,22 +57,32 @@
     background: white;
     border-radius: 10px;
     margin-bottom: 0.8em;
-    height: 40%
+    height: 50%;
+    grid-area:cash-spending;
 }
 .item-spendings{ 
     box-shadow: 1px 2px 4px lightgray;
     background: white;
     border-radius: 10px; 
-    margin-top: 0.8em;   
+    margin-top: 0.8em; 
+    grid-area:item-spending;  
+    
 }
 .filter-box{
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin:  0.8em;
+    align-items: center;
+    padding:  5px 0;
+}
+.filter-row1{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding:  3px 0;
+    margin-bottom:5px;
+
 }
 .date-field{
     width: 45%;   
@@ -78,7 +91,7 @@
     width: 45%;
 }
 .drop-down{
-    width: 45%;
+    width: 35%;
     margin: 0 0.8em;
 }
 .input-field {
@@ -99,7 +112,7 @@
     background: gray;
     border: 1px solid gray;
     font-family: 'Nunito';
-    width: 45%;
+    width: 35%;
     margin: 0 0.8em;
     border-radius: 5px;
 }
@@ -120,27 +133,36 @@
     border: 1px solid lightgray;
     margin: 0.8em;
     border-radius: 5px;
-    padding: 3px;
+    padding: 0.2em 0.8em;
 }
 
 .project-detail-box{
     display: flex;
     flex-direction: column;
-    margin:3px;
+    
 }
 .project-detail-box-col1{
     display: flex;
     flex-direction: row;
     justify-content: center;  
-    margin:3px;
+   
 }
-.project-detail-box-col2{
+/*.project-detail-box-col2{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin:5px 3px ; 
-}
+}*/
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    margin: 0 3px;
+  }
 .p-name{
     grid-area: name;
     height: 35px;
@@ -155,32 +177,29 @@
     grid-area: e-date; 
     height: 35px;
     width: 40%;
+    margin-bottom: 0.2em;
 }
 .p-cordi{
     grid-area: coordinator; 
     height: 35px;
-    width: 100%
+    width: 100%;
+    margin: 3px; 
+    margin-right: 0.8em;
 }
 .p-description{
     grid-area: description;
     height: 70px;
-    width: 50%;
+    width: 100%;
+    
+    margin-right: 0.8em;
   }
 
 .p-view{
     grid-area: view;
     height: 35px;
-    margin-left: 0.8em;
+    margin-top: 0.4em;
 }
-.details-field {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: gray;
-    margin: 0 3px;
-  }
+
  .view-btn{
     background: gray;
     border: 1px solid gray;
