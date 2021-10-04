@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../assets/styles/our-projects.css'/>
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
-<script src='../js/our-project.js'></script>
+
 <?php include('../components/header.php'); ?>
 
 <div class='main-container'>
@@ -14,7 +14,7 @@
     </p>   
 </div>
 <div class='our-projects'>
-  <div class='card container01'>
+    <div class='card container01'>
       <div class='filter'>
         <div class= 'col01'>
             <input class='input-field date-field' type='date' placeholder='Start Date'/>
@@ -197,8 +197,9 @@
                         <input class='input-field text-field' type='text' placeholder='Quantity'/> 
                      </div>
                     <div class='col-04'>
-                    <button class='submit-btn btn'>Submit</button>
-                    <button class='cancel-btn btn'>Cancel</button>   
+                        <button class='submit-btn btn'>Submit</button>
+                        <button class='cancel-btn btn'>Cancel</button>
+                    </div>   
                 </div>   
             </div> 
         </div>
