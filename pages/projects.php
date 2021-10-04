@@ -12,6 +12,23 @@
     </p>
 </div>
 <div class='projects'>
+    <a class='card-link' href='./our-projects.php'>
+        <div class='card' id='accounts-card'>
+            <p class='title'>
+                All Projects
+            </p>
+            <div class='img-container'>
+                <img src='../assets/gifs/our_projects.gif' alt='not-started-yet' width='100%' />
+            </div>
+            <div class='description' id='accounts-description'>
+                <ul class='list'>
+                    <li>All projects</li>
+                    <li>Details</li>
+                    <li>Donations</li>
+                </ul>
+            </div>
+        </div>
+    </a>
     <a class='card-link' href='./not-started-yet-projects.php'>
         <div class='card' id='accounts-card'>
             <p class='title'>
