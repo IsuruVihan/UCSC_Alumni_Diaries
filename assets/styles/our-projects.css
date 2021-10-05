@@ -27,14 +27,14 @@
   height: 80vh;
   display: grid;
   grid-template-columns: [col1] 30% [col2] 70% [col3];
-  grid-template-rows: [row1] 100% [row2];
+  grid-template-rows: [row1] 50% [row2]50%[row3];
   margin: 0 6.7em 10vh;
 }
 .container01 {
   grid-column-start: col1;
   grid-column-end: col2;
   grid-row-start: row1;
-  grid-row-end: row2;
+  grid-row-end: row3;
   margin-right: 5px;
   display: flex;
   flex-direction: column;
@@ -231,7 +231,7 @@
   grid-column-start: col2;
   grid-column-end: col3;
   grid-row-start: row1;
-  grid-row-end: row2;
+  grid-row-end: row3;
   margin-right: 5px;
   gap: 10px;
 }
