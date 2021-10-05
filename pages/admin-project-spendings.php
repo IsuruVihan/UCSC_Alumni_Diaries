@@ -37,7 +37,7 @@
                       <div class='p-name details-field'>Project Name</div>
                       <div class='p-s-date details-field'>Start Date</div>
                       <div class='p-e-date details-field'>End Date</div>
-                      <button class='p-view view-btn btn'>View</button>
+                      <button class='p-view btn view-btn'>View</button>
                     </div>  
                       <div class='p-description details-field '>Description</div>
                       <div class='p-cordi details-field'>Coordinator</div>                                        
@@ -306,6 +306,6 @@
              </div>
           </div>
         
-</div>
+<!--</div>-->
 
 <?php include('../components/footer.php'); ?>

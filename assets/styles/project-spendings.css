@@ -109,7 +109,7 @@
     background: gray;
     border: 1px solid gray;
     font-family: 'Nunito';
-    width: 35%;
+    width: 10%;
     margin: 0 0.8em;
     border-radius: 5px;
 }
@@ -186,16 +186,17 @@
   }
 
 .p-view{
-    grid-area: view;
-    height: 35px;
-    margin-top: 0.4em;
+    /*grid-area: view;*/
+    /*height: 50px;*/
+    /*margin-top: 0.4em;*/
 }
 
  .view-btn{
     background: gray;
     border: 1px solid gray;
     font-family: 'Nunito';
-    width: fit-content;   
+    width: fit-content;
+    height: 35px !important;
 }
 .view-btn:hover,.generate-report-btn:hover {
     background: #096dd9;
