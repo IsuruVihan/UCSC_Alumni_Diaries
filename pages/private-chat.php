@@ -10,7 +10,7 @@
     </p>
     <p class='main-title'>
         <i class='fa fa-comment'></i>
-         Private Chat
+        Private Chat
     </p>
 </div>
 <div class='private-chat'>

@@ -25,13 +25,10 @@
     margin-top: 0.2em;
     height: 100vh;
     display: grid;
-    /* grid-template-rows: [row1] 100% [row2]; */
     grid-template-columns: [col1] 50% [col2] 50% [col3];
-    /*border: 3px sol*/
     padding-left: 6.7em;
     padding-right: 6.7em;
     font-size: 15px;
-
 }
 
 .post-reports {
@@ -51,7 +48,7 @@
     border-radius: 10px;
     padding: 20px;
     transition: all ease-in-out 0.5s;
-} 
+}
 
 .title {
     font-weight: 600;
@@ -61,89 +58,60 @@
     margin-top: 10px;
 }
 
-.flexbox-container{ 
-   /* border: 3px solid black;  */
-   border: 2px solid lightgray;
-   border-radius: 5px;
-   justify-content: flex-start;
-   overflow: hidden;
-   overflow-y: scroll;
-   height: 580px;
-   margin: 20px;
+.flexbox-container {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 580px;
+    margin: 20px;
 }
 
 .flexbox-item {
-    width:96%;
-    /* height:20%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: all ease-in-out 0.5s; */
-    /* height: 350px; */
-    /* border: 3px solid rgb(92, 24, 218); */
+    width: 96%;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
-    /* align-items: center; */
     transition: all ease-in-out 0.5s;
     margin: 5px;
-    padding:5px;
-    padding-top: 1em;
     border: 2px solid lightgray;
-    border-radius: 5px;
-    padding-bottom: 1em;
+    padding: 1em 5px;
 }
-
-
 
 .rdetails {
     display: grid;
     grid-template-columns: [c1] 30% [c2] 70% [c3];
-    /* border: 3px solid green; */
     padding-right: 5px;
-    /* border: 1px solid lightgray; */
-
 }
 
-.propic{
+.propic {
     grid-column-start: c1;
     grid-column-end: c2;
-    /* border: 3px solid orange; */
 }
 
-.reporter{
+.reporter {
     grid-column-start: c2;
     grid-column-end: c3;
-    /* border: 3px solid palevioletred; */
     display: grid;
     grid-template-rows: [ro1] 24.5% [ro2] 24.5% [ro3] 51% [ro4];
 }
 
-.reporter-name{
+.reporter-name {
     grid-row-start: ro1;
     grid-row-end: ro2;
     display: grid;
     grid-template-columns: [cc1] 50% [cc2] 50% [cc3];
-    /* border: 3px solid brown; */
-
 }
 
-.fname{
+.fname {
     grid-column-start: cc1;
     grid-column-end: cc2;
-    /* border: 3px solid blue; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     padding-right: 5px;
 }
 
-.first-name{
-    width:93%;
+.first-name {
+    width: 93%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
@@ -156,26 +124,23 @@
     justify-content: center;
 }
 
-.list-details{
-
+.list-details {
     font-family: "Nunito", serif;
     padding-left: 10px;
     text-align: center;
-
 }
 
-.lname{
+.lname {
     grid-column-start: cc2;
     grid-column-end: cc3;
-    /* border: 3px solid rgb(231, 12, 30); */
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 5px;
 }
 
-.last-name{
-    width:93%;
+.last-name {
+    width: 93%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
@@ -190,29 +155,24 @@
     resize: none;
 }
 
-.report-post{
+.report-post {
     grid-row-start: ro2;
     grid-row-end: ro3;
     display: grid;
     grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-    /* border: 3px solid rgb(241, 218, 7); */
-
 }
 
-.id{
+.id {
     grid-column-start: ccc1;
     grid-column-end: ccc2;
-    /* border: 3px solid rgb(255, 0, 221); */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     padding-right: 5px;
     padding-top: 9px;
 }
 
-.post-id{
-    width:93%;
+.post-id {
+    width: 93%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
@@ -225,20 +185,17 @@
     justify-content: center;
 }
 
-.owner{
+.owner {
     grid-column-start: ccc2;
     grid-column-end: ccc3;
-    /* border: 3px solid rgb(57, 191, 231); */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     padding-left: 5px;
     padding-top: 9px;
 }
 
-.post-owner{
-    width:93%;
+.post-owner {
+    width: 93%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
@@ -251,34 +208,25 @@
     justify-content: center;
 }
 
-.cause{
+.cause {
     grid-row-start: ro3;
     grid-row-end: ro4;
-    /* border: 3px solid darkgreen; */
     display: grid;
     grid-template-rows: [rr1] 100% [rr2];
     padding-top: 6px;
-    
-    
-    
 }
 
-.report-cause{
+.report-cause {
     grid-row-start: rr1;
     grid-row-end: rr2;
-    /* border: 3px solid rgb(48, 6, 145); */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     justify-content: left;
     padding-top: 9px;
-    
-    
 }
 
-.the-cause{
-    width:96.1%;
+.the-cause {
+    width: 96.1%;
     height: 120px;
     resize: none;
     background: white;
@@ -293,18 +241,11 @@
     font-size: 15px;
     overflow: hidden;
     overflow-y: scroll;
-} 
-
-
+}
 
 .rdelete {
-    /*display: grid;*/
-    /*grid-template-rows: [rrr1] 100% [rrr2]; */
-    /* border: 3px solid rgb(172, 30, 108); */
-    /*height: 60px;*/
     display: flex;
     align-items: center;
-    /*text-align: center;*/
     justify-content: flex-end;
     padding-right: 6px;
     padding-top: 10px;
@@ -317,13 +258,8 @@
     border: 1px solid gray;
     border-radius: 5px;
     cursor: pointer;
-    height:35px;
-    /* margin-right: 50px; */
+    height: 35px;
     font-family: 'Nunito', serif;
-    /* margin-top: 20px; */
-    
-    
-   
 }
 
 .delete-btn:hover {
@@ -336,41 +272,34 @@
     grid-column-start: col2;
     grid-column-end: col3;
     background: #fafafa;
-    /* border: 3px solid rgb(5, 185, 20); */
     padding-left: 10px;
 }
 
-.c-reporter{
+.c-reporter {
     grid-column-start: c2;
     grid-column-end: c3;
-    /* border: 3px solid palevioletred; */
     display: grid;
     grid-template-rows: [roo1] 24.5% [roo2] 24.5% [roo3] 24.5% [roo4] 26.5% [roo5];
 }
 
-.c-reporter-name{
+.c-reporter-name {
     grid-row-start: roo1;
     grid-row-end: roo2;
     display: grid;
     grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-    /* border: 3px solid brown; */
-
 }
 
-.cfname{
+.cfname {
     grid-column-start: ccc1;
     grid-column-end: ccc2;
-    /* border: 3px solid blue; */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     padding-right: 5px;
     padding-top: 6px;
 }
 
-.cfirst-name{
-    width:93%;
+.cfirst-name {
+    width: 93%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
@@ -383,27 +312,24 @@
     justify-content: center;
 }
 
-.c-report-post{
+.c-report-post {
     grid-row-start: roo2;
     grid-row-end: roo3;
     display: grid;
     grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-    /* border: 3px solid rgb(241, 218, 7); */
-
 }
 
-.clname{
+.clname {
     grid-column-start: ccc2;
     grid-column-end: ccc3;
-    /* border: 3px solid rgb(231, 12, 30); */
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 5px;
 }
 
-.clast-name{
-    width:93%;
+.clast-name {
+    width: 93%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
@@ -417,29 +343,24 @@
     margin-top: 7px;
 }
 
-.c-report-comment{
+.c-report-comment {
     grid-row-start: roo2;
     grid-row-end: roo3;
     display: grid;
     grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-    /* border: 3px solid rgb(241, 218, 7); */
-
 }
 
-.cid{
+.cid {
     grid-column-start: ccc1;
     grid-column-end: ccc2;
-    /* border: 3px solid rgb(255, 0, 221); */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     padding-right: 5px;
     padding-top: 8px;
 }
 
-.cpost-id{
-    width:93%;
+.cpost-id {
+    width: 93%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
@@ -452,20 +373,17 @@
     justify-content: center;
 }
 
-.cowner{
+.cowner {
     grid-column-start: ccc2;
     grid-column-end: ccc3;
-    /* border: 3px solid rgb(57, 191, 231); */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     padding-left: 5px;
     padding-top: 8px;
 }
 
-.cpost-owner{
-    width:93%;
+.cpost-owner {
+    width: 93%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
@@ -478,61 +396,48 @@
     justify-content: center;
 }
 
-.commentdetails{
+.commentdetails {
     grid-row-start: roo3;
     grid-row-end: roo4;
     display: grid;
     grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-    /* border: 3px solid rgb(7, 182, 59); */
-
 }
 
-.rcid{
+.rcid {
     grid-column-start: ccc1;
     grid-column-end: ccc2;
-    /* border: 3px solid rgb(255, 0, 221); */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     padding-right: 5px;
     padding-top: 10px;
 }
 
-.rcowner{
+.rcowner {
     grid-column-start: ccc2;
     grid-column-end: ccc3;
-    /* border: 3px solid rgb(14, 1, 12); */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     padding-left: 5px;
     padding-top: 10px;
 }
 
-.rcause{
+.rcause {
     grid-row-start: roo4;
     grid-row-end: roo5;
-    /* border: 3px solid darkgreen; */
     display: grid;
     grid-template-rows: [rr1] 100% [rr2];
 }
 
-.report-cause{
+.report-cause {
     grid-row-start: rr1;
     grid-row-end: rr2;
-    /* border: 3px solid rgb(48, 6, 145); */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     padding-top: 12px;
-
 }
 
-.thee-cause{
-    width:96.1%;
+.thee-cause {
+    width: 96.1%;
     height: 100px;
     resize: none;
     background: white;
@@ -547,10 +452,9 @@
     font-size: 15px;
     overflow: hidden;
     overflow-y: scroll;
-
 }
 
-.alllabels{
+.alllabels {
     font-weight: 600;
     justify-content: left;
     text-align: left;

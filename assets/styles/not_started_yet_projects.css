@@ -100,7 +100,6 @@
     grid-row-start: row1;
     grid-row-end: row3;
     visibility: hidden;
-    /*margin-left: 5px;*/
 }
 
 .title {
@@ -265,7 +264,6 @@
     text-align: center;
     padding: 5px;
     color: gray;
-    /*margin-top: 0.8em;*/
 }
 
 .project-description {

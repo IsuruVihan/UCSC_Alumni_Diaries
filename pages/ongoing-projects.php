@@ -95,9 +95,6 @@
         <div class='title project-name-div' id='project-name-div'>
             Project Name
         </div>
-        <!--        <div class='project-status'>-->
-        <!--            Not Started Yet-->
-        <!--        </div>-->
         <div class='project-description' id='project-description'>
             Project description comes here...
         </div>

@@ -5,10 +5,11 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-body,
-.input-field {
+
+body, .input-field {
     font-family: 'Nunito', sans-serif;
 }
+
 .login {
     position: relative;
     box-sizing: border-box;
@@ -19,16 +20,17 @@ body,
     border: 1px solid #e3e3e3;
     border-radius: 16px;
     text-align: center;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 478px;
     max-width: 100%;
     max-height: 100%;
 }
+
 .img {
     position: relative;
     margin-left: auto;
-    margin-top:auto;
-    display:block;
+    margin-top: auto;
+    display: block;
 }
 
 .title {
@@ -36,12 +38,14 @@ body,
     color: #2f3640;
     margin-bottom: 10px;
 }
+
 #form {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
 }
+
 .container1 {
     margin-top: 10px;
     display: flex;
@@ -49,8 +53,9 @@ body,
     position: relative;
     text-align: left;
 }
+
 .container2 {
-    margin-bottom:10px;
+    margin-bottom: 10px;
     margin-top: 20px;
     width: 100%;
     display: flex;
@@ -61,21 +66,16 @@ body,
 
 .input-field {
     padding: 10px;
-    margin: 6px 0;
     border-radius: 4px;
     border: 1px solid #ced4da;
     background-color: #fff;
     box-sizing: border-box;
     font-size: 14px;
     cursor: text;
-    margin-left: 1px;
-    margin-right: 1px;
-
-
+    margin: 6px 1px;
 }
 
-.input-field input
-{
+.input-field input {
     background: none;
     outline: none;
     border: none;
@@ -86,6 +86,7 @@ body,
     display: inline-block;
     height: 100%;
 }
+
 .input-field input::placeholder {
     color: #aaa;
     font-weight: 500;
@@ -99,15 +100,16 @@ body,
     align-items: flex-end;
     font-weight: bold;
 }
+
 #error {
     color: #f34e57;
     position: relative;
-    margin-top :10px;
-    margin-bottom :10px;
-    width : 100%;
-} 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
 
-.btn-solid-login{
+.btn-solid-login {
     width: 80%;
     background-color: #f34e57;
     border: none;
@@ -123,11 +125,11 @@ body,
     transition: 0.5s;
 }
 
-.btn-solid-login:hover{
+.btn-solid-login:hover {
     background-color: #e59b9b;
 }
 
-.btn-solid-cancel{
+.btn-solid-cancel {
     width: 80%;
     background-color: #662626;
     border: none;
@@ -143,6 +145,6 @@ body,
     transition: 0.5s;
 }
 
-.btn-solid-cancel:hover{
+.btn-solid-cancel:hover {
     background-color: #e59797;
 }

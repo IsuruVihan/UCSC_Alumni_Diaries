@@ -17,6 +17,6 @@ const HideEditProjectNameDiv = () => {
     document.getElementById('project-name-div').style.display = "block";
     document.getElementById('edit-project-name-div').style.display = "none";
 }
+
 const chatScroll = document.getElementById('message-list');
 chatScroll.scrollTop = chatScroll.scrollHeight;
-

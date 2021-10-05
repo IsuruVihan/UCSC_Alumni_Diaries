@@ -313,7 +313,7 @@
         <div class='row-1'>
             <div class='container-1'>
                 <div class='section-1'>
-                    <img src='../assets/images/user-default.png' width='100%' class='user-pic' alt='user-pic' />
+                    <img src='../assets/images/user-default.png' width='100%' class='user-pic' alt='user-pic'/>
                     <div class='account-type'>
                         Account Type
                     </div>

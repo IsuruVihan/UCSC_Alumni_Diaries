@@ -12,15 +12,14 @@
         <i class="fas fa-smile"></i> Developers
     </p>
 </div>
-
 <div class='developers'>
     <a class='card-link'>
         <div class='card' id='accounts-card'>
             <p class='title'>
-                Isuru<br />Harischandra
+                Isuru<br/>Harischandra
             </p>
             <div class='img-container'>
-                <img src='../assets/images/Isuru.jpg' alt='not-started-yet' width='100%' />
+                <img src='../assets/images/Isuru.jpg' alt='not-started-yet' width='100%'/>
             </div>
             <div class='description' id='accounts-description'>
                 <ul class='list'>
@@ -32,10 +31,10 @@
     <a class='card-link'>
         <div class='card' id='reports-card'>
             <p class='title'>
-                Dhanika<br />Wickramathilake
+                Dhanika<br/>Wickramathilake
             </p>
             <div class='img-container'>
-                <img src='../assets/images/Dhanika.jpeg' alt='ongoing' width='100%' />
+                <img src='../assets/images/Dhanika.jpeg' alt='ongoing' width='100%'/>
             </div>
             <div class='description' id='reports-description'>
                 <ul class='list'>
@@ -47,10 +46,10 @@
     <a class='card-link'>
         <div class='card' id='subscriptions-card'>
             <p class='title'>
-                Shakya<br />Kahatapitiya
+                Shakya<br/>Kahatapitiya
             </p>
             <div class='img-container'>
-                <img src='../assets/images/Shakya.jpeg' alt='closed' width='100%' />
+                <img src='../assets/images/Shakya.jpeg' alt='closed' width='100%'/>
             </div>
             <div class='description' id='subscriptions-description'>
                 <ul class='list'>
@@ -62,10 +61,10 @@
     <a class='card-link'>
         <div class='card' id='spendings-card'>
             <p class='title'>
-                Sahani<br />Silva
+                Sahani<br/>Silva
             </p>
             <div class='img-container'>
-                <img src='../assets/images/Sahani.jpeg' alt='completed' width='100%' />
+                <img src='../assets/images/Sahani.jpeg' alt='completed' width='100%'/>
             </div>
             <div class='description' id='spendings-description'>
                 <ul class='list'>
@@ -77,10 +76,10 @@
     <a class='card-link'>
         <div class='card' id='spendings-card'>
             <p class='title'>
-                Subhagya<br />Jayaweera
+                Subhagya<br/>Jayaweera
             </p>
             <div class='img-container'>
-                <img src='../assets/images/Subhagya.jpeg' alt='completed' width='100%' />
+                <img src='../assets/images/Subhagya.jpeg' alt='completed' width='100%'/>
             </div>
             <div class='description' id='spendings-description'>
                 <ul class='list'>

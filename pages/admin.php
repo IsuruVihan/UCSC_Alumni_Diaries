@@ -1,5 +1,6 @@
-<link rel='stylesheet' href='../assets/styles/admin.css' />
-<link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css' integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
+<link rel='stylesheet' href='../assets/styles/admin.css'/>
+<link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+      integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
 <?php include('../components/header.php'); ?>
 
@@ -18,7 +19,7 @@
                 Accounts
             </p>
             <div class='img-container'>
-                <img src='../assets/gifs/alumnus.gif' alt='accounts' width='100%' />
+                <img src='../assets/gifs/alumnus.gif' alt='accounts' width='100%'/>
             </div>
             <div class='description' id='accounts-description'>
                 <ul class='list'>
@@ -36,7 +37,7 @@
                 Reports
             </p>
             <div class='img-container'>
-                <img src='../assets/gifs/reports.gif' alt='reports' width='100%' />
+                <img src='../assets/gifs/reports.gif' alt='reports' width='100%'/>
             </div>
             <div class='description' id='reports-description'>
                 <ul class='list'>
@@ -52,7 +53,7 @@
                 Subscriptions
             </p>
             <div class='img-container'>
-                <img src='../assets/gifs/subscriptions.gif' alt='subscriptions' width='100%' />
+                <img src='../assets/gifs/subscriptions.gif' alt='subscriptions' width='100%'/>
             </div>
             <div class='description' id='subscriptions-description'>
                 <ul class='list'>
@@ -69,7 +70,7 @@
                 Project Spending
             </p>
             <div class='img-container'>
-                <img src='../assets/gifs/spendings.gif' alt='spendings' width='100%' />
+                <img src='../assets/gifs/spendings.gif' alt='spendings' width='100%'/>
             </div>
             <div class='description' id='spendings-description'>
                 <ul class='list'>
@@ -85,7 +86,7 @@
                 Inventory
             </p>
             <div class='img-container'>
-                <img src='../assets/gifs/inventory.gif' alt='inventory' width='100%' />
+                <img src='../assets/gifs/inventory.gif' alt='inventory' width='100%'/>
             </div>
             <div class='description' id='inventory-description'>
                 <ul class='list'>

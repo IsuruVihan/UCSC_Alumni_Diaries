@@ -9,10 +9,9 @@
         <a href='home.php'>Home</a> / Chat
     </p>
     <p class='main-title'>
-	<i class="fas fa-kiss-wink-heart"></i> Chat
+        <i class="fas fa-kiss-wink-heart"></i> Chat
     </p>
 </div>
-
 <div class='chats'>
     <a class='card-link' href='private-chat.php'>
         <div class='card' id='accounts-card'>
@@ -20,7 +19,7 @@
                 Private Chat
             </p>
             <div class='img-container'>
-                <img src='../assets/gifs/private-chat.gif' alt='not-started-yet' width='100%' />
+                <img src='../assets/gifs/private-chat.gif' alt='not-started-yet' width='100%'/>
             </div>
             <div class='description' id='accounts-description'>
                 <ul class='list'>
@@ -29,14 +28,13 @@
             </div>
         </div>
     </a>
-
     <a class='card-link' href='group-chat.php'>
         <div class='card' id='accounts-card'>
             <p class='title'>
                 Group Chat
             </p>
             <div class='img-container'>
-                <img src='../assets/gifs/group-chat.gif' alt='not-started-yet' width='100%' />
+                <img src='../assets/gifs/group-chat.gif' alt='not-started-yet' width='100%'/>
             </div>
             <div class='description' id='accounts-description'>
                 <ul class='list'>
@@ -46,6 +44,5 @@
         </div>
     </a>
 </div>
-
 
 <?php include('../components/footer.php'); ?>

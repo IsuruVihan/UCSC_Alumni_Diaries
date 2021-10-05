@@ -7,25 +7,15 @@ form.addEventListener('submit', (e) => {
     let messages = []
     if (password.value === '' || password.value == null) {
         messages.push('Password is required!');
-    }
-
-    else if (confirmPassword.value === '' || confirmPassword.value == null) {
+    } else if (confirmPassword.value === '' || confirmPassword.value == null) {
         messages.push('Password confirmation is required!');
-    }
-
-    else if ( confirmPassword.value == null &&  password.value == null){
+    } else if (confirmPassword.value == null && password.value == null) {
         messages.push('Password is required!');
-    }
-
-    else if (password.value.length <= 6) {
+    } else if (password.value.length <= 6) {
         messages.push('Password must be longer than 6 characters!');
-    }
-
-    else if (password.value.length >= 20) {
+    } else if (password.value.length >= 20) {
         messages.push('Password must be less than 20 characters!');
-    }
-
-    else if (password.value != confirmPassword.value) {
+    } else if (password.value != confirmPassword.value) {
         messages.push('Passwords do not match!');
     }
 

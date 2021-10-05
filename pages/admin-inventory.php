@@ -5,14 +5,14 @@
 
 <div class='main-container'>
     <p class='breadcrumb'>
-        <a href='home.php'>Home</a> / Inventory
+        <a href='home.php'>Home</a> /
+        <a href='admin.php'>Admin</a> / Inventory
     </p>
     <p class='main-title'>
         <i class='fas fa-inventory'></i>
         Inventory
     </p>
 </div>
-
 <div class='inventory'>
     <div class='available-assets'>
         <div class='available-cash'>
@@ -146,11 +146,11 @@
     </div>
     <div class='transfers'>
         <div class='title'>
-                Transfers
+            Transfers
         </div>
         <div class='cash-transfers'>
             <div class='title'>
-                    Cash
+                Cash
             </div>
             <div class='filter-field'>
                 <div class='col3'>
@@ -179,7 +179,7 @@
                             Transferred To
                         </div>
                         <div class='sec-2'>
-                                Received From
+                            Received From
                         </div>
                     </div>
                     <div class='sec-1'>
@@ -907,7 +907,7 @@
                            onmouseup="(this.type='date')">
                     <input class='input-avu4' type='text' placeholder='To'
                            onmouseup="(this.type='date')">
-                </div> 
+                </div>
                 <div class='subs-filter-btn-container'>
                     <button class='subscriptions-filter-btn btn'>Filter</button>
                     <button class='subscriptions-gen-repo-btn btn'>Generate Report</button>
@@ -1049,8 +1049,9 @@
                         time
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+
+<?php include('../components/footer.php'); ?>

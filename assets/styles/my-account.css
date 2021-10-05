@@ -1,4 +1,3 @@
-
 .main-container {
     display: flex;
     flex-direction: column;
@@ -18,21 +17,21 @@
     margin: 0;
 }
 
-.title1{
+.title1 {
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
     margin-top: 3px;
 }
 
-.title{
+.title {
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
     margin-top: 10px;
 }
 
-.my-account{
+.my-account {
     display: grid;
     height: 110vh;
     background: #fafafa;
@@ -41,7 +40,7 @@
     margin: 0 6.7em 10vh;
 }
 
-.pic-section{
+.pic-section {
     display: flex;
     background: white;
     flex-direction: column;
@@ -59,7 +58,7 @@
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.account-details{
+.account-details {
     background: white;
     display: flex;
     flex-direction: column;
@@ -76,7 +75,7 @@
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.projects-contributions{
+.projects-contributions {
     display: flex;
     grid-column-start: line1;
     grid-column-end: line3;
@@ -88,7 +87,7 @@
     align-items: center;
 }
 
-.right-column{
+.right-column {
     display: flex;
     grid-column-start: line3;
     grid-column-end: line4;
@@ -120,38 +119,36 @@
     height: 25px;
 }
 
-.remove-pic-btn,
-.edit-pic-btn{
+.remove-pic-btn, .edit-pic-btn {
     width: 100%;
     margin-top: 0.5em;
     background: gray;
     border: 1px solid gray;
 }
 
-.edit-details-btn{
+.edit-details-btn {
     width: 15%;
-    /*margin-top: 0.5em;*/
     background: gray;
     border: 1px solid gray;
 }
 
-.edit-pic-btn:hover{
+.edit-pic-btn:hover {
     cursor: pointer;
     background: #fa8c16;
     border: 1px #fa8c16;
 }
 
-.remove-pic-btn:hover{
+.remove-pic-btn:hover {
     background: #f5222d;
     border-color: #f5222d;
 }
 
-.edit-details-btn:hover{
+.edit-details-btn:hover {
     cursor: pointer;
     background: #fa8c16;
 }
 
-.section-2{
+.section-2 {
     width: 100%;
     height: 30px;
     border: 1px solid lightgray;
@@ -160,7 +157,7 @@
     align-items: center;
 }
 
-.container-1{
+.container-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -168,7 +165,7 @@
     margin-top: 25px;
 }
 
-.container-2{
+.container-2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -176,20 +173,20 @@
     margin-top: 12px;
 }
 
-.container-3{
+.container-3 {
     display: flex;
     flex-direction: column;
     width: 45%;
 }
 
-.container-4{
+.container-4 {
     display: flex;
     flex-direction: column;
     width: 45%;
     margin-top: 63px;
 }
 
-.section-3{
+.section-3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -197,7 +194,7 @@
     margin-bottom: 8px;
 }
 
-.section-3-1{
+.section-3-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -205,7 +202,7 @@
     margin-bottom: 2px;
 }
 
-.first-last-name{
+.first-last-name {
     width: 48%;
     height: 30px;
     border: 1px solid lightgray;
@@ -216,15 +213,13 @@
     align-items: center;
 }
 
-.first-last-name1{
+.first-last-name1 {
     width: 48%;
     height: 20px;
-    /*border: 2px solid lightgray;*/
-    /*border-radius: 5px;*/
     text-align: left;
 }
 
-.section-4{
+.section-4 {
     height: 30px;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -236,7 +231,7 @@
     align-items: center;
 }
 
-.section-4-1{
+.section-4-1 {
     height: 20px;
     border: none;
     border-radius: 5px;
@@ -246,7 +241,7 @@
     margin-bottom: 2px;
 }
 
-.section-5{
+.section-5 {
     height: 91px;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -258,7 +253,7 @@
     align-items: center;
 }
 
-.container-5{
+.container-5 {
     display: none;
     flex-direction: row;
     justify-content: space-evenly;
@@ -266,7 +261,7 @@
     margin-top: 25px;
 }
 
-.container-6{
+.container-6 {
     display: none;
     flex-direction: row;
     justify-content: space-between;
@@ -274,7 +269,7 @@
     margin-top: 12px;
 }
 
-.input5{
+.input5 {
     height: 32px;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -290,7 +285,7 @@
     font-family: "Nunito", serif;
 }
 
-.input-first-last-name{
+.input-first-last-name {
     width: 48%;
     height: 30px;
     border: 1px solid lightgray;
@@ -299,7 +294,7 @@
     align-items: center;
 }
 
-.input6{
+.input6 {
     height: 91px;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -311,7 +306,7 @@
     resize: none;
 }
 
-.contributions{
+.contributions {
     height: 100%;
     width: 45.7%;
     background: white;
@@ -325,7 +320,7 @@
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.contributions-container{
+.contributions-container {
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-around;
@@ -338,7 +333,7 @@
     padding: 5px;
 }
 
-.contributions-item{
+.contributions-item {
     width: 100%;
     height: 15%;
     border: 1px solid lightgray;
@@ -350,7 +345,7 @@
     margin-bottom: 5px;
 }
 
-.projects{
+.projects {
     height: 100%;
     width: 45.7%;
     background: white;
@@ -364,7 +359,7 @@
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.projects-container{
+.projects-container {
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-around;
@@ -377,7 +372,7 @@
     padding: 5px;
 }
 
-.projects-item{
+.projects-item {
     width: 100%;
     height: 15%;
     border: 1px solid lightgray;
@@ -389,14 +384,12 @@
     margin-bottom: 5px;
 }
 
-.contributions-item:hover,
-.projects-item:hover,
-.recharge-details-item:hover{
+.contributions-item:hover, .projects-item:hover, .recharge-details-item:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
 }
 
-.password{
+.password {
     background: white;
     width: 100%;
     height: 24%;
@@ -404,24 +397,22 @@
     flex-direction: column;
     border: 1px solid lightgray;
     border-radius: 5px;
-    /*justify-content: space-evenly;*/
     align-items: center;
     margin-bottom: 10px;
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.section-6{
+.section-6 {
     height: 50%;
     text-align: center;
     align-items: center;
     width: 80%;
-    /*margin-top: 5px;*/
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
 }
 
-.input1{
+.input1 {
     height: 35px;
     width: 100%;
     background: white;
@@ -433,42 +424,36 @@
     padding: 5px;
 }
 
-.input1:hover,
-.input4:hover,
-.input5:hover,
-.input6:hover,
-.input-first-last-name:hover{
+.input1:hover, .input4:hover, .input5:hover, .input6:hover, .input-first-last-name:hover {
     border-color: #ffccc7;
 }
 
-.submit-btn,
-.pay-pal-btn{
+.submit-btn, .pay-pal-btn {
     background: gray;
     border: 1px solid gray;
 }
 
-.cancel-btn{
+.cancel-btn {
     background: gray;
     border: 1px solid gray;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
     background: #237804;
     border: 1px solid #237804;
 }
 
-.pay-pal-btn:hover{
+.pay-pal-btn:hover {
     background: #096dd9;
     border-color: #096dd9;
 }
 
-
-.cancel-btn:hover{
+.cancel-btn:hover {
     background: #f5222d;
     border-color: #f5222d;
 }
 
-.subscriptions{
+.subscriptions {
     background: white;
     width: 100%;
     height: 74.5%;
@@ -481,7 +466,7 @@
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.sub-type{
+.sub-type {
     width: 92%;
     height: 15%;
     border: 1px solid lightgray;
@@ -494,7 +479,7 @@
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.recharge-account{
+.recharge-account {
     width: 96%;
     height: 22%;
     border: 1px solid lightgray;
@@ -507,17 +492,15 @@
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.section-7{
+.section-7 {
     width: 99%;
     height: 50%;
-    /*border: 1px solid lightgray;*/
-    /*border-radius: 5px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.section-8{
+.section-8 {
     width: 47%;
     height: 35px;
     border: 1px solid lightgray;
@@ -528,29 +511,25 @@
     align-items: center;
 }
 
-.section-9{
+.section-9 {
     width: 100%;
     height: 50%;
-    /*border: 1px solid lightgray;*/
-    /*border-radius: 5px;*/
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.section-10{
+.section-10 {
     width: 70%;
     height: 50%;
-    /*border: 1px solid lightgray;*/
-    /*border-radius: 5px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.input2{
+.input2 {
     width: 47.5%;
     height: 35px;
     border: 1px solid lightgray;
@@ -561,8 +540,7 @@
     text-align: center;
 }
 
-.input2:hover,
-.input3:hover{
+.input2:hover, .input3:hover {
     border-color: #ffccc7;
 }
 
@@ -587,7 +565,6 @@
     content: 'Bank Slip';
     padding: 8px;
     font-size: 13px;
-    /*border-radius: 5px;*/
     transition: all 0.15s ease;
     box-sizing: border-box;
     outline: none;
@@ -601,7 +578,7 @@
     justify-content: center;
 }
 
-.recharge-details{
+.recharge-details {
     width: 95.5%;
     height: 50%;
     border: 1px solid lightgray;
@@ -614,14 +591,12 @@
     box-shadow: 1px 2px 4px lightgray;
 }
 
-.filter-field{
+.filter-field {
     width: 91%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /*margin-top: 0.8em;*/
-    /*margin-bottom: 0.8em;*/
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 2px;
@@ -629,11 +604,9 @@
     margin-bottom: 5px;
 }
 
-.section-11{
+.section-11 {
     width: 100%;
     height: 50%;
-    /*border: 1px solid lightgray;*/
-    /*border-radius: 5px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -641,18 +614,16 @@
     margin-bottom: 5px;
 }
 
-.section-14{
+.section-14 {
     width: 100%;
     height: 50%;
-    /*border: 1px solid lightgray;*/
-    /*border-radius: 5px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.input4{
+.input4 {
     width: 47.5%;
     height: 28px;
     border: 1px solid lightgray;
@@ -663,42 +634,42 @@
     text-align: center;
 }
 
-.filter-btn{
+.filter-btn {
     background: gray;
     border: 1px solid gray;
     width: 15%;
 }
 
-.all-btn{
+.all-btn {
     background: gray;
     border: 1px solid gray;
     width: 15%;
 }
 
-.gen-repo-btn{
+.gen-repo-btn {
     background: gray;
     border: 1px solid gray;
     width: 35%;
 }
 
-.gen-repo-btn:hover{
+.gen-repo-btn:hover {
     background: #096dd9;
     border-color: #096dd9;
 }
 
-.filter-btn:hover{
+.filter-btn:hover {
     background: white;
     border-color: black;
     color: black;
 }
 
-.all-btn:hover{
+.all-btn:hover {
     background: white;
     border-color: black;
     color: black;
 }
 
-.recharge-details-container{
+.recharge-details-container {
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-around;
@@ -712,7 +683,7 @@
     padding: 5px;
 }
 
-.recharge-details-item{
+.recharge-details-item {
     width: 99%;
     height: 62%;
     border: 1px solid lightgray;
@@ -725,7 +696,7 @@
     margin-bottom: 5px;
 }
 
-.section-12{
+.section-12 {
     width: 47%;
     height: 80%;
     border: 1px solid lightgray;
@@ -736,20 +707,20 @@
     align-items: center;
 }
 
-.section-13{
+.section-13 {
     width: 47%;
     height: 80%;
     border: none;
     text-align: center;
 }
 
-.bank-slip-btn{
+.bank-slip-btn {
     background: gray;
     border: 1px solid gray;
     width: 55%;
 }
 
-.bank-slip-btn:hover{
+.bank-slip-btn:hover {
     background: white;
     border-color: black;
     color: black;
