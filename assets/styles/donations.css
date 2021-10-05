@@ -20,7 +20,7 @@
 }
 .container {
   background: #fafafa;
-  height: 75vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: [col1] 30% [col2]40%[col3]30%;
   grid-template-rows: [row1] 100% [row2];
@@ -71,7 +71,7 @@
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .input-field {
   width: 100%;
@@ -103,7 +103,7 @@
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
-  width: 50%;
+  width: 25%;
   /* margin-left: 35%; */
   height: 35px;
   font-family: "Nunito", serif;
