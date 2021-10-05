@@ -21,16 +21,12 @@
 .container {
   background: #fafafa;
   height: 80vh;
-  display: grid;
-  grid-template-columns: [col1] 30% [col2]40%[col3]30%;
-  grid-template-rows: [row1] 100% [row2];
-  margin: 0 6.7em 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 6.7em;
 }
 .container-02 {
-  grid-column-start: col2;
-  grid-column-end: col3;
-  grid-row-start: row1;
-  grid-row-end: row2;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -54,7 +50,7 @@
   color: gray;
 }
 .box-01 {
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -103,7 +99,7 @@
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
-  width: 25%;
+  width: 30%;
   /* margin-left: 35%; */
   height: 35px;
   font-family: "Nunito", serif;

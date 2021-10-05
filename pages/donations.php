@@ -6,34 +6,34 @@
 
 <div class='main-container'>
     <p class='breadcrumb'>
-        <a href='home.php'>Home</a> /Donations  
+        <a href='home.php'>Home</a> /Donations
     </p>
     <p class='main-title'>
         <i class='fas fa-users'></i> Donations
-    </p>   
+    </p>
 </div>
 <div class='container'>
-	<div class='card container-02'>
-		<div class='box'>
-			<p> Proceed via pay here..</p>
-		</div>	
-		<div class='box-01'>
-		    <div class='col-03'>
-		        <label class='label'> Donar Name </label>
-                <input class='input-field ' type='text' placeholder='Enter your name here'/> 
-				<label class='label'> Donar Email </label>
-                <input class='input-field ' type='text' placeholder='Enter your email here'/> 
-				<label class='label'> Amount </label>
+    <div class='card container-02'>
+        <div class='box'>
+            <p> Proceed via pay here..</p>
+        </div>
+        <div class='box-01'>
+            <div class='col-03'>
+                <label class='label'> Donor Name </label>
+                <input class='input-field ' type='text' placeholder='Enter your name here'/>
+                <label class='label'> Donor Email </label>
+                <input class='input-field ' type='text' placeholder='Enter your email here'/>
+                <label class='label'> Amount </label>
                 <input class='input-field ' type='text' placeholder='Amount donating'/>
-				<label class='label'> Attachment </label> 
-                <input class='slip-attachment  ' type='file' placeholder='Bank Slip Attachment'/> 
+                <label class='label'> Attachment </label>
+                <input class='slip-attachment  ' type='file' placeholder='Bank Slip Attachment'/>
             </div>
             <div class='col-04'>
-                 <button class='submit-btn btn'>Submit</button>
-                <button class='cancel-btn btn'>Cancel</button>   
+                <button class='submit-btn btn'>Submit</button>
+                <button class='cancel-btn btn'>Cancel</button>
             </div>
         </div>
-	</div>
+    </div>
 </div>
 
 <?php include('../components/footer.php'); ?>
