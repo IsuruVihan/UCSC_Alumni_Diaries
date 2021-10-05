@@ -303,7 +303,7 @@
                 </div>
                 <div class='recharge-details-container'>
                     <div class='recharge-details-item'>
-                        <div class=section-11>
+                        <div class=section-14>
                             <div class='section-12'>
                                 Subscription Type
                             </div>
@@ -311,7 +311,7 @@
                                 Amount
                             </div>
                         </div>
-                        <div class='section-11'>
+                        <div class='section-14'>
                             <div class='section-12'>
                                 Time
                             </div>
@@ -321,7 +321,7 @@
                         </div>
                     </div>
                     <div class='recharge-details-item'>
-                        <div class=section-11>
+                        <div class=section-14>
                             <div class='section-12'>
                                 Subscription Type
                             </div>
@@ -329,7 +329,7 @@
                                 Amount
                             </div>
                         </div>
-                        <div class='section-11'>
+                        <div class='section-14'>
                             <div class='section-12'>
                                 Time
                             </div>
@@ -339,7 +339,7 @@
                         </div>
                     </div>
                     <div class='recharge-details-item'>
-                        <div class=section-11>
+                        <div class=section-14>
                             <div class='section-12'>
                                 Subscription Type
                             </div>
@@ -347,7 +347,7 @@
                                 Amount
                             </div>
                         </div>
-                        <div class='section-11'>
+                        <div class='section-14'>
                             <div class='section-12'>
                                 Time
                             </div>
