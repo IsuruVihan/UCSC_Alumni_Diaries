@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
-
 .main-container {
     display: flex;
     flex-direction: column;
@@ -20,37 +19,31 @@
     margin: 0;
 }
 
-.main-box{
+.main-box {
     background: #fafafa;
     height: 120vh;
     padding-left: 6.7em;
     padding-right: 6.7em;
     display: grid;
     grid-template-columns: [c1] 50% [c2] 50% [c3];
-    /* border: 3px solid blue; */
     margin-bottom: 1.5em;
     margin-top: 1.5em;
 }
 
-.left-col{
+.left-col {
     grid-column-start: c1;
     grid-column-end: c2;
     background: #fafafa;
     display: grid;
     grid-template-rows: [r1] 50% [r2] 50% [r3];
-    /* border: solid 3px green; */
     padding-right: 5px;
-    
-
 }
 
-.right-col{
+.right-col {
     grid-column-start: c2;
     grid-column-end: c3;
     background: #fafafa;
-    /* border: solid 3px rgb(128, 0, 43); */
     padding-left: 5px;
-    
 }
 
 .card {
@@ -63,7 +56,7 @@
     border-radius: 10px;
     padding: 20px;
     transition: all ease-in-out 0.5s;
-} 
+}
 
 .title {
     font-weight: 600;
@@ -73,47 +66,38 @@
     margin-top: 5px;
 }
 
-.s-to-be-accept{
+.s-to-be-accept {
     grid-row-start: r1;
     grid-row-end: r2;
     background: #fafafa;
-    /* border: hotpink solid 3px; */
 }
 
-.s-done{
+.s-done {
     grid-row-start: r2;
     grid-row-end: r3;
     background: #fafafa;
-    /* border:rgb(19, 18, 18) solid 3px; */
 }
 
-.alldetails1{
+.alldetails1 {
     display: grid;
-    grid-template-rows: [rr1] 20% [rr2] 80% [rr3] ;
-    /* border: solid purple 3px; */
+    grid-template-rows: [rr1] 20% [rr2] 80% [rr3];
     height: 81%;
 }
 
-.filtermain{
+.filtermain {
     grid-row-start: rr1;
     grid-row-end: rr2;
-    /* height: 100%; */
-    /* border: salmon 3px solid; */
-    /* border: 1px solid lightgray; */
-    display:grid;
+    display: grid;
     grid-template-columns: [cc1] 16% [cc2] 16% [cc3] 16% [cc4] 16% [cc5] 20% [cc6] 16% [cc7];
-
 }
 
-.firstname{
+.firstname {
     grid-column-start: cc1;
     grid-column-end: cc2;
-    /* border: royalblue 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-
 }
 
 .fname {
@@ -123,13 +107,13 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
     font-size: 14px;
-    
+
 }
 
 .details-field {
@@ -137,36 +121,30 @@
     border-radius: 5px;
 }
 
-.list-details{
+.list-details {
     font-family: "Nunito", serif;
-    /* padding-left: 10px; */
     text-align: center;
 }
 
-.fname,.lname:hover{
-    /* border-color: #ffccc7; */
-}
-
-.email:hover{
+.email:hover {
     border-color: #ffccc7;
 }
 
-.fname:hover{
+.fname:hover {
     border-color: #ffccc7;
 }
 
-.lname:hover{
+.lname:hover {
     border-color: #ffccc7;
 }
 
-.batch:hover{
+.batch:hover {
     border-color: #ffccc7;
 }
 
-.lastname{
+.lastname {
     grid-column-start: cc2;
     grid-column-end: cc3;
-    /* border: rgb(23, 241, 194) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
@@ -180,33 +158,32 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
     font-size: 14px;
-    
+
 }
 
-.bat{
+.bat {
     grid-column-start: cc3;
     grid-column-end: cc4;
-    /* border: rgb(241, 23, 132) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.batch{
+.batch {
     width: 95%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -214,24 +191,23 @@
     font-size: 14px;
 }
 
-.subscriptiontype{
+.subscriptiontype {
     grid-column-start: cc4;
     grid-column-end: cc5;
-    /* border: rgb(93, 59, 216) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.stype{
+.stype {
     width: 95%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -239,28 +215,27 @@
     font-size: 14px;
 }
 
-.stype:hover{
+.stype:hover {
     border-color: #ffccc7;
 }
 
-.emailaddress{
+.emailaddress {
     grid-column-start: cc5;
     grid-column-end: cc6;
-    /* border: rgb(85, 248, 10) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.email{
+.email {
     width: 95%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -270,17 +245,16 @@
     overflow-x: auto;
 }
 
-.filterbutton{
+.filterbutton {
     grid-column-start: cc6;
     grid-column-end: cc7;
-    /* border: rgb(207, 7, 7) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.filter-btn{
+.filter-btn {
     background: gray;
     border: 1px solid gray;
 }
@@ -294,28 +268,25 @@
     width: 90%;
 }
 
-.filter-btn:hover{
+.filter-btn:hover {
     background: white;
     border-color: black;
     color: black;
 }
 
-.flexbox-container{
+.flexbox-container {
     grid-row-start: rr2;
     grid-row-end: rr3;
-    /* height: 98%; */
-    /* border: rgb(52, 3, 143) 3px solid; */
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: flex-start;
     overflow: hidden;
     overflow-y: scroll;
     height: 255px;
-    /* margin: 20px; */
     padding: 5px;
 }
 
-.flexbox-item{
+.flexbox-item {
     height: 120px;
     border-radius: 5px;
     padding-right: 10px;
@@ -324,57 +295,52 @@
     transition: all ease-in-out 0.5s;
     border: 1px solid lightgray;
     margin-bottom: 5px;
-    /* border: darkred solid 3px; */
     display: grid;
     grid-template-columns: [co1] 20% [co2] 40% [co3] 20% [co4] 20% [co5];
 }
 
-.profilepic{
+.profilepic {
     grid-column-start: co1;
     grid-column-end: co2;
-    /* border: rgb(204, 245, 22) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.col2{
+.col2 {
     grid-column-start: co2;
     grid-column-end: co3;
-    /* border: rgb(28, 90, 25) 3px solid; */
     display: grid;
     grid-template-rows: [ro1] 33.3% [ro2] 33.3% [ro3] 33.3% [ro4];
 }
 
-.name{
+.name {
     grid-row-start: ro1;
     grid-row-end: ro2;
-    /* border: rgb(36, 15, 131) 3px solid; */
     display: grid;
     grid-template-columns: [roo1] 50% [roo2] 50% [roo3];
     padding-left: 2.5px;
     padding-right: 2.5px;
 }
 
-.first-name{
+.first-name {
     grid-row-start: roo1;
     grid-row-end: roo2;
-    /* border: rgb(197, 48, 140) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.namefirst{
+.namefirst {
     width: 95%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -382,24 +348,23 @@
     font-size: 14px;
 }
 
-.last-name{
+.last-name {
     grid-row-start: roo2;
     grid-row-end: roo3;
-    /* border: rgb(107, 94, 141) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.namesecond{
+.namesecond {
     width: 95%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -407,24 +372,23 @@
     font-size: 14px;
 }
 
-.e-mail{
+.e-mail {
     grid-row-start: ro2;
     grid-row-end: ro3;
-    /* border: rgb(197, 13, 13) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.mail{
+.mail {
     width: 95%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -432,24 +396,23 @@
     font-size: 14px;
 }
 
-.bill{
+.bill {
     grid-row-start: ro3;
     grid-row-end: ro4;
-    /* border: rgb(13, 197, 28) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.bill-attachment{
+.bill-attachment {
     width: 95%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -457,32 +420,30 @@
     font-size: 14px;
 }
 
-.col3{
+.col3 {
     grid-column-start: co3;
     grid-column-end: co4;
-    /* border: rgb(221, 166, 14) 3px solid; */
     display: grid;
     grid-template-rows: [row1] 33.3% [row2] 33.3% [row3] 33.3% [row4];
 }
 
-.batch-year{
+.batch-year {
     grid-row-start: row1;
     grid-row-end: row2;
-    /* border: rgb(197, 13, 136) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.b{
+.b {
     width: 95%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -491,24 +452,23 @@
     margin-top: 5px;
 }
 
-.timestamp{
+.timestamp {
     grid-row-start: row2;
     grid-row-end: row3;
-    /* border: rgb(28, 4, 83) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.time{
+.time {
     width: 95%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -516,17 +476,16 @@
     font-size: 14px;
 }
 
-.accept{
+.accept {
     grid-row-start: row3;
     grid-row-end: row4;
-    /* border: rgb(132, 226, 214) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.accept-btn{
+.accept-btn {
     width: 95%;
     height: 25px;
     background: gray;
@@ -547,33 +506,30 @@
     border: 1px solid #237804;
 }
 
-.col4{
+.col4 {
     grid-column-start: co4;
     grid-column-end: co5;
-    /* border: rgb(14, 145, 221) 3px solid; */
     display: grid;
     grid-template-rows: [roww1] 33.3% [roww2] 33.3% [roww3] 33.3% [roww4];
 }
 
-.subbutton{
+.subbutton {
     grid-row-start: roww1;
     grid-row-end: roww2;
-    /* border: rgb(217, 141, 219) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-
 }
 
-.substype{
+.substype {
     width: 95%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -582,25 +538,23 @@
     margin-top: 5px;
 }
 
-.price{
+.price {
     grid-row-start: roww2;
     grid-row-end: roww3;
-    /* border: rgb(22, 3, 22) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-
 }
 
-.amount{
+.amount {
     width: 95%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -608,17 +562,16 @@
     font-size: 14px;
 }
 
-.reject{
+.reject {
     grid-row-start: roww3;
     grid-row-end: roww4;
-    /* border: rgb(156, 81, 190) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.reject-btn{
+.reject-btn {
     width: 95%;
     height: 25px;
     background: gray;
@@ -639,101 +592,89 @@
     border: 1px solid #f5222d;
 }
 
-.alldetails2{
+.alldetails2 {
     display: grid;
-    grid-template-rows: [rw1] 20% [rw2] 70% [rw3] 10% [rw4] ;
-    /* border: solid rgb(67, 87, 201) 3px; */
+    grid-template-rows: [rw1] 20% [rw2] 70% [rw3] 10% [rw4];
     height: 81%;
 }
 
-.gen-rep-btn{
+.gen-rep-btn {
     grid-row-start: rw3;
     grid-row-end: rw4;
-    /* border: 3px solid purple; */
     display: flex;
-    /*text-align: center;*/
     align-items: center;
     justify-content: center;
 }
 
-.filtermain2{
+.filtermain2 {
     grid-row-start: rw1;
     grid-row-end: rw2;
-    /* height: 100%; */
-    /* border: salmon 3px solid; */
-    display:grid;
+    display: grid;
     grid-template-columns: [col1] 12% [col2] 12% [col3] 12% [col4] 12% [col5] 16% [col6] 12% [col7] 12% [col8] 12% [col9];
 }
 
-.name1{
+.name1 {
     grid-column-start: col1;
     grid-column-end: col2;
-    /* border: royalblue 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    
 }
 
-.name2{
+.name2 {
     grid-column-start: col2;
     grid-column-end: col3;
-    /* border: rgb(170, 55, 89) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.thebatch{
+.thebatch {
     grid-column-start: col3;
     grid-column-end: col4;
-    /* border: rgb(79, 187, 219) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.thesubtype{
+.thesubtype {
     grid-column-start: col4;
     grid-column-end: col5;
-    /* border: rgb(197, 238, 12) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.theemail{
+.theemail {
     grid-column-start: col5;
     grid-column-end: col6;
-    /* border: rgb(43, 70, 30) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.fro{
+.fro {
     grid-column-start: col6;
     grid-column-end: col7;
-    /* border: rgb(228, 119, 192) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.from{
+.from {
     width: 95%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -741,68 +682,60 @@
     font-size: 14px;
 }
 
-.from:hover{
+.from:hover {
     border-color: #ffccc7;
 }
 
-.t{
+.t {
     grid-column-start: col7;
     grid-column-end: col8;
-    /* border: rgb(54, 120, 219) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.to{
+.to {
     width: 95%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
     font-size: 14px;
-
 }
 
-.to:hover{
+.to:hover {
     border-color: #ffccc7;
-
 }
 
-
-.fil{
+.fil {
     grid-column-start: col8;
     grid-column-end: col9;
-    /* border: rgb(219, 11, 11) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.flexbox-container2{
+.flexbox-container2 {
     grid-row-start: rw2;
     grid-row-end: rw3;
-     height: 98%;
-    /* border: rgb(52, 3, 143) 3px solid; */
+    height: 98%;
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: flex-start;
     overflow: hidden;
     overflow-y: scroll;
-    /* height: 255px; */
-    /* margin: 20px; */
     padding: 5px;
 }
 
-.flexbox-item2{
+.flexbox-item2 {
     height: 120px;
     border-radius: 5px;
     padding-right: 10px;
@@ -811,154 +744,138 @@
     transition: all ease-in-out 0.5s;
     border: 1px solid lightgray;
     margin-bottom: 5px;
-    /* border: darkred solid 3px; */
     display: grid;
     grid-template-columns: [ko1] 20% [ko2] 40% [ko3] 40% [ko4];
 }
 
-.co1{
+.co1 {
     grid-column-start: ko1;
     grid-column-end: ko2;
-    /* border: rgb(204, 245, 22) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.co2{
+.co2 {
     grid-column-start: ko2;
     grid-column-end: ko3;
-    /* border: rgb(245, 22, 226) 3px solid; */
     display: grid;
-    grid-template-rows: [ror1] 33.3% [ror2] 33.3% [ror3] 33.3% [ror4]; 
-} 
+    grid-template-rows: [ror1] 33.3% [ror2] 33.3% [ror3] 33.3% [ror4];
+}
 
-.allfullname{
+.allfullname {
     grid-row-start: ror1;
     grid-row-end: ror2;
-    /* border: rgb(119, 22, 245) 3px solid; */
     display: grid;
     grid-template-columns: [kk1] 50% [kk2] 50% [kk3];
     padding-right: 2.5px;
     padding-left: 2.5px;
 }
 
-.firstname1{
+.firstname1 {
     grid-column-start: kk1;
     grid-column-end: kk2;
-    /* border: rgb(161, 226, 10) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.lastname1{
+.lastname1 {
     grid-column-start: kk2;
     grid-column-end: kk3;
-    /* border: rgb(170, 57, 151) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.e-address{
+.e-address {
     grid-row-start: ror2;
     grid-row-end: ror3;
-    /* border: rgb(52, 186, 226) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.bills{
+.bills {
     grid-row-start: ror3;
     grid-row-end: ror4;
-    /* border: rgb(223, 6, 6) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.co3{
+.co3 {
     grid-column-start: ko3;
     grid-column-end: ko4;
-    /* border: rgb(10, 206, 141) 3px solid; */
     display: grid;
-    grid-template-rows: [r1r] 33.3% [r2r] 33.3% [r3r] 33.3% [r4r]; 
-} 
+    grid-template-rows: [r1r] 33.3% [r2r] 33.3% [r3r] 33.3% [r4r];
+}
 
-.batch-sub{
+.batch-sub {
     grid-row-start: r1r;
     grid-row-end: r2r;
-    /* border: rgb(163, 93, 154) 3px solid; */
     display: grid;
     grid-template-columns: [c11] 50% [c22] 50% [c33];
 }
 
-.baat{
+.baat {
     grid-column-start: c11;
     grid-column-end: c22;
-    /* border: rgb(128, 10, 206) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.suub{
+.suub {
     grid-column-start: c22;
     grid-column-end: c33;
-    /* border: rgb(241, 14, 14) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.method-amount{
+.method-amount {
     grid-row-start: r2r;
     grid-row-end: r3r;
-    /* border: rgb(10, 226, 10) 3px solid; */
     display: grid;
     grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
 }
 
-.me{
+.me {
     grid-column-start: ccc1;
     grid-column-end: ccc2;
-    /* border: rgb(250, 246, 6) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.ammount{
+.ammount {
     grid-column-start: ccc2;
     grid-column-end: ccc3;
-    /* border: rgb(12, 12, 0) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.timeeestamp{
+.timeeestamp {
     grid-row-start: r3r;
     grid-row-end: r4r;
-    /* border: rgb(24, 10, 226) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.reportgeneratebutton{
+.reportgeneratebutton {
     width: 25%;
     height: 25px;
     background: gray;
@@ -975,7 +892,7 @@
     margin-top: 10px;
 }
 
-.reportgeneratebutton:hover{
+.reportgeneratebutton:hover {
     background: #096dd9;
     border: 1px solid #096dd9;
 }
@@ -990,102 +907,88 @@
     border-radius: 10px;
     padding: 20px;
     transition: all ease-in-out 0.5s;
-} 
+}
 
-.alldetails3{
+.alldetails3 {
     display: grid;
-    /* grid-template-rows: [rows1] 17% [rows2] 83% [rows3] ; */
-    grid-template-rows: [rows1] 12% [rows2] 88% [rows3] ;
-    /* border: solid purple 3px; */
+    grid-template-rows: [rows1] 12% [rows2] 88% [rows3];
     height: 91%;
 }
 
-.filtermain3{
+.filtermain3 {
     grid-row-start: rows1;
     grid-row-end: rows2;
-    /* height: 100%; */
-    /* border: salmon 3px solid; */
-    display:grid;
+    display: grid;
     grid-template-rows: [therow1] 50% [therow2] 50% [therow3];
-
 }
 
-.filterrow1{
+.filterrow1 {
     grid-row-start: therow1;
     grid-row-end: therow2;
-    /* border: rgb(177, 24, 7) 3px solid; */
-    display:grid;
+    display: grid;
     grid-template-columns: [clm1] 25% [clm2] 25% [clm3] 25% [clm4] 25% [clm5];
 }
 
-.filterrow2{
+.filterrow2 {
     grid-row-start: therow2;
     grid-row-end: therow3;
-    /* border: rgb(102, 15, 216) 3px solid; */
-    display:grid;
+    display: grid;
     grid-template-columns: [cl1] 50% [cl2] 25% [cl3] 25% [cl4];
 }
 
-.firstname-col2{
+.firstname-col2 {
     grid-column-start: clm1;
     grid-column-end: clm2;
-    /* border: rgb(225, 222, 65) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-
 }
 
-.lastname-col2{
+.lastname-col2 {
     grid-column-start: clm2;
     grid-column-end: clm3;
-    /* border: rgb(197, 15, 121) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-
 }
 
-.bat-col2{
+.bat-col2 {
     grid-column-start: clm3;
     grid-column-end: clm4;
-    /* border: rgb(10, 156, 240) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.subscriptiontype-col2{
+.subscriptiontype-col2 {
     grid-column-start: clm4;
     grid-column-end: clm5;
-    /* border: rgb(185, 59, 216) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.emailaddress-col2{
+.emailaddress-col2 {
     grid-column-start: cl1;
     grid-column-end: cl2;
-    /* border: rgb(85, 248, 10) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.emailsss{ 
+.emailsss {
     width: 97%;
     height: 30px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-    font-family: "Nunito", serif; 
+    font-family: "Nunito", serif;
     display: flex;
     align-items: center;
     text-align: center;
@@ -1095,49 +998,42 @@
     overflow-x: auto;
 }
 
-.emailsss:hover{
+.emailsss:hover {
     border-color: #ffccc7;
 }
 
-.payments{
+.payments {
     grid-column-start: cl2;
     grid-column-end: cl3;
-    /* border: rgb(248, 10, 10) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.filterbutton-col2{
+.filterbutton-col2 {
     grid-column-start: cl3;
     grid-column-end: cl4;
-    /* border: rgb(7, 117, 207) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.flexbox-container3{
+.flexbox-container3 {
     grid-row-start: rows2;
     grid-row-end: rows3;
-    /* height: 98%; */
-    /* border: rgb(143, 3, 96) 3px solid; */
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: flex-start;
     overflow: hidden;
     overflow-y: scroll;
-    /* height: 255px; */
-    /* margin: 20px; */
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
-    /* padding-bottom: 20px; */
 }
 
-.flexbox-item3{
+.flexbox-item3 {
     height: 130px;
     border-radius: 5px;
     padding-right: 10px;
@@ -1146,157 +1042,138 @@
     transition: all ease-in-out 0.5s;
     border: 1px solid lightgray;
     margin-bottom: 5px;
-    /* border: darkred solid 3px; */
     display: grid;
     grid-template-columns: [kol1] 22% [kol2] 26% [kol3] 26% [kol4] 26% [kol5];
 }
 
-.profilepic-col2{
+.profilepic-col2 {
     grid-column-start: kol1;
     grid-column-end: kol2;
-    /* border: rgb(204, 245, 22) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.col2-col2{
+.col2-col2 {
     grid-column-start: kol2;
     grid-column-end: kol3;
-    /* border: rgb(28, 90, 25) 3px solid; */
     display: grid;
     grid-template-rows: [rrow1] 33.3% [rrow2] 33.3% [rrow3] 33.3% [rrow4];
 }
 
-.ids{
+.ids {
     grid-row-start: rrow1;
     grid-row-end: rrow2;
-    /* border: rgb(224, 117, 201) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.firstname-right{
+.firstname-right {
     grid-row-start: rrow2;
     grid-row-end: rrow3;
-    /* border: rgb(25, 6, 197) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.batch-right{
+.batch-right {
     grid-row-start: rrow3;
     grid-row-end: rrow4;
-    /* border: rgb(198, 241, 7) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 15px; */
 }
 
-.col3-col2{
+.col3-col2 {
     grid-column-start: kol3;
     grid-column-end: kol4;
-    /* border: rgb(224, 8, 141) 3px solid; */
     display: grid;
     grid-template-rows: [ow1] 33.3% [ow2] 33.3% [ow3] 33.3% [ow4];
 }
 
-.email-right{
+.email-right {
     grid-row-start: ow1;
     grid-row-end: ow2;
-    /* border: rgb(25, 6, 197) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.lastname-right{
+.lastname-right {
     grid-row-start: ow2;
     grid-row-end: ow3;
-    /* border: rgb(6, 175, 197) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.batch-col2{
+.batch-col2 {
     grid-row-start: ow3;
     grid-row-end: ow4;
-    /* border: rgb(6, 197, 38) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 15px; */
 }
 
-.col4-col2{
+.col4-col2 {
     grid-column-start: kol4;
     grid-column-end: kol5;
-    /* border: rgb(224, 8, 141) 3px solid; */
     display: grid;
     grid-template-rows: [sow1] 33.3% [sow2] 33.3% [sow3] 33.3% [sow4];
 }
 
-.duedate{
+.duedate {
     grid-row-start: sow1;
     grid-row-end: sow2;
-    /* border: rgb(132, 12, 230) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.payment{
+.payment {
     grid-row-start: sow2;
     grid-row-end: sow3;
-    /* border: rgb(230, 81, 12) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.ban-unban{
+.ban-unban {
     grid-row-start: sow3;
     grid-row-end: sow4;
-    /* border: rgb(20, 11, 7) 3px solid; */
     display: grid;
     grid-template-columns: [kk1] 50% [kk2] 50% [kk3];
-
 }
 
-.ban{
+.ban {
     grid-column-start: kk1;
     grid-column-end: kk2;
-    /* border: rgb(22, 69, 197) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.unban{
+.unban {
     grid-column-start: kk2;
     grid-column-end: kk3;
-    /* border: rgb(231, 12, 195) 3px solid; */
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.ban-btn{
+.ban-btn {
     width: 95%;
     height: 25px;
     background: gray;
@@ -1309,10 +1186,10 @@
     text-align: center;
     justify-content: center;
     font-size: 14px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.unban-btn{
+.unban-btn {
     width: 95%;
     height: 25px;
     background: gray;
@@ -1325,7 +1202,7 @@
     text-align: center;
     justify-content: center;
     font-size: 14px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .ban-btn:hover {
@@ -1336,4 +1213,4 @@
 .unban-btn:hover {
     background: #096dd9;
     border: 1px solid #096dd9;
-  }
+}

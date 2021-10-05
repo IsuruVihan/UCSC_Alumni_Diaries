@@ -16,27 +16,27 @@
     font-size: 2em;
     margin: 0;
 }
-.wall{
-    
+
+.wall {
     margin-left: 6.7em;
     margin-right: 6.7em;
     display: grid;
-    grid-template-columns: [line1] 30% [line2] 70% [line3] ;
+    grid-template-columns: [line1] 30% [line2] 70% [line3];
     grid-template-rows: [rowline1]1fr[rowline2];
-    gap:15px;
+    gap: 15px;
 }
-.important-notice{
+
+.important-notice {
     box-shadow: 1px 2px 4px lightgray;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     transition: all ease-in-out 0.5s;
     padding: 20px;
     background: white;
     border-radius: 10px;
 }
 
-.common-wall{
-    
+.common-wall {
     box-shadow: 1px 2px 4px lightgray;
     padding: 20px;
     background: white;
@@ -49,10 +49,9 @@
     font-size: 1.2em;
     text-align: center;
     margin: 5px;
-
 }
 
-.filter-box{
+.filter-box {
     box-shadow: 1px 2px 4px lightgray;
     border: 1px solid lightgray;
     padding: 3px 3px;
@@ -62,7 +61,6 @@
     border-radius: 5px;
     justify-content: space-between;
     background: white;
-    
 }
 
 .btn {
@@ -77,24 +75,23 @@
     width: 38%;
     background: gray;
     border: 1px solid gray;
-    font-family: 'Nunito';
- 
+    font-family: 'Nunito', serif;
 }
 
 .filter-btn:hover {
-  background: white;
-  border-color: black;
-  color: black;
+    background: white;
+    border-color: black;
+    color: black;
 }
 
-.upload-btn{
+.upload-btn {
     height: 20px;
     font-size: 12px;
     width: fit-content;
     padding: 0 3px;
 }
 
-.create-notice-box{
+.create-notice-box {
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px lightgray;
     border-radius: 10px;
@@ -104,7 +101,8 @@
     padding: 3px;
     margin: 0.8em 0;
 }
-.edit-notice-box{
+
+.edit-notice-box {
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px lightgray;
     border-radius: 10px;
@@ -115,75 +113,75 @@
     margin: 0.8em 0;
 }
 
-.create-notice-text{
+.create-notice-text {
     resize: none;
     overflow: hidden;
     overflow-y: scroll;
     width: 100%;
-    height:10em;
+    height: 10em;
     margin: 0 0.8em;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
 }
-.box-title{
+
+.box-title {
     font-weight: 600;
     font-size: 1em;
     text-align: center;
-    margin:0.8em 0;
-}
-.row-1{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;     
+    margin: 0.8em 0;
 }
 
-.row-1-gap{
-    margin-top:1em;
-    
+.row-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.row-2{
-    
+
+.row-1-gap {
+    margin-top: 1em;
+}
+
+.row-2 {
     justify-content: center;
-    display: flex; 
+    display: flex;
 }
-.row-2 > label{
+
+.row-2 > label {
     text-align: center;
     margin: 0.8em 0;
     font-size: 14px;
     font-weight: 400;
     padding-top: 3px;
-
 }
-.row-3{
-    
+
+.row-3 {
     justify-content: center;
     display: flex;
-    
 }
-.row-4{
+
+.row-4 {
     margin-top: 0.2em;
     justify-content: center;
     display: flex;
     padding: 5px 0;
 }
 
-.row-4 > button{
+.row-4 > button {
     flex-direction: row;
-    align-items: space-between;
     width: 30%;
-    margin:0 0.4em ;
+    margin: 0 0.4em;
 }
-.field-header{
+
+.field-header {
     border: 1px solid lightgray;
     color: gray;
     margin: 0 0.8em;
     border-radius: 5px;
     width: 50%;
-    
-    
 }
+
 .input-field-title {
     width: 100%;
     height: 25px;
@@ -192,13 +190,15 @@
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    margin:0 0.8em;
+    margin: 0 0.8em;
 }
-.input-field-title:hover,.field-header:hover,.create-notice-text:hover,
-.create-post-title:hover,.create-post-text:hover,.field-hover:hover{
+
+.input-field-title:hover, .field-header:hover, .create-notice-text:hover, .create-post-title:hover,
+.create-post-text:hover, .field-hover:hover {
     border-color: #ffccc7;
 }
-.input-field-message{
+
+.input-field-message {
     width: 100%;
     height: 100px;
     background: white;
@@ -207,10 +207,10 @@
     color: gray;
     font-family: "Nunito", serif;
     text-align: center;
-    margin:0 0.8em ;
+    margin: 0 0.8em;
 }
 
-.notice-box{
+.notice-box {
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px lightgray;
     border-radius: 10px;
@@ -220,35 +220,40 @@
     padding: 3px;
     margin: 0.8em 0;
 }
-.notice-content{
+
+.notice-content {
     border: 1px solid lightgray;
     height: 10em;
     margin: 0 0.8em;
-    border-radius: 5px ;
+    border-radius: 5px;
 }
-.star-div-off{
+
+.star-div-off {
     display: block;
     color: gray;
     margin: 0 0.8em;
     cursor: pointer;
 }
-.star-div-on{
+
+.star-div-on {
     display: none;
     color: rgb(255, 115, 0);
     margin: 0 0.8em;
 }
-.edit-btn:hover{
+
+.edit-btn:hover {
     background: #fa8c16;
     border: 1px solid #fa8c16;
     color: white;
 }
-.dlt-btn:hover{
+
+.dlt-btn:hover {
     background: #f5222d;
     border: 1px solid #f5222d;
-    color: white; 
+    color: white;
 }
 
-.image-box{
+.image-box {
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -257,10 +262,10 @@
     width: 500px;
     align-items: center;
     margin: 0 0.8em;
-    object-fit:scale-down;
-    
+    object-fit: scale-down;
 }
-.image-box-notice{
+
+.image-box-notice {
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -271,13 +276,13 @@
     margin: 0.8em 120px;
 }
 
-.box-row{
+.box-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
 }
-.create-post-box{
+
+.create-post-box {
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px lightgray;
     border-radius: 10px;
@@ -286,34 +291,36 @@
     flex-direction: column;
     flex-grow: 1;
     margin: 0.8em 3px;
-
 }
-.row-0{
+
+.row-0 {
     display: flex;
     flex-direction: row;
-    
 }
-.wall-top-row{
+
+.wall-top-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
-.wall-top-row > p{
+
+.wall-top-row > p {
     margin-left: 18em;
 }
-.create-post-button{
+
+.create-post-button {
     width: 100px;
     margin-top: 0.4em;
     margin-left: 20em;
 }
-.create-post-button:hover{
+
+.create-post-button:hover {
     background: #237804;
     border-color: #237804;
     color: white;
 }
 
-.create-post-title{
+.create-post-title {
     margin: 0.8em;
     text-align: center;
     background: white;
@@ -321,29 +328,31 @@
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-   
 }
 
-.create-post-text{
+.create-post-text {
     resize: none;
     width: 120%;
-    height:150px;
+    height: 150px;
     margin: 0 0.8em;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
 }
-.create-post-buttons{
+
+.create-post-buttons {
     margin: 0.8em;
     display: flex;
     justify-content: flex-end;
 }
-.create-post-buttons > button{
+
+.create-post-buttons > button {
     width: 120px;
     margin: 0.2em;
 }
-.post-report{
+
+.post-report {
     box-shadow: 1px 2px 4px lightgray;
     border: 1px solid lightgray;
     display: none;
@@ -354,18 +363,19 @@
     border-radius: 5px;
     padding: 3px;
 }
-.report-txt{
+
+.report-txt {
     resize: none;
     width: 96%;
-    height:10em;
+    height: 10em;
     margin: 0 0.8em;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
 }
-.input-field-report{
-    
+
+.input-field-report {
     height: 100px;
     background: white;
     border: 1px solid lightgray;
@@ -373,9 +383,10 @@
     color: gray;
     font-family: "Nunito", serif;
     text-align: center;
-    margin:0 0.8em ;
+    margin: 0 0.8em;
 }
-.comment-report{
+
+.comment-report {
     box-shadow: 1px 2px 4px lightgray;
     border: 1px solid lightgray;
     margin: 0.8em auto;
@@ -387,30 +398,32 @@
     padding: 3px;
 }
 
-.filter-left{
-display: flex;
-flex-direction: row;
-width: 35%;
+.filter-left {
+    display: flex;
+    flex-direction: row;
+    width: 35%;
 }
-.filter-left > button{
-    margin:0 3px;
+
+.filter-left > button {
+    margin: 0 3px;
 }
-.filter-left > input{
+
+.filter-left > input {
     width: 120px;
     margin: 0 0.2em;
 }
-.filter-right{
+
+.filter-right {
     display: flex;
     flex-direction: row;
     width: 40%;
-    
 }
 
-.filter-right > button{
-    margin:0 3px;
+.filter-right > button {
+    margin: 0 3px;
 }
-.post-box{
-    
+
+.post-box {
     box-shadow: 1px 2px 4px lightgray;
     border: 1px solid lightgray;
     display: flex;
@@ -418,8 +431,8 @@ width: 35%;
     border-radius: 10px;
     margin-bottom: 0.8em;
 }
-/* post content grid*/
-.post-content{  
+
+.post-content {
     border: 1px solid lightgray;
     border-radius: 10px;
     display: grid;
@@ -434,28 +447,31 @@ width: 35%;
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt "
     " pic pic pic txt txt txt txt txt txt"
-    " report show-cmnt show-cmnt comment . like-dislike-cell like-dislike-cell like-dislike-cell like-dislike-cell"
-    ;
+    " report show-cmnt show-cmnt comment . like-dislike-cell like-dislike-cell like-dislike-cell like-dislike-cell";
     place-self: center;
     gap: 5px 5px;
 }
+
 .post-field {
     border: 1px solid lightgray;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-  }
-.dp-box{
+}
+
+.dp-box {
     border: 1px solid lightgray;
     grid-area: dp;
     border-radius: 40%;
 }
-.pic-box{
-    border: 1px solid lightgray; 
+
+.pic-box {
+    border: 1px solid lightgray;
     grid-area: pic;
     border-radius: 10px;
 }
-.f-name{
+
+.f-name {
     grid-area: fname;
     height: 40px;
     background: white;
@@ -464,10 +480,9 @@ width: 35%;
     color: gray;
     font-family: "Nunito", serif;
     width: 100%;
-    
 }
-.l-name{
-    
+
+.l-name {
     grid-area: lname;
     height: 40px;
     background: white;
@@ -476,8 +491,8 @@ width: 35%;
     color: gray;
     font-family: "Nunito", serif;
 }
-.post-time{
-    
+
+.post-time {
     grid-area: time;
     height: 40px;
     background: white;
@@ -486,17 +501,19 @@ width: 35%;
     color: gray;
     font-family: "Nunito", serif;
 }
-.post-delete{
+
+.post-delete {
     width: 100%;
     grid-area: dlt;
-    
 }
-.post-delete:hover{
+
+.post-delete:hover {
     background: #f5222d;
     border: 1px solid #f5222d;
     color: white;
 }
-.post-title{
+
+.post-title {
     width: 100%;
     grid-area: title;
     height: 40px;
@@ -505,91 +522,99 @@ width: 35%;
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-}   
-.post-text{
-    
+}
+
+.post-text {
     grid-area: txt;
     height: 100%;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
-   
 }
-.report-btn{
+
+.report-btn {
     width: 100%;
     grid-area: report;
     justify-self: end;
     margin-top: 0.8em;
 }
+
 .report-btn:hover {
     cursor: pointer;
     background: #f5222d;
     border-color: #f5222d;
     color: white;
-  }
-.comment-btn{
+}
+
+.comment-btn {
     width: 100%;
     grid-area: comment;
     justify-self: end;
     margin-top: 0.8em;
 }
+
 .comment-btn:hover {
     cursor: pointer;
     background: #237804;
     border-color: #237804;
     color: white;
 }
-.show-comment-btn{
+
+.show-comment-btn {
     width: 100%;
     grid-area: show-cmnt;
     justify-self: end;
     margin-top: 0.8em;
 }
-.show-comment-btn:hover{
+
+.show-comment-btn:hover {
     cursor: pointer;
     background: #237804;
     border-color: #237804;
     color: white;
 }
-.like-dislike-cell{
+
+.like-dislike-cell {
     display: flex;
     flex-direction: row;
     grid-area: like-dislike-cell;
     justify-content: right;
     padding: 3px 5px;
-
 }
-.thumb-icon{
+
+.thumb-icon {
     color: #096dd9;
     border: none;
     background-color: white;
     border-radius: 10px;
-    margin:0 0.2em 
-} 
-.thumb-icon:hover{
-    cursor: pointer;
-    box-shadow: 0 0 5px  #096dd9;
+    margin: 0 0.2em
 }
-.post-like-count{
-    
+
+.thumb-icon:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px #096dd9;
+}
+
+.post-like-count {
     grid-area: like-count;
     width: fit-content;
     height: 23px;
     border: 1px solid lightgray;
-    margin-top:0.8em;
+    margin-top: 0.8em;
     margin-left: 0.2em;
 }
-.post-dislike-count{
+
+.post-dislike-count {
     border: 1px solid lightgray;
     grid-area: dislike-count;
     width: fit-content;
     height: 23px;
-    margin-top:0.8em;
+    margin-top: 0.8em;
     margin-left: 0.2em;
 }
-/*post comment grid*/
-.comment-box{
+
+.comment-box {
     border: 1px solid lightgray;
     border-radius: 10px;
     height: 40%;
@@ -597,13 +622,15 @@ width: 35%;
     display: none;
     flex-direction: column;
 }
-.comment-title:hover{
+
+.comment-title:hover {
     cursor: pointer;
     box-shadow: 0 0 10px lightgray;
     margin-left: 0.8em;
     margin-right: 0.8em;
 }
-.add-comment{
+
+.add-comment {
     display: none;
     flex-direction: column;
     border: 1px solid lightgray;
@@ -611,48 +638,50 @@ width: 35%;
     margin: 0.8em;
 }
 
-.comment-content{
+.comment-content {
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 0.8em;
     display: grid;
     margin: 0.8em;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 0.2fr ; /*added 0.2fr to get a little bit of space in the bottom of show comment box*/
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.2fr;
     grid-template-areas: 
     "  .  c-fname c-lname c-lname c-time  c-button c-button"
     "  c-dp c-txt c-txt c-txt c-txt c-likes c-likes "
     "  c-dp c-txt c-txt c-txt c-txt  c-likes c-likes"
-    "  . c-txt c-txt c-txt c-txt  . . "
-    ;
+    "  . c-txt c-txt c-txt c-txt  . . ";
     gap: 5px 5px;
 }
-.like-box{
+
+.like-box {
     grid-area: c-likes;
     display: flex;
     flex-direction: column;
-    
 }
-.r-1{
-    display: flex;
-    flex-direction: row;
-    margin: 0.8em 0;
-    padding: 0 40px;
-    
-}
-.r-2{
+
+.r-1 {
     display: flex;
     flex-direction: row;
     margin: 0.8em 0;
     padding: 0 40px;
 }
-.comment-dp{   
+
+.r-2 {
+    display: flex;
+    flex-direction: row;
+    margin: 0.8em 0;
+    padding: 0 40px;
+}
+
+.comment-dp {
     grid-area: c-dp;
     background: white;
     border: 1px solid lightgray;
-    border-radius: 10px;   
+    border-radius: 10px;
 }
-.c-fname{
+
+.c-fname {
     grid-area: c-fname;
     height: 40px;
     background: white;
@@ -661,16 +690,18 @@ width: 35%;
     color: gray;
     width: 100%;
 }
-.c-lname{
+
+.c-lname {
     grid-area: c-lname;
     height: 40px;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray; 
+    color: gray;
     width: 100%;
 }
-.c-time{
+
+.c-time {
     grid-area: c-time;
     height: 40px;
     background: white;
@@ -679,46 +710,54 @@ width: 35%;
     color: gray;
     width: 100%;
 }
-.comment-buttons{
+
+.comment-buttons {
     display: flex;
-    flex-direction: row; 
-    grid-area:c-button; 
+    flex-direction: row;
+    grid-area: c-button;
     text-align: center;
     justify-content: space-around;
-    align-items: center;  
+    align-items: center;
 }
-.c-edit{
-     margin:0 0.2em;
-    height:23px;
+
+.c-edit {
+    margin: 0 0.2em;
+    height: 23px;
     font-size: 14px;
 }
+
 .c-edit:hover {
     background: #fa8c16;
     border: 1px solid #fa8c16;
     color: white;
-  }
-.c-dlt{
-    margin:0 0.2em;
-    height:23px;
+}
+
+.c-dlt {
+    margin: 0 0.2em;
+    height: 23px;
     font-size: 14px;
     text-align: center;
-} 
+}
+
 .c-dlt:hover {
-background: #237804;
-  border: 1px solid #237804;
-  color: white;
-  }
-.c-report{    
-    margin:0 0.2em;
-    height:23px;
+    background: #237804;
+    border: 1px solid #237804;
+    color: white;
+}
+
+.c-report {
+    margin: 0 0.2em;
+    height: 23px;
     font-size: 14px;
 }
+
 .c-report:hover {
     background: #f5222d;
     border: 1px solid #f5222d;
     color: white;
- }
-.c-txt{
+}
+
+.c-txt {
     grid-area: c-txt;
     height: 100%;
     background: white;
@@ -727,11 +766,12 @@ background: #237804;
     color: gray;
     font-family: "Nunito", serif;
     text-align: center;
-    margin:0;
+    margin: 0;
     resize: none;
     padding: 10px;
 }
-.c-like-count{
+
+.c-like-count {
     border: 1px solid lightgray;
     grid-area: like-count;
     height: 20px;
@@ -742,30 +782,35 @@ background: #237804;
     width: 50%;
     text-align: center;
 }
-.c-like{
+
+.c-like {
     width: 60%;
     grid-area: like;
     place-self: end;
     height: 23px;
 }
+
 .c-like:hover {
     background: #096dd9;
     border: 1px solid #096dd9;
     color: white;
-  }
-.c-dislike{
+}
+
+.c-dislike {
     width: 60%;
     grid-area: dislike;
     justify-self: end;
     height: 23px;
     margin: 0;
 }
+
 .c-dislike:hover {
     background: #096dd9;
     border: 1px solid #096dd9;
     color: white;
-  }
-.c-dislike-count{
+}
+
+.c-dislike-count {
     margin: 0;
     border: 1px solid lightgray;
     grid-area: dislike-count;
@@ -776,20 +821,22 @@ background: #237804;
     width: 50%;
     text-align: center;
 }
-.show-comment{
+
+.show-comment {
     display: flex;
     flex-direction: column;
-    
 }
-.comments-row{
+
+.comments-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.hide-cmnt-btn{
- margin-top: 0.8em;
-  width: fit-content;
-  margin-left: 21em;
+
+.hide-cmnt-btn {
+    margin-top: 0.8em;
+    width: fit-content;
+    margin-left: 21em;
 }
 
 .comments-row > .box-title {

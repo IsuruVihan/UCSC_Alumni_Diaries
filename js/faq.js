@@ -1,5 +1,5 @@
 const showHide = (id) => {
-    if (document.getElementById('icon-' + id).classList.contains('fa-angle-down') ) {
+    if (document.getElementById('icon-' + id).classList.contains('fa-angle-down')) {
         document.getElementById('icon-' + id).classList.remove('fa-angle-down');
         document.getElementById('icon-' + id).classList.remove('dropdown-icon');
         document.getElementById('icon-' + id).classList.add('fa-angle-up');

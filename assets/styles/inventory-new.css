@@ -1,4 +1,3 @@
-
 .main-container {
     height: 15vh;
     margin-top: 5vh;
@@ -16,8 +15,7 @@
     margin: 0;
 }
 
-.inventory{
-    /*border: 3px solid red;*/
+.inventory {
     display: grid;
     height: 190vh;
     background: #fafafa;
@@ -26,8 +24,7 @@
     margin: 0 6.7em 10vh;
 }
 
-.available-assets{
-    /*border: 3px solid green;*/
+.available-assets {
     grid-column-start: line1;
     grid-column-end: line2;
     grid-row-start: row1;
@@ -38,8 +35,7 @@
     flex-direction: column;
 }
 
-.transfers{
-    /*border: 3px solid orange;*/
+.transfers {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -56,8 +52,7 @@
     padding: 3px;
 }
 
-.to-be-accepted{
-    /*border: 3px solid yellow;*/
+.to-be-accepted {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -73,8 +68,7 @@
     padding: 3px;
 }
 
-.received{
-    /*border: 3px solid purple;*/
+.received {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -89,7 +83,7 @@
     padding: 5px;
 }
 
-.available-cash{
+.available-cash {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -102,29 +96,24 @@
     background: white;
 }
 
-.title{
+.title {
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
     margin-top: 3px;
 }
 
-.cash{
+.cash {
     border: 2px solid lightgray;
     border-radius: 5px;
-    /*margin-top: 5px;*/
     margin-left: 80px;
     margin-right: 80px;
     justify-items: center;
     text-align: center;
 }
 
-.trans-to1{
-    /*border: 1px solid lightgray;*/
-    /*border-radius: 5px;*/
+.trans-to1 {
     margin-top: 10px;
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
     align-self: center;
     width: 100%;
 }
@@ -134,13 +123,11 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 5px;
-    /*margin-left: 40px;*/
-    /*margin-right: 40px;*/
     height: 40%;
     width: 100%;
 }
 
-.input-avu1{
+.input-avu1 {
     width: 49%;
     height: 25px;
     background: white;
@@ -151,7 +138,7 @@
     text-align: center;
 }
 
-.input-avu2{
+.input-avu2 {
     width: 45%;
     height: 25px;
     background: white;
@@ -163,10 +150,7 @@
     margin-bottom: 4px;
 }
 
-.input-avu1:hover,
-.input-avu2:hover,
-.input-avu3:hover,
-.input-avu4:hover{
+.input-avu1:hover, .input-avu2:hover, .input-avu3:hover, .input-avu4:hover {
     border-color: #ffccc7;
 }
 
@@ -186,39 +170,33 @@
     height: 25px;
 }
 
-.submit-btn,
-.filter-btn{
+.submit-btn, .filter-btn {
     width: 22%;
     margin-top: 10px;
     background: gray;
     border: 1px solid gray;
 }
 
-.generate-reports-btn{
+.generate-reports-btn {
     width: 50%;
     margin-top: 10px;
     background: gray;
     border: 1px solid gray;
-    /*height: 100%;*/
 }
 
-.submit-btn:hover,
-.filter-btn:hover,
-.subscriptions-filter-btn:hover,
-.bill-btn:hover{
+.submit-btn:hover, .filter-btn:hover, .subscriptions-filter-btn:hover, .bill-btn:hover {
     background: white;
     border-color: black;
     color: black;
 }
 
-.generate-reports-btn:hover,
-.subscriptions-gen-repo-btn:hover{
+.generate-reports-btn:hover, .subscriptions-gen-repo-btn:hover {
     background: #096dd9;
     border-color: #096dd9;
     color: white;
 }
 
-.available-items{
+.available-items {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -230,7 +208,7 @@
     padding-top: 20px;
 }
 
-.available-items-container{
+.available-items-container {
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-around;
@@ -238,10 +216,10 @@
     overflow: hidden;
     overflow-y: scroll;
     height: 80%;
-    margin:20px;
+    margin: 20px;
 }
 
-.available-items-card{
+.available-items-card {
     height: 25%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -254,15 +232,14 @@
     padding: 3px;
 }
 
-.item-details{
+.item-details {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-
 }
 
-.item-name{
+.item-name {
     border: 1px solid lightgray;
     border-radius: 5px;
     height: 100%;
@@ -270,7 +247,7 @@
     text-align: center;
 }
 
-.item-quantity{
+.item-quantity {
     border: 1px solid lightgray;
     border-radius: 5px;
     height: 100%;
@@ -278,8 +255,7 @@
     text-align: center;
 }
 
-.trans-to2{
-    /*border: 1px solid lightgray;*/
+.trans-to2 {
     border-radius: 5px;
     margin-top: 10px;
     display: flex;
@@ -298,14 +274,14 @@
     height: 40%;
 }
 
-.generate-reports{
+.generate-reports {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     width: 100%;
 }
 
-.cash-transfers,.item-transfers{
+.cash-transfers, .item-transfers {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -314,7 +290,6 @@
     justify-content: center;
     align-content: center;
     height: 47%;
-    /*width: 90%;*/
     background: white;
     margin-bottom: 3px;
     margin-top: 5px;
@@ -327,8 +302,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /*margin-top: 0.8em;*/
-    /*margin-bottom: 0.8em;*/
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 2px;
@@ -344,12 +317,8 @@
     width: 98%;
 }
 
-
-.cash-transfers-container,
-.item-transfers-container,
-.to-be-acc-cash-container,
-.to-be-acc-items-container,
-.received-cash-container{
+.cash-transfers-container, .item-transfers-container, .to-be-acc-cash-container, .to-be-acc-items-container,
+.received-cash-container {
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-around;
@@ -357,12 +326,10 @@
     overflow: hidden;
     overflow-y: scroll;
     height: 47%;
-    /*margin:5px;*/
     padding: 3px;
 }
 
-.cash-transfers-item,
-.item-transfers-item{
+.cash-transfers-item, .item-transfers-item {
     height: 75%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -374,21 +341,21 @@
     margin: 3px;
 }
 
-.sec-1{
+.sec-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
 }
 
-.sec-2{
+.sec-2 {
     border: 1px solid lightgray;
     border-radius: 5px;
     width: 45%;
     text-align: center;
 }
 
-.sec-3{
+.sec-3 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -401,7 +368,6 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
-    /*flex-direction: row;*/
     justify-content: center;
     margin-top: 7px;
     height: 8%;
@@ -411,15 +377,15 @@
     align-self: center;
 }
 
-.sec-4{
+.sec-4 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     height: 90%;
-    width:100%;
+    width: 100%;
 }
 
-.to-be-acc-item{
+.to-be-acc-item {
     height: 100%;
     width: 50%;
     border: 1px solid lightgray;
@@ -427,16 +393,12 @@
     box-shadow: 1px 2px 4px lightgrey;
     display: flex;
     flex-direction: column;
-    /*justify-content: space-evenly;*/
-    /*align-items: center;*/
     transition: all ease-in-out 0.5s;
     padding: 4px;
     margin: 3px;
 }
 
-.to-be-acc-cash-item,
-.to-be-acc-items-item,
-.received-cash-item{
+.to-be-acc-cash-item, .to-be-acc-items-item, .received-cash-item {
     height: 60%;
     width: 96%;
     border: 1px solid lightgray;
@@ -450,14 +412,14 @@
     margin: 3px;
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     flex-direction: row;
     width: 94%;
     justify-content: space-between;
 }
 
-.sec-5{
+.sec-5 {
     height: 90%;
     width: 29%;
     border: 1px solid lightgray;
@@ -465,26 +427,24 @@
     text-align: center;
 }
 
-.accept-btn,
-.delete-btn,
-.bill-btn{
+.accept-btn, .delete-btn, .bill-btn {
     width: 25%;
     background: gray;
     color: white;
     border: 1px solid gray;
 }
 
-.accept-btn:hover{
+.accept-btn:hover {
     background: #237804;
     border: 1px solid #237804;
 }
 
-.delete-btn:hover{
+.delete-btn:hover {
     background: red;
     border: 1px solid red;
 }
 
-.received-cash{
+.received-cash {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -492,22 +452,19 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 35%;
-    /*width: 100%;*/
     background: white;
     padding: 3px;
     margin-bottom: 7px;
     margin-top: 7px;
 }
 
-.cash-for-association,
-.cash-for-projects{
+.cash-for-association, .cash-for-projects {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /*height: 90%;*/
     width: 48%;
     background: white;
     padding: 3px;
@@ -524,7 +481,7 @@
     border-radius: 5px;
 }
 
-.input-avu3{
+.input-avu3 {
     width: 54%;
     height: 25px;
     background: white;
@@ -536,7 +493,7 @@
     margin-bottom: 4px;
 }
 
-.btn-container-received-cash{
+.btn-container-received-cash {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -544,7 +501,7 @@
     padding-right: 30px;
 }
 
-.received-items{
+.received-items {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -552,14 +509,13 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 30%;
-    /*width: 100%;*/
     background: white;
     padding-right: 5px;
     padding-left: 5px;
     margin-bottom: 5px;
 }
 
-.subscriptions{
+.subscriptions {
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
@@ -567,30 +523,25 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 30%;
-    /*width: 100%;*/
     background: white;
     padding-right: 5px;
     padding-left: 5px;
     margin-top: 5px;
-    /*margin-bottom: 8px;*/
 }
 
-.subscriptions-filter-field{
+.subscriptions-filter-field {
     height: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*margin-top: 0.8em;*/
-    /*margin-bottom: 0.8em;*/
     border: 1px solid lightgray;
     border-radius: 5px;
-    /*padding: 2px;*/
     margin-right: 5px;
     margin-left: 5px;
 }
 
-.input-avu4{
+.input-avu4 {
     width: 30%;
     height: 25px;
     background: white;
@@ -603,22 +554,21 @@
     margin-top: 2px;
 }
 
-.subscriptions-filter-btn{
+.subscriptions-filter-btn {
     width: 15%;
     margin-top: 2px;
     background: gray;
     border: 1px solid gray;
 }
 
-.subscriptions-gen-repo-btn{
+.subscriptions-gen-repo-btn {
     width: 28%;
     margin-top: 2px;
     background: gray;
     border: 1px solid gray;
-    /*height: 100%;*/
 }
 
-.subs-filter-btn-container{
+.subs-filter-btn-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -628,7 +578,7 @@
     margin-bottom: 5px;
 }
 
-.subscriptions-container{
+.subscriptions-container {
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-evenly;
@@ -636,37 +586,31 @@
     overflow: hidden;
     overflow-y: scroll;
     height: 50%;
-    margin:5px;
+    margin: 5px;
     padding: 3px;
 }
 
-.subscription-item{
+.subscription-item {
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 45%;
-    /*width: 100%;*/
     background: white;
     padding: 3px;
     margin-bottom: 5px;
 }
 
-.sec-6{
+.sec-6 {
     border: 1px solid lightgray;
     border-radius: 5px;
     width: 32%;
     text-align: center;
 }
 
-.available-items-card:hover,
-.cash-transfers-item:hover,
-.item-transfers-item:hover,
-.to-be-acc-cash-item:hover,
-.to-be-acc-items-item:hover,
-.received-cash-item:hover,
-.subscription-item:hover{
+.available-items-card:hover, .cash-transfers-item:hover, .item-transfers-item:hover, .to-be-acc-cash-item:hover,
+.to-be-acc-items-item:hover, .received-cash-item:hover, .subscription-item:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
 }

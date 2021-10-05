@@ -1,147 +1,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
 .main-container {
-  display: flex;
-  flex-direction: column;
-  height: 15vh;
-  margin-top: 5vh;
-  padding-left: 6.7em;
-  background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
 }
 
 .breadcrumb {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .main-title {
-  font-weight: 700;
-  font-size: 2em;
-  margin: 0;
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
 }
+
 .container {
-  background: #fafafa;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 6.7em;
+    background: #fafafa;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 6.7em;
 }
+
 .container-02 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid lightgray;
 }
+
 .card {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  box-shadow: 1px 2px 4px lightgray;
-  border-radius: 10px;
-  padding: 20px;
-  transition: all ease-in-out 0.5s;
-  margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all ease-in-out 0.5s;
+    margin-top: 5px;
 }
+
 .box {
-  display: flex;
-  height: 15%;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  color: gray;
+    display: flex;
+    height: 15%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    color: gray;
 }
+
 .box-01 {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  padding: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 5px;
 }
+
 .col-03 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
 }
+
 .col-04 {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-  margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 5px;
 }
+
 .input-field {
-  width: 100%;
-  height: 40px;
-  background: white;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  color: rgb(68, 37, 37);
-  font-family: "Nunito", serif;
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: rgb(68, 37, 37);
+    font-family: "Nunito", serif;
 }
+
 ::-webkit-file-upload-button {
-  background: gray;
-  color: white;
-  padding: 8px;
-  font-size: 12px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  border-color: black;
-  transition: all 0.15s ease;
-  /* letter-spacing: 1px; */
-  box-sizing: border-box;
-  outline: none;
-  cursor: pointer;
-  line-height: 1.5;
-  /* display: inline-block; */
-  /* font-weight: bold; */
-  text-align: center;
-  /* white-space: nowrap; */
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid transparent;
-  width: 30%;
-  /* margin-left: 35%; */
-  height: 35px;
-  font-family: "Nunito", serif;
+    background: gray;
+    color: white;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    width: 30%;
+    height: 35px;
+    font-family: "Nunito", serif;
 }
 
 ::-webkit-file-upload-button:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  border-color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: black;
 }
+
 .slip-attachment {
-  border-radius: 5px;
-  color: gray;
-  font-family: "Nunito", serif;
-  background: white;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    background: white;
 }
 
 .input-field:hover {
-  border-color: #ffccc7;
+    border-color: #ffccc7;
 }
+
 .label {
-  color: rgb(36, 32, 32);
+    color: rgb(36, 32, 32);
 }
+
 .btn {
-  cursor: pointer;
-  border-radius: 5px;
-  color: white;
-  transition: all ease-in-out 0.1s;
-  height: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
 }
-.submit-btn,
-.cancel-btn {
-  width: 25%;
-  background: #595959;
-  border: 1px solid #595959;
+
+.submit-btn, .cancel-btn {
+    width: 25%;
+    background: #595959;
+    border: 1px solid #595959;
 }
 
 .submit-btn:hover {
-  background: #237804;
-  border: 1px solid #237804;
+    background: #237804;
+    border: 1px solid #237804;
 }
+
 .cancel-btn:hover {
-  background: #f5222d;
-  border: 1px solid #f5222d;
+    background: #f5222d;
+    border: 1px solid #f5222d;
 }

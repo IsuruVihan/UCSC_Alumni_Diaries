@@ -2,20 +2,17 @@
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
-
-
 <?php include('../components/header.php'); ?>
 
 <div class='main-container'>
     <p class='breadcrumb'>
-        <a href='home.php'>Home</a> / 
+        <a href='home.php'>Home</a> /
         <a href='admin.php'>Admin</a> / Reports
     </p>
     <p class='main-title'>
-    <i class="fas fa-exclamation-triangle"></i> Report Actions
+        <i class="fas fa-exclamation-triangle"></i> Report Actions
     </p>
 </div>
-
 <div class='main-box'>
     <div class='post-reports'>
         <div class='card reports'>
@@ -26,7 +23,8 @@
                 <div class='flexbox-item'>
                     <div class='rdetails'>
                         <div class='propic'>
-                        <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                 class='user-pic' alt='user-pic'/>
                         </div>
                         <div class='reporter'>
                             <div class='reporter-name'>
@@ -36,7 +34,7 @@
                                     </div>
                                 </div>
                                 <div class='lname'>
-                                    <label class='alllabels'>    </label>
+                                    <label class='alllabels'> </label>
                                     <div class='last-name list-details'> Last Name (Reporter)
                                     </div>
                                 </div>
@@ -45,7 +43,7 @@
                                 <div class='id'>
                                     <label class='alllabels'> Reported Post ID </label>
                                     <div class='post-id list-details'> Reported Post ID
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class='owner'>
                                     <label class='alllabels'> Post Owner </label>
@@ -65,11 +63,12 @@
                     <div class='rdelete'>
                         <input type='reset' class='delete-btn' value='Delete'>
                     </div>
-                </div>   
+                </div>
                 <div class='flexbox-item'>
                     <div class='rdetails'>
                         <div class='propic'>
-                        <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                 class='user-pic' alt='user-pic'/>
                         </div>
                         <div class='reporter'>
                             <div class='reporter-name'>
@@ -79,7 +78,7 @@
                                     </div>
                                 </div>
                                 <div class='lname'>
-                                    <label class='alllabels'>    </label>
+                                    <label class='alllabels'> </label>
                                     <div class='last-name list-details'> Last Name (Reporter)
                                     </div>
                                 </div>
@@ -88,7 +87,7 @@
                                 <div class='id'>
                                     <label class='alllabels'> Reported Post ID </label>
                                     <div class='post-id list-details'> Reported Post ID
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class='owner'>
                                     <label class='alllabels'> Post Owner </label>
@@ -106,13 +105,14 @@
                         </div>
                     </div>
                     <div class='rdelete'>
-                    <input type='reset' class='delete-btn' value='Delete'>
+                        <input type='reset' class='delete-btn' value='Delete'>
                     </div>
-                </div> 
+                </div>
                 <div class='flexbox-item'>
                     <div class='rdetails'>
                         <div class='propic'>
-                        <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                 class='user-pic' alt='user-pic'/>
                         </div>
                         <div class='reporter'>
                             <div class='reporter-name'>
@@ -122,7 +122,7 @@
                                     </div>
                                 </div>
                                 <div class='lname'>
-                                    <label class='alllabels'>    </label>
+                                    <label class='alllabels'> </label>
                                     <div class='last-name list-details'> Last Name (Reporter)
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                                 <div class='id'>
                                     <label class='alllabels'> Reported Post ID </label>
                                     <div class='post-id list-details'> Reported Post ID
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class='owner'>
                                     <label class='alllabels'> Post Owner </label>
@@ -149,13 +149,14 @@
                         </div>
                     </div>
                     <div class='rdelete'>
-                    <input type='reset' class='delete-btn' value='Delete'>
+                        <input type='reset' class='delete-btn' value='Delete'>
                     </div>
-                </div>   
+                </div>
                 <div class='flexbox-item'>
                     <div class='rdetails'>
                         <div class='propic'>
-                        <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                 class='user-pic' alt='user-pic'/>
                         </div>
                         <div class='reporter'>
                             <div class='reporter-name'>
@@ -165,7 +166,7 @@
                                     </div>
                                 </div>
                                 <div class='lname'>
-                                    <label class='alllabels'>    </label>
+                                    <label class='alllabels'> </label>
                                     <div class='last-name list-details'> Last Name (Reporter)
                                     </div>
                                 </div>
@@ -174,7 +175,7 @@
                                 <div class='id'>
                                     <label class='alllabels'> Reported Post ID </label>
                                     <div class='post-id list-details'> Reported Post ID
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class='owner'>
                                     <label class='alllabels'> Post Owner </label>
@@ -192,16 +193,12 @@
                         </div>
                     </div>
                     <div class='rdelete'>
-                    <input type='reset' class='delete-btn' value='Delete'>
+                        <input type='reset' class='delete-btn' value='Delete'>
                     </div>
-                </div> 
-
+                </div>
             </div>
         </div>
     </div>
-
-
-
     <div class='comment-reports'>
         <div class='card reports'>
             <div class='title'>
@@ -211,7 +208,8 @@
                 <div class='flexbox-item'>
                     <div class='rdetails'>
                         <div class='propic'>
-                            <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                 class='user-pic' alt='user-pic'/>
                         </div>
                         <div class='c-reporter'>
                             <div class='c-reporter-name'>
@@ -265,7 +263,8 @@
                 <div class='flexbox-item'>
                     <div class='rdetails'>
                         <div class='propic'>
-                            <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                 class='user-pic' alt='user-pic'/>
                         </div>
                         <div class='c-reporter'>
                             <div class='c-reporter-name'>
@@ -319,7 +318,8 @@
                 <div class='flexbox-item'>
                     <div class='rdetails'>
                         <div class='propic'>
-                            <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                 class='user-pic' alt='user-pic'/>
                         </div>
                         <div class='c-reporter'>
                             <div class='c-reporter-name'>
@@ -373,7 +373,8 @@
                 <div class='flexbox-item'>
                     <div class='rdetails'>
                         <div class='propic'>
-                            <img class ='img' src='../assets/images/user-default.png' width='100%' height='' class='user-pic' alt='user-pic' />
+                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                 class='user-pic' alt='user-pic'/>
                         </div>
                         <div class='c-reporter'>
                             <div class='c-reporter-name'>

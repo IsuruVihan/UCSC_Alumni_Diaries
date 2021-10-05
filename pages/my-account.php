@@ -1,4 +1,5 @@
 <?php include('../components/header.php'); ?>
+
 <link rel='stylesheet' href='../assets/styles/my-account.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
@@ -15,7 +16,7 @@
 <div class='my-account'>
     <div class='pic-section'>
         <div class='section-1'>
-            <img src='../assets/images/user-default.png' width='99%' class='user-pic' alt='user-pic' />
+            <img src='../assets/images/user-default.png' width='99%' class='user-pic' alt='user-pic'/>
             <button class='edit-pic-btn btn'>Edit Photo</button>
             <button class='remove-pic-btn btn'>Remove Photo</button>
         </div>
@@ -105,13 +106,13 @@
                     </div>
                 </div>
                 <div class='section-3'>
-                    <input class='input-first-last-name' type='text' placeholder='Enter First Name' />
-                    <input class='input-first-last-name' type='text' placeholder='Enter Last Name' />
+                    <input class='input-first-last-name' type='text' placeholder='Enter First Name'/>
+                    <input class='input-first-last-name' type='text' placeholder='Enter Last Name'/>
                 </div>
                 <div class='section-4-1'>
                     Full Name
                 </div>
-                <input class='input5' type='text' placeholder='Enter Full Name' />
+                <input class='input5' type='text' placeholder='Enter Full Name'/>
                 <div class='section-4-1'>
                     Gender
                 </div>
@@ -123,7 +124,7 @@
                 <div class='section-4-1'>
                     NIC
                 </div>
-                <input class='input5' type='text' placeholder='Enter NIC' />
+                <input class='input5' type='text' placeholder='Enter NIC'/>
                 <div class='section-4-1'>
                     Batch
                 </div>
@@ -138,15 +139,16 @@
                 <div class='section-4-1'>
                     Address
                 </div>
-                <textarea class='input6' id="w3review" name="w3review" rows="4" cols="50" placeholder='Enter Address'></textarea>
+                <textarea class='input6' id="w3review" name="w3review" rows="4" cols="50"
+                          placeholder='Enter Address'></textarea>
                 <div class='section-4-1'>
                     Contact Number
                 </div>
-                <input class='input5' type='text' placeholder='Enter Contact Naumber' />
+                <input class='input5' type='text' placeholder='Enter Contact Naumber'/>
                 <div class='section-4-1'>
                     Email
                 </div>
-                <input class='input5' type='text' placeholder='Enter Email Address' />
+                <input class='input5' type='text' placeholder='Enter Email Address'/>
             </div>
         </div>
         <div class='container-6' id='container-6'>
@@ -230,9 +232,9 @@
                 Password
             </div>
             <div class='section-6'>
-                <input class='input1' type='password' placeholder='Current Password' />
-                <input class='input1' type='password' placeholder='New Password' />
-                <input class='input1' type='password' placeholder='Re-enter New Password' />
+                <input class='input1' type='password' placeholder='Current Password'/>
+                <input class='input1' type='password' placeholder='New Password'/>
+                <input class='input1' type='password' placeholder='Re-enter New Password'/>
             </div>
             <button class='submit-btn btn'>Submit</button>
         </div>
@@ -266,10 +268,10 @@
                     Recharge Account
                 </div>
                 <div class='section-9'>
-                    <input class='input3' type='text' placeholder='Amount' />
+                    <input class='input3' type='text' placeholder='Amount'/>
                 </div>
                 <div class='section-9'>
-                    <input class='input3' type='file' />
+                    <input class='input3' type='file'/>
                 </div>
                 <div class='section-10'>
                     <button class='submit-btn btn'>Submit</button>

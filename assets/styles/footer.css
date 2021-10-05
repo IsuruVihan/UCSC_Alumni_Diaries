@@ -5,13 +5,8 @@
 
 .top {
     display: flex;
-    /*border: 2px solid black;*/
     padding: 2em 4em;
     background: white;
-}
-
-.logo-container {
-
 }
 
 .logo-img {
@@ -20,12 +15,10 @@
 }
 
 .links-container {
-    /*border: 1px solid blue;*/
     flex-grow: 2;
 }
 
 .social-media-container {
-    /*border: 1px solid blue;*/
     flex-grow: 2;
 }
 
@@ -39,7 +32,6 @@
     padding: 0;
     line-height: 1.4em;
     font-size: 1.1em;
-    /*line-height: 1.5em;*/
 }
 
 .footer-list-item {
@@ -47,7 +39,7 @@
     transition: all ease-in-out 0.5s;
 }
 
-.footer-icon  {
+.footer-icon {
     margin-right: 1em;
 }
 
@@ -62,7 +54,6 @@
 }
 
 .copyright {
-    /*border: 2px solid black;*/
     background: white;
     color: gray;
     font-size: 12px;
