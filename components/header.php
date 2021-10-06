@@ -5,6 +5,9 @@
 </head>
 <body>
 
+<!--Database connection-->
+<?php include('../db/db-conn.php'); ?>
+
 <nav class='navbar'>
     <div class='logo-container'>
         <a href='../pages/home.php' class='anchor-tag'>
