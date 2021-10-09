@@ -49,6 +49,11 @@ input {
     border-radius: 5px;
 }
 
+input[type='text'] {
+    padding-left: 20px;
+    color: gray;
+}
+
 .input_box input {
     height: 45px;
     width: 100%;
@@ -59,12 +64,6 @@ input {
     font-size: 0.9rem;
     display: inline-block;
     line-height: normal;
-}
-
-.input_box input::placeholder {
-    color: #aaa;
-    font-weight: 500;
-    font-family: "Nunito", sans-serif;
 }
 
 .details {
@@ -153,6 +152,29 @@ input {
     background-color: #e59797;
 }
 
+select {
+    border-radius: 5px;
+    color: black;
+}
+
 p {
     text-align: center;
+}
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
 }
