@@ -5,6 +5,32 @@
 
 <?php include('../components/header.php'); ?>
 
+<script>
+    $(document).ready(() => {
+        $('#member-account-requests').load("../server/admin-accounts/member-account-requests.php");
+        $('#member-account-requests-filter').submit((event) => {
+            event.preventDefault();
+            const first_name = $('#mem-acc-req-filter-fname').val();
+            const last_name = $('#mem-acc-req-filter-lname').val();
+            const batch = $('#mem-acc-req-filter-batch').val();
+
+            $('#member-account-requests').load("../server/admin-accounts/member-account-requests-filter.php", {
+                first_name: first_name,
+                last_name: last_name,
+                batch: batch
+            });
+        });
+        // $('.acc-req-btn').click((event) => {
+        //     console.log(event.target.id);
+        // });
+    });
+    const ViewDetails = (id) => {
+        $('#details-panel').load('../server/admin-accounts/member-account-request-details.php', {
+            request_id: id
+        });
+    }
+</script>
+
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> /
@@ -20,63 +46,29 @@
             Account Requests
         </div>
         <div class='filter'>
-            <div class='col1'>
-                <input class='input-field' type='text' placeholder='First Name'/>
-                <input class='input-field' type='text' placeholder='Last Name'/>
-                <select class='input-field'>
-                    <option value='All'>All</option>
-                    <option value='2018/2019'>2018/2019</option>
-                    <option value='2018/2019'>2019/2020</option>
-                    <option value='2018/2019'>2020/2021</option>
-                </select>
-            </div>
-            <div class='col2'>
-                <button class='filter-btn btn'>Filter</button>
-            </div>
+            <form id='member-account-requests-filter' class='filter-form'>
+                <div class='col1'>
+                    <input id='mem-acc-req-filter-fname' class='input-field' type='text' placeholder='First Name'/>
+                    <input id='mem-acc-req-filter-lname' class='input-field' type='text' placeholder='Last Name'/>
+                    <select id='mem-acc-req-filter-batch' class='input-field'>
+                        <option value='All'>All</option>
+                        <option value='2018/2019'>2018/2019</option>
+                        <option value='2018/2019'>2019/2020</option>
+                        <option value='2019/2020'>2020/2021</option>
+                    </select>
+                </div>
+                <div class='col2'>
+                    <input type='submit' value='Filter' class='filter-btn btn'>
+                </div>
+            </form>
         </div>
-        <div class='results'>
-            <div class='result' onmouseover="DisplayButtons('acc-req-1')" onmouseout="HideButtons('acc-req-1')">
-                <p class='request-id'>RequestID 1</p>
-                <div class='buttons' id='acc-req-1'>
-                    <button class='view-btn btn'>View</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('acc-req-2')" onmouseout="HideButtons('acc-req-2')">
-                <p class='request-id'>RequestID 2</p>
-                <div class='buttons' id='acc-req-2'>
-                    <button class='view-btn btn'>View</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('acc-req-3')" onmouseout="HideButtons('acc-req-3')">
-                <p class='request-id'>RequestID 3</p>
-                <div class='buttons' id='acc-req-3'>
-                    <button class='view-btn btn' id='acc-req-3'>View</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('acc-req-4')" onmouseout="HideButtons('acc-req-4')">
-                <p class='request-id'>RequestID 4</p>
-                <div class='buttons' id='acc-req-4'>
-                    <button class='view-btn btn' id='acc-req-4'>View</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('acc-req-5')" onmouseout="HideButtons('acc-req-5')">
-                <p class='request-id'>RequestID 5</p>
-                <div class='buttons' id='acc-req-5'>
-                    <button class='view-btn btn' id='acc-req-5'>View</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('acc-req-6')" onmouseout="HideButtons('acc-req-6')">
-                <p class='request-id'>RequestID 6</p>
-                <div class='buttons' id='acc-req-6'>
-                    <button class='view-btn btn' id='acc-req-6'>View</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('acc-req-7')" onmouseout="HideButtons('acc-req-7')">
-                <p class='request-id'>RequestID 7</p>
-                <div class='buttons' id='acc-req-7'>
-                    <button class='view-btn btn' id='acc-req-7'>View</button>
-                </div>
-            </div>
+        <div class='results' id='member-account-requests'>
+<!--            <div class='result' onmouseover="DisplayButtons('acc-req-8')" onmouseout="HideButtons('acc-req-8')">-->
+<!--                <p class='request-id'>RequestID 8</p>-->
+<!--                <div class='buttons' id='acc-req-8'>-->
+<!--                    <button class='acc-req-btn view-btn btn' id='8'>View</button>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
     <div class='card rejected-requests'>
@@ -306,7 +298,10 @@
             </div>
         </div>
     </div>
-    <div class='details'>
+    
+    
+    
+    <div id='details-panel' class='details'>
         <div class='details-title'>
             Details
         </div>
@@ -332,7 +327,7 @@
                 <div class='section-3'>
                     <div class='sec-row-1'>
                         <button class='accept-btn btn'>Accept</button>
-                        <button class='remove-btn btn'>Remove</button>
+                        <button class='remove-btn btn'>Reject</button>
                     </div>
                     <div class='sec-row-2'>
                         <button class='ban-btn btn'>Ban</button>
@@ -341,23 +336,23 @@
                 </div>
             </div>
             <div class='container-2'>
-                <div class='full-name details-field'>Full Name</div>
+                <div class='full-name details-field'></div>
                 <div class='middle-section'>
                     <div class='mid-sec-row'>
-                        <div class='first-name details-field'>First Name</div>
-                        <div class='last-name details-field'>Last Name</div>
+                        <div class='first-name details-field'></div>
+                        <div class='last-name details-field'></div>
                     </div>
                     <div class='mid-sec-row'>
-                        <div class='gender details-field'>Gender</div>
-                        <div class='batch details-field'>Batch</div>
+                        <div class='gender details-field'></div>
+                        <div class='batch details-field'></div>
                     </div>
                     <div class='mid-sec-row'>
-                        <div class='nic details-field'>NIC</div>
-                        <div class='contact-number details-field'>Contact Number</div>
+                        <div class='nic details-field'></div>
+                        <div class='contact-number details-field'></div>
                     </div>
                 </div>
-                <div class='email details-field'>Email</div>
-                <div class='address details-field'>Address</div>
+                <div class='email details-field'></div>
+                <div class='address details-field'></div>
             </div>
         </div>
         <div class='row-2'>
@@ -366,78 +361,6 @@
                     Contributions
                 </div>
                 <div class='list'>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
                     <div class='result'>
                         <div class='project-name'>
                             Project Name
@@ -461,66 +384,15 @@
                             Position
                         </div>
                     </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    
+    
+    
+    
 </div>
 
 <?php include('../components/footer.php'); ?>

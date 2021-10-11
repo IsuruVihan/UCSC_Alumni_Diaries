@@ -400,3 +400,8 @@
     overflow: hidden;
     overflow-y: scroll;
 }
+
+.filter-form {
+    padding: 0;
+    margin: 0;
+}
