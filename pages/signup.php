@@ -10,25 +10,24 @@
             $('#signup-init, #signup-fname, #signup-lname, #signup-nic, #signup-email, #signup-index, #signup-contact,'
                 + '#signup-address').val('');
         });
+        
         $('#signup-form').submit((event) => {
             event.preventDefault();
             let isComplete = true;
             
-            let name_with_initials = $('#signup-init').val();
-            let first_name = $('#signup-fname').val();
-            let last_name = $('#signup-lname').val();
-            let nic = $('#signup-nic').val();
-            let email = $('#signup-email').val();
-            let index = $('#signup-index').val();
-            let contact = $('#signup-contact').val();
-            let gender = $('#signup-gender').val();
-            let batch = $('#signup-batch').val();
-            let address = $('#signup-address').val();
+            const name_with_initials = $('#signup-init').val();
+            const first_name = $('#signup-fname').val();
+            const last_name = $('#signup-lname').val();
+            const nic = $('#signup-nic').val();
+            const email = $('#signup-email').val();
+            const index = $('#signup-index').val();
+            const contact = $('#signup-contact').val();
+            const gender = $('#signup-gender').val();
+            const batch = $('#signup-batch').val();
+            const address = $('#signup-address').val();
             
             $('#signup-init, #signup-fname, #signup-lname, #signup-nic, #signup-email, #signup-index, #signup-contact,'
-                + '#signup-gender, #signup-batch, #signup-address').removeClass('input-error');
-            $('#signup-init, #signup-fname, #signup-lname, #signup-nic, #signup-email, #signup-index, #signup-contact,'
-                + '#signup-gender, #signup-batch, #signup-address').removeClass('input-ok');
+                + '#signup-gender, #signup-batch, #signup-address').removeClass('input-error, input-ok');
 
             if (name_with_initials === '') {
                 $('#signup-init').addClass('input-error');
@@ -87,16 +86,16 @@
             }
             
             $('#signup-message').load("../server/signup/signup-form.php", {
-                name_with_initials: name_with_initials.trim(),
-                first_name: first_name.trim().split(" ").join(""),
-                last_name: last_name.trim().split(" ").join(""),
-                nic: nic.trim().split(" ").join(""),
-                email: email.trim().split(" ").join(""),
-                index: index.trim().split(" ").join(""),
-                contact: contact.trim().split(" ").join(""),
+                name_with_initials: name_with_initials,
+                first_name: first_name,
+                last_name: last_name,
+                nic: nic,
+                email: email,
+                index: index,
+                contact: contact,
                 gender: gender,
                 batch: batch,
-                address: address.trim()
+                address: address
             });
         });
     });
