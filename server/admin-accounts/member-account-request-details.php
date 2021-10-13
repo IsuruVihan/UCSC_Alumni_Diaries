@@ -13,6 +13,7 @@
                 </div>
                 <div class='row-1'>
                     <div class='container-1'>
+                        <!--
                         <div class='section-1'>
                             <img src='../assets/images/user-default.png' width='100%' class='user-pic' alt='user-pic'/>
                             <div class='account-type'>
@@ -30,15 +31,18 @@
                                 Recharge Report
                             </button>
                         </div>
+                        -->
                         <div class='section-3'>
                             <div class='sec-row-1'>
                                 <button class='accept-btn btn'>Accept</button>
                                 <button class='remove-btn btn'>Remove</button>
                             </div>
+                            <!--
                             <div class='sec-row-2'>
                                 <button class='ban-btn btn'>Ban</button>
                                 <button class='unban-btn btn'>Unban</button>
                             </div>
+                            -->
                         </div>
                     </div>
                     <div class='container-2'>
@@ -61,6 +65,7 @@
                         <div class='address details-field'>${row['Address']}</div>
                     </div>
                 </div>
+                <!--
                 <div class='row-2'>
                     <div class='contributions'>
                         <div class='contributions-title'>
@@ -93,8 +98,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             ";
         }
-    } else {
-    
     }

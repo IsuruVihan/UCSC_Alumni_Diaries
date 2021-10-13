@@ -320,39 +320,39 @@
                     <div class='due-date'>
                         Due Date
                     </div>
-                    <button class='recharge-report-btn btn'>
-                        Recharge Report
-                    </button>
+<!--                    <button class='recharge-report-btn btn'>-->
+<!--                        Recharge Report-->
+<!--                    </button>-->
                 </div>
-                <div class='section-3'>
-                    <div class='sec-row-1'>
-                        <button class='accept-btn btn'>Accept</button>
-                        <button class='remove-btn btn'>Reject</button>
-                    </div>
-                    <div class='sec-row-2'>
-                        <button class='ban-btn btn'>Ban</button>
-                        <button class='unban-btn btn'>Unban</button>
-                    </div>
-                </div>
+<!--                <div class='section-3'>-->
+<!--                    <div class='sec-row-1'>-->
+<!--                        <button class='accept-btn btn'>Accept</button>-->
+<!--                        <button class='remove-btn btn'>Reject</button>-->
+<!--                    </div>-->
+<!--                    <div class='sec-row-2'>-->
+<!--                        <button class='ban-btn btn'>Ban</button>-->
+<!--                        <button class='unban-btn btn'>Unban</button>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
             <div class='container-2'>
-                <div class='full-name details-field'></div>
+                <div class='full-name details-field'>Name with Initials</div>
                 <div class='middle-section'>
                     <div class='mid-sec-row'>
-                        <div class='first-name details-field'></div>
-                        <div class='last-name details-field'></div>
+                        <div class='first-name details-field'>First Name</div>
+                        <div class='last-name details-field'>Last Name</div>
                     </div>
                     <div class='mid-sec-row'>
-                        <div class='gender details-field'></div>
-                        <div class='batch details-field'></div>
+                        <div class='gender details-field'>Gender</div>
+                        <div class='batch details-field'>Batch</div>
                     </div>
                     <div class='mid-sec-row'>
-                        <div class='nic details-field'></div>
-                        <div class='contact-number details-field'></div>
+                        <div class='nic details-field'>NIC</div>
+                        <div class='contact-number details-field'>Contact Number</div>
                     </div>
                 </div>
-                <div class='email details-field'></div>
-                <div class='address details-field'></div>
+                <div class='email details-field'>Email</div>
+                <div class='address details-field'>Living Address</div>
             </div>
         </div>
         <div class='row-2'>
@@ -361,14 +361,14 @@
                     Contributions
                 </div>
                 <div class='list'>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
+<!--                    <div class='result'>-->
+<!--                        <div class='project-name'>-->
+<!--                            Project Name-->
+<!--                        </div>-->
+<!--                        <div class='amount'>-->
+<!--                            Amount-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
             <div class='involved-projects'>
@@ -376,23 +376,18 @@
                     Involved Projects
                 </div>
                 <div class='list'>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
+<!--                    <div class='result'>-->
+<!--                        <div class='project-name'>-->
+<!--                            Project Name-->
+<!--                        </div>-->
+<!--                        <div class='position'>-->
+<!--                            Position-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
 </div>
 
 <?php include('../components/footer.php'); ?>
