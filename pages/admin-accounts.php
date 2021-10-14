@@ -29,8 +29,17 @@
             request_id: id
         });
     }
+    const AcceptRequest = (id) => {
+        $('#flash-message').load('../server/admin-accounts/member-account-request-accept.php', {
+            request_id: id
+        });
+    }
+    const RejectRequest = (id) => {
+        console.log(id);
+    }
 </script>
 
+<div id='flash-message' class='flash-message'></div>
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> /

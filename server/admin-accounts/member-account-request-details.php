@@ -6,7 +6,7 @@
     $query = "SELECT * FROM memberaccountrequests WHERE Id='${request_id}'";
     $results = mysqli_query($conn, $query);
     if (mysqli_num_rows($results) > 0) {
-        while($row = mysqli_fetch_assoc($results)) {
+        while ($row = mysqli_fetch_assoc($results)) {
             echo "
                 <div class='details-title'>
                     Details
@@ -34,8 +34,8 @@
                         -->
                         <div class='section-3'>
                             <div class='sec-row-1'>
-                                <button class='accept-btn btn'>Accept</button>
-                                <button class='remove-btn btn'>Remove</button>
+                                <button class='accept-btn btn' onclick=AcceptRequest('$row[Id]')>Accept</button>
+                                <button class='remove-btn btn' onclick=RejectRequest('$row[Id]')>Remove</button>
                             </div>
                             <!--
                             <div class='sec-row-2'>
