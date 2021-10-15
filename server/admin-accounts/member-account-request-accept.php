@@ -62,7 +62,7 @@
                     '${row['ContactNumber']}',
                     '${row['Batch']}',
                     '${row['IndexNumber']}',
-                    'assets/images/user-default.png',
+                    '../assets/images/user-default.png',
                     '${random_password_encrypted}',
                     'Member',
                     'Monthly',
