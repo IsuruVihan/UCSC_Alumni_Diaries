@@ -32,7 +32,8 @@
             $subject = "Member account request accepted";
             $headers = "From: ucsc.alumni.diaries@gmail.com";
             if (mail($to, $subject, $body, $headers)) {
-                $dueDate = date('Y-m-d H:i:s');
+                $timestamp = date('Y-m-d H:i:s');
+                $dueTimeStamp = date('Y-m-d H:i:s', strtotime( $timestamp . " +1 month"));
                 $query = "
                 INSERT INTO registeredmembers (
                     Email,
@@ -62,10 +63,10 @@
                     '${row['Batch']}',
                     '${row['IndexNumber']}',
                     'assets/images/user-default.png',
-                    '${random_password}',
+                    '${random_password_encrypted}',
                     'Member',
                     'Monthly',
-                    '${dueDate}'
+                    '${dueTimeStamp}'
                 )";
                 if (mysqli_query($conn, $query)) {
                     $query = "DELETE FROM memberaccountrequests WHERE Id='${row['Id']}'";

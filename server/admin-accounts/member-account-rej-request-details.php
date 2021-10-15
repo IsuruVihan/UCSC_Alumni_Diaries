@@ -35,7 +35,7 @@
                         <div class='section-3'>
                             <div class='sec-row-1'>
                                 <button class='accept-btn btn' onclick=AcceptRequest('$row[Id]')>Accept</button>
-                                <button class='remove-btn btn' onclick=RejectRequest('$row[Id]')>Reject</button>
+                                <button class='remove-btn btn' onclick=DeleteRequest('$row[Id]')>Delete</button>
                             </div>
                             <!--
                             <div class='sec-row-2'>

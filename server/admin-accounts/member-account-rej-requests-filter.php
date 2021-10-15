@@ -5,7 +5,7 @@
     $first_name = preg_replace('/\s+/', '', trim($_POST['first_name']));
     $last_name = preg_replace('/\s+/', '', trim($_POST['last_name']));
     
-    $query = "SELECT * FROM memberaccountrequests WHERE isRejected='0'";
+    $query = "SELECT * FROM memberaccountrequests WHERE isRejected='1'";
     
     if ($batch !== 'All') {
         $query .= " AND Batch='${batch}'";

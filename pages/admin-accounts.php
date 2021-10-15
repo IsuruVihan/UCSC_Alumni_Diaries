@@ -8,6 +8,7 @@
 <script>
     $(document).ready(() => {
         $('#member-account-requests').load("../server/admin-accounts/member-account-requests.php");
+        $('#member-account-rej-requests').load("../server/admin-accounts/member-account-rej-requests.php");
         $('#member-account-requests-filter').submit((event) => {
             event.preventDefault();
             const first_name = $('#mem-acc-req-filter-fname').val();
@@ -15,6 +16,18 @@
             const batch = $('#mem-acc-req-filter-batch').val();
 
             $('#member-account-requests').load("../server/admin-accounts/member-account-requests-filter.php", {
+                first_name: first_name,
+                last_name: last_name,
+                batch: batch
+            });
+        });
+        $('#member-account-rej-requests-filter').submit((event) => {
+            event.preventDefault();
+            const first_name = $('#mem-acc-rej-req-filter-fname').val();
+            const last_name = $('#mem-acc-rej-req-filter-lname').val();
+            const batch = $('#mem-acc-rej-req-filter-batch').val();
+
+            $('#member-account-rej-requests').load("../server/admin-accounts/member-account-rej-requests-filter.php", {
                 first_name: first_name,
                 last_name: last_name,
                 batch: batch
@@ -29,13 +42,25 @@
             request_id: id
         });
     }
+    const ViewRejectedRequestDetails = (id) => {
+        $('#details-panel').load('../server/admin-accounts/member-account-rejected-request-details.php', {
+            request_id: id
+        });
+    }
     const AcceptRequest = (id) => {
         $('#flash-message').load('../server/admin-accounts/member-account-request-accept.php', {
             request_id: id
         });
     }
     const RejectRequest = (id) => {
-        console.log(id);
+        $('#flash-message').load('../server/admin-accounts/member-account-request-reject.php', {
+            request_id: id
+        });
+    }
+    const DeleteRequest = (id) => {
+        $('#flash-message').load('../server/admin-accounts/member-account-request-delete.php', {
+            request_id: id
+        });
     }
 </script>
 
@@ -61,9 +86,24 @@
                     <input id='mem-acc-req-filter-lname' class='input-field' type='text' placeholder='Last Name'/>
                     <select id='mem-acc-req-filter-batch' class='input-field'>
                         <option value='All'>All</option>
+                        <option value='2004/2005'>2004/2005</option>
+                        <option value='2005/2006'>2005/2006</option>
+                        <option value='2006/2007'>2006/2007</option>
+                        <option value='2007/2008'>2007/2008</option>
+                        <option value='2008/2009'>2008/2009</option>
+                        <option value='2009/2010'>2009/2010</option>
+                        <option value='2010/2011'>2010/2011</option>
+                        <option value='2011/2012'>2011/2012</option>
+                        <option value='2012/2013'>2012/2013</option>
+                        <option value='2013/2014'>2013/2014</option>
+                        <option value='2014/2015'>2014/2015</option>
+                        <option value='2015/2016'>2015/2016</option>
+                        <option value='2016/2017'>2016/2017</option>
+                        <option value='2017/2018'>2017/2018</option>
                         <option value='2018/2019'>2018/2019</option>
-                        <option value='2018/2019'>2019/2020</option>
-                        <option value='2019/2020'>2020/2021</option>
+                        <option value='2019/2020'>2019/2020</option>
+                        <option value='2020/2021'>2020/2021</option>
+                        <option value='2021/2022'>2021/2022</option>
                     </select>
                 </div>
                 <div class='col2'>
@@ -85,21 +125,39 @@
             Rejected Requests
         </div>
         <div class='filter'>
-            <div class='col1'>
-                <input class='input-field' type='text' placeholder='First Name'/>
-                <input class='input-field' type='text' placeholder='Last Name'/>
-                <select class='input-field'>
-                    <option value='All'>All</option>
-                    <option value='2018/2019'>2018/2019</option>
-                    <option value='2018/2019'>2019/2020</option>
-                    <option value='2018/2019'>2020/2021</option>
-                </select>
-            </div>
-            <div class='col2'>
-                <button class='filter-btn btn'>Filter</button>
-            </div>
+            <form id='member-account-rej-requests-filter' class='filter-form'>
+                <div class='col1'>
+                    <input id='mem-acc-rej-req-filter-fname' class='input-field' type='text' placeholder='First Name'/>
+                    <input id='mem-acc-rej-req-filter-lname' class='input-field' type='text' placeholder='Last Name'/>
+                    <select id='mem-acc-rej-req-filter-batch' class='input-field'>
+                        <option value='All'>All</option>
+                        <option value='2004/2005'>2004/2005</option>
+                        <option value='2005/2006'>2005/2006</option>
+                        <option value='2006/2007'>2006/2007</option>
+                        <option value='2007/2008'>2007/2008</option>
+                        <option value='2008/2009'>2008/2009</option>
+                        <option value='2009/2010'>2009/2010</option>
+                        <option value='2010/2011'>2010/2011</option>
+                        <option value='2011/2012'>2011/2012</option>
+                        <option value='2012/2013'>2012/2013</option>
+                        <option value='2013/2014'>2013/2014</option>
+                        <option value='2014/2015'>2014/2015</option>
+                        <option value='2015/2016'>2015/2016</option>
+                        <option value='2016/2017'>2016/2017</option>
+                        <option value='2017/2018'>2017/2018</option>
+                        <option value='2018/2019'>2018/2019</option>
+                        <option value='2019/2020'>2019/2020</option>
+                        <option value='2020/2021'>2020/2021</option>
+                        <option value='2021/2022'>2021/2022</option>
+                    </select>
+                </div>
+                <div class='col2'>
+                    <input type='submit' value='Filter' class='filter-btn btn'>
+                </div>
+            </form>
         </div>
-        <div class='results'>
+        <div class='results' id='member-account-rej-requests'>
+            <!--
             <div class='result' onmouseover="DisplayButtons('rej-req-1')" onmouseout="HideButtons('rej-req-1')">
                 <p class='request-id'>RequestID 1</p>
                 <div class='buttons' id='rej-req-1'>
@@ -107,48 +165,7 @@
                     <button class='delete-btn btn'>Delete</button>
                 </div>
             </div>
-            <div class='result' onmouseover="DisplayButtons('rej-req-2')" onmouseout="HideButtons('rej-req-2')">
-                <p class='request-id'>RequestID 2</p>
-                <div class='buttons' id='rej-req-2'>
-                    <button class='view-btn btn'>View</button>
-                    <button class='delete-btn btn'>Delete</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('rej-req-3')" onmouseout="HideButtons('rej-req-3')">
-                <p class='request-id'>RequestID 3</p>
-                <div class='buttons' id='rej-req-3'>
-                    <button class='view-btn btn'>View</button>
-                    <button class='delete-btn btn'>Delete</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('rej-req-4')" onmouseout="HideButtons('rej-req-4')">
-                <p class='request-id'>RequestID 4</p>
-                <div class='buttons' id='rej-req-4'>
-                    <button class='view-btn btn'>View</button>
-                    <button class='delete-btn btn'>Delete</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('rej-req-5')" onmouseout="HideButtons('rej-req-5')">
-                <p class='request-id'>RequestID 5</p>
-                <div class='buttons' id='rej-req-5'>
-                    <button class='view-btn btn'>View</button>
-                    <button class='delete-btn btn'>Delete</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('rej-req-6')" onmouseout="HideButtons('rej-req-6')">
-                <p class='request-id'>RequestID 6</p>
-                <div class='buttons' id='rej-req-6'>
-                    <button class='view-btn btn'>View</button>
-                    <button class='delete-btn btn'>Delete</button>
-                </div>
-            </div>
-            <div class='result' onmouseover="DisplayButtons('rej-req-7')" onmouseout="HideButtons('rej-req-7')">
-                <p class='request-id'>RequestID 7</p>
-                <div class='buttons' id='rej-req-7'>
-                    <button class='view-btn btn'>View</button>
-                    <button class='delete-btn btn'>Delete</button>
-                </div>
-            </div>
+            -->
         </div>
     </div>
     <div class='card registered'>
