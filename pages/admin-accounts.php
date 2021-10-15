@@ -77,6 +77,11 @@
             request_id: id
         });
     }
+    const RemoveMemberAccount = (email) => {
+        $('#flash-message').load('../server/admin-accounts/registered-member-delete.php', {
+            member_email: email
+        });
+    }
 </script>
 
 <div id='flash-message' class='flash-message'></div>

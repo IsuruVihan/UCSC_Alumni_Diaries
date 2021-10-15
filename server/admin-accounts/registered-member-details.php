@@ -35,8 +35,12 @@
                                 <!--
                                 <button class='accept-btn btn' onclick=AcceptRequest('')>Accept</button>
                                 -->
-                                <button class='remove-btn btn' onclick=RejectRequest('')>Remove</button>
-                                <button class='ban-btn btn'>Ban</button>
+                                <button class='remove-btn btn' onclick=RemoveMemberAccount('${row['Email']}')>
+                                    Remove
+                                </button>
+                                <button class='ban-btn btn'>
+                                    Ban
+                                </button>
                             </div>
                             <!--
                             <div class='sec-row-2'>
