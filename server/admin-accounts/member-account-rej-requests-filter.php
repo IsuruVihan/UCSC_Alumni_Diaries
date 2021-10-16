@@ -20,11 +20,6 @@
     $results = mysqli_query($conn, $query);
     if (mysqli_num_rows($results) > 0) {
         while ($row = mysqli_fetch_assoc($results)) {
-//            <script>
-//            $('.acc-req-btn').click((event) => {
-//                console.log(event.target.id);
-//            });
-//                </script>
             echo "
                 <div
                     class='result'
@@ -33,8 +28,15 @@
                 >
                     <p class='request-id'>RequestID ${row['Id']}</p>
                     <div class='buttons' id='acc-req-${row['Id']}'>
-                        <button onclick=ViewDetails('${row['Id']}') class='view-btn btn acc-req-btn' id='${row['Id']}'>
+                        <button
+                            onclick=ViewRejectedRequestDetails('${row['Id']}')
+                            class='view-btn btn acc-req-btn'
+                            id='${row['Id']}'
+                        >
                             View
+                        </button>
+                        <button onclick=DeleteRequest('${row['Id']}') class='delete-btn btn'>
+                            Delete
                         </button>
                     </div>
                 </div>
