@@ -1,8 +1,10 @@
+<?php include('../server/session.php'); ?>
+
+<?php include('../components/header.php'); ?>
+
 <link rel='stylesheet' href='../assets/styles/home.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
-
-<?php include('../components/header.php'); ?>
 
 <div class='home'>
     <div class='white-space'></div>

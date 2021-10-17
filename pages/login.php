@@ -1,53 +1,84 @@
+<?php include('../server/session.php'); ?>
+
 <?php include '../components/header.php'; ?>
 
 <link rel='stylesheet' type='text/css' href='../assets/styles/login.css'>
+
+<script>
+    $(document).ready(() => {
+        let loginSuccess = false;
+        $('#form').submit((event) => {
+            event.preventDefault();
+            let isComplete = true;
+            
+            const email = $('#email').val();
+            const password = $('#password').val();
+            const rememberMe = $('#remember-me').is(":checked");
+
+            $('#email, #password').removeClass('input-error, input-ok');
+
+            if (email === '') {
+                $('#email').addClass('input-error');
+                isComplete = false;
+            } else {
+                $('#email').addClass('input-ok');
+            }
+            if (password === '') {
+                $('#password').addClass('input-error');
+                isComplete = false;
+            } else {
+                $('#password').addClass('input-ok');
+            }
+
+            if (isComplete) {
+                $('#email, #password').val('').removeClass('input-error, input-ok');
+            }
+            $('#flash-message').load("../server/login/login-submit.php", {
+                email: email,
+                password: password,
+                rememberMe: rememberMe
+            }, (response) => {
+                if (response === "1") {
+                    window.location.replace("http://localhost/UCSC_Alumni_Diaries/pages/home.php");
+                }
+            });
+        });
+    });
+</script>
 
 <div class='login'>
     <div class=img>
         <!-- <img src='../assets/images/logo.jpeg' alt='logo' width='150' height='150'> <br>  -->
     </div>
     <h1 class='title'> Login </h1>
-    <form id='form' action='#' method="POST" class='login-form'>
+    <form id='form' class='login-form'>
         <div class='container1'>
             <div class='labels'>
                 <label>Email</label>
             </div>
-            <div class='input-field'>
-                <input id='email' type='text' placeholder='Enter Email' name='email'/>
-            </div>
+            <input class='input-field' id='email' type='text' name='email'/>
         </div>
         <div class='container2'>
             <div class='labels'>
                 <label>Password</label>
             </div>
-            <div class='input-field'>
-                <input id='password' type='password' placeholder='Enter Password' name='password'/>
-            </div>
+            <input class='input-field' id='password' type='password' name='password'/>
         </div>
-        <div id="error"></div>
-        <div class='check-box' align='left' ;>
-            <input type='checkbox' id='checkbox'>
-            <label for="checkbox"> <b> Remember me </b> </label>
+        <div class='check-box'>
+            <input type='checkbox' id='remember-me'>
+            <label for="remember-me"> <b> Remember me </b> </label>
         </div>
         <br />
-        <table class='logcan'>
-            <tr>
-                <td align='left'>
-                    <input class='btn-solid-login' type='submit' name='' value=' Login  '>
-                </td>
-                <td align='right'>
-                    <input class='btn-solid-cancel' type='reset' name='' value='Cancel'>
-                </td>
-            </tr>
-        </table>
+        <div id='flash-message'></div>
         <br />
-        <center>
-            <a class='loginpagelink' href='forgot_password.php'> <b> Forgot Password? </b> </a> <br>
-            <p><b> Not one of us yet? </b> <a class='loginpagelink' href='signup.php'> <b> Sign Up </b> </a></p>
-        </center>
+        <div class='logcan'>
+            <input class='btn-solid-login' type='submit' value='LOGIN'>
+            <button class='btn-solid-cancel'>CANCEL</button>
+        </div>
+        <br />
+        <a class='loginpagelink' href='forgot_password.php'> <b> Forgot Password? </b> </a> <br>
+        <p><b> Not one of us yet? </b> <a class='loginpagelink' href='signup.php'> <b> Sign Up </b> </a></p>
     </form>
 </div>
-
-<script defer src='../js/login.js'></script>
 
 <?php include('../components/footer.php'); ?>

@@ -1,3 +1,5 @@
+<?php include('../server/session.php'); ?>
+
 <link rel='stylesheet' href='../assets/styles/signup.css'/>
 
 <?php include('../components/header.php'); ?>
