@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!--Database connection-->
 <?php include('../db/db-conn.php'); ?>
 
 <nav class='navbar'>
@@ -63,12 +62,14 @@
             }
         ?>
         <?php
-            if (isset($_SESSION['AccType']) && $_SESSION['AccType'] == "TopBoard") {
-                echo "
+            if (isset($_SESSION['AccType'])) {
+                if ($_SESSION['AccType'] == "TopBoard") {
+                    echo "
                     <li class='link'>
                         <a href='../pages/admin.php' class='anchor-tag'>Admin</a>
                     </li>
                 ";
+                }
             }
         ?>
         <?php
