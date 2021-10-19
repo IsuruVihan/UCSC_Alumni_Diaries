@@ -49,7 +49,7 @@
                     } else {
                         if (document.cookie.includes("Email")) {
                             const d = new Date();
-                            d.setTime(d.getTime() - (31*24*60*60*1000));
+                            d.setTime(d.getTime() - 1);
 
                             document.cookie = "Email=; expires=" + d.toUTCString() + "; path=/";
                             document.cookie = "Password=; expires=" + d.toUTCString() + "; path=/";
