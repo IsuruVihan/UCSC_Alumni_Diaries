@@ -262,3 +262,8 @@
     grid-row-start: row4;
     grid-row-end: row5;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}

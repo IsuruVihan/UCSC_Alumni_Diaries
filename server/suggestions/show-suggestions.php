@@ -28,7 +28,11 @@
                             <img alt='attachment' src='../uploads/suggestions/{$row['PicSrc']}' height='100%'>
                         </div>
                         <div class='box-download box-section'>
-                            <button class='btn download-btn'>Download Attachment</button>
+                            <button class='btn download-btn'>
+                                <a href='../uploads/suggestions/{$row['PicSrc']}' download>
+                                    Download Attachment
+                                </a>
+                            </button>
                             <button class='btn remove-btn'>Delete</button>
                         </div>
                     </div>

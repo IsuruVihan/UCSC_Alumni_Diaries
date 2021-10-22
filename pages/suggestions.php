@@ -12,6 +12,9 @@
     $(document).ready(() => {
         $('#all-suggestions').load("../server/suggestions/show-suggestions.php");
     });
+    const DownloadAttachment = (id) => {
+    
+    }
 </script>
 
 <div class='main-container'>
