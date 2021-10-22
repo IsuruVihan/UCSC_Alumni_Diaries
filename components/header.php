@@ -97,7 +97,7 @@
             if (isset($_SESSION['Email'])) {
                 echo "
                     <li id='logout' class='link'>
-                        <a href='../server/logout/logout.php'>Logout</a>
+                        <a href='../server/logout/logout.php' class='anchor-tag'>Logout</a>
                     </li>
                 ";
             }
