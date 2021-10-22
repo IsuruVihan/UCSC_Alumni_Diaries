@@ -13,7 +13,7 @@
                         <div class='box-email box-section'>${row['Email']}</div>
                         <div class='box-content box-section'>${row['Message']}</div>
                         <div class='box-download2 box-section'>
-                            <button class='btn remove-btn3'>Delete</button>
+                            <button class='btn remove-btn3' onclick=DeleteSuggestion('${row['Id']}')>Delete</button>
                         </div>
                     </div>
                 ";
@@ -29,14 +29,18 @@
                         </div>
                         <div class='box-download box-section'>
                             <button class='btn download-btn'>
-                                <a href='../uploads/suggestions/{$row['PicSrc']}' download>
+                                <a class='download' href='../uploads/suggestions/{$row['PicSrc']}' download>
                                     Download Attachment
                                 </a>
                             </button>
-                            <button class='btn remove-btn'>Delete</button>
+                            <button class='btn remove-btn' onclick=DeleteSuggestion('${row['Id']}')>Delete</button>
                         </div>
                     </div>
                 ";
             }
         }
+    } else {
+        echo "
+        
+        ";
     }

@@ -12,11 +12,15 @@
     $(document).ready(() => {
         $('#all-suggestions').load("../server/suggestions/show-suggestions.php");
     });
-    const DownloadAttachment = (id) => {
-    
+    const DeleteSuggestion = (id) => {
+        $('#flash-message').load("../server/suggestions/delete-suggestion.php", {
+            id: id
+        });
+        setTimeout(() => window.history.go(), 1);
     }
 </script>
 
+<div id='flash-message' class='flash-message'></div>
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> / Suggestions
