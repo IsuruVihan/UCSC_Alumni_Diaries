@@ -265,7 +265,7 @@
     display: none;
     flex-direction: row;
     justify-content: space-between;
-    width: 50%;
+    width: 45%;
     margin-top: 12px;
 }
 
@@ -729,4 +729,22 @@
 .detail {
     color: gray;
     font-weight: bold;
+}
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
 }

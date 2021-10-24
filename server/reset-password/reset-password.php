@@ -10,7 +10,7 @@
         if (empty($password1) || empty($password2)) {
             echo "<span class='message-error'>All fields are required</span>";
         } elseif (!preg_match($regex, $password1)) {
-            echo "<span class='message-error'>Password doesn't met the preferred criteria</span>";
+            echo "<span class='message-error'>Password doesn't meet preferred criteria</span>";
         } elseif (strlen($password1) < 6) {
             echo "<span class='message-error'>Password should contain at-least 6 characters</span>";
         } elseif ($password1 !== $password2) {
