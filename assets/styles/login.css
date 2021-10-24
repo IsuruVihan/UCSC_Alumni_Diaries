@@ -101,13 +101,13 @@ body, .input-field {
     font-weight: bold;
 }
 
-#error {
+/* #error {
     color: #f34e57;
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
-}
+} */
 
 .btn-solid-login {
     width: 80%;
@@ -147,4 +147,26 @@ body, .input-field {
 
 .btn-solid-cancel:hover {
     background-color: #e59797;
+}
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
+}
+
+.error{
+    text-align: center;
 }

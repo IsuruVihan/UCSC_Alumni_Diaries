@@ -2,8 +2,52 @@
 
 <link rel='stylesheet' type='text/css' href='../assets/styles/login.css'>
 
+<script>
+    $(document).ready(() => {
+        $('#login-cancel').click(() => {
+            $('#email, #password').removeClass('input-error, input-ok');
+            $('#email, #password').val('');
+        });
+
+        $('#form').submit((event) => {
+            event.preventDefault();
+            let isComplete = true;
+
+            const login_email = $('#email').val();
+            const login_password = $('#password').val();
+
+            $('#email, #password').removeClass('input-error, input-ok');
+
+            if (login_email === '') {
+                $('#email').addClass('input-error');
+                isComplete = false;
+            } else {
+                $('#email').addClass('input-ok');
+            }
+
+            if (login_password === '') {
+                $('#password').addClass('input-error');
+                isComplete = false;
+            } else {
+                $('#password').addClass('input-ok');
+            }
+
+            if (isComplete) {
+                $('#email, #password').val('');
+                $('#email, #password').removeClass('input-error, input-ok');
+            }
+
+            $('#error-message').load('../server/login/login.php', {
+                login_email: login_email,
+                login_password: login_password,
+            });
+        });
+
+    });
+</script>
+
 <div class='login'>
-    <div class=img>
+    <div class='img'>
         <!-- <img src='../assets/images/logo.jpeg' alt='logo' width='150' height='150'> <br>  -->
     </div>
     <h1 class='title'> Login </h1>
@@ -12,19 +56,20 @@
             <div class='labels'>
                 <label>Email</label>
             </div>
-            <div class='input-field'>
-                <input id='email' type='text' placeholder='Enter Email' name='email'/>
+            <div class='input-field' id='email'>
+                <input type='text' placeholder='Enter Email'/>
             </div>
         </div>
         <div class='container2'>
             <div class='labels'>
                 <label>Password</label>
             </div>
-            <div class='input-field'>
-                <input id='password' type='password' placeholder='Enter Password' name='password'/>
+            <div class='input-field' id='password'>
+                <input type='password' placeholder='Enter Password'/>
             </div>
         </div>
-        <div id="error"></div>
+        <!-- <div id="error"></div> -->
+        <p id='error-message' class='error'> </p>
         <div class='check-box' align='left' ;>
             <input type='checkbox' id='checkbox'>
             <label for="checkbox"> <b> Remember me </b> </label>
@@ -33,10 +78,10 @@
         <table class='logcan'>
             <tr>
                 <td align='left'>
-                    <input class='btn-solid-login' type='submit' name='' value=' Login  '>
+                    <input id='login-submit' class='btn-solid-login' type='submit' name='' value=' Login  '>
                 </td>
                 <td align='right'>
-                    <input class='btn-solid-cancel' type='reset' name='' value='Cancel'>
+                    <input id='login-cancel' class='btn-solid-cancel' type='reset' name='' value='Cancel'>
                 </td>
             </tr>
         </table>
