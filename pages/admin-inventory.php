@@ -1,5 +1,7 @@
 <?php include('../server/session.php'); ?>
 
+<?php include('../components/privileges/admin.php'); ?>
+
 <?php include('../components/header.php'); ?>
 <link rel='stylesheet' href='../assets/styles/inventory-new.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'

@@ -1,5 +1,7 @@
 <?php include('../server/session.php'); ?>
 
+<?php include('../components/privileges/member.php'); ?>
+
 <?php include('../components/header.php'); ?>
 <link rel='stylesheet' href='../assets/styles/private-chat.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'

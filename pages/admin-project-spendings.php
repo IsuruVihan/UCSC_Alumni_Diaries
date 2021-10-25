@@ -1,5 +1,7 @@
 <?php include('../server/session.php'); ?>
 
+<?php include('../components/privileges/admin.php'); ?>
+
 <?php include('../components/header.php'); ?>
 
 <link rel="stylesheet" href="../assets/styles/project-spendings.css">

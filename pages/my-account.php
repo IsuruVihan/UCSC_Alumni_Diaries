@@ -1,5 +1,7 @@
 <?php include('../server/session.php'); ?>
 
+<?php include('../components/privileges/member.php'); ?>
+
 <?php include('../components/header.php'); ?>
 
     <link rel='stylesheet' href='../assets/styles/my-account.css'/>
@@ -34,9 +36,43 @@
                     }
                 });
             });
+            $('#change-user-password').submit((event) => {
+                event.preventDefault();
+                
+                const currentPw = $('#current-pw').val();
+                const newPw = $('#new-pw').val();
+                const confirmPw = $('#confirm-pw').val();
+
+                if (currentPw === '') {
+                    $('#current-pw').addClass('input-error');
+                } else {
+                    $('#current-pw').addClass('input-ok');
+                }
+                if (newPw === '') {
+                    $('#new-pw').addClass('input-error');
+                } else {
+                    $('#new-pw').addClass('input-ok');
+                }
+                if (confirmPw === '') {
+                    $('#confirm-pw').addClass('input-error');
+                } else {
+                    $('#confirm-pw').addClass('input-ok');
+                }
+                
+                $('#flash-message').load("../server/my-account/change-password.php", {
+                    currentPw: currentPw,
+                    newPw: newPw,
+                    confirmPw: confirmPw
+                }, (response) => {
+                    if (response==="1") {
+                        setTimeout(() => window.history.go(), 1);
+                    }
+                });
+            });
         });
     </script>
 
+    <div class='flash-message' id='flash-message'></div>
     <div class='main-container'>
         <p class='breadcrumb'>
             <a href='home.php'>Home</a> / My Account
@@ -50,8 +86,26 @@
         <div class='pic-section'>
             <div class='section-1'>
                 <img src="<?php echo "${_SESSION['PicSrc']}" ?>" width='99%' class='user-pic' alt='user-pic'/>
-                <button class='edit-pic-btn btn'>Edit Photo</button>
-                <button class='remove-pic-btn btn'>Remove Photo</button>
+                <form
+                    action='../server/my-account/edit-photo.php'
+                    method='post'
+                    id='suggestion-form'
+                    enctype='multipart/form-data'
+                    class='profile-pic-form'
+                >
+                    <label class='pic-upload'>
+                        <input class='file-upload-btn' type='file' id='new-photo' name='new-photo'/>
+                        Edit Photo
+                    </label>
+                    <input type='reset' value='Remove Photo' class='remove-pic-btn btn'>
+                    <input
+                        type='submit'
+                        value='Save'
+                        class='submit-btn btn photo-submit'
+                        name='change-pic-submit'
+                        id='change-pic-submit'
+                    >
+                </form>
             </div>
             <div class='section-2 detail'>
                 <?php echo "${_SESSION['AccType']}"; ?>
@@ -263,17 +317,17 @@
             </div>
         </div>
         <div class='right-column'>
-            <div class='password'>
+            <form class='password' id='change-user-password'>
                 <div class='title'>
                     Change Password
                 </div>
                 <div class='section-6'>
-                    <input class='input1' type='password' placeholder='Current Password'/>
-                    <input class='input1' type='password' placeholder='New Password'/>
-                    <input class='input1' type='password' placeholder='Re-enter New Password'/>
+                    <input id='current-pw' class='input1' type='password' placeholder='Current Password'/>
+                    <input id='new-pw' class='input1' type='password' placeholder='New Password'/>
+                    <input id='confirm-pw' class='input1' type='password' placeholder='Re-enter New Password'/>
                 </div>
-                <button class='submit-btn btn'>Submit</button>
-            </div>
+                <input type='submit' class='submit-btn btn'>
+            </form>
             <div class='subscriptions'>
                 <div class='title'>
                     Subscription

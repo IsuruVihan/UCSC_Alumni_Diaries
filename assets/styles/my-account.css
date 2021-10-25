@@ -121,7 +121,7 @@
 
 .remove-pic-btn, .edit-pic-btn {
     width: 100%;
-    margin-top: 0.5em;
+    /*margin-top: 0.5em;*/
     background: gray;
     border: 1px solid gray;
 }
@@ -741,10 +741,52 @@
 
 .message-error {
     color: #f5222d !important;
+    width: 100%;
     font-weight: 600;
+    border: 1px solid #f5222d;
 }
 
 .message-success {
     color: #237804 !important;
     font-weight: 600 !important;
+}
+
+.file-upload-btn {
+    display: none;
+}
+
+.pic-upload {
+    width: 100%;
+    display: inline-flex;
+    border-radius: 5px;
+    background: gray;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9em;
+    height: 25px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-upload:hover {
+    background: #fa8c16;
+    border: 1px #fa8c16;
+}
+
+.profile-pic-form {
+    padding: 0;
+}
+
+.remove-pic-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.photo-submit {
+    width: 100% !important;
+}
+
+.flash-message {
+    width: 100%;
 }
