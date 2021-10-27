@@ -1,4 +1,5 @@
-<link rel='stylesheet' href='../../assets/styles/signup.css'/>
+<!-- <link rel='stylesheet' href='../../assets/styles/signup.css'/> -->
+<link rel='stylesheet' href='./signup.css'>
 
 
 
