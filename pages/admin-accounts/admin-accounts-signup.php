@@ -1,6 +1,6 @@
-<link rel='stylesheet' href='../assets/styles/signup.css'/>
+<link rel='stylesheet' href='../../assets/styles/signup.css'/>
 
-<?php include('../components/header.php'); ?>
+
 
 <div class='conatiner01'>
     <div class='container'>
@@ -82,4 +82,3 @@
     </div>
 </div>
 
-<?php include('../components/footer.php'); ?>
