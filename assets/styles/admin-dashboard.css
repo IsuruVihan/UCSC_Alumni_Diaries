@@ -26,6 +26,7 @@
     grid-template-rows: [row1] 40% [row2] 60% [row3];
     grid-template-columns: [col1] 100% [col2];
     font-family: "Nunito", sans-serif;
+    text-decoration: none;
 }
 
 .card > .title {
@@ -40,6 +41,7 @@
     font-weight: 500;
     font-size: 1.1em;
     border-bottom: 2px solid white;
+    text-decoration: none;
 }
 
 .card > .count {
@@ -52,6 +54,7 @@
     align-items: center;
     font-size: 1.5em;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .card-width-1 {
@@ -88,19 +91,19 @@
 }
 
 .section-1 > .card:hover {
-    background: #ff4d4f;
+    background: #ff7875;
 }
 
 .section-2 > .card:hover {
-    background: #fa541c;
+    background: #ff9c6e;
 }
 
 .section-3 > .card:hover {
-    background: #fa8c16;
+    background: #ffc069;
 }
 
 .section-4 > .card:hover {
-    background: #faad14;
+    background: #ffd666;
 }
 
 .section-1 {

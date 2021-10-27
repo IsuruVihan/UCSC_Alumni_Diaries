@@ -73,14 +73,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2.2em;
+    height: 4em;
 }
 
 .dashboard-link {
     width: 50%;
     height: 100%;
     color: #434343;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 800;
     display: inline-flex;
     justify-content: center;
@@ -89,7 +89,18 @@
 }
 
 .clicked-link {
-    border-bottom: 2px solid slategrey;
+    border-bottom: 3px solid #434343;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .dashboard {
