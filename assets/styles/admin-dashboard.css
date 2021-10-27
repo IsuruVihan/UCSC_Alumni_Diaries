@@ -1,0 +1,132 @@
+.admin-dashboard {
+    height: 99%;
+    display: grid;
+    grid-template-rows: [row1] 32.5% [row2] 32.5% [row3] 32.5% [row4];
+    grid-template-columns: [col1] 49.5% [col2] 49.5% [col3];
+    gap: 10px;
+}
+
+.card-section {
+    box-shadow: 1px 2px 8px lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+.card {
+    cursor: pointer;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 5px;
+    height: 100%;
+    transition: all ease-in-out 0.5s;
+    display: grid;
+    grid-template-rows: [row1] 40% [row2] 60% [row3];
+    grid-template-columns: [col1] 100% [col2];
+    font-family: "Nunito", sans-serif;
+}
+
+.card > .title {
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col1;
+    grid-column-end: col2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1em;
+    border-bottom: 2px solid white;
+}
+
+.card > .count {
+    grid-row-start: row2;
+    grid-row-end: row3;
+    grid-column-start: col1;
+    grid-column-end: col2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.card-width-1 {
+    width: 23%;
+}
+
+.card-width-2 {
+    width: 16%;
+}
+
+.card-width-3 {
+    width: 32.5%;
+}
+
+.card:hover {
+    box-shadow: 1px 2px 4px gray;
+    color: white;
+}
+
+.section-1 > .card {
+    background: #ffccc7;
+}
+
+.section-2 > .card {
+    background: #ffd8bf;
+}
+
+.section-3 > .card {
+    background: #ffe7ba;
+}
+
+.section-4 > .card {
+    background: #fff1b8;
+}
+
+.section-1 > .card:hover {
+    background: #ff4d4f;
+}
+
+.section-2 > .card:hover {
+    background: #fa541c;
+}
+
+.section-3 > .card:hover {
+    background: #fa8c16;
+}
+
+.section-4 > .card:hover {
+    background: #faad14;
+}
+
+.section-1 {
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col1;
+    grid-column-end: col2;
+}
+
+.section-2 {
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col2;
+    grid-column-end: col3;
+}
+
+.section-3 {
+    grid-row-start: row2;
+    grid-row-end: row3;
+    grid-column-start: col1;
+    grid-column-end: col3;
+}
+
+.section-4 {
+    grid-row-start: row3;
+    grid-row-end: row4;
+    grid-column-start: col1;
+    grid-column-end: col3;
+}
