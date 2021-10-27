@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 23, 2021 at 07:30 PM
+-- Host: 127.0.0.1:3306
+-- Generation Time: Sep 04, 2021 at 07:31 AM
 -- Server version: 5.7.31
--- PHP Version: 7.3.31
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,9 +27,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `associationcash`
 --
 
-CREATE TABLE `associationcash` (
+DROP TABLE IF EXISTS `associationcash`;
+CREATE TABLE IF NOT EXISTS `associationcash` (
   `Id` int(11) NOT NULL,
-  `Amount` double NOT NULL DEFAULT '0'
+  `Amount` double NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -45,11 +47,13 @@ INSERT INTO `associationcash` (`Id`, `Amount`) VALUES
 -- Table structure for table `associationitems`
 --
 
-CREATE TABLE `associationitems` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `associationitems`;
+CREATE TABLE IF NOT EXISTS `associationitems` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `ItemName` varchar(50) NOT NULL,
   `Quantity` int(11) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -58,10 +62,12 @@ CREATE TABLE `associationitems` (
 -- Table structure for table `bannedaccounts`
 --
 
-CREATE TABLE `bannedaccounts` (
+DROP TABLE IF EXISTS `bannedaccounts`;
+CREATE TABLE IF NOT EXISTS `bannedaccounts` (
   `Email` varchar(50) NOT NULL,
   `TBEmail` varchar(50) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -70,8 +76,9 @@ CREATE TABLE `bannedaccounts` (
 -- Table structure for table `cashdonations`
 --
 
-CREATE TABLE `cashdonations` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `cashdonations`;
+CREATE TABLE IF NOT EXISTS `cashdonations` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `DonorName` text NOT NULL,
   `DonorEmail` varchar(50) NOT NULL,
   `DonationFor` varchar(100) NOT NULL,
@@ -79,7 +86,8 @@ CREATE TABLE `cashdonations` (
   `PayslipSrc` varchar(50) DEFAULT NULL,
   `Amount` double NOT NULL,
   `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `isAccepted` tinyint(1) NOT NULL
+  `isAccepted` tinyint(1) NOT NULL,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -88,13 +96,15 @@ CREATE TABLE `cashdonations` (
 -- Table structure for table `chatmessages`
 --
 
-CREATE TABLE `chatmessages` (
+DROP TABLE IF EXISTS `chatmessages`;
+CREATE TABLE IF NOT EXISTS `chatmessages` (
   `ChatId` int(11) NOT NULL,
   `isGroupChat` tinyint(1) NOT NULL,
   `SenderEmail` varchar(50) NOT NULL,
   `Message` varchar(500) NOT NULL,
   `PicSrc` varchar(50) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ChatId`,`isGroupChat`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -103,13 +113,15 @@ CREATE TABLE `chatmessages` (
 -- Table structure for table `commentsforposts`
 --
 
-CREATE TABLE `commentsforposts` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `commentsforposts`;
+CREATE TABLE IF NOT EXISTS `commentsforposts` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `PostId` int(11) NOT NULL,
   `OwnerEmail` varchar(50) NOT NULL,
   `Content` varchar(250) NOT NULL,
   `PicSrc` varchar(50) DEFAULT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -118,13 +130,15 @@ CREATE TABLE `commentsforposts` (
 -- Table structure for table `committeechatmessages`
 --
 
-CREATE TABLE `committeechatmessages` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `committeechatmessages`;
+CREATE TABLE IF NOT EXISTS `committeechatmessages` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `ProjectId` int(11) NOT NULL,
   `SenderEmail` varchar(50) NOT NULL,
   `Message` varchar(500) NOT NULL,
   `PicSrc` varchar(50) DEFAULT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -133,10 +147,12 @@ CREATE TABLE `committeechatmessages` (
 -- Table structure for table `committeemembers`
 --
 
-CREATE TABLE `committeemembers` (
+DROP TABLE IF EXISTS `committeemembers`;
+CREATE TABLE IF NOT EXISTS `committeemembers` (
   `Email` varchar(50) NOT NULL,
   `ProjectId` int(11) NOT NULL,
-  `Type` enum('Member','Coordinator') NOT NULL
+  `Type` enum('Member','Coordinator') NOT NULL,
+  PRIMARY KEY (`Email`,`ProjectId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -145,10 +161,12 @@ CREATE TABLE `committeemembers` (
 -- Table structure for table `groupchats`
 --
 
-CREATE TABLE `groupchats` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `groupchats`;
+CREATE TABLE IF NOT EXISTS `groupchats` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `OwnerEmail` varchar(50) NOT NULL,
-  `ParticipantsGroupId` int(11) NOT NULL
+  `ParticipantsGroupId` int(11) NOT NULL,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -157,8 +175,9 @@ CREATE TABLE `groupchats` (
 -- Table structure for table `itemdonations`
 --
 
-CREATE TABLE `itemdonations` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `itemdonations`;
+CREATE TABLE IF NOT EXISTS `itemdonations` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `DonorName` text NOT NULL,
   `DonorEmail` varchar(50) NOT NULL,
   `DonationFor` varchar(100) NOT NULL,
@@ -166,7 +185,8 @@ CREATE TABLE `itemdonations` (
   `Quantity` int(11) NOT NULL,
   `BillSrc` varchar(50) NOT NULL,
   `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `isAccepted` tinyint(1) NOT NULL
+  `isAccepted` tinyint(1) NOT NULL,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -175,8 +195,9 @@ CREATE TABLE `itemdonations` (
 -- Table structure for table `memberaccountrequests`
 --
 
-CREATE TABLE `memberaccountrequests` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `memberaccountrequests`;
+CREATE TABLE IF NOT EXISTS `memberaccountrequests` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Email` varchar(100) NOT NULL,
   `FirstName` text NOT NULL,
   `LastName` text NOT NULL,
@@ -186,8 +207,9 @@ CREATE TABLE `memberaccountrequests` (
   `NIC` varchar(20) NOT NULL,
   `ContactNumber` varchar(20) NOT NULL,
   `Batch` enum('2004/2005','2005/2006','2006/2007','2007/2008','2008/2009','2009/2010','2010/2011','2011/2012','2012/2013','2013/2014','2014/2015','2015/2016','2016/2017','2017/2018','2018/2019','2019/2020','2020/2021','2021/2022') NOT NULL,
-  `IndexNumber` varchar(20) NOT NULL,
-  `isRejected` tinyint(1) NOT NULL DEFAULT '0'
+  `IndexNumber` bigint(20) NOT NULL,
+  `isRejected` tinyint(1) NOT NULL,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -196,19 +218,14 @@ CREATE TABLE `memberaccountrequests` (
 -- Table structure for table `notifications`
 --
 
-CREATE TABLE `notifications` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `notifications`;
+CREATE TABLE IF NOT EXISTS `notifications` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Email` varchar(50) NOT NULL,
   `Message` varchar(250) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `notifications`
---
-
-INSERT INTO `notifications` (`Id`, `Email`, `Message`, `Timestamp`) VALUES
-(1, 'isuruvihan@gmail.com', 'Hello World!', '2021-10-14 09:56:59');
 
 -- --------------------------------------------------------
 
@@ -216,9 +233,11 @@ INSERT INTO `notifications` (`Id`, `Email`, `Message`, `Timestamp`) VALUES
 -- Table structure for table `participantgroups`
 --
 
-CREATE TABLE `participantgroups` (
+DROP TABLE IF EXISTS `participantgroups`;
+CREATE TABLE IF NOT EXISTS `participantgroups` (
   `GroupChatId` int(11) NOT NULL,
-  `UserEmail` varchar(50) NOT NULL
+  `UserEmail` varchar(50) NOT NULL,
+  PRIMARY KEY (`GroupChatId`,`UserEmail`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -227,13 +246,15 @@ CREATE TABLE `participantgroups` (
 -- Table structure for table `posts`
 --
 
-CREATE TABLE `posts` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE IF NOT EXISTS `posts` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `OwnerEmail` varchar(50) NOT NULL,
   `Content` varchar(1000) NOT NULL,
   `PicSrc` varchar(50) DEFAULT NULL,
   `isImportant` tinyint(1) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -242,10 +263,12 @@ CREATE TABLE `posts` (
 -- Table structure for table `privatechats`
 --
 
-CREATE TABLE `privatechats` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `privatechats`;
+CREATE TABLE IF NOT EXISTS `privatechats` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `OwnerEmail` varchar(50) NOT NULL,
-  `GuestEmail` varchar(50) NOT NULL
+  `GuestEmail` varchar(50) NOT NULL,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -254,9 +277,11 @@ CREATE TABLE `privatechats` (
 -- Table structure for table `projectcash`
 --
 
-CREATE TABLE `projectcash` (
+DROP TABLE IF EXISTS `projectcash`;
+CREATE TABLE IF NOT EXISTS `projectcash` (
   `ProjectId` int(11) NOT NULL,
-  `Amount` double NOT NULL
+  `Amount` double NOT NULL,
+  PRIMARY KEY (`ProjectId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -265,12 +290,14 @@ CREATE TABLE `projectcash` (
 -- Table structure for table `projectcashspendings`
 --
 
-CREATE TABLE `projectcashspendings` (
+DROP TABLE IF EXISTS `projectcashspendings`;
+CREATE TABLE IF NOT EXISTS `projectcashspendings` (
   `ProjectId` int(11) NOT NULL,
   `SpentAmount` double NOT NULL,
   `Description` varchar(250) NOT NULL,
   `BillSrc` varchar(50) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ProjectId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -279,11 +306,13 @@ CREATE TABLE `projectcashspendings` (
 -- Table structure for table `projectitems`
 --
 
-CREATE TABLE `projectitems` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `projectitems`;
+CREATE TABLE IF NOT EXISTS `projectitems` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `ProjectId` int(11) NOT NULL,
   `ItemName` varchar(50) NOT NULL,
-  `Quantity` int(11) NOT NULL
+  `Quantity` int(11) NOT NULL,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -292,12 +321,14 @@ CREATE TABLE `projectitems` (
 -- Table structure for table `projectitemspendings`
 --
 
-CREATE TABLE `projectitemspendings` (
+DROP TABLE IF EXISTS `projectitemspendings`;
+CREATE TABLE IF NOT EXISTS `projectitemspendings` (
   `ItemId` int(11) NOT NULL,
   `SpentQuantity` int(11) NOT NULL,
   `Description` varchar(250) NOT NULL,
   `BillSrc` varchar(50) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ItemId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -306,12 +337,14 @@ CREATE TABLE `projectitemspendings` (
 -- Table structure for table `projects`
 --
 
-CREATE TABLE `projects` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `projects`;
+CREATE TABLE IF NOT EXISTS `projects` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(100) NOT NULL,
   `Description` varchar(250) NOT NULL,
   `Status` enum('NotStartedYet','Ongoing','Closed','Completed') NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -320,10 +353,12 @@ CREATE TABLE `projects` (
 -- Table structure for table `reactsforcomments`
 --
 
-CREATE TABLE `reactsforcomments` (
+DROP TABLE IF EXISTS `reactsforcomments`;
+CREATE TABLE IF NOT EXISTS `reactsforcomments` (
   `UserEmail` varchar(50) NOT NULL,
   `CommentId` int(11) NOT NULL,
-  `ReactType` enum('Like','Dislike') NOT NULL
+  `ReactType` enum('Like','Dislike') NOT NULL,
+  PRIMARY KEY (`UserEmail`,`CommentId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -332,10 +367,12 @@ CREATE TABLE `reactsforcomments` (
 -- Table structure for table `reactsforposts`
 --
 
-CREATE TABLE `reactsforposts` (
+DROP TABLE IF EXISTS `reactsforposts`;
+CREATE TABLE IF NOT EXISTS `reactsforposts` (
   `UserEmail` varchar(50) NOT NULL,
   `PostId` int(11) NOT NULL,
-  `ReactType` enum('Like','Dislike') NOT NULL
+  `ReactType` enum('Like','Dislike') NOT NULL,
+  PRIMARY KEY (`UserEmail`,`PostId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -344,7 +381,8 @@ CREATE TABLE `reactsforposts` (
 -- Table structure for table `registeredmembers`
 --
 
-CREATE TABLE `registeredmembers` (
+DROP TABLE IF EXISTS `registeredmembers`;
+CREATE TABLE IF NOT EXISTS `registeredmembers` (
   `Email` varchar(50) NOT NULL,
   `FirstName` text NOT NULL,
   `LastName` text NOT NULL,
@@ -359,15 +397,9 @@ CREATE TABLE `registeredmembers` (
   `Password` varchar(100) NOT NULL,
   `AccType` enum('Member','TopBoard') NOT NULL,
   `SubscriptionType` enum('Monthly','Anually') NOT NULL,
-  `SubscriptionDue` timestamp NOT NULL
+  `SubscriptionDue` timestamp NOT NULL,
+  PRIMARY KEY (`Email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `registeredmembers`
---
-
-INSERT INTO `registeredmembers` (`Email`, `FirstName`, `LastName`, `NameWithInitials`, `Gender`, `Address`, `NIC`, `ContactNumber`, `Batch`, `IndexNumber`, `PicSrc`, `Password`, `AccType`, `SubscriptionType`, `SubscriptionDue`) VALUES
-('isuruvihan@gmail.com', 'Isuru', 'Harischandra', 'Isuru Vihan Harischandra', 'Male', '634/21, Jayanthi Road (Greenside Gardens), Athurugiriya', '992462698v', '0768036130', '2004/2005', 19020333, '../assets/images/user-default.png', '475844e2521659102b90600c3e7c2617', 'TopBoard', 'Monthly', '2021-11-17 09:58:36');
 
 -- --------------------------------------------------------
 
@@ -375,12 +407,14 @@ INSERT INTO `registeredmembers` (`Email`, `FirstName`, `LastName`, `NameWithInit
 -- Table structure for table `reportsforcomments`
 --
 
-CREATE TABLE `reportsforcomments` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `reportsforcomments`;
+CREATE TABLE IF NOT EXISTS `reportsforcomments` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `CommentId` int(11) NOT NULL,
   `OwnerEmail` varchar(50) NOT NULL,
   `Content` varchar(500) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -389,12 +423,14 @@ CREATE TABLE `reportsforcomments` (
 -- Table structure for table `reportsforposts`
 --
 
-CREATE TABLE `reportsforposts` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `reportsforposts`;
+CREATE TABLE IF NOT EXISTS `reportsforposts` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `PostId` int(11) NOT NULL,
   `OwnerEmail` varchar(50) NOT NULL,
   `Content` varchar(500) NOT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -403,9 +439,11 @@ CREATE TABLE `reportsforposts` (
 -- Table structure for table `starredposts`
 --
 
-CREATE TABLE `starredposts` (
+DROP TABLE IF EXISTS `starredposts`;
+CREATE TABLE IF NOT EXISTS `starredposts` (
   `Email` varchar(50) NOT NULL,
-  `PostId` int(11) NOT NULL
+  `PostId` int(11) NOT NULL,
+  PRIMARY KEY (`Email`,`PostId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -414,13 +452,15 @@ CREATE TABLE `starredposts` (
 -- Table structure for table `subscriptionsdone`
 --
 
-CREATE TABLE `subscriptionsdone` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `subscriptionsdone`;
+CREATE TABLE IF NOT EXISTS `subscriptionsdone` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Email` varchar(50) NOT NULL,
   `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `DonatedFrom` enum('Bank','PayHere') NOT NULL,
   `PayslipSrc` varchar(50) DEFAULT NULL,
-  `isAccepted` tinyint(1) NOT NULL DEFAULT '0'
+  `isAccepted` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -429,12 +469,14 @@ CREATE TABLE `subscriptionsdone` (
 -- Table structure for table `subscriptiontypes`
 --
 
-CREATE TABLE `subscriptiontypes` (
-  `Id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `subscriptiontypes`;
+CREATE TABLE IF NOT EXISTS `subscriptiontypes` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `TypeName` text NOT NULL,
   `Amount` double NOT NULL,
-  `Duration` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `Duration` int(11) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `subscriptiontypes`
@@ -450,299 +492,16 @@ INSERT INTO `subscriptiontypes` (`Id`, `TypeName`, `Amount`, `Duration`) VALUES
 -- Table structure for table `suggestions`
 --
 
-CREATE TABLE `suggestions` (
-  `Id` int(11) NOT NULL,
-  `Name` varchar(100) NOT NULL,
+DROP TABLE IF EXISTS `suggestions`;
+CREATE TABLE IF NOT EXISTS `suggestions` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Email` varchar(100) NOT NULL,
   `Title` varchar(200) NOT NULL,
   `Message` varchar(1000) NOT NULL,
-  `PicSrc` varchar(50) DEFAULT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `PicSrc` varchar(50) NOT NULL,
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `associationcash`
---
-ALTER TABLE `associationcash`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `associationitems`
---
-ALTER TABLE `associationitems`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `bannedaccounts`
---
-ALTER TABLE `bannedaccounts`
-  ADD PRIMARY KEY (`Email`);
-
---
--- Indexes for table `cashdonations`
---
-ALTER TABLE `cashdonations`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `chatmessages`
---
-ALTER TABLE `chatmessages`
-  ADD PRIMARY KEY (`ChatId`,`isGroupChat`);
-
---
--- Indexes for table `commentsforposts`
---
-ALTER TABLE `commentsforposts`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `committeechatmessages`
---
-ALTER TABLE `committeechatmessages`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `committeemembers`
---
-ALTER TABLE `committeemembers`
-  ADD PRIMARY KEY (`Email`,`ProjectId`);
-
---
--- Indexes for table `groupchats`
---
-ALTER TABLE `groupchats`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `itemdonations`
---
-ALTER TABLE `itemdonations`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `memberaccountrequests`
---
-ALTER TABLE `memberaccountrequests`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `notifications`
---
-ALTER TABLE `notifications`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `participantgroups`
---
-ALTER TABLE `participantgroups`
-  ADD PRIMARY KEY (`GroupChatId`,`UserEmail`);
-
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `privatechats`
---
-ALTER TABLE `privatechats`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `projectcash`
---
-ALTER TABLE `projectcash`
-  ADD PRIMARY KEY (`ProjectId`);
-
---
--- Indexes for table `projectcashspendings`
---
-ALTER TABLE `projectcashspendings`
-  ADD PRIMARY KEY (`ProjectId`);
-
---
--- Indexes for table `projectitems`
---
-ALTER TABLE `projectitems`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `projectitemspendings`
---
-ALTER TABLE `projectitemspendings`
-  ADD PRIMARY KEY (`ItemId`);
-
---
--- Indexes for table `projects`
---
-ALTER TABLE `projects`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `reactsforcomments`
---
-ALTER TABLE `reactsforcomments`
-  ADD PRIMARY KEY (`UserEmail`,`CommentId`);
-
---
--- Indexes for table `reactsforposts`
---
-ALTER TABLE `reactsforposts`
-  ADD PRIMARY KEY (`UserEmail`,`PostId`);
-
---
--- Indexes for table `registeredmembers`
---
-ALTER TABLE `registeredmembers`
-  ADD PRIMARY KEY (`Email`);
-
---
--- Indexes for table `reportsforcomments`
---
-ALTER TABLE `reportsforcomments`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `reportsforposts`
---
-ALTER TABLE `reportsforposts`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `starredposts`
---
-ALTER TABLE `starredposts`
-  ADD PRIMARY KEY (`Email`,`PostId`);
-
---
--- Indexes for table `subscriptionsdone`
---
-ALTER TABLE `subscriptionsdone`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `subscriptiontypes`
---
-ALTER TABLE `subscriptiontypes`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `suggestions`
---
-ALTER TABLE `suggestions`
-  ADD PRIMARY KEY (`Id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `associationitems`
---
-ALTER TABLE `associationitems`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `cashdonations`
---
-ALTER TABLE `cashdonations`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `commentsforposts`
---
-ALTER TABLE `commentsforposts`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `committeechatmessages`
---
-ALTER TABLE `committeechatmessages`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `groupchats`
---
-ALTER TABLE `groupchats`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `itemdonations`
---
-ALTER TABLE `itemdonations`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `memberaccountrequests`
---
-ALTER TABLE `memberaccountrequests`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `notifications`
---
-ALTER TABLE `notifications`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `privatechats`
---
-ALTER TABLE `privatechats`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `projectitems`
---
-ALTER TABLE `projectitems`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `projects`
---
-ALTER TABLE `projects`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `reportsforcomments`
---
-ALTER TABLE `reportsforcomments`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `reportsforposts`
---
-ALTER TABLE `reportsforposts`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `subscriptionsdone`
---
-ALTER TABLE `subscriptionsdone`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `subscriptiontypes`
---
-ALTER TABLE `subscriptiontypes`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `suggestions`
---
-ALTER TABLE `suggestions`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
