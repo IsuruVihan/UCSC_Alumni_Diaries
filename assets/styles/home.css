@@ -151,21 +151,21 @@
 }
 
 .link-1:hover {
-    color: #c41d7f;
-    box-shadow: 2px 4px 8px #c41d7f;
+    color: #ff7875;
+    box-shadow: 1px 2px 4px #ff7875;
 }
 
 .link-2:hover {
-    color: #531dab;
-    box-shadow: 2px 4px 8px #531dab;
+    color: #ff9c6e;
+    box-shadow: 1px 2px 4px #ff9c6e;
 }
 
 .link-3:hover {
-    color: #1d39c4;
-    box-shadow: 2px 4px 8px #1d39c4;
+    color: #ffc069;
+    box-shadow: 1px 2px 4px #ffc069;
 }
 
 .link-4:hover {
-    color: #08979c;
-    box-shadow: 2px 4px 8px #08979c;
+    color: #ffd666;
+    box-shadow: 1px 2px 4px #ffd666;
 }
