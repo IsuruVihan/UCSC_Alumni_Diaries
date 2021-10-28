@@ -23,12 +23,25 @@
         <div class='top'>
             Top Donors
         </div>
-        <div class='header'>
-            <span class='title'>Name</span>
-            <span class='title'>Amount (LKR)</span>
+        <div class='result r-1'>
+            <div class='name'>Member Name</div>
+            <div class='name'>LKR 1000000</div>
         </div>
-        <div class='result'>
-        
+        <div class='result r-2'>
+            <div class='name'>Member Name</div>
+            <div class='name'>LKR 1000000</div>
+        </div>
+        <div class='result r-3'>
+            <div class='name'>Member Name</div>
+            <div class='name'>LKR 1000000</div>
+        </div>
+        <div class='result r-4'>
+            <div class='name'>Member Name</div>
+            <div class='name'>LKR 1000000</div>
+        </div>
+        <div class='result r-5'>
+            <div class='name'>Member Name</div>
+            <div class='name'>LKR 1000000</div>
         </div>
     </div>
 </div>

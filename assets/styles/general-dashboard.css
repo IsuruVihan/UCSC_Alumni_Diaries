@@ -28,6 +28,7 @@
     margin-left: 5px;
     border-radius: 5px;
     padding: 15px;
+    font-family: "Nunito", sans-serif;
 }
 
 .card {
@@ -37,13 +38,13 @@
     font-family: "Nunito", sans-serif;
     border-radius: 5px;
     transition: all ease-in-out 0.5s;
-    background-color: #efdbff;
+    background-color: #ffccc7;
     cursor: pointer;
 }
 
 .card:hover {
     box-shadow: 1px 2px 4px gray;
-    background: #b37feb;
+    background: #ff7875;
     color: white;
 }
 
@@ -86,8 +87,37 @@
     margin-top: 5px;
 }
 
-.section-2 > .header {
-    width: 100%;
+.section-2 > .top {
     box-shadow: 1px 2px 4px lightgray;
-    height: 3em;
+    height: 20%;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #fafafa;
+}
+
+.section-2 > .result {
+    box-shadow: 2px 4px 8px lightgray;
+    margin-top: 10px;
+    height: 12.5%;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    background: #fff1b8;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.section-2 > .result:hover {
+    box-shadow: 1px 2px 4px gray;
+    background: #ffe58f;
+}
+
+.section-2 > .result > .name {
+    font-weight: 500;
 }

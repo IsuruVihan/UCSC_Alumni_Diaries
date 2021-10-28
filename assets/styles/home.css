@@ -134,6 +134,10 @@
     transition: all ease-in-out 0.5s;
 }
 
+.act-link:hover {
+    box-shadow: 1px 2px 4px gray;
+}
+
 .act-title {
     display: flex;
     justify-content: flex-start;
@@ -152,20 +156,16 @@
 
 .link-1:hover {
     color: #ff7875;
-    box-shadow: 1px 2px 4px #ff7875;
 }
 
 .link-2:hover {
     color: #ff9c6e;
-    box-shadow: 1px 2px 4px #ff9c6e;
 }
 
 .link-3:hover {
     color: #ffc069;
-    box-shadow: 1px 2px 4px #ffc069;
 }
 
 .link-4:hover {
     color: #ffd666;
-    box-shadow: 1px 2px 4px #ffd666;
 }
