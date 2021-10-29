@@ -1,26 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-
-.main-container {
-    display: flex;
-    flex-direction: column;
-    height: 15vh;
-    margin-top: 5vh;
-    padding-left: 6.7em;
-    background: #fafafa;
-}
-
-.breadcrumb {
-    cursor: pointer;
-}
-
-.main-title {
-    font-weight: 700;
-    font-size: 2em;
-    margin: 0;
-}
-
-.reports {
-    margin-top: 1em;
+.private-chat {
+    margin-top: 3em;
     margin-left: 6.7em;
     margin-right: 6.7em;
     display: grid;
@@ -35,7 +14,6 @@
     grid-row-end: row2;
     grid-column-start: col1;
     grid-column-end: col2;
-    border-radius: 5px;
     box-shadow: 1px 2px 4px grey;
     padding: 10px;
     display: flex;
@@ -49,7 +27,6 @@
     grid-row-end: row2;
     grid-column-start: col2;
     grid-column-end: col3;
-    border-radius: 5px;
     box-shadow: 1px 2px 4px grey;
     border: none;
 }
@@ -72,9 +49,5 @@
 }
 
 .section-link:hover {
-    background: #096dd9;
-}
-
-.clicked {
-    background: #096dd9;
+    background: blue;
 }
