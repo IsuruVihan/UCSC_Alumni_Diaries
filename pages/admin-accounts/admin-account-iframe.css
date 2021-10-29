@@ -6,12 +6,10 @@ body {
 }
 
 .admin-account-iframe{
-    
     display: grid;
-    grid-template-columns: [col1] 25% [col2] 75% [col3];
+    grid-template-columns: [col1] 20% [col2] 80% [col3];
     grid-template-rows: [row1] 100% [row2];
     column-gap: 5px;
-    
 }
 
 .iframe-nav{
@@ -38,7 +36,6 @@ body {
     border: none;
     border-radius: 10px;
     background-color: white;
-    overflow: hidden;
 }
 .iframe-nav-link {
     border: 1px solid lightgray;
@@ -60,4 +57,26 @@ body {
 
 .iframe-nav-link:hover {
     background: blue;
+}
+
+.contribution-iframe-section{  
+    
+    
+}
+.iframe-nav-2{
+    
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.contribution-iframe-link{
+    text-decoration: none;
+    color: gray;
+}
+.iframe-display-2{
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px lightgray;
+    border:none;
+    background-color: white;
+    
 }

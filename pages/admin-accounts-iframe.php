@@ -1,5 +1,5 @@
 <?php include('../components/header.php'); ?>
-<link rel='stylesheet' href='../assets/styles/admin-accounts.css'/>
+<link rel='stylesheet' href='./admin-accounts/admin-accounts-1.css'/>
 <link rel='stylesheet' href='./admin-accounts/admin-account-iframe.css'>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
@@ -19,14 +19,14 @@
 <div class='admin-accounts'>
     <div class='admin-account-iframe'>
         <div class='iframe-nav'>
-            <a href='./admin-accounts/admin-accounts-signup.php' class='iframe-nav-link' target='iframe'>Create Accounts</a>
-            <a href='./admin-accounts/admin-account-request.php' class='iframe-nav-link' target='iframe'>Account Requests</a>
-            <a href='./admin-accounts/admin-account-rejected.php' class='iframe-nav-link' target='iframe'>Rejected Accounts</a>
-            <a href='./admin-accounts/admin-account-registered.php' class='iframe-nav-link' target='iframe'>Registered Accounts</a>
-            <a href='./admin-accounts/admin-accounts-banned.php' class='iframe-nav-link' target='iframe'>Banned Accounts</a>
+            <a href='./admin-accounts/admin-accounts-signup.php' class='iframe-nav-link' target='iframe'>Create</a>
+            <a href='./admin-accounts/admin-account-request.php' class='iframe-nav-link' target='iframe'>Requests</a>
+            <a href='./admin-accounts/admin-account-rejected.php' class='iframe-nav-link' target='iframe'>Rejected</a>
+            <a href='./admin-accounts/admin-account-registered.php' class='iframe-nav-link' target='iframe'>Registered</a>
+            <a href='./admin-accounts/admin-accounts-banned.php' class='iframe-nav-link' target='iframe'>Banned</a>
         </div>
         
-        <iframe class='iframe-display' src='./admin-accounts/admin-account-request.php' name='iframe' height='100%' width='100%' title="Iframe">
+        <iframe class='iframe-display' src='./admin-accounts/admin-account-registered.php' name='iframe' height='100%' width='100%' title="Iframe">
     
         </iframe>
     </div>
@@ -85,165 +85,15 @@
                 <div class='address details-field'>Address</div>
             </div>
         </div>
-        <div class='row-2'>
-            <div class='contributions'>
-                <div class='contributions-title'>
-                    Contributions
-                </div>
-                <div class='list'>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='amount'>
-                            Amount
-                        </div>
-                    </div>
-                </div>
+
+        <div class='contribution-iframe-section'>
+            <div class='iframe-nav-2'>
+                <a href='./admin-accounts/admin-accounts-contributions.php' class='contribution-iframe-link' target='iframe-2'>Contributions</a>
+                <a href='./admin-accounts/admin-accounts-involved-projects.php' class='contribution-iframe-link' target='iframe-2'>Projects</a>
             </div>
-            <div class='involved-projects'>
-                <div class='involved-projects-title'>
-                    Involved Projects
-                </div>
-                <div class='list'>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                    <div class='result'>
-                        <div class='project-name'>
-                            Project Name
-                        </div>
-                        <div class='position'>
-                            Position
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <iframe class='iframe-display-2' src='./admin-accounts/admin-accounts-involved-projects.php' name='iframe-2' height='100%' width='100%'title="Iframe">
+
+            </iframe>
         </div>
     </div>
 </div>
