@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../assets/styles/post-reports.css'/>
+<link rel='stylesheet' href='../../assets/styles/post-reports.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
@@ -12,8 +12,8 @@
                         <div class='flexbox-item'>
                               <div class='rdetails'>
                                     <div class='propic'>
-                                          <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                                          class='user-pic' alt='user-pic'/>      
+                                          <img class='img' src='../../assets/images/user-default.png' width='100%' height=''
+                                               class='user-pic' alt='user-pic'/>
                                     </div> <!-- propic -->
                                     <div class='reporter'>
                                           <div class='reporter-name'>
@@ -57,8 +57,8 @@
                         <div class='flexbox-item'>
                               <div class='rdetails'>
                                     <div class='propic'>
-                                          <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                                          class='user-pic' alt='user-pic'/>      
+                                          <img class='img' src='../../assets/images/user-default.png' width='100%' height=''
+                                               class='user-pic' alt='user-pic'/>
                                     </div> <!-- propic -->
                                     <div class='reporter'>
                                           <div class='reporter-name'>

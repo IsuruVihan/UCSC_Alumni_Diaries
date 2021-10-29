@@ -16,12 +16,12 @@
 
 <div class='reports'>
     <div class='section-1'>
-        <a href='./post-reports.php' class='section-link' target='iframe'>Post Reports </a>
-        <a href='./comment-reports.php' class='section-link' target='iframe'>Comment Reports </a>
+        <a href='admin-reports/post-reports.php' class='section-link' target='iframe'>Post Reports </a>
+        <a href='admin-reports/comment-reports.php' class='section-link' target='iframe'>Comment Reports </a>
     </div>
     <iframe
         class='section-2'
-        src='./post-reports.php'
+        src='admin-reports/post-reports.php'
         name='iframe'
         height='100%' width='100%'
         title="Iframe"

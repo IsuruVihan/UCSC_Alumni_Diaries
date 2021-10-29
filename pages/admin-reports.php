@@ -17,14 +17,14 @@
 <div class='reports'>
     <div class='section-1'>
         <a
-            href='./post-reports.php'
+            href='admin-reports/post-reports.php'
             id='post-rep-tab'
             class='section-link clicked'
             target='iframe'
             onclick=onClickPostReports()
         >Post Reports</a>
         <a
-            href='./comment-reports.php'
+            href='admin-reports/comment-reports.php'
             id='com-rep-tab'
             class='section-link'
             target='iframe'
@@ -33,7 +33,7 @@
     </div>
     <iframe
             class='section-2'
-            src='./post-reports.php'
+            src='admin-reports/post-reports.php'
             name='iframe'
             height='100%' width='100%'
             title="Iframe"
