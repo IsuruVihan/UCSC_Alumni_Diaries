@@ -19,444 +19,62 @@
     margin: 0;
 }
 
-.main-box {
-    background: #fafafa;
-    margin-bottom: 1.5em;
-    margin-top: 0.2em;
-    height: 100vh;
+.reports {
+    margin-top: 1em;
+    margin-left: 6.7em;
+    margin-right: 6.7em;
     display: grid;
-    grid-template-columns: [col1] 50% [col2] 50% [col3];
-    padding-left: 6.7em;
-    padding-right: 6.7em;
-    font-size: 15px;
+    grid-template-columns: [col1] 20% [col2] 80% [col3];
+    grid-template-rows: [row1] 100% [row2];
+    column-gap: 5px;
+    height: 80vh;
 }
 
-.post-reports {
+.section-1 {
+    grid-row-start: row1;
+    grid-row-end: row2;
     grid-column-start: col1;
     grid-column-end: col2;
-    background: #fafafa;
-    padding-right: 10px;
-}
-
-.card {
-    background: white;
-    height: 94%;
-}
-
-.card, .details {
-    box-shadow: 2px 3px 4px lightgray;
-    border-radius: 10px;
-    padding: 20px;
-    transition: all ease-in-out 0.5s;
-}
-
-.title {
-    font-weight: 600;
-    font-size: 1.2em;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: 10px;
-}
-
-.flexbox-container {
-    border: 2px solid lightgray;
     border-radius: 5px;
+    box-shadow: 1px 2px 4px grey;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    overflow: hidden;
-    overflow-y: scroll;
-    height: 580px;
-    margin: 20px;
+    gap: 10px;
 }
 
-.flexbox-item {
-    width: 96%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    transition: all ease-in-out 0.5s;
-    margin: 5px;
-    border: 2px solid lightgray;
-    padding: 1em 5px;
-}
-
-.rdetails {
-    display: grid;
-    grid-template-columns: [c1] 30% [c2] 70% [c3];
-    padding-right: 5px;
-}
-
-.propic {
-    grid-column-start: c1;
-    grid-column-end: c2;
-}
-
-.reporter {
-    grid-column-start: c2;
-    grid-column-end: c3;
-    display: grid;
-    grid-template-rows: [ro1] 24.5% [ro2] 24.5% [ro3] 51% [ro4];
-}
-
-.reporter-name {
-    grid-row-start: ro1;
-    grid-row-end: ro2;
-    display: grid;
-    grid-template-columns: [cc1] 50% [cc2] 50% [cc3];
-}
-
-.fname {
-    grid-column-start: cc1;
-    grid-column-end: cc2;
-    padding-right: 5px;
-}
-
-.first-name {
-    width: 93%;
-    height: 30px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.list-details {
-    font-family: "Nunito", serif;
-    padding-left: 10px;
-    text-align: center;
-}
-
-.lname {
-    grid-column-start: cc2;
-    grid-column-end: cc3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 5px;
-}
-
-.last-name {
-    width: 93%;
-    height: 30px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 6px;
-    resize: none;
-}
-
-.report-post {
-    grid-row-start: ro2;
-    grid-row-end: ro3;
-    display: grid;
-    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-}
-
-.id {
-    grid-column-start: ccc1;
-    grid-column-end: ccc2;
-    display: flex;
-    flex-direction: column;
-    padding-right: 5px;
-    padding-top: 9px;
-}
-
-.post-id {
-    width: 93%;
-    height: 30px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.owner {
-    grid-column-start: ccc2;
-    grid-column-end: ccc3;
-    display: flex;
-    flex-direction: column;
-    padding-left: 5px;
-    padding-top: 9px;
-}
-
-.post-owner {
-    width: 93%;
-    height: 30px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.cause {
-    grid-row-start: ro3;
-    grid-row-end: ro4;
-    display: grid;
-    grid-template-rows: [rr1] 100% [rr2];
-    padding-top: 6px;
-}
-
-.report-cause {
-    grid-row-start: rr1;
-    grid-row-end: rr2;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    padding-top: 9px;
-}
-
-.the-cause {
-    width: 96.1%;
-    height: 120px;
-    resize: none;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    font-size: 15px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-
-.rdelete {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 6px;
-    padding-top: 10px;
-}
-
-.delete-btn {
-    width: 15%;
-    background: gray;
-    color: white;
-    border: 1px solid gray;
-    border-radius: 5px;
-    cursor: pointer;
-    height: 35px;
-    font-family: 'Nunito', serif;
-}
-
-.delete-btn:hover {
-    background: #f5222d;
-    border-color: #f5222d;
-    color: white;
-}
-
-.comment-reports {
+.section-2 {
+    grid-row-start: row1;
+    grid-row-end: row2;
     grid-column-start: col2;
     grid-column-end: col3;
-    background: #fafafa;
-    padding-left: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px grey;
+    border: none;
 }
 
-.c-reporter {
-    grid-column-start: c2;
-    grid-column-end: c3;
-    display: grid;
-    grid-template-rows: [roo1] 24.5% [roo2] 24.5% [roo3] 24.5% [roo4] 26.5% [roo5];
-}
-
-.c-reporter-name {
-    grid-row-start: roo1;
-    grid-row-end: roo2;
-    display: grid;
-    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-}
-
-.cfname {
-    grid-column-start: ccc1;
-    grid-column-end: ccc2;
-    display: flex;
-    flex-direction: column;
-    padding-right: 5px;
-    padding-top: 6px;
-}
-
-.cfirst-name {
-    width: 93%;
-    height: 30px;
-    background: white;
+.section-link {
     border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    height: 35px;
+    display: inline-flex;
     justify-content: center;
-}
-
-.c-report-post {
-    grid-row-start: roo2;
-    grid-row-end: roo3;
-    display: grid;
-    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-}
-
-.clname {
-    grid-column-start: ccc2;
-    grid-column-end: ccc3;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    padding-left: 5px;
+    background: gray;
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Nunito" ,sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
 }
 
-.clast-name {
-    width: 93%;
-    height: 30px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 7px;
+.section-link:hover {
+    background: #096dd9;
 }
 
-.c-report-comment {
-    grid-row-start: roo2;
-    grid-row-end: roo3;
-    display: grid;
-    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-}
-
-.cid {
-    grid-column-start: ccc1;
-    grid-column-end: ccc2;
-    display: flex;
-    flex-direction: column;
-    padding-right: 5px;
-    padding-top: 8px;
-}
-
-.cpost-id {
-    width: 93%;
-    height: 30px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.cowner {
-    grid-column-start: ccc2;
-    grid-column-end: ccc3;
-    display: flex;
-    flex-direction: column;
-    padding-left: 5px;
-    padding-top: 8px;
-}
-
-.cpost-owner {
-    width: 93%;
-    height: 30px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.commentdetails {
-    grid-row-start: roo3;
-    grid-row-end: roo4;
-    display: grid;
-    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
-}
-
-.rcid {
-    grid-column-start: ccc1;
-    grid-column-end: ccc2;
-    display: flex;
-    flex-direction: column;
-    padding-right: 5px;
-    padding-top: 10px;
-}
-
-.rcowner {
-    grid-column-start: ccc2;
-    grid-column-end: ccc3;
-    display: flex;
-    flex-direction: column;
-    padding-left: 5px;
-    padding-top: 10px;
-}
-
-.rcause {
-    grid-row-start: roo4;
-    grid-row-end: roo5;
-    display: grid;
-    grid-template-rows: [rr1] 100% [rr2];
-}
-
-.report-cause {
-    grid-row-start: rr1;
-    grid-row-end: rr2;
-    display: flex;
-    flex-direction: column;
-    padding-top: 12px;
-}
-
-.thee-cause {
-    width: 96.1%;
-    height: 100px;
-    resize: none;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    font-size: 15px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-
-.alllabels {
-    font-weight: 600;
-    justify-content: left;
-    text-align: left;
-    align-items: left;
+.clicked {
+    background: #096dd9;
 }
