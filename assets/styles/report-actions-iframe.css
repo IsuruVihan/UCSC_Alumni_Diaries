@@ -35,13 +35,13 @@
     grid-row-end: row2;
     grid-column-start: col1;
     grid-column-end: col2;
+    border-radius: 5px;
     box-shadow: 1px 2px 4px grey;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 20px;
-    padding-top: 20px;
+    gap: 10px;
 }
 
 .section-2 {
@@ -49,6 +49,7 @@
     grid-row-end: row2;
     grid-column-start: col2;
     grid-column-end: col3;
+    border-radius: 5px;
     box-shadow: 1px 2px 4px grey;
     border: none;
 }
@@ -71,5 +72,9 @@
 }
 
 .section-link:hover {
-    background: blue;
+    background: #096dd9;
+}
+
+.clicked {
+    background: #096dd9;
 }
