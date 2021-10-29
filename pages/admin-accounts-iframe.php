@@ -26,7 +26,7 @@
             <a href='./admin-accounts/admin-accounts-banned.php' class='iframe-nav-link' target='iframe'>Banned</a>
         </div>
         
-        <iframe class='iframe-display' src='./admin-accounts/admin-account-registered.php' name='iframe' height='100%' width='100%' title="Iframe">
+        <iframe class='iframe-display' src='./admin-accounts/admin-account-rejected.php' name='iframe' height='100%' width='100%' title="Iframe">
     
         </iframe>
     </div>
@@ -86,15 +86,15 @@
             </div>
         </div>
 
-        <div class='contribution-iframe-section'>
-            <div class='iframe-nav-2'>
-                <a href='./admin-accounts/admin-accounts-contributions.php' class='contribution-iframe-link' target='iframe-2'>Contributions</a>
-                <a href='./admin-accounts/admin-accounts-involved-projects.php' class='contribution-iframe-link' target='iframe-2'>Projects</a>
+        <!-- <div class='contribution-iframe-section'> -->
+            <div class='iframe-nav-projectContribution'>
+                <a href='./admin-accounts/admin-accounts-contributions.php' class='contribution-iframe-link fontColorChange' target='iframe-2' id='contributions' onclick="fontColorChanger()" >Contributions</a>
+                <a href='./admin-accounts/admin-accounts-involved-projects.php' class='contribution-iframe-link' target='iframe-2' id='involved-projects' onclick="fontColorChangerProjects()" >Projects</a>
             </div>
-            <iframe class='iframe-display-2' src='./admin-accounts/admin-accounts-involved-projects.php' name='iframe-2' height='100%' width='100%'title="Iframe">
+            <iframe class='iframe-display-projectContribution' src='./admin-accounts/admin-accounts-contributions.php' name='iframe-2' height='100%' width='100%'title="Iframe">
 
             </iframe>
-        </div>
+        <!-- </div> -->
     </div>
 </div>
 

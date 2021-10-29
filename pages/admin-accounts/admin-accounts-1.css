@@ -45,6 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     background: white;
+    height:95%;
 }
 
 .card, .details {
@@ -193,7 +194,6 @@ body {
     grid-row-end: row3;
     margin-right: 5px;
     margin-top: 5px;
-    height: 95%;
 }
 
 .banned {
@@ -387,9 +387,6 @@ body {
 
 .contributions, .involved-projects {
     display: flex;
-    box-shadow: 1px 2px 4px lightgray;
-    border-radius: 5px;
-    
     padding: 10px;
     flex-direction: column;
 }
@@ -414,6 +411,4 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
-    overflow: hidden;
-    overflow-y: scroll;
 }

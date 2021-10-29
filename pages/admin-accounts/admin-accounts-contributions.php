@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="./admin-accounts-1.css">
 
 <div class='contributions'>
-                <div class='contributions-title'>
+                <!-- <div class='contributions-title'>
                     Contributions
-                </div>
+                </div> -->
                 <div class='list'>
                     <div class='result'>
                         <div class='project-name'>

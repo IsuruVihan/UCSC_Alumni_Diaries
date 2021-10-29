@@ -1,7 +1,7 @@
-<link rel='stylesheet' href='../../assets/styles/admin-accounts.css'>
+<link rel='stylesheet' href='./admin-accounts-1.css'>
 <script src='../../js/admin-accounts.js'></script>
 
-<div class='card rejected-requests'>
+    <div class='card rejected-requests'>
         <div class='title'>
             Rejected Requests
         </div>
@@ -66,6 +66,20 @@
             <div class='result' onmouseover="DisplayButtons('rej-req-7')" onmouseout="HideButtons('rej-req-7')">
                 <p class='request-id'>RequestID 7</p>
                 <div class='buttons' id='rej-req-7'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+            <div class='result' onmouseover="DisplayButtons('rej-req-8')" onmouseout="HideButtons('rej-req-8')">
+                <p class='request-id'>RequestID 8</p>
+                <div class='buttons' id='rej-req-8'>
+                    <button class='view-btn btn'>View</button>
+                    <button class='delete-btn btn'>Delete</button>
+                </div>
+            </div>
+            <div class='result' onmouseover="DisplayButtons('rej-req-9')" onmouseout="HideButtons('rej-req-9')">
+                <p class='request-id'>RequestID 9</p>
+                <div class='buttons' id='rej-req-9'>
                     <button class='view-btn btn'>View</button>
                     <button class='delete-btn btn'>Delete</button>
                 </div>

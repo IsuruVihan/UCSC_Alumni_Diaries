@@ -59,12 +59,7 @@ body {
     background: blue;
 }
 
-.contribution-iframe-section{  
-    
-    
-}
-.iframe-nav-2{
-    
+.iframe-nav-projectContribution{
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -72,11 +67,15 @@ body {
 .contribution-iframe-link{
     text-decoration: none;
     color: gray;
+    font-weight: 600;  
 }
-.iframe-display-2{
+.iframe-display-projectContribution{
     border-radius: 5px;
     box-shadow: 1px 2px 4px lightgray;
     border:none;
     background-color: white;
-    
+    margin-bottom: 0.8em;
+}
+.fontColorChange{
+    color:black;
 }
