@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+.main-box {
+    background: #fafafa;
+    height: 96.5%;
+    /* padding-left: 6.7em;
+    padding-right: 6.7em; */
+    display: grid;
+    grid-template-columns: [c1] 100% [c2];
+    margin-bottom: 1em;
+    margin-top: 1em;
+    /* border: red solid 2px; */
+}
+
+
+.left-col {
+    grid-column-start: c1;
+    grid-column-end: c2;
+    background: #fafafa;
+    display: grid;
+    grid-template-rows: [r1] 50% [r2] 50% [r3];
+    padding-right: 5px;
+}
+
+.card {
+    background: white;
+    height: 197%;
+}
+
+.card, .details {
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all ease-in-out 0.5s;
+    font-family: Nunito;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+    /* margin-bottom: 15px; */
+    margin-top: 5px;
+}
+
+.alldetails2 {
+    display: grid;
+    grid-template-rows: [rw1] 10% [rw2] 80% [rw3] 10% [rw4];
+    height: 95%;
+    /* border: red solid 2px; */
+}
+
+.filtermain2 {
+    grid-row-start: rw1;
+    grid-row-end: rw2;
+    display: grid;
+    grid-template-columns: [col1] 12% [col2] 12% [col3] 12% [col4] 12% [col5] 16% [col6] 12% [col7] 12% [col8] 12% [col9];
+}
+
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.list-details {
+    font-family: "Nunito", serif;
+    text-align: center;
+}
+
+.name1 {
+    grid-column-start: col1;
+    grid-column-end: col2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.name2 {
+    grid-column-start: col2;
+    grid-column-end: col3;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fname {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+.lname {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+.thebatch {
+    grid-column-start: col3;
+    grid-column-end: col4;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.batch {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.thesubtype {
+    grid-column-start: col4;
+    grid-column-end: col5;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.stype {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.theemail {
+    grid-column-start: col5;
+    grid-column-end: col6;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.email {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.fro {
+    grid-column-start: col6;
+    grid-column-end: col7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.from {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.from:hover {
+    border-color: #ffccc7;
+}
+
+.t {
+    grid-column-start: col7;
+    grid-column-end: col8;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.to {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.to:hover {
+    border-color: #ffccc7;
+}
+
+.fil {
+    grid-column-start: col8;
+    grid-column-end: col9;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: gray;
+    border: 1px solid gray;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 30px;
+    width: 90%;
+}
+
+.filter-btn:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.flexbox-container2 {
+    grid-row-start: rw2;
+    grid-row-end: rw3;
+    height: 650px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.flexbox-item2 {
+    height: 190px;
+    border-radius: 5px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: [ko1] 15% [ko2] 42.5% [ko3] 42.5% [ko4];
+    grid-template-rows: [ero1] 100% [ero2];
+}
+
+.co1 {
+    grid-column-start: ko1;
+    grid-column-end: ko2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.co2 {
+    grid-column-start: ko2;
+    grid-column-end: ko3;
+    display: grid;
+    grid-template-rows: [ror1] 33.3% [ror2] 33.3% [ror3] 33.3% [ror4];
+}
+
+.allfullname {
+    grid-row-start: ror1;
+    grid-row-end: ror2;
+    display: grid;
+    grid-template-columns: [kk1] 50% [kk2] 50% [kk3];
+    padding-right: 2.5px;
+    padding-left: 2.5px;
+    /* border: solid rebeccapurple 2px; */
+}
+
+.firstname1 {
+    grid-column-start: kk1;
+    grid-column-end: kk2;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.lastname1 {
+    grid-column-start: kk2;
+    grid-column-end: kk3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.namefirst {
+    width: 95%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.namesecond {
+    width: 95%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.alllabels {
+    font-weight: 600;
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+}
+
+.e-address {
+    grid-row-start: ror2;
+    grid-row-end: ror3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    /* border: solid rgb(11, 194, 207) 2px; */
+}
+
+.mail {
+    width: 96.5%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.bills {
+    grid-row-start: ror3;
+    grid-row-end: ror4;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.bill-attachment {
+    width: 96.5%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.col3 {
+    grid-column-start: co3;
+    grid-column-end: co4;
+    display: grid;
+    grid-template-rows: [row1] 33.3% [row2] 33.3% [row3] 33.3% [row4];
+}
+
+.batch-sub {
+    grid-row-start: r1r;
+    grid-row-end: r2r;
+    display: grid;
+    grid-template-columns: [c11] 50% [c22] 50% [c33];
+}
+
+.baat {
+    grid-column-start: c11;
+    grid-column-end: c22;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.suub {
+    grid-column-start: c22;
+    grid-column-end: c33;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.method-amount {
+    grid-row-start: r2r;
+    grid-row-end: r3r;
+    display: grid;
+    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
+    padding-top: 7px;
+}
+
+.me {
+    grid-column-start: ccc1;
+    grid-column-end: ccc2;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.ammount {
+    grid-column-start: ccc2;
+    grid-column-end: ccc3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.timeeestamp {
+    grid-row-start: r3r;
+    grid-row-end: r4r;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    padding-top: 6px;
+}
+
+.time-attachment {
+    width: 97%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.reportgeneratebutton {
+    width: 25%;
+    height: 30px;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.reportgeneratebutton:hover {
+    background: #096dd9;
+    border: 1px solid #096dd9;
+}
+
+.gen-rep-btn {
+    grid-row-start: rw3;
+    grid-row-end: rw4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email:hover {
+    border-color: #ffccc7;
+}
+
+.fname:hover {
+    border-color: #ffccc7;
+}
+
+.lname:hover {
+    border-color: #ffccc7;
+}
+
+.batch:hover {
+    border-color: #ffccc7;
+}
+
+.stype:hover {
+    border-color: #ffccc7;
+}
