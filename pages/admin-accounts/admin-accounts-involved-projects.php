@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./admin-accounts-1.css">
+<link rel="stylesheet" href="../../assets/styles/admin-accounts-1.css">
 
 <div class='involved-projects'>
                 <!-- <div class='involved-projects-title'>

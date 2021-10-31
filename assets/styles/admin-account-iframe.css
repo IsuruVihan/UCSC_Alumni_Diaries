@@ -54,9 +54,11 @@ body {
     transition: all ease-in-out 0.5s;
     margin: 0.8em 0;
 }
-
+.iframe-nav-state{
+    background: #096dd9;
+}
 .iframe-nav-link:hover {
-    background: blue;
+    background: #096dd9;
 }
 
 .iframe-nav-projectContribution{
