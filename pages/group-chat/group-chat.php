@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='group-chat.css'/>
+<link rel='stylesheet' href='../../assets/styles/group-chat-iframe-01.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
@@ -266,7 +266,7 @@
                             <div class='a-last-name'>Last Name</div>
                         </div>
                         <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
+                            <button class="remove-btn btn">Remove</button>
                         </div>
                     </div>
                 </div>
@@ -278,7 +278,7 @@
                             <div class='a-last-name'>Last Name</div>
                         </div>
                         <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
+                            <button class="remove-btn btn">Remove</button>
                         </div>
                     </div>
                 </div>
@@ -290,7 +290,7 @@
                             <div class='a-last-name'>Last Name</div>
                         </div>
                         <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
+                            <button class="remove-btn btn">Remove</button>
                         </div>
                     </div>
                 </div>
@@ -302,7 +302,7 @@
                             <div class='a-last-name'>Last Name</div>
                         </div>
                         <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
+                            <button class="remove-btn btn">Remove</button>
                         </div>
                     </div>
                 </div>
@@ -314,7 +314,7 @@
                             <div class='a-last-name'>Last Name</div>
                         </div>
                         <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
+                            <button class="remove-btn btn">Remove</button>
                         </div>
                     </div>
                 </div>
@@ -326,7 +326,7 @@
                             <div class='a-last-name'>Last Name</div>
                         </div>
                         <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
+                            <button class="remove-btn btn">Remove</button>
                         </div>
                     </div>
                 </div>

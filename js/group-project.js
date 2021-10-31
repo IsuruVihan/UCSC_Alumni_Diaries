@@ -46,6 +46,5 @@ const HideChat = () => {
     document.getElementById('available-users').style.display = "none";
 }
 
-
 const chatScroll = document.getElementById('message-list');
 chatScroll.scrollTop = chatScroll.scrollHeight;

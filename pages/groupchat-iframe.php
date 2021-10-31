@@ -1,5 +1,5 @@
 <link rel='stylesheet' href='../assets/styles/group-chat-iframe.css'/>
-<link rel='stylesheet' href='group-chat/group-chat.css'/>
+<link rel='stylesheet' href='../assets/styles/group-chat-iframe-01.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
@@ -14,12 +14,12 @@
         <i class="fas fa-comments"></i> Group Chat
     </p>
 </div>
-<div class='private-chat'>
+<div class='groupchat'>
     <div class='section-1'>
         <a href='group-chat/group-chat.php' class='section-link clicked-link' id='group-chat'
-        onclick='onclickGroupChat()' target='iframe'>group chat</a>
-        <a href='group-chat/create-group.php' class='section-link clicked-link' id='create-group' 
-        onclick='onclickCreateChat()'target='iframe'>create group</a>
+        onclick='onclickGroupChat()' target='iframe'>Group chat</a>
+        <a href='group-chat/create-group.php' class='section-link ' id='create-group' 
+        onclick='onclickCreateChat()'target='iframe'>Create group</a>
     </div>
     <iframe
         class='section-2'
@@ -29,5 +29,6 @@
         title="Iframe"
     ></iframe>
 </div>
-<script src='../js/cc.js'></script>
+
+<script src='../js/group-chat-iframe.js'></script>
 <?php include('../components/footer.php'); ?>

@@ -1,4 +1,9 @@
-.private-chat {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+.groupchat {
   margin-top: 3em;
   margin-left: 6.7em;
   margin-right: 6.7em;
@@ -15,6 +20,7 @@
   grid-column-start: col1;
   grid-column-end: col2;
   box-shadow: 1px 2px 4px grey;
+  border-radius: 5px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -28,6 +34,7 @@
   grid-column-start: col2;
   grid-column-end: col3;
   box-shadow: 1px 2px 4px grey;
+  border-radius: 5px;
   border: none;
 }
 

@@ -1,5 +1,7 @@
+<link rel='stylesheet' href='../../assets/styles/group-chat-iframe-01.css'/>
+<link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+      integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
-<link rel='stylesheet' href='group-chat.css'/>
 <div class='card create-group'>
         <div class='title'>Create Group</div>
         <div class='list-items-02'>
