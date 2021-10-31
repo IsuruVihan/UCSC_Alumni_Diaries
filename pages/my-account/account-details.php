@@ -1,16 +1,19 @@
-<link rel='stylesheet' href='my-account.css'/>
-<div class='my-account'>
-<div class='pic-section'>
-    <div class='section-1'>
-        <img src='../../assets/images/user-default.png' width='15%' class='user-pic' alt='user-pic'/>
-        <button class='edit-pic-btn btn'>Edit Photo</button>
-        <button class='remove-pic-btn btn'>Remove Photo</button>
+<link rel='stylesheet' href='../../assets/styles/new-my-account.css'/>
+<link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+      integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
+      
+<div class='my-account'> 
+    <div class='pic-section'>
+        <div class='section-1'>
+            <img src='../../assets/images/user-default.png' width='60%' class='user-pic' alt='user-pic'/>
+            <button class='edit-pic-btn btn'>Edit Photo</button>
+            <button class='remove-pic-btn btn'>Remove Photo</button>
+        </div>
+        <div class='section-2'>
+            Account Type
+        </div>
     </div>
-    <div class='section-2'>
-        Account Type
-    </div>
-</div>
-<div class='account-details'>
+    <div class='account-details'>
         <div class='title'>
             Account Details
         </div>
@@ -143,3 +146,5 @@
         </div>
     </div>
 </div>    
+
+<script src='../../js/my-account.js'></script>

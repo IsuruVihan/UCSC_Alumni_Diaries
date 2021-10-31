@@ -29,7 +29,7 @@ body {
   grid-template-columns: [col1] 15% [col2] 85% [col3];
   grid-template-rows: [row1] 100% [row2];
   column-gap: 5px;
-  height: 100vh;
+  height: 80vh;
 }
 
 .section-1 {

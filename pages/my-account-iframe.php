@@ -16,15 +16,15 @@
 <div class='myAccount'>
     <div class='section-1'>
         <a href='my-account/account-details.php' class='section-link clicked-link' id='account-details'
-        onclick='onclickGroupChat()' target='iframe'>Account Details</a>
+        onclick='onclickAccountDetails()' target='iframe'>Account Details</a>
         <a href='my-account/change-password.php' class='section-link ' id='change-password' 
-        onclick='onclickCreateChat()'target='iframe'>Change Password</a>
-        <a href='my-account/contributin.php' class='section-link ' id='contribution' 
-        onclick='onclickCreateChat()'target='iframe'>Contribution </a>
+        onclick='onclickChangePass()'target='iframe'>Change Password</a>
+        <a href='my-account/contribution.php' class='section-link ' id='contribution' 
+        onclick='onclickContribution()'target='iframe'>Contribution </a>
         <a href='my-account/involved-projects.php' class='section-link ' id='invoved-projects' 
-        onclick='onclickCreateChat()'target='iframe'>Involved Projects</a>
-        <a href='my-account/subscriptions.php' class='section-link ' id='subscriptions' 
-        onclick='onclickCreateChat()'target='iframe'>Subscriptions</a>
+        onclick='onclickProjects()'target='iframe'>Involved Projects</a>
+        <a href='my-account/subscription.php' class='section-link ' id='subscriptions' 
+        onclick='onclickSubscriptions()'target='iframe'>Subscriptions</a>
     </div>
     <iframe
         class='section-2'
@@ -35,5 +35,5 @@
     ></iframe>
 </div>
 
-<script ></script>
+<script src='../js/my-account-iframe.js'></script>
 <?php include('../components/footer.php'); ?>

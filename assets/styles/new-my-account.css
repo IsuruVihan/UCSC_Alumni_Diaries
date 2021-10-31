@@ -1,21 +1,4 @@
-/* .main-container {
-    display: flex;
-    flex-direction: column;
-    height: 15vh;
-    margin-top: 5vh;
-    padding-left: 6.7em;
-    background: #fafafa;
-}
-
-.breadcrumb {
-    cursor: pointer;
-}
-
-.main-title {
-    font-weight: 700;
-    font-size: 2em;
-    margin: 0;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
 .title1 {
   font-weight: 600;
@@ -31,12 +14,14 @@
   margin-top: 10px;
 }
 
-.my-account {
-  display: grid;
-  /* height: 80vh; */
+.my-account,
+.subscription {
+  display: flex;
   background: #fafafa;
-  grid-template-columns: [line1]30% [line2] 53% [line3] 32% [line4];
-  grid-template-rows: [row1] 50% [row2] 50% [row3];
+  width: 100%;
+  height: 100%;
+  /* grid-template-columns: [line1]30% [line2] 53% [line3] 32% [line4];
+  grid-template-rows: [row1] 50% [row2] 50% [row3]; */
   /* margin: 0 6.7em 10vh; */
 }
 
@@ -44,37 +29,65 @@
   display: flex;
   background: white;
   flex-direction: column;
-  grid-column-start: line1;
+  width: 30%;
+  height: 70%;
+  /* grid-column-start: line1;
   grid-column-end: line2;
   grid-row-start: row1;
-  grid-row-end: row3;
+  grid-row-end: row3; */
   border: 1px solid lightgray;
   border-radius: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  /* margin-right: 5px;
+  margin-bottom: 5px; */
   padding: 5px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 1px 2px 4px lightgray;
 }
-
+.subscription-01 {
+  display: flex;
+  /* background: white; */
+  flex-direction: column;
+  width: 45%;
+  margin-right: 5px;
+  height: 70%;
+}
+.details {
+  display: flex;
+  background: white;
+  flex-direction: column;
+  width: 55%;
+  height: 100%;
+  /* border: 1px solid lightgray; */
+}
 .account-details {
   background: white;
   display: flex;
   flex-direction: column;
-  grid-column-start: line2;
+  width: 80%;
+  /* grid-column-start: line2;
   grid-column-end: line3;
   grid-row-start: row1;
   grid-row-end: row2;
-  border: 1px solid lightgray;
+  border: 1px solid lightgray; */
   border-radius: 5px;
-  margin-right: 5px;
+  /* margin-right: 5px; */
   margin-left: 5px;
   margin-bottom: 5px;
   align-items: center;
   box-shadow: 1px 2px 4px lightgray;
 }
-
+.account-details-01 {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  /* margin-left: 5px; */
+  margin-bottom: 5px;
+  align-items: center;
+  box-shadow: 1px 2px 4px lightgray;
+  border-radius: 5px;
+}
 .projects-contributions {
   display: flex;
   grid-column-start: line1;
@@ -198,7 +211,7 @@
 .section-3-1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin-bottom: 2px;
 }
@@ -215,7 +228,7 @@
 }
 
 .first-last-name1 {
-  width: 48%;
+  width: 60%;
   height: 20px;
   text-align: left;
 }
@@ -308,8 +321,9 @@
 }
 
 .contributions {
-  height: 100%;
-  width: 45.7%;
+  width: 50%;
+  margin: auto;
+  /* height: 100%;
   background: white;
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -318,7 +332,7 @@
   justify-content: center;
   padding-left: 15px;
   padding-right: 15px;
-  box-shadow: 1px 2px 4px lightgray;
+  box-shadow: 1px 2px 4px lightgray; */
 }
 
 .contributions-container {
@@ -328,15 +342,15 @@
   align-content: center;
   overflow: hidden;
   overflow-y: scroll;
-  height: 100%;
-  margin-top: 5px;
-  margin-bottom: 8px;
+  height: 90%;
+  margin-top: 10px;
+  /* margin-bottom: 8px; */
   padding: 5px;
 }
 
 .contributions-item {
   width: 100%;
-  height: 15%;
+  height: 10%;
   border: 1px solid lightgray;
   border-radius: 5px;
   display: flex;
@@ -347,9 +361,10 @@
 }
 
 .projects {
-  height: 100%;
-  width: 45.7%;
-  background: white;
+  /* height: 100%; */
+  width: 50%;
+  margin: auto;
+  /* background: white;
   border: 1px solid lightgray;
   border-radius: 5px;
   display: flex;
@@ -357,7 +372,7 @@
   justify-content: center;
   padding-left: 15px;
   padding-right: 15px;
-  box-shadow: 1px 2px 4px lightgray;
+  box-shadow: 1px 2px 4px lightgray; */
 }
 
 .projects-container {
@@ -367,15 +382,15 @@
   align-content: center;
   overflow: hidden;
   overflow-y: scroll;
-  height: 100%;
-  margin-top: 5px;
+  height: 90%;
+  margin-top: 10px;
   margin-bottom: 8px;
   padding: 5px;
 }
 
 .projects-item {
   width: 100%;
-  height: 15%;
+  height: 10%;
   border: 1px solid lightgray;
   border-radius: 5px;
   display: flex;
@@ -394,29 +409,31 @@
 
 .password {
   background: white;
-  width: 100%;
-  height: 24%;
+  width: 50%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   border: 1px solid lightgray;
   border-radius: 5px;
   align-items: center;
-  margin-bottom: 10px;
+  margin: auto;
+  padding: 8px;
   box-shadow: 1px 2px 4px lightgray;
 }
 
 .section-6 {
-  height: 50%;
+  height: 60%;
   text-align: center;
   align-items: center;
   width: 80%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 18px;
 }
 
 .input1 {
-  height: 35px;
+  height: 60px;
   width: 100%;
   background: white;
   border: 1px solid lightgray;
@@ -440,6 +457,9 @@
   background: gray;
   border: 1px solid gray;
 }
+.submit-btn {
+  width: 20%;
+}
 
 .cancel-btn {
   background: gray;
@@ -461,10 +481,10 @@
   border-color: #f5222d;
 }
 
-.subscriptions {
+/* .subscriptions {
   background: white;
-  width: 100%;
-  height: 74.5%;
+  width: 50%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   border: 1px solid lightgray;
@@ -472,15 +492,17 @@
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 1px 2px 4px lightgray;
-}
+  padding: 10px;
+} */
 
 .sub-type {
-  width: 92%;
-  height: 15%;
+  width: 95%;
+  height: 35%;
+  background: white;
   border: 1px solid lightgray;
   border-radius: 5px;
   margin-bottom: 5px;
-  padding: 8px;
+  padding: 7px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -488,11 +510,12 @@
 }
 
 .recharge-account {
-  width: 96%;
-  height: 22%;
+  width: 98%;
+  height: 50%;
   border: 1px solid lightgray;
   border-radius: 5px;
   margin-bottom: 5px;
+  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -501,8 +524,8 @@
 }
 
 .section-7 {
-  width: 99%;
-  height: 50%;
+  width: 100%;
+  height: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -588,8 +611,8 @@
 }
 
 .recharge-details {
-  width: 95.5%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   border: 1px solid lightgray;
   border-radius: 5px;
   margin-bottom: 5px;
@@ -685,7 +708,7 @@
   align-content: center;
   overflow: hidden;
   overflow-y: scroll;
-  height: 50%;
+  height: 80%;
   width: 90%;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -694,7 +717,7 @@
 
 .recharge-details-item {
   width: 99%;
-  height: 62%;
+  height: 25%;
   border: 1px solid lightgray;
   border-radius: 5px;
   display: flex;
