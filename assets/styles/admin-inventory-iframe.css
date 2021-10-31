@@ -39,6 +39,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 10px;
+    border-radius: 5px;
 }
 
 .section-2 {
@@ -48,6 +49,7 @@
     grid-column-end: col3;
     box-shadow: 1px 2px 4px grey;
     border: none;
+    border-radius: 5px;
 }
 
 .section-link {
