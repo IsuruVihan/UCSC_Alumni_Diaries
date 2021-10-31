@@ -20,3 +20,4 @@ const HideEditProjectNameDiv = () => {
 
 const chatScroll = document.getElementById('message-list');
 chatScroll.scrollTop = chatScroll.scrollHeight;
+

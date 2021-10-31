@@ -1,0 +1,53 @@
+.private-chat {
+  margin-top: 3em;
+  margin-left: 6.7em;
+  margin-right: 6.7em;
+  display: grid;
+  grid-template-columns: [col1] 15% [col2] 85% [col3];
+  grid-template-rows: [row1] 100% [row2];
+  column-gap: 5px;
+  height: 100vh;
+}
+
+.section-1 {
+  grid-row-start: row1;
+  grid-row-end: row2;
+  grid-column-start: col1;
+  grid-column-end: col2;
+  box-shadow: 1px 2px 4px grey;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.section-2 {
+  grid-row-start: row1;
+  grid-row-end: row2;
+  grid-column-start: col2;
+  grid-column-end: col3;
+  box-shadow: 1px 2px 4px grey;
+  border: none;
+}
+
+.section-link {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 35px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease-in-out 0.5s;
+}
+
+.section-link:hover {
+  background: blue;
+}
