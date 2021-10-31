@@ -23,7 +23,7 @@
   height: 97vh;
   display: grid;
   grid-template-columns: [line1] 40% [line2] 60% [line3];
-  grid-template-rows: [row1] 10% [row2] 90% [row3];
+  grid-template-rows: [row1] 50% [row2] 50% [row3];
   /* margin: 0 6.7em 10vh; */
 }
 
@@ -568,16 +568,15 @@
   display: none;
   grid-column-start: line3;
   grid-column-end: line4;
-  grid-row-start: row2;
-  grid-row-end: row3;
+  height: 80%;
   margin-left: 5px;
   padding: 3px;
 
   /* margin-bottom: 5px; */
 }
 .participants {
-  grid-column-start: line3;
-  grid-column-end: line4;
+  grid-column-start: line2;
+  grid-column-end: line3;
   grid-row-start: row2;
   grid-row-end: row3;
   margin-left: 5px;
@@ -591,7 +590,7 @@
   align-content: center;
   overflow: hidden;
   overflow-y: scroll;
-  height: 72%;
+  height: 65%;
 }
 
 .available-users-item {
@@ -710,7 +709,8 @@
 }
 .remove-cancel-button {
   display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 57%;
   padding: 10px;
-  justify-content: center;
-  justify-content: space-evenly;
 }

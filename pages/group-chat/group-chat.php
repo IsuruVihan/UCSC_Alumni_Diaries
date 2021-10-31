@@ -113,8 +113,8 @@
             </div>
         </div>
         <div class='button-class'>
-            <button class='participants-btn btn'  onclick='DisplayParticipantsList()' >Participants list</button>
-            <button class='available-btn btn' onclick='DispalyAvailableUsers()'>Available users</button>   
+            <button class='participants-btn btn' id='participants-button' onclick='DisplayParticipantsList()' >Participants list</button>
+            <button class='available-btn btn' id='available-button' onclick='DispalyAvailableUsers()'>Available users</button>   
         </div> 
         <div class='row-02' id='chat-window'>
             <div class='results3' id='message-list'>
@@ -369,7 +369,7 @@
             </div>
             <div class='available-users-container'>
                 <div class='available-users-item'>
-                    <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -381,7 +381,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -393,7 +393,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -405,7 +405,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -417,7 +417,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -429,7 +429,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../assets/images/user-default.png' width="23%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -442,7 +442,7 @@
                 </div>
             </div>
             <div class='chat-button'>
-              <button class="chat-btn btn" onclick='HideChatWindow()'>View Chat</button>
+              <button class="chat-btn btn" onclick='HideChat()'>View Chat</button>
             </div>                
         </div>  
     </div>

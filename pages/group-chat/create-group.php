@@ -4,7 +4,7 @@
         <div class='title'>Create Group</div>
         <div class='list-items-02'>
             <div class='pic-button'>
-               <img src='../../assets/images/user-default.png' width='30%' height='' class='user-pic-01' alt='user-pic'>
+               <img src='../../assets/images/user-default.png' width='40%' height='' class='user-pic-01' alt='user-pic'>
                 <div class='remove-cancel-button'>
                     <button class='Edit-btn btn'>Edit</button>
                     <button class='Remove-btn btn'>Remove</button>
