@@ -15,6 +15,28 @@
     </p>
 </div>
 <div class='not-started-yet-projects'>
+    <div class='section-1'>
+        <a
+            id='l-1'
+            class='iframe-link clicked-link'
+            href='./projects/not-started-yet/details.php'
+            target='iframe'
+            onclick=ClickLink('l-1')
+        >Project details</a>
+        <a
+            id='l-2'
+            class='iframe-link'
+            href='./projects/not-started-yet/create-project.php'
+            target='iframe'
+            onclick=ClickLink('l-2')
+        >Create project</a>
+    </div>
+    <iframe name='iframe' class='section-2' src='./projects/not-started-yet/details.php'>
+
+    </iframe>
+</div>
+<!--
+<div class='not-started-yet-projects'>
     <div class='card projects-list'>
         <div class='title'>
             Related Not Started Yet Projects
@@ -256,5 +278,5 @@
         </div>
     </div>
 </div>
-
+-->
 <?php include('../components/footer.php'); ?>
