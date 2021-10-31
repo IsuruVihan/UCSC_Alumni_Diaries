@@ -22,6 +22,7 @@
     display: grid;
     grid-template-columns: [col1] 15% [col2] 85% [col3];
     grid-template-rows: [row1] 100% [row2];
+    height: 30em;
 }
 
 .section-1 {

@@ -1,1 +1,1 @@
-Projects
+<div class='my-text'>Projects</div>

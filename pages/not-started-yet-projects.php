@@ -31,9 +31,11 @@
             onclick=ClickLink('l-2')
         >Create project</a>
     </div>
-    <iframe name='iframe' class='section-2' src='./projects/not-started-yet/details.php'>
-
-    </iframe>
+    <iframe
+        name='iframe'
+        class='section-2'
+        src='./projects/not-started-yet/details.php'
+    ></iframe>
 </div>
 <!--
 <div class='not-started-yet-projects'>
