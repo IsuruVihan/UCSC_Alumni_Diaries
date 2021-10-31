@@ -91,9 +91,9 @@
     cursor: pointer;
 }
 
-.remove-btn:hover {
-    background: #f5222d;
-    border: 1px solid #f5222d;
+.add-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
 }
 
 .buttons {
