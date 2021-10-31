@@ -1,3 +1,4 @@
+
 const DisplayButtons = (id) => {
     const element = document.getElementById(id);
     element.style.display = "block";
@@ -44,6 +45,7 @@ const HideChat = () => {
     document.getElementById('participants-button').style.display = "block";
     document.getElementById('available-users').style.display = "none";
 }
+
 
 const chatScroll = document.getElementById('message-list');
 chatScroll.scrollTop = chatScroll.scrollHeight;

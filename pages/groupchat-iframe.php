@@ -16,9 +16,10 @@
 </div>
 <div class='private-chat'>
     <div class='section-1'>
-        <a href='group-chat/group-chat.php' class='section-link' target='iframe'>group chat</a>
-        <a href='group-chat/create-group.php' class='section-link' target='iframe'>create group</a>
-        <!-- <a href='group-chat/participants.php' class='section-link' target='iframe'>create group</a> -->
+        <a href='group-chat/group-chat.php' class='section-link clicked-link' id='group-chat'
+        onclick='onclickGroupChat()' target='iframe'>group chat</a>
+        <a href='group-chat/create-group.php' class='section-link clicked-link' id='create-group' 
+        onclick='onclickCreateChat()'target='iframe'>create group</a>
     </div>
     <iframe
         class='section-2'
@@ -28,5 +29,5 @@
         title="Iframe"
     ></iframe>
 </div>
-
+<script src='../js/cc.js'></script>
 <?php include('../components/footer.php'); ?>

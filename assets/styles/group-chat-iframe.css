@@ -51,3 +51,7 @@
 .section-link:hover {
   background: #096dd9;
 }
+.clicked-link {
+  background: #096dd9;
+  animation: fadeIn 1s;
+}
