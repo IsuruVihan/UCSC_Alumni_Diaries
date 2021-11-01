@@ -1,11 +1,11 @@
-<link rel='stylesheet' href='../../assets/styles/new-my-account.css'/>
+<link rel='stylesheet' href='../../assets/styles/my-account.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
       
-<div class='my-account'> 
+<div class='my-account-main-container'>
     <div class='pic-section'>
         <div class='section-1'>
-            <img src='../../assets/images/user-default.png' width='60%' class='user-pic' alt='user-pic'/>
+            <img src='../../assets/images/user-default.png' width='100%' height="80%" class='user-pic' alt='user-pic'/>
             <button class='edit-pic-btn btn'>Edit Photo</button>
             <button class='remove-pic-btn btn'>Remove Photo</button>
         </div>

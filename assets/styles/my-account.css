@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background: #fafafa;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -31,48 +40,54 @@
     margin-top: 10px;
 }
 
-.my-account {
-    display: grid;
-    height: 110vh;
-    background: #fafafa;
-    grid-template-columns: [line1] 15% [line2] 53% [line3] 32% [line4];
-    grid-template-rows: [row1] 55% [row2] 45% [row3];
-    margin: 0 6.7em 10vh;
+.my-account-main-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background: white;
+    justify-content: space-between;
+    /*grid-template-columns: [line1] 15% [line2] 53% [line3] 32% [line4];*/
+    /*grid-template-rows: [row1] 55% [row2] 45% [row3];*/
+    /*margin: 0 6.7em 10vh;*/
 }
 
 .pic-section {
     display: flex;
     background: white;
     flex-direction: column;
-    grid-column-start: line1;
-    grid-column-end: line2;
-    grid-row-start: row1;
-    grid-row-end: row2;
+    /*grid-column-start: line1;*/
+    /*grid-column-end: line2;*/
+    /*grid-row-start: row1;*/
+    /*grid-row-end: row2;*/
     border: 1px solid lightgray;
     border-radius: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    /*margin-right: 5px;*/
+    /*margin-bottom: 5px;*/
     padding: 5px;
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 2px 4px lightgray;
+    width: 30%;
+    height: 90%;
 }
 
 .account-details {
     background: white;
     display: flex;
     flex-direction: column;
-    grid-column-start: line2;
-    grid-column-end: line3;
-    grid-row-start: row1;
-    grid-row-end: row2;
+    /*grid-column-start: line2;*/
+    /*grid-column-end: line3;*/
+    /*grid-row-start: row1;*/
+    /*grid-row-end: row2;*/
     border: 1px solid lightgray;
     border-radius: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 5px;
+    /*margin-right: 5px;*/
+    /*margin-left: 5px;*/
+    /*margin-bottom: 5px;*/
     align-items: center;
     box-shadow: 1px 2px 4px lightgray;
+    width: 68%;
+    height: 97%;
 }
 
 .projects-contributions {
@@ -102,6 +117,8 @@
     flex-direction: column;
     gap: 8px;
     text-align: center;
+    width: 100%;
+    height: 70%;
 }
 
 .user-pic {
@@ -155,6 +172,7 @@
     border-radius: 5px;
     text-align: center;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .container-1 {
