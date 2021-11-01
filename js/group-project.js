@@ -21,28 +21,28 @@ const HideEditProjectNameDiv = () => {
 const DisplayParticipantsList = () => {
     document.getElementById('chat-window').style.display = "none";
     document.getElementById('chat-window-01').style.display = "none";
-    document.getElementById('available-button').style.display = "none";
+    document.getElementById('button-class').style.display = "none";
     document.getElementById('participants-list').style.display = "flex";
 }
 
 const HideChatWindow = () => {
     document.getElementById('chat-window').style.display = "flex";
     document.getElementById('chat-window-01').style.display = "flex";
-    document.getElementById('available-button').style.display = "block";
+    document.getElementById('button-class').style.display = "flex";
     document.getElementById('participants-list').style.display = "none";
 }
 
 const DispalyAvailableUsers = () => {
     document.getElementById('chat-window').style.display = "none";
     document.getElementById('chat-window-01').style.display = "none";
-    document.getElementById('participants-button').style.display = "none";
+    document.getElementById('button-class').style.display = "none";
     document.getElementById('available-users').style.display = "flex";
 }
 
 const HideChat = () => {
     document.getElementById('chat-window').style.display = "flex";
     document.getElementById('chat-window-01').style.display = "flex";
-    document.getElementById('participants-button').style.display = "block";
+    document.getElementById('button-class').style.display = "flex";
     document.getElementById('available-users').style.display = "none";
 }
 

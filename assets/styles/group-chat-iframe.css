@@ -4,14 +4,14 @@ body {
   font-family: "Nunito", sans-serif;
 }
 .groupchat {
-  margin-top: 3em;
+  margin-top: 1.5em;
   margin-left: 6.7em;
   margin-right: 6.7em;
   display: grid;
   grid-template-columns: [col1] 15% [col2] 85% [col3];
   grid-template-rows: [row1] 100% [row2];
   column-gap: 5px;
-  height: 100vh;
+  height: 92vh;
 }
 
 .section-1 {
@@ -26,6 +26,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
+  background: white; 
 }
 
 .section-2 {
@@ -33,9 +34,10 @@ body {
   grid-row-end: row2;
   grid-column-start: col2;
   grid-column-end: col3;
-  box-shadow: 1px 2px 4px grey;
+  box-shadow: 1px 2px 4px grey; 
   border-radius: 5px;
   border: none;
+  background: white; 
 }
 
 .section-link {

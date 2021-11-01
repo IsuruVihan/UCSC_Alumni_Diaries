@@ -2,7 +2,7 @@
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
-<div class='card create-group'>
+<div class='create-group'>
         <div class='title'>Create Group</div>
         <div class='list-items-02'>
             <div class='pic-button'>

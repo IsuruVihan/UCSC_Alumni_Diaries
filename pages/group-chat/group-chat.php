@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <div class='chat-wall'>
+    <div class='chat-wall' id='chat-wall'>
         <div class='row-01'>
             <div class='title project-name-div' id='project-name-div'>
                 Group Name
@@ -112,7 +112,7 @@
                 <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
             </div>
         </div>
-        <div class='button-class'>
+        <div class='button-class' id='button-class'>
             <button class='participants-btn btn' id='participants-button' onclick='DisplayParticipantsList()' >Participants list</button>
             <button class='available-btn btn' id='available-button' onclick='DispalyAvailableUsers()'>Available users</button>   
         </div> 
@@ -244,13 +244,13 @@
                 <i class='fas fa-times-circle chat-icon clear-icon'></i>
             </div>
         </div>
-        <div class='card row-04' id='participants-list'> 
+        <div class= 'row-04' id='participants-list'> 
             <div class='title-02'>
                 Participants
             </div>
             <div class='Participants-filter'>
                 <div class='p_box-01'>
-                     <input class='participants-field' type='text' placeholder='First Name'/>
+                    <input class='participants-field' type='text' placeholder='First Name'/>
                     <input class='participants-field' type='text' placeholder='Last Name'/>
                 </div>
                 <div class='box-02'>
@@ -259,7 +259,7 @@
             </div>
             <div class='available-users-container'>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="15%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -271,7 +271,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="15%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -283,7 +283,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="15%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -295,7 +295,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="15%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -307,7 +307,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="15%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -319,7 +319,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="15%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -335,7 +335,7 @@
               <button class="chat-btn btn" onclick='HideChatWindow()'>View Chat</button>
             </div>   
         </div>
-        <div class='card available-users' id='available-users'>
+        <div class='available-users' id='available-users'>
             <div class='title'>Available Users</div>
             <div class='filter'>
                 <div class='box-01'>
@@ -369,7 +369,7 @@
             </div>
             <div class='available-users-container'>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -381,7 +381,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -393,7 +393,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -405,7 +405,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -417,7 +417,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>
@@ -429,7 +429,7 @@
                     </div>
                 </div>
                 <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="10%" class='user-pic' alt='user-pic'>
+                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>First Name</div>

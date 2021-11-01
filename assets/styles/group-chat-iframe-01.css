@@ -24,12 +24,11 @@ body {
 }
 
 .group-chat-grid {
-  background: #fafafa;
-  height: 97vh;
+  height: 97vh; 
   display: grid;
   grid-template-columns: [line1] 40% [line2] 60% [line3];
   grid-template-rows: [row1] 50% [row2] 50% [row3];
-  /* margin: 0 6.7em 10vh; */
+
 }
 
 .card {
@@ -39,7 +38,7 @@ body {
 }
 
 .card,
-.chat-wall {
+.chat-wall{
   box-shadow: 1px 2px 4px lightgray;
   border-radius: 10px;
   padding: 20px;
@@ -195,14 +194,13 @@ body {
   border: 1px solid #595959;
 }
 .chat-btn {
-  width: 32%;
+  width: 31%;
+
 }
-.chat-btn:hover {
-  background: #8d04a8;
-  border-color: #8d04a8;
-  color: white;
-}
-.view-btn:hover {
+.view-btn:hover,
+.chat-btn:hover,
+.participants-btn:hover,
+.available-btn:hover {
   background: #096dd9;
   border-color: #096dd9;
   color: white;
@@ -225,8 +223,8 @@ body {
 }
 
 .create-btn:hover {
-  background: #6547d1;
-  border: 1px solid #6547d1;
+  background:  #237804;
+  border: 1px solid  #237804;
 }
 
 .edit-btn:hover {
@@ -244,12 +242,6 @@ body {
   background: #f5222d;
   border: 1px solid #f5222d;
 }
-.participants-btn:hover,
-.available-btn:hover {
-  background: #4d0146;
-  border-color: #4d0146;
-  color: white;
-}
 
 .edit-btn,
 .cancel-btn {
@@ -262,11 +254,11 @@ body {
   grid-row-start: row1;
   grid-row-end: row3;
   margin-right: 5px;
-  /* padding: 10px; */
+
 }
 
 .chat-wall {
-  background: white;
+  background: white; 
   grid-column-start: line2;
   grid-column-end: line3;
   grid-row-start: row1;
@@ -458,17 +450,13 @@ body {
 .clear-icon:hover {
   color: white;
   background-color: black;
-  /* }
-
-.row-04 {
-  width: 40%; */
-  /* margin-top: 2px; */
+  
 }
 
 .row-04 {
   display: none;
-  width: 85%;
-  height: 80%;
+  flex-direction: column;
+  height: 90%;
 }
 
 .title-02 {
@@ -495,7 +483,8 @@ body {
   font-family: "Nunito", serif;
 }
 
-.participants-field:hover {
+.participants-field:hover,
+.input-field-01:hover {
   border-color: #ffccc7;
 }
 
@@ -536,21 +525,18 @@ body {
 
 .available-users {
   display: none;
-  grid-column-start: line3;
-  grid-column-end: line4;
-  height: 80%;
-  margin-left: 5px;
-  padding: 3px;
-}
+  display: none;
+  flex-direction: column;
+  height: 90%;
 
+}
 .available-users-container {
-  border: 1px solid lightgray;
   border-radius: 5px;
   justify-content: space-around;
   align-content: center;
   overflow: hidden;
   overflow-y: scroll;
-  height: 65%;
+  height:75%;
 }
 
 .available-users-item {
@@ -643,7 +629,9 @@ body {
   text-align: center;
 }
 .chat-button {
-  margin-top: 10px;
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
 }
 .pic-button {
   display: flex;
