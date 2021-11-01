@@ -19,21 +19,11 @@
         </div>
         <div class='container-1' id='container-1'>
             <div class='container-3'>
-                <div class='section-3-1'>
-                    <div class='first-last-name1'>
-                        First Name
-                    </div>
-                    <div class='first-last-name1'>
-                        Last Name
-                    </div>
+                <div class='section-4-1'>
+                    First Name
                 </div>
-                <div class='section-3'>
-                    <div class='first-last-name'>
-                        First Name
-                    </div>
-                    <div class='first-last-name'>
-                        Last Name
-                    </div>
+                <div class='section-4'>
+                    First Name
                 </div>
                 <div class='section-4-1'>
                     Full Name
@@ -60,7 +50,13 @@
                     Batch
                 </div>
             </div>
-            <div class='container-4'>
+            <div class='container-3'>
+                <div class='section-4-1'>
+                    Last Name
+                </div>
+                <div class='section-4'>
+                    Last Name
+                </div>
                 <div class='section-4-1'>
                     Address
                 </div>
@@ -86,18 +82,10 @@
         </div>
         <div class='container-5' id='container-5'>
             <div class='container-3'>
-                <div class='section-3-1'>
-                    <div class='first-last-name1'>
-                        First Name
-                    </div>
-                    <div class='first-last-name1'>
-                        Last Name
-                    </div>
+                <div class='section-4-1'>
+                    First Name
                 </div>
-                <div class='section-3'>
-                    <input class='input-first-last-name' type='text' placeholder='Enter First Name'/>
-                    <input class='input-first-last-name' type='text' placeholder='Enter Last Name'/>
-                </div>
+                <input class='input5' type='text' placeholder='Enter First Name'/>
                 <div class='section-4-1'>
                     Full Name
                 </div>
@@ -124,7 +112,11 @@
                     <option value='2018/2019'>2020/2021</option>
                 </select>
             </div>
-            <div class='container-4'>
+            <div class='container-3'>
+                <div class='section-4-1'>
+                    Last Name
+                </div>
+                <input class='input5' type='text' placeholder='Enter Last Name'/>
                 <div class='section-4-1'>
                     Address
                 </div>

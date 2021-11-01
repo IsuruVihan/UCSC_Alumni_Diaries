@@ -45,49 +45,35 @@ body {
     flex-direction: row;
     height: 100%;
     background: white;
-    justify-content: space-between;
-    /*grid-template-columns: [line1] 15% [line2] 53% [line3] 32% [line4];*/
-    /*grid-template-rows: [row1] 55% [row2] 45% [row3];*/
-    /*margin: 0 6.7em 10vh;*/
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .pic-section {
     display: flex;
     background: white;
     flex-direction: column;
-    /*grid-column-start: line1;*/
-    /*grid-column-end: line2;*/
-    /*grid-row-start: row1;*/
-    /*grid-row-end: row2;*/
     border: 1px solid lightgray;
     border-radius: 5px;
-    /*margin-right: 5px;*/
-    /*margin-bottom: 5px;*/
     padding: 5px;
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 2px 4px lightgray;
     width: 30%;
-    height: 90%;
+    height: 96%;
 }
 
 .account-details {
     background: white;
     display: flex;
     flex-direction: column;
-    /*grid-column-start: line2;*/
-    /*grid-column-end: line3;*/
-    /*grid-row-start: row1;*/
-    /*grid-row-end: row2;*/
+    justify-content: space-evenly;
     border: 1px solid lightgray;
     border-radius: 5px;
-    /*margin-right: 5px;*/
-    /*margin-left: 5px;*/
-    /*margin-bottom: 5px;*/
     align-items: center;
     box-shadow: 1px 2px 4px lightgray;
-    width: 68%;
-    height: 97%;
+    width: 67%;
+    height: 97.75%;
 }
 
 .projects-contributions {
@@ -133,26 +119,26 @@ body {
     border-radius: 5px;
     color: white;
     transition: all ease-in-out 0.1s;
-    height: 25px;
 }
 
 .remove-pic-btn, .edit-pic-btn {
     width: 100%;
-    margin-top: 0.5em;
+    margin-top: 0.3em;
     background: gray;
     border: 1px solid gray;
+    height: 40px;
 }
 
 .edit-details-btn {
     width: 15%;
     background: gray;
     border: 1px solid gray;
+    height: 25px;
 }
 
 .edit-pic-btn:hover {
-    cursor: pointer;
     background: #fa8c16;
-    border: 1px #fa8c16;
+    border-color: #fa8c16;
 }
 
 .remove-pic-btn:hover {
@@ -180,7 +166,8 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 25px;
+    height: 70%;
+    margin-top: 10px;
 }
 
 .container-2 {
@@ -188,21 +175,17 @@ body {
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-top: 12px;
+    height: 15%;
+    /*margin-top: 5px;*/
 }
 
 .container-3 {
     display: flex;
     flex-direction: column;
     width: 45%;
+    height: 98%;
 }
 
-.container-4 {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    margin-top: 63px;
-}
 
 .section-3 {
     display: flex;
@@ -243,7 +226,7 @@ body {
     border-radius: 5px;
     text-align: center;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,16 +239,16 @@ body {
     text-align: left;
     align-items: center;
     width: 100%;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .section-5 {
-    height: 91px;
+    height: 97px;
     border: 1px solid lightgray;
     border-radius: 5px;
     text-align: center;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,7 +259,8 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 10px;
+    height: 70%;
 }
 
 .container-6 {
@@ -284,7 +268,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 50%;
-    margin-top: 12px;
+    height: 15%;
+    /*margin-top: 5px;*/
 }
 
 .input5 {
@@ -294,7 +279,7 @@ body {
     text-align: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     color: black;
 }
 
@@ -313,14 +298,14 @@ body {
 }
 
 .input6 {
-    height: 91px;
+    height: 97px;
     border: 1px solid lightgray;
     border-radius: 5px;
     text-align: center;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     resize: none;
 }
 
@@ -407,27 +392,36 @@ body {
     cursor: pointer;
 }
 
-.password {
+.password-main-container{
     background: white;
     width: 100%;
-    height: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.password {
+    background: white;
+    width: 50%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgray;
-    border-radius: 5px;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 10px;
-    box-shadow: 1px 2px 4px lightgray;
 }
 
 .section-6 {
-    height: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .input1 {
@@ -449,11 +443,13 @@ body {
 .submit-btn, .pay-pal-btn {
     background: gray;
     border: 1px solid gray;
+    height: 25px;
 }
 
 .cancel-btn {
     background: gray;
     border: 1px solid gray;
+    height: 25px;
 }
 
 .submit-btn:hover {
