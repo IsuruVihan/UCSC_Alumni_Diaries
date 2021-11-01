@@ -348,17 +348,15 @@ body {
 }
 
 .projects {
-    height: 100%;
-    width: 45.7%;
+    height: 99%;
+    width: 97%;
     background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-    box-shadow: 1px 2px 4px lightgray;
 }
 
 .projects-container {
@@ -368,7 +366,8 @@ body {
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 100%;
+    height: 80%;
+    width: 65%;
     margin-top: 5px;
     margin-bottom: 8px;
     padding: 5px;
@@ -376,7 +375,7 @@ body {
 
 .projects-item {
     width: 100%;
-    height: 15%;
+    height: 10%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
