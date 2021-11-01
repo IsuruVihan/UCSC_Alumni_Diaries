@@ -52,7 +52,6 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: all ease-in-out 0.5s;
-    margin: 0.8em 0;
 }
 .iframe-nav-state{
     background: #096dd9;
