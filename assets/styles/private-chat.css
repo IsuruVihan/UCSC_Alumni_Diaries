@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     /*height: 80vh;*/
-    background: #fafafa;
+    background: white;
     height: 100%;
     width: 100%;
 }
@@ -413,7 +413,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fafafa;
+    background: white;
     height: 100%;
     width: 100%;
 }

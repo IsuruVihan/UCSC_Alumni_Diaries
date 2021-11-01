@@ -49,6 +49,7 @@ body {
     justify-content: flex-start;
     gap: 10px;
     border-radius: 5px;
+    background: white;
 }
 
 .section-2 {
@@ -59,6 +60,7 @@ body {
     box-shadow: 1px 2px 4px grey;
     border: none;
     border-radius: 5px;
+    background: white;
 }
 
 .section-link {
