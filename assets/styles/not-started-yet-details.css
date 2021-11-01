@@ -63,7 +63,7 @@
 }
 
 .title {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.2em;
     text-align: center;
 }
@@ -74,15 +74,16 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 3px;
+    gap: 5px;
 }
 
-.col1 {
+.col1, .col3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.col2, .col3 {
+.col2, .col4 {
     display: flex;
     justify-content: center;
     align-items: center;

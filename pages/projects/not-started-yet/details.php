@@ -10,11 +10,19 @@
         </div>
         <div class='filter'>
             <div class='col1'>
+                <input class='input-field date-field' type='date' placeholder='First Name'/>
+                to
+                <input class='input-field date-field' type='date' placeholder='Last Name'/>
+            </div>
+            <div class='col3'>
                 <input class='input-field date-field' type='text' placeholder='Project Name'/>
                 <input class='input-field date-field' type='text' placeholder='Project Id'/>
             </div>
-            <br/>
-            <div class='col3'>
+            <div class='col2'>
+                <label>My Projects</label>
+                <input class='input-field' type='checkbox'>
+            </div>
+            <div class='col4'>
                 <button class='filter-btn btn'>Filter</button>
             </div>
         </div>

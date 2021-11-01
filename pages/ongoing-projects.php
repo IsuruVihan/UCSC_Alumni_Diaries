@@ -50,7 +50,48 @@
         </div>
     </div>
     <div class='section-2'>
-    
+        <div class='row-1'>
+            <a
+                id='l-1'
+                class='iframe-link clicked-link'
+                href='./projects/ongoing/details.php'
+                target='ongoing-projects-iframe'
+                onclick=ClickLink('l-1')
+            >Details</a>
+            <a
+                id='l-2'
+                class='iframe-link'
+                href='./projects/ongoing/committee.php'
+                target='ongoing-projects-iframe'
+                onclick=ClickLink('l-2')
+            >Committee</a>
+            <a
+                id='l-3'
+                class='iframe-link'
+                href='./projects/ongoing/chat.php'
+                target='ongoing-projects-iframe'
+                onclick=ClickLink('l-3')
+            >Chat</a>
+            <a
+                id='l-4'
+                class='iframe-link'
+                href='./projects/ongoing/assets.php'
+                target='ongoing-projects-iframe'
+                onclick=ClickLink('l-4')
+            >Assets</a>
+            <a
+                id='l-5'
+                class='iframe-link'
+                href='./projects/ongoing/actions.php'
+                target='ongoing-projects-iframe'
+                onclick=ClickLink('l-5')
+            >Actions</a>
+        </div>
+        <iframe
+            name='ongoing-projects-iframe'
+            class='row-2'
+            src='./projects/ongoing/details.php'
+        ></iframe>
     </div>
 </div>
 <!--
