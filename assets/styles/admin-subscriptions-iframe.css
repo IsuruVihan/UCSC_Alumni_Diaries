@@ -6,7 +6,8 @@
     height: 15vh;
     margin-top: 5vh;
     padding-left: 6.7em;
-    background: #fafafa;
+    background: white;
+    font-family: Nunito;
 }
 
 .breadcrumb {
@@ -36,12 +37,12 @@
     grid-column-start: col1;
     grid-column-end: col2;
     border-radius: 5px;
-    box-shadow: 1px 2px 4px grey;
+    box-shadow: 1px 2px 4px rgb(168, 166, 166);
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* gap: 15px; */
+    gap: 10px;
 }
 
 .section-2 {
@@ -50,7 +51,7 @@
     grid-column-start: col2;
     grid-column-end: col3;
     border-radius: 5px;
-    box-shadow: 1px 2px 4px grey;
+    box-shadow: 1px 2px 4px rgb(168, 166, 166);
     border: none;
     
 }
@@ -70,7 +71,7 @@
     cursor: pointer;
     text-decoration: none;
     transition: all ease-in-out 0.5s;
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
 .section-link:hover {

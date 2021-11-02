@@ -10,45 +10,51 @@
             </div>
             <div class='alldetails2'>
                 <div class='filtermain2'>
-                    <div class='name1'>
-                        <input type='text' class='fname details-feild' placeholder='First name'>
-                    </div>
-                    <div class='name2'>
-                        <input type='text' class='lname details-feild' placeholder='Last name'>
-                    </div>
-                    <div class='thebatch'>
-                        <select class='batch'>
-                            <option value='All'>Batch</option>
-                            <option value='2012/2013'>2012/2013</option>
-                            <option value='2013/2014'>2013/2014</option>
-                            <option value='2014/2015'>2014/2015</option>
-                            <option value='2015/2016'>2015/2016</option>
-                            <option value='2016/2017'>2016/2017</option>
-                            <option value='2017/2018'>2017/2018</option>
-                            <option value='2018/2019'>2018/2019</option>
-                            <option value='2019/2020'>2019/2020</option>
-                            <option value='2020/2021'>2020/2021</option>
-                        </select>
-                    </div>
-                    <div class='thesubtype'>
-                        <select class='stype'>
-                            <option value='Subscription Type'>Subscription</option>
-                            <option value='Monthly'>Monthly</option>
-                            <option value='Annually'>Annually</option>
-                        </select>
-                    </div>
-                    <div class='theemail'>
-                        <input type='text' class='email details-field' placeholder='Email'>
-                    </div>
-                    <div class='fro'>
-                        <input class='from' type='text' placeholder='From' onmouseup="(this.type='date')">
-                    </div>
-                    <div class='t'>
-                        <input class='to' type='text' placeholder='To' onmouseup="(this.type='date')">
-                    </div>
-                    <div class='fil'>
-                        <button class="filter-btn btn">Filter</button>
-                    </div>
+                    <div class='filtermain2-row1'>
+                        <div class='name1'>
+                            <input type='text' class='fname details-feild' placeholder='First name'>
+                        </div>
+                        <div class='name2'>
+                            <input type='text' class='lname details-feild' placeholder='Last name'>
+                        </div>
+                        <div class='thebatch'>
+                            <select class='batch'>
+                                <option value='All'>Batch</option>
+                                <option value='2012/2013'>2012/2013</option>
+                                <option value='2013/2014'>2013/2014</option>
+                                <option value='2014/2015'>2014/2015</option>
+                                <option value='2015/2016'>2015/2016</option>
+                                <option value='2016/2017'>2016/2017</option>
+                                <option value='2017/2018'>2017/2018</option>
+                                <option value='2018/2019'>2018/2019</option>
+                                <option value='2019/2020'>2019/2020</option>
+                                <option value='2020/2021'>2020/2021</option>
+                            </select>
+                        </div>
+                        <div class='thesubtype'>
+                            <select class='stype'>
+                                <option value='Subscription Type'>Subscription</option>
+                                <option value='Monthly'>Monthly</option>
+                                <option value='Annually'>Annually</option>
+                            </select>
+                        </div>
+                    </div> <!-- filtermain2-row1-->
+                    <div class='filtermain2-row2'>
+                        <div class='theemail'>
+                            <input type='text' class='email details-field' placeholder='Email'>
+                        </div>
+                        <div class='fro'>
+                            <input class='from' type='text' placeholder='From' onmouseup="(this.type='date')">
+                        </div>
+                        <div class='t'>
+                            <input class='to' type='text' placeholder='To' onmouseup="(this.type='date')">
+                        </div>
+                    </div> <!-- filtermain2-row2-->
+                    <div class='filtermain2-row3'>
+                        <div class='fil'>
+                            <button class="filter-btn btn">Filter</button>
+                        </div>
+                    </div> 
                 </div> <!-- filtermain2 -->
                 <div class='flexbox-container2'>
                     <div class='flexbox-item2'>

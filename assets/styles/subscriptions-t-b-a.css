@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 .main-box {
-    background: #fafafa;
+    background: white;
+    font-family: Nunito;
     height: 96.5%;
     /* padding-left: 6.7em;
     padding-right: 6.7em; */
@@ -20,15 +21,17 @@
     display: grid;
     grid-template-rows: [r1] 50% [r2] 50% [r3];
     padding-right: 5px;
+    /* border: solid 2px purple; */
 }
 
 .s-to-be-accept {
     grid-row-start: r1;
     grid-row-end: r2;
     background: #fafafa;
+    /* border: solid 2px rgb(9, 0, 128); */
 }
 
-.card {
+/* .card {
     background: white;
     height: 197%;
 }
@@ -39,13 +42,13 @@
     padding: 15px;
     transition: all ease-in-out 0.5s;
     font-family: Nunito;
-}
+} */
 
 .title {
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
     margin-top: 5px;
 }
 
@@ -53,6 +56,7 @@
     display: grid;
     grid-template-rows: [rr1] 15% [rr2] 85% [rr3];
     height: 81%;
+    
 }
 
 .filtermain {
@@ -60,6 +64,8 @@
     grid-row-end: rr2;
     display: grid;
     grid-template-columns: [cc1] 16% [cc2] 16% [cc3] 16% [cc4] 16% [cc5] 25% [cc6] 11% [cc7];
+    /* border: solid 2px rgb(9, 0, 128); */
+    /* margin-bottom: 15px; */
 }
 
 .firstname {
@@ -252,8 +258,9 @@
     justify-content: flex-start;
     overflow: hidden;
     overflow-y: scroll;
-    height: 650px;
+    height: 710px;
     padding: 5px;
+    margin-top: 15px;
 }
 
 .flexbox-item {

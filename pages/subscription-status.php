@@ -11,7 +11,7 @@
             <div class='alldetails3'>
                 <div class='filtermain3'>
                     <div class='filterrow1'>
-                        <div class='firstname-col2'>
+                    <div class='firstname-col2'>
                             <input type='text' class='fname details-feild' placeholder='First Name'>
                         </div>
                         <div class='lastname-col2'>
@@ -38,8 +38,6 @@
                                 <option value='Annually'>Annually</option>
                             </select>
                         </div>
-                    </div> <!-- filterrow1 -->
-                    <div class='filterrow2'>
                         <div class='emailaddress-col2'>
                             <input type='text' class='emailsss details-field' placeholder='Email'>
                         </div>
@@ -50,6 +48,8 @@
                                 <option value='Not Paid'>Not Paid</option>
                             </select>
                         </div>
+                    </div> <!-- filterrow1 -->
+                    <div class='filterrow2'>
                         <div class='filterbutton-col2'>
                             <button class="filter-btn btn">Filter</button>
                         </div>

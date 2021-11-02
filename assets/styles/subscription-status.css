@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 .main-box {
-    background: #fafafa;
+    background: white;
     height: 96.5%;
     display: grid;
     grid-template-columns: [c1] 100% [c2];
     margin-bottom: 1em;
     margin-top: 1em;
     /* border: red solid 2px; */
+    font-family: Nunito;
 }
 
 .right-col {
     grid-column-start: c1;
     grid-column-end: c2;
-    background: #fafafa;
+    background:white;
     display: grid;
     grid-template-rows: [r1] 100% [r2];
     padding: 1px;
 }
 
-.card2 {
+/* .card2 {
     background: white;
     height: 98.7%;
 }
@@ -30,13 +31,13 @@
     padding: 15px;
     transition: all ease-in-out 0.5s;
     font-family: Nunito;
-}
+} */
 
 .title {
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     margin-top: 5px;
 }
 
@@ -51,20 +52,23 @@
     grid-row-end: rows2;
     display: grid;
     grid-template-rows: [therow1] 50% [therow2] 50% [therow3];
+    /* border: rgb(38, 0, 255) solid 2px; */
 }
 
 .filterrow1 {
     grid-row-start: therow1;
     grid-row-end: therow2;
     display: grid;
-    grid-template-columns: [clm1] 25% [clm2] 25% [clm3] 25% [clm4] 25% [clm5];
+    grid-template-columns: [clm1] 18% [clm2] 18% [clm3] 14% [clm4] 15% [clm5] 20% [clm6] 15% [clm7];
+    /* border: rgb(255, 0, 170) solid 2px; */
 }
 
 .filterrow2 {
     grid-row-start: therow2;
     grid-row-end: therow3;
     display: grid;
-    grid-template-columns: [cl1] 50% [cl2] 25% [cl3] 25% [cl4];
+    grid-template-columns: [cl1] 100% [cl2];
+    /* border: rgb(0, 255, 55) solid 2px; */
 }
 
 .firstname-col2 {
@@ -176,8 +180,8 @@
 }
 
 .emailaddress-col2 {
-    grid-column-start: cl1;
-    grid-column-end: cl2;
+    grid-column-start: clm5;
+    grid-column-end: clm6;
     display: flex;
     text-align: center;
     align-items: center;
@@ -206,8 +210,8 @@
 }
 
 .payments {
-    grid-column-start: cl2;
-    grid-column-end: cl3;
+    grid-column-start: clm6;
+    grid-column-end: clm7;
     display: flex;
     text-align: center;
     align-items: center;
@@ -215,12 +219,12 @@
 }
 
 .filterbutton-col2 {
-    grid-column-start: cl3;
-    grid-column-end: cl4;
+    grid-column-start: cl1;
+    grid-column-end: cl2;
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
 }
 
 .filter-btn {
@@ -234,7 +238,7 @@
     color: white;
     transition: all ease-in-out 0.1s;
     height: 30px;
-    width: 50%;
+    width: 10%;
     margin-right: 8px;
 }
 
@@ -255,8 +259,8 @@
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
-    margin-top: 25px;
-    height: 630px;
+    margin-top: 20px;
+    height: 665px;
 }
 
 .flexbox-item3 {

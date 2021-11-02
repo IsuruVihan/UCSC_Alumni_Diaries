@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 .main-box {
-    background: #fafafa;
+    background: white;
     height: 96.5%;
     /* padding-left: 6.7em;
     padding-right: 6.7em; */
@@ -10,6 +10,7 @@
     margin-bottom: 1em;
     margin-top: 1em;
     /* border: red solid 2px; */
+    font-family: Nunito
 }
 
 
@@ -17,12 +18,12 @@
     grid-column-start: c1;
     grid-column-end: c2;
     background: #fafafa;
-    display: grid;
-    grid-template-rows: [r1] 50% [r2] 50% [r3];
+    /* display: grid;
+    grid-template-rows: [r1] 50% [r2] 50% [r3]; */
     padding-right: 5px;
 }
 
-.card {
+/* .card {
     background: white;
     height: 197%;
 }
@@ -33,19 +34,19 @@
     padding: 15px;
     transition: all ease-in-out 0.5s;
     font-family: Nunito;
-}
+} */
 
 .title {
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
     margin-top: 5px;
 }
 
 .alldetails2 {
     display: grid;
-    grid-template-rows: [rw1] 10% [rw2] 80% [rw3] 10% [rw4];
+    grid-template-rows: [rw1] 15% [rw2] 75% [rw3] 10% [rw4];
     height: 95%;
     /* border: red solid 2px; */
 }
@@ -54,8 +55,34 @@
     grid-row-start: rw1;
     grid-row-end: rw2;
     display: grid;
-    grid-template-columns: [col1] 12% [col2] 12% [col3] 12% [col4] 12% [col5] 16% [col6] 12% [col7] 12% [col8] 12% [col9];
+    grid-template-rows: [rowww1] 33.3% [rowww2] 33.3% [rowww3] 33.3% [rowww4];
+    /* border: red solid 2px; */
 }
+
+.filtermain2-row1 {
+    grid-row-start: rowww1;
+    grid-row-end: rowww2;
+    display: grid;
+    grid-template-columns: [colll1] 30% [colll2] 30% [colll3] 20% [colll4] 20% [colll5];
+    /* border: rgb(14, 230, 68) solid 2px; */
+}
+
+.filtermain2-row2 {
+    grid-row-start: rowww2;
+    grid-row-end: rowww3;
+    display: grid;
+    grid-template-columns: [coll1] 50% [coll2] 25% [coll3] 25% [coll4];
+    /* border: rgb(14, 115, 230) solid 2px; */
+}
+
+.filtermain2-row3 {
+    grid-row-start: rowww3;
+    grid-row-end: rowww4;
+    display: grid;
+    grid-template-columns: [col1] 100% [col2];
+    /* border: rgb(230, 172, 14) solid 2px; */
+}
+
 
 .details-field {
     border: 1px solid lightgray;
@@ -68,8 +95,8 @@
 }
 
 .name1 {
-    grid-column-start: col1;
-    grid-column-end: col2;
+    grid-column-start: colll1;
+    grid-column-end: colll2;
     display: flex;
     text-align: center;
     align-items: center;
@@ -77,8 +104,8 @@
 }
 
 .name2 {
-    grid-column-start: col2;
-    grid-column-end: col3;
+    grid-column-start: colll2;
+    grid-column-end: colll3;
     display: flex;
     text-align: center;
     align-items: center;
@@ -118,8 +145,8 @@
 }
 
 .thebatch {
-    grid-column-start: col3;
-    grid-column-end: col4;
+    grid-column-start: colll3;
+    grid-column-end: colll4;
     display: flex;
     text-align: center;
     align-items: center;
@@ -142,8 +169,8 @@
 }
 
 .thesubtype {
-    grid-column-start: col4;
-    grid-column-end: col5;
+    grid-column-start: colll4;
+    grid-column-end: colll5;
     display: flex;
     text-align: center;
     align-items: center;
@@ -166,8 +193,8 @@
 }
 
 .theemail {
-    grid-column-start: col5;
-    grid-column-end: col6;
+    grid-column-start: coll1;
+    grid-column-end: coll2;
     display: flex;
     text-align: center;
     align-items: center;
@@ -189,11 +216,12 @@
     font-size: 14px;
     overflow-y: hidden;
     overflow-x: auto;
+    margin-left: -9.5px;
 }
 
 .fro {
-    grid-column-start: col6;
-    grid-column-end: col7;
+    grid-column-start: coll2;
+    grid-column-end: coll3;
     display: flex;
     text-align: center;
     align-items: center;
@@ -213,6 +241,7 @@
     text-align: center;
     justify-content: center;
     font-size: 14px;
+    margin-left: -9.5px;
 }
 
 .from:hover {
@@ -220,8 +249,8 @@
 }
 
 .t {
-    grid-column-start: col7;
-    grid-column-end: col8;
+    grid-column-start: coll3;
+    grid-column-end: coll4;
     display: flex;
     text-align: center;
     align-items: center;
@@ -241,6 +270,7 @@
     text-align: center;
     justify-content: center;
     font-size: 14px;
+    margin-right: -2.5px;
 }
 
 .to:hover {
@@ -248,8 +278,8 @@
 }
 
 .fil {
-    grid-column-start: col8;
-    grid-column-end: col9;
+    grid-column-start: col1;
+    grid-column-end: col2;
     display: flex;
     text-align: center;
     align-items: center;
@@ -267,7 +297,7 @@
     color: white;
     transition: all ease-in-out 0.1s;
     height: 30px;
-    width: 90%;
+    width: 10%;
 }
 
 .filter-btn:hover {
@@ -279,13 +309,14 @@
 .flexbox-container2 {
     grid-row-start: rw2;
     grid-row-end: rw3;
-    height: 650px;
+    height: 600px;
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: flex-start;
     overflow: hidden;
     overflow-y: scroll;
     padding: 5px;
+    margin-top: 15px;
 }
 
 .flexbox-item2 {
