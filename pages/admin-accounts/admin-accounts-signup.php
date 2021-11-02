@@ -1,11 +1,9 @@
-<link rel='stylesheet' href='../../assets/styles/signup.css'/>
+<link rel='stylesheet' href='../../assets/styles/signup-iframe.css'>
 
-
-
-<div class='conatiner01'>
-    <div class='container'>
+<div class='conatiner01' >  
+    <div class='container' >
         <div class='title'>Register Members</div>
-        <form action='#'>
+        <form>
             <div class='input_box'>
                 <span class='details'>Name with Initials</span>
                 <input type='text' placeholder=' Enter Your Name with initials'>
@@ -76,8 +74,7 @@
             <div class='buttons'>
                 <input type='submit' value='Create Account' class='btn'>
                 <input type='reset' value='Cancel' class='btn_cancel'/>
-            </div>
-            
+            </div> 
         </form>
     </div>
 </div>
