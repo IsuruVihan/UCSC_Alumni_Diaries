@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background: white;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -31,48 +40,40 @@
     margin-top: 10px;
 }
 
-.my-account {
-    display: grid;
-    height: 110vh;
-    background: #fafafa;
-    grid-template-columns: [line1] 15% [line2] 53% [line3] 32% [line4];
-    grid-template-rows: [row1] 55% [row2] 45% [row3];
-    margin: 0 6.7em 10vh;
+.my-account-main-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background: white;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .pic-section {
     display: flex;
     background: white;
     flex-direction: column;
-    grid-column-start: line1;
-    grid-column-end: line2;
-    grid-row-start: row1;
-    grid-row-end: row2;
     border: 1px solid lightgray;
     border-radius: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
     padding: 5px;
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 2px 4px lightgray;
+    width: 30%;
+    height: 96%;
 }
 
 .account-details {
     background: white;
     display: flex;
     flex-direction: column;
-    grid-column-start: line2;
-    grid-column-end: line3;
-    grid-row-start: row1;
-    grid-row-end: row2;
+    justify-content: space-evenly;
     border: 1px solid lightgray;
     border-radius: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 5px;
     align-items: center;
     box-shadow: 1px 2px 4px lightgray;
+    width: 67%;
+    height: 97.75%;
 }
 
 .projects-contributions {
@@ -102,6 +103,8 @@
     flex-direction: column;
     gap: 8px;
     text-align: center;
+    width: 100%;
+    height: 70%;
 }
 
 .user-pic {
@@ -116,26 +119,26 @@
     border-radius: 5px;
     color: white;
     transition: all ease-in-out 0.1s;
-    height: 25px;
 }
 
 .remove-pic-btn, .edit-pic-btn {
     width: 100%;
-    margin-top: 0.5em;
+    margin-top: 0.3em;
     background: gray;
     border: 1px solid gray;
+    height: 40px;
 }
 
 .edit-details-btn {
     width: 15%;
     background: gray;
     border: 1px solid gray;
+    height: 25px;
 }
 
 .edit-pic-btn:hover {
-    cursor: pointer;
     background: #fa8c16;
-    border: 1px #fa8c16;
+    border-color: #fa8c16;
 }
 
 .remove-pic-btn:hover {
@@ -155,6 +158,7 @@
     border-radius: 5px;
     text-align: center;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .container-1 {
@@ -162,7 +166,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 25px;
+    height: 70%;
+    margin-top: 10px;
 }
 
 .container-2 {
@@ -170,21 +175,17 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-top: 12px;
+    height: 15%;
+    /*margin-top: 5px;*/
 }
 
 .container-3 {
     display: flex;
     flex-direction: column;
     width: 45%;
+    height: 98%;
 }
 
-.container-4 {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    margin-top: 63px;
-}
 
 .section-3 {
     display: flex;
@@ -225,7 +226,7 @@
     border-radius: 5px;
     text-align: center;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,16 +239,16 @@
     text-align: left;
     align-items: center;
     width: 100%;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .section-5 {
-    height: 91px;
+    height: 97px;
     border: 1px solid lightgray;
     border-radius: 5px;
     text-align: center;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,7 +259,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 10px;
+    height: 70%;
 }
 
 .container-6 {
@@ -266,7 +268,8 @@
     flex-direction: row;
     justify-content: space-between;
     width: 50%;
-    margin-top: 12px;
+    height: 15%;
+    /*margin-top: 5px;*/
 }
 
 .input5 {
@@ -276,7 +279,7 @@
     text-align: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     color: black;
 }
 
@@ -295,39 +298,38 @@
 }
 
 .input6 {
-    height: 91px;
+    height: 97px;
     border: 1px solid lightgray;
     border-radius: 5px;
     text-align: center;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     resize: none;
 }
 
 .contributions {
-    height: 100%;
-    width: 45.7%;
+    height: 99%;
+    width: 97%;
     background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-    box-shadow: 1px 2px 4px lightgray;
 }
 
 .contributions-container {
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 100%;
+    height: 80%;
+    width: 65%;
     margin-top: 5px;
     margin-bottom: 8px;
     padding: 5px;
@@ -335,7 +337,7 @@
 
 .contributions-item {
     width: 100%;
-    height: 15%;
+    height: 10%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -346,17 +348,15 @@
 }
 
 .projects {
-    height: 100%;
-    width: 45.7%;
+    height: 99%;
+    width: 97%;
     background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-    box-shadow: 1px 2px 4px lightgray;
 }
 
 .projects-container {
@@ -366,7 +366,8 @@
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 100%;
+    height: 80%;
+    width: 65%;
     margin-top: 5px;
     margin-bottom: 8px;
     padding: 5px;
@@ -374,7 +375,7 @@
 
 .projects-item {
     width: 100%;
-    height: 15%;
+    height: 10%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -389,27 +390,36 @@
     cursor: pointer;
 }
 
-.password {
+.password-main-container{
     background: white;
     width: 100%;
-    height: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.password {
+    background: white;
+    width: 50%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgray;
-    border-radius: 5px;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 10px;
-    box-shadow: 1px 2px 4px lightgray;
 }
 
 .section-6 {
-    height: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .input1 {
@@ -431,11 +441,13 @@
 .submit-btn, .pay-pal-btn {
     background: gray;
     border: 1px solid gray;
+    height: 25px;
 }
 
 .cancel-btn {
     background: gray;
     border: 1px solid gray;
+    height: 25px;
 }
 
 .submit-btn:hover {
@@ -453,22 +465,35 @@
     border-color: #f5222d;
 }
 
-.subscriptions {
+.sub-recharge-main-container {
     background: white;
     width: 100%;
-    height: 74.5%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgray;
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 5px;*/
+    justify-content: center;
+    align-items: center;
+    /*box-shadow: 1px 2px 4px lightgray;*/
+}
+
+.subscription-01 {
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid lightgray;*/
     border-radius: 5px;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 1px 2px 4px lightgray;
+    /*box-shadow: 1px 2px 4px lightgray;*/
 }
 
 .sub-type {
-    width: 92%;
-    height: 15%;
+    width: 50%;
+    height: 45%;
     border: 1px solid lightgray;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -480,8 +505,8 @@
 }
 
 .recharge-account {
-    width: 96%;
-    height: 22%;
+    width: 51.5%;
+    height: 45%;
     border: 1px solid lightgray;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -494,10 +519,11 @@
 
 .section-7 {
     width: 99%;
-    height: 50%;
+    height: 15%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .section-8 {
@@ -579,27 +605,27 @@
 }
 
 .recharge-details {
-    width: 95.5%;
-    height: 50%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
+    width: 98%;
+    height: 100%;
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 5px;*/
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 2px 4px lightgray;
+    /*box-shadow: 1px 2px 4px lightgray;*/
 }
 
 .filter-field {
-    width: 91%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     border: 1px solid lightgray;
     border-radius: 5px;
-    padding: 2px;
+    padding: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -609,14 +635,14 @@
     height: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
 }
 
 .section-14 {
     width: 100%;
-    height: 50%;
+    height: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -625,6 +651,17 @@
 
 .input4 {
     width: 47.5%;
+    height: 28px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    padding: 5px;
+    text-align: center;
+}
+
+.input5 {
+    width: 100%;
     height: 28px;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -676,8 +713,8 @@
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 50%;
-    width: 90%;
+    height: 80%;
+    width: 50%;
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
@@ -685,7 +722,7 @@
 
 .recharge-details-item {
     width: 99%;
-    height: 62%;
+    height: 30%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -724,4 +761,89 @@
     background: white;
     border-color: black;
     color: black;
+}
+
+.subscription {
+    /*margin-top: 3em;*/
+    /*margin-left: 6.7em;*/
+    /*margin-right: 6.7em;*/
+    display: flex;
+    flex-direction: column;
+    /*grid-template-columns: [col1] 15% [col2] 85% [col3];*/
+    /*grid-template-rows: [row1] 100% [row2];*/
+    /*column-gap: 5px;*/
+    height: 99%;
+    width: 99%;
+}
+
+.sec-1 {
+    /*grid-row-start: row1;*/
+    /*grid-row-end: row2;*/
+    /*grid-column-start: col1;*/
+    /*grid-column-end: col2;*/
+    /*box-shadow: 1px 2px 4px grey;*/
+    /*border-radius: 5px;*/
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /*gap: 10px;*/
+    background: white;
+    height: 5%;
+    width: 99%;
+}
+
+.sec-2 {
+    /*grid-row-start: row1;*/
+    /*grid-row-end: row2;*/
+    /*grid-column-start: col2;*/
+    /*grid-column-end: col3;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    /*box-shadow: 1px 2px 4px grey;*/
+    /*border-radius: 5px;*/
+    border: none;
+    /*padding: 10px;*/
+    height: 90%;
+    width: 99%;
+}
+
+.section-link {
+    /*border: 1px solid lightgray;*/
+    border-radius: 5px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+    align-items: center;
+    /*background: gray;*/
+    color: #8c8c8c;
+    font-size: 1.2em;
+    font-weight: 800;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
+}
+
+.section-link:hover {
+    color: black;
+}
+.clicked-link {
+    color: black;
+    animation: fadeIn 1s;
+}
+
+.sec-15{
+    width: 47%;
+    height: 15px;
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 5px;*/
+    text-align: left;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: flex-start;
 }
