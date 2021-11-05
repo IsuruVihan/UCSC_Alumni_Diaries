@@ -6,7 +6,7 @@
     height: 15vh;
     margin-top: 5vh;
     padding-left: 6.7em;
-    background: white;
+    background: #fafafa;
     font-family: Nunito;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .section-link {
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
     border-radius: 5px;
     height: 35px;
     display: inline-flex;
