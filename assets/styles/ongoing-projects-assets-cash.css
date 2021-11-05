@@ -1,0 +1,40 @@
+.cash {
+    height: 100%;
+    display: grid;
+    grid-template-rows: [row1] 100% [row2];
+    grid-template-columns: [col1] 15% [col2] 85% [col3];
+}
+
+.sec-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec-2 {
+
+}
+
+.iframe-link {
+    background-color: gray;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
+}
+
+.iframe-link:hover {
+    background: #fa8c16;
+}
+
+.clicked-link {
+    background: #fa8c16;
+}

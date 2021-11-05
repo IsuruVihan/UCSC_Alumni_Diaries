@@ -1,7 +1,5 @@
 <link rel='stylesheet' href='../../assets/styles/signup.css'/>
 
-
-
 <div class='conatiner01'>
     <div class='container'>
         <div class='title'>Register Members</div>
@@ -81,4 +79,3 @@
         </form>
     </div>
 </div>
-
