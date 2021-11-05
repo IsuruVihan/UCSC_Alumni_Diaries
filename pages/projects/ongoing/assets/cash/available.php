@@ -11,4 +11,7 @@
         <div class='card-title'>Spent Cash</div>
         <div class='value'>Rs. 10000.00</div>
     </div>
+    <div class='card-3'>
+        <button class='btn filter-btn'>Generate Report</button>
+    </div>
 </div>
