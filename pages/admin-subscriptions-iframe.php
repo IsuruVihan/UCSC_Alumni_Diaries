@@ -16,36 +16,9 @@
 
 <div class='reports'>
     <div class='section-1'>
-        <a 
-            href='subscriptions-t-b-a.php' 
-            id='to-be-accepted'
-            class='section-link clicked' 
-            target='iframe'
-            onclick=onClickSubtba()
-
-        >To Be Accepted </a>
-        
-    
-        <a 
-
-            href='subscriptions-done.php' 
-            id='sub-done'
-            class='section-link' 
-            target='iframe'
-            onclick=onClickDone()
-
-        >Done </a>
-        
-        <a 
-        
-            href='subscription-status.php' 
-            id='sub-status'
-            class='section-link' 
-            target='iframe'
-            onclick=onClickStatus()
-            
-        >Status </a>
-
+        <a href='subscriptions-t-b-a.php' class='section-link' target='iframe'> To Be Accepted </a>
+        <a href='subscriptions-done.php' class='section-link' target='iframe'> Done </a>
+        <a href='subscription-status.php' class='section-link' target='iframe'> Status </a>
     </div>
     <iframe
         class='section-2'
@@ -55,7 +28,5 @@
         title="Iframe"
     ></iframe>
 </div>
-
-<script src="../js/admin-subscriptions.js"></script>
 
 <?php include('../components/footer.php'); ?>

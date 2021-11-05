@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+.main-box {
+    background: white;
+    height: 96.5%;
+    display: grid;
+    grid-template-columns: [c1] 100% [c2];
+    margin-bottom: 1em;
+    margin-top: 1em;
+    /* border: red solid 2px; */
+    font-family: Nunito;
+}
+
+.right-col {
+    grid-column-start: c1;
+    grid-column-end: c2;
+    background:white;
+    display: grid;
+    grid-template-rows: [r1] 100% [r2];
+    padding: 1px;
+}
+
+/* .card2 {
+    background: white;
+    height: 98.7%;
+}
+
+.card2, .details {
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all ease-in-out 0.5s;
+    font-family: Nunito;
+} */
+
+.title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.alldetails3 {
+    display: grid;
+    grid-template-rows: [rows1] 10% [rows2] 90% [rows3];
+    height: 91%;
+}
+
+.filtermain3 {
+    grid-row-start: rows1;
+    grid-row-end: rows2;
+    display: grid;
+    grid-template-rows: [therow1] 50% [therow2] 50% [therow3];
+    /* border: rgb(38, 0, 255) solid 2px; */
+}
+
+.filterrow1 {
+    grid-row-start: therow1;
+    grid-row-end: therow2;
+    display: grid;
+    grid-template-columns: [clm1] 18% [clm2] 18% [clm3] 14% [clm4] 15% [clm5] 20% [clm6] 15% [clm7];
+    /* border: rgb(255, 0, 170) solid 2px; */
+}
+
+.filterrow2 {
+    grid-row-start: therow2;
+    grid-row-end: therow3;
+    display: grid;
+    grid-template-columns: [cl1] 100% [cl2];
+    /* border: rgb(0, 255, 55) solid 2px; */
+}
+
+.firstname-col2 {
+    grid-column-start: clm1;
+    grid-column-end: clm2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fname {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.list-details {
+    font-family: "Nunito", serif;
+    text-align: center;
+}
+
+.lastname-col2 {
+    grid-column-start: clm2;
+    grid-column-end: clm3;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.lname {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+.bat-col2 {
+    grid-column-start: clm3;
+    grid-column-end: clm4;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.batch {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.subscriptiontype-col2 {
+    grid-column-start: clm4;
+    grid-column-end: clm5;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.stype {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.emailaddress-col2 {
+    grid-column-start: clm5;
+    grid-column-end: clm6;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.emailsss {
+    width: 97%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.emailsss:hover {
+    border-color: #ffccc7;
+}
+
+.payments {
+    grid-column-start: clm6;
+    grid-column-end: clm7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.filterbutton-col2 {
+    grid-column-start: cl1;
+    grid-column-end: cl2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: gray;
+    border: 1px solid gray;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 30px;
+    width: 10%;
+    margin-right: 8px;
+}
+
+.filter-btn:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.flexbox-container3 {
+    grid-row-start: rows2;
+    grid-row-end: rows3;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+    height: 665px;
+}
+
+.flexbox-item3 {
+    height: 190px;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: [kol1] 16% [kol2] 28% [kol3] 28% [kol4] 28% [kol5];
+}
+
+.profilepic-col2 {
+    grid-column-start: kol1;
+    grid-column-end: kol2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.namesecond {
+    width: 95%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.alllabels {
+    font-weight: 600;
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+}
+
+.col2-col2 {
+    grid-column-start: kol2;
+    grid-column-end: kol3;
+    display: grid;
+    grid-template-rows: [rrow1] 33.3% [rrow2] 33.3% [rrow3] 33.3% [rrow4];
+}
+
+.ids {
+    grid-row-start: rrow1;
+    grid-row-end: rrow2;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.firstname-right {
+    grid-row-start: rrow2;
+    grid-row-end: rrow3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.batch-right {
+    grid-row-start: rrow3;
+    grid-row-end: rrow4;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.col3-col2 {
+    grid-column-start: kol3;
+    grid-column-end: kol4;
+    display: grid;
+    grid-template-rows: [ow1] 33.3% [ow2] 33.3% [ow3] 33.3% [ow4];
+}
+
+.email-right {
+    grid-row-start: ow1;
+    grid-row-end: ow2;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.lastname-right {
+    grid-row-start: ow2;
+    grid-row-end: ow3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.batch-col2 {
+    grid-row-start: ow3;
+    grid-row-end: ow4;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.col4-col2 {
+    grid-column-start: kol4;
+    grid-column-end: kol5;
+    display: grid;
+    grid-template-rows: [sow1] 33.3% [sow2] 33.3% [sow3] 33.3% [sow4];
+}
+
+.duedate {
+    grid-row-start: sow1;
+    grid-row-end: sow2;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.payment {
+    grid-row-start: sow2;
+    grid-row-end: sow3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.ban-unban {
+    grid-row-start: sow3;
+    grid-row-end: sow4;
+    display: grid;
+    grid-template-columns: [kk1] 50% [kk2] 50% [kk3];
+}
+
+.ban {
+    grid-column-start: kk1;
+    grid-column-end: kk2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.unban {
+    grid-column-start: kk2;
+    grid-column-end: kk3;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.ban-btn {
+    width: 90%;
+    height: 25px;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.unban-btn {
+    width: 90%;
+    height: 25px;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ban-btn:hover {
+    background: #fa8c16;
+    border: 1px solid #fa8c16;
+}
+
+.unban-btn:hover {
+    background: #096dd9;
+    border: 1px solid #096dd9;
+}
+
+.email:hover {
+    border-color: #ffccc7;
+}
+
+.fname:hover {
+    border-color: #ffccc7;
+}
+
+.lname:hover {
+    border-color: #ffccc7;
+}
+
+.batch:hover {
+    border-color: #ffccc7;
+}
+
+.stype:hover {
+    border-color: #ffccc7;
+}
