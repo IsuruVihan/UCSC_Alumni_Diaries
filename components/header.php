@@ -37,19 +37,8 @@
         </li>
         <li class='link'>
             <a href='../pages/suggestions.php' class='anchor-tag'>Suggestions</a>
-        </li>  
-        <?php
-            if (!isset($_SESSION['Email'])) {
-                echo "
-                    <li class='link'>
-                        <a href='../pages/login.php' class='anchor-tag'>Login</a>
-                    </li>
-                    <li class='link'>
-                        <a href='../pages/signup.php' class='anchor-tag'>Signup</a>
-                    </li>
-                ";
-            }
-        ?>
-        
+        </li>
+       
+       
     </ul>
 </nav>
