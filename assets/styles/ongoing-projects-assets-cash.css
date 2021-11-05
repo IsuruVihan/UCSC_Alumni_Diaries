@@ -3,6 +3,8 @@
     display: grid;
     grid-template-rows: [row1] 100% [row2];
     grid-template-columns: [col1] 15% [col2] 85% [col3];
+    column-gap: 10px;
+    font-family: "Nunito", sans-serif;
 }
 
 .sec-1 {
@@ -14,7 +16,10 @@
 }
 
 .sec-2 {
-
+    border: none;
+    width: 98%;
+    height: 97.5%;
+    padding: 0;
 }
 
 .iframe-link {

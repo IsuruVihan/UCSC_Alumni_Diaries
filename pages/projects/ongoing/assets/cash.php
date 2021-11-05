@@ -4,11 +4,40 @@
 
 <div class='cash'>
     <div class='sec-1'>
-        <a class='iframe-link'>Available</a>
-        <a class='iframe-link'>Spend</a>
-        <a class='iframe-link'>Spent Records</a>
+        <a
+            id='l-1'
+            href='./cash/available.php'
+            class='iframe-link left clicked-link'
+            target='iframe-2'
+            onclick=VisitLink('l-1')
+        >Summary</a>
+        <a
+            id='l-2'
+            href='./cash/spend.php'
+            class='iframe-link'
+            target='iframe-2'
+            onclick=VisitLink('l-2')
+        >Spend</a>
+        <a
+            id='l-3'
+            href='./cash/spend-approvals.php'
+            class='iframe-link'
+            target='iframe-2'
+            onclick=VisitLink('l-3')
+        >Approvals</a>
+        <a
+            id='l-4'
+            href='./cash/spent-records.php'
+            class='iframe-link'
+            target='iframe-2'
+            onclick=VisitLink('l-4')
+        >Spent Records</a>
     </div>
-    <div class='sec-2'>
-
-    </div>
+    <iframe
+        name='iframe-2'
+        class='sec-2'
+        src='./cash/available.php'
+    ></iframe>
 </div>
+
+<script src='../../../../js/ongoing-projects-assets-cash.js'></script>
