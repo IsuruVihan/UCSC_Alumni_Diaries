@@ -19,7 +19,7 @@
         <a 
             href='subscriptions-t-b-a.php' 
             id='to-be-accepted'
-            class='section-link' 
+            class='section-link clicked' 
             target='iframe'
             onclick=onClickSubtba()
 

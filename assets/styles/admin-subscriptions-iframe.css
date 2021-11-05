@@ -29,6 +29,7 @@
     grid-template-rows: [row1] 100% [row2];
     column-gap: 5px;
     height: 120vh;
+    background: white;
 }
 
 .section-1 {
@@ -43,6 +44,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 10px;
+    background: white;
 }
 
 .section-2 {
@@ -53,6 +55,7 @@
     border-radius: 5px;
     box-shadow: 1px 2px 4px rgb(168, 166, 166);
     border: none;
+    background: white;
     
 }
 
