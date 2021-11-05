@@ -1,4 +1,4 @@
-
+<?php include('../server/signup/session.php'); ?>
 
 <link rel='stylesheet' href='../assets/styles/signup.css'/>
 
