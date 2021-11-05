@@ -6,7 +6,8 @@
         <input id='p-name' class='input' type='text'/>
         <label for='p-name' class='label'>Project description</label>
         <textarea class='input text-area' id='p-description'></textarea>
-        <div class='notice'>* You will be able to select project coordinator and committee members once you create a
+        <div class='notice'>
+            * You will be able to select project coordinator and committee members once you create a
             project successfully.
         </div>
         <br/>
