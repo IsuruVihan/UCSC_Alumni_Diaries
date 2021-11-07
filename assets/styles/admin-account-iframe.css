@@ -36,6 +36,8 @@ body {
     border: none;
     border-radius: 10px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 .iframe-nav-link {
     border: 1px solid lightgray;

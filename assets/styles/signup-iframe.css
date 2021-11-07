@@ -5,8 +5,8 @@ body {
     box-sizing: border-box;
 }
 
- .conatiner01 {
-    display: flex;
+ .register-conatiner01 {
+    display: none;
     height: 95%;
     justify-content: center;
     align-items: flex-start;
@@ -14,7 +14,7 @@ body {
     border: 1px solid #fff;
 } 
 
-.container {
+.register-container {
     max-width: 500px;
     width: 100%;
     padding: 25px 30px;
@@ -23,7 +23,7 @@ body {
     border: none;
 }
 
-.container .title {
+.register-container .register-title {
     font-size: 35px;
     color: #2f3640;
     margin-bottom: 10px;
@@ -31,7 +31,7 @@ body {
     text-align: center;
 }
 
-.input_box {
+.register-input_box {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ input {
     border-radius: 5px;
 }
 
-.input_box input {
+.register-input_box input {
     height: 45px;
     width: 100%;
     outline: none;
@@ -59,13 +59,13 @@ input {
     line-height: normal;
 }
 
-.input_box input::placeholder {
+.register-input_box input::placeholder {
     color: #aaa;
     font-weight: 500;
     font-family: "Nunito", sans-serif;
 }
 
-.details {
+.register-details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -73,27 +73,27 @@ input {
     font-weight: 700;
 }
 
-.user_details {
+.register-user_details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.user_details .input_box {
+.register-user_details .register-input_box {
     width: 45%;
 }
 
-.user_details01 {
+.register-user_details01 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.user_details01 .input_box {
+.register-user_details01 .input_box {
     width: 45%;
 }
 
-.input_box select {
+.register-input_box select {
     height: 45px;
     width: 100%;
     outline: none;
@@ -104,14 +104,14 @@ input {
     color: #aaa;
 }
 
-.buttons {
+.register-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 2em;
 }
 
-.btn {
+.register-btn {
     width: 42%;
     background-color: #f34e57;
     border: none;
@@ -127,11 +127,11 @@ input {
     transition: 0.5s;
 }
 
-.btn:hover {
+.register-btn:hover {
     background-color: #e59b9b;
 }
 
-.btn_cancel {
+.register-btn_cancel {
     width: 42%;
     background-color: #662626;
     border: none;
@@ -147,10 +147,13 @@ input {
     transition: 0.5s;
 }
 
-.btn_cancel:hover {
+.register-btn_cancel:hover {
     background-color: #e59797;
 }
 
-p {
+/* p {
     text-align: center;
+} */
+.register-Gender, .register-Batch{
+    border-radius:5px;
 }
