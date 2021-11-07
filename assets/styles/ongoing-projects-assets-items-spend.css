@@ -8,7 +8,7 @@
     width: 100%;
 }
 
-.group {
+.group, .parent-group {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -16,6 +16,31 @@
 
 .group > label {
     font-size: 0.9em;
+}
+
+.parent-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first {
+    width: 20%;
+}
+
+.middle {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+}
+
+.last {
+    width: 30%;
+}
+
+.last-2 {
+    margin-left: 10px;
+    width: 80%;
 }
 
 .input-field {
