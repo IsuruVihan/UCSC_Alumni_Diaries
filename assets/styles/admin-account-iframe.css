@@ -72,6 +72,11 @@ body {
     color: gray;
     font-weight: 600;  
 }
+
+.contribution-iframe-link:hover{
+    cursor: pointer;
+}
+
 .iframe-display-projectContribution{
     border-radius: 5px;
     box-shadow: 1px 2px 4px lightgray;

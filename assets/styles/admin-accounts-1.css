@@ -395,10 +395,12 @@ body {
     display: flex;
     padding: 10px;
     flex-direction: column;
+    height: 200px;
+    overflow-y: scroll;
 }
 
-.contributions {
-    margin-right: 10px;
+.involved-projects {
+    display: none;
 }
 
 .contributions-title, .involved-projects-title {
