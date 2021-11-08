@@ -89,11 +89,11 @@ input {
     justify-content: space-between;
 }
 
-.register-user_details01 .input_box {
+.register-user_details01 .register-input_box {
     width: 45%;
 }
 
-.register-input_box select {
+.register-input_box > select {
     height: 45px;
     width: 100%;
     outline: none;
@@ -151,9 +151,6 @@ input {
     background-color: #e59797;
 }
 
-/* p {
-    text-align: center;
-} */
 .register-Gender, .register-Batch{
     border-radius:5px;
 }

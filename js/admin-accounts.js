@@ -69,7 +69,6 @@ const onClickState = (id) => {
 
 const onClickPageShow = (id) => {
     switch (id) {
-
         case "account-signup":
             document.getElementById('account-register').style.display="flex";
             document.getElementById('requests-account').style.display="none";
@@ -77,7 +76,6 @@ const onClickPageShow = (id) => {
             document.getElementById('registered-account').style.display="none";
             document.getElementById('banned-account').style.display="none";
             break;
-
         case "account-request":
             document.getElementById('account-register').style.display="none";
             document.getElementById('requests-account').style.display="flex";
@@ -85,7 +83,6 @@ const onClickPageShow = (id) => {
             document.getElementById('registered-account').style.display="none";
             document.getElementById('banned-account').style.display="none";
             break;
-
         case "account-rejected":
             document.getElementById('account-register').style.display="none";
             document.getElementById('requests-account').style.display="none";
@@ -93,7 +90,6 @@ const onClickPageShow = (id) => {
             document.getElementById('registered-account').style.display="none";
             document.getElementById('banned-account').style.display="none";
             break;
-
         case "account-registered":
             document.getElementById('account-register').style.display="none";
             document.getElementById('requests-account').style.display="none";
@@ -101,7 +97,6 @@ const onClickPageShow = (id) => {
             document.getElementById('registered-account').style.display="flex";
             document.getElementById('banned-account').style.display="none";
             break;
-
         case "account-banned":
             document.getElementById('account-register').style.display="none";
             document.getElementById('requests-account').style.display="none";
@@ -109,7 +104,6 @@ const onClickPageShow = (id) => {
             document.getElementById('registered-account').style.display="none";
             document.getElementById('banned-account').style.display="flex";
             break;
-
         default:
             document.getElementById('account-register').style.display="flex";
     }
