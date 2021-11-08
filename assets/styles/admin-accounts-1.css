@@ -153,6 +153,7 @@ body {
 .result {
     width: 100%;
     height: 30px;
+    min-height: 30px;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -177,6 +178,7 @@ body {
     grid-row-end: row2;
     margin-right: 5px;
     margin-bottom: 5px;
+    display: flex;
 }
 
 .rejected-requests {
@@ -187,6 +189,7 @@ body {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
+    display: none;
 }
 
 .registered {
@@ -196,6 +199,7 @@ body {
     grid-row-end: row3;
     margin-right: 5px;
     margin-top: 5px;
+    display: none;
 }
 
 .banned {
@@ -206,6 +210,7 @@ body {
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
+    display: none;
 }
 
 .details {
@@ -388,13 +393,18 @@ body {
 }
 
 .contributions, .involved-projects {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 10.6em;
     display: flex;
     padding: 10px;
     flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
-.contributions {
-    margin-right: 10px;
+.involved-projects {
+    display: none;
 }
 
 .contributions-title, .involved-projects-title {
@@ -404,7 +414,6 @@ body {
 }
 
 .list {
-    border: 1px solid lightgray;
     border-radius: 5px;
     height: 100%;
     padding: 5px;
