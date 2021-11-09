@@ -11,7 +11,7 @@
         Wall
     </p>
     <p class='main-title'>
-	    <i class="fa fa-globe"></i></i> Wall
+	    <i class="fa fa-globe"></i> Wall
     </p>
 </div>
 <div class='wall'>

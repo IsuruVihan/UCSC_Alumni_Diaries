@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    font-family: 'Nunito', sans-serif;
+    background: #fafafa;
+}
+
 .main-container {
     height: 15vh;
     margin-top: 5vh;
@@ -15,57 +24,62 @@
     margin: 0;
 }
 
-.inventory {
-    display: grid;
-    height: 190vh;
-    background: #fafafa;
-    grid-template-columns: [line1] 27.5% [line2] 27.5% [line3] 45% [line4];
-    grid-template-rows: [row1] 65% [row2] 35% [row3];
-    margin: 0 6.7em 10vh;
-}
+/*.inventory {*/
+/*    display: grid;*/
+/*    height: 190vh;*/
+/*    background: #fafafa;*/
+/*    grid-template-columns: [line1] 27.5% [line2] 27.5% [line3] 45% [line4];*/
+/*    grid-template-rows: [row1] 65% [row2] 35% [row3];*/
+/*    margin: 0 6.7em 10vh;*/
+/*}*/
 
 .available-assets {
-    grid-column-start: line1;
-    grid-column-end: line2;
-    grid-row-start: row1;
-    grid-row-end: row2;
+    /*grid-column-start: line1;*/
+    /*grid-column-end: line2;*/
+    /*grid-row-start: row1;*/
+    /*grid-row-end: row2;*/
     margin-right: 5px;
     margin-bottom: 5px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
 }
 
 .transfers {
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    box-shadow: 1px 2px 4px lightgrey;
-    background-color: white;
-    grid-column-start: line2;
-    grid-column-end: line3;
-    grid-row-start: row1;
-    grid-row-end: row2;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 5px;
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 1px 2px 4px lightgrey;*/
+    /*background-color: white;*/
+    /*grid-column-start: line2;*/
+    /*grid-column-end: line3;*/
+    /*grid-row-start: row1;*/
+    /*grid-row-end: row2;*/
+    /*margin-right: 5px;*/
+    /*margin-left: 5px;*/
+    /*margin-bottom: 5px;*/
     display: flex;
-    flex-direction: column;
-    padding: 3px;
+    flex-direction: row;
+    /*padding: 3px;*/
+    width: 100%;
+    height: 96.5%;
 }
 
 .to-be-accepted {
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    box-shadow: 1px 2px 4px lightgrey;
-    background-color: white;
-    grid-column-start: line1;
-    grid-column-end: line3;
-    grid-row-start: row2;
-    grid-row-end: row3;
-    margin-right: 5px;
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 1px 2px 4px lightgrey;*/
+    /*background-color: white;*/
+    /*grid-column-start: line1;*/
+    /*grid-column-end: line3;*/
+    /*grid-row-start: row2;*/
+    /*grid-row-end: row3;*/
+    /*margin-right: 5px;*/
     margin-top: 5px;
     display: flex;
     flex-direction: column;
     padding: 3px;
+    height: 98%;
 }
 
 .received {
@@ -91,8 +105,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 20%;
-    width: 100%;
+    align-items: center;
+    height: 30%;
+    width: 49.5%;
     background: white;
 }
 
@@ -108,14 +123,23 @@
     border-radius: 5px;
     margin-left: 80px;
     margin-right: 80px;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 20%;
+    width: 70%;
 }
 
 .trans-to1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
     align-self: center;
     width: 100%;
+    height: 45%;
 }
 
 .col1 {
@@ -128,8 +152,8 @@
 }
 
 .input-avu1 {
-    width: 49%;
-    height: 25px;
+    width: 70%;
+    height: 11%;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -139,8 +163,8 @@
 }
 
 .input-avu2 {
-    width: 45%;
-    height: 25px;
+    width: 49%;
+    height: 99%;
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -156,10 +180,20 @@
 
 .col2 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-self: center;
     margin-bottom: 0.5em;
-    width: 100%;
+    width: 97.5%;
+    height: 40%;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 0.5em;
+    width: 97.5%;
+    height: 40%;
 }
 
 .btn {
@@ -202,10 +236,11 @@
     box-shadow: 1px 2px 4px lightgrey;
     display: flex;
     flex-direction: column;
-    height: 80%;
-    width: 100%;
+    height: 98%;
+    width: 49.5%;
     background-color: white;
     padding-top: 20px;
+    margin-right: 10px;
 }
 
 .available-items-container {
@@ -215,12 +250,12 @@
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 80%;
+    height: 90%;
     margin: 20px;
 }
 
 .available-items-card {
-    height: 25%;
+    height: 27%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -234,17 +269,19 @@
 
 .item-details {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.item-name {
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 10%;
+    text-align: center;
     border: 1px solid lightgray;
     border-radius: 5px;
-    height: 100%;
-    width: 48%;
-    text-align: center;
+}
+
+.label {
+    height: 5%;
+    width: 70%;
+    text-align: left;
 }
 
 .item-quantity {
@@ -281,20 +318,41 @@
     width: 100%;
 }
 
-.cash-transfers, .item-transfers {
+.cash-transfers{
     border: 1px solid lightgray;
     border-radius: 10px;
     box-shadow: 1px 2px 4px lightgrey;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    height: 47%;
+    /*justify-content: center;*/
+    /*align-content: center;*/
+    height: 100%;
+    width: 49%;
     background: white;
-    margin-bottom: 3px;
-    margin-top: 5px;
+    /*margin-bottom: 3px;*/
+    /*margin-top: 20px;*/
     padding-right: 5px;
     padding-left: 5px;
+    margin-right: 10px;
+    padding-top: 20px;
+}
+
+.item-transfers {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-content: center;*/
+    height: 100%;
+    width: 49%;
+    background: white;
+    /*margin-bottom: 3px;*/
+    /*margin-top: 5px;*/
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 20px;
 }
 
 .filter-field {
@@ -305,7 +363,7 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 2px;
-    margin: 5px;
+    margin: 10px 5px;
 }
 
 .col4 {
@@ -316,21 +374,56 @@
     height: 40%;
     width: 98%;
 }
-
-.cash-transfers-container, .item-transfers-container, .to-be-acc-cash-container, .to-be-acc-items-container,
-.received-cash-container {
+.cash-transfers-container{
     border: 1px solid lightgray;
     border-radius: 5px;
     justify-content: space-around;
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 47%;
+    height: 70%;
     padding: 3px;
+    margin: 5px;
 }
 
-.cash-transfers-item, .item-transfers-item {
-    height: 75%;
+.item-transfers-container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 78%;
+    padding: 3px;
+    margin: 5px;
+}
+
+.to-be-acc-cash-container, .to-be-acc-items-container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 73%;
+    padding: 3px;
+    margin: 5px;
+}
+
+.cash-transfers-item{
+    height: 38%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.item-transfers-item {
+    height: 35%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -342,16 +435,26 @@
 }
 
 .sec-1 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 10%;
+    text-align: center;
 }
 
 .sec-2 {
     border: 1px solid lightgray;
     border-radius: 5px;
-    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 8%;
     text-align: center;
 }
 
@@ -369,7 +472,7 @@
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    margin-top: 7px;
+    margin-top: 20px;
     height: 8%;
     width: 60%;
     text-align: center;
@@ -380,12 +483,14 @@
 .sec-4 {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    height: 90%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
     width: 100%;
 }
 
-.to-be-acc-item {
+.to-be-acc-cash {
+    background: white;
     height: 100%;
     width: 50%;
     border: 1px solid lightgray;
@@ -395,11 +500,39 @@
     flex-direction: column;
     transition: all ease-in-out 0.5s;
     padding: 4px;
+    margin-right: 10px;
+}
+
+.to-be-acc-item {
+    background: white;
+    height: 100%;
+    width: 50%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+    padding: 4px;
+    /*margin: 3px;*/
+}
+
+.to-be-acc-cash-item {
+    height: 40%;
+    width: 96%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
     margin: 3px;
 }
 
-.to-be-acc-cash-item, .to-be-acc-items-item, .received-cash-item {
-    height: 60%;
+.to-be-acc-items-item{
+    height: 46%;
     width: 96%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -415,8 +548,9 @@
 .btn-container {
     display: flex;
     flex-direction: row;
-    width: 94%;
+    width: 70%;
     justify-content: space-between;
+    margin-top: 7px;
 }
 
 .sec-5 {
@@ -445,17 +579,17 @@
 }
 
 .received-cash {
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    box-shadow: 1px 2px 4px lightgrey;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 35%;
-    background: white;
-    padding: 3px;
-    margin-bottom: 7px;
-    margin-top: 7px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /*background: white;*/
+    margin: 0;
+    /*padding: 3px;*/
+    /*margin-bottom: 7px;*/
+    /*margin-top: 7px;*/
 }
 
 .cash-for-association, .cash-for-projects {
@@ -464,10 +598,11 @@
     box-shadow: 1px 2px 4px lightgrey;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 48%;
+    height: 97%;
     background: white;
-    padding: 3px;
+    padding: 7px;
 }
 
 .cash-received-filter-field {
@@ -475,14 +610,53 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
+    /*margin-left: 5px;*/
+    /*margin-right: 5px;*/
     border: 1px solid lightgray;
     border-radius: 5px;
 }
 
+.received-cash-container {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 80%;
+    padding: 3px;
+}
+
+.received-cash-item {
+    height: 45%;
+    width: 96%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.received-cash-item-for-association {
+    height: 39%;
+    width: 96%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
 .input-avu3 {
-    width: 54%;
+    width: 98.75%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
@@ -496,9 +670,26 @@
 .btn-container-received-cash {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 70%;
     justify-content: space-evenly;
-    padding-right: 30px;
+    margin-top: 7px;
+    /*padding-right: 30px;*/
+}
+
+.received-items-main-container{
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 1px 2px 4px lightgrey;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 99%;
+    width: 99%;
+    /*background: white;*/
+    /*padding-right: 5px;*/
+    /*padding-left: 5px;*/
+    /*margin-bottom: 5px;*/
 }
 
 .received-items {
@@ -508,11 +699,53 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 30%;
+    height: 99%;
+    width: 60%;
     background: white;
-    padding-right: 5px;
-    padding-left: 5px;
-    margin-bottom: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+    /*margin-bottom: 5px;*/
+}
+
+.received-items-container {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 75%;
+    padding: 3px;
+}
+
+.received-items-item {
+    height: 36%;
+    width: 97%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.subscriptions-main-container{
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 1px 2px 4px lightgrey;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 99%;
+    width: 99%;
+    /*background: white;*/
+    /*padding-right: 5px;*/
+    /*padding-left: 5px;*/
+    /*margin-bottom: 5px;*/
 }
 
 .subscriptions {
@@ -522,7 +755,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 30%;
+    height: 99%;
+    width: 60%;
     background: white;
     padding-right: 5px;
     padding-left: 5px;
@@ -530,7 +764,7 @@
 }
 
 .subscriptions-filter-field {
-    height: 25%;
+    /*height: 18%;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -542,7 +776,7 @@
 }
 
 .input-avu4 {
-    width: 30%;
+    width: 33%;
     height: 25px;
     background: white;
     border: 1px solid lightgray;
@@ -555,14 +789,14 @@
 }
 
 .subscriptions-filter-btn {
-    width: 15%;
+    width: 17%;
     margin-top: 2px;
     background: gray;
     border: 1px solid gray;
 }
 
 .subscriptions-gen-repo-btn {
-    width: 28%;
+    width: 38%;
     margin-top: 2px;
     background: gray;
     border: 1px solid gray;
@@ -571,10 +805,10 @@
 .subs-filter-btn-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 5px;
     height: 40%;
-    width: 100%;
+    width: 96.75%;
     margin-bottom: 5px;
 }
 
@@ -585,27 +819,61 @@
     align-content: center;
     overflow: hidden;
     overflow-y: scroll;
-    height: 50%;
+    height: 75%;
     margin: 5px;
     padding: 3px;
 }
 
 .subscription-item {
+    height: 36%;
+    width: 97%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 45%;
-    background: white;
     padding: 3px;
-    margin-bottom: 5px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
 }
 
 .sec-6 {
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 5px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 10%;
+    text-align: center;
+}
+
+.label-sec{
+    height: 5%;
+    width: 70%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.label1{
+    height: 5%;
+    width: 48%;
+    text-align: left;
+}
+
+.sec-7 {
     border: 1px solid lightgray;
     border-radius: 5px;
-    width: 32%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 100%;
     text-align: center;
 }
 
@@ -613,4 +881,54 @@
 .to-be-acc-items-item:hover, .received-cash-item:hover, .subscription-item:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
+}
+
+.received-assets {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.received-assets-section-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /*gap: 10px;*/
+}
+
+.received-assets-section-2 {
+    border: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.received-section-link {
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 5px;*/
+    /*height: 35px;*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /*background: gray;*/
+    color: #8c8c8c;
+    font-size: 1.3em;
+    font-weight: 800;
+    font-family: "Nunito" ,sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
+}
+
+.received-section-link:hover {
+    color: black;
+}
+
+.clicked-link{
+    color: black;
+    animation: fadeIn 1s;
 }

@@ -1,0 +1,123 @@
+.general-dashboard {
+    height: 25em;
+    display: grid;
+    grid-template-rows: [row1] 100% [row2];
+    grid-template-columns: [col1] 45% [col2] 55% [col3];
+}
+
+.section-1 {
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col1;
+    grid-column-end: col2;
+    box-shadow: 1px 2px 4px lightgray;
+    margin-right: 5px;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: [row1] 50% [row2] 50% [row3];
+    grid-template-columns: [col1] 50% [col2] 50% [col3];
+    border-radius: 5px;
+}
+
+.section-2 {
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col2;
+    grid-column-end: col3;
+    box-shadow: 1px 2px 4px lightgray;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: "Nunito", sans-serif;
+}
+
+.card {
+    box-shadow: 1px 2px 4px lightgray;
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+    border-radius: 5px;
+    transition: all ease-in-out 0.5s;
+    background-color: #ffccc7;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 1px 2px 4px gray;
+    background: #ff7875;
+    color: white;
+}
+
+.card > .title {
+    height: 30%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2em;
+    border-bottom: 2px solid white;
+}
+
+.card > .count {
+    height: 70%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.c-1 {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.c-2 {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.c-3 {
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.c-4 {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.section-2 > .top {
+    box-shadow: 1px 2px 4px lightgray;
+    height: 20%;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #fafafa;
+}
+
+.section-2 > .result {
+    box-shadow: 2px 4px 8px lightgray;
+    margin-top: 10px;
+    height: 12.5%;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    background: #fff1b8;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.section-2 > .result:hover {
+    box-shadow: 1px 2px 4px gray;
+    background: #ffe58f;
+}
+
+.section-2 > .result > .name {
+    font-weight: 500;
+}

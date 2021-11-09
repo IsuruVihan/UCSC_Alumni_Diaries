@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -24,6 +31,14 @@
     grid-template-columns: [col1] 27% [col2] 27% [col3] 46% [col4];
     grid-template-rows: [row1] 50% [row2] 50% [row3];
     margin: 0 6.7em 10vh;
+}
+/*meka aluthe dapu ekak iframe ekata*/
+.admin-account-iframe{
+    grid-row-start: row1;
+    grid-row-end: row3;
+    grid-column-start: col1;
+    grid-column-end: col3;
+    margin-right: 0.8em;
 }
 
 .card {
