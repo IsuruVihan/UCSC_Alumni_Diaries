@@ -32,6 +32,11 @@
             Id: id
         });
     }
+    const RejectMemberAccountRequest = (id) => {
+        $('#message-container').load("../server/admin/accounts/requests/reject-request.php", {
+            Id: id
+        });
+    }
 </script>
 
 <div id='message-container'>

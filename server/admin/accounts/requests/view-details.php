@@ -14,7 +14,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <div class='section-3'>
                     <div class='sec-row-1'>
                         <button class='accept-btn btn' onclick=AcceptMemberAccountRequest('{$Id}')>Accept</button>
-                        <button class='remove-btn btn'>Reject</button>
+                        <button class='remove-btn btn' onclick=RejectMemberAccountRequest('{$Id}')>Reject</button>
                     </div>
                 </div>
             </div>
