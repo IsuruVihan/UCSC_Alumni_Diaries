@@ -1,15 +1,15 @@
 <?php
 
 include('../../../../db/db-conn.php');
-include('../../../email');
-include('../../../code-generator');
+include('../../../email/body-templates/MemberAccountRequestAccepted.php');
+include('../../../code-generator/PasswordGenerator.php');
 
 $Id = $_POST['Id'];
 
 $query = "SELECT * FROM memberaccountrequests WHERE Id='{$Id}'";
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($result)) {
-    $random_password = PasswordGenerator(8);
+    $random_password = PasswordGenerator();
     $random_password_encrypted = md5($random_password);
     $timestamp = date('Y-m-d H:i:s');
     $dueTimeStamp = date('Y-m-d H:i:s', strtotime($timestamp . " +1 month"));
@@ -58,14 +58,18 @@ while ($row = mysqli_fetch_assoc($result)) {
         if (mysqli_query($conn, $query)) {
             $query = "DELETE FROM memberaccountrequests WHERE Id='${row['Id']}'";
             if (mysqli_query($conn, $query)) {
-                echo "<span class='message-success'>Request has been accepted successfully</span>";
+                echo "
+                    <div class='success-message'>
+                        <b>{$row['FirstName']} {$row['LastName']}</b> member account request has been accepted
+                    </div>
+                ";
             } else {
-                echo "<span class='message-error'>Server Error: " . mysqli_error($conn) . "</span>";
+                echo "<div class='error-message'>Server Error: " . mysqli_error($conn) . "</div>";
             }
         } else {
-            echo "<span class='message-error'>Server Error: " . mysqli_error($conn) . "</span>";
+            echo "<div class='error-message'>Server Error: " . mysqli_error($conn) . "</div>";
         }
     } else {
-        echo "<span class='message-error'>email not sent</span>";
+        echo "<div class='error-message'>email not sent</div>";
     }
 }
