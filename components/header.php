@@ -63,6 +63,8 @@
         <li class='link'>
             <a href='../pages/signup.php' class='anchor-tag'>Signup</a>
         </li>
-        <li class='link'>Logout</li>
+        <li class='link'>
+            <a href='../server/logout/logout.php' class='anchor-tag'>Logout</a>
+        </li>
     </ul>
 </nav>
