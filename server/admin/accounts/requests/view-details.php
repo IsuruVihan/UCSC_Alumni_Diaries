@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <div class='contact-number details-field'>{$row['ContactNumber']}</div>
                     </div>
                 </div>
-                <div class='email details-field'>{$row['Email']}</div>
+                <div class='email details-field'>{$row['email']}</div>
                 <div class='address details-field'>{$row['Address']}</div>
             </div>
         </div>

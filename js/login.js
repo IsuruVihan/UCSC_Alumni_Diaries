@@ -7,11 +7,11 @@ form.addEventListener('submit', (e) => {
     let messages = []
 
     if ((password.value === '' || password.value == null) && (email.value === '' || email.value == null)) {
-        messages.push('Email and Password is Required!')
+        messages.push('email and Password is Required!')
     } else if (password.value === '' || password.value == null) {
         messages.push('Password is Required!')
     } else if (email.value === '' || email.value == null) {
-        messages.push('Email is Required!')
+        messages.push('email is Required!')
     }
 
     if (messages.length > 0) {
