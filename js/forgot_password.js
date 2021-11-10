@@ -1,27 +1,25 @@
-const myFunction = () => {
-    const z = document.getElementById("myDIV");
-    z.innerHTML = "Step 2 : Enter the OTP";
-}
+const startingMinutes = 2;
+let time = startingMinutes * 60;
 
-const checkEmail = () => {
-    const email = document.getElementById('email');
-    const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if (!filter.test(email.value)) {
-        alert('Please provide a valid email address');
-        email.focus();
-    } else {
-        myFunction();
-        container_2Show();
-        container_1Hide();
-    }
-}
+setInterval(updateCountdown, 1000);
 
-const container_2Show = () => {
-    const x = document.getElementById("container-2");
-    x.style.display = "block";
-}
+// const updateCountdown = () =>{
+//     let minutes = Math.floor(time/60);
+//     let seconds = time % 60;
 
-const container_1Hide = () => {
-    const y = document.getElementById("container-1");
-    y.style.display = "none";
+//     seconds = seconds < 10 ? '0'+ seconds : seconds;
+
+//     countdownElement.innerHTML =  `${minutes}  : ${seconds}`;
+//     time--;
+// }
+function updateCountdown() {
+    const countdownElement = document.getElementById('timer');
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    time < 0 ? countdownElement.innerHTML = 'OTP Expired' : countdownElement.innerHTML = `${minutes}  : ${seconds}`;
+    time--;
 }
