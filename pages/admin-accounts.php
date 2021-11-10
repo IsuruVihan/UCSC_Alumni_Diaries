@@ -9,6 +9,19 @@
 
 <script>
     $(document).ready(() => {
+        $('#rejected-member-account-requests').load("../server/admin/accounts/rejected/render-list.php");
+        $('#mem-rej-req-filter').submit((event) => {
+            event.preventDefault();
+            const firstName = $('#mem-rej-req-fname').val();
+            const lastName = $('#mem-rej-req-lname').val();
+            const batch = $('#mem-rej-req-batch').val();
+            $('#rejected-member-account-requests').load("../server/admin/accounts/rejected/filter.php", {
+                FirstName: firstName,
+                LastName: lastName,
+                Batch: batch
+            });
+        });
+        
         $('#member-account-requests').load("../server/admin/accounts/requests/render-list.php");
         $('#mem-acc-req-filter').submit((event) => {
             event.preventDefault();
@@ -199,11 +212,11 @@
             <!-- rejected accounts -->
             <div class='card rejected-requests' id='rejected-request'>
                 <div class='title'>Rejected Requests</div>
-                <div class='filter'>
+                <form id='mem-rej-req-filter' class='filter'>
                     <div class='col1'>
-                        <input class='input-field' type='text' placeholder='First Name'/>
-                        <input class='input-field' type='text' placeholder='Last Name'/>
-                        <select class='input-field'>
+                        <input id='mem-rej-req-fname' class='input-field' type='text' placeholder='First Name'/>
+                        <input id='mem-rej-req-lname' class='input-field' type='text' placeholder='Last Name'/>
+                        <select id='mem-rej-req-batch' class='input-field'>
                             <option value='All'>All</option>
                             <option value='2018/2019'>2018/2019</option>
                             <option value='2018/2019'>2019/2020</option>
@@ -211,10 +224,11 @@
                         </select>
                     </div>
                     <div class='col2'>
-                        <button class='filter-btn btn'>Filter</button>
+                        <input type='submit' class='filter-btn btn' value='Filter'/>
                     </div>
-                </div>
-                <div class='results'>
+                </form>
+                <div class='results' id='rejected-member-account-requests'>
+                    <!--
                     <div class='result' onmouseover=DisplayButtons('rej-req-1') onmouseout=HideButtons('rej-req-1')>
                         <p class='request-id'>RequestID 1</p>
                         <div class='buttons' id='rej-req-1'>
@@ -222,6 +236,7 @@
                             <button class='delete-btn btn'>Delete</button>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
             <!-- banned accounts -->

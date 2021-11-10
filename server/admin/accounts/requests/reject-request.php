@@ -19,7 +19,7 @@ if (mysqli_num_rows($results2) > 0) {
             if (mysqli_query($conn, $query)) {
                 echo "
                     <div class='success-message'>
-                        <b>{$row2['FirstName']} {$row2['FirstName']}</b> request has been rejected
+                        <b>{$row2['FirstName']} {$row2['LastName']}</b> request has been rejected
                     </div>
                 ";
             } else {
