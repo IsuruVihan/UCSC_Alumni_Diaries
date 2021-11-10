@@ -1,159 +1,162 @@
-.card {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    transition: all ease-in-out 0.5s;
+.card-chat {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  transition: all ease-in-out 0.5s;
+  padding: 8px;
+  height: 95%;
 }
 
 .committee-chat {
-    grid-column-start: col1;
+  /* grid-column-start: col1;
     grid-column-end: col3;
     grid-row-start: row3;
-    grid-row-end: row5;
-    font-family: "Nunito", sans-serif;
-    margin-right: 5px;
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    grid-row-end: row5; */
+  display: none;
+  font-family: "Nunito", sans-serif;
+  /* margin-top: 5px; */
+
+  flex-direction: column;
+  gap: 10px;
 }
 
 .results3 {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    height: 100%;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    overflow: hidden;
-    overflow-y: scroll;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 80%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .create-message-div {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    height: 15%;
-    transition: all ease-in-out 0.5s;
-    padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 15%;
+  transition: all ease-in-out 0.5s;
+  padding: 5px;
 }
 
 .sent-message-line {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .received-message-line {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .sent-message {
-    border: 1px solid #237804;
-    opacity: 70%;
-    background: #237804;
-    color: white;
-    border-radius: 20px;
-    max-width: 80%;
-    overflow-wrap: break-word;
-    text-align: justify;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+  border: 1px solid #237804;
+  opacity: 70%;
+  background: #237804;
+  color: white;
+  border-radius: 20px;
+  max-width: 80%;
+  overflow-wrap: break-word;
+  text-align: justify;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .delete-msg-container {
-    text-align: right;
+  text-align: right;
 }
 
 .delete-msg-icon {
-    cursor: pointer;
-    transition: all ease-in-out 0.5s;
-    border-radius: 100%;
-    opacity: 60%;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  border-radius: 100%;
+  opacity: 60%;
 }
 
 .delete-msg-icon:hover {
-    color: white;
-    opacity: 100%;
+  color: white;
+  opacity: 100%;
 }
 
 .received-message {
-    border: 1px solid #434343;
-    opacity: 70%;
-    background: #434343;
-    color: white;
-    border-radius: 20px;
-    max-width: 80%;
-    overflow-wrap: break-word;
-    text-align: justify;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+  border: 1px solid #434343;
+  opacity: 70%;
+  background: #434343;
+  color: white;
+  border-radius: 20px;
+  max-width: 80%;
+  overflow-wrap: break-word;
+  text-align: justify;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-.sender-name, .time {
-    font-size: 0.8em;
+.sender-name,
+.time {
+  font-size: 0.8em;
 }
 
 .time {
-    text-align: right;
+  text-align: right;
 }
 
 .content {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .chat-message {
-    resize: none;
-    width: 79%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 5px;
+  resize: none;
+  width: 79%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .chat-message:hover {
-    border: 1px solid #ffccc7;
+  border: 1px solid #ffccc7;
 }
 
 .button-set {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .chat-icon {
-    transition: all ease-in-out 0.5s;
-    border-radius: 100%;
-    padding: 10px;
-    opacity: 60%;
+  transition: all ease-in-out 0.5s;
+  border-radius: 100%;
+  padding: 10px;
+  opacity: 60%;
 }
 
 .send-icon:hover {
-    color: white;
-    background-color: #237804;
-    cursor: pointer;
+  color: white;
+  background-color: #237804;
+  cursor: pointer;
 }
 
 .attach-icon:hover {
-    color: white;
-    background-color: #096dd9;
-    cursor: pointer;
+  color: white;
+  background-color: #096dd9;
+  cursor: pointer;
 }
 
 .clear-icon:hover {
-    color: white;
-    background-color: black;
-    cursor: pointer;
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }

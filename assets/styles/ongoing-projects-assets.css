@@ -1,59 +1,62 @@
 .assets {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: [row1] 8% [row2] 92% [row3];
-    grid-template-columns: [col1] 100% [col2];
-    font-family: "Nunito", sans-serif;
+  display: grid;
+  display: none;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: [row1] 8% [row2] 92% [row3];
+  grid-template-columns: [col1] 100% [col2];
+  font-family: "Nunito", sans-serif;
+  padding: 10px;
 }
 
 .container-1 {
-    grid-row-start: row1;
-    grid-row-end: row2;
-    grid-column-start: col1;
-    grid-column-end: col2;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  grid-row-start: row1;
+  grid-row-end: row2;
+  grid-column-start: col1;
+  grid-column-end: col2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 97.5%;
 }
 
 .container-2 {
-    grid-row-start: row2;
-    grid-row-end: row3;
-    grid-column-start: col1;
-    grid-column-end: col2;
-    width: 100%;
-    height: 100%;
-    border: 2px solid lightgray;
-    border-radius: 5px;
+  grid-row-start: row2;
+  grid-row-end: row3;
+  grid-column-start: col1;
+  grid-column-end: col2;
+  width: 97%;
+  height: 95%;
+  border: 2px solid lightgray;
+  border-radius: 5px;
 }
 
 .iframe-link {
-    background-color: gray;
-    color: white;
-    height: 100%;
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all ease-in-out 0.5s;
+  background-color: gray;
+  color: white;
+  height: 100%;
+  width: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all ease-in-out 0.5s;
 }
 
 .clicked-link {
-    background: #096dd9;
+  background: #096dd9;
 }
 
 .left {
-    margin-right: 2px;
+  margin-right: 2px;
 }
 
 .right {
-    margin-left: 2px;
+  margin-left: 2px;
 }
 
 .iframe-link:hover {
-    background: #096dd9;
+  background: #096dd9;
 }
