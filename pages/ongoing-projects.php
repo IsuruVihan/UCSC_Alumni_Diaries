@@ -56,11 +56,11 @@
     </div>
     <div class='section-2'>
         <div class='row-1'>
-            <div class='link clicked' id='link-1' onclick='DisplayDetails()' >Details</div>
-            <div class='link clicked' id='link-2' onclick='Displaycommitee()' >Committee</div>
-            <div class='link clicked' id='link-3' onclick='DisplayChat()'>Chat</div>
-            <div class='link clicked' id='link-4' onclick='DisplayAssets()' >Assets</div>
-            <div class='link clicked' id='link-5' onclick='DisplayAction()' >Actions</div>
+            <div class='link clicked' id='link-1'  onclick=ClickLink1('link-1') >Details</div>
+            <div class='link clicked' id='link-2'  onclick=ClickLink1('link-2') >Committee</div>
+            <div class='link clicked' id='link-3'  onclick=ClickLink1('link-3')>Chat</div>
+            <div class='link clicked' id='link-4'  onclick=ClickLink1('link-4') >Assets</div>
+            <div class='link clicked' id='link-5'  onclick=ClickLink1('link-5') >Actions</div>
         </div>
         <div name='ongoing-projects-iframe' class='row-2' id='row-2'>
             <div class='details' id ='details'>
@@ -271,8 +271,7 @@
 </div>
 
 
-<script src='../js/ongoing-projects-nav.js'></script>
-<!-- <script src='../js/ongoing-projects.js'></script> -->
+<script src='../js/ongoing-projects.js'></script>
 <script src='../js/ongoing-projects-assets.js'></script>
 
 <?php include('../components/footer.php'); ?>

@@ -87,6 +87,7 @@
 
 .link:hover {
   color: black;
+  cursor: pointer;
 }
 
 .clicked {
