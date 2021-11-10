@@ -1,12 +1,13 @@
 .committee-members {
     font-family: "Nunito", sans-serif;
-    height: 100%;
-    display: grid;
+    height: 95%;
+    width: 96%;
+    display: none;
     grid-template-rows: [row1] 100% [row2];
     grid-template-columns: [col1] 20% [col2] 80% [col3];
 }
 
-.section-1 {
+.committee-members-section-1 {
     grid-row-start: row1;
     grid-row-end: row2;
     grid-column-start: col1;
@@ -19,9 +20,13 @@
     padding-right: 10px;
 }
 
-.section-2 {
+.committee-members-section-2 {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-row-start: row1;
     grid-row-end: row2;
     grid-column-start: col2;
@@ -30,7 +35,7 @@
     border-radius: 5px;
 }
 
-.iframe-link {
+.committee-members-iframe-link {
     text-decoration: none;
     color: white;
     font-weight: 500;
@@ -45,10 +50,11 @@
     transition: all ease-in-out 0.5s;
 }
 
-.iframe-link:hover {
+.committee-members-iframe-link:hover {
     background: #fa8c16;
+    cursor: pointer;
 }
 
-.clicked-link {
+.committee-members-clicked-link {
     background: #fa8c16;
 }

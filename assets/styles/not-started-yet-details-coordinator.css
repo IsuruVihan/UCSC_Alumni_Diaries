@@ -1,13 +1,13 @@
 .coordinator {
     font-family: "Nunito", sans-serif;
-    width: 100%;
-    height: 100%;
-    display: grid;
+    width: 98%;
+    height: 96%;
+    display: none;
     grid-template-rows: [row1] 25% [row2] 75% [row3];
     grid-template-columns: [col1] 100% [col2];
 }
 
-.section-1 {
+.coordinator-section-1 {
     grid-row-start: row1;
     grid-row-end: row2;
     grid-column-start: col1;
@@ -20,7 +20,7 @@
     grid-template-columns: [col1] 20% [col2] 80% [col2];
 }
 
-.coord-pic {
+.coordinator-coord-pic {
     grid-row-start: row1;
     grid-row-end: row2;
     grid-column-start: col1;
@@ -31,7 +31,7 @@
     align-items: center;
 }
 
-.coord-details {
+.coordinator-coord-details {
     grid-row-start: row1;
     grid-row-end: row2;
     grid-column-start: col2;
@@ -42,13 +42,13 @@
     gap: 5px;
 }
 
-.row-1 {
+.coordinator-row-1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.set {
+.coordinator-set {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,18 +57,18 @@
     margin-right: 10px;
 }
 
-.set > label {
+.coordinator-set > label {
     font-size: 0.8em;
 }
 
-.data-field {
+.coordinator-data-field {
     width: 100%;
     border: 1px solid lightgray;
     border-radius: 5px;
     height: 30px;
 }
 
-.data-field:hover {
+.coordinator-data-field:hover {
     border-color: #ffccc7;
 }
 
@@ -76,7 +76,7 @@
 
 }
 
-.section-2 {
+.coordinator-section-2 {
     margin-top: 10px;
     padding: 10px;
     grid-row-start: row2;
@@ -92,7 +92,7 @@
     font-family: "Nunito", sans-serif;
 }
 
-.filter {
+.coordinator-filter {
     display: flex;
     flex-direction: column;
     margin-bottom: 0.8em;
@@ -101,17 +101,17 @@
     padding: 3px;
 }
 
-.col1 {
+.coordinator-col1 {
     display: flex;
     justify-content: space-between;
 }
 
-.col2 {
+.coordinator-col2 {
     display: flex;
     justify-content: center;
 }
 
-.btn {
+.coordinator-btn {
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -121,20 +121,20 @@
     height: 25px;
 }
 
-.filter-btn {
+.coordinator-filter-btn {
     width: 32%;
     margin-top: 0.5em;
     background: gray;
     border: 1px solid gray;
 }
 
-.filter-btn:hover {
+.coordinator-filter-btn:hover {
     background: white;
     border-color: black;
     color: black;
 }
 
-.input-field {
+.coordinator-input-field {
     width: 32%;
     height: 25px;
     background: white;
@@ -144,11 +144,11 @@
     font-family: "Nunito", serif;
 }
 
-.input-field:hover {
+.coordinator-input-field:hover {
     border-color: #ffccc7;
 }
 
-.results {
+.coordinator-results {
     border: 1px solid lightgray;
     border-radius: 5px;
     height: 100%;
@@ -161,7 +161,7 @@
     overflow: hidden;
 }
 
-.result {
+.coordinator-result {
     width: 100%;
     height: 20%;
     border: 1px solid lightgray;
@@ -172,16 +172,16 @@
     transition: all ease-in-out 0.5s;
 }
 
-.result:hover {
+.coordinator-result:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
 }
 
-.add-btn:hover {
+.coordinator-add-btn:hover {
     background: #237804;
     border: 1px solid #237804;
 }
 
-/*.buttons {*/
-/*    display: none;*/
-/*}*/
+.coordinator-buttons {
+    display: none;
+}
