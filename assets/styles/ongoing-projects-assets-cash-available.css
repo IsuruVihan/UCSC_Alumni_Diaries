@@ -1,4 +1,4 @@
-.available {
+.available-available {
     font-family: "Nunito", sans-serif;
     display: grid;
     grid-template-rows: [row1] 45% [row2] 45% [row3] 10% [row4];
@@ -6,7 +6,7 @@
     height: 100%;
 }
 
-.card-1 {
+.available-card-1 {
     grid-row-start: row1;
     grid-row-end: row2;
     grid-column-start: col1;
@@ -21,7 +21,7 @@
     background: #f5f5f5;
 }
 
-.card-2 {
+.available-card-2 {
     grid-row-start: row2;
     grid-row-end: row3;
     grid-column-start: col1;
@@ -36,7 +36,7 @@
     background: #f5f5f5;
 }
 
-.card-3 {
+.available-card-3 {
     grid-row-start: row3;
     grid-row-end: row4;
     grid-column-start: col1;
@@ -46,12 +46,12 @@
     align-items: center;
 }
 
-.card-title {
+.available-card-title {
     font-size: 1.2em;
     font-weight: bold;
 }
 
-.btn {
+.available-btn {
     cursor: pointer;
     border-radius: 5px;
     color: white;
@@ -59,7 +59,7 @@
     height: 25px;
 }
 
-.filter-btn {
+.available-filter-btn {
     width: 32%;
     margin-top: 0.5em;
     background: white;

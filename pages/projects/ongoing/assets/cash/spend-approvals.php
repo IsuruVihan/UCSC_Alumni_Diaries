@@ -4,11 +4,11 @@
 
 <table>
     <tr>
-        <th class='h-1'>Amount (Rs.)</th>
-        <th class='h-2'>Description</th>
-        <th class='h-3'>Quotation</th>
-        <th class='h-4'>Status</th>
-        <th class='h-5'>Timestamp</th>
+        <th class='spend-approvals-h-1'>Amount (Rs.)</th>
+        <th class='spend-approvals-h-2'>Description</th>
+        <th class='spend-approvals-h-3'>Quotation</th>
+        <th class='spend-approvals-h-4'>Status</th>
+        <th class='spend-approvals-h-5'>Timestamp</th>
     </tr>
     <tr>
         <td>600000</td>

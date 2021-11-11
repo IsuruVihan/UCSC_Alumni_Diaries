@@ -1,4 +1,4 @@
-const VisitLink = (id) => {
+const VisitLinkNav = (id) => {
     if (id==='l-1') {
         document.getElementById('l-1').classList.add('clicked-link');
         document.getElementById('l-2').classList.remove('clicked-link');

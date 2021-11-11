@@ -9,28 +9,28 @@
             href='./items/available.php'
             class='iframe-link left clicked-link'
             target='iframe-2'
-            onclick=VisitLink('l-1')
+            onclick="VisitLink('l-1')"
         >Summary</a>
         <a
             id='l-2'
             href='./items/spend.php'
             class='iframe-link'
             target='iframe-2'
-            onclick=VisitLink('l-2')
+            onclick="VisitLink('l-2')"
         >Spend</a>
         <a
             id='l-3'
             href='./items/spend-approvals.php'
             class='iframe-link'
             target='iframe-2'
-            onclick=VisitLink('l-3')
+            onclick="VisitLink('l-3')"
         >Approvals</a>
         <a
             id='l-4'
             href='./items/spent-records.php'
             class='iframe-link'
             target='iframe-2'
-            onclick=VisitLink('l-4')
+            onclick="VisitLink('l-4')"
         >Spent Records</a>
     </div>
     <iframe
