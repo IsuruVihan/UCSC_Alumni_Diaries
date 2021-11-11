@@ -1,0 +1,31 @@
+.actions {
+  display: none;
+  padding: 10px;
+}
+.notice {
+  color: #f5222d;
+  font-size: 0.9em;
+  font-family: "Nunito", sans-serif;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: all ease-in-out 0.1s;
+  height: 25px;
+  background: gray;
+  border: none;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  background: #f5222d;
+}
+
+.create-btn {
+  background: #237804;
+}
+/* 
+  .message {
+  } */

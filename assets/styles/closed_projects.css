@@ -21,7 +21,7 @@
     margin-left: 6.7em;
     margin-right: 6.7em;
     display: grid;
-    grid-template-columns: [col1] 30% [col2] 27% [col3] 27% [col4] 16% [col5];
+    grid-template-columns: [col1] 35% [col2] 30% [col3] 35% [col4];
     grid-template-rows: [row1] 6em [row2] 25em [row3];
 }
 
@@ -45,18 +45,18 @@
 .project-committee {
     grid-column-start: col3;
     grid-column-end: col4;
-    grid-row-start: row1;
+    grid-row-start: row2;
     grid-row-end: row3;
     margin-left: 5px;
-    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .expenditures {
-    grid-column-start: col4;
-    grid-column-end: col5;
+    grid-column-start: col3;
+    grid-column-end: col4;
     grid-row-start: row1;
     grid-row-end: row2;
-    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 .projects-list, .committee-members, .project-details, .expenditures {

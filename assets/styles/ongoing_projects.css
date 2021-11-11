@@ -1,544 +1,233 @@
 .main-container {
-    display: flex;
-    flex-direction: column;
-    height: 15vh;
-    margin-top: 5vh;
-    padding-left: 6.7em;
-    background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  margin-top: 5vh;
+  padding-left: 6.7em;
+  background: #fafafa;
 }
 
 .breadcrumb {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .main-title {
-    font-weight: 700;
-    font-size: 2em;
-    margin: 0;
+  font-weight: 700;
+  font-size: 2em;
+  margin: 0;
 }
 
 .ongoing-projects {
-    margin-left: 6.7em;
-    margin-right: 6.7em;
-    margin-bottom: 5em;
-    display: grid;
-    grid-template-columns: [col1] 35% [col2] 30% [col3] 35% [col4];
-    grid-template-rows: [row1] 15em [row2] 15em [row3] 15em [row4] 15em [row5];
+  margin-left: 6.7em;
+  margin-right: 6.7em;
+  margin-bottom: 5em;
+  display: grid;
+  grid-template-rows: [row1] 30em [row2];
+  grid-template-columns: [col1] 35% [col2] 65% [col3];
 }
 
-.projects-list, .project-details, .project-committee, .cash, .items, .cash-spent, .items-spent, .committee-chat {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.section-1 {
+  grid-row-start: row1;
+  grid-row-end: row2;
+  grid-column-start: col1;
+  grid-column-end: col2;
+  box-shadow: 1px 2px 4px gray;
+  border-radius: 5px;
+  padding: 10px;
+  background: white;
 }
 
-.projects-list {
-    grid-column-start: col1;
-    grid-column-end: col2;
-    grid-row-start: row1;
-    grid-row-end: row3;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-
-.project-details {
-    grid-column-start: col2;
-    grid-column-end: col3;
-    grid-row-start: row1;
-    grid-row-end: row2;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
-
-.project-committee {
-    grid-column-start: col2;
-    grid-column-end: col3;
-    grid-row-start: row2;
-    grid-row-end: row3;
-    margin: 5px;
-}
-
-.cash {
-    grid-column-start: col3;
-    grid-column-end: col4;
-    grid-row-start: row1;
-    grid-row-end: row2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 5px;
-    margin-bottom: 5px;
-}
-
-.summary {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-}
-
-.available-cash-div, .spent-cash-div {
-    width: 48%;
-    text-align: center;
-}
-
-.available-cash-input, .spent-cash-input {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    width: 100%;
-}
-
-.transaction {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
+.section-2 {
+  grid-row-start: row1;
+  grid-row-end: row2;
+  grid-column-start: col2;
+  grid-column-end: col3;
+  box-shadow: 1px 2px 4px gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 10px;
+  display: grid;
+  grid-template-rows: [row1] 10% [row2] 90% [row3];
+  grid-template-columns: [col1] 100% [col2];
+  background: white;
 }
 
 .row-1 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  grid-row-start: row1;
+  grid-row-end: row2;
+  grid-column-start: col1;
+  grid-column-end: col2;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px lightgray;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.amount-input, .description-input {
-    width: 40%;
+.row-2 {
+  grid-row-start: row2;
+  grid-row-end: row3;
+  grid-column-start: col1;
+  grid-column-end: col2;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px lightgray;
 }
 
-.bill-btn {
-    width: 15%;
+.link {
+  text-decoration: none;
+  color: gray;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all ease-in-out 0.5s;
 }
 
-.row2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.link:hover {
+  color: black;
+  cursor: pointer;
 }
 
-.gen-report-div {
-    text-align: center;
+.clicked {
+  color: black;
 }
 
-.items {
-    grid-column-start: col3;
-    grid-column-end: col4;
-    grid-row-start: row2;
-    grid-row-end: row3;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-
-.cash-spent {
-    grid-column-start: col3;
-    grid-column-end: col4;
-    grid-row-start: row3;
-    grid-row-end: row4;
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.items-spent {
-    grid-column-start: col3;
-    grid-column-end: col4;
-    grid-row-start: row4;
-    grid-row-end: row5;
-    margin-left: 5px;
-    margin-top: 5px;
-}
-
+.projects-list,
+.project-details,
+.project-committee,
+.cash,
+.items,
+.cash-spent,
+.items-spent,
 .committee-chat {
-    grid-column-start: col1;
-    grid-column-end: col3;
-    grid-row-start: row3;
-    grid-row-end: row5;
-    margin-right: 5px;
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.create-message-div {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    height: 15%;
-    transition: all ease-in-out 0.5s;
-    padding: 5px;
+.projects-list {
+  grid-column-start: col1;
+  grid-column-end: col2;
+  grid-row-start: row1;
+  grid-row-end: row3;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
-
-.sent-message-line {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.received-message-line {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.sent-message {
-    border: 1px solid #237804;
-    opacity: 70%;
-    background: #237804;
-    color: white;
-    border-radius: 20px;
-    max-width: 80%;
-    overflow-wrap: break-word;
-    text-align: justify;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.delete-msg-container {
-    text-align: right;
-}
-
-.delete-msg-icon {
-    cursor: pointer;
-    transition: all ease-in-out 0.5s;
-    border-radius: 100%;
-    opacity: 60%;
-}
-
-.delete-msg-icon:hover {
-    color: white;
-    opacity: 100%;
-}
-
-.received-message {
-    border: 1px solid #434343;
-    opacity: 70%;
-    background: #434343;
-    color: white;
-    border-radius: 20px;
-    max-width: 80%;
-    overflow-wrap: break-word;
-    text-align: justify;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.sender-name, .time {
-    font-size: 0.8em;
-}
-
-.time {
-    text-align: right;
-}
-
-.content {
-    font-weight: bold;
-}
-
-.chat-message {
-    resize: none;
-    width: 79%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.chat-message:hover {
-    border: 1px solid #ffccc7;
-}
-
-.button-set {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.chat-icon {
-    transition: all ease-in-out 0.5s;
-    border-radius: 100%;
-    padding: 10px;
-    opacity: 60%;
-}
-
-.send-icon:hover {
-    color: white;
-    background-color: #237804;
-}
-
-.attach-icon:hover {
-    color: white;
-    background-color: #096dd9;
-}
-
-.clear-icon:hover {
-    color: white;
-    background-color: black;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    box-shadow: 1px 2px 4px lightgray;
-    border-radius: 10px;
-    padding: 20px;
-    transition: all ease-in-out 0.5s;
-}
-
 .title {
-    font-weight: 600;
-    font-size: 1.2em;
-    text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .filter {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 3px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 3px;
+  gap: 5px;
 }
 
-.col1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.col1,
+.col3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.col2, .col3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.col2,
+.col4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-field {
-    height: 25px;
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: gray;
-    font-family: "Nunito", serif;
+  height: 25px;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: gray;
+  font-family: "Nunito", serif;
 }
 
 .input-field:hover {
-    border-color: #ffccc7;
+  border-color: #ffccc7;
 }
 
 .date-field {
-    width: 45%;
+  width: 45%;
 }
 
 .results {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    height: 100%;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-
-.results2 {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    height: 100%;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-
-.results3 {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    height: 100%;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    overflow: hidden;
-    overflow-y: scroll;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 17em;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .result {
-    width: 100%;
-    height: 15%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: all ease-in-out 0.5s;
+  width: 100%;
+  height: 15%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all ease-in-out 0.5s;
 }
 
-.result2 {
-    width: 100%;
-    height: 30%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: all ease-in-out 0.5s;
-}
-
-.result3 {
-    width: 100%;
-    border: 1px solid gray;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    padding: 3px;
-    gap: 10px;
-    transition: all ease-in-out 0.5s;
-}
-
-.result4 {
-    width: 100%;
-    height: 40%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-around;
-    padding: 3px;
-    gap: 10px;
-    transition: all ease-in-out 0.5s;
-}
-
-.item-details {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 3px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.result:hover, .result2:hover, .result3:hover, .result4:hover, .create-message-div:hover {
-    box-shadow: 0 0 5px gray;
-    cursor: pointer;
+.result:hover,
+.result2:hover,
+.result3:hover,
+.result4:hover,
+.create-message-div:hover {
+  box-shadow: 0 0 5px gray;
+  cursor: pointer;
 }
 
 .btn {
-    cursor: pointer;
-    border-radius: 5px;
-    color: white;
-    transition: all ease-in-out 0.1s;
-    height: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: all ease-in-out 0.1s;
+  height: 25px;
 }
 
 .buttons {
-    display: none;
+  display: none;
 }
 
 .view-btn {
-    background: #595959;
-    border: 1px solid #595959;
+  background: #595959;
+  border: 1px solid #595959;
 }
 
-.gen-rep-btn, .spend-btn {
-    background: gray;
-    border: 1px solid gray;
+.view-btn:hover,
+.gen-rep-btn:hover {
+  background: #096dd9;
+  border-color: #096dd9;
+  color: white;
 }
 
-.view-btn:hover, .gen-rep-btn:hover {
-    background: #096dd9;
-    border-color: #096dd9;
-    color: white;
+.filter-btn,
+.bill-btn {
+  width: 15%;
+  background: gray;
+  border: 1px solid gray;
 }
 
-.spend-btn:hover {
-    background: #fa8c16;
-    color: white;
-    border: 1px solid #fa8c16;
-}
-
-.filter-btn, .bill-btn {
-    width: 15%;
-    background: gray;
-    border: 1px solid gray;
-}
-
-.filter-btn:hover, .bill-btn:hover {
-    background: white;
-    border-color: black;
-    color: black;
-}
-
-.project-status, .project-description {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    text-align: center;
-    padding: 5px;
-    color: gray;
-}
-
-.project-description {
-    height: 40%;
-    text-align: justify;
-    padding: 10px;
-}
-
-.coord {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    height: 4vh;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.coord-pic {
-    padding: 0;
-    margin: 0;
-}
-
-.start-delete {
-    height: 4vh;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3px;
-}
-
-.start-btn, .delete-btn {
-    border: 1px solid gray;
-    background: gray;
-}
-
-.start-btn:hover {
-    background: #237804;
-    border: 1px solid #237804;
-}
-
-.delete-btn:hover {
-    background: #f5222d;
-    border: 1px solid #f5222d;
+.filter-btn:hover,
+.bill-btn:hover {
+  background: white;
+  border-color: black;
+  color: black;
 }
