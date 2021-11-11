@@ -10,6 +10,10 @@
 <link rel='stylesheet' href='../assets/styles/ongoing-projects-assets-cash-approvals.css' />
 <link rel='stylesheet' href='../assets/styles/ongoing-projects-assets-cash-records.css' />
 <link rel='stylesheet' href='../assets/styles/ongoing-projects-assets-items.css' />
+<link rel='stylesheet' href='../assets/styles/ongoing-projects-assets-items-available.css' />
+<link rel='stylesheet' href='../assets/styles/ongoing-projects-assets-items-spend.css' />
+<link rel='stylesheet' href='../assets/styles/ongoing-projects-assets-items-approvals.css' />
+<link rel='stylesheet' href='../assets/styles/ongoing-projects-assets-items-records.css' />
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css' integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous' />
 <script src='../js/ongoing-projects-assets-cash.js'></script>
 
@@ -26,6 +30,7 @@
 
         $('#l-2').click(() => {
             $('#project-item').show();
+            // $('#item-available').show();
             $('#project-cash').hide();
         });
 
@@ -58,12 +63,42 @@
             $('#cash-summary').hide();
             $('#cash-spend').hide();
         });
-
         // item section
+        // available item 
+        $('#l-1-2').click(() => {
+            $('#items-available').show();
+            $('#items-spend').hide();
+            $('#item-spend-approval').hide();
+            $('#item-spent-record').hide();
 
+        });
+        // item spend
+        $('#l-2-2').click(() => {
+            $('#items-spend').show();
+            $('#items-available').hide();
+            $('#item-spend-approval').hide();
+            $('#item-spent-record').hide();
 
+        });
+        // item approval
+        $('#l-3-2').click(() => {
+            $('#item-spend-approval').show();
+            $('#items-available').hide();
+            $('#items-spend').hide();
+            $('#item-spent-record').hide();
+
+        });
+        // item spent records
+        $('#l-4-2').click(() => {
+            $('#item-spent-record').show();
+            $('#items-available').hide();
+            $('#items-spend').hide();
+            $('#item-spend-approval').hide();
+
+        });
     });
 </script>
+
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> /
@@ -291,10 +326,10 @@
                     </div>
                 </div>
             </div>
-            <div class='assets' id='assets' style="border: 1px solid red;">
+            <div class='assets' id='assets'>
                 <div class='container-1'>
                     <!-- cash / items navigation -->
-                    <div id='l-1' href='./projects/ongoing/assets/cash.php' class='iframe-link left clicked-link'  onclick="VisitLinkNav('l-1')">Cash</div>
+                    <div id='l-1' href='./projects/ongoing/assets/cash.php' class='iframe-link left clicked-link' onclick="VisitLinkNav('l-1')">Cash</div>
                     <div id='l-2' href='./projects/ongoing/assets/items.php' class='iframe-link right' onclick="VisitLinkNav('l-2')">Items</div>
                 </div>
                 <!-- iframe container (replaced with div)-->
@@ -308,7 +343,7 @@
                             <div id='l-4-1' class='cash-iframe-link' onclick="VisitLink('l-4-1')">Spent Records</div>
                         </div>
                         <!-- <iframe name='iframe-2' class='cash-sec-2' src='./cash/available.php'></iframe> -->
-                        <div name='iframe-2' class='cash-sec-2' src='./cash/available.php'>
+                        <div class='cash-sec-2' src='./cash/available.php'>
                             <!-- cash-available -->
                             <div class='available-available' id='cash-summary'>
                                 <div class='available-card-1'>
@@ -387,22 +422,134 @@
                         </div>
                     </div>
                     <!-- items -->
-                    <div class='items-items' id='project-item'>
-                        <div class='items-sec-1'>
-                            <div id='l-1-2' href='./items/available.php' class='iframe-link left items-clicked-link' target='iframe-2' onclick="VisitLinkItem('l-1-2')">Summary</div>
-                            <div id='l-2-2' href='./items/spend.php' class='iframe-link' target='iframe-2' onclick="VisitLinkItem('l-2-2')">Spend</div>
-                            <div id='l-3-2' href='./items/spend-approvals.php' class='iframe-link' target='iframe-2' onclick="VisitLinkItem('l-3-2')">Approvals</div>
-                            <div id='l-4-2' href='./items/spent-records.php' class='iframe-link' target='iframe-2' onclick="VisitLinkItem('l-4-2')">Spent Records</div>
+                    <div class='item-outer-container' id='project-item'>
+                        <div class='items-items'>
+                            <div class='items-sec-1'>
+                                <div id='l-1-2' href='./items/available.php' class='items-iframe-link left items-clicked-link' onclick="VisitLinkItem('l-1-2')">Summary</div>
+                                <div id='l-2-2' href='./items/spend.php' class='items-iframe-link' onclick="VisitLinkItem('l-2-2')">Spend</div>
+                                <div id='l-3-2' href='./items/spend-approvals.php' class='items-iframe-link' onclick="VisitLinkItem('l-3-2')">Approvals</div>
+                                <div id='l-4-2' href='./items/spent-records.php' class='items-iframe-link' onclick="VisitLinkItem('l-4-2')">Spent Records</div>
+                            </div>
+
+                            <div name='iframe-2' class='items-sec-2'>
+                                <!-- available items -->
+
+                                <div class='item-available-available' id='items-available'>
+                                    <div class='item-available-card-3'>
+                                        <button class='item-available-btn item-available-filter-btn'>Generate Report</button>
+                                    </div>
+                                    <table>
+                                        <tr class='headings'>
+                                            <th class='item-available-h-1'>Item Id</th>
+                                            <th class='item-available-h-2'>Item Name</th>
+                                            <th class='item-available-h-1'>Available Qty.</th>
+                                            <th class='item-available-h-5'>Spent Qty.</th>
+                                        </tr>
+                                        <tr>
+                                            <td>127</td>
+                                            <td>Dell Laptop</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <!-- item spend -->
+                                <form class='item-spend-spend' id='items-spend'>
+                                    <div class='item-spend-parent-group'>
+                                        <div class='item-spend-group item-spend-first'>
+                                            <label for='id'>Item Id</label>
+                                            <select id='id' class='item-spend-input-field'>
+                                                <option value='1'>1</option>
+                                                <option value='2'>2</option>
+                                                <option value='3'>3</option>
+                                            </select>
+                                        </div>
+                                        <div class='item-spend-group item-spend-middle'>
+                                            <label for='name'>Item Name</label>
+                                            <input id='name' type='text' class='item-spend-input-field' disabled />
+                                        </div>
+                                        <div class='item-spend-group item-spend-last'>
+                                            <label for='available'>Available Quantity</label>
+                                            <input id='available' type='text' class='item-spend-input-field' disabled />
+                                        </div>
+                                    </div>
+                                    <div class='item-spend-parent-group'>
+                                        <div class='item-spend-group item-spend-first'>
+                                            <label for='spend'>Spend Quantity</label>
+                                            <input id='spend' type='text' class='item-spend-input-field' />
+                                        </div>
+                                        <div class='item-spend-group item-spend-last-2'>
+                                            <label for='description'>Description</label>
+                                            <input id='description' type='text' class='item-spend-input-field' />
+                                        </div>
+                                    </div>
+                                    <div class='item-spend-group'>
+                                        <label for='quotation'>Quotation attachment</label>
+                                        <br />
+                                        <input id='quotation' type='file' class='item-spend-bill-input' />
+                                    </div>
+                                    <div class='item-spend-group'>
+                                        <input type='submit' class='item-spend-spend-btn item-spend-button' value='Create spend request' />
+                                    </div>
+                                    <div class='item-spend-notice'>
+                                        * Check the status of the spend request under the <b>Approvals</b> tab.
+                                    </div>
+                                </form>
+
+
+                                <!-- item spend approvals -->
+                                <table id='item-spend-approval'>
+                                    <tr>
+                                        <th class='item-approval-h-1'>Id</th>
+                                        <th class='item-approval-h-1'>Name</th>
+                                        <th class='item-approval-h-1'>Qty</th>
+                                        <th class='item-approval-h-2'>Description</th>
+                                        <th class='item-approval-h-1'>Quotation</th>
+                                        <th class='item-approval-h-4'>Status</th>
+                                        <th class='item-approval-h-5'>Timestamp</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Dell Laptop</td>
+                                        <td>3</td>
+                                        <td>Dell laptops for distribution</td>
+                                        <td>Download</td>
+                                        <td>Approved</td>
+                                        <td>2021-10-08</td>
+                                    </tr>
+                                </table>
+
+
+                                <!-- item spent records -->
+                                <div class='item-record-spent-records' id='item-spent-record'>
+                                    <div class='item-record-card-3'>
+                                        <button class='item-record-btn item-record-filter-btn'>Generate Report</button>
+                                    </div>
+                                    <table>
+                                        <tr class='headings'>
+                                            <th class='item-record-h-1'>Id</th>
+                                            <th class='item-record-h-1'>Name</th>
+                                            <th class='item-record-h-1'>Qty</th>
+                                            <th class='item-record-h-2'>Description</th>
+                                            <th class='item-record-h-1'>Quotation</th>
+                                            <th class='item-record-h-5'>Timestamp</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Dell Laptop</td>
+                                            <td>3</td>
+                                            <td>Dell laptops for distribution</td>
+                                            <td>Download</td>
+                                            <td>2021-10-08</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
                         </div>
-                        <iframe name='iframe-2' class='items-sec-2' src='./items/available.php'></iframe>
                     </div>
-                    <!-- available items -->
 
-                    <!-- item spend -->
-
-                    <!-- item spend approvals -->
-
-                    <!-- item spent records -->
 
 
 

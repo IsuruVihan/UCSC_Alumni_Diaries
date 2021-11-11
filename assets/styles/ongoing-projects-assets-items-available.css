@@ -1,4 +1,4 @@
-.available {
+.item-available-available {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -32,32 +32,32 @@ td {
     font-size: 0.8em;
 }
 
-.h-1 {
+.item-available-h-1 {
     width: 17%;
     text-align: justify;
 }
 
-.h-2 {
+.item-available-h-2 {
     width: 32%;
     text-align: justify;
 }
 
-.h-3 {
+.item-available-h-3 {
     width: 17%;
     text-align: justify;
 }
 
-.h-4 {
+.item-available-h-4 {
     width: 17%;
     text-align: justify;
 }
 
-.h-5 {
+.item-available-h-5 {
     width: 17%;
     text-align: justify;
 }
 
-.card-3 {
+.item-available-card-3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +65,7 @@ td {
     margin-bottom: 1em;
 }
 
-.btn {
+.item-available-btn {
     cursor: pointer;
     border-radius: 5px;
     color: white;
@@ -73,10 +73,14 @@ td {
     height: 25px;
 }
 
-.filter-btn {
+.item-available-filter-btn {
     width: 32%;
     margin-top: 0.5em;
     background: white;
     border: 1px solid black;
     color: black;
 }
+
+/* .available-item-outer-container{
+    display: none;
+} */

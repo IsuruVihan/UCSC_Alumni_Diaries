@@ -13,6 +13,7 @@
     gap: 5px;
     justify-content: space-between;
     align-items: center;
+    padding: 5px;
 }
 
 .cash-sec-2 {
@@ -42,4 +43,7 @@
 
 .cash-clicked-link {
     background: #fa8c16;
+}
+.clicked-link {
+    background: #096dd9;
 }

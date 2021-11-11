@@ -231,3 +231,7 @@
   border-color: black;
   color: black;
 }
+
+.item-outer-container{
+  display: none;
+}

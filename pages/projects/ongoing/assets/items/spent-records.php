@@ -2,18 +2,18 @@
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
-<div class='spent-records'>
-    <div class='card-3'>
-        <button class='btn filter-btn'>Generate Report</button>
+<div class='item-record-spent-records'>
+    <div class='item-record-card-3'>
+        <button class='item-record-btn item-record-filter-btn'>Generate Report</button>
     </div>
     <table>
         <tr class='headings'>
-            <th class='h-1'>Id</th>
-            <th class='h-1'>Name</th>
-            <th class='h-1'>Qty</th>
-            <th class='h-2'>Description</th>
-            <th class='h-1'>Quotation</th>
-            <th class='h-5'>Timestamp</th>
+            <th class='item-record-h-1'>Id</th>
+            <th class='item-record-h-1'>Name</th>
+            <th class='item-record-h-1'>Qty</th>
+            <th class='item-record-h-2'>Description</th>
+            <th class='item-record-h-1'>Quotation</th>
+            <th class='item-record-h-5'>Timestamp</th>
         </tr>
         <tr>
             <td>1</td>

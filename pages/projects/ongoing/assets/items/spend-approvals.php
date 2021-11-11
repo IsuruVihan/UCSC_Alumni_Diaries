@@ -4,13 +4,13 @@
 
 <table>
     <tr>
-        <th class='h-1'>Id</th>
-        <th class='h-1'>Name</th>
-        <th class='h-1'>Qty</th>
-        <th class='h-2'>Description</th>
-        <th class='h-1'>Quotation</th>
-        <th class='h-4'>Status</th>
-        <th class='h-5'>Timestamp</th>
+        <th class='item-approval-h-1'>Id</th>
+        <th class='item-approval-h-1'>Name</th>
+        <th class='item-approval-h-1'>Qty</th>
+        <th class='item-approval-h-2'>Description</th>
+        <th class='item-approval-h-1'>Quotation</th>
+        <th class='item-approval-h-4'>Status</th>
+        <th class='item-approval-h-5'>Timestamp</th>
     </tr>
     <tr>
         <td>1</td>

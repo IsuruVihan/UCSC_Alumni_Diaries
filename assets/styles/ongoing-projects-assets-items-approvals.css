@@ -1,3 +1,6 @@
+#item-spend-approval{
+    display: none;
+}
 table {
     font-family: "Nunito", sans-serif;
     border-collapse: collapse;
@@ -24,27 +27,27 @@ td {
     font-size: 0.8em;
 }
 
-.h-1 {
+.item-approval-h-1 {
     width: 17%;
     text-align: justify;
 }
 
-.h-2 {
+.item-approval-h-2 {
     width: 32%;
     text-align: justify;
 }
 
-.h-3 {
+.item-approval-h-3 {
     width: 17%;
     text-align: justify;
 }
 
-.h-4 {
+.item-approval-h-4 {
     width: 17%;
     text-align: justify;
 }
 
-.h-5 {
+.item-approval-h-5 {
     width: 17%;
     text-align: justify;
 }
