@@ -8,13 +8,13 @@ $query = "SELECT * FROM memberaccountrequests WHERE Id='{$Id}'";
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($result)) {
     echo "
-        <div class='details-title'><span style='color: #237804'>Member Account Request</span> - Details</div>
+        <div class='details-title'><span style='color: #f5222d'>Rejected Request</span> - Details</div>
         <div class='row-1'>
             <div class='container-1'>
                 <div class='section-3'>
                     <div class='sec-row-1'>
-                        <button class='accept-btn btn' onclick=AcceptMemberAccountRequest('{$Id}')>Accept</button>
-                        <button class='remove-btn btn' onclick=RejectMemberAccountRequest('{$Id}')>Reject</button>
+                        <button class='accept-btn btn'>Accept</button>
+                        <button class='remove-btn btn'>Delete</button>
                     </div>
                 </div>
             </div>

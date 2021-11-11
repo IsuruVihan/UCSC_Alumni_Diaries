@@ -50,6 +50,16 @@
             Id: id
         });
     }
+    const ViewRejectedAccountRequestDetails = (id) => {
+        $('#result-details').load("../server/admin/accounts/rejected/view-details.php", {
+            Id: id
+        });
+    }
+    const DeleteRejectAccountRequest = (id) => {
+        $('#message-container').load("../server/admin/accounts/rejected/delete-request.php", {
+            Id: id
+        });
+    }
 </script>
 
 <div id='message-container'>

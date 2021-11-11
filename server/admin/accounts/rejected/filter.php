@@ -31,7 +31,7 @@ if (mysqli_num_rows($results) > 0) {
                 <p class='request-id'>{$row['LastName']}</p>
                 <p class='request-id'>{$row['Batch']}</p>
                 <div class='buttons' id='rej-req-{$row['Id']}'>
-                    <button class='view-btn btn'>View</button>
+                    <button class='view-btn btn' onclick=ViewRejectedAccountRequestDetails('{$row['Id']}'>View</button>
                     <button class='delete-btn btn'>Delete</button>
                 </div>
             </div>
