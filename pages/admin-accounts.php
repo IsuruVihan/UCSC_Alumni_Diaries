@@ -34,6 +34,8 @@
                 Batch: batch
             });
         });
+        
+        $('#registered-members').load("../server/admin/accounts/registered/render-list.php");
     });
     const ViewMemberAccountRequestDetails = (id) => {
         $('#result-details').load("../server/admin/accounts/requests/view-details.php", {
@@ -57,6 +59,11 @@
     }
     const DeleteRejectAccountRequest = (id) => {
         $('#message-container').load("../server/admin/accounts/rejected/delete-request.php", {
+            Id: id
+        });
+    }
+    const AcceptRejectAccountRequest = (id) => {
+        $('#message-container').load("../server/admin/accounts/rejected/accept-request.php", {
             Id: id
         });
     }
@@ -208,7 +215,8 @@
                         <button class='filter-btn btn'>Filter</button>
                     </div>
                 </div>
-                <div class='results'>
+                <div class='results' id='registered-members'>
+                    <!--
                     <div class='result' onmouseover="DisplayButtons('reg-1')" onmouseout="HideButtons('reg-1')">
                         <p class='request-id'>FirstName</p>
                         <p class='request-id'>LastName</p>
@@ -217,6 +225,7 @@
                             <button class='view-btn btn'>View</button>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
             <!-- rejected accounts -->

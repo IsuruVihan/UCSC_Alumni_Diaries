@@ -13,8 +13,8 @@ while ($row = mysqli_fetch_assoc($result)) {
             <div class='container-1'>
                 <div class='section-3'>
                     <div class='sec-row-1'>
-                        <button class='accept-btn btn'>Accept</button>
-                        <button class='remove-btn btn'>Delete</button>
+                        <button class='accept-btn btn' onclick=AcceptRejectAccountRequest('{$Id}')>Accept</button>
+                        <button class='remove-btn btn' onclick=DeleteRejectAccountRequest('{$Id}')>Delete</button>
                     </div>
                 </div>
             </div>
