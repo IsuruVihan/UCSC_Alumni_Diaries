@@ -36,6 +36,17 @@
         });
         
         $('#registered-members').load("../server/admin/accounts/registered/render-list.php");
+        $('#reg-mem-filter').submit((event) => {
+            event.preventDefault();
+            const firstName = $('#rej-mem-fname').val();
+            const lastName = $('#rej-mem-lname').val();
+            const batch = $('#rej-mem-batch').val();
+            $('#registered-members').load("../server/admin/accounts/registered/filter.php", {
+                FirstName: firstName,
+                LastName: lastName,
+                Batch: batch
+            });
+        });
     });
     const ViewMemberAccountRequestDetails = (id) => {
         $('#result-details').load("../server/admin/accounts/requests/view-details.php", {
@@ -200,11 +211,11 @@
             <!--account registered section-->
             <div class='card registered' id='registered-account'>
                 <div class='title'>Registered</div>
-                <div class='filter'>
+                <form class='filter' id='reg-mem-filter'>
                     <div class='col1'>
-                        <input class='input-field' type='text' placeholder='First Name'/>
-                        <input class='input-field' type='text' placeholder='Last Name'/>
-                        <select class='input-field'>
+                        <input class='input-field' type='text' placeholder='First Name' id='rej-mem-fname'/>
+                        <input class='input-field' type='text' placeholder='Last Name' id='rej-mem-lname'/>
+                        <select class='input-field' id='rej-mem-batch'>
                             <option value='All'>All</option>
                             <option value='2018/2019'>2018/2019</option>
                             <option value='2018/2019'>2019/2020</option>
@@ -212,9 +223,9 @@
                         </select>
                     </div>
                     <div class='col2'>
-                        <button class='filter-btn btn'>Filter</button>
+                        <input type='submit' class='filter-btn btn' value='Filter'/>
                     </div>
-                </div>
+                </form>
                 <div class='results' id='registered-members'>
                     <!--
                     <div class='result' onmouseover="DisplayButtons('reg-1')" onmouseout="HideButtons('reg-1')">
