@@ -78,6 +78,11 @@
             Id: id
         });
     }
+    const ViewRegisteredMemberDetails = (email) => {
+        // $('#result-details').load("../server/admin/accounts/registered/view-details.php", {
+        //     Email: email
+        // });
+    }
 </script>
 
 <div id='message-container'>

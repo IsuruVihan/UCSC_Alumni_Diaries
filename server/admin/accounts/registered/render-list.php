@@ -16,7 +16,7 @@ if (mysqli_num_rows($results) > 0) {
                 <p class='request-id'>{$row['LastName']}</p>
                 <p class='request-id'>{$row['Batch']}</p>
                 <div class='buttons' id='reg-{$row['Email']}'>
-                    <button class='view-btn btn'>View</button>
+                    <button class='view-btn btn' onclick=ViewRegisteredMemberDetails('{$row['Email']}')>View</button>
                 </div>
             </div>
         ";
