@@ -84,6 +84,11 @@
             Email: email
         });
     }
+    const BanMemberAccount = (email) => {
+        $('#message-container').load("../server/admin/accounts/registered/ban-account.php", {
+            Email: email
+        });
+    }
 </script>
 
 <div id='message-container'>

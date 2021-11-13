@@ -4,6 +4,17 @@ include('../../../../db/db-conn.php');
 
 $Email = trim($_POST['Email']);
 
+$query3 = "
+    SELECT projects.Name, committeemembers.Type
+    FROM projects
+    INNER JOIN committeemembers ON projects.Id=committeemembers.ProjectId
+    WHERE projects.Status='Ongoing' OR projects.Status='Completed'
+";
+$results3 = mysqli_query($conn, $query3);
+
+$query4 = "SELECT DonationFor, Amount FROM cashdonations WHERE DonorEmail={$Email}";
+$results4 = mysqli_query($conn, $query4);
+
 $query = "SELECT * FROM registeredmembers WHERE Email='{$Email}'";
 $results = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($results)) {
@@ -11,7 +22,7 @@ while ($row = mysqli_fetch_assoc($results)) {
     $results2 = mysqli_query($conn, $query2);
     if (mysqli_num_rows($results2) > 0) {
         echo "
-            <div class='details-title'>Registered Member (Banned) - Details</div>
+            <div class='details-title'><span style='color: #f5222d'>Registered Member (Banned)</span> - Details</div>
             <div class='row-1'>
                 <div class='container-1'>
                     <div class='section-1'>
@@ -24,16 +35,7 @@ while ($row = mysqli_fetch_assoc($results)) {
                         <button class='recharge-report-btn btn'>Recharge Report</button>
                     </div>
                     <div class='section-3'>
-                        <!--
-                        <div class='sec-row-1'>
-                            <button class='accept-btn btn'>Accept</button>
-                            <button class='remove-btn btn'>Remove</button>
-                        </div>
-                        -->
                         <div class='sec-row-2'>
-                            <!--
-                            <button class='ban-btn btn'>Ban</button>
-                            -->
                             <button class='remove-btn btn'>Remove</button>
                             <button class='unban-btn btn'>Unban</button>
                         </div>
@@ -74,25 +76,53 @@ while ($row = mysqli_fetch_assoc($results)) {
             <div class='iframe-display-projectContribution'>
                 <div class='contributions' id='member-contribution'>
                     <div class='list'>
-                        <div class='result'>
-                            <div class='project-name'>Project Name</div>
-                            <div class='amount'>Amount</div>
-                        </div>
+        ";
+        if (mysqli_num_rows($results4) > 0) {
+            while ($row4 = mysqli_fetch_assoc($results4)) {
+                echo "
+                    <div class='result'>
+                        <div class='project-name'>{$row4['DonationFor']}</div>
+                        <div class='amount'>{$row4['Amount']}</div>
+                    </div>
+                ";
+            }
+        } else {
+            echo "
+                <div class='result'>
+                    <div class='project-name'>No data</div>
+                </div>
+            ";
+        }
+        echo "
                     </div>
                 </div>
                 <div class='involved-projects' id='member-involved-projects'>
                     <div class='list'>
-                        <div class='result'>
-                            <div class='project-name'>Project Name</div>
-                            <div class='position'>Position</div>
-                        </div>
+        ";
+        if (mysqli_num_rows($results3) > 0) {
+            while ($row3 = mysqli_fetch_assoc($results3)) {
+                echo "
+                    <div class='result'>
+                        <div class='project-name'>{$row3['projects.Name']}</div>
+                        <div class='position'>{$row3['committeemembers.Type']}</div>
+                    </div>
+                ";
+            }
+        } else {
+            echo "
+                <div class='result'>
+                    <div class='project-name'>No data</div>
+                </div>
+            ";
+        }
+        echo "
                     </div>
                 </div>
             </div>
         ";
     } else {
         echo "
-            <div class='details-title'>Registered Member - Details</div>
+            <div class='details-title'><span style='color: #237804'>Registered Member</span> - Details</div>
             <div class='row-1'>
                 <div class='container-1'>
                     <div class='section-1'>
@@ -105,18 +135,9 @@ while ($row = mysqli_fetch_assoc($results)) {
                         <button class='recharge-report-btn btn'>Recharge Report</button>
                     </div>
                     <div class='section-3'>
-                        <!--
-                        <div class='sec-row-1'>
-                            <button class='accept-btn btn'>Accept</button>
-                            <button class='remove-btn btn'>Remove</button>
-                        </div>
-                        -->
                         <div class='sec-row-2'>
-                            <button class='ban-btn btn'>Ban</button>
+                            <button class='ban-btn btn' onclick=BanMemberAccount('{$row['Email']}')>Ban</button>
                             <button class='remove-btn btn'>Remove</button>
-                            <!--
-                            <button class='unban-btn btn'>Unban</button>
-                            -->
                         </div>
                     </div>
                 </div>
@@ -155,18 +176,46 @@ while ($row = mysqli_fetch_assoc($results)) {
             <div class='iframe-display-projectContribution'>
                 <div class='contributions' id='member-contribution'>
                     <div class='list'>
-                        <div class='result'>
-                            <div class='project-name'>Project Name</div>
-                            <div class='amount'>Amount</div>
-                        </div>
+        ";
+        if (($results4) > 0) {
+            while ($row4 = mysqli_fetch_assoc($results4)) {
+                echo "
+                    <div class='result'>
+                        <div class='project-name'>{$row4['DonationFor']}</div>
+                        <div class='amount'>{$row4['Amount']}</div>
+                    </div>
+                ";
+            }
+        } else {
+            echo "
+                <div class='result'>
+                    <div class='project-name'>No data</div>
+                </div>
+            ";
+        }
+        echo "
                     </div>
                 </div>
                 <div class='involved-projects' id='member-involved-projects'>
                     <div class='list'>
-                        <div class='result'>
-                            <div class='project-name'>Project Name</div>
-                            <div class='position'>Position</div>
-                        </div>
+        ";
+        if (mysqli_num_rows($results3) > 0) {
+            while ($row3 = mysqli_fetch_assoc($results3)) {
+                echo "
+                    <div class='result'>
+                        <div class='project-name'>{$row3['projects.Name']}</div>
+                        <div class='position'>{$row3['committeemembers.Type']}</div>
+                    </div>
+                ";
+            }
+        } else {
+            echo "
+                <div class='result'>
+                    <div class='project-name'>No data</div>
+                </div>
+            ";
+        }
+        echo "
                     </div>
                 </div>
             </div>
