@@ -6,7 +6,11 @@ $FirstName = trim($_POST['FirstName']);
 $LastName = trim($_POST['LastName']);
 $Batch = $_POST['Batch'];
 
-$query = "SELECT Email, FirstName, LastName, Batch FROM registeredmembers";
+$query = "
+    SELECT bannedaccounts.Email, registeredmembers.FirstName, registeredmembers.LastName, registeredmembers.Batch
+    FROM bannedaccounts
+    INNER JOIN registeredmembers on bannedaccounts.Email = registeredmembers.Email
+";
 
 if (!empty($FirstName)) {
     $query = $query . " WHERE FirstName LIKE '{$FirstName}%'";
@@ -32,14 +36,16 @@ if (mysqli_num_rows($results) > 0) {
         echo "
             <div
                 class='result'
-                onmouseover=DisplayButtons('reg-{$row['Email']}')
-                onmouseout=HideButtons('reg-{$row['Email']}')
+                onmouseover=DisplayButtons('ban-{$row['Email']}')
+                onmouseout=HideButtons('ban-{$row['Email']}')
             >
                 <p class='request-id'>{$row['FirstName']}</p>
                 <p class='request-id'>{$row['LastName']}</p>
                 <p class='request-id'>{$row['Batch']}</p>
-                <div class='buttons' id='reg-{$row['Email']}'>
-                    <button class='view-btn btn' onclick=ViewRegisteredMemberDetails('{$row['Email']}')>View</button>
+                <div class='buttons' id='ban-{$row['Email']}'>
+                    <button
+                        class='view-btn btn'
+                    >View</button>
                 </div>
             </div>
         ";
