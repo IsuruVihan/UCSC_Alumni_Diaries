@@ -48,6 +48,7 @@
             });
         });
     });
+    
     const ViewMemberAccountRequestDetails = (id) => {
         $('#result-details').load("../server/admin/accounts/requests/view-details.php", {
             Id: id
@@ -79,9 +80,9 @@
         });
     }
     const ViewRegisteredMemberDetails = (email) => {
-        // $('#result-details').load("../server/admin/accounts/registered/view-details.php", {
-        //     Email: email
-        // });
+        $('#result-details').load("../server/admin/accounts/registered/view-details.php", {
+            Email: email
+        });
     }
 </script>
 

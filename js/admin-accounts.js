@@ -85,3 +85,19 @@ const onClickPageShow = (id) => {
             document.getElementById("banned-account").style.display = "flex";
     }
 }
+
+const TabChanger = (id) => {
+    if (id==='member-contribution') {
+        $('#member-contribution').show();
+        $('#member-involved-projects').hide();
+
+        $('#contributions').addClass('fontColorChange');
+        $('#involved-projects').removeClass('fontColorChange');
+    } else {
+        $('#member-contribution').hide();
+        $('#member-involved-projects').show();
+
+        $('#contributions').removeClass('fontColorChange');
+        $('#involved-projects').addClass('fontColorChange');
+    }
+}
