@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_assoc($results)) {
                     </div>
                     <div class='section-3'>
                         <div class='sec-row-2'>
-                            <button class='remove-btn btn'>Remove</button>
+                            <button class='remove-btn btn' onclick=RemoveMemberAccount('{$row['Email']}')>Remove</button>
                             <button class='unban-btn btn' onclick=UnbanMemberAccount('{$row['Email']}')>Unban</button>
                         </div>
                     </div>
@@ -137,7 +137,7 @@ while ($row = mysqli_fetch_assoc($results)) {
                     <div class='section-3'>
                         <div class='sec-row-2'>
                             <button class='ban-btn btn' onclick=BanMemberAccount('{$row['Email']}')>Ban</button>
-                            <button class='remove-btn btn'>Remove</button>
+                            <button class='remove-btn btn' onclick=RemoveMemberAccount('{$row['Email']}')>Remove</button>
                         </div>
                     </div>
                 </div>

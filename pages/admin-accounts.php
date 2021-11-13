@@ -94,6 +94,11 @@
             Email: email
         });
     }
+    const RemoveMemberAccount = (email) => {
+        $('#message-container').load("../server/admin/accounts/registered/remove-account.php", {
+            Email: email
+        });
+    }
 </script>
 
 <div id='message-container'>
