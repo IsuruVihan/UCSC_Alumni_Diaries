@@ -89,6 +89,11 @@
             Email: email
         });
     }
+    const UnbanMemberAccount = (email) => {
+        $('#message-container').load("../server/admin/accounts/registered/unban-account.php", {
+            Email: email
+        });
+    }
 </script>
 
 <div id='message-container'>
