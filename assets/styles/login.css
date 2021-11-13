@@ -46,6 +46,14 @@ body, .input-field {
     width: 100%;
 }
 
+.check-box {
+    text-align: left;
+}
+
+.check-box:hover {
+    cursor: pointer;
+}
+
 .container1 {
     margin-top: 10px;
     display: flex;
@@ -65,7 +73,6 @@ body, .input-field {
 }
 
 .input-field {
-    padding: 10px;
     border-radius: 4px;
     border: 1px solid #ced4da;
     background-color: #fff;
@@ -73,21 +80,14 @@ body, .input-field {
     font-size: 14px;
     cursor: text;
     margin: 6px 1px;
-}
-
-.input-field input {
-    background: none;
-    outline: none;
-    border: none;
+    padding: 10px;
     line-height: normal;
-    font-weight: 600;
-    font-size: 1.1rem;
     color: #333;
     display: inline-block;
     height: 100%;
 }
 
-.input-field input::placeholder {
+.input-field::placeholder {
     color: #aaa;
     font-weight: 500;
     font-family: 'Nunito', sans-serif;
@@ -110,41 +110,54 @@ body, .input-field {
 }
 
 .btn-solid-login {
-    width: 80%;
-    background-color: #f34e57;
+    width: 40%;
+    height: 5vh;
+    border-radius: 10px;
     border: none;
-    outline: none;
-    height: 49px;
-    border-radius: 15px;
-    color: #fff;
-    text-transform: uppercase;
+    background: #f34e57;
+    color: white;
     font-weight: 600;
-    margin-left: 1px;
-    margin-top: 10px;
+    font-size: 0.9em;
     cursor: pointer;
-    transition: 0.5s;
-}
-
-.btn-solid-login:hover {
-    background-color: #e59b9b;
+    transition: all ease-in-out 0.5s;
 }
 
 .btn-solid-cancel {
-    width: 80%;
-    background-color: #662626;
+    width: 40%;
+    height: 5vh;
+    border-radius: 10px;
     border: none;
-    outline: none;
-    height: 49px;
-    border-radius: 15px;
-    color: #fff;
-    text-transform: uppercase;
+    background: #662626;
+    color: white;
     font-weight: 600;
-    margin-right: 1px;
-    margin-top: 10px;
+    font-size: 0.9em;
     cursor: pointer;
-    transition: 0.5s;
+    transition: all ease-in-out 0.5s;
 }
 
-.btn-solid-cancel:hover {
-    background-color: #e59797;
+.btn-solid-login:hover, .btn-solid-cancel:hover {
+    background: #e59b9b;
+}
+
+.logcan {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
 }
