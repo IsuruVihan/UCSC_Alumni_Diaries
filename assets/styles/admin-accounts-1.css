@@ -423,3 +423,52 @@ body {
     align-items: center;
     gap: 5px;
 }
+
+.error-message {
+    border: 1px solid #f5222d;
+    background: white;
+    color: #f5222d;
+    border-radius: 5px;
+    padding: 0.1em;
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    margin-top: 2em;
+}
+
+.success-message {
+    border: 1px solid #237804;
+    background: white;
+    color: #237804;
+    border-radius: 5px;
+    padding: 0.1em;
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    margin-top: 2em;
+}
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
+}
+
+.signup-message {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
