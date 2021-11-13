@@ -47,6 +47,19 @@
                 Batch: batch
             });
         });
+
+        $('#banned-member-accounts').load("../server/admin/accounts/banned/render-list.php");
+        $('#ban-mem-filter').submit((event) => {
+            event.preventDefault();
+            const firstName = $('#ban-mem-fname').val();
+            const lastName = $('#ban-mem-lname').val();
+            const batch = $('#ban-mem-batch').val();
+            $('#banned-member-accounts').load("../server/admin/accounts/banned/filter.php", {
+                FirstName: firstName,
+                LastName: lastName,
+                Batch: batch
+            });
+        });
     });
     
     const ViewMemberAccountRequestDetails = (id) => {
@@ -293,11 +306,11 @@
             <!-- banned accounts -->
             <div class='card banned' id='banned-account'>
                 <div class='title'>Banned</div>
-                <div class='filter'>
+                <form id='ban-mem-filter' class='filter'>
                     <div class='col1'>
-                        <input class='input-field' type='text' placeholder='First Name'/>
-                        <input class='input-field' type='text' placeholder='Last Name'/>
-                        <select class='input-field'>
+                        <input id='ban-mem-fname' class='input-field' type='text' placeholder='First Name'/>
+                        <input id='ban-mem-lname' class='input-field' type='text' placeholder='Last Name'/>
+                        <select id='ban-mem-batch' class='input-field'>
                             <option value='All'>All</option>
                             <option value='2018/2019'>2018/2019</option>
                             <option value='2018/2019'>2019/2020</option>
@@ -305,10 +318,11 @@
                         </select>
                     </div>
                     <div class='col2'>
-                        <button class='filter-btn btn'>Filter</button>
+                        <input type='submit' class='filter-btn btn' value='Filter'/>
                     </div>
-                </div>
-                <div class='results'>
+                </form>
+                <div class='results' id='banned-member-accounts'>
+                    <!--
                     <div class='result' onmouseover="DisplayButtons('ban-7')" onmouseout="HideButtons('ban-7')">
                         <p class='request-id'>FirstName</p>
                         <p class='request-id'>LastName</p>
@@ -317,6 +331,7 @@
                             <button class='view-btn btn'>View</button>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
             <!-- account requests -->
