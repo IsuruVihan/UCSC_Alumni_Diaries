@@ -8,8 +8,6 @@ $Email = $_POST['Email'];
 $query = "SELECT FirstName, LastName FROM registeredmembers WHERE Email='{$Email}'";
 $results = mysqli_query($conn, $query);
 
-$query2 = "SELECT Email FROM bannedaccounts WHERE Email='{$Email}'";
-$results2 = mysqli_query($conn, $query2);
 while ($row = mysqli_fetch_assoc($results)) {
     if (mail(
         $Email,
@@ -17,26 +15,18 @@ while ($row = mysqli_fetch_assoc($results)) {
         MemberAccountRemoved($row['FirstName'], $row['LastName']),
         "From: ucsc.alumni.diaries@gmail.com"
     )) {
-        $query3 = "DELETE FROM registeredmembers WHERE Email='{$Email}'";
-        if (mysqli_query($conn, $query3)) {
-            if (mysqli_num_rows($results2) > 0) {
-                $query4 = "DELETE FROM bannedaccounts WHERE Email='{$Email}'";
-                if (mysqli_query($conn, $query4))  {
-                    echo "
-                        <div class='success-message'>
-                            <b>{$row['FirstName']} {$row['LastName']}</b> member account has been removed
-                        </div>
-                    ";
-                } else {
-                    echo "
-                        <div class='error-message'>Server Error: " . mysqli_error($conn) . "</div>
-                    ";
-                }
-            } else {
+        $query2 = "DELETE FROM registeredmembers WHERE Email='{$Email}'";
+        if (mysqli_query($conn, $query2)) {
+            $query3 = "DELETE FROM bannedaccounts WHERE Email='{$Email}'";
+            if (mysqli_query($conn, $query3)) {
                 echo "
                     <div class='success-message'>
                         <b>{$row['FirstName']} {$row['LastName']}</b> member account has been removed
                     </div>
+                ";
+            } else {
+                echo "
+                    <div class='error-message'>Server Error: " . mysqli_error($conn) . "</div>
                 ";
             }
         } else {

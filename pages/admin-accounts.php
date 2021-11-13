@@ -112,6 +112,21 @@
             Email: email
         });
     }
+    const ViewBannedAccountDetails = (email) => {
+        $('#result-details').load("../server/admin/accounts/banned/view-details.php", {
+            Email: email
+        });
+    }
+    const RemoveBannedAccount = (email) => {
+        $('#message-container').load("../server/admin/accounts/banned/remove-account.php", {
+            Email: email
+        });
+    }
+    const UnbanBannedAccount = (email) => {
+        $('#message-container').load("../server/admin/accounts/banned/unban-account.php", {
+            Email: email
+        });
+    }
 </script>
 
 <div id='message-container'>

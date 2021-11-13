@@ -23,6 +23,7 @@ if (mysqli_num_rows($results) > 0) {
                 <div class='buttons' id='ban-{$row['Email']}'>
                     <button
                         class='view-btn btn'
+                        onclick=ViewBannedAccountDetails('{$row['Email']}')
                     >View</button>
                 </div>
             </div>
