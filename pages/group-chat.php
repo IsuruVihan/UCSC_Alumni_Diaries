@@ -1,3 +1,5 @@
+<?php include('../server/session.php'); ?>
+
 <link rel='stylesheet' href='../assets/styles/group-chat-iframe.css'/>
 <link rel='stylesheet' href='../assets/styles/group-chat-iframe-01.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'

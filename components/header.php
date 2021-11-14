@@ -1,3 +1,5 @@
+<?php //include('../server/session.php'); ?>
+
 <html lang='en'>
 <head>
 <title>UCSC Alumni Diaries</title>
@@ -23,12 +25,6 @@
             <a href='../pages/home.php' class='anchor-tag'>Home</a>
         </li>
         <li class='link'>
-            <a href='../pages/alumnus.php' class='anchor-tag'>Alumnus</a>
-        </li>
-        <li class='link'>
-            <a href='../pages/notifications.php' class='anchor-tag'>Notifications</a>
-        </li>
-        <li class='link'>
             <a href='../pages/projects.php' class='anchor-tag'>Projects</a>
         </li>
         <li class='link'>
@@ -43,26 +39,46 @@
         <li class='link'>
             <a href='../pages/suggestions.php' class='anchor-tag'>Suggestions</a>
         </li>
-        <li class='link'>
-            <a href='../pages/wall.php' class='anchor-tag'>Wall</a>
-        </li>
-        <li class='link'>
-            <a href='../pages/chat.php' class='anchor-tag'>Chat</a>
-        </li>
-        <li class='link'>
-            <a href='../pages/admin.php' class='anchor-tag'>Admin</a>
-        </li>
-        <li class='link'>
-            <a href='../pages/my-account.php' class='anchor-tag'>My Account</a>
-        </li>
-        <li class='link'>
-            <a href='../pages/login.php' class='anchor-tag'>Login</a>
-        </li>
-        <li class='link'>
-            <a href='../pages/signup.php' class='anchor-tag'>Signup</a>
-        </li>
-        <li class='link'>
-            <a href='../server/logout/logout.php' class='anchor-tag'>Logout</a>
-        </li>
+        <?php
+            if (isset($_SESSION["AccType"])) {
+                if ($_SESSION["AccType"]==="TopBoard") {
+                    echo "
+                        <li class='link'>
+                            <a href='../pages/admin.php' class='anchor-tag'>Admin</a>
+                        </li>
+                    ";
+                }
+                echo "
+                    <li class='link'>
+                        <a href='../pages/alumnus.php' class='anchor-tag'>Alumnus</a>
+                    </li>
+                    <li class='link'>
+                        <a href='../pages/notifications.php' class='anchor-tag'>Notifications</a>
+                    </li>
+                    <li class='link'>
+                        <a href='../pages/wall.php' class='anchor-tag'>Wall</a>
+                    </li>
+                    <li class='link'>
+                        <a href='../pages/chat.php' class='anchor-tag'>Chat</a>
+                    </li>
+                    <li class='link'>
+                        <a href='../pages/my-account.php' class='anchor-tag'>My Account</a>
+                    </li>
+                    <li class='link'>
+                        <a href='../server/logout/logout.php' class='anchor-tag'>Logout</a>
+                    </li>
+                ";
+            }
+            if (!isset($_SESSION["AccType"])) {
+                echo "
+                    <li class='link'>
+                        <a href='../pages/login.php' class='anchor-tag'>Login</a>
+                    </li>
+                    <li class='link'>
+                        <a href='../pages/signup.php' class='anchor-tag'>Signup</a>
+                    </li>
+                ";
+            }
+        ?>
     </ul>
 </nav>

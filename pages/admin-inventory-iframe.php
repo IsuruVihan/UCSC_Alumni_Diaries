@@ -1,3 +1,5 @@
+<?php include('../server/session.php'); ?>
+
 <?php include('../components/header.php'); ?>
 <link rel='stylesheet' href='../assets/styles/admin-inventory-iframe.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
