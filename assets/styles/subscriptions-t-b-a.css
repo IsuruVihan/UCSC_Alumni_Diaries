@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+.main-box {
+    background: white;
+    font-family: Nunito;
+    height: 96.5%;
+    /* padding-left: 6.7em;
+    padding-right: 6.7em; */
+    display: grid;
+    grid-template-columns: [c1] 100% [c2];
+    margin-bottom: 1em;
+    margin-top: 1em;
+    /* border: red solid 2px; */
+}
+
+
+.left-col {
+    grid-column-start: c1;
+    grid-column-end: c2;
+    background: white;
+    display: grid;
+    grid-template-rows: [r1] 50% [r2] 50% [r3];
+    padding-right: 5px;
+    /* border: solid 2px purple; */
+}
+
+.s-to-be-accept {
+    grid-row-start: r1;
+    grid-row-end: r2;
+    background: white;
+    /* border: solid 2px rgb(9, 0, 128); */
+}
+
+/* .card {
+    background: white;
+    height: 197%;
+}
+
+.card, .details {
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all ease-in-out 0.5s;
+    font-family: Nunito;
+} */
+
+.title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.alldetails1 {
+    display: grid;
+    grid-template-rows: [rr1] 15% [rr2] 85% [rr3];
+    height: 81%;
+    
+}
+
+.filtermain {
+    grid-row-start: rr1;
+    grid-row-end: rr2;
+    display: grid;
+    grid-template-columns: [cc1] 16% [cc2] 16% [cc3] 16% [cc4] 16% [cc5] 25% [cc6] 11% [cc7];
+    /* border: solid 2px rgb(9, 0, 128); */
+    /* margin-bottom: 15px; */
+}
+
+.firstname {
+    grid-column-start: cc1;
+    grid-column-end: cc2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fname {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.list-details {
+    font-family: "Nunito", serif;
+    text-align: center;
+}
+
+.email:hover {
+    border-color: #ffccc7;
+}
+
+.fname:hover {
+    border-color: #ffccc7;
+}
+
+.lname:hover {
+    border-color: #ffccc7;
+}
+
+.batch:hover {
+    border-color: #ffccc7;
+}
+
+.lastname {
+    grid-column-start: cc2;
+    grid-column-end: cc3;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.lname {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+.bat {
+    grid-column-start: cc3;
+    grid-column-end: cc4;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.batch {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.subscriptiontype {
+    grid-column-start: cc4;
+    grid-column-end: cc5;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.stype {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.stype:hover {
+    border-color: #ffccc7;
+}
+
+.emailaddress {
+    grid-column-start: cc5;
+    grid-column-end: cc6;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.email {
+    width: 95%;
+    height: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.filterbutton {
+    grid-column-start: cc6;
+    grid-column-end: cc7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: gray;
+    border: 1px solid gray;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 30px;
+    width: 90%;
+}
+
+.filter-btn:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.flexbox-container {
+    grid-row-start: rr2;
+    grid-row-end: rr3;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 710px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.flexbox-item {
+    height: 190px;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: [co1] 15% [co2] 45% [co3] 20% [co4] 20% [co5];
+    grid-template-rows: [ero1] 100% [ero2];
+}
+
+.profilepic {
+    grid-column-start: co1;
+    grid-column-end: co2;
+    grid-row-start: ero1;
+    grid-row-end: ero2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(83, 11, 216); */
+    padding: 5px;
+
+}
+
+.col2 {
+    grid-column-start: co2;
+    grid-column-end: co3;
+    display: grid;
+    grid-template-rows: [ro1] 33.3% [ro2] 33.3% [ro3] 33.3% [ro4];
+}
+
+.name {
+    grid-row-start: ro1;
+    grid-row-end: ro2;
+    display: grid;
+    grid-template-columns: [roo1] 50% [roo2] 50% [roo3];
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    /* border: 1px solid rgb(216, 11, 62); */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.first-name {
+    grid-row-start: roo1;
+    grid-row-end: roo2;
+    /* display: flex; */
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(216, 103, 11); */
+    margin: 4px;
+    
+
+}
+
+.namefirst {
+    width: 98%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.last-name {
+    grid-row-start: roo2;
+    grid-row-end: roo3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(69, 216, 11); */
+    margin: 4px;
+}
+
+.namesecond {
+    width: 98%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.alllabels {
+    font-weight: 600;
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+}
+
+.e-mail {
+    grid-row-start: ro2;
+    grid-row-end: ro3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(69, 216, 11); */
+    margin: 4px;
+}
+
+.mail {
+    width: 98%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.bill {
+    grid-row-start: ro3;
+    grid-row-end: ro4;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(69, 216, 11); */
+    margin: 4px;
+}
+
+.bill-attachment {
+    width: 98%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.col3 {
+    grid-column-start: co3;
+    grid-column-end: co4;
+    display: grid;
+    grid-template-rows: [row1] 33.3% [row2] 33.3% [row3] 33.3% [row4];
+}
+
+.batch-year {
+    grid-row-start: row1;
+    grid-row-end: row2;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(69, 216, 11); */
+    margin: 7px;
+    
+    
+}
+
+.b {
+    width: 98.5%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.timestamp {
+    grid-row-start: row2;
+    grid-row-end: row3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(69, 216, 11); */
+    margin: 4px;
+}
+
+.time {
+    width: 98%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.accept {
+    grid-row-start: row3;
+    grid-row-end: row4;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.accept-btn {
+    width: 90%;
+    height: 25px;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.accept-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.col4 {
+    grid-column-start: co4;
+    grid-column-end: co5;
+    display: grid;
+    grid-template-rows: [roww1] 33.3% [roww2] 33.3% [roww3] 33.3% [roww4];
+}
+
+.subbutton {
+    grid-row-start: roww1;
+    grid-row-end: roww2;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(69, 216, 11); */
+    margin: 7px;
+}
+
+.substype {
+    width: 98%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.price {
+    grid-row-start: roww2;
+    grid-row-end: roww3;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(69, 216, 11); */
+    margin: 4px;
+}
+
+.amount {
+    width: 98%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.reject {
+    grid-row-start: roww3;
+    grid-row-end: roww4;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.reject-btn {
+    width: 90%;
+    height: 25px;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.reject-btn:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+}

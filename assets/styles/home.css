@@ -1,12 +1,36 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    margin-top: 10vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+    text-decoration: none;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+    color: black;
+    text-decoration: none;
+}
+
 .home {
     display: flex;
     flex-direction: column;
 }
 
 .white-space {
-    height: 5em;
+    height: 2em;
     background: white;
     margin-top: 5px;
+}
+
+.white-space2 {
+    margin-top: 1px;
+    height: 1em;
+    background: white;
 }
 
 .title {
@@ -40,4 +64,108 @@
     display: flex;
     align-items: center;
     padding-right: 8em;
+}
+
+.dashboard-links {
+    background: white;
+    padding-left: 6.7em;
+    padding-right: 6.7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+}
+
+.dashboard-link {
+    width: 50%;
+    height: 100%;
+    color: #434343;
+    font-size: 1.5em;
+    font-weight: 800;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.clicked-link {
+    border-bottom: 3px solid #434343;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dashboard {
+    background: white;
+    padding-left: 6.7em;
+    padding-right: 6.7em;
+    border: none;
+    height: 80vh;
+}
+
+.activities {
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    height: 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.act-link {
+    box-shadow: 2px 4px 8px lightgray;
+    height: 100%;
+    width: 16em;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: grid;
+    grid-template-rows: [row1] 30% [row2] 50% [row3];
+    grid-template-columns: [col1] 100% [col2];
+    transition: all ease-in-out 0.5s;
+}
+
+.act-link:hover {
+    box-shadow: 1px 2px 4px gray;
+}
+
+.act-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.act-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+.link-1:hover {
+    color: #ff7875;
+}
+
+.link-2:hover {
+    color: #ff9c6e;
+}
+
+.link-3:hover {
+    color: #ffc069;
+}
+
+.link-4:hover {
+    color: #ffd666;
 }
