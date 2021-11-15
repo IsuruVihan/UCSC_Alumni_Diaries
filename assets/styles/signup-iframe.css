@@ -24,15 +24,15 @@ body {
 }
 
 .register-container .register-title {
-    font-size: 35px;
+    font-size: 25px;
     color: #2f3640;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
 }
 
 .register-input_box {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -70,7 +70,7 @@ input {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .register-user_details {
@@ -108,7 +108,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .register-btn {
@@ -116,8 +116,8 @@ input {
     background-color: #f34e57;
     border: none;
     outline: none;
-    height: 49px;
-    border-radius: 15px;
+    height: 40px;
+    border-radius: 5px;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
@@ -136,8 +136,8 @@ input {
     background-color: #662626;
     border: none;
     outline: none;
-    height: 49px;
-    border-radius: 15px;
+    height: 40px;
+    border-radius: 5px;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;

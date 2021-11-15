@@ -1,3 +1,5 @@
+<?php include('../server/session.php'); ?>
+
 <?php include('../components/header.php'); ?>
 
 <link rel='stylesheet' href='../assets/styles/developers.css'/>

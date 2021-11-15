@@ -18,20 +18,20 @@
     ) {
         echo "<span class='message-error'>All fields are required</span>";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "<span class='message-error'>Email is not valid</span>";
+        echo "<span class='message-error'>email is not valid</span>";
     } else {
-        $query = "SELECT * FROM memberaccountrequests WHERE Email='$email'";
+        $query = "SELECT * FROM memberaccountrequests WHERE email='$email'";
         $result = mysqli_query($conn, $query);
         if (mysqli_num_rows($result) > 0) {
-            echo "<span class='message-error'>You have already requested a Member account from this Email</span>";
+            echo "<span class='message-error'>You have already requested a Member account from this email</span>";
         } else {
-            $query = "SELECT * FROM registeredmembers WHERE Email='$email'";
+            $query = "SELECT * FROM registeredmembers WHERE email='$email'";
             $result = mysqli_query($conn, $query);
             if (mysqli_num_rows($result) > 0) {
-                echo "<span class='message-error'>Email is already exist in the system</span>";
+                echo "<span class='message-error'>email is already exist in the system</span>";
             } else {
                 $query = "INSERT INTO memberaccountrequests (
-                            Email,
+                            email,
                             FirstName,
                             LastName,
                             NameWithInitials,
@@ -61,4 +61,3 @@
             }
         }
     }
-    
