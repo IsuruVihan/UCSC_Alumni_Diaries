@@ -1,0 +1,85 @@
+#item-spent-record{
+    display: none;
+}
+.item-record-spent-records {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+table {
+    font-family: "Nunito", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #434343;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+td {
+    font-size: 0.8em;
+}
+
+.item-record-h-1 {
+    width: 17%;
+    text-align: justify;
+}
+
+.item-record-h-2 {
+    width: 32%;
+    text-align: justify;
+}
+
+.item-record-h-3 {
+    width: 17%;
+    text-align: justify;
+}
+
+.item-record-h-4 {
+    width: 17%;
+    text-align: justify;
+}
+
+.item-record-h-5 {
+    width: 17%;
+    text-align: justify;
+}
+
+.item-record-card-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.item-record-btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+}
+
+.item-record-filter-btn {
+    width: 32%;
+    margin-top: 0.5em;
+    background: white;
+    border: 1px solid black;
+    color: black;
+}

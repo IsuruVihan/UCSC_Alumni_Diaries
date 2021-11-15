@@ -1,0 +1,63 @@
+.general {
+    font-family: "Nunito", sans-serif;
+    padding: 10px;
+    height: 96%;
+    width: 98%;
+}
+
+.general-details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.general-label {
+    font-size: 0.9em;
+}
+
+.general-input {
+    height: 35px;
+    width: 100%;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.general-input:hover {
+    border-color: #ffccc7;
+}
+
+.general-text-area {
+    padding: 10px;
+    resize: none;
+    height: 13em;
+    font-weight: bold;
+}
+
+.general-notice {
+    color: #f5222d;
+    font-size: 0.9em;
+}
+
+.general-button {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+    background: gray;
+    border: none;
+}
+
+.general-cancel-btn:hover {
+    background: #f5222d;
+}
+
+.general-save-btn:hover {
+    background: #237804;
+}
