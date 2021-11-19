@@ -38,4 +38,5 @@
 </div>
 
 <script src='../js/my-account-iframe.js'></script>
+<script src='../js/my-account.js'></script>
 <?php include('../components/footer.php'); ?>
