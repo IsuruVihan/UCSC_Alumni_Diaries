@@ -7,6 +7,34 @@
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 	  <script src='../js/wall.js'></script>
 
+<script>
+	document.ready(()=>{
+	$('#create-notice').submit((event) =>{
+		event.preventDefault();
+
+
+
+		const title = $('#notice-title').val();
+		const fileUp = $('#myFile').val();
+		const noticeBody = $('#notice-body').val();
+		const endpoint = '../server/wall/important-notice/important-notice-create.php';
+
+//
+
+		const formData = new FormData ();
+
+		formData.append("fileup", fileUp.files[0]);
+
+		fetch(endpoint, {
+			method: "post",
+			body: formData
+		}).catch(console.error);
+
+		});
+		
+	});
+</script>
+
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> /
@@ -27,9 +55,9 @@
 			<div class="box-title">
 			    Create Important Notice
 			</div>
-			<form action="" id="create-notice">
+			<form action="../server/wall/important-notice/important-notice-create.php" id="create-notice">
 				<div class="row-1">
-					<input class='input-field-title' type='text' placeholder='Title'/>
+					<input class='input-field-title' id='notice-title' name='notice-title' type='text' placeholder='Title'/>
 					<p class="field-header"> date</p>
 				</div>
 				<div class="row-2">
@@ -38,10 +66,10 @@
 					Upload Picture</label>
 				</div>
 				<div class="row-3">
-				    <textarea class="create-notice-text" placeholder="Message"></textarea>
+				    <textarea class="create-notice-text" id='notice-body' name='notice-body' placeholder="Message"></textarea>
 				</div>
 				<div class="row-4">
-					<button class='filter-btn btn'>Create Notice</button>
+					<button class='filter-btn btn' id='create-notice' name='create-notice'>Create Notice</button>
 				</div>
 			</form>
 		</div>
