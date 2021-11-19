@@ -7,6 +7,18 @@
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>
+
+<script>
+    $(document).ready(() => {
+        $('#details-results').load("../../../server/projects/not-started-yet/render-list.php");
+    });
+</script>
+
 <div class='details'>
     <div class='details-section-3'>
         <div class='details-title'>
@@ -30,14 +42,14 @@
                 <button class='details-filter-btn details-btn'>Filter</button>
             </div>
         </div>
-        <div class='details-results'>
-            <div class='details-result' onmouseover=DisplayButtons('p-list-1') onmouseout=HideButtons('p-list-1')>
-                <p class='request-id'>ProjectId</p>
-                <p class='request-id'>ProjectName</p>
-                <div class='details-buttons' id='p-list-1'>
-                    <button class='details-view-btn details-btn'>View</button>
-                </div>
-            </div>
+        <div class='details-results' id='details-results'>
+<!--            <div class='details-result' onmouseover=DisplayButtons('p-list-1') onmouseout=HideButtons('p-list-1')>-->
+<!--                <p class='request-id'>ProjectId</p>-->
+<!--                <p class='request-id'>ProjectName</p>-->
+<!--                <div class='details-buttons' id='p-list-1'>-->
+<!--                    <button class='details-view-btn details-btn'>View</button>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
     <div class='details-section-1'>
