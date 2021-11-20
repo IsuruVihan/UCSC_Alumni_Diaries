@@ -847,3 +847,144 @@ body {
     /*justify-content: center;*/
     align-items: flex-start;
 }
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
+}
+
+.rules {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.rule-ok {
+    color: green;
+}
+
+.rule-no {
+    color: red;
+}
+/*reset password*/
+
+#form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container1 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+}
+
+.container2 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+}
+
+.input-field, .input-field2 {
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: white;
+    /*box-sizing: border-box;*/
+    font-size: 14px;
+    cursor: text;
+    color: #333;
+    height: 100%;
+    width: 100%;
+}
+
+.input-field1 input, .input-field2 input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    display: inline-block;
+    height: 100%;
+}
+
+.input-field1 input::placeholder,
+.input-field2 input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 700;
+}
+
+#error {
+    position: relative;
+    color: #f34e57;
+    text-align: left;
+    margin: 10px;
+}
+
+.btn-solid {
+    background: gray;
+    border: 1px solid gray;
+    height: 25px;
+    width: 30%;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-solid:hover {
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-msg{
+    height: 95%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #237804;
+}

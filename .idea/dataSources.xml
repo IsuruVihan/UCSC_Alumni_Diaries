@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://localhost:3306/UCSC_Alumni_Diaries</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="UCSC_Alumni" uuid="6926b0b2-1d6d-4c9a-8d54-b05dedcdbd22">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
