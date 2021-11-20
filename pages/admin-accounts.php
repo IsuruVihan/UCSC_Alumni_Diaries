@@ -523,6 +523,7 @@
                 <div class='address details-field'>Address</div>
             </div>
         </div>
+        
         <div class='iframe-nav-projectContribution'>
             <div class='contribution-iframe-link fontColorChange' target='iframe-2' id='contributions'
                      onclick="fontColorChanger()">
@@ -533,6 +534,7 @@
                 Projects
             </div>
         </div>
+
         <div class='iframe-display-projectContribution'>
             <div class='contributions' id='member-contribution'>
                 <div class='list'>

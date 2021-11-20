@@ -22,6 +22,7 @@
     margin-right: 6.7em;
     border-radius: 10px;
     background: #fafafa;
+    /* border: 1px solid red; */
 }
 
 .grid-title {
@@ -36,56 +37,89 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: [col1]1fr[col2] 1.5fr [col3] 2fr[col4] 3fr[col4];
-    grid-template-rows: [row1]0.4fr[row2] 0.25fr[row3];
-    grid-template-areas:'a-data a-details a-details  a-list ' 
-    'a-contribution a-contribution  a-involved-project a-list';
-    margin-bottom: 0;
+    grid-template-columns: [col1] 60% [col2] 40% [col3];
+    grid-template-rows: [row1] 100% [row2];
     padding: 5px;
-    gap: 10px;
+    height: 100vh;
+    /* border: 1px solid rgb(0, 68, 255); */
 }
+
+
 
 .account-details-container {
     box-shadow: 1px 2px 4px lightgray;
+    /* box-shadow: 1px 2px 4px rgb(7, 20, 204); */
     background: white;
     border-radius: 10px;
-    grid-area: a-data;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     padding: 0.8em 0;
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col1;
+    grid-column-end: col2;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .alumni-details-container {
     box-shadow: 1px 2px 4px lightgray;
+    /* box-shadow: 1px 2px 4px rgb(192, 36, 36); */
     background: white;
-    border-radius: 5px;
-    grid-area: a-details;
+    border-radius: 10px;
     padding: 0.8em;
     gap: 10px;
     display: flex;
     flex-direction: column;
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col2;
+    grid-column-end: col4;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.alumni-details-panel {
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col1;
+    grid-column-end: col2;
+    /* box-shadow: 1px 2px 4px lightgray; */
+    /* border-radius: 10px; */
+    margin-right: 5px;
+    display: grid;
+    grid-template-rows: [row1] 50% [row2] 50% [row3];
+    grid-template-columns: [col1] 25% [col2] 25% [col3] 50% [col4];
 }
 
 .r-alumni-list-container {
+    /* box-shadow: 1px 2px 4px rgb(216, 8, 8); */
     box-shadow: 1px 2px 4px lightgray;
     background: white;
-    grid-area: a-list;
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col2;
+    grid-column-end: col3;
     border-radius: 10px;
     padding: 0.8em 0;
-    height: 82%;
+    margin-left: 5px;
 }
 
 .contributions-container {
     box-shadow: 1px 2px 4px lightgray;
     background: white;
-    grid-area: a-contribution;
     padding: 0.8em;
     border-radius: 10px;
+    grid-row-start: row2;
+    grid-row-end: row3;
+    grid-column-start: col1;
+    grid-column-end: col3;
     display: flex;
     flex-direction: column;
-    height: 70%;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .contribution-box {
@@ -101,10 +135,14 @@
 .involved-projects-container {
     box-shadow: 1px 2px 4px lightgray;
     background: white;
-    grid-area: a-involved-project;
     padding: 0.8em;
     border-radius: 10px;
-    height: 70%;
+    grid-row-start: row2;
+    grid-row-end: row3;
+    grid-column-start: col3;
+    grid-column-end: col4;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .img-container {
@@ -187,11 +225,12 @@
     align-items: center;
     justify-content: center;
     color: gray;
+    height: 30px;
 }
 
 .full-name, .email, .gender, .batch, .address {
     width: 100%;
-    height: 30px;
+    /* height: 30px; */
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -200,7 +239,7 @@
 }
 
 .address {
-    height: 70px;
+    height: 90px;
 }
 
 .aldc-row1 {
@@ -210,7 +249,7 @@
 
 .first-name, .nic, .last-name, .contact-number {
     width: 50%;
-    height: 30px;
+    /* height: 30px; */
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -228,7 +267,7 @@
 
 .contribution-row1 {
     display: flex;
-    height: 25px;
+    height: 35px;
     justify-content: space-around;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -241,7 +280,7 @@
     display: flex;
     flex-direction: row;
     border: 1px solid lightgray;
-    height: 25px;
+    height: 35px;
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
@@ -254,7 +293,7 @@
     flex-direction: column;
     padding: 0.8em;
     border-radius: 5px;
-    height: 85%;
+    height: 81%;
     overflow-y: scroll;
 }
 
@@ -314,11 +353,12 @@
 
 .alumni-list-box {
     border: 1px solid lightgray;
+    /* border: 1px solid rgb(109, 5, 5); */
     display: flex;
     flex-direction: column;
     margin: 0.8em;
     border-radius: 5px;
-    height: 90%;
+    height: 40em;
     overflow-y: scroll;
 }
 
