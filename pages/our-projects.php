@@ -5,6 +5,21 @@
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
 <?php include('../components/header.php'); ?>
+<script>
+    $(document).ready(() => {
+        $('#projectList').load("../server/our-projects/render_list.php");
+
+   
+    });
+    const ViewProjectDetails = (id) => {
+        // $('#ProjectDetails').load("../server/our-projects/project-details.php", {
+        //     Id: id
+        // });
+        // alert("Hello! I am an alert box!!");
+    }    
+    
+
+</script>
 
 <div class='main-container'>
     <p class='breadcrumb'>
@@ -27,8 +42,8 @@
                 <button class='filter-btn btn'>Filter</button>
             </div>
         </div>
-        <div class='scroll'>
-            <div class='list' onmouseover="DisplayButtons('p-list-1')" onmouseout="HideButtons('p-list-1')">
+        <div class='scroll' id='projectList'>
+            <!-- <div class='list' onmouseover="DisplayButtons('p-list-1')" onmouseout="HideButtons('p-list-1')">
                 <p class='project-name'>Project Name</p>
                 <p class='project-name'>Timestamp</p>
                 <div class='buttons' id='p-list-1'>
@@ -103,19 +118,19 @@
                 <p class='project-name'>Timestamp</p>
                 <div class='buttons' id='p-list-11'>
                     <button class='view-btn btn'>View</button>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div>
             <div class='list' onmouseover="DisplayButtons('p-list-12')" onmouseout="HideButtons('p-list-12')">
                 <p class='project-name'>Project Name</p>
                 <p class='project-name'>Timestamp</p>
                 <div class='buttons' id='p-list-12'>
                     <button class='view-btn btn'>View</button>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </div>
     </div>
     <div class='card container02'>
-        <div class='sub-container'>
+        <div class='sub-container' id='ProjectDetails'>
             <div class='section-01'>
                 <div class='title'>
                     Project Name
@@ -207,5 +222,5 @@
         </div>
     </div>
 </div>
-
+<script src='../js/our-project.js'></script>
 <?php include('../components/footer.php'); ?>
