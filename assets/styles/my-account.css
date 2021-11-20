@@ -156,6 +156,8 @@ body {
     height: 30px;
     border: 1px solid lightgray;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
     text-align: center;
     align-items: center;
     margin-bottom: 5px;
