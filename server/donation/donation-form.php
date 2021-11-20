@@ -1,10 +1,13 @@
 <?php 
   include('../../db/db-conn.php');
 
-  $donor_name = $_POST['donor_name'];
-  $donor_mail = $_POST['donor_mail'];
-  $donor_amount = $_POST['donor_amount'];
- 
+//   $donorname = $_POST['donorname'];
+//   $donormail = $_POST['donormail'];
+//   $donoramount = $_POST['donoramount'];
+//   $donorfile = $_FILES['donorfile'];
+
+$targetPath = "'../../uploads/donations/'" . basename($_FILES['donorfile']['name']);
+move_uploaded_file($_FILES['donorfile']['tmp_name'], $targetPath);
 
   if (
       empty($donor_name)|| empty($donor_mail)||empty($donor_amount)

@@ -5,24 +5,39 @@
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
 <?php include('../components/header.php'); ?>
-<script t>
+<script >
     $(document).ready(()=>{
         $('#donation-cancel').click(() =>{
             $('#donor-name,#donor-mail,#donor-amount').removeClass('input-error,input-ok');
             $('#donor-name,#donor-mail,#donor-amount').val(''); 
         
         });
-            $('#donation-form').submit((event)=>{
-            event.preventDefault();
-            let isComplete = true;
 
-            const donor_name = $('#donor-name').val();
-            const donor_mail = $('#donor-mail').val();
-            const donor_amount = $('#donor-amount').val();
-            const donor_file = $('#donor-file').val();
-          
-          //file submission
-          
+            const donationform = document.getElementById("donationform");
+            const donorname = document.getElementById("donor-name");
+            const donormail = document.getElementById("donor-mail");
+            const donoramount = document.getElementById("donor-amount");
+            const donorfile = document.getElementById("donorfile");
+
+            donationform.addEventListener("#donation-submit", e => {
+                e.preventDefault();
+
+                const endpoint = "../server/donation/donation-form.php";
+                const formData = new FormData();
+
+                formData.append("donorname".val());
+                formData.append("donormail".val());
+                formData.append("donoramount".val());
+                formData.append("donorfile", donorfile.files[0]);
+
+                fetch(endpoint,{
+                    method:"post",
+                    body:fromData
+
+
+              
+              
+            });
 
             $('#donor-name,#donor-mail,#donor-amount').removeClass('input-error,input-ok');
 
@@ -50,10 +65,10 @@
                 $('#donor-name,#donor-mail,#donor-amount').removeClass('input-error,input-ok');
             }
             $('#donation-message').load("../server/donation/donation-form.php",{
-                donor_name: donor_name,
-                donor_mail: donor_mail,
-                donor_amount: donor_amount,
-                donor_file: donor_file,
+                donorname: donorname,
+                donormail: donormail,
+                donoramount: donoramount,
+                donorfile: donorfile,
             });
                 
         });
@@ -69,7 +84,7 @@
 </div>
 <div class='container'>
     <div class='card container-02'>
-        <form name='donation-form' id='donation-form' methos='post' enctype='multipart/form-data'>
+        <form name='donationform' id='donationform' methos='post' enctype='multipart/form-data'>
             <div class='box'>
                 <p> Proceed via pay here..</p>
             </div>
@@ -82,11 +97,11 @@
                     <label class='label'> Amount </label>
                     <input id='donor-amount' class='input-field' type='text' placeholder='Amount donating'/>
                     <label class='label'> Attachment </label>
-                    <input id='donor-file' class='slip-attachment' type='file' placeholder='Bank Slip Attachment'/>
+                    <input id='donorfile' class='slip-attachment' type='file' placeholder='Bank Slip Attachment'/>
                 </div>
                 <p id='donation-message'></p>
                 <div class='col-04'>
-                <input id='donation-submit' name='submit' type='submit' value='Submit' class='btn submit-btn'/>
+                <button id='donation-submit' name='submit' type='submit' value='Submit' class='btn submit-btn'/>Submit</button>
                 <input id='donation-cancel' type='button' value='Cancel' class='btn cancel-btn'/>
                 </div>
             </div>
