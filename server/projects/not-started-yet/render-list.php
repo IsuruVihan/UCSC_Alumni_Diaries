@@ -2,7 +2,7 @@
     
     include('../../../db/db-conn.php');
     
-    $query = "SELECT Id, Name FROM projects";
+    $query = "SELECT Id, Name FROM projects WHERE Status = 'NotStartedYet'";
     $results = mysqli_query($conn, $query);
     if (mysqli_num_rows($results) > 0) {
         while ($row = mysqli_fetch_assoc($results)) {

@@ -16,6 +16,23 @@
 <script>
     $(document).ready(() => {
         $('#details-results').load("../../../server/projects/not-started-yet/render-list.php");
+        $('#details-filter').submit((event) => {
+            event.preventDefault();
+            
+            const date1 = $('#filter-date1').val();
+            const date2 = $('#filter-date2').val();
+            const name = $('#filter-name').val();
+            const id = $('#filter-id').val();
+            const my = $('#filter-my').is(":checked");
+            
+            $('#details-results').load("../../../server/projects/not-started-yet/filter.php", {
+                Date1: date1,
+                Date2: date2,
+                Name: name,
+                Id: id,
+                My: my
+            });
+        });
     });
 </script>
 
@@ -24,24 +41,34 @@
         <div class='details-title'>
             Projects list
         </div>
-        <div class='details-filter'>
+        <form class='details-filter' id='details-filter'>
             <div class='details-col1'>
-                <input class='details-input-field details-date-field' type='date' placeholder='First Name'/>
+                <input class='details-input-field details-date-field' type='date' id='filter-date1'/>
                 to
-                <input class='details-input-field details-date-field' type='date' placeholder='Last Name'/>
+                <input class='details-input-field details-date-field' type='date' id='filter-date2'/>
             </div>
-            <div class='col3'>
-                <input class='details-input-field details-date-field' type='text' placeholder='Project Name'/>
-                <input class='details-input-field details-date-field' type='text' placeholder='Project Id'/>
+            <div class='details-col3'>
+                <input
+                    class='details-input-field details-date-field'
+                    type='text'
+                    placeholder='Project Name'
+                    id='filter-name'
+                />
+                <input
+                    class='details-input-field details-date-field'
+                    type='text'
+                    placeholder='Project Id'
+                    id='filter-id'
+                />
             </div>
             <div class='details-col2'>
                 <label>My Projects</label>
-                <input class='details-input-field' type='checkbox'>
+                <input class='details-input-field' type='checkbox' id='filter-my'>
             </div>
             <div class='details-col4'>
-                <button class='details-filter-btn details-btn'>Filter</button>
+                <input type='submit' class='details-filter-btn details-btn' value='Filter' />
             </div>
-        </div>
+        </form>
         <div class='details-results' id='details-results'>
 <!--            <div class='details-result' onmouseover=DisplayButtons('p-list-1') onmouseout=HideButtons('p-list-1')>-->
 <!--                <p class='request-id'>ProjectId</p>-->
@@ -88,14 +115,14 @@
         <div class='committee-members' id='committee-members'>
             <div class='committee-members-section-1'>
                 <a
-                        id='link-1'
-                        class='committee-members-iframe-link committee-members-clicked-link'
-                        onclick=ClickLinkCommittee('link-1')
+                    id='link-1'
+                    class='committee-members-iframe-link committee-members-clicked-link'
+                    onclick=ClickLinkCommittee('link-1')
                 >Committee</a>
                 <a
-                        id='link-2'
-                        class='committee-members-iframe-link'
-                        onclick=ClickLinkCommittee('link-2')
+                    id='link-2'
+                    class='committee-members-iframe-link'
+                    onclick=ClickLinkCommittee('link-2')
                 >Add member</a>
             </div>
             <div class='committee-members-section-2'>
