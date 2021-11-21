@@ -8,31 +8,62 @@
 	  <script src='../js/wall.js'></script>
 
 <script>
-	document.ready(()=>{
-	$('#create-notice').submit((event) =>{
-		event.preventDefault();
+
+    $(document).ready(() =>{
+        $('#form-sub').submit((event)=>{
+            event.preventDefault();
+            const url = '../server/wall/important-notice/important-notice-create.php';
+            const form = document.getElementById('form-sub');
+            const files = document.querySelector('[type=file]').files;
+            const formData = new FormData(document.getElementById('form-sub'));
+
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+            }).then((response) => {
+                console.log(response);
+            }).catch((error) => {
+                console.log(error);
+            });
+
+            const noticeTitle = $('#notice-title').val() ;
+            const noticeBody = $('#notice-body').val() ;
+            let isCompleteCreate = true;
+
+            $('#notice-title, #notice-body').removeClass('input-error,input-ok');
+
+            if(noticeTitle === ''){
+                $('#notice-title').addClass('input-error');
+                $('#notice-title').removeClass('input-ok');
+                isCompleteCreate =false;
+            } else{
+                $('#notice-title').addClass('input-ok');
+            }
+            if(noticeBody === ''){
+                $('#notice-body').addClass('input-error');
+                $('#notice-body').removeClass('input-ok');
+                isCompleteCreate =false;
+            }else{
+                $('#notice-body').addClass('input-ok');
+            }
+            if (isCompleteCreate){
+                $('#notice-body,#notice-title').val('');
+                $('#notice-body').removeClass('input-error');
+                $('#notice-title').removeClass('input-error');
+                $('#notice-body').removeClass('input-ok');
+                $('#notice-title').removeClass('input-ok');
+                $('#flash-message').html("Notice has been created");
+                $('#flash-message').addClass('message-success');
+                setTimeout(() =>{ location.reload(); }, 4000);
+            } else {
+                $('#flash-message').html("All Fields must be filled");
+                $('#flash-message').addClass('message-error');
+            }
+            setTimeout(() =>{ $('#flash-message').html(''); }, 4000);
+        });
+    });
 
 
-
-		const title = $('#notice-title').val();
-		const fileUp = $('#myFile').val();
-		const noticeBody = $('#notice-body').val();
-		const endpoint = '../server/wall/important-notice/important-notice-create.php';
-
-//
-
-		const formData = new FormData ();
-
-		formData.append("fileup", fileUp.files[0]);
-
-		fetch(endpoint, {
-			method: "post",
-			body: formData
-		}).catch(console.error);
-
-		});
-		
-	});
 </script>
 
 <div class='main-container'>
@@ -55,22 +86,22 @@
 			<div class="box-title">
 			    Create Important Notice
 			</div>
-			<form action="../server/wall/important-notice/important-notice-create.php" id="create-notice">
+			<form  id='form-sub' name='form-sub' method="post" enctype="multipart/form-data">
 				<div class="row-1">
 					<input class='input-field-title' id='notice-title' name='notice-title' type='text' placeholder='Title'/>
-					<p class="field-header"> date</p>
 				</div>
 				<div class="row-2">
 					<label for="myFile" class='filter-btn btn upload-btn'>
-					<input type="file" id="myFile" name="filename" hidden>
+					<input type="file" id="myFile"  name="files[]" multiple/ hidden>
 					Upload Picture</label>
 				</div>
 				<div class="row-3">
 				    <textarea class="create-notice-text" id='notice-body' name='notice-body' placeholder="Message"></textarea>
 				</div>
 				<div class="row-4">
-					<button class='filter-btn btn' id='create-notice' name='create-notice'>Create Notice</button>
+					<input type='submit' class='filter-btn btn' id='create-notice' value='Create Notice'/>
 				</div>
+				<span id='flash-message' class='flashMsg'></span>
 			</form>
 		</div>
 		

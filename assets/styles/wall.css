@@ -842,3 +842,27 @@
 .comments-row > .box-title {
     margin-left: 21em;
 }
+
+.input-error {
+    border: 1px solid #f5222d !important;
+  }
+  
+  .input-ok {
+    border: 1px solid #237804 !important;
+  }
+  
+  .message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+  }
+  
+  .message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
+  }
+  .flashMsg{
+      display: flex;
+      justify-content: center;
+      font-weight: 400;
+      font-size: 0.8em;
+  }

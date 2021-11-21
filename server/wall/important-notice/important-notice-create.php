@@ -1,18 +1,52 @@
-<?php 
-    include ('../../../db/db-conn.php');
+<?php
+include('../../../db/db-conn.php');
 
-//    if(isset ($_POST['create-notice'])){
-//        $title = $_POST['notice-title'];
-//        $body = $POST['notice-body'];
-//        $file = $_FILES['filename'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_FILES['files'])) {
+        $errors = [];
+        $path = '../../../uploads/wall/important-notice/';
+        $extensions = ['jpg', 'jpeg', 'png', 'gif'];
 
-//        if(empty($title) ||empty($body) ){
-//           echo' <span> Title & notice is required</span>';
-//        }
+        $all_files = count($_FILES['files']['tmp_name']);
 
-//    }
+        for ($i = 0; $i < $all_files; $i++) {
+            $file_name = $_FILES['files']['name'][$i];
+            $file_tmp = $_FILES['files']['tmp_name'][$i];
+            $file_type = $_FILES['files']['type'][$i];
+            $file_size = $_FILES['files']['size'][$i];
+            $file_ext = strtolower(end(explode('.', $_FILES['files']['name'][$i])));
 
-    $targetPath = "../../../../uploads/wall/important-notice" .basename($_FILES['filename']['name']);
-    move_uploaded_file($_FILES['filename']['tmp_name'],$targetPath);
+            $fileNameNew = uniqid('', true) . "." . $file_ext;
+            $file = $path . $fileNameNew;
 
-?>
+            if (!in_array($file_ext, $extensions)) {
+                $errors[] = 'Extension not allowed: ' . $file_name . ' ' . $file_type;
+            }
+
+            if ($file_size > 2097152) {
+                $errors[] = 'File size exceeds limit: ' . $file_name . ' ' . $file_type;
+            }
+
+            if (empty($errors)) {
+                move_uploaded_file($file_tmp, $file);
+            }
+        }
+        if ($errors) print_r($errors);
+    }
+
+    $noticeTitle = $_POST['notice-title'];
+    $noticeBody = $_POST['notice-body'];
+    $ownerEmail = $_SESSION["Email"];
+
+    if (!empty($noticeTitle) && !empty($noticeBody) && empty($file_name)) {
+        $query = "INSERT INTO posts (OwnerEmail,Content , isImportant,Title) VALUES ('$ownerEmail','$noticeBody','1','$noticeTitle')";
+        $result = mysqli_query($conn, $query);
+    }
+
+    if (!empty($noticeTitle) && !empty($noticeBody) && !empty($file_name)) {
+        $query = "INSERT INTO posts (OwnerEmail,Content ,PicSrc, isImportant,Title) VALUES ('$ownerEmail','$noticeBody','$file','1','$noticeTitle')";
+        $result = mysqli_query($conn, $query);
+    }
+
+
+}
