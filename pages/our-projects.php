@@ -12,10 +12,10 @@
    
     });
     const ViewProjectDetails = (id) => {
-        // $('#ProjectDetails').load("../server/our-projects/project-details.php", {
-        //     Id: id
-        // });
-        // alert("Hello! I am an alert box!!");
+        $('#ProjectDetails').load("../server/our-projects/project-details.php", {
+            Id: id
+        });
+       
     }    
     
 
@@ -131,7 +131,7 @@
     </div>
     <div class='card container02'>
         <div class='sub-container' id='ProjectDetails'>
-            <div class='section-01'>
+            <!-- <div class='section-01'>
                 <div class='title'>
                     Project Name
                 </div>
@@ -201,7 +201,7 @@
                 </div>
                 <div class='container-02'>
                     <p class='project-name'>Donate via pay here</p>
-                    <!-- <button class='pay-btn btn'>Pay here</button>   -->
+                    <button class='pay-btn btn'>Pay here</button>  
                 </div>
                 <div class='container-03'>
                     <div class='title'>
@@ -219,7 +219,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <script src='../js/our-project.js'></script>
