@@ -92,7 +92,7 @@
 				</div>
 				<div class="row-2">
 					<label for="myFile" class='filter-btn btn upload-btn'>
-					<input type="file" id="myFile"  name="files[]" multiple/ hidden>
+					<input type="file" id="myFile"  name="files[]" onchange="return fileValidation()" multiple/ hidden>
 					Upload Picture</label>
 				</div>
 				<div class="row-3">

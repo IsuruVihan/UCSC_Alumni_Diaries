@@ -50,3 +50,18 @@ const ShowEditNotice = () => {
 const HideEditNotice = () => {
     document.getElementById('edit-notice-box').style.display = "none";
 }
+
+const fileValidation = () => {
+    const fileInput = document.getElementById('myFile');
+    const filePath = fileInput.value;
+
+    // Allowing file type
+    const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+    if (!allowedExtensions.exec(filePath)) {
+        document.getElementById('flash-message').classList.add('message-error');
+        document.getElementById('flash-message').innerHTML = "Invalid File Type";
+        fileInput.value = '';
+        return false;
+    }
+}
