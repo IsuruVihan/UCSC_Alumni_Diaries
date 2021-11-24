@@ -121,12 +121,19 @@ body {
     transition: all ease-in-out 0.1s;
 }
 
-.remove-pic-btn, .edit-pic-btn {
+.edit-pic-btn, .save-pic-btn {
     width: 100%;
     margin-top: 0.3em;
     background: gray;
     border: 1px solid gray;
-    height: 40px;
+    height: 26.5px;
+}
+
+.remove-pic-btn{
+    width: 100%;
+    background: gray;
+    border: 1px solid gray;
+    height: 27px;
 }
 
 .edit-details-btn {
@@ -144,6 +151,11 @@ body {
 .remove-pic-btn:hover {
     background: #f5222d;
     border-color: #f5222d;
+}
+
+.save-pic-btn:hover {
+    background: #237804;
+    border-color: #237804;
 }
 
 .edit-details-btn:hover {
@@ -238,6 +250,7 @@ body {
     height: 20px;
     border: none;
     border-radius: 5px;
+    font-weight: 700;
     text-align: left;
     align-items: center;
     width: 100%;
@@ -989,4 +1002,118 @@ body {
     justify-content: center;
     align-items: center;
     color: #237804;
+}
+
+
+.input-error1 {
+    border: 1px solid #f5222d !important;
+    border-radius: 5px;
+    height: 97px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 14px;
+    resize: none;
+}
+
+.input-error2 {
+    border: 1px solid #f5222d !important;
+    border-radius: 5px;
+    height: 32px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+    color: black;
+}
+
+.input-ok1 {
+    border: 1px solid #237804 !important;
+    height: 97px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 14px;
+    resize: none;
+
+}
+
+.input-ok2 {
+    border: 1px solid #237804 !important;
+    height: 32px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+    color: black;
+}
+
+.message-error {
+    color: #f5222d !important;
+    width: 100%;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
+}
+
+.file-upload-btn {
+    display: none;
+}
+
+.pic-upload {
+    width: 100%;
+    display: inline-flex;
+    border-radius: 5px;
+    background: gray;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9em;
+    height: 25px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pic-upload1 {
+    width: 100%;
+    display: inline-flex;
+    border-radius: 5px;
+    background: gray;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9em;
+    height: 25px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pic-upload:hover {
+    background: #fa8c16;
+    border: 1px #fa8c16;
+}
+
+.profile-pic-form {
+    padding: 0;
+}
+
+.photo-submit {
+    width: 100% !important;
+}
+
+.flash-message {
+    width: 100%;
 }

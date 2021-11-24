@@ -19,52 +19,50 @@
             $('#user-address, #user-contact').removeClass();
 
             if (address === '') {
-                $('#user-address').addClass('input-error');
+                $('#user-address').addClass('input-error1');
             } else {
-                $('#user-address').addClass('input-ok');
+                $('#user-address').addClass('input-ok1');
             }
             if (contact === '') {
-                $('#user-contact').addClass('input-error');
+                $('#user-contact').addClass('input-error2');
             } else {
-                $('#user-contact').addClass('input-ok');
+                $('#user-contact').addClass('input-ok2');
             }
 
-            $('#flash-message').load("../../server/my-account/account-details-backend.php", {
-                address: address,
-                contact: contact
-            }, (response) => {
+            $('#flash-message').load("../../server/my-account/account-details-backend.php",
+            (response) => {
                 if (response==="1") {
                     setTimeout(() => window.history.go(), 1);
                 }
             });
         });
-    });
+    }
 </script>
 
-<div class='my-account-main-container'>
-    <div class='pic-section'>
+<div class='my-account-main-container' id='my-account-main-container'>
+    <div class='pic-section' id='pic-section'>
         <div class='section-1'>
-            <img src="<?php echo "${_SESSION['PicSrc']}" ?>" width='99%' class='user-pic' alt='user-pic'/>
-            <form
-                    action='../../server/my-account/account-details-backend.php'
-                    method='post'
-                    id='suggestion-form'
-                    enctype='multipart/form-data'
-                    class='profile-pic-form'
-            >
-                <label class='pic-upload'>
-                    <input class='edit-pic-btn btn' type='file' id='new-photo' name='new-photo'/>
+            <?php
+                if ($_SESSION['PicSrc'] === 'user-default.png') {
+                    echo "
+                        <img src='../../assets/images/{$_SESSION['PicSrc']}' width='99%' class='user-pic' alt='user-pic'/>
+                    ";
+                } else {
+                    echo "
+                        <img src='../../uploads/profile-pics/{$_SESSION['PicSrc']}' width='99%' class='user-pic' alt='user-pic'/>
+                    ";
+                }
+            ?>
+            <form id="form1" action='../../server/my-account/edit-photo.php' method="post" enctype="multipart/form-data">
+                <label class="pic-upload">
+                    <input type="file" value="Edit Photo" name="new-photo" id="new-photo" class="file-upload-btn btn">
                     Edit Photo
                 </label>
-                <input type='reset' value='Remove Photo' class='remove-pic-btn btn'>
-                <input
-                        type='submit'
-                        value='Save'
-                        class='submit-btn btn photo-submit'
-                        name='change-pic-submit'
-                        id='change-pic-submit'
-                >
+                <button type="submit" name="change-pic-submit" onclick=submitPhoto() id="change-pic-submit" class="save-pic-btn btn">Submit</button>
             </form>
+            <label class="pic-upload1">
+                <button class="remove-pic-btn btn" id="remove-pic" onclick=removePhoto()> Remove Photo</button>
+            </label>
         </div>
         <div class='section-2'>
             <?php echo "${_SESSION['AccType']}"; ?>
@@ -72,7 +70,7 @@
     </div>
     <div class='account-details'>
         <div class='title'>
-            Account Details.k
+            Account Details
         </div>
         <div class='container-1' id='container-1'>
             <div class='container-3'>
@@ -198,4 +196,9 @@
     </div>
 </div>    
 
+<script>
+    const removePhoto = () => {
+        $('#pic-section').load("../../server/my-account/remove-photo.php");
+    }
+</script>
 <script src='../../js/my-account.js'></script>
