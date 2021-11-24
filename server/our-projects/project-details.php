@@ -25,16 +25,17 @@ while($row = mysqli_fetch_assoc($result)){
                 <div class='text'>
                     Cordinator : 
     ";
-    
     if (mysqli_num_rows($results2) > 0) {
         while ($row2 = mysqli_fetch_assoc($results2)) {
             if ($row2['Type'] == 'Coordinator') {
                 // $query3 = "SELECT FirstName, LastName FROM registeredmembers WHERE Email = {$row2['Email']}";
-                $query3=" SELECT  registeredmembers.FirstName, registeredmembers.LastName
-                        FROM registeredmembers
-                        INNER JOIN committeemembers ON registeredmembers.Email = committeemembers.Email";
+                $query3=" SELECT  registeredmembers.FirstName, registeredmembers.LastName, committeemembers.Type
+                          FROM    committeemembers
+                          INNER JOIN registeredmembers  ON registeredmembers.Email = committeemembers.Email
+                          WHERE ProjectId = {$Id}
+                          AND  committeemembers.Type = 'Coordinator' ";
                 $results3 = mysqli_query($conn, $query3);
-                // echo mysqli_num_rows($results3);
+                
                 if (mysqli_num_rows($results3) > 0) {
                     while ($row3 = mysqli_fetch_assoc($results3)) {
                         echo "{$row3['FirstName']} {$row3['LastName']}";
@@ -52,13 +53,33 @@ while($row = mysqli_fetch_assoc($result)){
         </div>
         <div class='project-description'>
             {$row['Description']}
-        </div>
+        </div>";
+        echo "   
         <div class='scroll-02'>
-            <div class='list-01'>
-                <p class='project-name'>Member 01</p>
-            </div>
+        ";
+  
+        $query4=" SELECT  registeredmembers.FirstName, registeredmembers.LastName, committeemembers.Type
+        FROM    committeemembers
+        INNER JOIN registeredmembers  ON registeredmembers.Email = committeemembers.Email
+        WHERE ProjectId = {$Id}
+        AND  committeemembers.Type = 'Member' ";
+
+       $results4 = mysqli_query($conn, $query4);
+
+    if (mysqli_num_rows($results3) > 0) {
+        while ($row4 = mysqli_fetch_assoc($results4)) {
+    //   echo "{$row4['FirstName']} {$row4['LastName']}";
+   
+    echo "  <div class='list-01'>
+            <p class='project-name'>Member :{$row4['FirstName']} {$row4['LastName']}</p>
+            </div>";
+    }
+}
+echo" 
         </div>
     </div>
+  ";
+    echo "    
     <div class=' section-02'>
         <div class='container-01'>
             <div class='title'>

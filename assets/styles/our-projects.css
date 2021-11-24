@@ -258,7 +258,7 @@
   grid-row-end: row3;
   margin-right: 5px;
   gap: 10px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .sub-container {

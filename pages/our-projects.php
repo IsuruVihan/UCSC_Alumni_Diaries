@@ -218,8 +218,8 @@
                         <button class='cancel-btn btn'>Cancel</button>
                     </div>
                 </div>
-            </div>
-        </div> -->
+            </div> -->
+        </div>
     </div>
 </div>
 <script src='../js/our-project.js'></script>

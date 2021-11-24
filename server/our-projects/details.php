@@ -1,13 +1,16 @@
 <?php 
 include('../../db/db-conn.php');
 
+$Id = $_POST['Id'];
 // $query = "SELECT * FROM projects";
-$query="SELECT projects.Name, committeemembers.Email, projects.Id, projects.Description, projects.Timestamp
-        FROM projects
-        INNER JOIN committeemembers ON projects.Id=committeemembers.ProjectId
-        
-
-";
+$query=" SELECT projects.Name, projects.Timestamp, projects.Description,
+                Geeks3.Asset, Geeks1.FirstName, 
+                Geeks2.LastName  
+        FROM Geeks3
+        LEFT JOIN Geeks1 
+        ON Geeks3.GID = Geeks1.ID
+        LEFT JOIN Geeks2 
+        ON Geeks3.GID = Geeks2.ID  ";
 
 $result = mysqli_query($conn, $query);
 
@@ -33,7 +36,7 @@ while($row = mysqli_fetch_assoc($result)){
         </div>
     </div>
     <div class='project-description'>
-       {$row['Description']}
+       {$row['projects.Description']}
     </div>
     <div class='scroll-02'>
         <div class='list-01'>
