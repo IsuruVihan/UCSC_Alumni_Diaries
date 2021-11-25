@@ -41,7 +41,10 @@
                 >
                     <p class='request-id'>{$row['Name']}</p>
                     <div class='details-buttons' id='p-list-{$row['Id']}'>
-                        <button class='details-view-btn details-btn'>View</button>
+                        <button
+                            class='details-view-btn details-btn'
+                            onclick=ViewProjectDetails('{$row['Id']}')
+                        >View</button>
                     </div>
                 </div>
             ";
