@@ -61,6 +61,9 @@
             }
             setTimeout(() =>{ $('#flash-message').html(''); }, 4000);
         });
+
+        $('#create-notice-render').load("../server/wall/important-notice/important-notice-render.php");
+
     });
 
 
@@ -106,29 +109,27 @@
 		</div>
 		
 		<!--notices -->
-		<div class='notice-box'>
-			<div id='create-notice'>
-				<div class='row-1 row-1-gap'>
-					<div class='input-field-title'></div>
-					<div class='field-header'> </div>
-				</div>
-				<div class='image-box-notice'>
-					<img src='' alt='' >
-				</div>
-				<div class='notice-content'>
-				
-				</div>
-				<div class='row-4'>
-					<div class='star-div-off' id='star-div-off'>Star
-						<i class='fa fa-star' onclick= ' MarkAsStarred() '></i>
-					</div>
-					<div class='star-div-on' id='star-div-on'>Star
-						<i class='fa fa-star' onclick= ' MarkAsStarred() '></i>
-					</div>
-					<button class='filter-btn btn edit-btn' onclick='ShowEditNotice()'>Edit </button>
-					<button class='filter-btn btn dlt-btn'>Delete </button>
-				</div>
-			</div>
+		<div  id='create-notice-render'>
+<!--            <div class='row-1 row-1-gap'>-->
+<!--                <div class='input-field-title' id='notice-title'></div>-->
+<!--                <div class='field-header' id='notice-timestamp'></div>-->
+<!--            </div>-->
+<!--            <div class='image-box-notice' id='image-box-notice'>-->
+<!--                <img src='' alt=''>-->
+<!--            </div>-->
+<!--            <div class='notice-content' id='notice-content'>-->
+<!---->
+<!--            </div>-->
+<!--            <div class='row-4'>-->
+<!--                <div class='star-div-off' id='star-div-off'>Star-->
+<!--                    <i class='fa fa-star' onclick=' MarkAsStarred() '></i>-->
+<!--                </div>-->
+<!--                <div class='star-div-on' id='star-div-on'>Star-->
+<!--                    <i class='fa fa-star' onclick=' MarkAsStarred() '></i>-->
+<!--                </div>-->
+<!--                <button class='filter-btn btn edit-btn' id='edit-notice' onclick='ShowEditNotice()'>Edit</button>-->
+<!--                <button class='filter-btn btn dlt-btn' id='delete-notice'>Delete</button>-->
+<!--            </div>-->
 		</div>
 
 		<!--Edit important notices -->

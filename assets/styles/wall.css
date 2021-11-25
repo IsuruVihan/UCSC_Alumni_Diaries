@@ -188,9 +188,11 @@
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray;
+
     font-family: "Nunito", serif;
     margin: 0 0.8em;
+    display: flex;
+    justify-content: center;
 }
 
 .input-field-title:hover, .field-header:hover, .create-notice-text:hover, .create-post-title:hover,
@@ -226,6 +228,8 @@
     height: 10em;
     margin: 0 0.8em;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 .star-div-off {
