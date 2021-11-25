@@ -54,7 +54,7 @@
                 $('#notice-title').removeClass('input-ok');
                 $('#flash-message').html("Notice has been created");
                 $('#flash-message').addClass('message-success');
-                setTimeout(() =>{ location.reload(); }, 4000);
+                setTimeout(() =>{ location.reload(); }, 2000);
             } else {
                 $('#flash-message').html("All Fields must be filled");
                 $('#flash-message').addClass('message-error');
@@ -91,7 +91,7 @@
 			</div>
 			<form  id='form-sub' name='form-sub' method="post" enctype="multipart/form-data">
 				<div class="row-1">
-					<input class='input-field-title' id='notice-title' name='notice-title' type='text' placeholder='Title'/>
+					<input class='input-field-title ' id='notice-title' name='notice-title' type='text' placeholder='Title'/>
 				</div>
 				<div class="row-2">
 					<label for="myFile" class='filter-btn btn upload-btn'>

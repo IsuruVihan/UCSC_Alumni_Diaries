@@ -175,11 +175,20 @@
 }
 
 .field-header {
-    border: 1px solid lightgray;
-    color: gray;
+    /*border: 1px solid lightgray;*/
+    /*color: gray;*/
     margin: 0 0.8em;
     border-radius: 5px;
     width: 50%;
+
+}
+.notice-timestamp{
+    font-size: 10px;
+    display: flex;
+    justify-content:flex-end;
+    margin: 0 0.8em;
+    border-radius: 5px;
+
 }
 
 .input-field-title {
@@ -192,7 +201,14 @@
     font-family: "Nunito", serif;
     margin: 0 0.8em;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
+}
+
+.notice-title{
+    border: none;
+    display: flex;
+    justify-content:center;
+    font-weight: 600;
 }
 
 .input-field-title:hover, .field-header:hover, .create-notice-text:hover, .create-post-title:hover,
@@ -224,12 +240,14 @@
 }
 
 .notice-content {
-    border: 1px solid lightgray;
-    height: 10em;
+    min-height: 100%;
     margin: 0 0.8em;
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    font-size: 0.9em;
+    text-align: justify;
+    word-wrap: break-word;
 }
 
 .star-div-off {
@@ -271,13 +289,16 @@
 
 .image-box-notice {
     background: white;
-    border: 1px solid lightgray;
+    /*border: 1px solid lightgray;*/
     border-radius: 5px;
     color: gray;
-    height: 100px;
-    width: 100px;
-    align-items: center;
-    margin: 0.8em 120px;
+    height:auto;
+    min-width: 100%;
+}
+
+.img-wrapBox{
+    display: flex;
+    padding: 0.8em;
 }
 
 .box-row {
