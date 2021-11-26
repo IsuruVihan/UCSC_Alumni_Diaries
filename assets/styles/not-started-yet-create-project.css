@@ -68,20 +68,16 @@
     border: 1px solid #237804 !important;
 }
 
-.message-error {
+.error-message {
     color: #f5222d !important;
     font-weight: 600;
 }
 
-.message-success {
+.success-message {
     color: #237804 !important;
     font-weight: 600 !important;
 }
 
-/*.btn {*/
-/*    cursor: pointer;*/
-/*    border-radius: 5px;*/
-/*    color: white;*/
-/*    transition: all ease-in-out 0.1s;*/
-/*    height: 25px;*/
-/*}*/
+.message-container {
+    padding-left: 0.6em
+}

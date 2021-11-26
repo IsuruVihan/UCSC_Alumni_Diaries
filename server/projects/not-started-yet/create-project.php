@@ -2,15 +2,15 @@
     
     include('../../../db/db-conn.php');
     
-    $Name = preg_replace('/\s+/', '', trim($_POST['Name']));
-    $Description = preg_replace('/\s+/', '', trim($_POST['Description']));
+    $Name = trim($_POST['Name']);
+    $Description = trim($_POST['Description']);
     
     if (empty($Name) || empty($Description)) {
         echo "<div class='error-message'>All fields are required</div>";
     } else {
-        $query = "SELECT id FROM projects WHERE Name={$Name}";
-        $result = mysqli_query($conn, $query);
-        if (($result) > 0) {
+        $query = "SELECT Id FROM projects WHERE Name='{$Name}'";
+        $results = mysqli_query($conn, $query);
+        if (mysqli_num_rows($results) > 0) {
             echo "<div class='error-message'>Project already exist with this name</div>";
         } else {
             $query2 = "

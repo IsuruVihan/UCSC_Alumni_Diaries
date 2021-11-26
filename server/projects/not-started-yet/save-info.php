@@ -9,7 +9,7 @@
     if (empty($Name) || empty($Description)) {
         echo "<span class='message-error'>All fields are required</span>";
     } else {
-        $query = "SELECT Id FROM projects WHERE Name='{$Name}'";
+        $query = "SELECT Id FROM projects WHERE Name='{$Name}' AND Id!='{$Id}'";
         $results = mysqli_query($conn, $query);
         if (mysqli_num_rows($results) > 0) {
             echo "

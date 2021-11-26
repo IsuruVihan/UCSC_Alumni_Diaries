@@ -46,14 +46,7 @@
     });
 </script>
 
-<div id='message-container'>
-<!--        <div class='error-message'>-->
-<!--            Hello World-->
-<!--        </div>-->
-<!--        <div class='success-message'>-->
-<!--            Hello World-->
-<!--        </div>-->
-</div>
+<div id='message-container' class='message-container'></div>
 <div class='create-project'>
     <form class='create-project-form' id='create-project-form'>
         <label for='p-name' class='label'>Project name</label>
