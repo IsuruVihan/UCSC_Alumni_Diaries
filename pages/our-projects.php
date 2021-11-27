@@ -8,7 +8,15 @@
 <script>
     $(document).ready(() => {
         $('#projectList').load("../server/our-projects/render_list.php");
-
+        $('#filter_projects').submit((event) =>{
+            event.preventDefault();
+            const start_date = $('#start_date').val();
+            const end_date =$('#end_date').val();
+            $('#projectList').load("../server/our-projects/filter.php",{
+                Start_Date: start_date,
+                End_Date: end_date
+            });
+        });
    
     });
     const ViewProjectDetails = (id) => {
@@ -32,16 +40,16 @@
 </div>
 <div class='our-projects'>
     <div class='card container01'>
-        <div class='filter'>
+        <form class='filter' id='filter_projects'>
             <div class='col01'>
-                <input class='input-field date-field' type='date' placeholder='Start Date'/>
+                <input class='input-field date-field' type='date' placeholder='Start Date' id='start_date'/>
                 to
-                <input class='input-field date-field' type='date' placeholder='End Date'/>
+                <input class='input-field date-field' type='date' placeholder='End Date'  id='end_date'/>
             </div>
             <div class='col02'>
-                <button class='filter-btn btn'>Filter</button>
+                <input type='submit' class='filter-btn btn' value='Filter'></input>
             </div>
-        </div>
+        </form>
         <div class='scroll' id='projectList'>
             <!-- <div class='list' onmouseover="DisplayButtons('p-list-1')" onmouseout="HideButtons('p-list-1')">
                 <p class='project-name'>Project Name</p>
@@ -131,7 +139,7 @@
     </div>
     <div class='card container02'>
         <div class='sub-container' id='ProjectDetails'>
-            <!-- <div class='section-01'>
+            <div class='section-01'>
                 <div class='title'>
                     Project Name
                 </div>
@@ -154,7 +162,7 @@
                     Project Description Comes here....
                 </div>
                 <div class='scroll-02'>
-                    <div class='list-01'>
+                    <!-- <div class='list-01'>
                         <p class='project-name'>Member 01</p>
                     </div>
                     <div class='list-01'>
@@ -180,7 +188,7 @@
                     </div>
                     <div class='list-01'>
                         <p class='project-name'>Member 09</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class=' section-02'>
@@ -218,7 +226,7 @@
                         <button class='cancel-btn btn'>Cancel</button>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>
