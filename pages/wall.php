@@ -63,8 +63,11 @@
         });
 
         $('#create-notice-render').load("../server/wall/important-notice/important-notice-render.php");
-
     });
+
+    const EditNotice = (id) =>{
+        alert(id);
+    }
 
 
 </script>
@@ -133,29 +136,29 @@
 		</div>
 
 		<!--Edit important notices -->
-		<div class='edit-notice-box' id='edit-notice-box'>
-			<div class='box-title'>
-			Edit Important Notice
-			</div>
-			<div id='create-notice'>
-				<div class='row-1'>
-					<input class='input-field-title' type='text' placeholder='Title'/>
-					<p class="field-header"> date</p>
-				</div>
-				<div class='row-2'>
-					<label for='myFile' class='filter-btn btn upload-btn'>
-					<input type='file' id='myFile' name='filename' hidden>
-					Edit Upload</label>
-				</div>
-				<div class='row-3'>
-				    <textarea class='create-notice-text' placeholder='Edit Message'></textarea>
-				</div>
-				<div class='row-4'>
-					<button class='filter-btn btn'>Edit Notice</button>
-					<button class='filter-btn btn' onclick='HideEditNotice ()' >Cancel</button>
-				</div>
-			</div>
-		</div>
+<!--		<div class='edit-notice-box' id='edit-notice-box'>-->
+<!--			<div class='box-title'>-->
+<!--			Edit Important Notice-->
+<!--			</div>-->
+<!--			<div id='create-notice'>-->
+<!--				<div class='row-1'>-->
+<!--					<input class='input-field-title' type='text' placeholder='Title'/>-->
+<!--					<p class="field-header"> date</p>-->
+<!--				</div>-->
+<!--				<div class='row-2'>-->
+<!--					<label for='myFile' class='filter-btn btn upload-btn'>-->
+<!--					<input type='file' id='myFile' name='filename' hidden>-->
+<!--					Edit Upload</label>-->
+<!--				</div>-->
+<!--				<div class='row-3'>-->
+<!--				    <textarea class='create-notice-text' placeholder='Edit Message'></textarea>-->
+<!--				</div>-->
+<!--				<div class='row-4'>-->
+<!--					<button class='filter-btn btn'>Edit Notice</button>-->
+<!--					<button class='filter-btn btn' onclick='HideEditNotice ()' >Cancel</button>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
 	</div>
  
 	<!--Common wall -->

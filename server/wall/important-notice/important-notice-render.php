@@ -1,7 +1,7 @@
 <?php
 include('../../../db/db-conn.php');
 
-$query = "SELECT Title, Content,PicSrc,OwnerEmail,Timestamp FROM posts ORDER by Timestamp DESC";
+$query = "SELECT Title, Content,PicSrc,OwnerEmail,Timestamp,Id FROM posts ORDER by Timestamp DESC";
 $results = mysqli_query($conn,$query);
 
 if (mysqli_num_rows($results) > 0) {
@@ -14,7 +14,7 @@ if (mysqli_num_rows($results) > 0) {
         if(!empty($pic)){
         echo
         "   
-             <div class='notice-box' id='render-notice-{$row['OwnerEmail']}'>
+             <div class='notice-box' id='render-notice-{$row['Id']}'>
                   <div class='row-1 row-1-gap'>
                         <div class='input-field-title notice-title' id='notice-title'> {$row['Title']} </div>                      
                   </div>      
@@ -32,15 +32,15 @@ if (mysqli_num_rows($results) > 0) {
                         <div class='star-div-on' id='star-div-on'>Star
                             <i class='fa fa-star' onclick=' MarkAsStarred() '></i>
                         </div>
-                        <button class='filter-btn btn edit-btn' id='edit-notice-{$row['OwnerEmail']}' onclick='ShowEditNotice()'>Edit</button>
-                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['OwnerEmail']}'>Delete</button>
+                        <button class='filter-btn btn edit-btn' id='edit-notice-{$row['Id']}' onclick=EditNotice('{$row['Id']}') >Edit</button>
+                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}'>Delete</button>
                    </div>
             </div>";}
 
         else{
             echo
             " 
-             <div class='notice-box' id='render-notice-{$row['OwnerEmail']}'>
+             <div class='notice-box' id='render-notice-{$row['Id']}'>
                   <div class='row-1 row-1-gap'>
                         <div class='input-field-title notice-title' id='notice-title'> {$row['Title']} </div>
                         
@@ -58,8 +58,8 @@ if (mysqli_num_rows($results) > 0) {
                         <div class='star-div-on' id='star-div-on'>Star
                             <i class='fa fa-star' onclick=' MarkAsStarred() '></i>
                         </div>
-                        <button class='filter-btn btn edit-btn' id='edit-notice-{$row['OwnerEmail']}' onclick='ShowEditNotice()'>Edit</button>
-                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['OwnerEmail']}'>Delete</button>
+                        <button class='filter-btn btn edit-btn' id='edit-notice-{$row['Id']}'  onclick=EditNotice('{$row['Id']}'>Edit</button>
+                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}'>Delete</button>
                   </div>
                    
             </div>";
