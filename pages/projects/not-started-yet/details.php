@@ -137,6 +137,32 @@
             Batch: Batch
         });
     }
+    
+    const FilterAvailableMembers = () => {
+        const FirstName = $('#filter2-first-name').val();
+        const LastName = $('#filter2-last-name').val();
+        const Batch = $('#filter2-batch').val();
+
+        $('#available-members-for-committee')
+            .load('../../../server/projects/not-started-yet/filter-available-members.php', {
+            FirstName: FirstName,
+            LastName: LastName,
+            Batch: Batch
+        });
+    }
+
+    const FilterAvailableMembers2 = () => {
+        const FirstName = $('#filter3-first-name').val();
+        const LastName = $('#filter3-last-name').val();
+        const Batch = $('#filter3-batch').val();
+        
+        $('#available-members-for-coordinator')
+            .load('../../../server/projects/not-started-yet/filter-available-members2.php', {
+            FirstName: FirstName,
+            LastName: LastName,
+            Batch: Batch
+        });
+    }
 </script>
 
 <div class='details'>

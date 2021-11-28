@@ -13,6 +13,10 @@
     $query4 = "SELECT Email FROM committeemembers WHERE ProjectId='{$Id}' AND Type='Coordinator'";
     $results4 = mysqli_query($conn, $query4);
     
+    $query6 = "SELECT Email, FirstName, LastName, Batch FROM registeredmembers WHERE Availability='1'";
+    $results6 = mysqli_query($conn, $query6);
+    $results7 = mysqli_query($conn, $query6);
+    
     if (mysqli_num_rows($results) > 0) {
         while ($row = mysqli_fetch_assoc($results)) {
             echo "
@@ -145,32 +149,77 @@
                             <div class='add-members-card banned' id='add-members-card'>
                                 <div class='add-members-filter'>
                                     <div class='add-members-col1'>
-                                        <input class='add-members-input-field' type='text' placeholder='First Name'/>
-                                        <input class='add-members-input-field' type='text' placeholder='Last Name'/>
-                                        <select class='add-members-input-field'>
+                                        <input
+                                            class='add-members-input-field'
+                                            type='text'
+                                            placeholder='First Name'
+                                            id='filter2-first-name'
+                                        />
+                                        <input
+                                            class='add-members-input-field'
+                                            type='text'
+                                            placeholder='Last Name'
+                                            id='filter2-last-name'
+                                        />
+                                        <select class='add-members-input-field' id='filter2-batch'>
                                             <option value='All'>All</option>
+                                            <option value='2004/2005'>2004/2005</option>
+                                            <option value='2005/2006'>2005/2006</option>
+                                            <option value='2006/2007'>2006/2007</option>
+                                            <option value='2007/2008'>2007/2008</option>
+                                            <option value='2008/2009'>2008/2009</option>
+                                            <option value='2009/2010'>2009/2010</option>
+                                            <option value='2010/2011'>2010/2011</option>
+                                            <option value='2011/2012'>2011/2012</option>
+                                            <option value='2012/2013'>2012/2013</option>
+                                            <option value='2013/2014'>2013/2014</option>
+                                            <option value='2014/2015'>2014/2015</option>
+                                            <option value='2015/2016'>2015/2016</option>
+                                            <option value='2016/2017'>2016/2017</option>
+                                            <option value='2017/2018'>2017/2018</option>
                                             <option value='2018/2019'>2018/2019</option>
-                                            <option value='2018/2019'>2019/2020</option>
-                                            <option value='2018/2019'>2020/2021</option>
+                                            <option value='2019/2020'>2019/2020</option>
+                                            <option value='2020/2021'>2020/2021</option>
+                                            <option value='2021/2022'>2021/2022</option>
                                         </select>
                                     </div>
                                     <div class='add-members-col2'>
-                                        <button class='add-members-filter-btn add-members-btn'>Filter</button>
+                                        <button
+                                            class='add-members-filter-btn add-members-btn'
+                                            id='filter2-submit'
+                                            onclick=FilterAvailableMembers('available-members-for-committee')
+                                        >Filter</button>
                                     </div>
                                 </div>
-                                <div class='add-members-results'>
+                                <div class='add-members-results' id='available-members-for-committee'>
+            ";
+            
+            if (mysqli_num_rows($results6) > 0) {
+                while ($row6 = mysqli_fetch_assoc($results6)) {
+                    echo "
                                     <div
                                         class='add-members-result'
-                                        onmouseover=DisplayButtons('add-1')
-                                        onmouseout=HideButtons('add-1')
+                                        onmouseover=DisplayButtons('add-{$row6['Email']}')
+                                        onmouseout=HideButtons('add-{$row6['Email']}')
                                     >
-                                        <p class='request-id'>FirstName</p>
-                                        <p class='request-id'>LastName</p>
-                                        <p class='request-id'>Batch</p>
-                                        <div class='add-members-buttons' id='add-1'>
+                                        <p class='request-id'>{$row6['FirstName']}</p>
+                                        <p class='request-id'>{$row6['LastName']}</p>
+                                        <p class='request-id'>{$row6['Batch']}</p>
+                                        <div class='add-members-buttons' id='add-{$row6['Email']}'>
                                             <button class='add-members-add-btn add-members-btn'>Add</button>
                                         </div>
                                     </div>
+                    ";
+                }
+            } else {
+                echo "
+                                    <div class='committee-result'>
+                                        <p class='request-id'>No results</p>
+                                    </div>
+                ";
+            }
+            
+            echo "
                                 </div>
                             </div>
                         </div>
@@ -236,32 +285,77 @@
                         <div class='coordinator-section-2'>
                             <div class='coordinator-filter'>
                                 <div class='coordinator-col1'>
-                                    <input class='coordinator-input-field' type='text' placeholder='First Name'/>
-                                    <input class='coordinator-input-field' type='text' placeholder='Last Name'/>
-                                    <select class='coordinator-input-field'>
+                                    <input
+                                        class='coordinator-input-field'
+                                        type='text'
+                                        placeholder='First Name'
+                                        id='filter3-first-name'
+                                    />
+                                    <input
+                                        class='coordinator-input-field'
+                                        type='text'
+                                        placeholder='Last Name'
+                                        id='filter3-last-name'
+                                    />
+                                    <select class='coordinator-input-field' id='filter3-batch'>
                                         <option value='All'>All</option>
+                                        <option value='2004/2005'>2004/2005</option>
+                                        <option value='2005/2006'>2005/2006</option>
+                                        <option value='2006/2007'>2006/2007</option>
+                                        <option value='2007/2008'>2007/2008</option>
+                                        <option value='2008/2009'>2008/2009</option>
+                                        <option value='2009/2010'>2009/2010</option>
+                                        <option value='2010/2011'>2010/2011</option>
+                                        <option value='2011/2012'>2011/2012</option>
+                                        <option value='2012/2013'>2012/2013</option>
+                                        <option value='2013/2014'>2013/2014</option>
+                                        <option value='2014/2015'>2014/2015</option>
+                                        <option value='2015/2016'>2015/2016</option>
+                                        <option value='2016/2017'>2016/2017</option>
+                                        <option value='2017/2018'>2017/2018</option>
                                         <option value='2018/2019'>2018/2019</option>
-                                        <option value='2018/2019'>2019/2020</option>
-                                        <option value='2018/2019'>2020/2021</option>
+                                        <option value='2019/2020'>2019/2020</option>
+                                        <option value='2020/2021'>2020/2021</option>
+                                        <option value='2021/2022'>2021/2022</option>
                                     </select>
                                 </div>
                                 <div class='coordinator-col2'>
-                                    <button class='coordinator-filter-btn coordinator-btn'>Filter</button>
+                                    <button
+                                        class='coordinator-filter-btn coordinator-btn'
+                                        id='filter3-submit'
+                                        onclick=FilterAvailableMembers2('available-members-for-coordinator')
+                                    >Filter</button>
                                 </div>
                             </div>
-                            <div class='coordinator-results'>
+                            <div class='coordinator-results' id='available-members-for-coordinator'>
+            ";
+    
+            if (mysqli_num_rows($results7) > 0) {
+                while ($row7 = mysqli_fetch_assoc($results7)) {
+                    echo "
                                 <div
                                     class='coordinator-result'
-                                    onmouseover=DisplayButtons('select-1')
-                                    onmouseout=HideButtons('select-1')
+                                    onmouseover=DisplayButtons('select-{$row7['Email']}')
+                                    onmouseout=HideButtons('select-{$row7['Email']}')
                                 >
-                                    <p class='request-id'>FirstName</p>
-                                    <p class='request-id'>LastName</p>
-                                    <p class='request-id'>Batch</p>
-                                    <div class='coordinator-buttons' id='select-1'>
+                                    <p class='request-id'>{$row7['FirstName']}</p>
+                                    <p class='request-id'>{$row7['LastName']}</p>
+                                    <p class='request-id'>{$row7['Batch']}</p>
+                                    <div class='coordinator-buttons' id='select-{$row7['Email']}'>
                                         <button class='coordinator-add-btn coordinator-btn'>Select</button>
                                     </div>
                                 </div>
+                    ";
+                }
+            } else {
+                echo "
+                                <div class='committee-result'>
+                                    <p class='request-id'>No results</p>
+                                </div>
+                ";
+            }
+            
+            echo "
                             </div>
                         </div>
                     </div>
