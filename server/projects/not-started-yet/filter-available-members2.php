@@ -2,6 +2,7 @@
     
     include('../../../db/db-conn.php');
     
+    $ProjectId = $_POST['ProjectId'];
     $FirstName = trim($_POST['FirstName']);
     $LastName = trim($_POST['LastName']);
     $Batch = $_POST['Batch'];
@@ -22,6 +23,7 @@
     
     if (mysqli_num_rows($results) > 0) {
         while ($row = mysqli_fetch_assoc($results)) {
+            $ArgumentString = $row['Email'] . "," . "$ProjectId";
             echo "
                 <div
                     class='coordinator-result'
@@ -32,7 +34,10 @@
                     <p class='request-id'>{$row['LastName']}</p>
                     <p class='request-id'>{$row['Batch']}</p>
                     <div class='coordinator-buttons' id='select-{$row['Email']}'>
-                        <button class='coordinator-add-btn coordinator-btn'>Select</button>
+                        <button
+                            class='coordinator-add-btn coordinator-btn'
+                            onclick=AddCoordinator('{$ArgumentString}')
+                        >Select</button>
                     </div>
                 </div>
             ";

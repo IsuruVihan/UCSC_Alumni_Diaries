@@ -187,7 +187,7 @@
                                         <button
                                             class='add-members-filter-btn add-members-btn'
                                             id='filter2-submit'
-                                            onclick=FilterAvailableMembers('available-members-for-committee')
+                                            onclick=FilterAvailableMembers('{$Id}')
                                         >Filter</button>
                                     </div>
                                 </div>
@@ -196,6 +196,7 @@
             
             if (mysqli_num_rows($results6) > 0) {
                 while ($row6 = mysqli_fetch_assoc($results6)) {
+                    $ArgumentString = $row6['Email'] . "," . "$Id";
                     echo "
                                     <div
                                         class='add-members-result'
@@ -206,7 +207,10 @@
                                         <p class='request-id'>{$row6['LastName']}</p>
                                         <p class='request-id'>{$row6['Batch']}</p>
                                         <div class='add-members-buttons' id='add-{$row6['Email']}'>
-                                            <button class='add-members-add-btn add-members-btn'>Add</button>
+                                            <button
+                                                class='add-members-add-btn add-members-btn'
+                                                onclick=AddCommitteeMember('{$ArgumentString}')
+                                            >Add</button>
                                         </div>
                                     </div>
                     ";
@@ -323,7 +327,7 @@
                                     <button
                                         class='coordinator-filter-btn coordinator-btn'
                                         id='filter3-submit'
-                                        onclick=FilterAvailableMembers2('available-members-for-coordinator')
+                                        onclick=FilterAvailableMembers2('{$Id}')
                                     >Filter</button>
                                 </div>
                             </div>
@@ -332,6 +336,7 @@
     
             if (mysqli_num_rows($results7) > 0) {
                 while ($row7 = mysqli_fetch_assoc($results7)) {
+                    $ArgumentString = $row7['Email'] . "," . "$Id";
                     echo "
                                 <div
                                     class='coordinator-result'
@@ -342,7 +347,10 @@
                                     <p class='request-id'>{$row7['LastName']}</p>
                                     <p class='request-id'>{$row7['Batch']}</p>
                                     <div class='coordinator-buttons' id='select-{$row7['Email']}'>
-                                        <button class='coordinator-add-btn coordinator-btn'>Select</button>
+                                        <button
+                                            class='coordinator-add-btn coordinator-btn'
+                                            onclick=AddCoordinator('{$ArgumentString}')
+                                        >Select</button>
                                     </div>
                                 </div>
                     ";

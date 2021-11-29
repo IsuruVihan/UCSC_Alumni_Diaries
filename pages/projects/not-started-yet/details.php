@@ -138,33 +138,54 @@
         });
     }
     
-    const FilterAvailableMembers = () => {
+    const FilterAvailableMembers = (id) => {
         const FirstName = $('#filter2-first-name').val();
         const LastName = $('#filter2-last-name').val();
         const Batch = $('#filter2-batch').val();
 
         $('#available-members-for-committee')
             .load('../../../server/projects/not-started-yet/filter-available-members.php', {
+            ProjectId: id,
             FirstName: FirstName,
             LastName: LastName,
             Batch: Batch
         });
     }
 
-    const FilterAvailableMembers2 = () => {
+    const FilterAvailableMembers2 = (id) => {
         const FirstName = $('#filter3-first-name').val();
         const LastName = $('#filter3-last-name').val();
         const Batch = $('#filter3-batch').val();
         
         $('#available-members-for-coordinator')
             .load('../../../server/projects/not-started-yet/filter-available-members2.php', {
+            ProjectId: id,
             FirstName: FirstName,
             LastName: LastName,
             Batch: Batch
         });
     }
+    
+    const AddCommitteeMember = (data) => {
+        const Email = data.split(',')[0];
+        const ProjectId = data.split(',')[1];
+        $('#message-area').load('../../../server/projects/not-started-yet/add-committee-member.php', {
+            Email: Email,
+            ProjectId: ProjectId
+        });
+    }
+
+    const AddCoordinator = (data) => {
+        const Email = data.split(',')[0];
+        const ProjectId = data.split(',')[1];
+        $('#message-area').load('../../../server/projects/not-started-yet/add-coordinator.php', {
+            Email: Email,
+            ProjectId: ProjectId
+        });
+    }
 </script>
 
+<div id='message-area'></div>
 <div class='details'>
     <div class='details-section-3'>
         <div class='details-title'>
