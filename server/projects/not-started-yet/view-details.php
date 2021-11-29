@@ -119,6 +119,7 @@
                     $query3 = "SELECT FirstName, LastName, Batch FROM registeredmembers WHERE Email='{$row2['Email']}'";
                     $results3 = mysqli_query($conn, $query3);
                     while ($row3 = mysqli_fetch_assoc($results3)) {
+                        $ArgumentString = $row2['Email'] . "," . "$Id";
                         echo "
                                     <div
                                         class='committee-result'
@@ -129,7 +130,10 @@
                                         <p class='request-id'>{$row3['LastName']}</p>
                                         <p class='request-id'>{$row3['Batch']}</p>
                                         <div class='committee-buttons' id='rem-{$row2['Email']}'>
-                                            <button class='committee-remove-btn committee-btn'>Remove</button>
+                                            <button
+                                                class='committee-remove-btn committee-btn'
+                                                onclick=RemoveMember('{$ArgumentString}')
+                                            >Remove</button>
                                         </div>
                                     </div>
                         ";

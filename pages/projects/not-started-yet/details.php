@@ -183,6 +183,15 @@
             ProjectId: ProjectId
         });
     }
+
+    const RemoveMember = (data) => {
+        const Email = data.split(',')[0];
+        const ProjectId = data.split(',')[1];
+        $('#message-area').load('../../../server/projects/not-started-yet/remove-member.php', {
+            Email: Email,
+            ProjectId: ProjectId
+        });
+    }
 </script>
 
 <div id='message-area'></div>
