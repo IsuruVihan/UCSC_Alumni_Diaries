@@ -36,7 +36,7 @@
                 }
             });
         });
-    }
+    });
 </script>
 
 <div class='my-account-main-container' id='my-account-main-container'>

@@ -1117,3 +1117,49 @@ body {
 .flash-message {
     width: 100%;
 }
+
+table {
+    font-family: "Nunito", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    align-items: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #434343;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+td {
+    font-size: 0.8em;
+}
+
+.cash-h-1 {
+    /*width: 17%;*/
+    /*text-align: justify;*/
+    align-items: center;
+    text-align: center;
+}
+
+.cash-h-2 {
+    /*width: 32%;*/
+    /*text-align: justify;*/
+    align-items: center;
+}
+
+.cash-h-3 {
+    /*width: 17%;*/
+    /*text-align: justify;*/
+    align-items: center;
+}

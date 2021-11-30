@@ -5,6 +5,8 @@ const involved_projects = document.getElementById("involved-projects");
 const subscription_page = document.getElementById("subscriptions");
 const subs_recharge = document.getElementById('subs-recharge');
 const recharge_details = document.getElementById('recharge-details');
+const contributions_cash = document.getElementById("contributions-cash");
+const contributions_items = document.getElementById("contributions-items");
 
 const onclickAccountDetails= () => {
     account_details.classList.add('clicked-link');
@@ -55,4 +57,14 @@ const onClickRechargeAccount = () => {
 const onClickRechargeDetails = () => {
     subs_recharge.classList.remove('clicked-link');
     recharge_details.classList.add('clicked-link');
+}
+
+const onClickContributionsCash = () => {
+    contributions_cash.classList.add('clicked-link');
+    contributions_items.classList.remove('clicked-link');
+}
+
+const onClickContributionsItems = () => {
+    contributions_cash.classList.remove('clicked-link');
+    contributions_items.classList.add('clicked-link');
 }
