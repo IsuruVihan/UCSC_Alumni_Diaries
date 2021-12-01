@@ -4,6 +4,7 @@
 <link rel='stylesheet' href='../../../assets/styles/not-started-yet-details-coordinator.css'/>
 <link rel='stylesheet' href='../../../assets/styles/not-started-yet-details-committee-members-committee.css'/>
 <link rel='stylesheet' href='../../../assets/styles/not-started-yet-details-committee-members-add.css'/>
+<link rel='stylesheet' href='../../../assets/styles/not-started-yet-details-actions.css'/>
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
@@ -45,30 +46,46 @@
         const link1 = document.getElementById('l-1');
         const link2 = document.getElementById('l-2');
         const link3 = document.getElementById('l-3');
+        const link4 = document.getElementById('l-4');
 
         const general = document.getElementById('general');
         const committeeMembers =document.getElementById('committee-members');
         const coordinator = document.getElementById('coordinator');
+        const actions = document.getElementById('actions');
 
         document.getElementById(id).classList.add('details-clicked-button');
         if (id==='l-1') {
             link2.classList.remove('details-clicked-button');
             link3.classList.remove('details-clicked-button');
+            link4.classList.remove('details-clicked-button');
             general.style.display = 'block';
             committeeMembers.style.display = 'none';
             coordinator.style.display = 'none';
+            actions.style.display = 'none';
         } else if (id==='l-2') {
             link1.classList.remove('details-clicked-button');
             link3.classList.remove('details-clicked-button');
+            link4.classList.remove('details-clicked-button');
             general.style.display = 'none';
             committeeMembers.style.display = 'grid';
             coordinator.style.display = 'none';
+            actions.style.display = 'none';
         } else if (id==='l-3') {
             link1.classList.remove('details-clicked-button');
             link2.classList.remove('details-clicked-button');
+            link4.classList.remove('details-clicked-button');
             general.style.display = 'none';
             committeeMembers.style.display = 'none';
             coordinator.style.display = 'grid';
+            actions.style.display = 'none';
+        } else if (id==='l-4') {
+            link1.classList.remove('details-clicked-button');
+            link2.classList.remove('details-clicked-button');
+            link3.classList.remove('details-clicked-button');
+            general.style.display = 'none';
+            committeeMembers.style.display = 'none';
+            coordinator.style.display = 'none';
+            actions.style.display = 'block';
         }
     }
     
@@ -190,6 +207,18 @@
         $('#message-area').load('../../../server/projects/not-started-yet/remove-member.php', {
             Email: Email,
             ProjectId: ProjectId
+        });
+    }
+    
+    const StartProject = (id) => {
+        $('#action-messages').load('../../../server/projects/not-started-yet/start-project.php', {
+            Id: id
+        });
+    }
+
+    const DeleteProject = (id) => {
+        $('#action-messages').load('../../../server/projects/not-started-yet/delete-project.php', {
+            Id: id
         });
     }
 </script>
