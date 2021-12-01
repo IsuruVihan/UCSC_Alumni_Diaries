@@ -25,6 +25,14 @@
             target='iframe'
             onclick=ClickLink('l-1')
         >Project details</a>
+        
+<?php
+    include('../db/db-conn.php');
+    
+    $query = "SELECT * FROM registeredmembers WHERE Email='{$_SESSION['Email']}' AND AccType='TopBoard'";
+    $results = mysqli_query($conn, $query);
+    if (mysqli_num_rows($results) > 0) {
+        echo "
         <a
             id='l-2'
             class='iframe-link'
@@ -32,6 +40,10 @@
             target='iframe'
             onclick=ClickLink('l-2')
         >Create project</a>
+        ";
+    }
+?>
+    
     </div>
     <iframe
         name='iframe'

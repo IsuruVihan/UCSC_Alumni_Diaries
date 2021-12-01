@@ -60,10 +60,24 @@
     background: #237804;
 }
 
-/*.btn {*/
-/*    cursor: pointer;*/
-/*    border-radius: 5px;*/
-/*    color: white;*/
-/*    transition: all ease-in-out 0.1s;*/
-/*    height: 25px;*/
-/*}*/
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.error-message {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.success-message {
+    color: #237804 !important;
+    font-weight: 600 !important;
+}
+
+.message-container {
+    padding-left: 0.6em
+}

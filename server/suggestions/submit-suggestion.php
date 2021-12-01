@@ -23,7 +23,7 @@
                 $fileTmpName = $_FILES['image-attach']['tmp_name'];
                 $fileSize = $_FILES['image-attach']['size'];
                 $fileError = $_FILES['image-attach']['error'];
-                $fileType = $_FILES['image-attach']['type'];      // [test, png]
+                $fileType = $_FILES['image-attach']['type'];
                 $fileExt = explode('.', $fileName);
                 $fileActualExt = strtolower(end($fileExt));
                 $allowedExt = array('jpg', 'jpeg', 'png', 'pdf');
