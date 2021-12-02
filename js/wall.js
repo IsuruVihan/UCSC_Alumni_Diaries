@@ -43,13 +43,13 @@ const HideAddComment = () => {
     document.getElementById('add-comment').style.display = "none";
 }
 
-const ShowEditNotice = () => {
-    document.getElementById('edit-notice-box').style.display = "flex";
-}
-
-const HideEditNotice = () => {
-    document.getElementById('edit-notice-box').style.display = "none";
-}
+// const ShowEditNotice = () => {
+//     document.getElementById('edit-notice-box').style.display = "flex";
+// }
+//
+// const HideEditNotice = () => {
+//     document.getElementById('edit-notice-box').style.display = "none";
+// }
 
 const fileValidation = () => {
     const fileInput = document.getElementById('myFile');

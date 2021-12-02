@@ -107,7 +107,7 @@
     box-shadow: 1px 2px 4px lightgray;
     border-radius: 10px;
     transition: all ease-in-out 0.5s;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 3px;
     margin: 0.8em 0;
@@ -891,3 +891,13 @@
       font-weight: 400;
       font-size: 0.8em;
   }
+.edit-notice-container{
+  display: none;
+  }
+.edit-notice-title{
+    text-align: center;
+    margin-bottom: 0 1em;
+}
+.edit-del-btn{
+    margin: 0 1em;
+}
