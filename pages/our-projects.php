@@ -12,9 +12,11 @@
             event.preventDefault();
             const start_date = $('#start_date').val();
             const end_date =$('#end_date').val();
+            const project_name =$('#project_name').val();
             $('#projectList').load("../server/our-projects/filter.php",{
                 Start_Date: start_date,
-                End_Date: end_date
+                End_Date: end_date,
+                Project_Name:project_name
             });
         });
    
@@ -41,12 +43,14 @@
 <div class='our-projects'>
     <div class='card container01'>
         <form class='filter' id='filter_projects'>
+                <input class='input-field ' type='text' placeholder='Project Name' id='project_name'/>
             <div class='col01'>
                 <input class='input-field date-field' type='date' placeholder='Start Date' id='start_date'/>
                 to
                 <input class='input-field date-field' type='date' placeholder='End Date'  id='end_date'/>
             </div>
             <div class='col02'>
+           
                 <input type='submit' class='filter-btn btn' value='Filter'></input>
             </div>
         </form>

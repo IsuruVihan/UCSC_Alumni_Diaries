@@ -4,9 +4,31 @@ include('../../db/db-conn.php');
 
 $Start_Date = $_POST['Start_Date'];
 $End_Date = $_POST['End_Date'];
+$Project_Name = $_POST['Project_Name'];
 
-$query = "SELECT Name,Id FROM projects WHERE Timestamp BETWEEN
-         '$Start_Date' AND '$End_Date' ORDER BY Timestamp";
+$query = "SELECT Name,Id FROM projects ";
+
+
+if (!empty($Project_Name))  {
+  $query = $query . " WHERE Name LIKE '{$Project_Name}%'";
+}
+
+if (!empty($Start_Date)) {
+  if (!empty($Project_Name)) {
+    $query = $query . " AND Timestamp > '{$Start_Date}'";  
+  } else {
+    $query = $query . " WHERE Timestamp > '{$Start_Date}'";
+  }
+}
+
+if (!empty($End_Date)) {
+  if (!empty($Project_Name) || !empty($Start_Date)) {
+    $query = $query . " AND Timestamp < '{$End_Date}'";  
+  } else {
+    $query = $query . " WHERE Timestamp < '{$End_Date}'";
+  }
+}
+
 
 $result = mysqli_query($conn, $query);
 if (mysqli_num_rows($result) > 0){

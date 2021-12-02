@@ -66,7 +66,7 @@ while($row = mysqli_fetch_assoc($result)){
 
        $results4 = mysqli_query($conn, $query4);
 
-    if (mysqli_num_rows($results3) > 0) {
+    if (mysqli_num_rows($results4) > 0) {
         while ($row4 = mysqli_fetch_assoc($results4)) {
     //   echo "{$row4['FirstName']} {$row4['LastName']}";
    
