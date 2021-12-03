@@ -15,7 +15,7 @@ if (mysqli_num_rows($results) > 0 ) {
                </tr>";
     }
 } else {
-    echo "0 results";
+    echo " ";
 }
 
 

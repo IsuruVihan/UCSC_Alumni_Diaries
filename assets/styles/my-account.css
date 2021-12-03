@@ -27,15 +27,15 @@ body {
 }
 
 .title1 {
-    font-weight: 600;
-    font-size: 1.2em;
+    font-weight: 800;
+    font-size: 1.25em;
     text-align: center;
     margin-top: 3px;
 }
 
 .title {
-    font-weight: 600;
-    font-size: 1.2em;
+    font-weight: 800;
+    font-size: 1.3em;
     text-align: center;
     margin-top: 10px;
 }
@@ -368,10 +368,14 @@ body {
     background: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 10px;
+}
+
+.involved-projects{
+    margin-top: 10px;
 }
 
 .projects-container {
@@ -507,8 +511,8 @@ body {
 }
 
 .sub-type {
-    width: 50%;
-    height: 45%;
+    width: 45%;
+    height: 90%;
     border: 1px solid lightgray;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -537,7 +541,7 @@ body {
     height: 15%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -1138,7 +1142,7 @@ th {
     background-color: #434343;
     color: white;
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 1.2em;
 }
 
 td {
@@ -1150,6 +1154,7 @@ td {
     /*text-align: justify;*/
     align-items: center;
     text-align: center;
+    font-size: 1em;
 }
 
 .cash-h-2 {
@@ -1162,4 +1167,52 @@ td {
     /*width: 17%;*/
     /*text-align: justify;*/
     align-items: center;
+}
+
+.sec-16{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 97%;
+    height: 47%;
+}
+
+.section-7-1{
+    width: 99%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#form1{
+    height: 60%;
+    width: 100%;
+}
+
+.title2{
+    font-weight: 800;
+    font-size: 1.25em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.success-msg1{
+    height: 98%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #237804;
+}
+
+.error-msg1{
+    height: 98%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f5222d;
 }
