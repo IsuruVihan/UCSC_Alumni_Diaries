@@ -26,6 +26,24 @@
     $(document).ready(() => {
         $('#ongoing-projects-list').load("../server/projects/ongoing/render-list.php");
         
+        $('#ongoing-projects-filter').submit((event) => {
+            event.preventDefault();
+            
+            const Date1 = $('#ongoing-date1').val();
+            const Date2 = $('#ongoing-date2').val();
+            const Id = $('#ongoing-id').val();
+            const Name = $('#ongoing-name').val();
+            const My = $('#ongoing-my').is(":checked");
+
+            $('#ongoing-projects-list').load("../server/projects/ongoing/filter.php", {
+                Date1: Date1,
+                Date2: Date2,
+                Id: Id,
+                Name: Name,
+                My: My
+            });
+        });
+        
         $('#l-1').click(() => {
             $('#project-cash').show();
             $('#project-item').hide();
@@ -110,33 +128,25 @@
             <div class='title'>
                 Projects List
             </div>
-            <div class='filter'>
+            <form id='ongoing-projects-filter' class='filter'>
                 <div class='col1'>
-                    <input class='input-field date-field' type='date' placeholder='First Name' />
+                    <input class='input-field date-field' type='date' id='ongoing-date1'/>
                     to
-                    <input class='input-field date-field' type='date' placeholder='Last Name' />
+                    <input class='input-field date-field' type='date' id='ongoing-date2'/>
                 </div>
                 <div class='col3'>
-                    <input class='input-field date-field' type='text' placeholder='Project Name' />
-                    <input class='input-field date-field' type='text' placeholder='Project Id' />
+                    <input class='input-field date-field' type='text' placeholder='Project Name'  id='ongoing-name'/>
+                    <input class='input-field date-field' type='text' placeholder='Project Id'  id='ongoing-id'/>
                 </div>
                 <div class='col2'>
                     <label>My Projects</label>
-                    <input class='input-field' type='checkbox'>
+                    <input class='input-field' type='checkbox' id='ongoing-my'/>
                 </div>
                 <div class='col4'>
-                    <button class='filter-btn btn'>Filter</button>
+                    <input type='submit' class='filter-btn btn' value='Filter'/>
                 </div>
-            </div>
-            <div class='results' id='ongoing-projects-list'>
-<!--                <div class='result' onmouseover=DisplayButtons('p-list-1') onmouseout=HideButtons('p-list-1')>-->
-<!--                    <p class='request-id'>ProjectId</p>-->
-<!--                    <p class='request-id'>ProjectName</p>-->
-<!--                    <div class='buttons' id='p-list-1'>-->
-<!--                        <button class='view-btn btn'>View</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-            </div>
+            </form>
+            <div class='results' id='ongoing-projects-list'></div>
         </div>
     </div>
     <div class='section-2'>
