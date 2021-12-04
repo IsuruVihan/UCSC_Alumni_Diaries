@@ -24,8 +24,8 @@
 
 <script>
     $(document).ready(() => {
-
-        // to display cash and item sections
+        $('#ongoing-projects-list').load("../server/projects/ongoing/render-list.php");
+        
         $('#l-1').click(() => {
             $('#project-cash').show();
             $('#project-item').hide();
@@ -33,71 +33,63 @@
 
         $('#l-2').click(() => {
             $('#project-item').show();
-            // $('#item-available').show();
             $('#project-cash').hide();
         });
 
-        // to display cash section
-        // cash summary
         $('#l-1-1').click(() => {
             $('#cash-summary').show();
             $('#cash-spent-records').hide();
             $('#cash-spend').hide();
             $('#cash-approvals').hide();
         });
-        // cash spend
+        
         $('#l-2-1').click(() => {
             $('#cash-spend').show();
             $('#cash-spent-records').hide();
             $('#cash-summary').hide();
             $('#cash-approvals').hide();
         });
-        //cash approvals
+        
         $('#l-3-1').click(() => {
             $('#cash-approvals').show();
             $('#cash-spent-records').hide();
             $('#cash-summary').hide();
             $('#cash-spend').hide();
         });
-        //cash spent records 
+        
         $('#l-4-1').click(() => {
             $('#cash-spent-records').show();
             $('#cash-approvals').hide();
             $('#cash-summary').hide();
             $('#cash-spend').hide();
         });
-        // item section
-        // available item 
+        
         $('#l-1-2').click(() => {
             $('#items-available').show();
             $('#items-spend').hide();
             $('#item-spend-approval').hide();
             $('#item-spent-record').hide();
-
         });
-        // item spend
+        
         $('#l-2-2').click(() => {
             $('#items-spend').show();
             $('#items-available').hide();
             $('#item-spend-approval').hide();
             $('#item-spent-record').hide();
-
         });
-        // item approval
+        
         $('#l-3-2').click(() => {
             $('#item-spend-approval').show();
             $('#items-available').hide();
             $('#items-spend').hide();
             $('#item-spent-record').hide();
-
         });
-        // item spent records
+        
         $('#l-4-2').click(() => {
             $('#item-spent-record').show();
             $('#items-available').hide();
             $('#items-spend').hide();
             $('#item-spend-approval').hide();
-
         });
     });
 </script>
@@ -136,14 +128,14 @@
                     <button class='filter-btn btn'>Filter</button>
                 </div>
             </div>
-            <div class='results'>
-                <div class='result' onmouseover="DisplayButtons('p-list-1')" onmouseout="HideButtons('p-list-1')">
-                    <p class='request-id'>ProjectId</p>
-                    <p class='request-id'>ProjectName</p>
-                    <div class='buttons' id='p-list-1'>
-                        <button class='view-btn btn'>View</button>
-                    </div>
-                </div>
+            <div class='results' id='ongoing-projects-list'>
+<!--                <div class='result' onmouseover=DisplayButtons('p-list-1') onmouseout=HideButtons('p-list-1')>-->
+<!--                    <p class='request-id'>ProjectId</p>-->
+<!--                    <p class='request-id'>ProjectName</p>-->
+<!--                    <div class='buttons' id='p-list-1'>-->
+<!--                        <button class='view-btn btn'>View</button>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
@@ -552,10 +544,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
             <div class='actions' id='action'>
@@ -574,7 +562,6 @@
         </div>
     </div>
 </div>
-
 
 <script src='../js/ongoing-projects.js'></script>
 <script src='../js/ongoing-projects-assets.js'></script>
