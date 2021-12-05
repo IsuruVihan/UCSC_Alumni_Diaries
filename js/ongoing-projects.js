@@ -1,9 +1,3 @@
-const details = document.getElementById('details');
-const committee_members =document.getElementById('committee-members');
-const committee_chat = document.getElementById('committee-chat');
-const assets = document.getElementById('assets');
-const action = document.getElementById('action');
-
 const DisplayButtons = (id) => {
     const element = document.getElementById(id);
     element.style.display = 'block';
@@ -15,6 +9,12 @@ const HideButtons = (id) => {
 }
 
 const ClickLink1 = (id) => {
+    const details = document.getElementById('details');
+    const committee_members =document.getElementById('committee-members');
+    const committee_chat = document.getElementById('committee-chat');
+    const assets = document.getElementById('assets');
+    const action = document.getElementById('action');
+
     document.getElementById(id).classList.add('clicked');
     if (id==='link-1') {
         document.getElementById('link-2').classList.remove('clicked');
@@ -26,7 +26,6 @@ const ClickLink1 = (id) => {
         committee_chat.style.display = 'none';
         assets.style.display = 'none';
         action.style.display = 'none';
-
     } else if (id==='link-2') {
         document.getElementById('link-1').classList.remove('clicked');
         document.getElementById('link-3').classList.remove('clicked');
@@ -37,8 +36,6 @@ const ClickLink1 = (id) => {
         committee_chat.style.display = 'none';
         assets.style.display = 'none';
         action.style.display = 'none';
-
-
     } else if (id==='link-3') {
         document.getElementById('link-1').classList.remove('clicked');
         document.getElementById('link-2').classList.remove('clicked');
@@ -49,8 +46,7 @@ const ClickLink1 = (id) => {
         details.style.display = 'none';
         assets.style.display = 'none';
         action.style.display = 'none';
-    
-     } else if (id==='link-4') {
+    } else if (id==='link-4') {
         document.getElementById('link-1').classList.remove('clicked');
         document.getElementById('link-2').classList.remove('clicked');
         document.getElementById('link-3').classList.remove('clicked');
@@ -60,8 +56,6 @@ const ClickLink1 = (id) => {
         committee_chat.style.display = 'none';
         committee_members.style.display = 'none';
         details.style.display = 'none';
-        
-    
     } else if (id==='link-5') {
         document.getElementById('link-1').classList.remove('clicked');
         document.getElementById('link-2').classList.remove('clicked');
@@ -72,7 +66,6 @@ const ClickLink1 = (id) => {
         committee_chat.style.display = 'none';
         committee_members.style.display = 'none';
         details.style.display = 'none';
-        
     }
 }
 
@@ -118,4 +111,3 @@ const ClickLink = (id) => {
 
 const chatScroll = document.getElementById('message-list');
 chatScroll.scrollTop = chatScroll.scrollHeight;
- 

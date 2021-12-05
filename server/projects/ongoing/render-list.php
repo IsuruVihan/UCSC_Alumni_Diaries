@@ -15,7 +15,7 @@
                     <p class='request-id'>{$row['Id']}</p>
                     <p class='request-id'>{$row['Name']}</p>
                     <div class='buttons' id='p-list-{$row['Id']}'>
-                        <button class='view-btn btn'>View</button>
+                        <button class='view-btn btn' onclick=ViewProjectDetails('{$row['Id']}')>View</button>
                     </div>
                 </div>
             ";
