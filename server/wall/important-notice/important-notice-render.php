@@ -25,14 +25,23 @@ if (mysqli_num_rows($results) > 0) {
                   </div>
                   <div class='notice-timestamp' id='notice-timestamp'>{$row['Timestamp']}</div>
                    <div class='row-4'>
-                        <div class='star-div-off' id='star-div-off'>Star
-                            <i class='fa fa-star' onclick=' MarkAsStarred() '></i>
-                        </div>
-                        <div class='star-div-on' id='star-div-on'>Star
-                            <i class='fa fa-star' onclick=' MarkAsStarred() '></i>
-                        </div>
-                        <button class='filter-btn btn edit-btn ' id='edit-notice-{$row['Id']}' onclick=EditNotice('{$row['Id']}') >Edit</button>
-                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}'>Delete</button>
+                         ";
+                        //query two
+                        $queryOne = "SELECT Email,PostId FROM starredposts WHERE PostId='{$row['Id']}'";
+                        $resultOne = mysqli_query($conn, $queryOne);
+
+                        if (mysqli_num_rows($resultOne) > 0) {
+                            echo " <div class='star-div-off star-div-on' id='star-div-off-{$row['Id']}'>
+                                        <i class='fa fa-star' onclick=UnMarkStarred('{$row['Id']}')></i>
+                                    </div>";
+                        } else {
+                            echo " <div class='star-div-off' id='star-div-off-{$row['Id']}'>
+                                        <i class='fa fa-star' onclick=MarkAsStarred('{$row['Id']}')></i>
+                                    </div>";
+                        }
+                        echo"
+                        <button class='filter-btn btn edit-btn ' id='edit-notice-{$row['Id']}' onclick=EditNotice('{$row['Id']}')>Edit</button>
+                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}' onclick=DeleteNotice('{$row['Id']}')>Delete</button>
                    </div>            
             </div>
             
@@ -57,14 +66,14 @@ if (mysqli_num_rows($results) > 0) {
                         <p class='notice-timestamp'> {$row['Timestamp']}</p>
                         <div class='row-4'>
                             <input type='submit' class='filter-btn btn edit-del-btn' value='Save Changes' />
-                            <input type='reset'  class='filter-btn btn'  value='Cancel' />    
+                            <input type='reset'  class='filter-btn btn' id='edit-cancel' value='Cancel' />    
                         </div>
                        <span id='flash-message-1' class='flashMsg'></span>
                     </form>
                 </div>
             </div> ";
         } else {
-            echo" 
+            echo " 
              <div class='notice-box' id='render-notice-{$row['Id']}'>
                   <div class='row-1 row-1-gap'>
                         <div class='input-field-title notice-title' id='notice-title'> {$row['Title']} </div>      
@@ -73,15 +82,24 @@ if (mysqli_num_rows($results) > 0) {
                         {$row['Content']}
                   </div>
                   <div class='notice-timestamp' id='notice-timestamp'>{$row['Timestamp']}</div>
-                  <div class='row-4'>
-                        <div class='star-div-off' id='star-div-off'>Star
-                            <i class='fa fa-star' onclick=' MarkAsStarred() '></i>
-                        </div>
-                        <div class='star-div-on' id='star-div-on'>Star
-                            <i class='fa fa-star' onclick=' MarkAsStarred() '></i>
-                        </div>
+                  <div class='row-4'>                 
+                       ";
+                        //query two
+                        $queryOne = "SELECT Email,PostId FROM starredposts WHERE PostId='{$row['Id']}'";
+                        $resultOne = mysqli_query($conn, $queryOne);
+
+                        if (mysqli_num_rows($resultOne) > 0) {
+                            echo " <div class='star-div-off star-div-on' id='star-div-off-{$row['Id']}'>
+                                        <i class='fa fa-star' onclick=UnMarkStarred('{$row['Id']}')></i>
+                                    </div>";
+                        } else {
+                            echo " <div class='star-div-off' id='star-div-off-{$row['Id']}'>
+                                        <i class='fa fa-star' onclick=MarkAsStarred('{$row['Id']}')></i>
+                                    </div>";
+                        }
+                        echo "
                         <button class='filter-btn btn edit-btn' id='edit-notice-{$row['Id']}'  onclick=EditNotice('{$row['Id']}')>Edit</button>
-                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}'>Delete</button>
+                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}'  onclick=DeleteNotice('{$row['Id']}') >Delete</button>
                   </div>            
             </div>
             
@@ -101,7 +119,7 @@ if (mysqli_num_rows($results) > 0) {
                          <p class='notice-timestamp'> {$row['Timestamp']}</p>
                         <div class='row-4'>
                             <input type='submit' class='filter-btn btn edit-del-btn' value='Save Changes' />
-                            <input type='reset'  class='filter-btn btn'  value='Cancel' />
+                            <input type='reset'  class='filter-btn btn' id='edit-cancel-{$row['Id']}' value='Cancel' />
                         </div>
                     </form>
                    <span id='flash-message-1' class='flashMsg'></span>

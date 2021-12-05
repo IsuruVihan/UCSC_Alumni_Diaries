@@ -117,6 +117,50 @@
                     location.reload();
                 }, 2000);
             });
+
+            $('#edit-cancel').click(()=>{
+                //cancel eke issue 1 hadanna
+                $(IdRenderNotice).show()
+            });
+        }
+
+        const DeleteNotice = (id) =>{
+            $('#flash-message-1').load("../server/wall/important-notice/important-notice-delete.php",{
+                id : id
+            });
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
+        }
+
+        const MarkAsStarred = (id) =>{
+            const star = '#star-div-off-'+id;
+                $('#flash-message-2').load("../server/wall/important-notice/important-notice-star.php",{
+                    id : id
+                },(response) => {
+                    if (response === "done") {
+                        $(star).addClass('star-div-on');
+
+                        setTimeout(() => {
+                            location.reload();
+                        }, 2000);
+                    }
+                });
+        }
+
+        const UnMarkStarred = (id) =>{
+            const star = '#star-div-off-'+id;
+            $('#flash-message-2').load("../server/wall/important-notice/remove-star.php",{
+                id : id
+            },(response) => {
+                if (response === "Okay") {
+                    $(star).removeClass('star-div-on');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
         }
     </script>
 
@@ -132,6 +176,8 @@
     <div class='wall'>
         <div class="important-notice">
             <p class="grid-title">Important Notices</p>
+            <span id='flash-message-1' class='flashMsg'></span>
+            <span id='flash-message-2' class='flashMsg flashMsgHide '></span>
             <div class="filter-box">
                 <button class='filter-btn btn'>Starred</button>
                 <button class='filter-btn btn'>All</button>
@@ -164,53 +210,6 @@
 
             <!--notices -->
             <div id='create-notice-render'>
-                <!--            <div class='row-1 row-1-gap'>-->
-                <!--                <div class='input-field-title' id='notice-title'></div>-->
-                <!--                <div class='field-header' id='notice-timestamp'></div>-->
-                <!--            </div>-->
-                <!--            <div class='image-box-notice' id='image-box-notice'>-->
-                <!--                <img src='' alt=''>-->
-                <!--            </div>-->
-                <!--            <div class='notice-content' id='notice-content'>-->
-                <!---->
-                <!--            </div>-->
-                <!--            <div class='row-4'>-->
-                <!--                <div class='star-div-off' id='star-div-off'>Star-->
-                <!--                    <i class='fa fa-star' onclick=' MarkAsStarred() '></i>-->
-                <!--                </div>-->
-                <!--                <div class='star-div-on' id='star-div-on'>Star-->
-                <!--                    <i class='fa fa-star' onclick=' MarkAsStarred() '></i>-->
-                <!--                </div>-->
-                <!--                <button class='filter-btn btn edit-btn' id='edit-notice' onclick='ShowEditNotice()'>Edit</button>-->
-                <!--                <button class='filter-btn btn dlt-btn' id='delete-notice'>Delete</button>-->
-                <!--            </div>-->
-
-                <!--Edit important notices -->
-                <!--            <div id='edit-notice-container'>-->
-                <!--                    <div class='edit-notice-box' id="edit-notice-box">-->
-                <!--                    <div class='box-title'>-->
-                <!--                        Edit Important Notice-->
-                <!--                    </div>-->
-                <!--                    <form id='edit-notice-form'>-->
-                <!--                        <div class='row-1'>-->
-                <!--                            <input class='input-field-title' type='text' id='edit-title'/>-->
-                <!--                            <p class='field-header'> date</p>-->
-                <!--                        </div>-->
-                <!--                        <div class='row-2'>-->
-                <!--                            <label for='myFile' class='filter-btn btn upload-btn'>-->
-                <!--                                <input type='file' id='myFile' name='filename' hidden>-->
-                <!--                                Edit Upload</label>-->
-                <!--                        </div>-->
-                <!--                        <div class='row-3'>-->
-                <!--                            <textarea class='create-notice-text' id='edit-content'> </textarea>-->
-                <!--                        </div>-->
-                <!--                        <div class='row-4'>-->
-                <!--                            <button class='filter-btn btn'>Save Changes</button>-->
-                <!--                            <button class='filter-btn btn'  >Cancel</button>-->
-                <!--                        </div>-->
-                <!--                    </form>-->
-                <!--                </div>-->
-                <!--            </div>-->
 
             </div>
 

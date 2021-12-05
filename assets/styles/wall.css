@@ -258,7 +258,6 @@
 }
 
 .star-div-on {
-    display: none;
     color: rgb(255, 115, 0);
     margin: 0 0.8em;
 }
@@ -890,6 +889,9 @@
       justify-content: center;
       font-weight: 400;
       font-size: 0.8em;
+  }
+  .flashMsgHide{
+      display: none;
   }
 .edit-notice-container{
   display: none;
