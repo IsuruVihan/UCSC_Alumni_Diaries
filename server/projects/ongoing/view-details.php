@@ -14,10 +14,22 @@
         SELECT * FROM committeemembers
         WHERE ProjectId='{$Id}' AND Email='{$_SESSION['Email']}' AND Type='Coordinator'
     ";
+    $query4 = "
+        SELECT FirstName, LastName, PicSrc, registeredmembers.Email
+        FROM registeredmembers INNER JOIN committeemembers ON committeemembers.Email=registeredmembers.Email
+        WHERE committeemembers.ProjectId='{$Id}' AND committeemembers.Type='Coordinator'
+    ";
+    $query5 = "
+        SELECT FirstName, LastName, PicSrc, registeredmembers.Email
+        FROM registeredmembers INNER JOIN committeemembers ON committeemembers.Email=registeredmembers.Email
+        WHERE committeemembers.ProjectId='{$Id}' AND committeemembers.Type='Member'
+    ";
     
     $results = mysqli_query($conn, $query);
     $results2 = mysqli_query($conn, $query2);
     $results3 = mysqli_query($conn, $query3);
+    $results4 = mysqli_query($conn, $query4);
+    $results5 = mysqli_query($conn, $query5);
     
     $isCommitteeMember = mysqli_num_rows($results2) > 0;
     $isCoordinator = mysqli_num_rows($results3) > 0;
@@ -93,28 +105,86 @@
                 </div>
                 <div class='card-commitee project-committee' id='committee-members'>
                     <div class='title'>Coordinator</div>
+        ";
+        
+        while ($row4 = mysqli_fetch_assoc($results4)) {
+            echo "
                     <div class='coord'>
-                        <img src='../assets/images/user-default.png' height='100%' alt='user'/>
-                        <div>First Name</div>
-                        <div>Last Name</div>
+            ";
+            
+            if ($row4['PicSrc'] == 'user-default.png') {
+                echo "
+                        <img
+                            src='../assets/images/user-default.png'
+                            height='100%'
+                            alt='user'
+                            class='coord-pic'
+                        />
+                ";
+            } else {
+                echo "
+                        <img
+                            src='../uploads/profile-pics/{$row4['PicSrc']}'
+                            height='100%'
+                            alt='user'
+                            class='coord-pic'
+                        />
+                ";
+            }
+            
+            echo "
+                        <div>{$row4['FirstName']} {$row4['LastName']}</div>
+                        <div>{$row4['Email']}</div>
                     </div>
+            ";
+        }
+        
+        echo "
                     <div class='title'>Members</div>
                     <div class='results'>
+        ";
+        
+        if (mysqli_num_rows($results5) > 0) {
+            while ($row5 = mysqli_fetch_assoc($results5)) {
+                echo "
                         <div class='result2'>
-                            <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
-                            <div class='fname'>First Name</div>
-                            <div class='lname'>Last Name</div>
+                ";
+    
+                if ($row5['PicSrc'] == 'user-default.png') {
+                    echo "
+                        <img
+                            src='../assets/images/user-default.png'
+                            height='100%'
+                            alt='user'
+                            class='coord-pic'
+                        />
+                    ";
+                } else {
+                    echo "
+                        <img
+                            src='../uploads/profile-pics/{$row5['PicSrc']}'
+                            height='100%'
+                            alt='user'
+                            class='coord-pic'
+                        />
+                    ";
+                }
+                
+                echo "
+                            <div>{$row5['FirstName']} {$row5['LastName']}</div>
+                            <div>{$row5['Email']}</div>
                         </div>
+                ";
+            }
+        } else {
+            echo "
                         <div class='result2'>
-                            <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
-                            <div class='fname'>First Name</div>
-                            <div class='lname'>Last Name</div>
+                            <div class='lname'>No data</div>
                         </div>
-                        <div class='result2'>
-                            <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
-                            <div class='fname'>First Name</div>
-                            <div class='lname'>Last Name</div>
-                        </div>
+            ";
+        }
+        
+        echo "
                     </div>
                 </div>
                 <div class='card-chat committee-chat' id='committee-chat'>

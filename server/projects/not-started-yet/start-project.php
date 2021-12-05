@@ -4,7 +4,7 @@
     
     $Id = $_POST['Id'];
     
-    $query = "SELECT Email FROM committeemembers WHERE Type='Coordinator'";
+    $query = "SELECT Email FROM committeemembers WHERE Type='Coordinator' AND ProjectId='{$Id}'";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
         $query2 = "UPDATE projects SET Status='Ongoing' WHERE Id='{$Id}'";
