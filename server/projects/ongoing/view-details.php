@@ -25,8 +25,9 @@
         WHERE committeemembers.ProjectId='{$Id}' AND committeemembers.Type='Member'
     ";
     $query6 = "
-        SELECT Id, Message, committeechatmessages.PicSrc, Timestamp, FirstName FROM committeechatmessages
+        SELECT Id, SenderEmail, Message, committeechatmessages.PicSrc, Timestamp, FirstName FROM committeechatmessages
         INNER JOIN registeredmembers on committeechatmessages.SenderEmail = registeredmembers.Email
+        ORDER BY Timestamp
     ";
     
     $results = mysqli_query($conn, $query);
@@ -229,7 +230,7 @@
                     echo "
                         <div class='received-message-line'>
                             <div class='received-message'>
-                                <div class='sender-name'>{$row6['SenderEmail']}</div>
+                                <div class='sender-name'>{$row6['FirstName']}</div>
                     ";
                     if (!empty($row6['Message'])) {
                         echo "
@@ -254,12 +255,16 @@
             }
         }
         
+        $Data = $Id . ',' . $_SESSION['Email'];
         echo "
                     </div>
                     <div class='create-message-div'>
-                        <textarea class='chat-message'></textarea>
+                        <textarea id='text-message-body' class='chat-message'></textarea>
                         <div class='button-set'>
-                            <i class='fas fa-paper-plane chat-icon send-icon'></i>
+                            <i
+                                class='fas fa-paper-plane chat-icon send-icon'
+                                onclick=SendChatMessage('{$Data}')
+                            ></i>
                             <i class='fas fa-paperclip chat-icon attach-icon'></i>
                             <i class='fas fa-times-circle chat-icon clear-icon'></i>
                         </div>

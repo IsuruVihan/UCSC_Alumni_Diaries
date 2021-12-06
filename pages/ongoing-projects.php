@@ -48,6 +48,18 @@
             Id: id
         });
     }
+    
+    const SendChatMessage = (data) => {
+        const ProjectId = data.split(',')[0];
+        const SenderEmail = data.split(',')[1];
+        const Message = $('#text-message-body').val();
+        
+        $('#message-list').load("../server/projects/ongoing/send-message.php", {
+            ProjectId: ProjectId,
+            SenderEmail: SenderEmail,
+            Message: Message
+        });
+    }
 </script>
 
 <div class='main-container'>

@@ -46,6 +46,9 @@ const ClickLink1 = (id) => {
         details.style.display = 'none';
         assets.style.display = 'none';
         action.style.display = 'none';
+
+        const chatScroll = document.getElementById('message-list');
+        chatScroll.scrollTop = chatScroll.scrollHeight;
     } else if (id==='link-4') {
         document.getElementById('link-1').classList.remove('clicked');
         document.getElementById('link-2').classList.remove('clicked');
@@ -108,6 +111,3 @@ const ClickLink = (id) => {
         link5.classList.add('clicked-link');
     }
 }
-
-const chatScroll = document.getElementById('message-list');
-chatScroll.scrollTop = chatScroll.scrollHeight;
