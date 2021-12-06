@@ -3,14 +3,9 @@
     include('../../session.php');
     include('../../../db/db-conn.php');
     
-    $ProjectId = $_POST['ProjectId'];
-    $SenderEmail = $_POST['SenderEmail'];
-    $Message = $_POST['Message'];
+    $ChatMessageId = $_POST['ChatMessageId'];
     
-    $query = "
-        INSERT INTO committeechatmessages (ProjectId, SenderEmail, Message, PicSrc)
-        VALUES ('$ProjectId', '$SenderEmail', '$Message', NULL)
-    ";
+    $query = "DELETE FROM committeechatmessages WHERE Id='{$ChatMessageId}'";
     mysqli_query($conn, $query);
     
     $query2 = "
@@ -19,7 +14,7 @@
         ORDER BY Timestamp
     ";
     $results2 = mysqli_query($conn, $query2);
-
+    
     while ($row2 = mysqli_fetch_assoc($results2)) {
         if ($row2['SenderEmail']==$_SESSION['Email']) {
             echo "

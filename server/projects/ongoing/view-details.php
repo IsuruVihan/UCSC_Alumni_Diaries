@@ -204,7 +204,10 @@
                         <div class='sent-message-line'>
                             <div class='sent-message'>
                                 <div class='delete-msg-container'>
-                                    <i class='fas fa-times-circle delete-msg-icon' onclick=DeleteMessage()></i>
+                                    <i
+                                        class='fas fa-times-circle delete-msg-icon'
+                                        onclick=DeleteChatMessage('{$row6['Id']}')
+                                    ></i>
                                 </div>
                     ";
                     if (!empty($row6['Message'])) {

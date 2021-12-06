@@ -60,6 +60,12 @@
             Message: Message
         });
     }
+    
+    const DeleteChatMessage = (id) => {
+        $('#message-list').load("../server/projects/ongoing/delete-message.php", {
+            ChatMessageId: id
+        });
+    }
 </script>
 
 <div class='main-container'>
