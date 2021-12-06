@@ -24,12 +24,17 @@
         FROM registeredmembers INNER JOIN committeemembers ON committeemembers.Email=registeredmembers.Email
         WHERE committeemembers.ProjectId='{$Id}' AND committeemembers.Type='Member'
     ";
+    $query6 = "
+        SELECT Id, Message, committeechatmessages.PicSrc, Timestamp, FirstName FROM committeechatmessages
+        INNER JOIN registeredmembers on committeechatmessages.SenderEmail = registeredmembers.Email
+    ";
     
     $results = mysqli_query($conn, $query);
     $results2 = mysqli_query($conn, $query2);
     $results3 = mysqli_query($conn, $query3);
     $results4 = mysqli_query($conn, $query4);
     $results5 = mysqli_query($conn, $query5);
+    $results6 = mysqli_query($conn, $query6);
     
     $isCommitteeMember = mysqli_num_rows($results2) > 0;
     $isCoordinator = mysqli_num_rows($results3) > 0;
@@ -189,93 +194,67 @@
                 </div>
                 <div class='card-chat committee-chat' id='committee-chat'>
                     <div class='results3' id='message-list'>
+        ";
+        
+        if (mysqli_num_rows($results6) > 0) {
+            while ($row6 = mysqli_fetch_assoc($results6)) {
+                if ($row6['SenderEmail']==$_SESSION['Email']) {
+                    echo "
                         <div class='sent-message-line'>
                             <div class='sent-message'>
                                 <div class='delete-msg-container'>
-                                    <i class='fas fa-times-circle delete-msg-icon'></i>
+                                    <i class='fas fa-times-circle delete-msg-icon' onclick=DeleteMessage()></i>
                                 </div>
-                                <div class='content'>
-                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                                    classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                                    Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
-                                    words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-                                    classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32
-                                    and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero,
-                                    written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
-                                    Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in
-                                    section 1.10.32.
-                                </div>
-                                <div class='time'>09:28</div>
+                    ";
+                    if (!empty($row6['Message'])) {
+                        echo "
+                                <div class='content'>{$row6['Message']}</div>
+                        ";
+                    }
+                    if (!empty($row6['PicSrc'])) {
+                        echo "
+                                <img
+                                    src='../../../uploads/projects-chat-attachments/{$row6['PicSrc']}'
+                                    width='100%'
+                                    alt='attachment'
+                                />
+                        ";
+                    }
+                    echo "
+                                <div class='time'>{$row6['Timestamp']}</div>
                             </div>
                         </div>
+                    ";
+                } else {
+                    echo "
                         <div class='received-message-line'>
                             <div class='received-message'>
-                                <div class='sender-name'>Isuru</div>
-                                <div class='content'>
-                                    Hello Machan
-                                </div>
-                                <div class='time'>09:28</div>
+                                <div class='sender-name'>{$row6['SenderEmail']}</div>
+                    ";
+                    if (!empty($row6['Message'])) {
+                        echo "
+                                <div class='content'>{$row6['Message']}</div>
+                        ";
+                    }
+                    if (!empty($row6['PicSrc'])) {
+                        echo "
+                                <img
+                                    src='../../../uploads/projects-chat-attachments/{$row6['PicSrc']}'
+                                    width='100%'
+                                    alt='attachment'
+                                />
+                        ";
+                    }
+                    echo "
+                                <div class='time'>{$row6['Timestamp']}</div>
                             </div>
                         </div>
-                        <div class='sent-message-line'>
-                            <div class='sent-message'>
-                                <div class='delete-msg-container'>
-                                    <i class='fas fa-times-circle delete-msg-icon'></i>
-                                </div>
-                                <div class='content'>
-                                    Hello Machan
-                                </div>
-                                <div class='time'>09:28</div>
-                            </div>
-                        </div>
-                        <div class='received-message-line'>
-                            <div class='received-message'>
-                                <div class='sender-name'>Isuru</div>
-                                <div class='content'>
-                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                                    classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                                    Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
-                                    words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-                                    classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32
-                                    and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero,
-                                    written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
-                                    Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in
-                                    section 1.10.32.
-                                </div>
-                                <div class='time'>09:28</div>
-                            </div>
-                        </div>
-                        <div class='sent-message-line'>
-                            <div class='sent-message'>
-                                <div class='delete-msg-container'>
-                                    <i class='fas fa-times-circle delete-msg-icon'></i>
-                                </div>
-                                <div class='content'>
-                                    Hello Machan
-                                </div>
-                                <div class='time'>09:28</div>
-                            </div>
-                        </div>
-                        <div class='sent-message-line'>
-                            <div class='sent-message'>
-                                <div class='delete-msg-container'>
-                                    <i class='fas fa-times-circle delete-msg-icon'></i>
-                                </div>
-                                <div class='content'>
-                                    Hello Machan
-                                </div>
-                                <div class='time'>09:28</div>
-                            </div>
-                        </div>
-                        <div class='received-message-line'>
-                            <div class='received-message'>
-                                <div class='sender-name'>Isuru</div>
-                                <div class='content'>
-                                    Hello Machan
-                                </div>
-                                <div class='time'>09:28</div>
-                            </div>
-                        </div>
+                    ";
+                }
+            }
+        }
+        
+        echo "
                     </div>
                     <div class='create-message-div'>
                         <textarea class='chat-message'></textarea>
