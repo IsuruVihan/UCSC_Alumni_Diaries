@@ -1,5 +1,6 @@
 <?php
 include('../../../db/db-conn.php');
+include('../../../server/session.php');
 
 $query = "SELECT Title, Content,PicSrc,OwnerEmail,Timestamp,Id FROM posts ORDER by Timestamp DESC";
 $results = mysqli_query($conn, $query);
@@ -8,7 +9,6 @@ if (mysqli_num_rows($results) > 0) {
     while ($row = mysqli_fetch_assoc($results)) {
 
         $pic = $row['PicSrc'];
-
         $array = explode("important-notice/", $pic);
         $newPath = end($array);
         if (!empty($pic)) {
@@ -23,11 +23,15 @@ if (mysqli_num_rows($results) > 0) {
                   <div class='notice-content' id='notice-content'>
                         {$row['Content']}
                   </div>
-                  <div class='notice-timestamp' id='notice-timestamp'>{$row['Timestamp']}</div>
-                   <div class='row-4'>
-                         ";
+                  <div class='notice-timestamp' id='notice-timestamp'>{$row['Timestamp']}</div>";
+                        if(isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "Member"){
+                            echo"<div class='row-5'>";
+                        }
+                        else{
+                            echo"<div class='row-4'>";
+                        }
                         //query two
-                        $queryOne = "SELECT Email,PostId FROM starredposts WHERE PostId='{$row['Id']}'";
+                        $queryOne = "SELECT Email,PostId FROM starredposts WHERE PostId='{$row['Id']}' AND Email='{$_SESSION['Email']}'";
                         $resultOne = mysqli_query($conn, $queryOne);
 
                         if (mysqli_num_rows($resultOne) > 0) {
@@ -39,10 +43,14 @@ if (mysqli_num_rows($results) > 0) {
                                         <i class='fa fa-star' onclick=MarkAsStarred('{$row['Id']}')></i>
                                     </div>";
                         }
-                        echo"
-                        <button class='filter-btn btn edit-btn ' id='edit-notice-{$row['Id']}' onclick=EditNotice('{$row['Id']}')>Edit</button>
-                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}' onclick=DeleteNotice('{$row['Id']}')>Delete</button>
-                   </div>            
+
+                        if (isset($_SESSION["AccType"]) && $_SESSION["AccType"]=="TopBoard") {
+                            echo "
+                                    <button class='filter-btn btn edit-btn' id='edit-notice-{$row['Id']}'  onclick=EditNotice('{$row['Id']}')>Edit</button>
+                                    <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}'  onclick=DeleteNotice('{$row['Id']}') >Delete</button>";
+                        }
+                        echo"  
+                  </div>            
             </div>
             
              <div class='edit-notice-container' id='edit-notice-container-{$row['Id']}'>
@@ -53,12 +61,7 @@ if (mysqli_num_rows($results) > 0) {
                     <form id='edit-notice-form-{$row['Id']}'>
                         <div class='row-1'>
                             <input class='input-field-title edit-notice-title' type='text' id='edit-title-{$row['Id']}' name='edit-title' value='{$row['Title']}'/>  
-                        </div>
-                        <div class='row-2'>
-                            <label for='myFile' class='filter-btn btn upload-btn'>
-                                <input type='file' id='myFile' name='myFile' hidden>
-                                Edit Upload</label>
-                        </div>
+                        </div>                       
                         <div class='row-3'>
                             <textarea class='create-notice-text' name='edit-content' id='edit-content-{$row['Id']}'>  {$row['Content']} </textarea>
                         </div>
@@ -81,25 +84,32 @@ if (mysqli_num_rows($results) > 0) {
                   <div class='notice-content' id='notice-content'>
                         {$row['Content']}
                   </div>
-                  <div class='notice-timestamp' id='notice-timestamp'>{$row['Timestamp']}</div>
-                  <div class='row-4'>                 
-                       ";
+                  <div class='notice-timestamp' id='notice-timestamp'>{$row['Timestamp']}</div>";
+            if(isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "Member"){
+                echo"<div class='row-5'>";
+            }
+            else{
+                echo"<div class='row-4'>";
+            }
                         //query two
-                        $queryOne = "SELECT Email,PostId FROM starredposts WHERE PostId='{$row['Id']}'";
+                        $queryOne = "SELECT Email,PostId FROM starredposts WHERE PostId='{$row['Id']}' AND Email='{$_SESSION['Email']}'";
                         $resultOne = mysqli_query($conn, $queryOne);
 
-                        if (mysqli_num_rows($resultOne) > 0) {
+                        if (mysqli_num_rows($resultOne) > 0 ) {
                             echo " <div class='star-div-off star-div-on' id='star-div-off-{$row['Id']}'>
                                         <i class='fa fa-star' onclick=UnMarkStarred('{$row['Id']}')></i>
                                     </div>";
                         } else {
-                            echo " <div class='star-div-off' id='star-div-off-{$row['Id']}'>
+                            echo " <div class='star-div-off' id='star-div-off-{$row['Id']}' >
                                         <i class='fa fa-star' onclick=MarkAsStarred('{$row['Id']}')></i>
                                     </div>";
                         }
-                        echo "
+                        if(isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "TopBoard") {
+                            echo "
                         <button class='filter-btn btn edit-btn' id='edit-notice-{$row['Id']}'  onclick=EditNotice('{$row['Id']}')>Edit</button>
-                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}'  onclick=DeleteNotice('{$row['Id']}') >Delete</button>
+                        <button class='filter-btn btn dlt-btn' id='delete-notice-{$row['Id']}'  onclick=DeleteNotice('{$row['Id']}') >Delete</button>";
+                        }
+                        echo"                           
                   </div>            
             </div>
             

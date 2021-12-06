@@ -119,8 +119,8 @@
             });
 
             $('#edit-cancel').click(()=>{
-                //cancel eke issue 1 hadanna
-                $(IdRenderNotice).show()
+                $(IdRenderNotice).show();
+                $(IdEditNotice).hide();
             });
         }
 
@@ -162,6 +162,14 @@
                 }
             });
         }
+
+        const StarredPostFilter = () => {
+            $('#create-notice-render').load("../server/wall/important-notice/starred-post-filter.php");
+        }
+
+        const AllPostFilter = () => {
+            $('#create-notice-render').load("../server/wall/important-notice/important-notice-render.php");
+        }
     </script>
 
     <div class='main-container'>
@@ -179,34 +187,39 @@
             <span id='flash-message-1' class='flashMsg'></span>
             <span id='flash-message-2' class='flashMsg flashMsgHide '></span>
             <div class="filter-box">
-                <button class='filter-btn btn'>Starred</button>
-                <button class='filter-btn btn'>All</button>
+                <button class='filter-btn btn' id='starred-post' onclick=StarredPostFilter()>Starred</button>
+                <button class='filter-btn btn' id='all-post' onclick=AllPostFilter()>All</button>
             </div>
-            <div class="create-notice-box">
-                <div class="box-title">
-                    Create Important Notice
+          <?php if(isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "TopBoard") {
+              echo "<div class='create-notice-box'>
+                <div class='box-title'>
+                    Create Important Notice 
                 </div>
-                <form id='form-sub' name='form-sub' method="post" enctype="multipart/form-data">
-                    <div class="row-1">
+                <form id='form-sub' name='form-sub' method='post' enctype='multipart/form-data'>
+                    <div class='row-1'>
                         <input class='input-field-title ' id='notice-title' name='notice-title' type='text'
                                placeholder='Title'/>
                     </div>
-                    <div class="row-2">
-                        <label for="myFile" class='filter-btn btn upload-btn'>
-                            <input type="file" id="myFile" name="files[]" onchange="return fileValidation()" multiple/
+                    <div class='row-2'>
+                        <label for='myFile' class='filter-btn btn upload-btn'>
+                            <input type='file' id='myFile' name='files[]' onchange='return fileValidation()' multiple/
                             hidden>
                             Upload Picture</label>
                     </div>
-                    <div class="row-3">
-                        <textarea class="create-notice-text" id='notice-body' name='notice-body'
-                                  placeholder="Message"></textarea>
+                    <div class='row-3''>
+                        <textarea class='create-notice-text' id='notice-body' name='notice-body'
+                                  placeholder='Message'></textarea>
                     </div>
-                    <div class="row-4">
+                    <div class='row-4'>
                         <input type='submit' class='filter-btn btn' id='create-notice' value='Create Notice'/>
                     </div>
                     <span id='flash-message' class='flashMsg'></span>
                 </form>
-            </div>
+            </div>";
+          }
+
+          ?>
+
 
             <!--notices -->
             <div id='create-notice-render'>
