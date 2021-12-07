@@ -29,6 +29,8 @@
         INNER JOIN registeredmembers on committeechatmessages.SenderEmail = registeredmembers.Email
         ORDER BY Timestamp
     ";
+    $query7 = "SELECT Amount FROM projectcash WHERE ProjectId='{$Id}'";
+    $query8 = "SELECT SpentAmount FROM projectcashspendings WHERE ProjectId='{$Id}'";
     
     $results = mysqli_query($conn, $query);
     $results2 = mysqli_query($conn, $query2);
@@ -36,6 +38,8 @@
     $results4 = mysqli_query($conn, $query4);
     $results5 = mysqli_query($conn, $query5);
     $results6 = mysqli_query($conn, $query6);
+    $results7 = mysqli_query($conn, $query7);
+    $results8 = mysqli_query($conn, $query8);
     
     $isCommitteeMember = mysqli_num_rows($results2) > 0;
     $isCoordinator = mysqli_num_rows($results3) > 0;
@@ -316,11 +320,29 @@
                                 <div class='available-available' id='cash-summary'>
                                     <div class='available-card-1'>
                                         <div class='available-card-title'>Available Cash</div>
-                                        <div class='available-value'>Rs. 10000.00</div>
+        ";
+        
+        while ($row7 = mysqli_fetch_assoc($results7)) {
+            echo "
+                                            <div class='available-value'>Rs. {$row7['Amount']}</div>
+            ";
+        }
+        
+        echo "
                                     </div>
                                     <div class='available-card-2'>
                                         <div class='available-card-title'>Spent Cash</div>
-                                        <div class='available-value'>Rs. 10000.00</div>
+        ";
+        
+        $TotalSpentAmount = 0.00;
+        if (mysqli_num_rows($results8) > 0) {
+            while ($row8 = mysqli_fetch_assoc($results8)) {
+                $TotalSpentAmount += $row8['SpentAmount'];
+            }
+        }
+        
+        echo "
+                                        <div class='available-value'>Rs. {$TotalSpentAmount}</div>
                                     </div>
                                     <div class='available-card-3'>
                                         <button class='available-btn available-filter-btn'>Generate Report</button>
