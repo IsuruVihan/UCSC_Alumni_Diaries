@@ -631,8 +631,9 @@ body {
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
+    align-content: center;
     /*box-shadow: 1px 2px 4px lightgray;*/
 }
 
@@ -783,14 +784,10 @@ body {
 }
 
 .subscription {
-    /*margin-top: 3em;*/
-    /*margin-left: 6.7em;*/
-    /*margin-right: 6.7em;*/
     display: flex;
     flex-direction: column;
-    /*grid-template-columns: [col1] 15% [col2] 85% [col3];*/
-    /*grid-template-rows: [row1] 100% [row2];*/
-    /*column-gap: 5px;*/
+    justify-content: center;
+    align-items: center;
     height: 99%;
     width: 99%;
 }

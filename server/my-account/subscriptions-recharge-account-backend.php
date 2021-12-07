@@ -22,11 +22,9 @@ if($lastPaymentDate < $DateBeforeAWeek){
     echo "<span class='error-msg1'>It is the existing subscription type</span>";
 }else{
     $_SESSION['SubscriptionType'] = $sub_type;
-    $query1 = "UPDATE subscriptiontype
-               SET subscriptiontype.TypeName = '$sub_type'
-               INNER JOIN subscriptionsdone
-               ON subscriptiontype.Id = subscriptionsdone.Id
-               WHERE subscriptionsdone.Email = '{$_SESSION['Email']}'";
+    $query1 = "UPDATE registeredmembers
+               SET subscriptiontype = '$sub_type'
+               WHERE Email = '{$_SESSION['Email']}'";
     $result1=mysqli_query($conn, $query1);
 
     echo "<span class='success-msg1'>Subscription type has been changed</span>";
