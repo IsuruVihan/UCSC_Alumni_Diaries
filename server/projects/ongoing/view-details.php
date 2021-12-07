@@ -300,11 +300,28 @@
                                     class='cash-iframe-link left cash-clicked-link'
                                     onclick=VisitLink('l-1-1')
                                 >Summary</div>
+        ";
+        
+        if ($isCoordinator) {
+            echo "
                                 <div
                                     id='l-2-1'
                                     class='cash-iframe-link'
                                     onclick=VisitLink('l-2-1')
                                 >Spend</div>
+            ";
+        } else {
+            echo "
+                                <div
+                                    id='l-2-1'
+                                    class='cash-iframe-link'
+                                    style='display: none;'
+                                    onclick=VisitLink('l-2-1')
+                                >Spend</div>
+            ";
+        }
+        
+        echo "
                                 <div
                                     id='l-3-1'
                                     class='cash-iframe-link'
@@ -348,23 +365,49 @@
                                         <button class='available-btn available-filter-btn'>Generate Report</button>
                                     </div>
                                 </div>
-                                <form class='spend-spend' id='cash-spend'>
+                                <form
+                                    class='spend-spend'
+                                    id='cash-spend'
+                                    name='cash-spend'
+                                    action='../server/projects/ongoing/spend-cash.php'
+                                    method='post'
+                                    enctype='multipart/form-data'
+                                >
+                                    <input
+                                        id='project-id'
+                                        name='project-id'
+                                        type='text'
+                                        style='display: none'
+                                        value='{$Id}'
+                                    />
                                     <div class='spend-group'>
                                         <label for='amount'>Amount (Rs.)</label>
-                                        <input id='amount' type='text' class='spend-input-field'/>
+                                        <input id='amount' name='amount' type='text' class='spend-input-field'/>
                                     </div>
                                     <div class='spend-group'>
                                         <label for='description'>Description</label>
-                                        <input id='description' type='text' class='spend-input-field'/>
+                                        <input
+                                            id='description'
+                                            name='description'
+                                            type='text'
+                                            class='spend-input-field'
+                                        />
                                     </div>
                                     <div class='spend-group'>
                                         <label for='quotation'>Quotation attachment</label>
                                         <br />
-                                        <input id='quotation' type='file' class='spend-bill-input'/>
+                                        <input
+                                            id='quotation-attachment'
+                                            name='quotation-attachment'
+                                            type='file'
+                                            class='spend-bill-input'
+                                        />
                                     </div>
                                     <div class='spend-group'>
                                         <input
                                             type='submit'
+                                            id='cash-spend-submit'
+                                            name='cash-spend-submit'
                                             class='spend-spend-btn spend-button'
                                             value='Create spend request'
                                         />
