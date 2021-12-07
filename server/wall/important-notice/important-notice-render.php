@@ -18,8 +18,16 @@ if (mysqli_num_rows($results) > 0) {
                         <div class='input-field-title notice-title' id='notice-title'> {$row['Title']} </div>                      
                   </div>      
                   <div class='img-wrapBox'>           
-                  <img src='../uploads/wall/important-notice/$newPath'  class='image-box-notice' id='image-box-notice' alt='' >
-                  </div>  
+                  <img src='../uploads/wall/important-notice/$newPath'  class='image-box-notice' id='image-box-notice-{$row['Id']}' onclick=ModalView('{$row['Id']}') alt='' >
+                  </div>             
+                        <!-- The Modal -->
+                  <div id='myModal-{$row['Id']}' class='modal'>
+                          <!-- Modal content -->
+                      <div class='modal-content'>
+                            <span class='close' id='modal-span-{$row['Id']}' onclick=ModalClose('{$row['Id']}')>&times;</span>
+                            <img src='../uploads/wall/important-notice/$newPath'  class='image-box-notice-2' alt='' >
+                      </div>                        
+                  </div>
                   <div class='notice-content' id='notice-content'>
                         {$row['Content']}
                   </div>
@@ -43,7 +51,6 @@ if (mysqli_num_rows($results) > 0) {
                                         <i class='fa fa-star' onclick=MarkAsStarred('{$row['Id']}')></i>
                                     </div>";
                         }
-
                         if (isset($_SESSION["AccType"]) && $_SESSION["AccType"]=="TopBoard") {
                             echo "
                                     <button class='filter-btn btn edit-btn' id='edit-notice-{$row['Id']}'  onclick=EditNotice('{$row['Id']}')>Edit</button>

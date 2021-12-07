@@ -167,12 +167,14 @@
     display: flex;
     padding: 5px 0;
 }
-.row-5{
+
+.row-5 {
     justify-content: flex-start;
     display: flex;
     padding: 5px 0;
     margin-top: 0.2em;
 }
+
 .row-4 > button {
     flex-direction: row;
     width: 30%;
@@ -188,10 +190,11 @@
     width: 50%;
 
 }
-.notice-timestamp{
+
+.notice-timestamp {
     font-size: 10px;
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     margin: 0 0.8em;
     border-radius: 5px;
 
@@ -207,13 +210,13 @@
     font-family: "Nunito", serif;
     margin: 0 0.8em;
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
 }
 
-.notice-title{
+.notice-title {
     border: none;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     font-weight: 600;
 }
 
@@ -297,11 +300,24 @@
     /*border: 1px solid lightgray;*/
     border-radius: 5px;
     color: gray;
-    height:auto;
+    height: auto;
     min-width: 100%;
 }
 
-.img-wrapBox{
+.image-box-notice:hover {
+    cursor: pointer;
+}
+
+.image-box-notice-2 {
+    background: white;
+    /*border: 1px solid lightgray;*/
+    border-radius: 5px;
+    color: gray;
+    height: auto;
+    max-width: 100%;
+}
+
+.img-wrapBox {
     display: flex;
     padding: 0.8em;
 }
@@ -875,37 +891,42 @@
 
 .input-error {
     border: 1px solid #f5222d !important;
-  }
-  
-  .input-ok {
+}
+
+.input-ok {
     border: 1px solid #237804 !important;
-  }
-  
-  .message-error {
+}
+
+.message-error {
     color: #f5222d !important;
     font-weight: 600;
-  }
-  
-  .message-success {
+}
+
+.message-success {
     color: #237804 !important;
     font-weight: 600 !important;
-  }
-  .flashMsg{
-      display: flex;
-      justify-content: center;
-      font-weight: 400;
-      font-size: 0.8em;
-  }
-  .flashMsgHide{
-      display: none;
-  }
-.edit-notice-container{
-  display: none;
-  }
-.edit-notice-title{
+}
+
+.flashMsg {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.flashMsgHide {
+    display: none;
+}
+
+.edit-notice-container {
+    display: none;
+}
+
+.edit-notice-title {
     text-align: center;
     margin-bottom: 0 1em;
 }
-.edit-del-btn{
+
+.edit-del-btn {
     margin: 0 1em;
 }

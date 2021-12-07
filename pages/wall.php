@@ -3,6 +3,7 @@
 <?php include('../components/header.php'); ?>
 
     <link rel="stylesheet" href="../assets/styles/wall.css">
+    <link rel="stylesheet" href="../assets/styles/modal.css">
     <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
           integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
     <script src='../js/wall.js'></script>
@@ -118,41 +119,41 @@
                 }, 2000);
             });
 
-            $('#edit-cancel').click(()=>{
+            $('#edit-cancel').click(() => {
                 $(IdRenderNotice).show();
                 $(IdEditNotice).hide();
             });
         }
 
-        const DeleteNotice = (id) =>{
-            $('#flash-message-1').load("../server/wall/important-notice/important-notice-delete.php",{
-                id : id
+        const DeleteNotice = (id) => {
+            $('#flash-message-1').load("../server/wall/important-notice/important-notice-delete.php", {
+                id: id
             });
             setTimeout(() => {
                 location.reload();
             }, 1000);
         }
 
-        const MarkAsStarred = (id) =>{
-            const star = '#star-div-off-'+id;
-                $('#flash-message-2').load("../server/wall/important-notice/important-notice-star.php",{
-                    id : id
-                },(response) => {
-                    if (response === "done") {
-                        $(star).addClass('star-div-on');
+        const MarkAsStarred = (id) => {
+            const star = '#star-div-off-' + id;
+            $('#flash-message-2').load("../server/wall/important-notice/important-notice-star.php", {
+                id: id
+            }, (response) => {
+                if (response === "done") {
+                    $(star).addClass('star-div-on');
 
-                        setTimeout(() => {
-                            location.reload();
-                        }, 2000);
-                    }
-                });
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
         }
 
-        const UnMarkStarred = (id) =>{
-            const star = '#star-div-off-'+id;
-            $('#flash-message-2').load("../server/wall/important-notice/remove-star.php",{
-                id : id
-            },(response) => {
+        const UnMarkStarred = (id) => {
+            const star = '#star-div-off-' + id;
+            $('#flash-message-2').load("../server/wall/important-notice/remove-star.php", {
+                id: id
+            }, (response) => {
                 if (response === "Okay") {
                     $(star).removeClass('star-div-on');
 
@@ -170,6 +171,26 @@
         const AllPostFilter = () => {
             $('#create-notice-render').load("../server/wall/important-notice/important-notice-render.php");
         }
+
+        const ModalView = (id) => {
+            CurrentViewedNoticeId = id;
+            const modal = '#myModal-' + id;
+            $(modal).css({display: "block"});
+        }
+
+        const ModalClose = (id) => {
+            const modal = '#myModal-' + id;
+            $(modal).css({display: "none"});
+        }
+        // $(window).click(function(e) {
+        //     const id= e.target.id;
+        //     const modal=document.getElementById(id);
+        // //meke target.id === myModal kiyana eke aga number ekak vatenna hadanna.ethakota
+        //     if (e.target.id === 'myModal-23') {
+        //                 modal.style.display = "none";
+        //             }
+        // });
+
     </script>
 
     <div class='main-container'>
@@ -190,8 +211,8 @@
                 <button class='filter-btn btn' id='starred-post' onclick=StarredPostFilter()>Starred</button>
                 <button class='filter-btn btn' id='all-post' onclick=AllPostFilter()>All</button>
             </div>
-          <?php if(isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "TopBoard") {
-              echo "<div class='create-notice-box'>
+            <?php if (isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "TopBoard") {
+                echo "<div class='create-notice-box'>
                 <div class='box-title'>
                     Create Important Notice 
                 </div>
@@ -216,9 +237,8 @@
                     <span id='flash-message' class='flashMsg'></span>
                 </form>
             </div>";
-          }
-
-          ?>
+            }
+            ?>
 
 
             <!--notices -->
