@@ -7,7 +7,7 @@ $From = $_POST['From'];
 $To = $_POST['To'];
 $SubType = $_POST['SubType'];
 
-$query = "SELECT Timestamp, SubType, Amount FROM subscriptionsdone WHERE Email = '{$_SESSION['Email']}'";
+$query = "SELECT Timestamp, SubType, Amount, Status FROM subscriptionsdone WHERE Email = '{$_SESSION['Email']}'";
 
 if (!empty($From)) {
     $query = $query . " AND Timestamp > '{$From}'";
@@ -25,6 +25,7 @@ if (mysqli_num_rows($results) > 0) {
         echo "<tr>
                 <td class='cash-h-1'>".$row["SubType"]."</td>
                 <td class='cash-h-1'>".$row["Amount"]."</td>
+                <td class='cash-h-1'>".$row["Status"]."</td>
                 <td class='cash-h-1'>".$row["Timestamp"]."</td>
                 <td class='cash-h-1'><button class='bank-slip-btn btn'>Bank Slip</button></td>
                </tr>";

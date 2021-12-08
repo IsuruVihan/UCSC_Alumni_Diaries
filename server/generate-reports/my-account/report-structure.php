@@ -33,81 +33,81 @@ if (!empty($subtype)) {
 
 $results = mysqli_query($conn, $query);
 
-ob_end_clean();
-ob_start();
-$pdf = new FPDF();
-$pdf->AddPage();
+if (mysqli_num_rows($results) > 0) {
+    ob_end_clean();
+    ob_start();
+    $pdf = new FPDF();
+    $pdf->AddPage();
 
 //header
-$pdf->Image('../../../assets/images/logo.jpeg', 10, 8, 33);
-$pdf->SetFont('Arial', 'B', 20);
-$pdf->Cell(80);
-$pdf->Cell(50, 20, 'UCSC Alumni Association', 0, 0, 'C');
-$pdf->Ln(20);
-$pdf->SetFont('Arial', 'U', 15);
-$pdf->Cell(207, 30, 'Recharge Account Details', 0, 0, 'C');
-$pdf->Write(35, "\n", '', 0, 'C', true, 0, false, false, 0);
+    $pdf->Image('../../../assets/images/logo.jpeg', 10, 8, 33);
+    $pdf->SetFont('Arial', 'B', 20);
+    $pdf->Cell(80);
+    $pdf->Cell(50, 20, 'UCSC Alumni Association', 0, 0, 'C');
+    $pdf->Ln(20);
+    $pdf->SetFont('Arial', 'U', 15);
+    $pdf->Cell(207, 30, 'Recharge Account Details', 0, 0, 'C');
+    $pdf->Write(35, "\n", '', 0, 'C', true, 0, false, false, 0);
 
 //Description
-$pdf->SetFont('Arial','',12);
-if(!empty($from) || !empty($to) || !empty($subtype)){
-    $pdf->Cell(20, 10, 'User Name:');
-    $pdf->Cell(15);
-    $pdf->Cell(20, 10, $name);
-    $pdf->Cell(60);
-    $pdf->Cell(20, 10, 'From:');
-    $pdf->Cell(15);
-    $pdf->Cell(20, 10, $from);
-    $pdf->Ln();
-
-    $pdf->Cell(20, 10, 'User Email:');
-    $pdf->Cell(15);
-    $pdf->Cell(20, 10,$email);
-    $pdf->Cell(60);
-    $pdf->Cell(20, 10, 'To:');
-    $pdf->Cell(15);
-    $pdf->Cell(20, 10,$to);
-    $pdf->Ln();
-
-    $pdf->Cell(20, 10, 'Time:');
-    $pdf->Cell(15);
-    $pdf->Cell(20, 10,$date);
-    $pdf->Cell(60);
-    $pdf->Cell(20, 10, 'Subscription:');
-    $pdf->Cell(15);
-    $pdf->Cell(20, 10,$subtype);
-    $pdf->Ln();
-    $pdf->Write(15, "\n", '', 0, 'C', true, 0, false, false, 0);
-}else{
     $pdf->SetFont('Arial','',12);
-    $pdf->Cell(20, 10, 'User Name:');
-    $pdf->Cell(20);
-    $pdf->Cell(20, 10,$name);
+    if(!empty($from) || !empty($to) || !empty($subtype)){
+        $pdf->Cell(20, 10, 'User Name:');
+        $pdf->Cell(15);
+        $pdf->Cell(20, 10, $name);
+        $pdf->Cell(60);
+        $pdf->Cell(20, 10, 'From:');
+        $pdf->Cell(15);
+        $pdf->Cell(20, 10, $from);
+        $pdf->Ln();
+
+        $pdf->Cell(20, 10, 'User Email:');
+        $pdf->Cell(15);
+        $pdf->Cell(20, 10,$email);
+        $pdf->Cell(60);
+        $pdf->Cell(20, 10, 'To:');
+        $pdf->Cell(15);
+        $pdf->Cell(20, 10,$to);
+        $pdf->Ln();
+
+        $pdf->Cell(20, 10, 'Time:');
+        $pdf->Cell(15);
+        $pdf->Cell(20, 10,$date);
+        $pdf->Cell(60);
+        $pdf->Cell(20, 10, 'Subscription:');
+        $pdf->Cell(15);
+        $pdf->Cell(20, 10,$subtype);
+        $pdf->Ln();
+        $pdf->Write(15, "\n", '', 0, 'C', true, 0, false, false, 0);
+    }else{
+        $pdf->SetFont('Arial','',12);
+        $pdf->Cell(20, 10, 'User Name:');
+        $pdf->Cell(20);
+        $pdf->Cell(20, 10,$name);
+        $pdf->Ln();
+
+        $pdf->Cell(20, 10, 'User Email:');
+        $pdf->Cell(20);
+        $pdf->Cell(20, 10,$email);
+        $pdf->Ln();
+
+        $pdf->Cell(20, 10, 'Time:');
+        $pdf->Cell(20);
+        $pdf->Cell(20, 10,$date);
+        $pdf->Ln();
+        $pdf->Write(15, "\n", '', 0, 'C', true, 0, false, false, 0);
+    }
+
+    //table header
+    $pdf->SetFont('Arial','B',12);
+    $pdf->Cell(50,10, 'Subscription Type',1,0,'C');
+    $pdf->Cell(30,10, 'Amount',1,0,'C');
+    $pdf->Cell(70,10, 'Timestamp',1,0,'C');
+    $pdf->Cell(40,10, 'Donated From',1, 0, 'C');
     $pdf->Ln();
 
-    $pdf->Cell(20, 10, 'User Email:');
-    $pdf->Cell(20);
-    $pdf->Cell(20, 10,$email);
-    $pdf->Ln();
+    $pdf->SetFont('Arial','',11);
 
-    $pdf->Cell(20, 10, 'Time:');
-    $pdf->Cell(20);
-    $pdf->Cell(20, 10,$date);
-    $pdf->Ln();
-    $pdf->Write(15, "\n", '', 0, 'C', true, 0, false, false, 0);
-}
-
-//table header
-$pdf->SetFont('Arial','B',12);
-$pdf->Cell(50,10, 'Subscription Type',1,0,'C');
-$pdf->Cell(30,10, 'Amount',1,0,'C');
-$pdf->Cell(70,10, 'Timestamp',1,0,'C');
-$pdf->Cell(40,10, 'Donated From',1, 0, 'C');
-$pdf->Ln();
-
-$pdf->SetFont('Arial','',11);
-
-if (mysqli_num_rows($results) > 0) {
     while ($row = mysqli_fetch_assoc($results)) {
         $SubType = $row['SubType'];
         $Amount = $row['Amount'];
@@ -120,9 +120,9 @@ if (mysqli_num_rows($results) > 0) {
         $pdf->Cell(40,10, $DonatedFrom,1, 0, 'C');
         $pdf->Ln();
     }
+
+    $pdf->Output();
+    ob_end_flush();
 } else {
     echo "No data";
 }
-
-$pdf->Output();
-ob_end_flush();
