@@ -19,16 +19,110 @@
                 Project_Name:project_name
             });
         });
+        //cash donation 
+        $('#cancel-cash').click(()=>{
+            $('#cash-donor,#cash-email,#cash-amount,#cash-file').removeClass('input-error,input-ok');
+            $('#cash-donor,#cash-email,#cash-amount,#cash-file').val(''); 
+        });
+        $('#cash-donation').submit((event)=>{
+           event.preventDefault();
+                const url = '../server/our-projects/cash-donation.php';
+                const form = document.getElementById('cash-donation');
+                const files = document.querySelector('[type=file]').files;
+                const formData = new FormData(document.getElementById('cash-donation'));
+
+                fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                }).then((response) => {
+                    console.log(response);
+                }).catch((error) => {
+                    console.log(error);
+                });
+           const cash_donor = $('#cash-donor').val();
+           const cash_email = $('#cash-email').val();
+           const cash_amount = $('#cash-amount').val();
+
+           let isComplete = true, isValidEmail=true;
+
+           $('#cash-donor, #cash-email, #cash-amount').removeClass('input-error, input-ok');
+
+           if(cash_donor == ''){
+            $('#cash-donor').addClass('input-error');
+            isComplete = false;     
+           }else{
+               $('#cash-donor').addClass('input-ok');
+           }
+           if(cash_email == ''){
+            $('#cash-email').addClass('input-error');
+            isComplete = false;     
+           }else{
+               $('#cash-email').addClass('input-ok');
+           }
+           if(cash_amount == ''){
+            $('#cash-amount').addClass('input-error');
+            isComplete = false;     
+           }else{
+               $('#cash-amount').addClass('input-ok');
+           }
+           if (isComplete) {
+                if (cash_email.length <= 2) {
+                    isValidEmail = false;
+                } else {
+                    if (cash_email.indexOf("@") == -1) {
+                        isValidEmail = false;
+                    } else {
+                        var parts = cash_email.split("@");
+                        var dot = parts[1].indexOf(".");
+                        var len = parts[1].length;
+                        var dotSplits = parts[1].split(".");
+                        var dotCount = dotSplits.length - 1;
+                        if (dot == -1 || dot < 2 || dotCount > 2) {
+                            isValidEmail = false;
+                        } else {
+                            for (var i = 0; i < dotSplits.length; i++) {
+                                if (dotSplits[i].length == 0) {
+                                    isValidEmail = false;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                if(!isValidEmail){
+                    $('#donation-message').html("Email is not valid");
+                    $('#donation-message').addClass('message-error');
+                    $('#donation-message').removeClass('message-success');
+                    $('#cash-email').removeClass('input-ok');
+                    $('#cash-email').addClass('input-error');
+                }else{
+                    let currency = document.getElementById('cash-amount').value;
+
+                    if(currency <= 0){
+                    $('#donation-message').html("Enter a value greater than 0");
+                    $('#donation-message').addClass('message-error');
+                    $('#donation-message').removeClass('message-success');
+                    $('#cash-amount').removeClass('input-ok');
+                    $('#cash-amount').addClass('input-error');
+                    }else{
+                        $('#donation-message').html('Donation has been accepted');
+                        $('#donation-message').addClass('message-success');
+                    }
+                }
+           
+            }else{
+                $('#donation-message').html('All fields are required');
+                $('#donation-message').addClass('message-error');  
+            }
+        });
    
     });
     const ViewProjectDetails = (id) => {
         $('#ProjectDetails').load("../server/our-projects/project-details.php", {
             Id: id
         });
-       
-    }    
+    } 
     
-
 </script>
 
 <div class='main-container'>
@@ -144,7 +238,7 @@
     <div class='card container02'>
         <div class='sub-container' id='ProjectDetails'>
             <div class='section-01'>
-                <div class='title'>
+               <!-- <div class='title'>
                     Project Name
                 </div>
                 <div class='filter-01'>
@@ -164,8 +258,8 @@
                 </div>
                 <div class='project-description'>
                     Project Description Comes here....
-                </div>
-                <div class='scroll-02'>
+                </div> -->
+                <!-- <div class='scroll-02'> -->
                     <!-- <div class='list-01'>
                         <p class='project-name'>Member 01</p>
                     </div>
@@ -193,25 +287,26 @@
                     <div class='list-01'>
                         <p class='project-name'>Member 09</p>
                     </div> -->
-                </div>
+                <!-- </div> -->
             </div>
-            <div class=' section-02'>
-                <div class='container-01'>
-                    <div class='title'>
+          
+                <!-- <form class='container-01' id='cash-donation' name='cash-donation' methods='post' enctype='multipart/form-data'>  
+                    <div class='title'> <div class=' section-02' id='section-02'>
                         Donate Cash
                     </div>
                     <div class='col-03'>
-                        <input class='input-field text-field' type='text' placeholder='Donar Name'/>
-                        <input class='input-field text-field' type='text' placeholder='Donar Email'/>
-                        <input class='input-field text-field' type='text' placeholder='Amount'/>
-                        <input class='input-field text-field' type='text' placeholder='Bank Slip Attachment'/>
+                        <input class='input-field text-field' id='cash-donor' name='cash-donor' type='text' placeholder='Donor Name'/>
+                        <input class='input-field text-field' id='cash-email' name='cash-email' type='text' placeholder='Donor Email'/>
+                        <input class='input-field text-field' id='cash-amount' name='cash-amount' type='text' placeholder='Amount'/>
+                        <input class='attach' type='file' name='file[]' id='cash-file' placeholder='Bank Slip Attachment'/>
                     </div>
+                    <p id='donation-message'></p>
                     <div class='col-04'>
-                        <button class='submit-btn btn'>Submit</button>
-                        <button class='cancel-btn btn'>Cancel</button>
+                        <input id='submit-cash' name='submit' type='submit' value='Submit' class='submit-btn btn'/>
+                        <button class='cancel-btn btn' id ='cancel-cash'>Cancel</button>
                     </div>
-                </div>
-                <div class='container-02'>
+                </form>  -->
+                <!-- <div class='container-02'>
                     <p class='project-name'>Donate via pay here</p>
                     <button class='pay-btn btn'>Pay here</button>  
                 </div>
@@ -223,14 +318,14 @@
                         <input class='input-field text-field' type='text' placeholder='Donar Name'/>
                         <input class='input-field text-field' type='text' placeholder='Donar Email'/>
                         <input class='input-field text-field' type='text' placeholder='Item'/>
-                        <input class='input-field text-field' type='text' placeholder='Quantity'/>
+                        <input class='attach' type='file' name = 'files[]' placeholder='Quantity'/>
                     </div>
                     <div class='col-04'>
                         <button class='submit-btn btn'>Submit</button>
                         <button class='cancel-btn btn'>Cancel</button>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </div>
     </div>
 </div>

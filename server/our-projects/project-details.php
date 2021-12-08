@@ -79,26 +79,27 @@ echo"
         </div>
     </div>
   ";
-    echo "    
-    <div class=' section-02'>
-        <div class='container-01'>
+  echo"
+  <div class=' section-02' id='section-02'>
+        <form class='container-01' id='cash-donation' name='cash-donation' methods='post' enctype='multipart/form-data'>  
             <div class='title'>
                 Donate Cash
             </div>
             <div class='col-03'>
-                <input class='input-field text-field' type='text' placeholder='Donar Name'/>
-                <input class='input-field text-field' type='text' placeholder='Donar Email'/>
-                <input class='input-field text-field' type='text' placeholder='Amount'/>
-                <input class='input-field text-field' type='text' placeholder='Bank Slip Attachment'/>
+                <input class='input-field text-field' id='cash-donor' name='cash-donor' type='text' placeholder='Donor Name'/>
+                <input class='input-field text-field' id='cash-email' name='cash-email' type='text' placeholder='Donor Email'/>
+                <input class='input-field text-field' id='cash-amount' name='cash-amount' type='text' placeholder='Amount'/>
+                <input class='attach' type='file' name='file[]' id='cash-file' placeholder='Bank Slip Attachment'/>
             </div>
+                <p id='donation-message'></p>
             <div class='col-04'>
-                <button class='submit-btn btn'>Submit</button>
-                <button class='cancel-btn btn'>Cancel</button>
+                <input id='submit-cash' name='submit' type='submit' value='Submit' class='submit-btn btn'/>
+                <button class='cancel-btn btn' id ='cancel-cash'>Cancel</button>
             </div>
-        </div>
+        </form> 
         <div class='container-02'>
             <p class='project-name'>Donate via pay here</p>
-            <!-- <button class='pay-btn btn'>Pay here</button>   -->
+            <button class='pay-btn btn'>Pay here</button>  
         </div>
         <div class='container-03'>
             <div class='title'>
@@ -108,16 +109,15 @@ echo"
                 <input class='input-field text-field' type='text' placeholder='Donar Name'/>
                 <input class='input-field text-field' type='text' placeholder='Donar Email'/>
                 <input class='input-field text-field' type='text' placeholder='Item'/>
-                <input class='input-field text-field' type='text' placeholder='Quantity'/>
+                <input class='attach' type='file' name = 'files[]' placeholder='Quantity'/>
             </div>
             <div class='col-04'>
                 <button class='submit-btn btn'>Submit</button>
                 <button class='cancel-btn btn'>Cancel</button>
             </div>
-        </div>
-    </div>
-";
-
+        </div> 
+     </div>   
+ ";     
 }
 
    
