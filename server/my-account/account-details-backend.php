@@ -12,8 +12,8 @@ if (empty($address) || empty($contact)) {
     if (isset($_SESSION)) {
         $query = "
                 UPDATE registeredmembers
-                SET Address='${address}', ContactNumber='${contact}'
-                WHERE Email='${_SESSION['Email']}'
+                SET Address='{$address}', ContactNumber='{$contact}'
+                WHERE Email='{$_SESSION['Email']}'
             ";
         if (mysqli_query($conn, $query)) {
             $_SESSION['Address'] = $address;

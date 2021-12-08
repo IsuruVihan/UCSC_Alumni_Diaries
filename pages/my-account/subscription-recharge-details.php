@@ -63,6 +63,7 @@
             <tr>
                 <th class='cash-h-1'>Sub. Type</th>
                 <th class='cash-h-1'>Amount</th>
+                <th class='cash-h-1'>Status</th>
                 <th class='cash-h-1'>Time</th>
                 <th class='cash-h-1'>Bill</th>
             </tr>
@@ -74,67 +75,14 @@
     </div>
 </div>
 
+<script>
+   const  ShowModal = (id) => {
+       const modal = document.getElementById("bank-slip-modal-" + id);
+        modal.style.display = "block";
+    }
 
-
-
-
-
-
-<!--        <div class='recharge-details-container' id='recharge-details-container'>-->
-<!--            <div class='recharge-details-item'>-->
-<!--                <div class=section-14>-->
-<!--                    <div class='section-12'>-->
-<!--                        Subscription Type-->
-<!--                    </div>-->
-<!--                    <div class='section-12'>-->
-<!--                        Amount-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class='section-14'>-->
-<!--                    <div class='section-12'>-->
-<!--                        Time-->
-<!--                    </div>-->
-<!--                    <div class='section-13'>-->
-<!--                        <button class='bank-slip-btn btn'>Bank Slip</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class='recharge-details-item'>-->
-<!--                <div class=section-14>-->
-<!--                    <div class='section-12'>-->
-<!--                        Subscription Type-->
-<!--                    </div>-->
-<!--                    <div class='section-12'>-->
-<!--                        Amount-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class='section-14'>-->
-<!--                    <div class='section-12'>-->
-<!--                        Time-->
-<!--                    </div>-->
-<!--                    <div class='section-13'>-->
-<!--                        <button class='bank-slip-btn btn'>Bank Slip</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class='recharge-details-item'>-->
-<!--                <div class=section-14>-->
-<!--                    <div class='section-12'>-->
-<!--                        Subscription Type-->
-<!--                    </div>-->
-<!--                    <div class='section-12'>-->
-<!--                        Amount-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class='section-14'>-->
-<!--                    <div class='section-12'>-->
-<!--                        Time-->
-<!--                    </div>-->
-<!--                    <div class='section-13'>-->
-<!--                        <button class='bank-slip-btn btn'>Bank Slip</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+   const HideModal = (id) => {
+       const modal = document.getElementById("bank-slip-modal-" + id);
+        modal.style.display = "none";
+    }
+</script>

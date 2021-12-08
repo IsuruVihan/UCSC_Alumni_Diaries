@@ -1,31 +1,79 @@
 <?php
+session_start();
+
 include('../../db/db-conn.php');
-include('../../server/session.php');
+$conn = mysqli_connect("localhost", "root", "", "ucsc_alumni_diaries");
 
-$sub_type = $_POST['sub_type'];
+$query1 = "SELECT Amount FROM subscriptiontypes WHERE TypeName='Annually'";
+$result1 = mysqli_query($conn, $query1);
 
-$query = "SELECT MAX(Timestamp) FROM subscriptionsdone WHERE Email = '{$_SESSION['Email']}' AND isAccepted = '1'";
-$result=mysqli_query($conn, $query);
-$row=mysqli_fetch_assoc($result);
-$largestValue = $row['MAX(Timestamp)'];
+$query2 = "SELECT Amount FROM subscriptiontypes WHERE TypeName='Monthly'";
+$result2 = mysqli_query($conn, $query2);
 
-$resultExplode = explode(' ', $largestValue);
-$lastPaymentDate = $resultExplode[0];
+if($_SESSION['SubscriptionType'] == 'Annually'){
+    while($row = mysqli_fetch_assoc($result1)) {
+        $Amount = $row["Amount"];
+    }
 
-$DateBeforeAWeek = date("Y-m-d", strtotime("-7 day"));
-
-if($lastPaymentDate < $DateBeforeAWeek){
-    echo"<span class='error-msg1'>Subscription Type can be changed only within one week of payment</span>";
-} elseif(empty($sub_type)) {
-    echo "<span class='error-msg1'>Select a subscription type</span>";
-}elseif($sub_type == "{$_SESSION['SubscriptionType']}"){
-    echo "<span class='error-msg1'>It is the existing subscription type</span>";
-}else{
-    $_SESSION['SubscriptionType'] = $sub_type;
-    $query1 = "UPDATE registeredmembers
-               SET subscriptiontype = '$sub_type'
-               WHERE Email = '{$_SESSION['Email']}'";
-    $result1=mysqli_query($conn, $query1);
-
-    echo "<span class='success-msg1'>Subscription type has been changed</span>";
+} else{
+    while($row = mysqli_fetch_assoc($result2)) {
+        $Amount = $row["Amount"];
+    }
 }
+
+
+$file = $_FILES['bank-slip'];
+$fileName = $_FILES['bank-slip']['name'];
+$fileTmpName = $_FILES['bank-slip']['tmp_name'];
+$fileSize = $_FILES['bank-slip']['size'];
+$fileError = $_FILES['bank-slip']['error'];
+$fileType = $_FILES['bank-slip']['type'];
+$fileExt = explode('.', $fileName);
+$fileActualExt = strtolower(end($fileExt));
+$allowedExt = array('jpg', 'jpeg', 'png');
+$allowedMaxSize = 100000;
+$fileNameNew = uniqid('', true) . "." . $fileActualExt;
+
+$fileDestination = '../../uploads/recharge-account-bank-slips/' . $fileNameNew;
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($fileDestination,PATHINFO_EXTENSION));
+
+if ($fileName === ''){
+    echo "Select an image before submitting. ";
+}
+
+// Check file size
+elseif ($_FILES["bank-slip"]["size"] > 5000000) {
+    echo "Sorry, your file is too large. ";
+    $uploadOk = 0;
+}
+
+//Allow certain file formats
+elseif($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed. ";
+    $uploadOk = 0;
+}
+
+//Check if $uploadOk is set to 0 by an error
+elseif ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded. ";
+    //if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($fileTmpName, $fileDestination)) {
+//        $fileDestination = '../../uploads/profile-pics/' . $fileNameNew;
+        $newFileSrc = $fileNameNew;
+        $fileName = $_FILES['bank-slip']['tmp_name'];
+
+//        $_SESSION['PicSrc'] = $newFileSrc;
+
+        $query = "INSERT INTO subscriptionsdone (`Email`, `SubType`, `Amount`, `DonatedFrom`, `PayslipSrc`) 
+                  VALUES ('{$_SESSION['Email']}','{$_SESSION['SubscriptionType']}','{$Amount}','Bank','{$fileNameNew}')";
+        $result = mysqli_query($conn, $query);
+
+        echo "The file " . htmlspecialchars(basename($_FILES["bank-slip"]["name"])) . " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file. ";
+    }
+}
+

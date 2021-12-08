@@ -16,7 +16,8 @@
             const address = $('#user-address').val();
             const contact = $('#user-contact').val();
 
-            $('#user-address, #user-contact').removeClass();
+            $('#user-address').removeClass('input-error1', 'input-ok1');
+            $(' #user-contact').removeClass('input-error2', 'input-ok2');
 
             if (address === '') {
                 $('#user-address').addClass('input-error1');
@@ -29,14 +30,16 @@
                 $('#user-contact').addClass('input-ok2');
             }
 
-            $('#flash-message').load("../../server/my-account/account-details-backend.php",
-            (response) => {
-                if (response==="1") {
+            $('#flash-message').load("../../server/my-account/account-details-backend.php", {
+                address: address,
+                contact: contact
+            }, (response) => {
+                if (response === "1") {
                     setTimeout(() => window.history.go(), 1);
                 }
             });
         });
-    });
+    })
 </script>
 
 <div class='my-account-main-container' id='my-account-main-container'>
@@ -136,42 +139,7 @@
             <button class='edit-details-btn btn' id='edit-btn'>Edit Details</button>
         </div>
         <div class='container-5' id='container-5'>
-<!--            <div class='container-3'>-->
-<!--                <div class='section-4-1'>-->
-<!--                    First Name-->
-<!--                </div>-->
-<!--                <input class='input5' type='text' placeholder='Enter First Name'/>-->
-<!--                <div class='section-4-1'>-->
-<!--                    Full Name-->
-<!--                </div>-->
-<!--                <input class='input5' type='text' placeholder='Enter Full Name'/>-->
-<!--                <div class='section-4-1'>-->
-<!--                    Gender-->
-<!--                </div>-->
-<!--                <select class='input5'>-->
-<!--                    <option value="" disabled selected hidden>Enter Gender</option>-->
-<!--                    <option value='male'>Male</option>-->
-<!--                    <option value='female'>Female</option>-->
-<!--                </select>-->
-<!--                <div class='section-4-1'>-->
-<!--                    NIC-->
-<!--                </div>-->
-<!--                <input class='input5' type='text' placeholder='Enter NIC'/>-->
-<!--                <div class='section-4-1'>-->
-<!--                    Batch-->
-<!--                </div>-->
-<!--                <select class='input5'>-->
-<!--                    <option value="" disabled selected hidden>Select Batch</option>-->
-<!--                    <option value='2018/2019'>2018/2019</option>-->
-<!--                    <option value='2018/2019'>2019/2020</option>-->
-<!--                    <option value='2018/2019'>2020/2021</option>-->
-<!--                </select>-->
-<!--            </div>-->
             <div class='container-3'>
-<!--                <div class='section-4-1'>-->
-<!--                    Last Name-->
-<!--                </div>-->
-<!--                <input class='input5' type='text' placeholder='Enter Last Name'/>-->
                 <div class='section-4-1'>
                     Address
                 </div>
@@ -181,10 +149,6 @@
                 </div>
                 <input class='input5' type='text' id='user-contact'
                        value='<?php echo "${_SESSION['ContactNumber']}"; ?>'/>
-<!--                <div class='section-4-1'>-->
-<!--                    Email-->
-<!--                </div>-->
-<!--                <input class='input5' type='text' placeholder='Enter Email Address'/>-->
                 <br />
                 <div class='flash-message' id='flash-message'></div>
             </div>

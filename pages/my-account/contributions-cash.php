@@ -19,6 +19,7 @@
         <tr>
             <th class='cash-h-1'>Project Name</th>
             <th class='cash-h-1'>Amount</th>
+            <th class='cash-h-1'>Status</th>
             <th class='cash-h-1'>Timestamp</th>
         </tr>
     </thead>

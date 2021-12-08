@@ -22,6 +22,3 @@ if (mysqli_num_rows($results) > 0 ) {
 } else {
     echo " ";
 }
-
-
-
