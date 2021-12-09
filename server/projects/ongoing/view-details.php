@@ -33,6 +33,12 @@
     $query8 = "SELECT SpentAmount FROM projectcashspendings WHERE ProjectId='{$Id}' AND Status='Paid'";
     $query9 = "SELECT * FROM projectcashspendings WHERE ProjectId='{$Id}'";
     $query10 = "SELECT SpentAmount, Description, BillSrc, Timestamp FROM projectcashspendings WHERE ProjectId='{$Id}'";
+    $query11 = "
+        SELECT Id, ItemName, Quantity, SpentQuantity FROM projectitems
+        INNER JOIN projectitemspendings
+        ON projectitems.Id = projectitemspendings.ItemId
+        WHERE ProjectId='{$Id}'
+    ";
     
     $results = mysqli_query($conn, $query);
     $results2 = mysqli_query($conn, $query2);
@@ -44,6 +50,7 @@
     $results8 = mysqli_query($conn, $query8);
     $results9 = mysqli_query($conn, $query9);
     $results10 = mysqli_query($conn, $query10);
+    $results11 = mysqli_query($conn, $query11);
     
     $isCommitteeMember = mysqli_num_rows($results2) > 0;
     $isCoordinator = mysqli_num_rows($results3) > 0;
@@ -637,12 +644,30 @@
                                         class='items-iframe-link left items-clicked-link'
                                         onclick=VisitLinkItem('l-1-2')
                                     >Summary</div>
+        ";
+        
+        if ($isCoordinator) {
+            echo "
                                     <div
                                         id='l-2-2'
                                         href='./items/spend.php'
                                         class='items-iframe-link'
                                         onclick=VisitLinkItem('l-2-2')
                                     >Spend</div>
+            ";
+        } else {
+            echo "
+                                    <div
+                                        id='l-2-2'
+                                        href='./items/spend.php'
+                                        class='items-iframe-link'
+                                        onclick=VisitLinkItem('l-2-2')
+                                        style='display: none'
+                                    >Spend</div>
+            ";
+        }
+        
+        echo "
                                     <div
                                         id='l-3-2'
                                         href='./items/spend-approvals.php'
@@ -670,12 +695,28 @@
                                                 <th class='item-available-h-1'>Available Qty.</th>
                                                 <th class='item-available-h-5'>Spent Qty.</th>
                                             </tr>
+        ";
+        
+        if (mysqli_num_rows($results11) > 0) {
+            while ($row11 = mysqli_fetch_assoc($results11)) {
+                echo "
                                             <tr>
-                                                <td>127</td>
-                                                <td>Dell Laptop</td>
-                                                <td>3</td>
-                                                <td>5</td>
+                                                <td>{$row11['Id']}</td>
+                                                <td>{$row11['ItemName']}</td>
+                                                <td>{$row11['Quantity']}</td>
+                                                <td>{$row11['SpentQuantity']}</td>
                                             </tr>
+                ";
+            }
+        } else {
+            echo "
+                                            <tr>
+                                                <td colspan='4'>No data</td>
+                                            </tr>
+            ";
+        }
+        
+        echo "
                                         </table>
                                     </div>
                                     <form class='item-spend-spend' id='items-spend'>
