@@ -38,9 +38,9 @@
                                     move_uploaded_file($fileTmpName, $fileDestination);
                     
                                     $query = "
-                                    INSERT INTO projectcashspendings (ProjectId, SpentAmount, Description, BillSrc)
-                                    VALUES ('${pid}', '${amount}', '${description}', '${fileNameNew}')
-                                ";
+                                        INSERT INTO projectcashspendings (ProjectId, SpentAmount, Description, BillSrc)
+                                        VALUES ('${pid}', '${amount}', '${description}', '${fileNameNew}')
+                                    ";
                                     if (mysqli_query($conn, $query)) {
                                         $messages = "Your cash spend request has been submitted";
                                         echo "Your cash spend request has been submitted";

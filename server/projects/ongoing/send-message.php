@@ -5,11 +5,11 @@
     
     $ProjectId = $_POST['ProjectId'];
     $SenderEmail = $_POST['SenderEmail'];
-    $Message = $_POST['Message'];
+    $Message = str_replace("'", "\'", $_POST['Message']);
     
     $query = "
         INSERT INTO committeechatmessages (ProjectId, SenderEmail, Message, PicSrc)
-        VALUES ('$ProjectId', '$SenderEmail', '$Message', NULL)
+        VALUES ('{$ProjectId}', '{$SenderEmail}', '{$Message}', NULL)
     ";
     mysqli_query($conn, $query);
     

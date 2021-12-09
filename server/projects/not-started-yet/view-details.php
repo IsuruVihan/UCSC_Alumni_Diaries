@@ -14,7 +14,9 @@
     $query4 = "SELECT Email FROM committeemembers WHERE ProjectId='{$Id}' AND Type='Coordinator'";
     $results4 = mysqli_query($conn, $query4);
     
-    $query6 = "SELECT Email, FirstName, LastName, Batch FROM registeredmembers WHERE Availability='1'";
+    $query6 = "
+        SELECT Email, FirstName, LastName, Batch FROM registeredmembers WHERE Availability='1' AND AccType='Member'
+    ";
     $results6 = mysqli_query($conn, $query6);
     $results7 = mysqli_query($conn, $query6);
     

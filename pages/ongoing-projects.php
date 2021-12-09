@@ -1,5 +1,6 @@
 <?php include('../server/session.php'); ?>
 
+<link rel='stylesheet' href='../assets/styles/ongoing_projects-modal.css' />
 <link rel='stylesheet' href='../assets/styles/ongoing_projects.css' />
 <link rel='stylesheet' href='../assets/styles/ongoing-projects-details.css' />
 <link rel='stylesheet' href='../assets/styles/ongoing-projects-committee.css' />
@@ -66,6 +67,44 @@
             ChatMessageId: id
         });
     }
+
+    const OpenModal = (ModalId) => {
+        const Modal = document.getElementById("cash-spend-approval-attachment-" + ModalId);
+        Modal.style.display = "block";
+    }
+    
+    const CloseModal = (ModalId) => {
+        const Modal = document.getElementById("cash-spend-approval-attachment-" + ModalId);
+        Modal.style.display = "none";
+    }
+
+    const AcceptCashSpendRequest = (data) => {
+        $('#cash-approvals').load("../server/projects/ongoing/accept-cash-spend-request.php", {
+            ProjectId: data.split(',')[0],
+            RequestId: data.split(',')[1]
+        });
+    }
+
+    const RejectCashSpendRequest = (data) => {
+        $('#cash-approvals').load("../server/projects/ongoing/reject-cash-spend-request.php", {
+            ProjectId: data.split(',')[0],
+            RequestId: data.split(',')[1]
+        });
+    }
+    
+    const DeleteCashSpendRequest = (data) => {
+        $('#cash-approvals').load("../server/projects/ongoing/delete-cash-spend-request.php", {
+            ProjectId: data.split(',')[0],
+            RequestId: data.split(',')[1]
+        });
+    }
+
+    const PayCash = (data) => {
+        $('#cash-approvals').load("../server/projects/ongoing/pay-cash.php", {
+            ProjectId: data.split(',')[0],
+            RequestId: data.split(',')[1]
+        });
+    }
 </script>
 
 <div class='main-container'>
@@ -107,6 +146,7 @@
     <div class='section-2' id='ongoing-projects-view-details-section'></div>
 </div>
 
+<script src='../js/ongoing-projects-modal.js'></script>
 <script src='../js/ongoing-projects.js'></script>
 <script src='../js/ongoing-projects-assets.js'></script>
 <script src='../js/ongoing-projects-assets-items.js'></script>
