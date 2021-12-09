@@ -32,6 +32,7 @@
     $query7 = "SELECT Amount FROM projectcash WHERE ProjectId='{$Id}'";
     $query8 = "SELECT SpentAmount FROM projectcashspendings WHERE ProjectId='{$Id}' AND Status='Paid'";
     $query9 = "SELECT * FROM projectcashspendings WHERE ProjectId='{$Id}'";
+    $query10 = "SELECT SpentAmount, Description, BillSrc, Timestamp FROM projectcashspendings WHERE ProjectId='{$Id}'";
     
     $results = mysqli_query($conn, $query);
     $results2 = mysqli_query($conn, $query2);
@@ -42,6 +43,7 @@
     $results7 = mysqli_query($conn, $query7);
     $results8 = mysqli_query($conn, $query8);
     $results9 = mysqli_query($conn, $query9);
+    $results10 = mysqli_query($conn, $query10);
     
     $isCommitteeMember = mysqli_num_rows($results2) > 0;
     $isCoordinator = mysqli_num_rows($results3) > 0;
@@ -574,12 +576,54 @@
                                             <th class='spent-records-h-3'>Bill</th>
                                             <th class='spent-records-h-5'>Timestamp</th>
                                         </tr>
+        ";
+        
+        if (mysqli_num_rows($results10) > 0) {
+            $modalId2 = 0;
+            while ($row10 = mysqli_fetch_assoc($results10)) {
+                echo "
+                                        <div id='cash-paid-attachment-{$modalId2}' class='modal'>
+                                            <div class='modal-content'>
+                                                <span class='close' onclick=CloseModal2('{$modalId2}')>&times;</span>
+                                                <img
+                                                    src='../uploads/projects-spend-cash-quotations/{$row10['BillSrc']}'
+                                                    alt='quotation'
+                                                    height='95%'
+                                                /><br/>
+                                                <a
+                                                    href='../uploads/projects-spend-cash-quotations/{$row10['BillSrc']}'
+                                                    download
+                                                >Download</a>
+                                            </div>
+                                        </div>
+                ";
+                
+                echo "
                                         <tr>
-                                            <td>600000</td>
-                                            <td>i3 8GB Dell Laptop * 4</td>
-                                            <td>Download</td>
-                                            <td>2021-10-08</td>
+                                            <td>{$row10['SpentAmount']}</td>
+                                            <td>{$row10['Description']}</td>
+                                            <td>
+                                                <button
+                                                    id='myBtn'
+                                                    class='btn view-btn'
+                                                    onclick=OpenModal2('{$modalId2}')
+                                                    style='width: 100%'
+                                                >View</button>
+                                            </td>
+                                            <td>{$row10['Timestamp']}</td>
                                         </tr>
+                ";
+                $modalId2++;
+            }
+        } else {
+            echo "
+                                        <tr>
+                                            <td colspan='4'>No data</td>
+                                        </tr>
+            ";
+        }
+        
+        echo "
                                     </table>
                                 </div>
                             </div>

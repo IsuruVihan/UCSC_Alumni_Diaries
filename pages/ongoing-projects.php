@@ -78,6 +78,16 @@
         Modal.style.display = "none";
     }
 
+    const OpenModal2 = (ModalId) => {
+        const Modal = document.getElementById("cash-paid-attachment-" + ModalId);
+        Modal.style.display = "block";
+    }
+
+    const CloseModal2 = (ModalId) => {
+        const Modal = document.getElementById("cash-paid-attachment-" + ModalId);
+        Modal.style.display = "none";
+    }
+
     const AcceptCashSpendRequest = (data) => {
         $('#cash-approvals').load("../server/projects/ongoing/accept-cash-spend-request.php", {
             ProjectId: data.split(',')[0],
