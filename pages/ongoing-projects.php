@@ -115,6 +115,17 @@
             RequestId: data.split(',')[1]
         });
     }
+    
+    const ChangeSelectedItem = () => {
+        const SelectedItem = $('#selected-item-id').val();
+        // alert(SelectedItem);
+        $('#selected-item-name').load("../server/projects/ongoing/selected-item-name.php", {
+            Id: SelectedItem
+        });
+        $('#selected-item-available').load("../server/projects/ongoing/selected-item-available.php", {
+            Id: SelectedItem
+        });
+    }
 </script>
 
 <div class='main-container'>

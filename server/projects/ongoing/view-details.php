@@ -35,10 +35,11 @@
     $query10 = "SELECT SpentAmount, Description, BillSrc, Timestamp FROM projectcashspendings WHERE ProjectId='{$Id}'";
     $query11 = "
         SELECT Id, ItemName, Quantity, SpentQuantity FROM projectitems
-        INNER JOIN projectitemspendings
+        LEFT JOIN projectitemspendings
         ON projectitems.Id = projectitemspendings.ItemId
         WHERE ProjectId='{$Id}'
     ";
+    $query12 = "SELECT Id, ItemName FROM projectitems WHERE ProjectId='{$Id}' AND Quantity > '0'";
     
     $results = mysqli_query($conn, $query);
     $results2 = mysqli_query($conn, $query2);
@@ -51,6 +52,7 @@
     $results9 = mysqli_query($conn, $query9);
     $results10 = mysqli_query($conn, $query10);
     $results11 = mysqli_query($conn, $query11);
+    $results12 = mysqli_query($conn, $query12);
     
     $isCommitteeMember = mysqli_num_rows($results2) > 0;
     $isCoordinator = mysqli_num_rows($results3) > 0;
@@ -719,24 +721,48 @@
         echo "
                                         </table>
                                     </div>
-                                    <form class='item-spend-spend' id='items-spend'>
+                                    <form
+                                        action='../server/projects/ongoing/create-item-spend-request.php'
+                                        method='post'
+                                        enctype='multipart/form-data'
+                                        class='item-spend-spend'
+                                        id='items-spend'
+                                    >
                                         <div class='item-spend-parent-group'>
                                             <div class='item-spend-group item-spend-first'>
                                                 <label for='id'>Item Id</label>
-                                                <select id='id' class='item-spend-input-field'>
-                                                    <option value='1'>1</option>
-                                                    <option value='2'>2</option>
-                                                    <option value='3'>3</option>
+                                                <select
+                                                    id='selected-item-id'
+                                                    name='selected-item-id'
+                                                    class='item-spend-input-field'
+                                                    onchange=ChangeSelectedItem('1')
+                                                >
+        ";
+        
+        if (mysqli_num_rows($results12) > 0) {
+            while ($row12 = mysqli_fetch_assoc($results12)) {
+                echo "
+                                                    <option value='{$row12['Id']}'>{$row12['ItemName']}</option>
+                ";
+            }
+        }
+        
+        echo "
                                                 </select>
                                             </div>
-                                            <div class='item-spend-group item-spend-middle'>
+                                            <div class='item-spend-group item-spend-middle' id='selected-item-name'>
                                                 <label for='name'>Item Name</label>
-                                                <input id='name' type='text' class='item-spend-input-field' disabled/>
+                                                <input
+                                                    id='selected-item-name-txt'
+                                                    type='text'
+                                                    class='item-spend-input-field'
+                                                    disabled
+                                                />
                                             </div>
-                                            <div class='item-spend-group item-spend-last'>
+                                            <div class='item-spend-group item-spend-last' id='selected-item-available'>
                                                 <label for='available'>Available Quantity</label>
                                                 <input
-                                                    id='available'
+                                                    id='selected-item-available-txt'
                                                     type='text'
                                                     class='item-spend-input-field'
                                                     disabled
@@ -746,23 +772,40 @@
                                         <div class='item-spend-parent-group'>
                                             <div class='item-spend-group item-spend-first'>
                                                 <label for='spend'>Spend Quantity</label>
-                                                <input id='spend' type='text' class='item-spend-input-field'/>
+                                                <input
+                                                    id='item-spend-qty'
+                                                    name='item-spend-qty'
+                                                    type='number'
+                                                    min='1'
+                                                    class='item-spend-input-field'
+                                                />
                                             </div>
                                             <div class='item-spend-group item-spend-last-2'>
                                                 <label for='description'>Description</label>
-                                                <input id='description' type='text' class='item-spend-input-field'/>
+                                                <input
+                                                    id='item-spend-description'
+                                                    name='item-spend-description'
+                                                    type='text'
+                                                    class='item-spend-input-field'
+                                                />
                                             </div>
                                         </div>
                                         <div class='item-spend-group'>
                                             <label for='quotation'>Quotation attachment</label>
                                             <br />
-                                            <input id='quotation' type='file' class='item-spend-bill-input'/>
+                                            <input
+                                                id='item-spend-quotation'
+                                                name='item-spend-quotation'
+                                                type='file'
+                                                class='item-spend-bill-input'
+                                            />
                                         </div>
                                         <div class='item-spend-group'>
                                             <input
                                                 type='submit'
                                                 class='item-spend-spend-btn item-spend-button'
                                                 value='Create spend request'
+                                                id='item-spend-request-submit'
                                             />
                                         </div>
                                         <div class='item-spend-notice'>
