@@ -5,7 +5,7 @@ include ('../../../server/session.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES['files'])) {
         $errors = [];
-        $path = '../../../uploads/wall/important-notice/';
+        $path = '../../../uploads/wall/common-wall/';
         $extensions = ['jpg', 'jpeg', 'png', 'gif'];
 
         $all_files = count($_FILES['files']['tmp_name']);
@@ -35,17 +35,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($errors) print_r($errors);
     }
 
-    $noticeTitle = $_POST['notice-title'];
-    $noticeBody = $_POST['notice-body'];
+
+    $postContent = $_POST['post-content'];
     $ownerEmail = $_SESSION["Email"];
 
-    if (!empty($noticeTitle) && !empty($noticeBody) && empty($file_name)) {
-        $query = "INSERT INTO posts (OwnerEmail,Content , isImportant,Title) VALUES ('$ownerEmail','$noticeBody','1','$noticeTitle')";
+    if ( !empty($postContent) && empty($file_name)) {
+        $query = "INSERT INTO posts (OwnerEmail,Content,isImportant) VALUES ('$ownerEmail','$postContent','0')";
         $result = mysqli_query($conn, $query);
     }
 
-    if (!empty($noticeTitle) && !empty($noticeBody) && !empty($file_name)) {
-        $query = "INSERT INTO posts (OwnerEmail,Content ,PicSrc, isImportant,Title) VALUES ('$ownerEmail','$noticeBody','$file','1','$noticeTitle')";
+    if ( !empty($postContent) && !empty($file_name)) {
+        $query = "INSERT INTO posts (OwnerEmail,Content ,PicSrc, isImportant) VALUES ('$ownerEmail','$postContent','$file','0')";
         $result = mysqli_query($conn, $query);
     }
 

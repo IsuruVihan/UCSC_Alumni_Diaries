@@ -2,7 +2,7 @@
 include('../../../db/db-conn.php');
 include('../../../server/session.php');
 
-$query = "SELECT Title, Content,PicSrc,OwnerEmail,Timestamp,Id FROM posts ORDER by Timestamp DESC";
+$query = "SELECT Title, Content,PicSrc,OwnerEmail,Timestamp,Id FROM posts WHERE isImportant='1' ORDER by Timestamp DESC";
 $results = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($results) > 0) {
