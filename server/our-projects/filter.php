@@ -48,7 +48,6 @@ if (mysqli_num_rows($result) > 0){
                 >View</button>
             </div>
           </div>
-        
         ";
     }
 }else {
@@ -58,7 +57,4 @@ if (mysqli_num_rows($result) > 0){
         </div>
     ";
 }
-
-
-
 ?>

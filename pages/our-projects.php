@@ -19,110 +19,215 @@
                 Project_Name:project_name
             });
         });
-        //cash donation 
-        $('#cancel-cash').click(()=>{
-            $('#cash-donor,#cash-email,#cash-amount,#cash-file').removeClass('input-error,input-ok');
-            $('#cash-donor,#cash-email,#cash-amount,#cash-file').val(''); 
-        });
-        $('#cash-donation').submit((event)=>{
-           event.preventDefault();
-                const url = '../server/our-projects/cash-donation.php';
-                const form = document.getElementById('cash-donation');
-                const files = document.querySelector('[type=file]').files;
-                const formData = new FormData(document.getElementById('cash-donation'));
+    });
+    const ViewProjectDetails = (id) => {
+        $('#ProjectDetails').load("../server/our-projects/project-details.php", {
+            Id: id       
+        });    
+    }
+    const cashDonation = (id) =>{
+       
+        const Id = id;
+        const CashDonationForm = '#cash-donation-'+Id;
+        const CashForm = 'cash-donation-'+Id;
+        const Message ='#donation-message-'+Id;
+        const Cancel ='#cancel-cash-'+Id;
+        const submitFile = '#cash-file-'+Id;
+       
+        $(CashDonationForm).submit((event) => {
+            event.preventDefault();
+            const url = '../server/our-projects/cash-donation.php';
+            const form = document.getElementById(CashForm);
+            const files = document.getElementById(submitFile);
+            const formData = new FormData(form);
 
-                fetch(url, {
-                    method: 'POST',
-                    body: formData,
-                }).then((response) => {
-                    console.log(response);
-                }).catch((error) => {
-                    console.log(error);
-                });
-           const cash_donor = $('#cash-donor').val();
-           const cash_email = $('#cash-email').val();
-           const cash_amount = $('#cash-amount').val();
-
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+            }).then((response) => {
+                console.log(response);
+            }).catch((error) => {
+                console.log(error);
+            });
+          
+            const Cash_Donator = '#cash-donor-' + Id;
+            const Cash_Email = '#cash-email-' + Id;
+            const Cash_Amount = '#cash-amount-' + Id;
+            const CashDonator = $(Cash_Donator).val();
+            const CashEmail = $(Cash_Email).val();
+            const CashAmount = $(Cash_Amount).val();
+        
            let isComplete = true, isValidEmail=true;
+           $(Cash_Donator, Cash_Email, Cash_Amount).removeClass('input-error, input-ok');
 
-           $('#cash-donor, #cash-email, #cash-amount').removeClass('input-error, input-ok');
-
-           if(cash_donor == ''){
-            $('#cash-donor').addClass('input-error');
+           if(CashDonator == ''){
+            $(Cash_Donator).addClass('input-error');
             isComplete = false;     
            }else{
-               $('#cash-donor').addClass('input-ok');
+               $(Cash_Donator).addClass('input-ok');
            }
-           if(cash_email == ''){
-            $('#cash-email').addClass('input-error');
+           if(CashEmail == ''){
+            $(Cash_Email).addClass('input-error');
             isComplete = false;     
            }else{
-               $('#cash-email').addClass('input-ok');
+               $(Cash_Email).addClass('input-ok');
            }
-           if(cash_amount == ''){
-            $('#cash-amount').addClass('input-error');
+           if(CashAmount == ''){
+            $(Cash_Amount).addClass('input-error');
             isComplete = false;     
            }else{
-               $('#cash-amount').addClass('input-ok');
+               $(Cash_Amount).addClass('input-ok');
            }
-           if (isComplete) {
-                if (cash_email.length <= 2) {
-                    isValidEmail = false;
-                } else {
-                    if (cash_email.indexOf("@") == -1) {
+            if (isComplete) {
+                if (CashEmail.length <= 2) {
                         isValidEmail = false;
                     } else {
-                        var parts = cash_email.split("@");
-                        var dot = parts[1].indexOf(".");
-                        var len = parts[1].length;
-                        var dotSplits = parts[1].split(".");
-                        var dotCount = dotSplits.length - 1;
-                        if (dot == -1 || dot < 2 || dotCount > 2) {
+                        if (CashEmail.indexOf("@") == -1) {
                             isValidEmail = false;
                         } else {
-                            for (var i = 0; i < dotSplits.length; i++) {
-                                if (dotSplits[i].length == 0) {
-                                    isValidEmail = false;
-                                    break;
+                            var parts = CashEmail.split("@");
+                            var dot = parts[1].indexOf(".");
+                            var len = parts[1].length;
+                            var dotSplits = parts[1].split(".");
+                            var dotCount = dotSplits.length - 1;
+                            if (dot == -1 || dot < 2 || dotCount > 2) {
+                                isValidEmail = false;
+                            } else {
+                                for (var i = 0; i < dotSplits.length; i++) {
+                                    if (dotSplits[i].length == 0) {
+                                        isValidEmail = false;
+                                        break;
+                                    }
                                 }
                             }
                         }
                     }
-                }
                 if(!isValidEmail){
-                    $('#donation-message').html("Email is not valid");
-                    $('#donation-message').addClass('message-error');
-                    $('#donation-message').removeClass('message-success');
-                    $('#cash-email').removeClass('input-ok');
-                    $('#cash-email').addClass('input-error');
-                }else{
-                    let currency = document.getElementById('cash-amount').value;
-
-                    if(currency <= 0){
-                    $('#donation-message').html("Enter a value greater than 0");
-                    $('#donation-message').addClass('message-error');
-                    $('#donation-message').removeClass('message-success');
-                    $('#cash-amount').removeClass('input-ok');
-                    $('#cash-amount').addClass('input-error');
+                    $(Message).html("Email is not valid");
+                    $(Message).addClass('message-error');
+                    $(Message).removeClass('message-success');
+                    $(Cash_Email).removeClass('input-ok');
+                    $(Cash_Email).addClass('input-error');
                     }else{
-                        $('#donation-message').html('Donation has been accepted');
-                        $('#donation-message').addClass('message-success');
-                    }
-                }
-           
+                        // let currency = $(Cash_Amount).value;
+                      if(CashAmount <= 0){
+                        $(Message).html("Enter a value greater than 0");
+                        $(Message).addClass('message-error');
+                        $(Message).removeClass('message-success');
+                        $(Cash_Amount).removeClass('input-ok');
+                        $(Cash_Amount).addClass('input-error');
+
+                      }else{
+                        $(Message).html('Donation has been accepted');
+                        $(Message).addClass('message-success');
+                      }
+                    }    
             }else{
-                $('#donation-message').html('All fields are required');
-                $('#donation-message').addClass('message-error');  
+                $(Message).html('All fields are required');
+                $(Message).addClass('message-error'); 
             }
+               
+        });    
+        $(Cancel).click(() =>{
+            $(Cash_Donator, Cash_Email, Cash_Amount).removeClass('input-error, input-ok');
+            $(Cash_Donator, Cash_Email, Cash_Amount).val('');
+        
         });
-   
-    });
-    const ViewProjectDetails = (id) => {
-        $('#ProjectDetails').load("../server/our-projects/project-details.php", {
-            Id: id
-        });
-    } 
-    
+                  
+    }
+    // const submitItem = (id) =>{
+    //     const Id = id;
+    //     const itemDonationForm = '#item-donation-'+Id;
+    //     const itemForm = 'item-donation-'+Id;
+    //     const item_Message ='#item-donation-message-'+Id;
+    //     const item_Cancel ='#cancel-item-'+Id;
+    //     const item_submitFile = '#item-file-'+Id;
+
+    //     $(itemDonationForm).submit((event) => {
+    //         event.preventDefault();
+
+    //         const item_Donator = '#item-donor-' + Id;
+    //         const item_Email = '#item-email-' + Id;
+    //         const item_Name = '#item-name-' + Id;
+    //         const itemDonator = $(item_Donator).val();
+    //         const itemEmail = $(item_Email).val();
+    //         const itemName = $(item_Name).val();
+
+    //         let isComplete = true, isValidEmail=true;
+    //         $(Cash_Donator, Cash_Email, Cash_Amount).removeClass('input-error, input-ok');
+
+    //        if(CashDonator == ''){
+    //         $(Cash_Donator).addClass('input-error');
+    //         isComplete = false;     
+    //        }else{
+    //            $(Cash_Donator).addClass('input-ok');
+    //        }
+    //        if(CashEmail == ''){
+    //         $(Cash_Email).addClass('input-error');
+    //         isComplete = false;     
+    //        }else{
+    //            $(Cash_Email).addClass('input-ok');
+    //        }
+    //        if(CashAmount == ''){
+    //         $(Cash_Amount).addClass('input-error');
+    //         isComplete = false;     
+    //        }else{
+    //            $(Cash_Amount).addClass('input-ok');
+    //        }
+    //         if (isComplete) {
+    //             if (CashEmail.length <= 2) {
+    //                     isValidEmail = false;
+    //                 } else {
+    //                     if (CashEmail.indexOf("@") == -1) {
+    //                         isValidEmail = false;
+    //                     } else {
+    //                         var parts = CashEmail.split("@");
+    //                         var dot = parts[1].indexOf(".");
+    //                         var len = parts[1].length;
+    //                         var dotSplits = parts[1].split(".");
+    //                         var dotCount = dotSplits.length - 1;
+    //                         if (dot == -1 || dot < 2 || dotCount > 2) {
+    //                             isValidEmail = false;
+    //                         } else {
+    //                             for (var i = 0; i < dotSplits.length; i++) {
+    //                                 if (dotSplits[i].length == 0) {
+    //                                     isValidEmail = false;
+    //                                     break;
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             if(!isValidEmail){
+    //                 $(Message).html("Email is not valid");
+    //                 $(Message).addClass('message-error');
+    //                 $(Message).removeClass('message-success');
+    //                 $(Cash_Email).removeClass('input-ok');
+    //                 $(Cash_Email).addClass('input-error');
+    //                 }else{
+    //                     // let currency = $(Cash_Amount).value;
+    //                   if(CashAmount <= 0){
+    //                     $(Message).html("Enter a value greater than 0");
+    //                     $(Message).addClass('message-error');
+    //                     $(Message).removeClass('message-success');
+    //                     $(Cash_Amount).removeClass('input-ok');
+    //                     $(Cash_Amount).addClass('input-error');
+
+    //                   }else{
+    //                     $(Message).html('Donation has been accepted');
+    //                     $(Message).addClass('message-success');
+    //                   }
+    //                 }    
+    //         }else{
+    //             $(Message).html('All fields are required');
+    //             $(Message).addClass('message-error'); 
+    //         }
+
+    //     });
+ 
+
+    // }    
+     
 </script>
 
 <div class='main-container'>
@@ -289,9 +394,9 @@
                     </div> -->
                 <!-- </div> -->
             </div>
-          
+            <div class=' section-02' id='section-02'>
                 <!-- <form class='container-01' id='cash-donation' name='cash-donation' methods='post' enctype='multipart/form-data'>  
-                    <div class='title'> <div class=' section-02' id='section-02'>
+                    <div class='title'> 
                         Donate Cash
                     </div>
                     <div class='col-03'>
@@ -325,7 +430,7 @@
                         <button class='cancel-btn btn'>Cancel</button>
                     </div>
                 </div> -->
-            <!-- </div> -->
+            </div>
         </div>
     </div>
 </div>

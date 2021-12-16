@@ -53,7 +53,7 @@
 }
 
 .col01 {
-  display: flex;
+  display:flex;
   justify-content: space-between;
   margin-top: 5px;
 }
@@ -79,7 +79,6 @@
   padding: 5px;
  
 }
-
 .box-01 {
   display: flex;
   justify-content: space-evenly;
@@ -111,6 +110,9 @@
 
 .date-field {
   width: 45%;
+}
+.message_display{
+  padding: 5px;
 }
 
 .text-field {

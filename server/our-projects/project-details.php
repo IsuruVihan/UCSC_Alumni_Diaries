@@ -12,7 +12,7 @@ while($row = mysqli_fetch_assoc($result)){
 
     echo "
     <div class='section-01'>
-        <div class='title'>
+        <div class='title' id='title-name-{$row['Id']}' name='title-name'>
             {$row['Name']}
         </div>
         <div class='filter-01'>
@@ -80,43 +80,45 @@ echo"
     </div>
   ";
   echo"
-  <div class=' section-02' id='section-02'>
-        <form class='container-01' id='cash-donation' name='cash-donation' methods='post' enctype='multipart/form-data'>  
+
+    <div class=' section-02' id='section-02'>
+        <form class='container-01' id='cash-donation-{$row['Id']}'  enctype='multipart/form-data' >  
             <div class='title'>
                 Donate Cash
             </div>
             <div class='col-03'>
-                <input class='input-field text-field' id='cash-donor' name='cash-donor' type='text' placeholder='Donor Name'/>
-                <input class='input-field text-field' id='cash-email' name='cash-email' type='text' placeholder='Donor Email'/>
-                <input class='input-field text-field' id='cash-amount' name='cash-amount' type='text' placeholder='Amount'/>
-                <input class='attach' type='file' name='file[]' id='cash-file' placeholder='Bank Slip Attachment'/>
+                <input class='input-field text-field' id='cash-donor-{$row['Id']}' name='cash-donor' type='text' placeholder='Donor Name'/>
+                <input class='input-field text-field' id='cash-email-{$row['Id']}' name='cash-email' type='text' placeholder='Donor Email'/>
+                <input class='input-field text-field' id='cash-amount-{$row['Id']}' name='cash-amount' type='number' placeholder='Amount'/>
+                <input class='attach' type='file' id='cash-file-{$row['Id']}' name='files[]' placeholder='Bank Slip Attachment'/>
             </div>
-                <p id='donation-message'></p>
-            <div class='col-04'>
-                <input id='submit-cash' name='submit' type='submit' value='Submit' class='submit-btn btn'/>
-                <button class='cancel-btn btn' id ='cancel-cash'>Cancel</button>
+                <div class='message_display' id='donation-message-{$row['Id']}'></div>
+            <div class='col-04'>       
+                <button class='submit-btn btn' id='submit-cash-{$row['Id']}' onclick=cashDonation('{$row['Id']}')>Submit</button>
+                <input type='reset'  class='cancel-btn btn' id='cancel-cash-{$row['Id']}' value='Cancel' />     
             </div>
         </form> 
         <div class='container-02'>
             <p class='project-name'>Donate via pay here</p>
             <button class='pay-btn btn'>Pay here</button>  
         </div>
-        <div class='container-03'>
+        <form class='container-03' id='item-donation-{$row['Id']}' enctype='multipart/form-data' >
             <div class='title'>
                 Donate Items
             </div>
             <div class='col-03'>
-                <input class='input-field text-field' type='text' placeholder='Donar Name'/>
-                <input class='input-field text-field' type='text' placeholder='Donar Email'/>
-                <input class='input-field text-field' type='text' placeholder='Item'/>
-                <input class='attach' type='file' name = 'files[]' placeholder='Quantity'/>
+                <input class='input-field text-field'  id='item-donor-{$row['Id']}' type='text' placeholder='Donar Name'/>
+                <input class='input-field text-field' id='item-email-{$row['Id']}' type='text' placeholder='Donar Email'/>
+                <input class='input-field text-field' id='item-name-{$row['Id']}' type='text' placeholder='Item'/>
+                <input class='attach' type='file' id='item-file-{$row['Id']}' name = 'files[]' placeholder='Quantity'/>
             </div>
+                <p id='item-donation-message-{$row['Id']}'></p>
             <div class='col-04'>
-                <button class='submit-btn btn'>Submit</button>
-                <button class='cancel-btn btn'>Cancel</button>
+                <button class='submit-btn btn' id='submit-item-{$row['Id']}' onclick=submitItem('{$row['Id']}') >Submit</button>
+                <button class='cancel-btn btn' id='cancel-item-{$row['Id']}'>Cancel</button>
             </div>
-        </div> 
-     </div>   
+        </form> 
+    </div>   
  ";     
 }
 
