@@ -5,12 +5,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cash_donor = $_POST['cash-donor'];
     $cash_email = $_POST['cash-email'];
     $cash_amount = $_POST['cash-amount'];
-    
-  
+    $Project_Id = $_POST['ProjectId'];
     
     if(isset($_FILES['files'])){
         $errors = [];
-        $path = '../../uploads/OurProject-Cash/';
+        $path = '../../uploads/All-Projects/All-Project-Cash/';
         $extensions = ['jpg', 'jpeg', 'png', 'pdf'];
         $all_files = count($_FILES['files']['tmp_name']);
 
@@ -39,12 +38,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (($cash_amount > 0) && filter_var($cash_email, FILTER_VALIDATE_EMAIL)){
         if (!empty($cash_donor) && !empty($cash_email) && !empty($cash_amount) && empty($file_name)) {
-            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, Amount) VALUES ('$cash_donor','$cash_email','$cash_amount')" ;
+            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, Amount) VALUES ('$cash_donor','$cash_email','$Project_Id','$cash_amount')" ;
             $result = mysqli_query($conn, $query);
 
         }
         if (!empty($cash_donor) && !empty($cash_email) && !empty($file_name) && !empty($cash_amount)) {
-            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount) VALUES ('$cash_donor','$cash_email','','$file','$cash_amount') ";
+            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount) VALUES ('$cash_donor','$cash_email','$Project_Id','$fileNameNew','$cash_amount') ";
             $result = mysqli_query($conn, $query);
         }
     }

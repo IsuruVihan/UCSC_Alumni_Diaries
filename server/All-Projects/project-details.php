@@ -1,7 +1,7 @@
 <?php 
 include('../../db/db-conn.php');
 
-$Id = $_POST['Id'];
+$Id  = $_POST['Id'];
 
 $query = "SELECT * FROM projects WHERE Id = '{$Id}'";
 $result = mysqli_query($conn, $query);
@@ -12,7 +12,7 @@ while($row = mysqli_fetch_assoc($result)){
 
     echo "
     <div class='section-01'>
-        <div class='title' id='title-name-{$row['Id']}' name='title-name'>
+        <div class='title' id='title-name' name='title-name'>
             {$row['Name']}
         </div>
         <div class='filter-01'>
@@ -87,9 +87,10 @@ echo"
                 Donate Cash
             </div>
             <div class='col-03'>
+                <input id='ProjectId' name='ProjectId' type='text' style='display:none' value='{$row['Id']}'/>
                 <input class='input-field text-field' id='cash-donor-{$row['Id']}' name='cash-donor' type='text' placeholder='Donor Name'/>
                 <input class='input-field text-field' id='cash-email-{$row['Id']}' name='cash-email' type='text' placeholder='Donor Email'/>
-                <input class='input-field text-field' id='cash-amount-{$row['Id']}' name='cash-amount' type='number' placeholder='Amount'/>
+                <input class='input-field text-field' id='cash-amount-{$row['Id']}' name='cash-amount' type='number' step='0.01' placeholder='Amount'/>
                 <input class='attach' type='file' id='cash-file-{$row['Id']}' name='files[]' placeholder='Bank Slip Attachment'/>
             </div>
                 <div class='message_display' id='donation-message-{$row['Id']}'></div>
@@ -107,15 +108,17 @@ echo"
                 Donate Items
             </div>
             <div class='col-03'>
-                <input class='input-field text-field'  id='item-donor-{$row['Id']}' type='text' placeholder='Donar Name'/>
-                <input class='input-field text-field' id='item-email-{$row['Id']}' type='text' placeholder='Donar Email'/>
-                <input class='input-field text-field' id='item-name-{$row['Id']}' type='text' placeholder='Item'/>
-                <input class='attach' type='file' id='item-file-{$row['Id']}' name = 'files[]' placeholder='Quantity'/>
+                <input id='item_ProjectId' name='item_ProjectId' type='text' style='display:none' value='{$row['Id']}'/>
+                <input class='input-field text-field'  id='item-donor-{$row['Id']}' name='item-donor' type='text' placeholder='Donar Name'/>
+                <input class='input-field text-field' id='item-email-{$row['Id']}' name='item-email' type='text' placeholder='Donar Email'/>  
+                <input class='input-field text-field' id='item-name-{$row['Id']}' name='item-name' type='text' placeholder='Item Name'/>
+                <input class='input-field text-field' id='item-quantity-{$row['Id']}' name='item-quantity' type='number' placeholder='Quantity'/>
+                <input class='attach' type='file' id='item-file-{$row['Id']}' name = 'files[]'/>
             </div>
-                <p id='item-donation-message-{$row['Id']}'></p>
+                <div class='message_display' id='item-donation-message-{$row['Id']}'></div>
             <div class='col-04'>
                 <button class='submit-btn btn' id='submit-item-{$row['Id']}' onclick=submitItem('{$row['Id']}') >Submit</button>
-                <button class='cancel-btn btn' id='cancel-item-{$row['Id']}'>Cancel</button>
+                <input type='reset'  class='cancel-btn btn' id='item-cancel-cash-{$row['Id']}' value='Cancel' />  
             </div>
         </form> 
     </div>   

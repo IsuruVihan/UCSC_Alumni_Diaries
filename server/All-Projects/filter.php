@@ -8,7 +8,6 @@ $Project_Name = $_POST['Project_Name'];
 
 $query = "SELECT Name,Id FROM projects ";
 
-
 if (!empty($Project_Name))  {
   $query = $query . " WHERE Name LIKE '{$Project_Name}%'";
 }
