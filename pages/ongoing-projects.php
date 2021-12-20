@@ -88,6 +88,16 @@
         Modal.style.display = "none";
     }
 
+    const OpenModal3 = (ModalId) => {
+        const Modal = document.getElementById("item-spend-approval-bill-" + ModalId);
+        Modal.style.display = "block";
+    }
+
+    const CloseModal3 = (ModalId) => {
+        const Modal = document.getElementById("item-spend-approval-bill-" + ModalId);
+        Modal.style.display = "none";
+    }
+
     const AcceptCashSpendRequest = (data) => {
         $('#cash-approvals').load("../server/projects/ongoing/accept-cash-spend-request.php", {
             ProjectId: data.split(',')[0],
@@ -118,12 +128,39 @@
     
     const ChangeSelectedItem = () => {
         const SelectedItem = $('#selected-item-id').val();
-        // alert(SelectedItem);
         $('#selected-item-name').load("../server/projects/ongoing/selected-item-name.php", {
             Id: SelectedItem
         });
         $('#selected-item-available').load("../server/projects/ongoing/selected-item-available.php", {
             Id: SelectedItem
+        });
+    }
+    
+    const AcceptItemSpendRequest = (data) => {
+        $('#item-spend-approval').load("../server/projects/ongoing/accept-item-spend-request.php", {
+            ProjectId: data.split(',')[0],
+            RequestId: data.split(',')[1]
+        });
+    }
+
+    const RejectItemSpendRequest = (data) => {
+        $('#item-spend-approval').load("../server/projects/ongoing/reject-item-spend-request.php", {
+            ProjectId: data.split(',')[0],
+            RequestId: data.split(',')[1]
+        });
+    }
+
+    const DeleteItemSpendRequest = (data) => {
+        $('#item-spend-approval').load("../server/projects/ongoing/delete-item-spend-request.php", {
+            ProjectId: data.split(',')[0],
+            RequestId: data.split(',')[1]
+        });
+    }
+
+    const SpendItem = (data) => {
+        $('#item-spend-approval').load("../server/projects/ongoing/spend-item.php", {
+            ProjectId: data.split(',')[0],
+            RequestId: data.split(',')[1]
         });
     }
 </script>
