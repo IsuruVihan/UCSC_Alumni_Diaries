@@ -14,7 +14,9 @@
     $query4 = "SELECT Email FROM committeemembers WHERE ProjectId='{$Id}' AND Type='Coordinator'";
     $results4 = mysqli_query($conn, $query4);
     
-    $query6 = "SELECT Email, FirstName, LastName, Batch FROM registeredmembers WHERE Availability='1'";
+    $query6 = "
+        SELECT Email, FirstName, LastName, Batch FROM registeredmembers WHERE Availability='1' AND AccType='Member'
+    ";
     $results6 = mysqli_query($conn, $query6);
     $results7 = mysqli_query($conn, $query6);
     
@@ -386,20 +388,16 @@
                         </div>
                         <div class='actions' id='actions'>
                             <div class='message'>
-                                Once the project is started, you won't be able to edit project related data.
+                                Once the project is started, you won't be able to edit project related data such as
+                                Coordinator, Committee members, Description etc.
                             </div>
                             <button class='button create-btn' onclick=StartProject('{$Id}')>Start Project</button>
-                            <br/>
-                            <br/>
+                            <br/><br/><br/><br/>
                             <div class='message'>
                                 Delete action cannot be undone.
                             </div>
                             <button class='button cancel-btn' onclick=DeleteProject('{$Id}')>Delete Project</button>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
+                            <br/><br/><br/><br/><br/>
                             <div id='action-messages'></div>
                         </div>
                     </div>

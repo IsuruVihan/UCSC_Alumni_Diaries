@@ -18,7 +18,16 @@
                 VALUES ('{$Name}','{$Description}','NotStartedYet')
             ";
             if (mysqli_query($conn, $query2)) {
-                echo "<div class='success-message'><b>{$Name}: </b>project has been created</div>";
+                $query3 = "SELECT Id FROM projects WHERE Name='{$Name}'";
+                $results3 = mysqli_query($conn, $query3);
+                while ($row3 = mysqli_fetch_assoc($results3)) {
+                    $query4 = "INSERT INTO projectcash (ProjectId, Amount) VALUES ('{$row3['Id']}', '0.00')";
+                    if (mysqli_query($conn, $query4)) {
+                        echo "<div class='success-message'><b>{$Name}: </b>project has been created</div>";
+                    } else {
+                        echo "<div class='error-message'>Server Error: " . mysqli_error($conn) . "</div>";
+                    }
+                }
             } else {
                 echo "<div class='error-message'>Server Error: " . mysqli_error($conn) . "</div>";
             }

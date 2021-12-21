@@ -186,9 +186,6 @@
 }
 
 .result:hover,
-.result2:hover,
-.result3:hover,
-.result4:hover,
 .create-message-div:hover {
   box-shadow: 0 0 5px gray;
   cursor: pointer;

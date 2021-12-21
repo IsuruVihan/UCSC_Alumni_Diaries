@@ -66,10 +66,7 @@
                     ";
                 } elseif ($_SESSION['AccType']=='TopBoard') {
                     echo "
-                        <div class='all-suggestions' id='all-suggestions'>
-                        
-                        
-                        </div>
+                        <div class='all-suggestions' id='all-suggestions'></div>
                     ";
                 }
             } else {
