@@ -45,6 +45,12 @@
         FROM projectitemspendings INNER JOIN projectitems ON projectitemspendings.ItemId = projectitems.Id
         WHERE ProjectId='{$Id}'
     ";
+    $query14 = "
+        SELECT projectitemspendings.Id, ItemName, SpentQuantity, Description, BillSrc, Timestamp
+        FROM projectitemspendings
+        INNER JOIN projectitems ON projectitems.Id = projectitemspendings.ItemId
+        WHERE ProjectId = '{$Id}' AND Status = 'Paid'
+    ";
     
     $results = mysqli_query($conn, $query);
     $results2 = mysqli_query($conn, $query2);
@@ -59,6 +65,7 @@
     $results11 = mysqli_query($conn, $query11);
     $results12 = mysqli_query($conn, $query12);
     $results13 = mysqli_query($conn, $query13);
+    $results14 = mysqli_query($conn, $query14);
     
     $isCommitteeMember = mysqli_num_rows($results2) > 0;
     $isCoordinator = mysqli_num_rows($results3) > 0;
@@ -954,14 +961,55 @@
                                                 <th class='item-record-h-1'>Quotation</th>
                                                 <th class='item-record-h-5'>Timestamp</th>
                                             </tr>
+        ";
+        
+        if (mysqli_num_rows($results14) > 0) {
+            $modalId4 = 0;
+            while ($row14 = mysqli_fetch_assoc($results14)) {
+                echo "
+                                            <div id='item-spent-bill-{$modalId4}' class='modal'>
+                                                <div class='modal-content'>
+                                                    <span class='close' onclick=CloseModal4('{$modalId4}')>&times;</span>
+                                                    <img
+                                                        src='../uploads/project-item-spend-request-quotations/{$row14['BillSrc']}'
+                                                        alt='quotation'
+                                                        height='95%'
+                                                    /><br/>
+                                                    <a
+                                                        href='../uploads/project-item-spend-request-quotations/{$row14['BillSrc']}'
+                                                        download
+                                                    >Download</a>
+                                                </div>
+                                            </div>
+                ";
+                
+                echo "
                                             <tr>
-                                                <td>1</td>
-                                                <td>Dell Laptop</td>
-                                                <td>3</td>
-                                                <td>Dell laptops for distribution</td>
-                                                <td>Download</td>
-                                                <td>2021-10-08</td>
+                                                <td>{$row14['Id']}</td>
+                                                <td>{$row14['ItemName']}</td>
+                                                <td>{$row14['SpentQuantity']}</td>
+                                                <td>{$row14['Description']}</td>
+                                                <td>
+                                                    <button
+                                                        id='myBtn'
+                                                        class='btn view-btn'
+                                                        onclick=OpenModal4('{$modalId4}')
+                                                        style='width: 100%'
+                                                    >View</button>
+                                                </td>
+                                                <td>{$row14['Timestamp']}</td>
                                             </tr>
+                ";
+            }
+        } else {
+            echo "
+                                            <tr>
+                                                <td colspan='6'>No data</td>
+                                            </tr>
+            ";
+        }
+        
+        echo "
                                         </table>
                                     </div>
                                 </div>
@@ -971,10 +1019,14 @@
                 </div>
                 <div class='actions' id='action'>
                     <div class='message'>Complete the project by achieving project goals.</div>
-                    <button class='button create-btn'>Complete Project</button>
+                    <button class='button create-btn' onclick=CompleteProject('{$Id}')>
+                        Complete Project
+                    </button>
                     <br /><br /><br />
                     <div class='message'>Close the project without achieving project goals.</div>
-                    <button class='button cancel-btn'>Close Project</button>
+                    <button class='button cancel-btn' onclick=CloseProject('{$Id}')>
+                        Close Project
+                    </button>
                 </div>
             </div>
         ";

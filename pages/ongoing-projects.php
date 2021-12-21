@@ -98,6 +98,16 @@
         Modal.style.display = "none";
     }
 
+    const OpenModal4 = (ModalId) => {
+        const Modal = document.getElementById("item-spent-bill-" + ModalId);
+        Modal.style.display = "block";
+    }
+
+    const CloseModal4 = (ModalId) => {
+        const Modal = document.getElementById("item-spent-bill-" + ModalId);
+        Modal.style.display = "none";
+    }
+
     const AcceptCashSpendRequest = (data) => {
         $('#cash-approvals').load("../server/projects/ongoing/accept-cash-spend-request.php", {
             ProjectId: data.split(',')[0],
@@ -161,6 +171,18 @@
         $('#item-spend-approval').load("../server/projects/ongoing/spend-item.php", {
             ProjectId: data.split(',')[0],
             RequestId: data.split(',')[1]
+        });
+    }
+    
+    const CompleteProject = (ProjectId) => {
+        $('#action').load("../server/projects/ongoing/complete-project.php", {
+            ProjectId: ProjectId
+        });
+    }
+
+    const CloseProject = (ProjectId) => {
+        $('#action').load("../server/projects/ongoing/close-project.php", {
+            ProjectId: ProjectId
         });
     }
 </script>
