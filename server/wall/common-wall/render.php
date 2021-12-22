@@ -30,7 +30,7 @@ if (mysqli_num_rows($results) > 0) {
         $query3 = "SELECT Content,Timestamp,OwnerEmail,FirstName,PostId, LastName,commentsforposts.Id, registeredmembers.PicSrc 
                     FROM commentsforposts
                     INNER JOIN registeredmembers 
-                    ON commentsforposts.OwnerEmail = registeredmembers.Email ";
+                    ON commentsforposts.OwnerEmail = registeredmembers.Email";
         $results3 = mysqli_query($conn, $query3);
         $row3 = mysqli_fetch_assoc($results3);
 
@@ -123,71 +123,20 @@ if (mysqli_num_rows($results) > 0) {
                                     <div class='comments-row'>
                                         <div class='box-title'>Comments</div>
                                         <button class='filter-btn btn hide-cmnt-btn' onclick=HideComments({$row['Id']})>Hide Comments</button>
-                                    </div>";
+                                    </div> ";
 
-                                           if($row['Id'] == $row2['PostId']){
-                                               echo"
-                                           <div class='comment-content-show' id='show-comment-{$row2['Id']}'>
-                                            <div class='user-info'>
-                                                <img src='' alt='' class='comment-dp'>
-                                                <div class='comment-author-info'>  
-                                                    <div class='c-fname-show '>{$row3['FirstName']} {$row3['LastName']}</div>
-                                                    <div class='c-time-show'>Timestamp</div>
-                                                </div> 
-                                            </div>
-                                                                      
-                                            <div class='c-txt-show'>{$row3['Content']} </div>
-                                                <div class='comment-box-buttons'> 
-                                                    <div class='comment-buttons-show'>";
-
-                                               if ($_SESSION["Email"] == $row3["OwnerEmail"]) {
-                                                   echo"
-                                                                        <button class='filter-btn btn c-edit-show'>Edit</button>
-                                                                        ";
-                                               }
-
-                                               if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row["OwnerEmail"] || $_SESSION["Email"] == $row3["OwnerEmail"] ) {
-                                                   echo"
-                                                                            <button class='filter-btn btn c-dlt-show'>Delete</button>
-                                                                            ";
-                                               }
-                                               if ( $_SESSION["Email"] != $row3["OwnerEmail"] ) {
-                                                   echo" <button class='filter-btn btn c-report-show' onclick=DisplayCommentReport({$row['Id']})>Report</button>
-                                                                    ";
-                                               }
-                                               echo"    
-                                                    </div>                               
-                                                    <div class='like-box-show'>  
-                                                            <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>
-                                                            <div class='c-like-count-show'>112</div>
-                                                            <button class='thumb-icon'><i class='fa fa-thumbs-down fa-2x' aria-hidden='true'></i>
-                                                            </button>
-                                                            <div class='c-dislike-count'>111</div>                                  
-                                                    </div>
-                                                </div>    
-                                            </div>     
-                                           ";
-                                           }
-                                           else{
-                                               echo"
-                                       <div class='comment-content-show' id='show-comment-{$row['Id']}'>
-                                        {$row2['PostId']}
-                                       </div>
-                                   ";
-                                           }
+                                   
+                                        echo"
+                                        
+                                    <div class='comment-content-show' id='show-comment-{$row['Id']}'> 
+                               
+                                    </div>
+                                    ";
 
 
                                     echo"                                
-                                <!--comment report-->
-                                    <div class='comment-report' id='comment-report-{$row['Id']}'>
-                                    <div class='box-title'>Report Comment</div>
-                                    <textarea class='report-txt field-hover' placeholder='Your content goes here'></textarea>
-                                    <div class='create-post-buttons'>
-                                        <button class='filter-btn btn'>Submit</button>
-                                        <button class='filter-btn btn' onclick=HideCommentReport({$row['Id']})>Cancel</button>
-                                    </div>
+                                    
                                 </div>
-                            </div>
 
                             
                             
@@ -263,19 +212,20 @@ if (mysqli_num_rows($results) > 0) {
                             <!--add comments -->
                             <div class='add-comment' id='add-comment-{$row['Id']}'>
                                 <div class='box-title '>Add Comment</div>
-                                <div class='comment-content'>
+                                <form class='comment-content' id='add-comment-form-{$row['Id']}'   enctype='multipart/form-data'>
                                     <div class='user-info'>
                                         <img src='' alt='' class='comment-dp'>
                                         <div class='text-fname-box'>
                                             <div class='c-fname field-hover'> First Name</div>
-                                            <textarea class='c-txt field-hover' placeholder='Enter your comment here'></textarea> 
+                                            <input type='text' value='{$row['Id']}' name='post-id-no' hidden>
+                                            <textarea class='c-txt field-hover' placeholder='Enter your comment here' name='comment-body' id='comment-body'></textarea> 
                                         </div>
                                     </div>   
                                     <div class='comment-buttons'>
-                                        <button class='filter-btn btn c-dlt'>Add</button>
+                                        <input type='submit' class='filter-btn btn c-dlt' value='Add'>
                                         <button class='filter-btn btn c-report' onclick=HideAddComment({$row['Id']})>Cancel</button>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                             <!-- Show comments box-->
                             <div class='comment-box' id='show-comment-box-{$row['Id']}'>
@@ -285,51 +235,11 @@ if (mysqli_num_rows($results) > 0) {
                                 </div>
                                 <!--comment show-->
                                 <div class='comment-content-show' id='show-comment-{$row['Id']}'>
-                                    <div class='user-info'>
-                                        <img src='' alt='' class='comment-dp'>
-                                        <div class='comment-author-info'>  
-                                            <div class='c-fname-show '>First Name</div>
-                                            <div class='c-time-show'>Timestamp</div>
-                                        </div> 
-                                    </div>
-                                                              
-                                    <div class='c-txt-show'>Your comment here</div>
-                                    <div class='comment-box-buttons'> 
-                                        <div class='comment-buttons-show'> ";
-                                        if ($_SESSION["Email"] == $row3["OwnerEmail"]) {
-                                            echo"
-                                                 <button class='filter-btn btn c-edit-show'>Edit</button> ";
-                                        }
-                                        if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row["OwnerEmail"] || $_SESSION["Email"] == $row3["OwnerEmail"] ) {
-                                            echo"
-                                                <button class='filter-btn btn c-dlt-show'>Delete</button>";
-                                        }
-                                        if ( $_SESSION["Email"] != $row3["OwnerEmail"] ) {
-                                            echo" 
-                                                <button class='filter-btn btn c-report-show' onclick='DisplayCommentReport()'>Report</button>";
-                                        }
-                                        echo"
-                                        </div>                               
-                                        <div class='like-box-show'>  
-                                                <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>
-                                                <div class='c-like-count-show'>112</div>
-                                                <button class='thumb-icon'><i class='fa fa-thumbs-down fa-2x' aria-hidden='true'></i>
-                                                </button>
-                                                <div class='c-dislike-count'>111</div>                                  
-                                        </div>
-                                    </div>    
+                                       
                                 </div>
                             </div>
 
-                            <!--comment report-->
-                            <div class='comment-report' id='comment-report'>
-                                <div class='box-title'>Report Comment</div>
-                                <textarea class='report-txt field-hover' placeholder='Your content goes here'></textarea>
-                                <div class='create-post-buttons'>
-                                    <button class='filter-btn btn'>Submit</button>
-                                    <button class='filter-btn btn' onclick='HideCommentReport()'>Cancel</button>
-                                </div>
-                            </div>
+                            
                     </div> 
 
             ";

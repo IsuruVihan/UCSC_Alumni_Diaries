@@ -81,9 +81,6 @@
                     body: formDataOne,
                 }).then((response) => {
                     console.log(response);
-                    for(var pair of formDataOne.entries()) {
-                        console.log(pair[0]+ ', '+ pair[1]);
-                    }
                 }).catch((error) => {
                     console.log(error);
                 });
@@ -278,7 +275,6 @@
                 event.preventDefault();
 
                 const url3 = '../server/wall/common-wall/add-comment.php';
-                // const formTwo = document.getElementById(addFormNoHash);
                 const formData4 = new FormData(document.getElementById(addFormNoHash));
 
                 fetch(url3, {
@@ -290,15 +286,12 @@
                 }).catch((error) => {
                     console.log(error);
                 });
-                alert(id);
-                // setTimeout(() => {
-                //     location.reload();
-                // }, 2000)
+                setTimeout(() => {
+                    location.reload();
+                }, 2000)
             });
 
-            // const commentRender = '#show-comment-'+id;
-            // $('#show-comment').load("../server/wall/common-wall/comment-show.php");
-
+            
         }
 
         const HideAddComment = (id) => {
@@ -314,6 +307,12 @@
             $(showComment).css({display: 'flex'});
             $(postReport).css({display : 'none'});
             $(displayAddComment).css({display: 'none'});
+
+            const commentRender = '#show-comment-'+id;
+            $(commentRender).load("../server/wall/common-wall/comment-show.php",{
+                id : id,
+            });
+
         }
         const HideComments = (id) => {
             const showComment ='#show-comment-box-'+id;
@@ -334,6 +333,33 @@
             $(showCommentReport).css({display: 'none'});
         }
 
+        const CommentReportSubmit = (id) =>{
+            const ReportSubmit = '#comment-report-'+id;
+            const ReportNoHash = 'comment-report-'+id;
+            
+            $(ReportSubmit).submit((event) =>{
+                event.preventDefault();
+                const url = '../server/wall/common-wall/comment-report-submit.php';
+                const form = document.getElementById(ReportNoHash);
+                const formDataFive = new FormData(form);
+
+                fetch(url, {
+                    method: 'POST',
+                    body: formDataFive,
+                }).then((response) => {
+                    console.log(response);
+                }).catch((error) => {
+                    console.log(error);
+                });       
+
+                setTimeout(() => {
+                    HideCommentReport(id);
+                }) 
+                const reportContent ='#report-content-'+id;
+                $(reportContent).val('');   
+
+        });
+    }
 
 
 
