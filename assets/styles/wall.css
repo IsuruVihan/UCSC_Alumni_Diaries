@@ -3,6 +3,12 @@
     flex-direction: row;
 }
 
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}
 
 
 .main-container {
@@ -70,6 +76,20 @@
     background: white;
 }
 
+.filter-box-member-session {
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid lightgray;
+    padding: 3px 3px;
+    margin: 0.8em 3px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    justify-content:flex-end;
+    background: white;
+
+}
+
+
 .btn {
     cursor: pointer;
     border-radius: 5px;
@@ -96,6 +116,11 @@
     font-size: 12px;
     width: fit-content;
     padding: 0 3px;
+}
+
+.filter-member-session{
+    margin-right: 5px;
+    width: 20%;
 }
 
 .create-notice-box {
@@ -440,7 +465,7 @@
 .comment-report {
     background: #fff1f0;
     box-shadow: 1px 2px 4px lightgray;
-    border: 1px solid lightgray;
+    border: 1px solid #f5222d;
     margin: 0.8em auto;
     display: none;
     flex-direction: column;
@@ -470,6 +495,11 @@
     flex-direction: row;
     width: 40%;
 }
+.filter-right-member-session {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
 
 .filter-right > button {
     margin: 0 3px;
@@ -492,7 +522,7 @@
     display: grid;
     padding: 0.8em;
     grid-template-columns:[col1]100%[col2];
-    grid-template-rows: [line1]5%[line2] 5%[line3]35%[line4] 50%% [line5]5%[line6];
+    grid-template-rows: [line1]5%[line2] 5%[line3]35%[line4]50%/[line5]5%[line6];
     column-gap:  5px;
     margin: 2em;
     background: white;
@@ -545,7 +575,7 @@
     height: 0;
 }
 .width-zero{
-    width: ;
+    width: 0;
 }
 
 .pic-content-container > img{
@@ -666,7 +696,10 @@
 .report-submit-button{
     margin-right: 2px;
 }
-
+.save-changes-btn{
+    margin-right: 2px;
+    width:150px;
+}
 .comment-btn {
     width: 100px;
     /*grid-area: comment;*/
@@ -711,7 +744,7 @@
 
 .thumb-icon:hover {
     cursor: pointer;
-    box-shadow: 0 0 5px #096dd9;
+    
 }
 
 .post-like-count {
@@ -719,6 +752,7 @@
     height: 23px;
     margin-top: 0.8em;
     margin-left: 0.2em;
+    font-size:14px;
 }
 
 .post-dislike-count {
@@ -726,6 +760,7 @@
     height: 23px;
     margin-top: 0.8em;
     margin-left: 0.2em;
+    font-size:14px;
 }
 .comment-show-outer-box{
     border: 1px solid lightgray;
@@ -733,7 +768,14 @@
     margin-bottom:5px ;
     border-radius: 10px;
 }
-
+.comment-content-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.comment-form{
+    display: flex;
+    flex-direction: column;
+}
 .comment-box {
     background: #f6ffed;
     border: 1px solid lightgray;
@@ -789,12 +831,29 @@
     flex-direction: column;
     gap: 5px;
 }
+
+.comment-edit-box{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.comment-edit-btn-box{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    justify-content: flex-end;
+}
 .comment-box-buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .user-info{
+    display: flex;
+    flex-direction: row;
+}
+.user-info-edit{
     display: flex;
     flex-direction: row;
 }

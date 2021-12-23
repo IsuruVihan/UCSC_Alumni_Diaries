@@ -29,50 +29,73 @@ $results3 = mysqli_query($conn, $query3);
 // if($PostId  == $row2['PostId']){
     while ($row3 = mysqli_fetch_assoc($results3)){
         echo"
-<div class='comment-show-outer-box'>
-        <div class='user-info'>
-            <img src='' alt='' class='comment-dp'>
-            <div class='comment-author-info'>
-                <div class='c-fname-show '>{$row3['FirstName']} {$row3['LastName']}</div>
-                <div class='c-time-show'>{$row3['Timestamp']}</div>
+<div class='comment-show-outer-box>
+        <div class='comment-content-wrapper' id='comment-content-wrapper-{$row3['Id']}'>
+            <div class='user-info'>
+                <img src='' alt='' class='comment-dp'>
+                <div class='comment-author-info'>
+                    <div class='c-fname-show '>{$row3['FirstName']} {$row3['LastName']}</div>
+                    <div class='c-time-show'>{$row3['Timestamp']}</div>
+                </div>
+            </div>
+
+            <div class='c-txt-show'>{$row3['Content']} </div>
+            <div class='comment-box-buttons'>
+                <div class='comment-buttons-show'>";
+
+                    if ($_SESSION["Email"] == $row3["OwnerEmail"]) {
+                        echo"
+                    <button class='filter-btn btn c-edit-show' onclick=CommentEdit({$row3['Id']})>Edit</button>
+                    ";
+                    }
+
+                    if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row["OwnerEmail"] || $_SESSION["Email"] == $row3["OwnerEmail"] ) {
+                        echo"
+                    <button class='filter-btn btn c-dlt-show'>Delete</button>
+                    ";
+                    }
+                    if ( $_SESSION["Email"] != $row3["OwnerEmail"] ) {
+                        echo" <button class='filter-btn btn c-report-show' onclick=DisplayCommentReport({$row3['Id']})>Report</button>
+                    ";
+                    }
+                    echo"
+                </div>
+                <div class='like-box-show'>
+                    <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>
+                    <div class='c-like-count-show'>112</div>
+                    <button class='thumb-icon'><i class='fa fa-thumbs-down fa-2x' aria-hidden='true'></i>
+                    </button>
+                    <div class='c-dislike-count'>111</div>
+                </div>
             </div>
         </div>
 
-        <div class='c-txt-show'>{$row3['Content']} </div>
-        <div class='comment-box-buttons'>
-            <div class='comment-buttons-show'>";
+        <!--comment edit-->
+        <form class='comment-edit-box' id='comment-edit-box-{$row3['Id']}' >     
+                <div class='user-info-edit'>
+                    <img src='' alt='' class='comment-dp'>
+                    <div class='comment-author-info'>
+                        <div class='c-fname-show '>{$row3['FirstName']} {$row3['LastName']}</div>
+                        <div class='c-time-show'>{$row3['Timestamp']}</div>
+                    </div>
+                </div>       
+                <input type='text' value='{$row3['Id']}' name='comment-id-no' hidden>  
+                <textarea class='c-txt-show' id='comment-content-{$row3['Id']}' name='comment-edit-body'>{$row3['Content']} </textarea>
+                <div class='comment-edit-btn-box'>
+                    <input type='submit' class='filter-btn btn save-changes-btn' value='Save Changes'>
+                    <input type='reset' class='filter-btn btn save-changes-btn' onclick=HideCommentEdit({$row3['Id']}) value='Cancel'>
+                </div>  
+        </form>";
 
-                if ($_SESSION["Email"] == $row3["OwnerEmail"]) {
-                    echo"
-                <button class='filter-btn btn c-edit-show'>Edit</button>
-                ";
-                }
-
-                if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row["OwnerEmail"] || $_SESSION["Email"] == $row3["OwnerEmail"] ) {
-                    echo"
-                <button class='filter-btn btn c-dlt-show'>Delete</button>
-                ";
-                }
-                if ( $_SESSION["Email"] != $row3["OwnerEmail"] ) {
-                    echo" <button class='filter-btn btn c-report-show' onclick=DisplayCommentReport({$row3['Id']})>Report</button>
-                ";
-                }
-                echo"
-            </div>
-            <div class='like-box-show'>
-                <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>
-                <div class='c-like-count-show'>112</div>
-                <button class='thumb-icon'><i class='fa fa-thumbs-down fa-2x' aria-hidden='true'></i>
-                </button>
-                <div class='c-dislike-count'>111</div>
-            </div>
-        </div>
+            echo"
+        
+    <!--div 2k thibila remove kala watch out if there's an error-->   
 
         <!--comment report-->
         <div id='comment-report-outer-box-{$row3['Id']}'>
             <form class='comment-report' id='comment-report-{$row3['Id']}'>
                 <div class='box-title'>Report Comment</div>
-                <textarea class='report-txt field-hover' id='report-content-{$row3['Id']}' placeholder='Your content goes here' name='report-content'></textarea>
+                <textarea class='report-txt field-hover' id='comment-report-content-{$row3['Id']}' placeholder='Your content goes here' name='report-content'></textarea>
                 <input type='text' value='{$row3['Id']}' name='comment-id-no' hidden>
                 <div class='create-post-buttons'>
                     <input type='submit' class='filter-btn btn report-submit-button' value='Submit' onclick=CommentReportSubmit({$row3['Id']})>

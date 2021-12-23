@@ -1,6 +1,6 @@
 <?php include('../server/session.php'); ?>
-
 <?php include('../components/header.php'); ?>
+
 
     <link rel="stylesheet" href="../assets/styles/wall.css">
     <link rel="stylesheet" href="../assets/styles/modal.css">
@@ -244,12 +244,38 @@
 
         const DisplayPostReport = (id) => {
             const postReport = '#post-report-box-'+id;
+            const postReportNoHash = 'post-report-box-'+id;
             const displayAddComment ='#add-comment-'+id;
             const showComment ='#show-comment-box-'+id;
 
             $(postReport).css({display: 'flex'});
             $(showComment).css({display: 'none'});
             $(displayAddComment).css({display: 'none'});
+
+            $(postReport).submit((event) =>{
+                event.preventDefault();
+                const url = '../server/wall/common-wall/post-report-submit.php';
+                const form = document.getElementById(postReportNoHash);
+                const formDataSix = new FormData(form);
+
+                fetch(url, {
+                    method: 'POST',
+                    body: formDataSix,
+                }).then((response) => {
+                    console.log(response);
+                }).catch((error) => {
+                    console.log(error);
+                }); 
+                const postReportContent='#post-report-content-'+id;
+                const postReportContent1 = $(postReportContent).val();
+
+                if(postReportContent1 != ''){
+                    setTimeout(() => {
+                        HidePostReport(id);
+                    });                  
+                    $(postReportContent).val('');                
+                }
+            });    
         }
 
         const HidePostReport = (id) =>{
@@ -343,6 +369,8 @@
                 const form = document.getElementById(ReportNoHash);
                 const formDataFive = new FormData(form);
 
+                
+
                 fetch(url, {
                     method: 'POST',
                     body: formDataFive,
@@ -350,18 +378,84 @@
                     console.log(response);
                 }).catch((error) => {
                     console.log(error);
-                });       
+                }); 
 
-                setTimeout(() => {
-                    HideCommentReport(id);
-                }) 
-                const reportContent ='#report-content-'+id;
-                $(reportContent).val('');   
+                const reportContent='#comment-report-content-'+id;
+                const reportContent1 = $(reportContent).val();
+                        
+                if(reportContent1 != ''){
+                    setTimeout(() => {
+                        HideCommentReport(id);
+                    });
+                    const reportContent ='#comment-report-content-'+id;
+                    $(reportContent).val('');                
+                }             
+            });
+    }
 
+    const CommentEdit = (id) =>{
+        
+        const  commentWrapper ='#comment-content-wrapper-'+id;
+        const  editWrapper ='#comment-edit-box-'+id;
+        const  editWrapperNoHash ='comment-edit-box-'+id;
+        const  commentBody = '#comment-content-'+id;
+        
+        $(commentWrapper).css("display","none");   
+        $(editWrapper).css("display","flex");   
+
+        $(editWrapper).submit((event) => {
+            event.preventDefault();
+                const url = '../server/wall/common-wall/comment-edit.php';
+                const form = document.getElementById(editWrapperNoHash);
+                const formDataSeven = new FormData(form);
+
+                
+
+                fetch(url, {
+                    method: 'POST',
+                    body: formDataSeven,
+                }).then((response) => {
+                    console.log(response);
+                }).catch((error) => {
+                    console.log(error);
+                });  
+
+                if( $(commentBody).val() != ''){
+                    setTimeout(() => {
+                        location.reload();
+                    });
+                }      
+        });
+     
+    }
+
+    const HideCommentEdit = (id) => {
+        const  commentWrapper='#comment-content-wrapper-'+id;
+        const  editWrapper='#comment-edit-box-'+id;
+        
+        $(commentWrapper).css("display","flex");
+        $(commentWrapper).css("flex-direction","column");     
+        $(editWrapper).css("display","none");
+    }
+    
+    const MyPosts = (id) => {
+        $('#post-box').load('../server/wall/common-wall/my-posts.php');
+    }
+
+    const AllPosts = (id) => {
+        $('#post-box').load('../server/wall/common-wall/render.php');
+    }
+
+    const FilterById = (id) => {
+        const Id= $('#id-input').val();
+        $('#post-box').load('../server/wall/common-wall/id-filter.php',{
+            id : Id,
         });
     }
 
-
+    const DisplayPostEdit = (id) => {
+        
+    }
 
 
 
@@ -415,13 +509,10 @@
             }
             ?>
 
-
             <!--notices -->
             <div id='create-notice-render'>
 
             </div>
-
-
         </div>
 
         <!--Common wall -->
@@ -451,206 +542,38 @@
             </form>
 
             <!--Filter box -->
-            <div class="filter-box">
-                <div class="filter-left">
-                    <input type='text' placeholder='Search by Title' class="input-field-title">
-                    <input type='text' placeholder='Search by ID' class="input-field-title">
-                    <button class='filter-btn btn'>Filter</button>
-                </div>
-                <div class='filter-right'>
-                    <button class='filter-btn btn'>Liked</button>
-                    <button class='filter-btn btn'>My Posts</button>
-                    <button class='filter-btn btn'>All</button>
-                </div>
-            </div>
+          <?php 
+          $query = "SELECT  OwnerEmail,Id FROM posts WHERE isImportant='0' ";
+          $results = mysqli_query($conn, $query);
+          $row = mysqli_fetch_assoc($results);
 
+          if(isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "TopBoard") echo" 
+            <div class='filter-box'>
+            <div class='filter-left'>    
+                <input type='text' placeholder='Search by ID' class='input-field-title' id='id-input'>
+                <button class='filter-btn btn' onclick=FilterById({$row['Id']})>Filter</button>
+            </div>
+            <div class='filter-right'>
+                <button class='filter-btn btn' onclick=LikedPosts({$row['Id']}) >Liked</button>
+                <button class='filter-btn btn' onclick=MyPosts({$row['Id']}) >My Posts</button>
+                <button class='filter-btn btn' onclick=AllPosts({$row['Id']}) >All</button>
+            </div>
+        </div>
+          ";    
+          else{
+              echo"
+              <div class='filter-box-member-session'>
+                    <button class='filter-btn btn filter-member-session' onclick=LikedPosts({$row['Id']}) >Liked</button>
+                    <button class='filter-btn btn filter-member-session' onclick=MyPosts({$row['Id']}) >My Posts</button>
+                    <button class='filter-btn btn filter-member-session' onclick=AllPosts({$row['Id']}) >All</button>
+                </div>
+              ";
+          }
+          ?>
             <!--Post-->
             <div class="post-box" id='post-box'>
-<!--                <div class="post-content">-->
-<!--                    <img src="" alt="" class="dp-box">-->
-<!--                    <div class="f-name ">First Name</div>-->
-<!--                    <div class='l-name post-field '>Last Name</div>-->
-<!--                    <div class='post-time post-field '>Timestamp</div>-->
-<!--                    <button class='filter-btn btn post-delete'>Delete</button>-->
-<!--                    <img src='' alt='' class='pic-box'>-->
-<!--                    <div class='post-title post-field '> Title</div>-->
-<!--                    <div class="post-text post-field "></div>-->
-<!--                    <button class='filter-btn btn report-btn' onclick='DisplayPostReport()'>Report</button>-->
-<!--                    <button class='filter-btn btn show-comment-btn' onclick='DisplayComments()'>Show Comment</button>-->
-<!--                    <button class='filter-btn btn comment-btn' onclick='DisplayAddComment()'>Comment</button>-->
-<!--                    <div class="like-dislike-cell">-->
-<!--                        <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>-->
-<!--                        <div class="post-like-count post-field">111</div>-->
-<!--                        <button class='thumb-icon'><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i></button>-->
-<!--                        <div class="post-dislike-count post-field">112</div>-->
-<!--                    </div>-->
-<!--                </div>-->
 
-                <!--Post report -->
-<!--                <div class='post-report' id='post-report'>-->
-<!--                    <div class='box-title'>Report Post</div>-->
-<!--                    <textarea class='report-txt field-hover' placeholder='Your content goes here'></textarea>-->
-<!--                    <div class='create-post-buttons'>-->
-<!--                        <button class='filter-btn btn'>Submit</button>-->
-<!--                        <button class='filter-btn btn' onclick='HidePostReport()'>Cancel</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-                <!--add comments -->
-<!--                <div class='add-comment' id='add-comment'>-->
-<!--                    <div class='box-title '>Add Comment</div>-->
-<!--                    <div class='comment-content'>-->
-<!--                        <img src='' alt='' class='comment-dp'>-->
-<!--                        <input class='c-fname field-hover' placeholder='First Name'>-->
-<!--                        <input class='c-lname field-hover' placeholder='Last Name'>-->
-<!--                        <div class='c-time'>Timestamp</div>-->
-<!--                        <div class='comment-buttons'>-->
-<!--                            <div class='c-edit'></div>-->
-<!--                            <button class='filter-btn btn c-dlt'>Add</button>-->
-<!--                            <button class='filter-btn btn c-report' onclick='HideAddComment ()'>Cancel</button>-->
-<!--                        </div>-->
-<!--                        <textarea class='c-txt field-hover' placeholder='Enter yor comment here'></textarea>-->
-<!--                        <div class='like-box'>-->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class='comment-box' id='show-comment'>-->
-<!--                    <div class='comments-row'>-->
-<!--                        <div class='box-title'>Comments</div>-->
-<!--                        <button class='filter-btn btn hide-cmnt-btn' onclick=' HideComments()'>Hide Comments</button>-->
-<!--                    </div>-->
-
-                    <!--comment show-->
-<!--                    <div class='comment-content'>-->
-<!--                        <img src='' alt='' class='comment-dp'>-->
-<!--                        <div class='c-fname '>First Name</div>-->
-<!--                        <div class='c-lname'>Last Name</div>-->
-<!--                        <div class='c-time'>Timestamp</div>-->
-<!--                        <div class='comment-buttons'>-->
-<!--                            <button class='filter-btn btn c-edit'>Edit</button>-->
-<!--                            <button class='filter-btn btn c-dlt'>delete</button>-->
-<!--                            <button class='filter-btn btn c-report' onclick='DisplayCommentReport()'>Report</button>-->
-<!--                        </div>-->
-<!--                        <div class='c-txt'>Enter yor comment here</div>-->
-<!--                        <div class='like-box'>-->
-<!--                            <div class='r-1'>-->
-<!--                                <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>-->
-<!--                                <div class='c-like-count'>112</div>-->
-<!--                            </div>-->
-<!--                            <div class='r-2'>-->
-<!--                                <button class='thumb-icon'><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i>-->
-<!--                                </button>-->
-<!--                                <div class='c-dislike-count'>111</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-                    <!--comment report-->
-<!--                    <div class='comment-report' id='comment-report'>-->
-<!--                        <div class="box-title">Report Comment</div>-->
-<!--                        <textarea class="report-txt field-hover" placeholder="Your content goes here"></textarea>-->
-<!--                        <div class="create-post-buttons">-->
-<!--                            <button class='filter-btn btn'>Submit</button>-->
-<!--                            <button class='filter-btn btn' onclick='HideCommentReport()'>Cancel</button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-            </div>
-
-            <!-- 2nd post-->
-<!--            <div class="post-box">-->
-<!--                <div class="post-content">-->
-<!--                    <img src="" alt="" class="dp-box">-->
-<!--                    <div class="f-name ">First Name</div>-->
-<!--                    <div class='l-name post-field '>Last Name</div>-->
-<!--                    <div class='post-time post-field '>Timestamp</div>-->
-<!--                    <button class='filter-btn btn post-delete'>Delete</button>-->
-<!--                    <img src='' alt='' class='pic-box'>-->
-<!--                    <div class='post-title post-field '> Title</div>-->
-<!--                    <div class="post-text post-field "></div>-->
-<!--                    <button class='filter-btn btn report-btn' onclick='DisplayPostReport()'>Report</button>-->
-<!--                    <button class='filter-btn btn show-comment-btn' onclick='DisplayComments()'>Show Comment</button>-->
-<!--                    <button class='filter-btn btn comment-btn' onclick='DisplayAddComment()'>Comment</button>-->
-<!--                    <div class="like-dislike-cell">-->
-<!--                        <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>-->
-<!--                        <div class="post-like-count post-field">111</div>-->
-<!--                        <button class='thumb-icon'><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i></button>-->
-<!--                        <div class="post-dislike-count post-field">112</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!---->
-                <!--Post report -->
-<!--                <div class='post-report' id='post-report'>-->
-<!--                    <div class='box-title'>Report Post</div>-->
-<!--                    <textarea class='report-txt' placeholder='Your content goes here'></textarea>-->
-<!--                    <div class='create-post-buttons'>-->
-<!--                        <button class='filter-btn btn'>Submit</button>-->
-<!--                        <button class='filter-btn btn'>Cancel</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!---->
-                <!--add comments -->
-<!--                <div class='add-comment' id='add-comment'>-->
-<!--                    <div class='box-title '>Add Comment</div>-->
-<!--                    <div class='comment-content'>-->
-<!--                        <img src='' alt='' class='comment-dp'>-->
-<!--                        <input class='c-fname' placeholder='First Name'>-->
-<!--                        <input class='c-lname' placeholder='Last Name'>-->
-<!--                        <div class='c-time'>Timestamp</div>-->
-<!--                        <div class='comment-buttons'>-->
-<!--                            <div class='c-edit'></div>-->
-<!--                            <button class='filter-btn btn c-dlt'>Add</button>-->
-<!--                            <button class='filter-btn btn c-report' onclick='HideAddComment ()'>Cancel</button>-->
-<!--                        </div>-->
-<!--                        <textarea class='c-txt' placeholder='Enter yor comment here'></textarea>-->
-<!--                        <div class='like-box'>-->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class='comment-box' id='show-comment'>-->
-<!--                    <div class='comments-row'>-->
-<!--                        <div class='box-title'>Comments</div>-->
-<!--                        <button class='filter-btn btn hide-cmnt-btn' onclick=' HideComments()'>Hide Comments</button>-->
-<!--                    </div>-->
-<!---->
-                    <!--comment show-->
-<!--                    <div class='comment-content'>-->
-<!--                        <img src='' alt='' class='comment-dp'>-->
-<!--                        <div class='c-fname '>First Name</div>-->
-<!--                        <div class='c-lname'>Last Name</div>-->
-<!--                        <div class='c-time'>Timestamp</div>-->
-<!--                        <div class='comment-buttons'>-->
-<!--                            <button class='filter-btn btn c-edit'>Edit</button>-->
-<!--                            <button class='filter-btn btn c-dlt'>delete</button>-->
-<!--                            <button class='filter-btn btn c-report' onclick='DisplayCommentReport()'>Report</button>-->
-<!--                        </div>-->
-<!--                        <div class='c-txt'>Enter yor comment here</div>-->
-<!--                        <div class='like-box'>-->
-<!--                            <div class='r-1'>-->
-<!--                                <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>-->
-<!--                                <div class='c-like-count'>112</div>-->
-<!--                            </div>-->
-<!--                            <div class='r-2'>-->
-<!--                                <button class='thumb-icon'><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i>-->
-<!--                                </button>-->
-<!--                                <div class='c-dislike-count'>111</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!---->
-                    <!--comment report-->
-<!--                    <div class='comment-report' id='comment-report'>-->
-<!--                        <div class="box-title">Report Comment</div>-->
-<!--                        <textarea class="report-txt" placeholder="Your content goes here"></textarea>-->
-<!--                        <div class="create-post-buttons">-->
-<!--                            <button class='filter-btn btn'>Submit</button>-->
-<!--                            <button class='filter-btn btn'>Cancel</button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            </div>        
         </div>
     </div>
 

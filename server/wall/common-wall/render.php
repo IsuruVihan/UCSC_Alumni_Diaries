@@ -78,27 +78,33 @@ if (mysqli_num_rows($results) > 0) {
                                 <button class='filter-btn btn report-btn' onclick=DisplayPostReport({$row['Id']}) id='post-report-{$row['Id']}'>Report</button>
                            ";
             }
+            if ($_SESSION["Email"] == $row["OwnerEmail"]) {
+                echo"
+                       <button class='filter-btn btn report-btn' onclick=DisplayPostEdit({$row['Id']}) id='post-edit-{$row['Id']}'>Edit</button>
+                  ";
+            }
             echo"
                                 <button class='filter-btn btn show-comment-btn' onclick=ShowComments({$row['Id']}) id='post-comment-show-{$row['Id']}'>Show Comment</button>
                                 <button class='filter-btn btn comment-btn' onclick=DisplayAddComment({$row['Id']}) id='post-add-comment-{$row['Id']}'>Comment</button>
                             </div>
                             
                             <div class='like-dislike-cell'>
-                                <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>
+                                <button class='thumb-icon'><i class='fa fa-level-up fa-2x'></i></button>
                                 <div class='post-like-count post-field'>111</div>
-                                <button class='thumb-icon'><i class='fa fa-thumbs-down fa-2x' aria-hidden='true'></i></button>
+                                <button class='thumb-icon'><i class='fa fa-level-down fa-2x' aria-hidden='true'></i></button>
                                 <div class='post-dislike-count post-field'>112</div>
                             </div>
                         </div>   
-                    
-                        <div class='post-report' id='post-report-box-{$row['Id']}'>
+                        <!--Post Report -->
+                        <form class='post-report' id='post-report-box-{$row['Id']}'>
                             <div class='box-title'>Report Post</div>
-                            <textarea class='report-txt field-hover' placeholder='Your content goes here'></textarea>
+                            <textarea class='report-txt field-hover' id='post-report-content-{$row['Id']}' name='post-report-content' placeholder='Your content goes here'></textarea>
+                            <input type='text' value='{$row['Id']}' name='post-id-no' hidden>
                             <div class='create-post-buttons'>
-                                <button class='filter-btn btn'>Submit</button>
+                                <button type='submit' class='filter-btn btn' onclick=SubmitPostReport({$row['Id']})>Submit</button>
                                 <button class='filter-btn btn' onclick=HidePostReport({$row['Id']})>Cancel</button>
                             </div>
-                        </div>     
+                        </form>     
                     
                             <!--add comments -->
                             <div class='add-comment' id='add-comment-{$row['Id']}'>
@@ -187,27 +193,37 @@ if (mysqli_num_rows($results) > 0) {
                                 <button class='filter-btn btn report-btn' onclick=DisplayPostReport({$row['Id']}) id='post-report-{$row['Id']}'>Report</button>
                            ";
                      }
+                     if ($_SESSION["Email"] == $row["OwnerEmail"]) {
+                        echo"
+                               <button class='filter-btn btn report-btn' onclick=DisplayPostEdit({$row['Id']}) id='post-edit-{$row['Id']}'>Edit</button>
+                          ";
+                    }
+
                      echo"
                                 <button class='filter-btn btn show-comment-btn' onclick=ShowComments({$row['Id']}) id='post-comment-show-{$row['Id']}'>Show Comments</button>
                                 <button class='filter-btn btn comment-btn' onclick=DisplayAddComment({$row['Id']}) id='post-add-comment-{$row['Id']}'>Comment</button>
                             </div>
                             
                             <div class='like-dislike-cell'>
-                                <button class='thumb-icon'><i class='fa fa-thumbs-up fa-2x'></i></button>
+                                <button class='thumb-icon'><i class='fa fa-level-up fa-2x'></i></button>
                                 <div class='post-like-count post-field'>111</div>
-                                <button class='thumb-icon'><i class='fa fa-thumbs-down fa-2x' aria-hidden='true'></i></button>
+                                <button class='thumb-icon'><i class='fa fa-level-down fa-2x' aria-hidden='true'></i></button>
                                 <div class='post-dislike-count post-field'>112</div>
                             </div>
                         </div>   
+
+                        <!-- post edit-->
                     
-                            <div class='post-report' id='post-report-box-{$row['Id']}'>
-                                <div class='box-title'>Report Post</div>
-                                <textarea class='report-txt field-hover' placeholder='Your content goes here'></textarea>
-                                <div class='create-post-buttons'>
-                                    <button class='filter-btn btn'>Submit</button>
-                                    <button class='filter-btn btn' onclick=HidePostReport({$row['Id']})>Cancel</button>
-                                </div>
-                            </div>     
+                        <!--Post Report -->
+                        <form class='post-report' id='post-report-box-{$row['Id']}'>
+                            <div class='box-title'>Report Post</div>
+                            <textarea class='report-txt field-hover' id='post-report-content-{$row['Id']}' name='post-report-content' placeholder='Your content goes here'></textarea>
+                            <input type='text' value='{$row['Id']}' name='post-id-no' hidden>
+                            <div class='create-post-buttons'>
+                                <button type='submit' class='filter-btn btn' onclick=SubmitPostReport({$row['Id']})>Submit</button>
+                                <button class='filter-btn btn' onclick=HidePostReport({$row['Id']})>Cancel</button>
+                            </div>
+                        </form>    
                     
                             <!--add comments -->
                             <div class='add-comment' id='add-comment-{$row['Id']}'>
