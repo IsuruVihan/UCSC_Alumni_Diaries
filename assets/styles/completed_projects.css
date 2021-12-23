@@ -57,6 +57,7 @@
     grid-row-start: row1;
     grid-row-end: row2;
     margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 .projects-list, .committee-members, .project-details, .expenditures {
@@ -93,9 +94,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
-.col2, .col3 {
+.col2, .col3, .col4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +115,10 @@
 
 .input-field:hover {
     border-color: #ffccc7;
+}
+
+.date-field {
+    width: 45%;
 }
 
 .btn {
@@ -207,7 +214,7 @@
 .coord {
     border: 1px solid lightgray;
     border-radius: 5px;
-    height: 4vh;
+    height: 7vh;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -217,6 +224,7 @@
 .coord-pic {
     padding: 0;
     margin: 0;
+    border-radius: 100%;
 }
 
 .gen-rep-btn, .spend-btn {
