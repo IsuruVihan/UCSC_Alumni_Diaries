@@ -93,9 +93,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
-.col2, .col3 {
+.col2, .col3, .col4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +114,10 @@
 
 .input-field:hover {
     border-color: #ffccc7;
+}
+
+.date-field {
+    width: 45%;
 }
 
 .btn {
