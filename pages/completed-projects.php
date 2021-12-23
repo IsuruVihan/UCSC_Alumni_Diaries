@@ -27,6 +27,18 @@
             });
         });
     });
+    
+    const ViewAllProjectDetails = (id) => {
+        $('#completed-project-details').load("../server/projects/completed/view-details.php", {
+            ProjectId: id
+        });
+        $('#completed-project-committee-members').load("../server/projects/completed/view-committee-members.php", {
+            ProjectId: id
+        });
+        $('#completed-project-expenditures').load("../server/projects/completed/view-expenditures.php", {
+            ProjectId: id
+        });
+    }
 </script>
 
 <div class='main-container'>
@@ -63,45 +75,9 @@
         </form>
         <div class='results' id='completed-projects-list'></div>
     </div>
-    <div class='card project-details'>
-        <div class='title project-name-div' id='project-name-div'>
-            Project Name
-        </div>
-        <div class='project-status'>
-            Started on
-        </div>
-        <div class='project-status'>
-            Completed on
-        </div>
-        <div class='project-description' id='project-description'>
-            Project description comes here...
-        </div>
-        <div class='coord'>
-            <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
-            <p class='coord-fname'>First Name</p>
-            <p class='coord-lname'>Last Name</p>
-        </div>
-    </div>
-    <div class='card project-committee' id='committee-members'>
-        <div class='title'>
-            Committee Members
-        </div>
-        <div class='results'>
-            <div class='result'>
-                <img src='../assets/images/user-default.png' height='100%' alt='user' class='coord-pic'/>
-                <div class='fname'>First Name</div>
-                <div class='lname'>Last Name</div>
-            </div>
-        </div>
-    </div>
-    <div class='card expenditures'>
-        <div class='title'>
-            Expenditures
-        </div>
-        <div class='gen-report-div'>
-            <button class='btn gen-rep-btn'>Expenditure Report</button>
-        </div>
-    </div>
+    <div class='card project-details' id='completed-project-details'></div>
+    <div class='card project-committee' id='completed-project-committee-members'></div>
+    <div class='card expenditures' id='completed-project-expenditures'></div>
 </div>
 
 <script src='../js/completed-projects.js'></script>
