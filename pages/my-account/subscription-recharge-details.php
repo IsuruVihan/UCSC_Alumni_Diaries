@@ -11,7 +11,6 @@
     const genReportBtn = (from, to, subType) => {
         const url = "http://localhost/UCSC_Alumni_Diaries/server/generate-reports/my-account/report-structure.php?from=" + from + "&to=" + to + "&subtype=" + subType;
         window.location.replace(url);
-
     }
 </script>
 
