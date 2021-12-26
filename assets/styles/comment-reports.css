@@ -13,6 +13,7 @@
     font-size: 15px;
     /* border: solid 2px red; */
     justify-content: center;
+    font-family: Nunito;
 }
 
 .commentreports {
@@ -22,7 +23,7 @@
     padding-right: 10px;
 }
 
-.card {
+/* .card {
     background: white;
     height: 87.5vh;
 }
@@ -33,7 +34,7 @@
     padding: 20px;
     transition: all ease-in-out 0.5s;
     font-family: Nunito;
-}
+} */
 
 .title {
     font-weight: 600;
@@ -50,7 +51,7 @@
     justify-content: flex-start;
     overflow: hidden;
     overflow-y: scroll;
-    height: 450px;
+    height: 530px;
     margin: 15px;
 }
 
@@ -77,6 +78,11 @@
 .propic {
     grid-column-start: c1;
     grid-column-end: c2;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding-bottom: 80px; */
+    /* border: 2px solid rgb(212, 16, 16); */
 }
 
 .c-reporter {
