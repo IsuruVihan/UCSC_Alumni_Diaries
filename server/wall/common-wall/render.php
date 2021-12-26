@@ -37,8 +37,9 @@ if (mysqli_num_rows($results) > 0) {
 
         if (!empty($pic)) {
             echo "
-                    <div class='post-content'>
-                        
+                
+            <div  class='post-content' >
+                   <div id='post-content-{$row['Id']}'>     
                             ";
             if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row['OwnerEmail']) {
                 echo "
@@ -89,13 +90,37 @@ if (mysqli_num_rows($results) > 0) {
                             </div>
                             
                             <div class='like-dislike-cell'>
-                                <button class='thumb-icon'><i class='fa fa-level-up fa-2x'></i></button>
+                                <button class='thumb-icon'><i class='fas fa-fire fa-2x'></i></button>
                                 <div class='post-like-count post-field'>111</div>
-                                <button class='thumb-icon'><i class='fa fa-level-down fa-2x' aria-hidden='true'></i></button>
+                                <button class='thumb-icon'><i class='fas fa-frown fa-2x' aria-hidden='true'></i></button>
                                 <div class='post-dislike-count post-field'>112</div>
                             </div>
-                        </div>   
+                        </div>
+                </div>
+
+                <!-- post edit-->
+                        
+                <form class='post-content-row1-edit'  id='post-edit-show-{$row['Id']}'>
+                    <div class='flex-row'>
+                    <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                    <div class='name-time-flex'> 
+                        <div class='f-name-1'>{$row1['FirstName']} {$row1['LastName']}</div> 
+                        <div class='post-time-1'>{$row['Timestamp']}</div>
+                    </div>
+                    </div>
+                    <div class='content-edit'>
+                        <textarea class='post-text-edit' name='post-edit-content' id='post-content-body-{$row['Id']}'>{$row['Content']}</textarea>
+                    </div>
+                    <input type='text' value='{$row['Id']}' name='post-id-no' hidden>  
+                    <div class='post-edit-btn-box'>
+                        <input type='submit' class='filter-btn btn save-changes-btn' value='Save Changes'>
+                        <input type='reset' class='filter-btn btn save-changes-btn' onclick=ShowPostHideEdit({$row['Id']}) value='Cancel'>
+                    </div>
+                </form>
+                        
+                  
                         <!--Post Report -->
+
                         <form class='post-report' id='post-report-box-{$row['Id']}'>
                             <div class='box-title'>Report Post</div>
                             <textarea class='report-txt field-hover' id='post-report-content-{$row['Id']}' name='post-report-content' placeholder='Your content goes here'></textarea>
@@ -152,6 +177,7 @@ if (mysqli_num_rows($results) > 0) {
             } else {
                 echo "
                     <div class='post-content'>
+                        <div id='post-content-{$row['Id']}'>
                         
                             ";
             if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row['OwnerEmail']) {
@@ -205,15 +231,33 @@ if (mysqli_num_rows($results) > 0) {
                             </div>
                             
                             <div class='like-dislike-cell'>
-                                <button class='thumb-icon'><i class='fa fa-level-up fa-2x'></i></button>
+                                <button class='thumb-icon'><i class='fas fa-fire fa-2x'></i></button>
                                 <div class='post-like-count post-field'>111</div>
-                                <button class='thumb-icon'><i class='fa fa-level-down fa-2x' aria-hidden='true'></i></button>
+                                <button class='thumb-icon'><i class='fas fa-frown fa-2x' aria-hidden='true'></i></button>
                                 <div class='post-dislike-count post-field'>112</div>
                             </div>
-                        </div>   
+                        </div> 
+                    </div>      
 
                         <!-- post edit-->
-                    
+                        <form class='post-content-row1-edit'  id='post-edit-show-{$row['Id']}'>
+                            <div class='flex-row'>
+                                <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                            <div class='name-time-flex'> 
+                                <div class='f-name-1'>{$row1['FirstName']} {$row1['LastName']}</div> 
+                                <div class='post-time-1'>{$row['Timestamp']}</div>
+                            </div>
+                            </div>
+                            <div class='content-edit'>
+                                <textarea class='post-text-edit' name='post-edit-content' id='post-content-body-{$row['Id']}'>{$row['Content']}</textarea>
+                            </div>
+                            <input type='text' value='{$row['Id']}' name='post-id-no' hidden>  
+                            <div class='post-edit-btn-box'>
+                                <input type='submit' class='filter-btn btn save-changes-btn' value='Save Changes'>
+                                <input type='reset' class='filter-btn btn save-changes-btn' onclick=ShowPostHideEdit({$row['Id']}) value='Cancel'>
+                            </div>
+                        </form>
+
                         <!--Post Report -->
                         <form class='post-report' id='post-report-box-{$row['Id']}'>
                             <div class='box-title'>Report Post</div>
@@ -257,6 +301,7 @@ if (mysqli_num_rows($results) > 0) {
 
                             
                     </div> 
+                    
 
             ";
             }

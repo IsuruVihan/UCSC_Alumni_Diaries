@@ -454,7 +454,48 @@
     }
 
     const DisplayPostEdit = (id) => {
+        const postEditId = '#post-edit-show-'+id;
+        const postEditIdNohash = 'post-edit-show-'+id;
+        const postShowId = '#post-content-'+id;
+        const postBody = '#post-content-body-'+id;
         
+        $(postShowId).css("display","none");
+        $(postEditId).css("display","flex")
+
+        $(postEditId).submit((event) =>{
+            event.preventDefault();
+            const url = '../server/wall/common-wall/post-edit.php';
+            const form = document.getElementById(postEditIdNohash);
+            const formDataEight = new FormData(form);
+
+                
+
+                fetch(url, {
+                    method: 'POST',
+                    body: formDataEight,
+                }).then((response) => {
+                    console.log(response);
+                }).catch((error) => {
+                    console.log(error);
+                });  
+
+                // const postBodyValue = $(postBody).val();
+
+                if( $(postBody).val()  != ''){
+                    setTimeout(() => {
+                        location.reload();
+                    });
+                }   
+
+        });
+    }
+
+    const ShowPostHideEdit = (id) =>{
+        const postEditId = '#post-edit-show-'+id;
+        const postShowId = '#post-content-'+id;
+        $(postShowId).css("display","flex");
+        $(postShowId).css("flex-direction","column"); 
+        $(postEditId).css("display","none")
     }
 
 
