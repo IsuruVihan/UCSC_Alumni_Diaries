@@ -309,8 +309,9 @@
 .flexbox-container2 {
     grid-row-start: rw2;
     grid-row-end: rw3;
-    height: 600px;
+    height: 650px;
     border: 1px solid lightgray;
+    /* border: 1px solid rgb(145, 12, 12); */
     border-radius: 5px;
     justify-content: flex-start;
     overflow: hidden;

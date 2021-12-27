@@ -36,7 +36,17 @@
             target='iframe'
             onclick=onClickDone()
 
-        >Done </a>
+        >Accepted </a>
+
+        <a 
+
+            href='subscriptions-rejected.php' 
+            id='sub-rej'
+            class='section-link' 
+            target='iframe'
+            onclick=onClickDone()
+
+        >Rejected </a>
         
         <a 
         
