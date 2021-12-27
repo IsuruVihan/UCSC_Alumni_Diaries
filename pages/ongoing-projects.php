@@ -185,6 +185,21 @@
             ProjectId: ProjectId
         });
     }
+
+    const GenRep1 = (ProjectId) => {
+        const url = "http://localhost/UCSC_Alumni_Diaries/server/generate-reports/projects/ongoing/cash-summary.php?projectid=" + ProjectId;
+        window.location.replace(url);
+    }
+
+    const GenRep2 = (ProjectId) => {
+        const url = "http://localhost/UCSC_Alumni_Diaries/server/generate-reports/projects/ongoing/items-summary.php?projectid=" + ProjectId;
+        window.location.replace(url);
+    }
+
+    const GenRep3 = (ProjectId) => {
+        const url = "http://localhost/UCSC_Alumni_Diaries/server/generate-reports/projects/ongoing/items-spendings.php?projectid=" + ProjectId;
+        window.location.replace(url);
+    }
 </script>
 
 <div class='main-container'>

@@ -52,7 +52,7 @@
                 <input type='submit' class='filter-btn btn' value='Filter'/>
                 <button onClick="window.location.reload();" class='all-btn btn'>All</button>
                 <button
-                    onClick=genReportBtn(document.getElementById('from').value,document.getElementById('to').value,document.getElementById('subType').value)
+                    onclick=genReportBtn(document.getElementById('from').value,document.getElementById('to').value,document.getElementById('subType').value)
                     class='gen-repo-btn btn'
                 >Generate Report</button>
             </div>
