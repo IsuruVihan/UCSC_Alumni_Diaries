@@ -12,6 +12,4 @@
     });
 </script>
 
-<div class='general-dashboard' id='general-dashboard'>
-
-</div>
+<div class='general-dashboard' id='general-dashboard'></div>
