@@ -39,6 +39,11 @@
             ProjectId: id
         });
     }
+
+    const GenRep = (ProjectId) => {
+        const url = "http://localhost/UCSC_Alumni_Diaries/server/generate-reports/projects/closed/expenditures.php?projectid=" + ProjectId;
+        window.location.replace(url);
+    }
 </script>
 
     <div class='main-container'>
