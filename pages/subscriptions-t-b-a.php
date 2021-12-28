@@ -9,7 +9,7 @@
         <div class='s-to-be-accept'>
             <div class='card subs'>
                 <div class='title'>
-                    Subscriptions To Be Accepted
+                    Pending Subscriptions
                 </div>
                 <div class='alldetails1'>
                     <div class='filtermain'>

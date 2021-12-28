@@ -8,7 +8,7 @@
     <div class='left-col'>
         <div class='card subs'>
             <div class='title'>
-                Accepted Subscriptions
+                Rejected Subscriptions
             </div>
             <div class='alldetails2'>
                 <div class='filtermain2'>

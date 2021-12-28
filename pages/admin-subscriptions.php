@@ -24,30 +24,28 @@
             class='section-link clicked' 
             target='iframe'
             onclick=onClickSubtba()
-
-        >To Be Accepted </a>
-        
-    
-        <a 
-
+        >Pending</a>
+        <a
             href='subscriptions-done.php' 
             id='sub-done'
             class='section-link' 
             target='iframe'
             onclick=onClickDone()
-
-        >Done </a>
-        
-        <a 
-        
+        >Accepted</a>
+        <a
+            href='subscriptions-rejected.php' 
+            id='sub-rej'
+            class='section-link' 
+            target='iframe'
+            onclick=onClickDone()
+        >Rejected</a>
+        <a
             href='subscription-status.php' 
             id='sub-status'
             class='section-link' 
             target='iframe'
             onclick=onClickStatus()
-            
-        >Status </a>
-
+        >Status</a>
     </div>
     <iframe
         class='section-2'
