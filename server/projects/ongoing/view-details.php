@@ -388,7 +388,10 @@
                                         <div class='available-value'>Rs. {$TotalSpentAmount}</div>
                                     </div>
                                     <div class='available-card-3'>
-                                        <button class='available-btn available-filter-btn'>Generate Report</button>
+                                        <button
+                                            class='available-btn available-filter-btn'
+                                            onclick=GenRep1('{$Id}')
+                                        >Generate Report</button>
                                     </div>
                                 </div>
                                 <form
@@ -589,6 +592,7 @@
                                     <div class='spent-records-card-3'>
                                         <button
                                             class='spent-records-btn spent-records-filter-btn'
+                                            onclick=GenRep1('{$Id}')
                                         >Generate Report</button>
                                     </div>
                                     <table>
@@ -701,6 +705,7 @@
                                         <div class='item-available-card-3'>
                                             <button
                                                 class='item-available-btn item-available-filter-btn'
+                                                onclick=GenRep2('{$Id}')
                                             >Generate Report</button>
                                         </div>
                                         <table>
@@ -950,6 +955,7 @@
                                         <div class='item-record-card-3'>
                                             <button
                                                 class='item-record-btn item-record-filter-btn'
+                                                onclick=GenRep3('{$Id}')
                                             >Generate Report</button>
                                         </div>
                                         <table>
