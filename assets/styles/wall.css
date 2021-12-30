@@ -13,6 +13,29 @@
     display: flex;
 }
 
+.fa-fire{
+    background: gray;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-frown{
+    background:gray;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fire{
+    background: -webkit-linear-gradient(#DA1F05, #FFC11F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.frown{
+    /*background: -webkit-linear-gradient(#DA1F05,#BE7505);*/
+    background: #D49504;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .main-container {
     display: flex;

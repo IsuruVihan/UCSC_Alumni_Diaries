@@ -453,6 +453,10 @@
         });
     }
 
+    const LitPosts = (id) => {
+        // $('#post-box').load('../server/wall/common-wall/lit-render.php');
+    }
+
     const DisplayPostEdit = (id) => {
         const postEditId = '#post-edit-show-'+id;
         const postEditIdNohash = 'post-edit-show-'+id;
@@ -498,7 +502,228 @@
         $(postEditId).css("display","none")
     }
 
+    const LitFunction = (id) =>{
+            // former like function
+        const lit = '#lit-'+id;
+        const click = 1;
 
+        $('#flash-message-3').load("../server/wall/common-wall/react.php", {
+            id: id,
+            click : click,
+        }, (response) => {
+            if (response === "done") {
+                $(lit).addClass('fire');
+
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            }
+        });
+    }
+
+    const FrownFunction = (id) => {
+            //former dislike function
+        const frown = '#frown-'+id;
+        const click = 2;
+
+        $('#flash-message-3').load("../server/wall/common-wall/react.php", {
+            id: id,
+            click : click,
+        }, (response) => {
+            if (response === "done") {
+                $(frown).addClass('frown');
+
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            }
+        });
+    }
+
+        const LitFunctionRemove = (id) => {
+            const lit = '#lit-'+id;
+            const click = 3;
+
+            $('#flash-message-3').load("../server/wall/common-wall/react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(lit).removeClass('fire');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+        }
+
+        const FrownFunctionRemove = (id) => {
+            const frown = '#frown-'+id;
+            const click = 3;
+
+            $('#flash-message-3').load("../server/wall/common-wall/react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(frown).removeClass('frown');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+
+        }
+
+        const LitFunctionChange = (id) => {
+            const lit = '#lit-'+id;
+            const click = 4;
+
+            $('#flash-message-3').load("../server/wall/common-wall/react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(lit).addClass('fire');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+
+        }
+
+        const FrownFunctionChange = (id) => {
+            const frown = '#frown-'+id;
+            const click = 5;
+
+            $('#flash-message-3').load("../server/wall/common-wall/react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(frown).addClass('frown');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+        }
+
+        const LitFunctionComment = (id) => {
+            // former like function
+            const lit = '#lit-'+id;
+            const click = 1;
+
+            $('#flash-message-3').load("../server/wall/common-wall/comment-react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(lit).addClass('fire');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+        }
+        const FrownFunctionComment = (id) => {
+            //former dislike function
+            const frown = '#frown-'+id;
+            const click = 2;
+
+            $('#flash-message-3').load("../server/wall/common-wall/comment-react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(frown).addClass('frown');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+        }
+
+        const LitFunctionRemoveComment = (id) => {
+            const lit = '#lit-'+id;
+            const click = 3;
+
+            $('#flash-message-3').load("../server/wall/common-wall/comment-react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(lit).removeClass('fire');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+        }
+
+        const FrownFunctionRemoveComment = (id) => {
+            const frown = '#frown-'+id;
+            const click = 3;
+
+            $('#flash-message-3').load("../server/wall/common-wall/comment-react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(frown).removeClass('frown');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+
+        }
+
+        const LitFunctionChangeComment = (id) => {
+            const lit = '#lit-'+id;
+            const click = 4;
+
+            $('#flash-message-3').load("../server/wall/common-wall/comment-react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(lit).addClass('fire');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+
+        }
+
+        const FrownFunctionChangeComment = (id) => {
+            const frown = '#frown-'+id;
+            const click = 5;
+
+            $('#flash-message-3').load("../server/wall/common-wall/comment-react.php", {
+                id: id,
+                click : click,
+            }, (response) => {
+                if (response === "done") {
+                    $(frown).addClass('frown');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                }
+            });
+        }
 
 
     </script>
@@ -562,6 +787,7 @@
                 <p class="grid-title">Wall</p>
                 <button class='create-post-button filter-btn btn' onclick='DisplayCreatePost()'>Create Post</button>
             </div>
+            <span id='flash-message-3'>  </span>
 
             <!--Create post -->
             <form class='create-post-box' id='create-post-form' enctype='multipart/form-data' >
@@ -595,7 +821,7 @@
                 <button class='filter-btn btn' onclick=FilterById({$row['Id']})>Filter</button>
             </div>
             <div class='filter-right'>
-                <button class='filter-btn btn' onclick=LikedPosts({$row['Id']}) >Liked</button>
+                <button class='filter-btn btn' onclick=LitPost({$row['Id']}) >Lit</button>
                 <button class='filter-btn btn' onclick=MyPosts({$row['Id']}) >My Posts</button>
                 <button class='filter-btn btn' onclick=AllPosts({$row['Id']}) >All</button>
             </div>
@@ -604,7 +830,7 @@
           else{
               echo"
               <div class='filter-box-member-session'>
-                    <button class='filter-btn btn filter-member-session' onclick=LikedPosts({$row['Id']}) >Liked</button>
+                    <button class='filter-btn btn filter-member-session' onclick=LitPosts({$row['Id']}) >Liked</button>
                     <button class='filter-btn btn filter-member-session' onclick=MyPosts({$row['Id']}) >My Posts</button>
                     <button class='filter-btn btn filter-member-session' onclick=AllPosts({$row['Id']}) >All</button>
                 </div>
