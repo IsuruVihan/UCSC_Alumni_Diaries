@@ -454,7 +454,7 @@
     }
 
     const LitPosts = (id) => {
-        // $('#post-box').load('../server/wall/common-wall/lit-render.php');
+        $('#post-box').load('../server/wall/common-wall/lit-render.php');
     }
 
     const DisplayPostEdit = (id) => {
@@ -821,7 +821,7 @@
                 <button class='filter-btn btn' onclick=FilterById({$row['Id']})>Filter</button>
             </div>
             <div class='filter-right'>
-                <button class='filter-btn btn' onclick=LitPost({$row['Id']}) >Lit</button>
+                <button class='filter-btn btn' onclick=LitPosts({$row['Id']}) >Lit</button>
                 <button class='filter-btn btn' onclick=MyPosts({$row['Id']}) >My Posts</button>
                 <button class='filter-btn btn' onclick=AllPosts({$row['Id']}) >All</button>
             </div>
