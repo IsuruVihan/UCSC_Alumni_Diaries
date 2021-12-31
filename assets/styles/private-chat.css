@@ -164,7 +164,7 @@ body {
 .names-btn-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: 100%;
     align-items: center;
     justify-content: space-between;
@@ -172,35 +172,35 @@ body {
 }
 
 .names-container {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     margin-bottom: 4px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .btn-container {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.first-name, .last-name {
-    width: 48%;
+.first-name {
+    /*width: 90%;*/
     height: 60%;
     background: white;
-    border: 1px solid lightgray;
+    /*border: 1px solid lightgray;*/
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
-    text-align: center;
+    text-align: left;
 }
 
 .user-pic {
     border: 1px solid lightgray;
-    border-radius: 5px;
+    border-radius: 100%;
     text-align: center;
 }
 
@@ -467,4 +467,8 @@ body {
 .chat-list-item:hover, .available-users-item:hover {
     box-shadow: 0 0 5px gray;
     cursor: pointer;
+}
+
+.file-upload-btn{
+    display: none;
 }
