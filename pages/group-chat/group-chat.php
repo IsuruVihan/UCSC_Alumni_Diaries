@@ -30,10 +30,9 @@
             Id: id       
         });    
     }
-   
-   
+    
 </script>
-   
+ 
 <div class='group-chat-grid'>
     <div class='card chat-list'>
         <div class='title'>Chat List</div>
@@ -409,5 +408,5 @@
         </div>   -->
     </div>
 </div>
-<script src='../../js/group-project.js'></script>
-<script src='available-user.js'></script>
+<script src='../../js/group-project.js'></script> 
+<script src='../../js/available-users.js'></script>

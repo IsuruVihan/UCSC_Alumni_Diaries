@@ -1,4 +1,5 @@
 <?php
+ 
   include('../../db/db-conn.php');
 
   $Group_Name = $_POST['Group_Name'];
@@ -13,10 +14,10 @@
 
     if(mysqli_num_rows($result) > 0){
         while($row = mysqli_fetch_assoc($result)){
-            if ($row['PicSrc'] == NULL) {  
+            if ($row['PicSrc'] == 'group-chat.png') {  
                 echo"
                     <div class='list-items'>
-                        <img src='../../assets/images/user-default.png' width='20%' height='90%' class='user-pic' alt='user-pic'>
+                        <img src='../../assets/images/group-chat.png' width='20%' height='90%' class='user-pic' alt='user-pic'>
                         <div class='name-buttons'>
                             <div class='name'>
                                 {$row['Name']}

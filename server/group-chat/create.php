@@ -4,6 +4,7 @@ include('../../db/db-conn.php');
 if(isset($_POST['submit'])){
    $group_name = $_POST['group-name'];
    $file = $_FILES['file'];
+  
    if(empty($group_name)){
       echo "Enter a Group Name";
    }else{
@@ -48,16 +49,17 @@ if(isset($_POST['submit'])){
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed. ";
       }
    }else{
-      $query ="INSERT INTO groupchats (OwnerEmail, Name) 
-               VALUES ('{$_SESSION['Email']}','$group_name')"; 
+         $query ="INSERT INTO groupchats (OwnerEmail,PicSrc,Name) 
+         VALUES ('{$_SESSION['Email']}','group-chat.png','$group_name')"; 
         
       if (mysqli_query($conn, $query)) {
          header("Location: ../../pages/group-chat/group-chat.php");
       }else{
          echo "Server error";
-      }         
+      } 
+   }        
    }
-   }
+   
 }
    
 
