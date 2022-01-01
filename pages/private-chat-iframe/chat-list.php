@@ -2,21 +2,47 @@
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+</script>
+
+<script>
+    $(document).ready(() => {
+        $('#chat-list-container').load("../../server/private-chat/render-chat-list.php");
+    });
+</script>
+
+<script>
+    $(document).ready(() => {
+        $('#filter-field').submit((event) => {
+            event.preventDefault();
+            const firstname = $('#first-name').val();
+            const lastname = $('#last-name').val();
+            $('#chat-list-container').load("../../server/private-chat/chat-list-filter.php", {
+                firstname: firstname,
+                lastname: lastname
+            });
+        });
+    })
+</script>
+
 <div class='chat-list-main-container'>
     <div class='chat-list' id='chat-list'>
         <div class='chat-list-title'>
             Chat List
         </div>
-        <div class='filter-field'>
+        <form class='filter-field' id='filter-field'>
             <div class='col1'>
-                <input class='input' type='text' placeholder='First Name'/>
-                <input class='input' type='text' placeholder='Last Name'/>
+                <input class='input' id='first-name' type='text' placeholder='First Name'/>
+                <input class='input' id='last-name' type='text' placeholder='Last Name'/>
             </div>
             <div class='col2'>
-                <button class="filter-btn btn">Filter</button>
+                <button class="filter-btn btn" type="submit" value="Filter">Filter</button>
             </div>
-        </div>
-        <div class='chat-list-container'>
+        </form>
+        <div class='chat-list-container' id='chat-list-container'>
             <div class='chat-list-item'>
                 <img src='../../assets/images/user-default.png' width="20%" height="90%" class='user-pic' alt='user-pic'>
                 <div class='names-btn-container'>
@@ -111,7 +137,7 @@
         </div>
     </div>
     <div class='chat' id='chat'>
-        <div class='chat-title'>
+        <div class='chat-title' id='chat-title'>
             <img src='../../assets/images/user-default.png' width="8%" class='user-pic' alt='user-pic'>
             <div class='chat-name-container'>
                 <div class='first-name'>First Name</div>
@@ -230,15 +256,102 @@
                 </div>
             </div>
         </div>
-        <div class='create-message-div'>
-            <textarea class='chat-message'></textarea>
+        <form class='create-message-div' method="post" action="../../server/private-chat/create-message.php" enctype="multipart/form-data" id="create-message">
+            <textarea class='chat-message' id='message'></textarea>
             <div class='button-set'>
-                <i class='fas fa-paper-plane chat-icon send-icon'></i>
-                <i class='fas fa-paperclip chat-icon attach-icon'></i>
-                <i class='fas fa-times-circle chat-icon clear-icon'></i>
+                <label class="pic-upload">
+                    <input type="submit" name="submit-btn" id="submit-btn" class="file-upload-btn btn">
+                    <i class='fas fa-paper-plane chat-icon send-icon'></i>
+                </label>
+                <label class="pic-upload">
+                    <input type="file" name="file" id="file" class="file-upload-btn btn">
+                    <i class='fas fa-paperclip chat-icon attach-icon'></i>
+                </label>
+                <label class="pic-upload">
+                    <input name="new-photo" type ='reset' id="cancel-photo" class="file-upload-btn btn">
+                    <i class='fas fa-times-circle chat-icon clear-icon'></i>
+                </label>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 
 <script src='../../js/private-chat.js'></script>
+
+<script>
+    const onClickDeleteBtn = (Id) =>{
+        $('#chat-list-container').load("../../server/private-chat/delete-chat-from-chat-list.php", {
+            Id: Id
+        });
+    }
+</script>
+
+<script>
+    const  chatlist = document.getElementById('chat-list');
+    const chat = document.getElementById('chat');
+
+    const onClickViewBtn = (Id) =>{
+        chatlist.style.display = 'none';
+        chat.style.display = 'flex';
+
+        const message = document.getElementById('message-list');
+        message.scrollTop= message.scrollHeight;
+
+        $('#message-list').load("../../server/private-chat/render-chat-window.php", {
+            Id: Id
+        });
+
+        $('#chat-title').load('../../server/private-chat/chat-title.php',{
+            Id: Id
+        });
+
+            $("#create-message").submit((event) => {
+                event.preventDefault();
+
+                const fd = new FormData();
+                const files = $('#file')[0].files;
+                const message = $('#message').val();
+
+
+                if(files.length > 0 || message.length > 0){
+                    fd.append('file',files[0]);
+                    fd.append('message',message);
+                    fd.append('Id',Id);
+
+                    $.ajax({
+                        url: '../../server/private-chat/create-message.php',
+                        type: 'post',
+                        data: fd,
+                        contentType: false,
+                        processData: false
+
+                    });
+                }
+                $('#message-list').load("../../server/private-chat/render-chat-window.php", {
+                    Id: Id
+                });
+                document.getElementById("message").value = "";
+                document.getElementById("file").value = "";
+            });
+
+    }
+
+
+    const onClickDeleteMsg = (data) =>{
+        const Id = data.split(',')[0];
+        const ChatId = data.split(',')[1];
+        $('#message-list').load("../../server/private-chat/delete-message.php",{
+            Id: Id,
+            ChatId: ChatId
+        })
+    }
+
+    const onClickChatListBtn = () =>{
+        chatlist.style.display = 'flex';
+        chat.style.display = 'none';
+    }
+</script>
+
+<script>
+
+</script>
