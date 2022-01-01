@@ -346,7 +346,12 @@
         }
 
         const PostDelete = (id) => {
-            $('#post-box').load('../server/wall/common-wall/delete-post.php');
+            $('#post-box').load('../server/wall/common-wall/delete-post.php',{
+                id: id,
+            });
+            setTimeout(() => {
+                location.reload();
+            });
         }
 
         const DisplayCommentReport = (id) => {
@@ -725,6 +730,16 @@
             });
         }
 
+        const DeleteComment = (id) => {
+
+            $('#post-box').load('../server/wall/common-wall/delete-comment.php',{
+                id: id,
+            });
+            setTimeout(() => {
+                location.reload();
+            });
+        }
+
 
     </script>
 
@@ -839,6 +854,7 @@
           ?>
             <!--Post-->
             <div class="post-box" id='post-box'>
+                <span id="comment-del"></span>
 
             </div>        
         </div>

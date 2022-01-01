@@ -34,7 +34,7 @@ if (mysqli_num_rows($results) > 0) {
         $results3 = mysqli_query($conn, $query3);
         $row3 = mysqli_fetch_assoc($results3);
 
-
+//sql count query eka ghnna like dislike count eka gnna
         if (!empty($pic)) {
             echo "
                 
@@ -98,25 +98,35 @@ if (mysqli_num_rows($results) > 0) {
                             $query5 = "SELECT UserEmail,PostId,ReactType FROM reactsforposts WHERE PostId='{$row['Id']}' AND UserEmail='{$_SESSION['Email']}' AND ReactType='DisLike'";
                             $result5 = mysqli_query($conn, $query5);
 
-                        if (mysqli_num_rows($result4) > 0 ) {
+                            $query7 = "SELECT COUNT(ReactType) AS postlike FROM reactsforposts WHERE PostId='{$row['Id']}' AND ReactType ='Like'";
+                            $result7 = mysqli_query($conn, $query7);
+                            $row7 = mysqli_fetch_assoc($result7);
+
+                            $query8 = "SELECT COUNT(ReactType) AS postdislike FROM reactsforposts WHERE PostId='{$row['Id']}' AND ReactType ='DisLike'";
+                            $result8 = mysqli_query($conn, $query8);
+                            $row8 = mysqli_fetch_assoc($result8);
+
+
+
+            if (mysqli_num_rows($result4) > 0 ) {
                             echo"
                             <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunctionRemove({$row['Id']})><i class='fas fa-fire fa-2x fire' ></i ></button >
-                            <div class='post-like-count post-field' > 111</div>
+                            <div class='post-like-count post-field' >{$row7['postlike']}</div>
                             <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunctionChange({$row['Id']})><i class='fas fa-frown fa-2x' aria - hidden = 'true' ></i ></button >
-                            <div class='post-dislike-count post-field' > 112</div >";}
+                            <div class='post-dislike-count post-field' >{$row8['postdislike']}</div >";}
                         else if(mysqli_num_rows($result5) > 0 ) {
                             echo"      
                                 <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunctionChange({$row['Id']})><i class='fas fa-fire fa-2x ' ></i ></button >
-                                <div class='post-like-count post-field' > 111</div>
+                                <div class='post-like-count post-field' >{$row7['postlike']} </div>
                                 <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunctionRemove({$row['Id']})><i class='fas fa-frown fa-2x frown' aria - hidden = 'true' ></i ></button >
-                                <div class='post-dislike-count post-field' > 112</div >
+                                <div class='post-dislike-count post-field' >{$row8['postdislike']}</div >
                             ";}
                         else{
                             echo"      
                                 <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunction({$row['Id']})><i class='fas fa-fire fa-2x ' ></i ></button >
-                                <div class='post-like-count post-field' > 111</div>
+                                <div class='post-like-count post-field' >{$row7['postlike']} </div>
                                 <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunction({$row['Id']})><i class='fas fa-frown fa-2x ' aria - hidden = 'true' ></i ></button >
-                                <div class='post-dislike-count post-field' > 112</div >
+                                <div class='post-dislike-count post-field' >{$row8['postdislike']}</div >
                             ";
                         }
                         echo"
@@ -264,25 +274,37 @@ if (mysqli_num_rows($results) > 0) {
                             $query5 = "SELECT UserEmail,PostId,ReactType FROM reactsforposts WHERE PostId='{$row['Id']}' AND UserEmail='{$_SESSION['Email']}' AND ReactType='DisLike'";
                             $result5 = mysqli_query($conn, $query5);
 
+                //                            $query7 = "SELECT ReactType FROM reactsforposts WHERE PostId='{$row['Id']}' AND ReactType LIKE 'Like%'";
+                //                            $result7 = mysqli_query($conn, $query7);
+                //                            $postLikeCount = mysqli_num_rows($result7);
+
+                            $query7 = "SELECT COUNT(ReactType) AS postlike FROM reactsforposts WHERE PostId='{$row['Id']}' AND ReactType ='Like'";
+                            $result7 = mysqli_query($conn, $query7);
+                            $row7 = mysqli_fetch_assoc($result7);
+
+                            $query8 = "SELECT COUNT(ReactType) AS postdislike FROM reactsforposts WHERE PostId='{$row['Id']}' AND ReactType ='DisLike'";
+                            $result8 = mysqli_query($conn, $query8);
+                            $row8 = mysqli_fetch_assoc($result8);
+
                             if (mysqli_num_rows($result4) > 0 ) {
                             echo"
                                 <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunctionRemove({$row['Id']})><i class='fas fa-fire fa-2x fire' ></i ></button >
-                                <div class='post-like-count post-field' > 111</div>
+                                <div class='post-like-count post-field' > {$row7['postlike']}</div>
                                 <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunctionChange({$row['Id']})><i class='fas fa-frown fa-2x' aria - hidden = 'true' ></i ></button >
-                                <div class='post-dislike-count post-field' > 112</div >";}
+                                <div class='post-dislike-count post-field' > {$row8['postdislike']}</div >";}
                             else if(mysqli_num_rows($result5) > 0 ) {
                             echo"      
                                 <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunctionChange({$row['Id']})><i class='fas fa-fire fa-2x ' ></i ></button >
-                                <div class='post-like-count post-field' > 111</div>
+                                <div class='post-like-count post-field' > {$row7['postlike']}</div>
                                 <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunctionRemove({$row['Id']})><i class='fas fa-frown fa-2x frown' aria - hidden = 'true' ></i ></button >
-                                <div class='post-dislike-count post-field' > 112</div >
+                                <div class='post-dislike-count post-field' >{$row8['postdislike']}</div >
                             ";}
                             else{
                             echo"      
                                 <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunction({$row['Id']})><i class='fas fa-fire fa-2x ' ></i ></button >
-                                <div class='post-like-count post-field' > 111</div>
+                                <div class='post-like-count post-field' > {$row7['postlike']}</div>
                                 <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunction({$row['Id']})><i class='fas fa-frown fa-2x ' aria - hidden = 'true' ></i ></button >
-                                <div class='post-dislike-count post-field' > 112</div >
+                                <div class='post-dislike-count post-field' > {$row8['postdislike']}</div >
                             ";}
                             echo"
                             </div>

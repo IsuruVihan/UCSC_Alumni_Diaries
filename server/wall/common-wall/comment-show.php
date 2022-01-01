@@ -11,8 +11,8 @@ $results1 = mysqli_query($conn, $query1);
 $row1 = mysqli_fetch_assoc($results1);
 
 $ownerEmail = $row['OwnerEmail'];
-// $postId = $row['Id']; // post id
-$PostId = $_POST['id'];
+
+$PostId = $_POST['id']; // $postId = $row['Id'];  post id
 
 $query2 = "SELECT  Content,PostId,OwnerEmail,Timestamp,Id FROM commentsforposts";
 $results2 = mysqli_query($conn, $query2);
@@ -25,8 +25,6 @@ $query3 = "SELECT Content,Timestamp,OwnerEmail,FirstName,PostId, LastName,commen
 $results3 = mysqli_query($conn, $query3);
 
 
-
-// if($PostId  == $row2['PostId']){
     while ($row3 = mysqli_fetch_assoc($results3)){
         echo"
 <div class='comment-show-outer-box'>
@@ -51,7 +49,7 @@ $results3 = mysqli_query($conn, $query3);
 
                     if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row["OwnerEmail"] || $_SESSION["Email"] == $row3["OwnerEmail"] ) {
                         echo"
-                    <button class='filter-btn btn c-dlt-show'>Delete</button>
+                    <button class='filter-btn btn c-dlt-show' onclick=DeleteComment({$row3['Id']})>Delete</button>
                     ";
                     }
                     if ( $_SESSION["Email"] != $row3["OwnerEmail"] ) {
@@ -68,25 +66,33 @@ $results3 = mysqli_query($conn, $query3);
         $query5 = "SELECT UserEmail,CommentId,ReactType FROM reactsforcomments WHERE CommentId='{$row3['Id']}' AND UserEmail='{$_SESSION['Email']}' AND ReactType='DisLike'";
         $result5 = mysqli_query($conn, $query5);
 
+        $query6 = "SELECT COUNT(ReactType) AS commentlike FROM reactsforcomments WHERE CommentId ='{$row3['Id']}' AND ReactType='Like'";
+        $result6 = mysqli_query($conn, $query6);
+        $row6 = mysqli_fetch_assoc($result6);
+
+        $query9 = "SELECT COUNT(ReactType) AS commentdislike FROM reactsforcomments WHERE CommentId ='{$row3['Id']}' AND ReactType='DisLike'";
+        $result9 = mysqli_query($conn, $query9);
+        $row9 = mysqli_fetch_assoc($result9);
+
         if (mysqli_num_rows($result4) > 0 ) {
             echo"
                             <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunctionRemoveComment({$row3['Id']})><i class='fas fa-fire fa-2x fire' ></i ></button >
-                            <div class='post-like-count post-field' > 111</div>
+                            <div class='post-like-count post-field' >{$row6['commentlike']}</div>
                             <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunctionChangeComment({$row3['Id']})><i class='fas fa-frown fa-2x' aria - hidden = 'true' ></i ></button >
-                            <div class='post-dislike-count post-field' > 112</div >";}
+                            <div class='post-dislike-count post-field' >{$row9['commentdislike']}</div >";}
         else if(mysqli_num_rows($result5) > 0 ) {
             echo"      
                                 <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunctionChangeComment({$row3['Id']})><i class='fas fa-fire fa-2x ' ></i ></button >
-                                <div class='post-like-count post-field' > 111</div>
+                                <div class='post-like-count post-field' >{$row6['commentlike']}</div>
                                 <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunctionRemoveComment({$row3['Id']})><i class='fas fa-frown fa-2x frown' aria - hidden = 'true' ></i ></button >
-                                <div class='post-dislike-count post-field' > 112</div >
+                                <div class='post-dislike-count post-field' >{$row9['commentdislike']}</div >
                             ";}
         else{
             echo"      
                                 <button class='thumb-icon' id = 'lit-{$row['Id']}' onclick = LitFunctionComment({$row3['Id']})><i class='fas fa-fire fa-2x ' ></i ></button >
-                                <div class='post-like-count post-field' > 111</div>
+                                <div class='post-like-count post-field' >{$row6['commentlike']}</div>
                                 <button class='thumb-icon' id = 'frown-{$row['Id']}' onclick = FrownFunctionComment({$row3['Id']})><i class='fas fa-frown fa-2x ' aria - hidden = 'true' ></i ></button >
-                                <div class='post-dislike-count post-field' > 112</div >
+                                <div class='post-dislike-count post-field' >{$row9['commentdislike']}</div >
                             ";
         }
         echo"
@@ -132,12 +138,3 @@ $results3 = mysqli_query($conn, $query3);
 </div>
 ";
     }
-// }
-
-
-// else {
-//     echo "
-
-// {$row2['PostId']}
-//     ";
-// }
