@@ -4,6 +4,19 @@
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>
+
+<script>
+      $(document).ready(() => {
+            $('#pendingsubs').load("../server/subscriptions/pending-subscriptions.php");     
+      });
+      
+</script>
+
 <div class='main-box'>
     <div class='left-col'>
         <div class='s-to-be-accept'>
@@ -47,8 +60,8 @@
                             <button class="filter-btn btn">Filter</button>
                         </div>
                     </div> <!-- filtermain -->
-                    <div class='flexbox-container'>
-                        <div class='flexbox-item'>
+                    <div class='flexbox-container' id='pendingsubs'>
+                        <!-- <div class='flexbox-item'>
                             <div class='profilepic'>
                                 <img class='img' src='../assets/images/user-default.png' width='100%' height=''
                                      class='user-pic' alt='user-pic'/>
@@ -76,7 +89,7 @@
                                     <div class='bill-attachment'> Bill Attachment
                                     </div>
                                 </div>
-                            </div> <!-- col2 -->
+                            </div> 
                             <div class='col3'>
                                 <div class='batch-year'>
                                     <label class='alllabels'> Batch </label>
@@ -91,7 +104,7 @@
                                 <div class='accept'>
                                     <button class='accept-btn'>Accept</button>
                                 </div>
-                            </div> <!-- col3 -->
+                            </div> 
                             <div class='col4'>
                                 <div class='subbutton'>
                                     <label class='alllabels'> Subscription Type </label>
@@ -107,191 +120,8 @@
                                     <button class='reject-btn'>Reject
                                     </button>
                                 </div>
-                            </div> <!-- col4 -->
-                        </div> <!-- flexbox-item -->
-                        <div class='flexbox-item'>
-                        <div class='profilepic'>
-                                <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                                     class='user-pic' alt='user-pic'/>
-                            </div>
-                            <div class='col2'>
-                                <div class='name'>
-                                    <div class='first-name'>
-                                        <label class='alllabels'> First Name </label>
-                                        <div class='namefirst list-details'> First Name
-                                        </div>
-                                    </div>
-                                    <div class='last-name'>
-                                        <label class='alllabels'> Last Name </label>
-                                        <div class='namesecond list-details'> Last Name
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='e-mail'>
-                                    <label class='alllabels'> Last Name </label>
-                                    <div class='mail'> Email
-                                    </div>
-                                </div>
-                                <div class='bill'>
-                                    <label class='alllabels'> Bill </label>
-                                    <div class='bill-attachment'> Bill Attachment
-                                    </div>
-                                </div>
-                            </div> <!-- col2 -->
-                            <div class='col3'>
-                                <div class='batch-year'>
-                                    <label class='alllabels'> Batch </label>
-                                    <div class='b'> Batch
-                                    </div>
-                                </div>
-                                <div class='timestamp'>
-                                    <label class='alllabels'> Time </label>
-                                    <div class='time'> Timestamp
-                                    </div>
-                                </div>
-                                <div class='accept'>
-                                    <button class='accept-btn'>Accept</button>
-                                </div>
-                            </div> <!-- col3 -->
-                            <div class='col4'>
-                                <div class='subbutton'>
-                                    <label class='alllabels'> Subscription Type </label>
-                                    <div class='substype'> Subscription Type
-                                    </div>
-                                </div>
-                                <div class='price'>
-                                    <label class='alllabels'> Amount </label>
-                                    <div class='amount'> Amount
-                                    </div>
-                                </div>
-                                <div class='reject'>
-                                    <button class='reject-btn'>Reject
-                                    </button>
-                                </div>
-                            </div> <!-- col4 -->
-                        </div> <!-- flexbox-item -->
-                        <div class='flexbox-item'>
-                        <div class='profilepic'>
-                                <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                                     class='user-pic' alt='user-pic'/>
-                            </div>
-                            <div class='col2'>
-                                <div class='name'>
-                                    <div class='first-name'>
-                                        <label class='alllabels'> First Name </label>
-                                        <div class='namefirst list-details'> First Name
-                                        </div>
-                                    </div>
-                                    <div class='last-name'>
-                                        <label class='alllabels'> Last Name </label>
-                                        <div class='namesecond list-details'> Last Name
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='e-mail'>
-                                    <label class='alllabels'> Last Name </label>
-                                    <div class='mail'> Email
-                                    </div>
-                                </div>
-                                <div class='bill'>
-                                    <label class='alllabels'> Bill </label>
-                                    <div class='bill-attachment'> Bill Attachment
-                                    </div>
-                                </div>
-                            </div> <!-- col2 -->
-                            <div class='col3'>
-                                <div class='batch-year'>
-                                    <label class='alllabels'> Batch </label>
-                                    <div class='b'> Batch
-                                    </div>
-                                </div>
-                                <div class='timestamp'>
-                                    <label class='alllabels'> Time </label>
-                                    <div class='time'> Timestamp
-                                    </div>
-                                </div>
-                                <div class='accept'>
-                                    <button class='accept-btn'>Accept</button>
-                                </div>
-                            </div> <!-- col3 -->
-                            <div class='col4'>
-                                <div class='subbutton'>
-                                    <label class='alllabels'> Subscription Type </label>
-                                    <div class='substype'> Subscription Type
-                                    </div>
-                                </div>
-                                <div class='price'>
-                                    <label class='alllabels'> Amount </label>
-                                    <div class='amount'> Amount
-                                    </div>
-                                </div>
-                                <div class='reject'>
-                                    <button class='reject-btn'>Reject
-                                    </button>
-                                </div>
-                            </div> <!-- col4 -->
-                        </div> <!-- flexbox-item -->
-                        <div class='flexbox-item'>
-                        <div class='profilepic'>
-                                <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                                     class='user-pic' alt='user-pic'/>
-                            </div>
-                            <div class='col2'>
-                                <div class='name'>
-                                    <div class='first-name'>
-                                        <label class='alllabels'> First Name </label>
-                                        <div class='namefirst list-details'> First Name
-                                        </div>
-                                    </div>
-                                    <div class='last-name'>
-                                        <label class='alllabels'> Last Name </label>
-                                        <div class='namesecond list-details'> Last Name
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='e-mail'>
-                                    <label class='alllabels'> Last Name </label>
-                                    <div class='mail'> Email
-                                    </div>
-                                </div>
-                                <div class='bill'>
-                                    <label class='alllabels'> Bill </label>
-                                    <div class='bill-attachment'> Bill Attachment
-                                    </div>
-                                </div>
-                            </div> <!-- col2 -->
-                            <div class='col3'>
-                                <div class='batch-year'>
-                                    <label class='alllabels'> Batch </label>
-                                    <div class='b'> Batch
-                                    </div>
-                                </div>
-                                <div class='timestamp'>
-                                    <label class='alllabels'> Time </label>
-                                    <div class='time'> Timestamp
-                                    </div>
-                                </div>
-                                <div class='accept'>
-                                    <button class='accept-btn'>Accept</button>
-                                </div>
-                            </div> <!-- col3 -->
-                            <div class='col4'>
-                                <div class='subbutton'>
-                                    <label class='alllabels'> Subscription Type </label>
-                                    <div class='substype'> Subscription Type
-                                    </div>
-                                </div>
-                                <div class='price'>
-                                    <label class='alllabels'> Amount </label>
-                                    <div class='amount'> Amount
-                                    </div>
-                                </div>
-                                <div class='reject'>
-                                    <button class='reject-btn'>Reject
-                                    </button>
-                                </div>
-                            </div> <!-- col4 -->
-                        </div> <!-- flexbox-item -->
+                            </div> 
+                        </div> -->
                     </div> <!-- flexbox-container -->
                 </div> <!-- alldetails1 -->
             </div> <!-- card subs -->
