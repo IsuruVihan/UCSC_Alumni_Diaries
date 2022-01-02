@@ -2,13 +2,24 @@
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
       crossorigin='anonymous'/>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+</script>
+
+<script>
+    $(document).ready(() => {
+        $('#available-items-container').load("../../server/admin-inventory/render-available-items-list.php");
+    });
+</script>
 
 <div class='available-assets'>
     <div class='available-items'>
         <div class='title'>
             Available Items
         </div>
-        <div class='available-items-container'>
+        <div class='available-items-container' id='available-items-container'>
             <div class='available-items-card'>
                 <div class='label'>
                     Item :
@@ -119,3 +130,7 @@
         <button class='submit-btn btn'>Submit</button>
     </div>
 </div>
+
+<script>
+
+</script>

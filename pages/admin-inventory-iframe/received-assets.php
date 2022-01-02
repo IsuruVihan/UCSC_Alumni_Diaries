@@ -21,4 +21,25 @@
     ></iframe>
 </div>
 
-<script src='../../js/admin-inventory.js'></script>
+<script>
+    const cash = document.getElementById('link1');
+    const items = document.getElementById('link-2');
+    const subscriptions = document.getElementById('link-3');
+
+    const onClickCash = () => {
+        cash.classList.add('clicked-link');
+        items.classList.remove('clicked-link');
+        subscriptions.classList.remove('clicked-link');
+    }
+    const onClickItems = () => {
+        cash.classList.remove('clicked-link');
+        items.classList.add('clicked-link');
+        subscriptions.classList.remove('clicked-link');
+    }
+    const onClickSubscriptions = () => {
+        cash.classList.remove('clicked-link');
+        items.classList.remove('clicked-link');
+        subscriptions.classList.add('clicked-link');
+    }
+
+</script>
