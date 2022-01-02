@@ -43,6 +43,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   transition: all ease-in-out 0.5s;
+
 }
 
 .title {
@@ -112,7 +113,6 @@ body {
   color: gray;
   font-family: "Nunito", serif;
 }
-
 .input-field:hover,
 .group-name:hover {
   border-color: #ffccc7;
@@ -208,17 +208,17 @@ body {
 }
 
 .label{
-cursor: pointer;
-border-radius: 5px;
-color: white;
-transition: all ease-in-out 0.1s;
-height:24px;
-text-align: center;
-font-family: "Nunito", serif;
-font-size: 13px;
-background: #595959;
-border: 1px solid #595959;
-width:50%;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: all ease-in-out 0.1s;
+  height:24px;
+  text-align: center;
+  font-family: "Nunito", serif;
+  font-size: 13px;
+  background: #595959;
+  border: 1px solid #595959;
+  width:50%;
 
 }
 .label-01{
@@ -236,8 +236,8 @@ width:50%;
   
 }
 .file-chosen{
-margin-left: 0.3rem;
-font-family: "Nunito", serif;
+  margin-left: 0.3rem;
+  font-family: "Nunito", serif;
 }
 .view-btn:hover,
 .chat-btn:hover,
@@ -288,7 +288,7 @@ font-family: "Nunito", serif;
 
 .edit-btn,
 .cancel-btn {
-  width: 15%;
+  width: 20%;
 }
 
 .chat-list {
@@ -650,13 +650,13 @@ font-family: "Nunito", serif;
 }
 
 .edit-project-name-div {
-  display: flex;
   display: none;
-  justify-content: space-evenly;
- 
-    
 }
-
+.new-button{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
 .button-class {
   justify-items: center;
   margin-top: 20px;
@@ -683,7 +683,7 @@ font-family: "Nunito", serif;
 .pic-button {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(175, 5, 5);
+  border: 1px solid lightgray;
   padding: 10px;
 }
 .user-pic-01 {
@@ -694,7 +694,6 @@ font-family: "Nunito", serif;
 .remove-cancel-button {
   display: flex;
   justify-content: space-around;
-  border: 1px solid lightgray;
   margin: auto;
   width: 57%;
   padding: 10px;

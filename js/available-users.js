@@ -5,6 +5,7 @@ const DisplayParticipantsList = () =>{
     document.getElementById('participants-list').style.display = "flex";
 
 }
+
 const DispalyAvailableUsers = () =>{
     document.getElementById('chat-window').style.display = "none";
     document.getElementById('chat-window-01').style.display = "none";

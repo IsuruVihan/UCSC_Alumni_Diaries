@@ -21,14 +21,10 @@
     </div>
     <div class='list-items-02'>
         <div class='pic-button'>
-          
              <img src='../../assets/images/group-chat.png' width='44%' height='99%' class='user-pic-01' alt='user-pic' id='user-pic'/>
-
-             <div class='remove-cancel-button'>
-              
+            <div class='remove-cancel-button'>
                 <input type='file' name='file'  id="custom-file-input" onchange="loadfile(event)" style="display:none" >
-                <label for="custom-file-input" class="label">Choose File</label>
-            
+                <label for="custom-file-input" class="label">Choose File</label>  
             </div> 
             <div>     
                 <div class='create-buttons'> 

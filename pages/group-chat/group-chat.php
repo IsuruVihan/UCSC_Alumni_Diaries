@@ -22,13 +22,44 @@
     });
     const ViewChat = (id) => {
         $('#chat-wall').load("../../server/group-chat/group-chat-details.php", {
-            Id: id       
-        });    
+            Id: id      
+        });  
+        
     }
     const DeleteChat= (id) => {
         $('#chatList').load("../../server/group-chat/delete.php", {
             Id: id       
         });    
+    }
+    const Edit = (id) =>{
+        
+        const Edit_Form = '#edit-form-'+id;
+        const Form = 'edit-form-'+id;
+        const submitFile = 'file-input-'+id;
+       
+        $(Edit_Form).submit((event) => {
+            event.preventDefault();
+            
+            const url = '../../server/group-chat/edit-group.php';
+            const form = document.getElementById(Form);
+            const files = document.getElementById(submitFile);
+            const formData = new FormData(form);
+            
+            console.log(form);
+
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+            }).then((response) => {
+                console.log(response);
+            }).catch((error) => {
+                console.log(error);
+            });
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
+          
+        });
     }
     
 </script>
@@ -46,27 +77,26 @@
             </div>
         </form>
         <div class='chats' id='chatList'>
-            <!-- <div class='list-items'>
+            <div class='list-items'>
                 <img src='../../assets/images/user-default.png' width='23%' height='' class='user-pic' alt='user-pic'>
                 <div class='name-buttons'>
                     <div class='name'> Name</div>
                     <div class='buttons'>
-                        <button class='view-btn btn'>View</button>
+                        <button class='view-btn btn' onclick='ViewChat()'>View</button>
                         <button class='delete-btn btn'>Delete</button>
                     </div>
                 </div>
-            </div> -->
-            
+            </div>    
         </div>
     </div>
     <div class='chat-wall' id='chat-wall'>
-        <!-- <div class='row-01'>
+        <!-- <div class='row-01' id='row-01'>
             <div class='title project-name-div' id='project-name-div'>
                 Group Name
                 <i class='fas fa-edit icon-btn ' title='Edit Group' onclick='DisplayEditProjectNameDiv()'></i>
             </div>
             <div class='edit-project-name-div' id='edit-project-name-div'>
-                <img src='../../assets/images/user-default.png' width='10%' height='' class='user-pic' alt='user-pic'>
+                <img src='../../assets/images/group-chat.png' width='8%' height='' class='user-pic' alt='user-pic'>
                 <input type='text' placeholder='Enter new Group name' value=" Group Name"
                        class='new-project-name input-field' id='new-project-name'/>
                 <button class='edit-btn btn'>Edit</button>
@@ -408,5 +438,5 @@
         </div>   -->
     </div>
 </div>
-<script src='../../js/group-project.js'></script> 
-<script src='../../js/available-users.js'></script>
+ <script src='../../js/group-project.js'></script>
+ <script src='../../js/available-users.js'></script> 
