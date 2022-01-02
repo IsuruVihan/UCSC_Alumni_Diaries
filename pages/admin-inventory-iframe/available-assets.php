@@ -14,6 +14,12 @@
     });
 </script>
 
+<script>
+    $(document).ready(() => {
+        $('#available-cash').load("../../server/admin-inventory/render-available-cash.php");
+    });
+</script>
+
 <div class='available-assets'>
     <div class='available-items'>
         <div class='title'>
@@ -113,7 +119,7 @@
             <button class='generate-reports-btn btn'>Generate Reports</button>
         </div>
     </div>
-    <div class='available-cash'>
+    <div class='available-cash' id='available-cash'>
         <div class='title'>
             Available Cash
         </div>
