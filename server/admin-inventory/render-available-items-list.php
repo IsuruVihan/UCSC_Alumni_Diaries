@@ -8,6 +8,8 @@ $results = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($results) > 0 ) {
     while($row = mysqli_fetch_assoc($results)) {
+        $query2 = "SELECT Id, Name FROM projects WHERE Status ='Ongoing'";
+        $results2 = mysqli_query($conn, $query2);
         echo"
         <div class='available-items-card'>
                 <div class='label'>
@@ -22,15 +24,16 @@ if (mysqli_num_rows($results) > 0 ) {
                 <div class='label'>
                     To Transfer :
                 </div>
-                <select class='input-avu1'>
-                       <option value='' disabled selected hidden>Transfer To</option>
-                        <option value='2018/2019'>2018/2019</option>
-                        <option value='2018/2019'>2019/2020</option>
-                        <option value='2018/2019'>2020/2021</option>
-                </select>
-                <input class='input-avu1' type='number' placeholder='Quantity'/>
-                <button class='submit-btn btn'>Submit</button>
-            </div>
-        ";
+                <select class='input-avu1' id='project'>
+                       <option value='' disabled selected hidden>Transfer To</option>";
+        if (mysqli_num_rows($results2) > 0 ) {
+            while ($row2 = mysqli_fetch_assoc($results2)) {
+                echo "<option value='{$row2['Id']}'>{$row2['Name']}</option>";
+            }
+        }
+        echo"</select>
+                <input class='input-avu1' type='number' placeholder='Quantity' id='quantity'>
+                <button class='submit-btn btn'  onclick=onClickSubmitBtn('{$row['Id']}')>Submit</button>
+            </div>";
     }
 }

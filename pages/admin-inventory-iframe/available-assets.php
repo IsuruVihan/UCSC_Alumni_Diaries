@@ -11,7 +11,9 @@
 <script>
     $(document).ready(() => {
         $('#available-items-container').load("../../server/admin-inventory/render-available-items-list.php");
+
     });
+
 </script>
 
 <script>
@@ -138,5 +140,13 @@
 </div>
 
 <script>
-
+    const onClickSubmitBtn = (Id) => {
+        const project = $('#project').val();
+        const quantity = $('#quantity').val();
+        $('#available-items-container').load("../../server/admin-inventory/transfer-items-to-projects.php",{
+            ItemId: Id,
+            ProjectId: project,
+            quantity: quantity
+        })
+    }
 </script>
