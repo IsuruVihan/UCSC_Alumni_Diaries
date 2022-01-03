@@ -4,6 +4,19 @@
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>
+
+<script>
+      $(document).ready(() => {
+            $('#acceptedsubs').load("../server/subscriptions/accepted-subscriptions.php");     
+      });
+      
+</script>
+
 <div class='main-box'>
     <div class='left-col'>
         <div class='card subs'>
@@ -58,12 +71,13 @@
                         </div>
                     </div> 
                 </div> <!-- filtermain2 -->
-                <div class='flexbox-container2'>
-                    <div class='flexbox-item2'>
+
+                <div class='flexbox-container2' id='acceptedsubs'>
+                    <!-- <div class='flexbox-item2'>
                         <div class='co1'>
                             <img class='img' src='../assets/images/user-default.png' width='100%' height=''
                             class='user-pic' alt='user-pic'/>
-                        </div> <!-- co1-->
+                        </div> 
                         <div class='co2'>
                             <div class='allfullname'>
                                 <div class='firstname1'>
@@ -76,7 +90,7 @@
                                     <div class='namesecond'> Last Name
                                     </div>
                                 </div>
-                            </div> <!-- allfullname-->
+                            </div> 
                             <div class='e-address'>
                                 <label class='alllabels'> Email </label>
                                 <div class='mail'> Email
@@ -87,7 +101,7 @@
                                 <div class='bill-attachment'> Bill Attachment
                                 </div>
                             </div>
-                        </div> <!-- co2-->
+                        </div> 
                         <div class='co3'>
                             <div class='batch-sub'>
                                 <div class='baat'>
@@ -118,191 +132,8 @@
                                 <div class='time-attachment'> Timestamp
                                 </div>
                             </div>
-                        </div> <!-- co3-->
-                    </div> <!-- flexbox-item2 -->
-                    <div class='flexbox-item2'>
-                    <div class='co1'>
-                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                            class='user-pic' alt='user-pic'/>
-                        </div> <!-- co1-->
-                        <div class='co2'>
-                            <div class='allfullname'>
-                                <div class='firstname1'>
-                                    <label class='alllabels'> First Name </label>
-                                    <div class='namefirst'> First Name
-                                    </div>
-                                </div>
-                                <div class='lastname1'>
-                                    <label class='alllabels'> Last Name </label>
-                                    <div class='namesecond'> Last Name
-                                    </div>
-                                </div>
-                            </div> <!-- allfullname-->
-                            <div class='e-address'>
-                                <label class='alllabels'> Email </label>
-                                <div class='mail'> Email
-                                </div>
-                            </div>
-                            <div class='bills'>
-                                <label class='alllabels'> Bill </label>
-                                <div class='bill-attachment'> Bill Attachment
-                                </div>
-                            </div>
-                        </div> <!-- co2-->
-                        <div class='co3'>
-                            <div class='batch-sub'>
-                                <div class='baat'>
-                                    <label class='alllabels'> Batch </label>
-                                    <div class='namefirst'> Batch
-                                    </div>
-                                </div>
-                                <div class='suub'>
-                                    <label class='alllabels'> Subscription Type </label>
-                                    <div class='namesecond'> Subscription Type
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='method-amount'>
-                                <div class='me'>
-                                    <label class='alllabels'> Method </label>
-                                    <div class='namefirst'> Method
-                                    </div>
-                                </div>
-                                <div class='ammount'>
-                                    <label class='alllabels'> Total Amount </label>
-                                    <div class='namesecond'> Total Amount
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='timeeestamp'>
-                                <label class='alllabels'> Time </label>
-                                <div class='time-attachment'> Timestamp
-                                </div>
-                            </div>
-                        </div> <!-- co3-->
-                    </div> <!-- flexbox-item2 -->
-                    <div class='flexbox-item2'>
-                    <div class='co1'>
-                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                            class='user-pic' alt='user-pic'/>
-                        </div> <!-- co1-->
-                        <div class='co2'>
-                            <div class='allfullname'>
-                                <div class='firstname1'>
-                                    <label class='alllabels'> First Name </label>
-                                    <div class='namefirst'> First Name
-                                    </div>
-                                </div>
-                                <div class='lastname1'>
-                                    <label class='alllabels'> Last Name </label>
-                                    <div class='namesecond'> Last Name
-                                    </div>
-                                </div>
-                            </div> <!-- allfullname-->
-                            <div class='e-address'>
-                                <label class='alllabels'> Email </label>
-                                <div class='mail'> Email
-                                </div>
-                            </div>
-                            <div class='bills'>
-                                <label class='alllabels'> Bill </label>
-                                <div class='bill-attachment'> Bill Attachment
-                                </div>
-                            </div>
-                        </div> <!-- co2-->
-                        <div class='co3'>
-                            <div class='batch-sub'>
-                                <div class='baat'>
-                                    <label class='alllabels'> Batch </label>
-                                    <div class='namefirst'> Batch
-                                    </div>
-                                </div>
-                                <div class='suub'>
-                                    <label class='alllabels'> Subscription Type </label>
-                                    <div class='namesecond'> Subscription Type
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='method-amount'>
-                                <div class='me'>
-                                    <label class='alllabels'> Method </label>
-                                    <div class='namefirst'> Method
-                                    </div>
-                                </div>
-                                <div class='ammount'>
-                                    <label class='alllabels'> Total Amount </label>
-                                    <div class='namesecond'> Total Amount
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='timeeestamp'>
-                                <label class='alllabels'> Time </label>
-                                <div class='time-attachment'> Timestamp
-                                </div>
-                            </div>
-                        </div> <!-- co3-->
-                    </div> <!-- flexbox-item2 -->
-                    <div class='flexbox-item2'>
-                    <div class='co1'>
-                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                            class='user-pic' alt='user-pic'/>
-                        </div> <!-- co1-->
-                        <div class='co2'>
-                            <div class='allfullname'>
-                                <div class='firstname1'>
-                                    <label class='alllabels'> First Name </label>
-                                    <div class='namefirst'> First Name
-                                    </div>
-                                </div>
-                                <div class='lastname1'>
-                                    <label class='alllabels'> Last Name </label>
-                                    <div class='namesecond'> Last Name
-                                    </div>
-                                </div>
-                            </div> <!-- allfullname-->
-                            <div class='e-address'>
-                                <label class='alllabels'> Email </label>
-                                <div class='mail'> Email
-                                </div>
-                            </div>
-                            <div class='bills'>
-                                <label class='alllabels'> Bill </label>
-                                <div class='bill-attachment'> Bill Attachment
-                                </div>
-                            </div>
-                        </div> <!-- co2-->
-                        <div class='co3'>
-                            <div class='batch-sub'>
-                                <div class='baat'>
-                                    <label class='alllabels'> Batch </label>
-                                    <div class='namefirst'> Batch
-                                    </div>
-                                </div>
-                                <div class='suub'>
-                                    <label class='alllabels'> Subscription Type </label>
-                                    <div class='namesecond'> Subscription Type
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='method-amount'>
-                                <div class='me'>
-                                    <label class='alllabels'> Method </label>
-                                    <div class='namefirst'> Method
-                                    </div>
-                                </div>
-                                <div class='ammount'>
-                                    <label class='alllabels'> Total Amount </label>
-                                    <div class='namesecond'> Total Amount
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='timeeestamp'>
-                                <label class='alllabels'> Time </label>
-                                <div class='time-attachment'> Timestamp
-                                </div>
-                            </div>
-                        </div> <!-- co3-->
-                    </div> <!-- flexbox-item2 -->
+                        </div> 
+                    </div>  -->
                 </div> <!-- flexbox-container2 -->
                 <div class='gen-rep-btn'>
                     <button class='reportgeneratebutton'> Generate Reports
