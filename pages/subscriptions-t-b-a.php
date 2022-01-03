@@ -17,6 +17,38 @@
       
 </script>
 
+<script>
+      const Acceptbtn = (id) => {
+        $('#flash-message').load("../server/subscriptions/accept-pending.php", {
+            id: id
+        });
+        setTimeout(() => window.history.go(), 1);
+    }
+</script>
+
+<!-- <script>
+      const Acceptbtn = (NewDueDate) => {
+        const SubscriptionDue = NewDueDate.split(',')[0];
+        const SubType = NewDueDate.split(',')[1];
+        $('#flash-message').load("../server/subscriptions/accept-pending.php", {
+            id: id,
+            SubscriptionDue: SubscriptionDue,
+            SubType: SubType
+        });
+        setTimeout(() => window.history.go(), 1);
+    }
+</script> -->
+
+<script>
+      const Rejectbtn = (id) => {
+        $('#flash-message').load("../server/subscriptions/reject-pending.php", {
+            id: id
+        });
+        setTimeout(() => window.history.go(), 1);
+    }
+</script>
+
+<div id='flash-message' class='flash-message'></div>
 <div class='main-box'>
     <div class='left-col'>
         <div class='s-to-be-accept'>

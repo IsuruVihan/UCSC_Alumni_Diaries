@@ -53,7 +53,7 @@ if (mysqli_num_rows($results) > 0) {
                                     </div>
                                 </div>
                                 <div class='accept'>
-                                    <button class='accept-btn'>Accept</button>
+                                    <button class='accept-btn' onclick=Acceptbtn('{$row['Id']}')> Accept </button>
                                 </div>
                             </div> 
                             <div class='col4'>
@@ -68,7 +68,7 @@ if (mysqli_num_rows($results) > 0) {
                                     </div>
                                 </div>
                                 <div class='reject'>
-                                    <button class='reject-btn'>Reject
+                                    <button class='reject-btn' onclick=Rejectbtn('{$row['Id']}')> Reject
                                     </button>
                                 </div>
                             </div> 
