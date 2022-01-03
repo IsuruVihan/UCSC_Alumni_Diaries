@@ -118,7 +118,7 @@
             </div>
         </div>
         <div class='generate-reports'>
-            <button class='generate-reports-btn btn'>Generate Reports</button>
+            <button class='generate-reports-btn btn' onclick=genReportBtn()>Generate Reports</button>
         </div>
     </div>
     <div class='available-cash' id='available-cash'>
@@ -148,5 +148,23 @@
             ProjectId: project,
             quantity: quantity
         })
+    }
+</script>
+
+<script>
+    const onCLickCashSubmit = () => {
+        const project = $('#project1').val();
+        const amount = $('#amount').val();
+        $('#available-cash').load("../../server/admin-inventory/transfer-cash-to-projects.php",{
+            ProjectId: project,
+            Amount: amount
+        })
+    }
+</script>
+
+<script>
+    const genReportBtn = () => {
+        const url = "http://localhost/UCSC_Alumni_Diaries/server/generate-reports/admin-inventory/available-items-report.php";
+        window.location.replace(url);
     }
 </script>

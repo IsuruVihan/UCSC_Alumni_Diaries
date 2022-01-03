@@ -24,7 +24,7 @@ if(!empty('$projectId') && !empty('$quantity') && $quantity !== '0' ){
         $query3 = "INSERT INTO projectitems (ProjectId, ItemName, Quantity) VALUES ('$projectId', '$ItemName', '$quantity')";
         $results3 = mysqli_query($conn, $query3);
 
-        echo"Successfully Transferred";
+        echo"Items Successfully Transferred";
     }elseif($NewQuantity == 0){
         $query2 = "DELETE FROM associationitems WHERE Id = '{$ItemId}'";
         $results2 = mysqli_query($conn, $query2);
@@ -32,7 +32,7 @@ if(!empty('$projectId') && !empty('$quantity') && $quantity !== '0' ){
         $query3 = "INSERT INTO projectitems (ProjectId, ItemName, Quantity) VALUES ('$projectId', '$ItemName', '$quantity')";
         $results3 = mysqli_query($conn, $query3);
 
-        echo"Successfully Transferred";
+        echo"Items Successfully Transferred";
     }else{
         echo"Insufficient items to proceed the transfer";
     }
