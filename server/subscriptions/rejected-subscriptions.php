@@ -5,7 +5,7 @@ include('../../db/db-conn.php');
 $query = "SELECT FirstName, LastName, Batch, registeredmembers.Email, 
     Timestamp, DonatedFrom, PayslipSrc, Amount, SubType, PicSrc 
     FROM subscriptionsdone INNER JOIN registeredmembers 
-    ON registeredmembers.Email = subscriptionsdone.Email WHERE Status = 'Accepted'";
+    ON registeredmembers.Email = subscriptionsdone.Email WHERE Status = 'Rejected'";
 
 $results = mysqli_query($conn, $query);
 

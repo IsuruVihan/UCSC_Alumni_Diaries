@@ -14,7 +14,7 @@ if (mysqli_num_rows($results) > 0) {
         echo"
             <div class='flexbox-item'>
                             <div class='profilepic'>
-                                <img class='img' src='../assets/images/user-default.png' width='100%' height=''
+                                <img class='img' src={$row['PicSrc']} width='100%' height=''
                                      class='user-pic' alt='user-pic'/>
                             </div>
                             <div class='col2'>
