@@ -141,13 +141,13 @@
 
 <script>
     const onClickSubmitBtn = (Id) => {
-        const project = $('#project').val();
-        const quantity = $('#quantity').val();
+        const project = $('#project-' + Id).val();
+        const quantity = $('#quantity-' + Id).val();
         $('#available-items-container').load("../../server/admin-inventory/transfer-items-to-projects.php",{
             ItemId: Id,
             ProjectId: project,
             quantity: quantity
-        })
+        });
     }
 </script>
 

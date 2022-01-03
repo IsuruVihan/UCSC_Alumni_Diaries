@@ -423,7 +423,7 @@ body {
 }
 
 .item-transfers-item {
-    height: 35%;
+    height: 45%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -443,6 +443,18 @@ body {
     align-items: center;
     width: 70%;
     height: 10%;
+    text-align: center;
+}
+
+.sec-1-1 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 7.5%;
     text-align: center;
 }
 

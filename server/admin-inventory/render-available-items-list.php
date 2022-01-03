@@ -16,24 +16,28 @@ if (mysqli_num_rows($results) > 0 ) {
                     Item :
                 </div>
                 <div class='item-details'>
-                    ".$row["ItemName"]."
+                    {$row['ItemName']}
                 </div>
                 <div class='item-details'>
-                    ".$row["Quantity"]."
+                    {$row['Quantity']}
                 </div>
                 <div class='label'>
                     To Transfer :
                 </div>
-                <select class='input-avu1' id='project'>
-                       <option value='' disabled selected hidden>Transfer To</option>";
+                <select class='input-avu1' id='project-{$row['Id']}'>
+                    <option value='' disabled selected hidden>Transfer To</option>";
         if (mysqli_num_rows($results2) > 0 ) {
             while ($row2 = mysqli_fetch_assoc($results2)) {
-                echo "<option value='{$row2['Id']}'>{$row2['Name']}</option>";
+                echo " 
+                    <option value='{$row2['Id']}'>{$row2['Name']}</option>
+                ";
             }
         }
-        echo"</select>
-                <input class='input-avu1' type='number' placeholder='Quantity' id='quantity'>
+        echo"
+                </select>
+                <input class='input-avu1' type='number' min='1' placeholder='Quantity' id='quantity-{$row['Id']}'>
                 <button class='submit-btn btn'  onclick=onClickSubmitBtn('{$row['Id']}')>Submit</button>
-            </div>";
+            </div>
+        ";
     }
 }
