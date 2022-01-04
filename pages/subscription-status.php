@@ -4,6 +4,19 @@
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>
+
+<script>
+      $(document).ready(() => {
+            $('#statussubs').load("../server/subscriptions/subscription-status.php");     
+      });
+      
+</script>
+
 <div class='main-box'>
     <div class='right-col'>
         <div class='card2 subs'>
@@ -57,8 +70,9 @@
                         </div>
                     </div> <!-- filterrow2 -->
                 </div> <!-- filtermain3 -->
-                <div class='flexbox-container3'>
-                    <div class='flexbox-item3'>
+
+                <div class='flexbox-container3' id='statussubs'>
+                    <!-- <div class='flexbox-item3'>
                         <div class='profilepic-col2'>
                             <img class='img' src='../assets/images/user-default.png' width='100%' height=''
                                  class='user-pic' alt='user-pic'/>
@@ -79,7 +93,7 @@
                                 <div class='namesecond'> Batch
                                 </div>
                             </div>
-                        </div> <!-- col2-col2-->
+                        </div> 
                         <div class='col3-col2'>
                             <div class='email-right'>
                                 <label class='alllabels'> Email </label>
@@ -96,7 +110,7 @@
                                 <div class='namesecond'> Subscription Type
                                 </div>
                             </div>
-                        </div> <!-- col3-col2-->
+                        </div> 
                         <div class='col4-col2'>
                             <div class='duedate'>
                                 <label class='alllabels'> Due Date </label>
@@ -118,194 +132,8 @@
                                     </button>
                                 </div>
                             </div>
-                        </div> <!-- col4-col2-->
-                    </div> <!-- flexbox-item3 -->
-                    <div class='flexbox-item3'>
-                    <div class='profilepic-col2'>
-                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                                 class='user-pic' alt='user-pic'/>
-                        </div>
-                        <div class='col2-col2'>
-                            <div class='ids'>
-                                <label class='alllabels'> ID </label>
-                                <div class='namesecond'> ID
-                                </div>
-                            </div>
-                            <div class='firstname-right'>
-                                <label class='alllabels'> First Name </label>
-                                <div class='namesecond'> First Name
-                                </div>
-                            </div>
-                            <div class='batch-right'>
-                                <label class='alllabels'> Batch </label>
-                                <div class='namesecond'> Batch
-                                </div>
-                            </div>
-                        </div> <!-- col2-col2-->
-                        <div class='col3-col2'>
-                            <div class='email-right'>
-                                <label class='alllabels'> Email </label>
-                                <div class='namesecond'> Email
-                                </div>
-                            </div>
-                            <div class='lastname-right'>
-                                <label class='alllabels'> Last Name </label>
-                                <div class='namesecond'> Last Name
-                                </div>
-                            </div>
-                            <div class='batch-col2'>
-                                <label class='alllabels'> Subscription Type </label>
-                                <div class='namesecond'> Subscription Type
-                                </div>
-                            </div>
-                        </div> <!-- col3-col2-->
-                        <div class='col4-col2'>
-                            <div class='duedate'>
-                                <label class='alllabels'> Due Date </label>
-                                <div class='namesecond'> Due Date
-                                </div>
-                            </div>
-                            <div class='payment'>
-                                <label class='alllabels'> Payment Status </label>
-                                <div class='namesecond'> Payment Status
-                                </div>
-                            </div>
-                            <div class='ban-unban'>
-                                <div class='ban'>
-                                    <button class='ban-btn'> Ban
-                                    </button>
-                                </div>
-                                <div class='unban'>
-                                    <button class='unban-btn'> Unban
-                                    </button>
-                                </div>
-                            </div>
-                        </div> <!-- col4-col2-->
-                    </div> <!-- flexbox-item3 -->
-                    <div class='flexbox-item3'>
-                    <div class='profilepic-col2'>
-                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                                 class='user-pic' alt='user-pic'/>
-                        </div>
-                        <div class='col2-col2'>
-                            <div class='ids'>
-                                <label class='alllabels'> ID </label>
-                                <div class='namesecond'> ID
-                                </div>
-                            </div>
-                            <div class='firstname-right'>
-                                <label class='alllabels'> First Name </label>
-                                <div class='namesecond'> First Name
-                                </div>
-                            </div>
-                            <div class='batch-right'>
-                                <label class='alllabels'> Batch </label>
-                                <div class='namesecond'> Batch
-                                </div>
-                            </div>
-                        </div> <!-- col2-col2-->
-                        <div class='col3-col2'>
-                            <div class='email-right'>
-                                <label class='alllabels'> Email </label>
-                                <div class='namesecond'> Email
-                                </div>
-                            </div>
-                            <div class='lastname-right'>
-                                <label class='alllabels'> Last Name </label>
-                                <div class='namesecond'> Last Name
-                                </div>
-                            </div>
-                            <div class='batch-col2'>
-                                <label class='alllabels'> Subscription Type </label>
-                                <div class='namesecond'> Subscription Type
-                                </div>
-                            </div>
-                        </div> <!-- col3-col2-->
-                        <div class='col4-col2'>
-                            <div class='duedate'>
-                                <label class='alllabels'> Due Date </label>
-                                <div class='namesecond'> Due Date
-                                </div>
-                            </div>
-                            <div class='payment'>
-                                <label class='alllabels'> Payment Status </label>
-                                <div class='namesecond'> Payment Status
-                                </div>
-                            </div>
-                            <div class='ban-unban'>
-                                <div class='ban'>
-                                    <button class='ban-btn'> Ban
-                                    </button>
-                                </div>
-                                <div class='unban'>
-                                    <button class='unban-btn'> Unban
-                                    </button>
-                                </div>
-                            </div>
-                        </div> <!-- col4-col2-->
-                    </div> <!-- flexbox-item3 -->
-                    <div class='flexbox-item3'>
-                    <div class='profilepic-col2'>
-                            <img class='img' src='../assets/images/user-default.png' width='100%' height=''
-                                 class='user-pic' alt='user-pic'/>
-                        </div>
-                        <div class='col2-col2'>
-                            <div class='ids'>
-                                <label class='alllabels'> ID </label>
-                                <div class='namesecond'> ID
-                                </div>
-                            </div>
-                            <div class='firstname-right'>
-                                <label class='alllabels'> First Name </label>
-                                <div class='namesecond'> First Name
-                                </div>
-                            </div>
-                            <div class='batch-right'>
-                                <label class='alllabels'> Batch </label>
-                                <div class='namesecond'> Batch
-                                </div>
-                            </div>
-                        </div> <!-- col2-col2-->
-                        <div class='col3-col2'>
-                            <div class='email-right'>
-                                <label class='alllabels'> Email </label>
-                                <div class='namesecond'> Email
-                                </div>
-                            </div>
-                            <div class='lastname-right'>
-                                <label class='alllabels'> Last Name </label>
-                                <div class='namesecond'> Last Name
-                                </div>
-                            </div>
-                            <div class='batch-col2'>
-                                <label class='alllabels'> Subscription Type </label>
-                                <div class='namesecond'> Subscription Type
-                                </div>
-                            </div>
-                        </div> <!-- col3-col2-->
-                        <div class='col4-col2'>
-                            <div class='duedate'>
-                                <label class='alllabels'> Due Date </label>
-                                <div class='namesecond'> Due Date
-                                </div>
-                            </div>
-                            <div class='payment'>
-                                <label class='alllabels'> Payment Status </label>
-                                <div class='namesecond'> Payment Status
-                                </div>
-                            </div>
-                            <div class='ban-unban'>
-                                <div class='ban'>
-                                    <button class='ban-btn'> Ban
-                                    </button>
-                                </div>
-                                <div class='unban'>
-                                    <button class='unban-btn'> Unban
-                                    </button>
-                                </div>
-                            </div>
-                        </div> <!-- col4-col2-->
-                    </div> <!-- flexbox-item3 -->
+                        </div> 
+                    </div>  -->
                 </div> <!-- flexbox-container3 -->
             </div> <!-- alldetails3 -->
         </div> <!-- card2 subs -->
