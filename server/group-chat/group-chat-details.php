@@ -1,12 +1,14 @@
 <?php
 include('../../db/db-conn.php');
+include('../session.php');
 $Id  = $_POST['Id'];
+$email = $_SESSION['Email'];
 
 $query = "SELECT Id,PicSrc,Name FROM groupchats WHERE Id ='{$Id}'";
 $result =mysqli_query($conn, $query);
+while($row = mysqli_fetch_assoc($result)){
+    if(mysqli_num_rows($result) > 0){
 
-if(mysqli_num_rows($result) > 0){
-    while($row = mysqli_fetch_assoc($result)){
         echo 
             "<div class='row-01' id='row-01' name='edit-group'>
                 <div class='title project-name-div' id='project-name-div'>
@@ -49,12 +51,11 @@ if(mysqli_num_rows($result) > 0){
     
     }
 
-        echo "
-        <div class='button-class' id='button-class'>
+echo " <div class='button-class' id='button-class'>
             <button class='participants-btn btn' id='participants-button' onclick='DisplayParticipantsList()' >Participants list</button>
             <button class='available-btn btn' id='available-button' onclick='DispalyAvailableUsers()'>Available users</button>   
-        </div> 
-        <div class='row-02' id='chat-window'>
+        </div>";
+echo"   <div class='row-02' id='chat-window'>
             <div class='results3' id='message-list'>
                 <div class='sent-message-line'>
                     <div class='sent-message'>
@@ -175,206 +176,95 @@ if(mysqli_num_rows($result) > 0){
                 <i class='fas fa-paperclip chat-icon attach-icon'></i>
                 <i class='fas fa-times-circle chat-icon clear-icon'></i>
             </div>
-        </div>
-        <div class= 'row-04' id='participants-list'> 
+        </div>";
+echo"   <div class= 'row-04' id='participants-list'> 
             <div class='title-02'>
                 Participants
-            </div>
+                    </div>
             <div class='Participants-filter'>
                 <div class='p_box-01'>
                     <input class='participants-field' type='text' placeholder='First Name'/>
                     <input class='participants-field' type='text' placeholder='Last Name'/>
                 </div>
-                <div class='box-02'>
-                    <button class='filter-btn btn'>Filter</button>
+                    <div class='box-02'>
+                        <button class='filter-btn btn'>Filter</button>
+                    </div>
                 </div>
-            </div>
-            <div class='available-users-container'>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='remove-btn btn'>Remove</button>
+                 <div class='available-users-container'>
+                    <div class='available-users-item'>
+                        <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
+                        <div class='names-btn-container01'>
+                            <div class='names-container02'>
+                                <div class='a-first-name'>First Name</div>
+                                <div class='a-last-name'>Last Name</div>
+                            </div>
+                            <div class='btn-container03'>
+                                <button class='remove-btn btn'>Remove</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
+                <div class='chat-button'>
+                    <button class='chat-btn btn onclick='HideChatWindow()'>View Chat</button>
+                </div>   
+            </div>";
+echo"       <div class='available-users' id='available-users'>
+                <div class='title'>Available Users</div>
+                <form class='filter' id='filter-available'>
+                    <div class='box-01'>
+                        <input class='input-field' type='text' placeholder='First Name' id='first-name'/>
+                        <input class='input-field' type='text' placeholder='Last Name' id='last-name'/>
+                         <select class='input-field' id='select-batch'>
+                            <option value='All'>All</option>
+                            <option value='2004/2005'>2004/2005</option>
+                            <option value='2011/2012'>2011/2012</option>
+                            <option value='2012/2013'>2012/2013</option>
+                            <option value='2013/2014'>2013/2014</option>
+                            <option value='2014/2015'>2014/2015</option>
+                            <option value='2015/2016'>2015/2016</option>
+                            <option value='2016/2017'>2016/2017</option>
+                            <option value='2017/2018'>2017/2018</option>
+                            <option value='2018/2019'>2018/2019</option>
+                            <option value='2019/2020'>2019/2020</option>
+                            <option value='2020/2021'>2020/2021</option>
+                            <option value='2021/2022'>2021/2022</option>
+                            <option value='2022/2023'>2022/2023</option>
+                        </select>
+                    </div>
+                    <div class='box-02'>
+                        <input type='submit' value='Filter' class='filter-btn btn' onclick='fiterAvailableUsers()'></input>
+                    </div>
+                </form>                        
+                <div class='available-users-container' id='availableusers'>";
+
+$query1="SELECT Email,FirstName, LastName, PicSrc FROM registeredmembers WHERE Email != '{$email}'
+         AND Email NOT IN (SELECT UserEmail From participantgroups)";
+$result1 =mysqli_query($conn, $query1);
+    while($row1 = mysqli_fetch_assoc($result1)){
+        if(mysqli_num_rows($result1) > 0){
+
+         echo"<div class='available-users-item'>";
+                if($row1["PicSrc"] === 'user-default.png'){
+                    echo"   <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>";
+                }else{
+                    echo"   <img src='../../uploads/profile-pics/".$row1["PicSrc"]."' width='14%' height='90%' class='user-pic' alt='user-pic'>";
+                }
+            echo" <div class='names-btn-container01'>
                         <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
+                            <div class='a-first-name'>{$row1['FirstName']}</div>
+                            <div class='a-last-name'>{$row1['LastName']}</div>
                         </div>
                         <div class='btn-container03'>
-                            <button class='remove-btn btn'>Remove</button>
+                           <button class='add-btn btn' onclick=onClickAddBtn('{$row1["Email"]}')>Add</button>
                         </div>
                     </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%'' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='remove-btn btn'>Remove</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='remove-btn btn'>Remove</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='remove-btn btn'>Remove</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%'' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='remove-btn btn'>Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class='chat-button'>
-              <button class='chat-btn btn onclick='HideChatWindow()'>View Chat</button>
-            </div>   
-        </div>
-        <div class='available-users' id='available-users'>
-            <div class='title'>Available Users</div>
-            <div class='filter'>
-                <div class='box-01'>
-                    <input class='input-field' type='text' placeholder='First Name'/>
-                    <input class='input-field' type='text' placeholder='Last Name'/>
-                    <select class='input-field'>
-                        <option value='All'>All</option>
-                        <option value='2004/2005'>2004/2005</option>
-                        <option value='2005/2006'>2005/2006</option>
-                        <option value='2006/2007'>2006/2007</option>
-                        <option value='2008/2009'>2008/2009</option>
-                        <option value='2009/2010'>2009/2010</option>
-                        <option value='2010/2011'>2010/2011</option>
-                        <option value='2011/2012'>2011/2012</option>
-                        <option value='2012/2013'>2012/2013</option>
-                        <option value='2013/2014'>2013/2014</option>
-                        <option value='2014/2015'>2014/2015</option>
-                        <option value='2015/2016'>2015/2016</option>
-                        <option value='2016/2017'>2016/2017</option>
-                        <option value='2017/2018'>2017/2018</option>
-                        <option value='2018/2019'>2018/2019</option>
-                        <option value='2019/2020'>2019/2020</option>
-                        <option value='2020/2021'>2020/2021</option>
-                        <option value='2021/2022'>2021/2022</option>
-                        <option value='2022/2023'>2022/2023</option>
-                    </select>
-                </div>
-                <div class='box-02'>
-                    <button class='filter-btn btn'>Filter</button>
-                </div>
-            </div>
-            <div class='available-users-container'>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='add-btn btn'>Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%'' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='add-btn btn'>Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%'' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='add-btn btn'>Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='add-btn btn'>Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='add-btn btn'>Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class='add-btn btn'>Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class='chat-button'>
-              <button class='chat-btn btn' onclick='HideChat()'>View Chat</button>
-            </div>                
-        </div>  
-    </div>";
+                </div>";     
+        }
+    }
+        echo"</div>
+                    <div class='chat-button'>
+                        <button class='chat-btn btn' onclick='HideChat()'>View Chat</button>
+                    </div>                
+                </div>  
+                    
+         </div>";

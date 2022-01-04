@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $imageFileType = strtolower(pathinfo($fileDestination,PATHINFO_EXTENSION));
     
     if ($fileName === ''){
-        $query = "UPDATE groupchats SET  OwnerEmail='{$_SESSION['Email']}', Name='{$name}',  WHERE Id='{$Id}'";
+        $query = "UPDATE groupchats SET  OwnerEmail='{$_SESSION['Email']}', Name='{$name}'  WHERE Id='{$Id}'";
         $result= mysqli_query($conn, $query);
     }
     // Check file size

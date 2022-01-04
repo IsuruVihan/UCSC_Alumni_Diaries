@@ -64,7 +64,7 @@ body {
 
 .box-01 {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .box-02 {
@@ -308,7 +308,7 @@ body {
   grid-row-end: row3;
   margin-right: 5px;
   margin-left: 5px;
-  display: flex;
+  display:flex;
   flex-direction: column;
 }
 
@@ -533,7 +533,7 @@ body {
 
 .p_box-01 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .participants-list {
@@ -624,7 +624,7 @@ body {
   width: 48%;
   height: 60%;
   background: white;
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
   border-radius: 5px;
   color: gray;
   font-family: "Nunito", serif;

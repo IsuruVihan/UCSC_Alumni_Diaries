@@ -16,9 +16,9 @@
           $('#chatList').load("../../server/group-chat/filter.php",{
               Group_Name : group_name 
           });
-        
+    
         });
-        
+         
     });
     const ViewChat = (id) => {
         $('#chat-wall').load("../../server/group-chat/group-chat-details.php", {
@@ -36,6 +36,7 @@
         const Edit_Form = '#edit-form-'+id;
         const Form = 'edit-form-'+id;
         const submitFile = 'file-input-'+id;
+        const message = 'message-'+id;
        
         $(Edit_Form).submit((event) => {
             event.preventDefault();
@@ -55,13 +56,36 @@
             }).catch((error) => {
                 console.log(error);
             });
+            
             setTimeout(() => {
                 location.reload();
             }, 1000);
           
         });
+       
     }
+   const fiterAvailableUsers = (id) =>{
+        $('#available-users').submit((event) =>{
+            event.preventDefault();
+            const first_name = $('#first-name').val();
+            const last_name = $('#last-name').val();
+            const batch = $('#select-batch').val();
+            $('#availableusers').load("../../server/group-chat/fiter-available-users.php",{
+                First_Name : first_name, 
+                Last_Name : last_name,
+                Batch : batch
+            });
     
+        });
+   } 
+   const Add = (Id) =>{
+    $('#availableusers').load("../../server/group-chat/Add-user.php", {
+      Id:Id
+           
+        });   
+    
+   }
+          
 </script>
  
 <div class='group-chat-grid'>
@@ -358,7 +382,7 @@
                     <button class='filter-btn btn'>Filter</button>
                 </div>
             </div>
-            <div class='available-users-container'>
+            <div class='available-users-container' id='available-users-container'>
                 <div class='available-users-item'>
                     <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
@@ -439,4 +463,15 @@
     </div>
 </div>
  <script src='../../js/group-project.js'></script>
- <script src='../../js/available-users.js'></script> 
+ <script src='../../js/available-users.js'></script>
+ <!-- <script>
+    const chatwall = document.getElementById('chat-wall');
+    const ViewChat = (id) => {
+      chatwall.style.display = 'flex';
+      $('#row-01').load("../../server/group-chat/group-chat-details.php", {
+            Id: id      
+        });
+     
+    }
+ </script>
+  -->
