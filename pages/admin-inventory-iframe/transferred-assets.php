@@ -10,14 +10,58 @@
 <script>
     $(document).ready(() => {
         $('#cash-transfers-container').load("../../server/admin-inventory/transferred-assets/render-transferred-cash.php");
+        $('#transferred-cash-filter-field').submit((event) => {
+            event.preventDefault();
+            const from = $('#from').val();
+            const to = $('#to').val();
+            const transferred_to = $('#transferred-to').val();
 
+            $('#cash-transfers-container').load("../../server/admin-inventory/transferred-assets/filtered-transferred-cash.php", {
+                From: from,
+                To: to,
+                TransferredTo: transferred_to
+            });
+        });
     });
 
     $(document).ready(() => {
         $('#item-transfers-container').load("../../server/admin-inventory/transferred-assets/render-transferred-items.php");
+        $('#transferred-items-filter-field').submit((event) => {
+            event.preventDefault();
+            const from = $('#from1').val();
+            const to = $('#to1').val();
+            const transferred_to = $('#transferred-to1').val();
+            const item_name = $('#item-name').val();
 
+            $('#item-transfers-container').load("../../server/admin-inventory/transferred-assets/filtered-transferred-items.php", {
+                From: from,
+                To: to,
+                TransferredTo: transferred_to,
+                ItemName: item_name
+            });
+        })
     });
 
+</script>
+
+<script>
+    $(document).ready(() => {
+        $('#cash-transfers-total').load("../../server/admin-inventory/transferred-assets/total-transferred-cash.php");
+    });
+</script>
+
+<script>
+    const cashGenReportBtn = (from, to, transferred_to) => {
+        const url = "http://localhost/UCSC_Alumni_Diaries/server/generate-reports/admin-inventory/transferred-cash.php?from=" + from + "&to=" + to + "&transferred_to=" + transferred_to;
+        window.location.replace(url);
+    }
+</script>
+
+<script>
+    const itemsGenReportBtn = (from, to, transferred_to, item_name) => {
+        const url = "http://localhost/UCSC_Alumni_Diaries/server/generate-reports/admin-inventory/transferred-items.php?from=" + from + "&to=" + to + "&transferred_to=" + transferred_to + "&item_name=" + item_name;
+        window.location.replace(url);
+    }
 </script>
 
 <div class='transfers'>
@@ -25,7 +69,7 @@
         <div class='title'>
             Transferred Cash
         </div>
-        <div class='filter-field'>
+        <form class='filter-field' id='transferred-cash-filter-field'>
             <div class='col3'>
                 <input class='input-avu2' type='text' placeholder='From'
                        onmouseup="(this.type='date')">
@@ -34,7 +78,7 @@
             </div>
             <div class='col3'>
                 <select class='input-avu3'>
-                    <option value="" disabled selected hidden>Transfer To</option>
+                    <option value="" disabled selected hidden>Transferred To</option>
                     <option value='2018/2019'>2018/2019</option>
                     <option value='2018/2019'>2019/2020</option>
                     <option value='2018/2019'>2020/2021</option>
@@ -44,7 +88,7 @@
                 <button class="filter-btn btn">Filter</button>
                 <button class="generate-reports-btn btn">Generate Reports</button>
             </div>
-        </div>
+        </form>
         <div class='cash-transfers-container' id='cash-transfers-container'>
             <div class='cash-transfers-item'>
                 <div class='label'>
@@ -76,15 +120,15 @@
                 </div>
             </div>
         </div>
-        <div class='cash-transfers-total'>
-            Total
+        <div class='cash-transfers-total' id='cash-transfers-total'>
+
         </div>
     </div>
     <div class='item-transfers'>
         <div class='title'>
             Transferred Items
         </div>
-        <div class='filter-field'>
+        <form class='filter-field' id='transferred-items-filter-field'>
             <div class='col3'>
                 <input class='input-avu2' type='text' placeholder='Item Name'/>
                 <input class='input-avu2' type='text' placeholder='Received From'/>
@@ -107,7 +151,7 @@
                 <button class="filter-btn btn">Filter</button>
                 <button class="generate-reports-btn btn">Generate Reports</button>
             </div>
-        </div>
+        </form>
         <div class='item-transfers-container' id='item-transfers-container'>
             <div class='item-transfers-item'>
                 <div class='label'>
@@ -143,5 +187,16 @@
 </div>
 
 <script>
-    
+    $(document).ready(() => {
+        $('#transferred-cash-filter-field').load("../../server/admin-inventory/transferred-assets/transferred-cash-filter-field.php");
+    });
+
+    $(document).ready(() => {
+        $('#transferred-items-filter-field').load("../../server/admin-inventory/transferred-assets/transferred-items-filter-field.php");
+    });
+
+</script>
+
+<script>
+
 </script>

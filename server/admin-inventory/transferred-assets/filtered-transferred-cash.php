@@ -1,10 +1,26 @@
 <?php
+
 include('../../../db/db-conn.php');
 include('../../session.php');
 
-$query1 = "SELECT projects.Name, transferedcash.Amount, transferedcash.TransferedBy, transferedcash.Timestamp 
-           FROM transferedcash INNER JOIN projects 
+$from = $_POST['From'];
+$to = $_POST['To'];
+$transferred_to = $_POST['TransferredTo'];
+
+$query1 = "SELECT projects.Name, transferedcash.Amount, transferedcash.TransferedBy, transferedcash.Timestamp
+           FROM transferedcash INNER JOIN projects
            ON projects.Id = transferedcash.ProjectId";
+
+if (!empty($from)) {
+    $query1 = $query1 . " AND transferedcash.Timestamp > '{$from}'";
+}
+if (!empty($to)) {
+    $query1 = $query1 . " AND transferedcash.Timestamp < '{$to}'";
+}
+if (!empty($transferred_to)) {
+    $query1 = $query1 . " AND transferedcash.ProjectId='{$transferred_to}'";
+}
+
 $results1 = mysqli_query($conn, $query1);
 
 if (mysqli_num_rows($results1) > 0 ) {
@@ -30,7 +46,7 @@ if (mysqli_num_rows($results1) > 0 ) {
                     Amount :
                 </div>
                 <div class='sec-1'>
-                    (LKR) {$row1['Amount']}
+                   (LKR) {$row1['Amount']}
                 </div>
                 <div class='label'>
                     Transferred By :
@@ -43,5 +59,4 @@ if (mysqli_num_rows($results1) > 0 ) {
         }
     }
 }
-
 
