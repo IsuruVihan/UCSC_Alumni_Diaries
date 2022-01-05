@@ -22,7 +22,7 @@
         $('#flash-message').load("../server/subscriptions/accept-pending.php", {
             id: id
         });
-        setTimeout(() => window.history.go(), 1);
+        // setTimeout(() => window.history.go(), 1);
     }
 </script>
 

@@ -17,6 +17,16 @@
       
 </script>
 
+<script>
+      const Banbtn = (email) => {
+        $('#flash-message').load("../server/subscriptions/ban-status.php", {
+            email: email
+        });
+        setTimeout(() => window.history.go(), 1);
+    }
+</script>
+
+<div id='flash-message' class='flash-message'></div>
 <div class='main-box'>
     <div class='right-col'>
         <div class='card2 subs'>
