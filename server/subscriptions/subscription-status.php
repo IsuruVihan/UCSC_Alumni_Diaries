@@ -68,7 +68,7 @@ if (mysqli_num_rows($results) > 0) {
                                 </div>
                                 <div class='ban-unban'>
                                     <div class='unban'>
-                                        <button class='unban-btn'> Unban
+                                        <button class='unban-btn' onclick=UnBanbtn('{$row['Email']}')> Unban
                                         </button>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@ if (mysqli_num_rows($results) > 0) {
                                         </button>
                                     </div>
                                     <div class='unban'>
-                                        <button class='unban-btn'> Unban
+                                        <button class='unban-btn'onclick=UnBanbtn('{$row['Email']}')> Unban
                                         </button>
                                     </div>
                                 </div>

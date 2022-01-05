@@ -26,6 +26,15 @@
     }
 </script>
 
+<script>
+      const UnBanbtn = (email) => {
+        $('#flash-message').load("../server/subscriptions/unban-status.php", {
+            email: email
+        });
+        setTimeout(() => window.history.go(), 1);
+    }
+</script>
+
 <div id='flash-message' class='flash-message'></div>
 <div class='main-box'>
     <div class='right-col'>
