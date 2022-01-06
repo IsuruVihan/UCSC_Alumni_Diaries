@@ -36,7 +36,37 @@
     ></iframe>
 </div>
 
-<script src='../js/admin-inventory.js'></script>
+<script>
+    const available_assets = document.getElementById('available-assets');
+    const transferred_assets = document.getElementById('transferred-assets');
+    const to_be_acc_assets = document.getElementById('to-be-acc-assets');
+    const received_assets = document.getElementById('received-assets');
+
+    const onClickAvailable = () => {
+        available_assets.classList.add('clicked-link');
+        transferred_assets.classList.remove('clicked-link');
+        to_be_acc_assets.classList.remove('clicked-link');
+        received_assets.classList.remove('clicked-link');
+    }
+    const onClickTransferred = () => {
+        available_assets.classList.remove('clicked-link');
+        transferred_assets.classList.add('clicked-link');
+        to_be_acc_assets.classList.remove('clicked-link');
+        received_assets.classList.remove('clicked-link');
+    }
+    const onClickToBeAcc = () => {
+        available_assets.classList.remove('clicked-link');
+        transferred_assets.classList.remove('clicked-link');
+        to_be_acc_assets.classList.add('clicked-link');
+        received_assets.classList.remove('clicked-link');
+    }
+    const onClickReceived = () => {
+        available_assets.classList.remove('clicked-link');
+        transferred_assets.classList.remove('clicked-link');
+        to_be_acc_assets.classList.remove('clicked-link');
+        received_assets.classList.add('clicked-link');
+    }
+</script>
 
 <?php include('../components/footer.php'); ?>
 

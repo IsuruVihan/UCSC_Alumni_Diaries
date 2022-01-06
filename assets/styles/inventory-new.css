@@ -423,7 +423,7 @@ body {
 }
 
 .item-transfers-item {
-    height: 35%;
+    height: 45%;
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
@@ -446,6 +446,18 @@ body {
     text-align: center;
 }
 
+.sec-1-1 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 7.5%;
+    text-align: center;
+}
+
 .sec-2 {
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -455,6 +467,18 @@ body {
     align-items: center;
     width: 70%;
     height: 8%;
+    text-align: center;
+}
+
+.sec-2-1 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 6%;
     text-align: center;
 }
 
@@ -518,7 +542,7 @@ body {
 }
 
 .to-be-acc-cash-item {
-    height: 40%;
+    height: 53%;
     width: 96%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -532,7 +556,7 @@ body {
 }
 
 .to-be-acc-items-item{
-    height: 46%;
+    height: 60%;
     width: 96%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -628,7 +652,7 @@ body {
 }
 
 .received-cash-item {
-    height: 45%;
+    height: 48%;
     width: 96%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -642,7 +666,7 @@ body {
 }
 
 .received-cash-item-for-association {
-    height: 39%;
+    height: 45%;
     width: 96%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -719,7 +743,7 @@ body {
 }
 
 .received-items-item {
-    height: 36%;
+    height: 55%;
     width: 97%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -825,7 +849,7 @@ body {
 }
 
 .subscription-item {
-    height: 36%;
+    height: 42%;
     width: 97%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -846,7 +870,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 70%;
-    height: 10%;
+    height: 7.5%;
     text-align: center;
 }
 
@@ -931,4 +955,50 @@ body {
 .clicked-link{
     color: black;
     animation: fadeIn 1s;
+}
+
+.bank-slip-modal {
+    display: none; /* Hidden by default */
+    border-radius: 5px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 70%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Modal Content/Box */
+.bank-slip-modal-content {
+    background-color: #fefefe;
+    border-radius: 5px;
+    margin: 0.5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 60%;
+}
+
+.modal-image-container{
+    height: 90%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

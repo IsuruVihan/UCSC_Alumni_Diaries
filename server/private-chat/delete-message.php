@@ -39,7 +39,6 @@ $query3 = "SELECT FirstName FROM registeredmembers WHERE Email = '{$email}'";
 $results3 = mysqli_query($conn, $query3);
 $row3 = mysqli_fetch_assoc($results3);
 
-
 if (mysqli_num_rows($results) > 0 ) {
     while($row = mysqli_fetch_assoc($results)) {
         $data = $row["Id"]. ',' .$row["ChatId"];

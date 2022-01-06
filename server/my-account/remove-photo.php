@@ -13,6 +13,3 @@ else{
     mysqli_query($conn, $query);
     echo "Your profile picture has been removed.";
 }
-
-
-
