@@ -652,7 +652,7 @@ body {
 }
 
 .received-cash-item {
-    height: 45%;
+    height: 48%;
     width: 96%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -666,7 +666,7 @@ body {
 }
 
 .received-cash-item-for-association {
-    height: 39%;
+    height: 45%;
     width: 96%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -743,7 +743,7 @@ body {
 }
 
 .received-items-item {
-    height: 36%;
+    height: 55%;
     width: 97%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -849,7 +849,7 @@ body {
 }
 
 .subscription-item {
-    height: 36%;
+    height: 42%;
     width: 97%;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -870,7 +870,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 70%;
-    height: 10%;
+    height: 7.5%;
     text-align: center;
 }
 
