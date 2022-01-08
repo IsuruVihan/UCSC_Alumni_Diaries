@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../../db/db-conn.php');
+
 if(isset($_POST['submit'])){
    $group_name = $_POST['group-name'];
    $file = $_FILES['file'];
@@ -20,44 +21,44 @@ if(isset($_POST['submit'])){
          $allowedExt = array('jpg', 'jpeg', 'png', 'pdf');
          $allowedMaxSize = 100000;
 
-      if(in_array($fileActualExt,  $allowedExt)){
-         if($fileError === 0){
-            if($fileSize < 10000000){
-               $fileNameNew = uniqid('', true).".". $fileActualExt;
-               $fileDestination = '../../uploads/group-chat/'.$fileNameNew;
-               move_uploaded_file($fileTmpName, $fileDestination);
-               
-               $query ="
-                  INSERT INTO groupchats (OwnerEmail,PicSrc, Name) 
-                  VALUES (
-                     '{$_SESSION['Email']}',
-                     '$fileNameNew',
-                     '$group_name'
-               )";  
-               if (mysqli_query($conn, $query)) {
-                  header("Location: ../../pages/group-chat/group-chat.php");
+         if(in_array($fileActualExt,  $allowedExt)){
+            if($fileError === 0){
+               if($fileSize < 10000000){
+                  $fileNameNew = uniqid('', true).".". $fileActualExt;
+                  $fileDestination = '../../uploads/group-chat/'.$fileNameNew;
+                  move_uploaded_file($fileTmpName, $fileDestination);
+                  
+                  $query ="
+                     INSERT INTO groupchats (OwnerEmail,PicSrc, Name) 
+                     VALUES (
+                        '{$_SESSION['Email']}',
+                        '$fileNameNew',
+                        '$group_name'
+                  )";  
+                  if (mysqli_query($conn, $query)) {
+                     header("Location: ../../pages/group-chat/group-chat.php");
+                  }else{
+                  echo "Server error";
+                  }
                }else{
-                 echo "Server error";
-               }
+                  echo "Your file size is large";
+               }   
             }else{
-               echo "Your file size is large";
-            }   
+               echo "There is error in uploading file";
+            }
          }else{
-            echo "There is error in uploading file";
+         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed. ";
          }
       }else{
-        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed. ";
-      }
-   }else{
          $query ="INSERT INTO groupchats (OwnerEmail,PicSrc,Name) 
          VALUES ('{$_SESSION['Email']}','group-chat.png','$group_name')"; 
-        
-      if (mysqli_query($conn, $query)) {
-         header("Location: ../../pages/group-chat/group-chat.php");
-      }else{
-         echo "Server error";
-      } 
-   }        
+         
+         if (mysqli_query($conn, $query)) {
+             header("Location: ../../pages/group-chat/group-chat.php");
+         }else{
+             echo "Server error";
+         } 
+      }        
    }
    
 }

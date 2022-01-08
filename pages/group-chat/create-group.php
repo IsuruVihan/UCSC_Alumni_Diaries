@@ -13,8 +13,7 @@
       
     }; 
     
-</script>
-   
+</script>  
 <form class='create-group' action='../../server/group-chat/create.php' id='create-group' name='create-group' method='post' enctype='multipart/form-data'>
     <div class='title'>
         Create Group

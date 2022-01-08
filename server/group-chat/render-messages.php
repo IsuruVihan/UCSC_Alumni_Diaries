@@ -16,39 +16,38 @@ if (mysqli_num_rows($results) > 0 ) {
         $data = $row["Id"]. ',' .$row["ChatId"];
         if ($row["PicSrc"] == '') {
             if ($row["SenderEmail"] == $sessionemail) {
-                echo "
+            echo "
                 <div class='sent-message-line' id='sent-message-line'>
-                <div class='sent-message' id='sent-message'>
-                    <div class='delete-msg-container' id='delete-btn'>
-                        <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+                    <div class='sent-message' id='sent-message'>
+                        <div class='delete-msg-container' id='delete-btn'>
+                            <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+                        </div>
+                        <div class='content'>
+                            ".$row["Message"]."
+                        </div>
+                        <div class='time'>
+                            ".$row["Timestamp"]."
+                        </div>
                     </div>
-                    <div class='content'>
-                        ".$row["Message"]."
-                    </div>
-                    <div class='time'>
-                        ".$row["Timestamp"]."
-                    </div>
-                </div>
-            </div>";
+                </div>";
             } else {        
                 $query3="SELECT FirstName FROM Registeredmembers WHERE Email='{$row['SenderEmail']}'";
                 $result3=mysqli_query($conn,$query3);
                 $row3=mysqli_fetch_assoc($result3);
-                
-                echo "<div class='received-message-line'>
-                <div class='received-message'>
-                    <div class='sender-name'>
-                        ".$row3["FirstName"]."
+            echo "
+                <div class='received-message-line'>
+                    <div class='received-message'>
+                        <div class='sender-name'>
+                            ".$row3["FirstName"]."
+                        </div>
+                        <div class='content'>
+                            ".$row["Message"]."
+                        </div>
+                        <div class='time'>
+                            ".$row["Timestamp"]."
+                        </div>
                     </div>
-                    <div class='content'>
-                        ".$row["Message"]."
-                    </div>
-                    <div class='time'>
-                        ".$row["Timestamp"]."
-                    </div>
-                </div>
-            </div>
-          ";
+                </div>";
             }
         }else{
             $fileExt = explode('.', $row["PicSrc"]);
@@ -56,72 +55,69 @@ if (mysqli_num_rows($results) > 0 ) {
             if($fileActualExt == "jpg" || $fileActualExt == "png" || $fileActualExt == "jpeg"
                 || $fileActualExt == "gif" ){
                 if ($row["SenderEmail"] == $sessionemail) {
-                    echo "<div class='sent-message-line' id='sent-message-line'>
-                <div class='sent-message' id='sent-message'>
-                    <div class='delete-msg-container'>
-                        <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+            echo "<div class='sent-message-line' id='sent-message-line'>
+                    <div class='sent-message' id='sent-message'>
+                        <div class='delete-msg-container'>
+                            <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+                        </div>
+                        <img src='../../uploads/group-chat/chat-files/".$row["PicSrc"]."' width='99%' class='chat-pic' alt='chat-pic'/>
+                        <a href='../../uploads/group-chat/chat-files/".$row["PicSrc"]."' download>Download File</a>
+                        <div class='content'>
+                            ".$row["Message"]."
+                        </div>
+                        <div class='time'>
+                            ".$row["Timestamp"]."
+                        </div>
                     </div>
-                    <img src='../../uploads/group-chat/chat-files/".$row["PicSrc"]."' width='99%' class='chat-pic' alt='chat-pic'/>
-                    <a href='../../uploads/group-chat/chat-files/".$row["PicSrc"]."' download>Download File</a>
-                    <div class='content'>
-                        ".$row["Message"]."
-                    </div>
-                    <div class='time'>
-                        ".$row["Timestamp"]."
-                    </div>
-                </div>
-            </div>";
+                </div>";
                 } else {
-                    echo "<div class='received-message-line'>
-                <div class='received-message'>
-                    <div class='sender-name'>
-                        ".$row3["FirstName"]."
+            echo "<div class='received-message-line'>
+                    <div class='received-message'>
+                        <div class='sender-name'>
+                            ".$row3["FirstName"]."
+                        </div>
+                        <img src='../../uploads/group-chat/chat-files/".$row["PicSrc"]."' width='99%' class='chat-pic' alt='chat-pic'/>
+                        <a href='../../uploads/group-chat/chat-files/".$row["PicSrc"]."' download>Download File</a>
+                        <div class='content'>
+                            ".$row["Message"]."
+                        </div>
+                        <div class='time'>
+                            ".$row["Timestamp"]."
+                        </div>
                     </div>
-                    <img src='../../uploads/group-chat/chat-files/".$row["PicSrc"]."' width='99%' class='chat-pic' alt='chat-pic'/>
-                    <a href='../../uploads/group-chat/chat-files/".$row["PicSrc"]."' download>Download File</a>
-                    <div class='content'>
-                        ".$row["Message"]."
-                    </div>
-                    <div class='time'>
-                        ".$row["Timestamp"]."
-                    </div>
-                </div>
-            </div>
-          ";
+                </div>";
                 }
-          }else{
+            }else{
                 if ($row["SenderEmail"] == $sessionemail) {
-                    echo "<div class='sent-message-line' id='sent-message-line'>
-                <div class='sent-message' id='sent-message'>
-                    <div class='delete-msg-container'>
-                        <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+          echo "<div class='sent-message-line' id='sent-message-line'>
+                    <div class='sent-message' id='sent-message'>
+                        <div class='delete-msg-container'>
+                            <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+                        </div>
+                        <a href='../../uploads/private-chat-files/".$row["PicSrc"]."' download>Download File</a>
+                        <div class='content'>
+                            ".$row["Message"]."
+                        </div>
+                        <div class='time'>
+                            ".$row["Timestamp"]."
+                        </div>
                     </div>
-                    <a href='../../uploads/private-chat-files/".$row["PicSrc"]."' download>Download File</a>
-                    <div class='content'>
-                        ".$row["Message"]."
-                    </div>
-                    <div class='time'>
-                        ".$row["Timestamp"]."
-                    </div>
-                </div>
-            </div>";
+                </div>";
                 } else {
-                    echo "<div class='received-message-line'>
-                                <div class='received-message'>
-                                    <div class='sender-name'>
-                                        ".$row3["FirstName"]."
-                                    </div>
-                                    <a href='../../uploads/private-chat-files/".$row["PicSrc"]."' download>Download File</a>
-                                    <div class='content'>
-                                        ".$row["Message"]."
-                                    </div>
-                                    <div class='time'>
-                                        ".$row["Timestamp"]."
-                                    </div>
-                                </div>
-                            </div>
-        
-          ";
+          echo "<div class='received-message-line'>
+                    <div class='received-message'>
+                        <div class='sender-name'>
+                            ".$row3["FirstName"]."
+                        </div>
+                            <a href='../../uploads/private-chat-files/".$row["PicSrc"]."' download>Download File</a>
+                        <div class='content'>
+                            ".$row["Message"]."
+                        </div>
+                        <div class='time'>
+                            ".$row["Timestamp"]."
+                        </div>
+                    </div>
+                </div> ";
                 }
             }
         }

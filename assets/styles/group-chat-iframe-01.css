@@ -334,7 +334,7 @@ body {
   gap: 8px;
 }
 
-.result3 {
+/* .result3 {
   width: 100%;
   border: 1px solid gray;
   border-radius: 5px;
@@ -344,7 +344,7 @@ body {
   gap: 10px;
   transition: all ease-in-out 0.5s;
   margin-bottom: 5px;
-}
+} */
 
 .results3 {
   border: 1px solid lightgray;

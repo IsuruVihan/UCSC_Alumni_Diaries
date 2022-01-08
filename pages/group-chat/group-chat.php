@@ -20,35 +20,31 @@
         });
     });
 </script>
-
-<script>
+<script> 
     const ViewChat = (id) => {
         $('#chat-wall').load("../../server/group-chat/group-chat-details.php", {
             Id: id        
         });
-     
+        const message = document.getElementById('message-list');
+        message.scrollTop= message.scrollHeight;
     }
     const DeleteChat= (id) => {
         $('#chatList').load("../../server/group-chat/delete.php", {
             Id: id       
         });    
     }
-    const Edit = (id) =>{
-        
+    const Edit = (id) =>{ 
         const Edit_Form = '#edit-form-'+id;
         const Form = 'edit-form-'+id;
         const submitFile = 'file-input-'+id;
         const message = 'message-'+id;
        
         $(Edit_Form).submit((event) => {
-            event.preventDefault();
-            
+            event.preventDefault(); 
             const url = '../../server/group-chat/edit-group.php';
             const form = document.getElementById(Form);
             const files1 = document.getElementById(submitFile);
             const formData = new FormData(form);
-            
-            console.log(form);
 
             fetch(url, {
                 method: 'POST',
@@ -61,10 +57,8 @@
             
             setTimeout(() => {
                 location.reload();
-            }, 1000);
-          
-        });
-       
+            }, 1000); 
+        });  
     }
     const fiterAvailableUsers = (id) =>{
         $('#filter-available').submit((event) =>{
@@ -78,9 +72,7 @@
                 Last_Name : last_name,
                 Batch : batch
             });
-    
-        });
-        
+        });   
    } 
     const onClickAddBtn = (id) =>{ 
         const group_id1 = $('#GroupId').val();
@@ -96,7 +88,6 @@
         UserEmail:user_email
 
         });  
-
    } 
     const fiterParticipants = (id) =>{ 
         $('#participants-filter').submit((event) =>{
@@ -108,12 +99,10 @@
                 Participants_FirstName:participnts_firstname,
                 Participants_LastName:participnts_lastname
             }); 
-       
-        }); 
-       
+        });   
     }
-     </script>
-    <script>    
+</script>
+<script>    
     const chat = (id) =>{
      $('#chat-window-01').submit((event) =>{
             event.preventDefault();
@@ -138,8 +127,7 @@
             });   
             document.getElementById("message").value = "";
             document.getElementById("file-btn").value = ""; 
-        });
-        
+        });    
     } 
     const onClickDeleteMsg = (data) =>{
             const Id = data.split(',')[0];
@@ -149,7 +137,6 @@
                 ChatId: ChatId
             });
         }
-       
 </script>  
 <div class='group-chat-grid'>
     <div class='card chat-list'>
@@ -157,7 +144,6 @@
         <form class='filter' id='filter'>
             <div class='box-01'>
                 <input class='input-field-01' id='group-name' type='text' placeholder='Group Name'/>
-                <!-- <input class='input-field-01' type='text' placeholder='Last Name'/> -->
             </div>
             <div class='box-02'>
                 <input type='submit' class='filter-btn btn' value='Filter'></input>
@@ -241,67 +227,7 @@
                             <button class="remove-btn btn">Remove</button>
                         </div>
                     </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="remove-btn btn">Remove</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="remove-btn btn">Remove</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="remove-btn btn">Remove</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="remove-btn btn">Remove</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="remove-btn btn">Remove</button>
-                        </div>
-                    </div>
-                </div>
+                </div>  
             </div>
             <div class='chat-button'>
               <button class='chat-btn btn' onclick='DisplayChatWindow()'>View Chat</button>
@@ -340,66 +266,6 @@
             </form>
             </div>
             <div class='available-users-container' id='available-list'>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
-                    <div class='names-btn-container01'>
-                        <div class='names-container02'>
-                            <div class='a-first-name'>First Name</div>
-                            <div class='a-last-name'>Last Name</div>
-                        </div>
-                        <div class='btn-container03'>
-                            <button class="add-btn btn">Add</button>
-                        </div>
-                    </div>
-                </div>
                 <div class='available-users-item'>
                     <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
