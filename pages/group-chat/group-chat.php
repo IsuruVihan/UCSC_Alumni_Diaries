@@ -18,13 +18,15 @@
           });
     
         });
-         
     });
+</script>
+
+<script>
     const ViewChat = (id) => {
         $('#chat-wall').load("../../server/group-chat/group-chat-details.php", {
-            Id: id      
-        });  
-        
+            Id: id        
+        });
+     
     }
     const DeleteChat= (id) => {
         $('#chatList').load("../../server/group-chat/delete.php", {
@@ -43,7 +45,7 @@
             
             const url = '../../server/group-chat/edit-group.php';
             const form = document.getElementById(Form);
-            const files = document.getElementById(submitFile);
+            const files1 = document.getElementById(submitFile);
             const formData = new FormData(form);
             
             console.log(form);
@@ -64,30 +66,91 @@
         });
        
     }
-   const fiterAvailableUsers = (id) =>{
-        $('#available-users').submit((event) =>{
+    const fiterAvailableUsers = (id) =>{
+        $('#filter-available').submit((event) =>{
             event.preventDefault();
             const first_name = $('#first-name').val();
             const last_name = $('#last-name').val();
             const batch = $('#select-batch').val();
-            $('#availableusers').load("../../server/group-chat/fiter-available-users.php",{
+           $('#availableusers').load("../../server/group-chat/fiter-available-users.php",{
+                Id: id,
                 First_Name : first_name, 
                 Last_Name : last_name,
                 Batch : batch
             });
     
         });
+        
    } 
-   const Add = (Id) =>{
-    $('#availableusers').load("../../server/group-chat/Add-user.php", {
-      Id:Id
-           
+    const onClickAddBtn = (id) =>{ 
+        const group_id1 = $('#GroupId').val();
+        $('#availableusers').load("../../server/group-chat/Add-user.php", {
+        Id:id,
+        GroupId:group_id1    
         });   
-    
-   }
-          
-</script>
- 
+    }
+    const OnclickRemove = (id) =>{ 
+        const user_email = $('#User-Email').val();
+        $('#group-participants').load("../../server/group-chat/delete-user.php", {
+        Id2:id,
+        UserEmail:user_email
+
+        });  
+
+   } 
+    const fiterParticipants = (id) =>{ 
+        $('#participants-filter').submit((event) =>{
+            event.preventDefault();
+            const participnts_firstname = $('#participants-firstName').val();
+            const participnts_lastname = $('#participants-lastName').val();
+            $('#group-participants').load("../../server/group-chat/filter-participants.php", {
+                Id:id, 
+                Participants_FirstName:participnts_firstname,
+                Participants_LastName:participnts_lastname
+            }); 
+       
+        }); 
+       
+    }
+     </script>
+    <script>    
+    const chat = (id) =>{
+     $('#chat-window-01').submit((event) =>{
+            event.preventDefault();
+            const fd = new FormData();
+            const files = $('#file-btn')[0].files;
+            const message = $('#message').val();
+            const Id = $('#msgId').val();
+            if(files.length > 0 || message.length > 0){
+                fd.append('file-message',files[0]);
+                fd.append('message',message);
+                fd.append('msgId',Id);
+                $.ajax({
+                     url: '../../server/group-chat/sent-message.php',
+                    type: 'post',
+                    data: fd,
+                    contentType: false,
+                    processData: false
+                });
+            }
+            $('#message-list').load("../../server/group-chat/render-messages.php", {
+            Id: id
+            });   
+            document.getElementById("message").value = "";
+            document.getElementById("file-btn").value = ""; 
+        });
+        
+    } 
+    const onClickDeleteMsg = (data) =>{
+            const Id = data.split(',')[0];
+            const ChatId = data.split(',')[1];
+            $('#message-list').load("../../server/group-chat/delete-message.php",{
+                Id: Id,
+                ChatId: ChatId
+            });
+        }
+       
+</script>  
 <div class='group-chat-grid'>
     <div class='card chat-list'>
         <div class='title'>Chat List</div>
@@ -106,18 +169,18 @@
                 <div class='name-buttons'>
                     <div class='name'> Name</div>
                     <div class='buttons'>
-                        <button class='view-btn btn' onclick='ViewChat()'>View</button>
-                        <button class='delete-btn btn'>Delete</button>
+                     <button class='view-btn btn' id='view-btn' onclick=ViewChat()> View</button>
+                    <button class='delete-btn btn'>Delete</button>
                     </div>
                 </div>
             </div>    
         </div>
     </div>
     <div class='chat-wall' id='chat-wall'>
-        <!-- <div class='row-01' id='row-01'>
-            <div class='title project-name-div' id='project-name-div'>
-                Group Name
-                <i class='fas fa-edit icon-btn ' title='Edit Group' onclick='DisplayEditProjectNameDiv()'></i>
+         <!-- <div class='row-01' id='row-01'> -->
+            <!-- <div class='title project-name-div' id='project-name-div'> -->
+               
+                <!-- <i class='fas fa-edit icon-btn ' title='Edit Group' onclick='DisplayEditProjectNameDiv()'></i>
             </div>
             <div class='edit-project-name-div' id='edit-project-name-div'>
                 <img src='../../assets/images/group-chat.png' width='8%' height='' class='user-pic' alt='user-pic'>
@@ -125,154 +188,48 @@
                        class='new-project-name input-field' id='new-project-name'/>
                 <button class='edit-btn btn'>Edit</button>
                 <button class='cancel-btn btn' onclick='HideEditProjectNameDiv()'>Cancel</button>
-            </div>
-        </div>
-        <div class='button-class' id='button-class'>
+            </div> -->
+        <!-- </div> -->
+        <!-- <div class='button-class' id='button-class'>
             <button class='participants-btn btn' id='participants-button' onclick='DisplayParticipantsList()' >Participants list</button>
             <button class='available-btn btn' id='available-button' onclick='DispalyAvailableUsers()'>Available users</button>   
-        </div> 
-        <div class='row-02' id='chat-window'>
+        </div>  -->
+        <!-- <div class='row-02' id='chat-window'>
             <div class='results3' id='message-list'>
-                <div class='sent-message-line'>
-                    <div class='sent-message'>
-                        <div class='delete-msg-container'>
-                            <i class='fas fa-times-circle delete-msg-icon'></i>
-                        </div>
-                        <div class='content'>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-                            of
-                            classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                            Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-                            Latin
-                            words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-                            classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
-                            1.10.32
-                            and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-                            written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
-                            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a
-                            line in
-                            section 1.10.32.
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='received-message-line'>
-                    <div class='received-message'>
-                        <div class='sender-name'>
-                            Isuru
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='sent-message-line'>
-                    <div class='sent-message'>
-                        <div class='delete-msg-container'>
-                            <i class='fas fa-times-circle delete-msg-icon'></i>
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='received-message-line'>
-                    <div class='received-message'>
-                        <div class='sender-name'>
-                            Isuru
-                        </div>
-                        <div class='content'>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-                            of
-                            classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                            Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-                            Latin
-                            words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-                            classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
-                            1.10.32
-                            and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-                            written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
-                            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a
-                            line in
-                            section 1.10.32.
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='sent-message-line'>
-                    <div class='sent-message'>
-                        <div class='delete-msg-container'>
-                            <i class='fas fa-times-circle delete-msg-icon'></i>
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='sent-message-line'>
-                    <div class='sent-message'>
-                        <div class='delete-msg-container'>
-                            <i class='fas fa-times-circle delete-msg-icon'></i>
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='received-message-line'>
-                    <div class='received-message'>
-                        <div class='sender-name'>
-                            Isuru
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-
-                    </div>
-                </div>
+        
             </div>
         </div>
-        <div class='create-message-div' id='chat-window-01'>
-            <textarea class='chat-message'></textarea>
-            <div class='button-set'>
-                <i class='fas fa-paper-plane chat-icon send-icon'></i>
-                <i class='fas fa-paperclip chat-icon attach-icon'></i>
-                <i class='fas fa-times-circle chat-icon clear-icon'></i>
-            </div>
-        </div>
+        <form class='create-message-div' id='chat-window-01' method='post' enctype='multipart/form-data' action='../../server/group-chat/sent-message.php'>
+            <textarea class='chat-message' id='message' name='message'></textarea>
+             <div class='button-set'>
+                 <label class='messge-sent'>
+                   <input type='submit' name='submit-btn' id='submit-btn' class='messge-upload-btn btn' style='display:none'>
+                  <i class='fas fa-paper-plane chat-icon send-icon'></i>
+                 </label>
+                 <label class='messge-sent'>
+                   <input type='file' name='file-message' id='file-btn' class='messge-upload-btn btn' style='display:none'>
+                   <i class='fas fa-paperclip chat-icon attach-icon'></i>
+                 </label>
+                 <label class='messge-sent'>
+                   <input type='reset' name='submit-btn' id='cancel-message-btn' class='messge-upload-btn btn' style='display:none'>
+                  <i class='fas fa-times-circle chat-icon clear-icon'></i>
+                 </label>
+             </div>
+        </form>
         <div class= 'row-04' id='participants-list'> 
             <div class='title-02'>
                 Participants
             </div>
-            <div class='Participants-filter'>
+            <form class='Participants-filter' id='participants-filter'>
                 <div class='p_box-01'>
-                    <input class='participants-field' type='text' placeholder='First Name'/>
-                    <input class='participants-field' type='text' placeholder='Last Name'/>
+                    <input class='participants-field' type='text' placeholder='First Name' id='participants-firstName'/>
+                    <input class='participants-field' type='text' placeholder='Last Name' id='participants-lastName'/>
                 </div>
                 <div class='box-02'>
-                    <button class='filter-btn btn'>Filter</button>
+                <input type='submit' value='Filter' class='filter-btn btn'></input>
                 </div>
-            </div>
-            <div class='available-users-container'>
+            </form>
+            <div class='available-users-container' id='available-users-container'>
                 <div class='available-users-item'>
                     <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
@@ -347,17 +304,17 @@
                 </div>
             </div>
             <div class='chat-button'>
-              <button class="chat-btn btn" onclick='HideChatWindow()'>View Chat</button>
+              <button class='chat-btn btn' onclick='DisplayChatWindow()'>View Chat</button>
             </div>   
         </div>
         <div class='available-users' id='available-users'>
             <div class='title'>Available Users</div>
-            <div class='filter'>
+            <form class='filter' id='filter-available'>
                 <div class='box-01'>
                     <input class='input-field' type='text' placeholder='First Name'/>
                     <input class='input-field' type='text' placeholder='Last Name'/>
-                    <select class='input-field'>
-                        <option value='All'>All</option>
+                    <select class='input-field' id='select-batch'>
+                        <option value='' disabled selected hidden>All</option>
                         <option value='2004/2005'>2004/2005</option>
                         <option value='2005/2006'>2005/2006</option>
                         <option value='2006/2007'>2006/2007</option>
@@ -379,10 +336,10 @@
                     </select>
                 </div>
                 <div class='box-02'>
-                    <button class='filter-btn btn'>Filter</button>
-                </div>
+                <input type='submit' value='Filter' class='filter-btn btn' onclick='fiterAvailableUsers()'></input>
+            </form>
             </div>
-            <div class='available-users-container' id='available-users-container'>
+            <div class='available-users-container' id='available-list'>
                 <div class='available-users-item'>
                     <img src='../../assets/images/user-default.png' width="12%" class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
@@ -457,21 +414,10 @@
                 </div>
             </div>
             <div class='chat-button'>
-              <button class="chat-btn btn" onclick='HideChat()'>View Chat</button>
+              <button class='chat-btn btn' onclick='DisplayChat()'>View Chat</button>
             </div>                
-        </div>   -->
+        </div>    -->
     </div>
 </div>
  <script src='../../js/group-project.js'></script>
  <script src='../../js/available-users.js'></script>
- <!-- <script>
-    const chatwall = document.getElementById('chat-wall');
-    const ViewChat = (id) => {
-      chatwall.style.display = 'flex';
-      $('#row-01').load("../../server/group-chat/group-chat-details.php", {
-            Id: id      
-        });
-     
-    }
- </script>
-  -->

@@ -3,6 +3,7 @@ include('../../db/db-conn.php');
 include('../session.php');
 $Id  = $_POST['Id'];
 $email = $_SESSION['Email'];
+$allowedExt = array('jpg', 'jpeg', 'png');
 
 $query = "SELECT Id,PicSrc,Name FROM groupchats WHERE Id ='{$Id}'";
 $result =mysqli_query($conn, $query);
@@ -45,167 +46,210 @@ while($row = mysqli_fetch_assoc($result)){
                     </div>    
                 </div>
             </div>
-            ";
-
-        }
-    
-    }
-
-echo " <div class='button-class' id='button-class'>
+         <div class='button-class' id='button-class'>
             <button class='participants-btn btn' id='participants-button' onclick='DisplayParticipantsList()' >Participants list</button>
             <button class='available-btn btn' id='available-button' onclick='DispalyAvailableUsers()'>Available users</button>   
-        </div>";
-echo"   <div class='row-02' id='chat-window'>
-            <div class='results3' id='message-list'>
-                <div class='sent-message-line'>
-                    <div class='sent-message'>
-                        <div class='delete-msg-container'>
-                            <i class='fas fa-times-circle delete-msg-icon'></i>
-                        </div>
-                        <div class='content'>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-                            of
-                            classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                            Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-                            Latin
-                            words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-                            classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
-                            1.10.32
-                            line in
-                            section 1.10.32.
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='received-message-line'>
-                    <div class='received-message'>
-                        <div class='sender-name'>
-                            Isuru
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='sent-message-line'>
-                    <div class='sent-message'>
-                        <div class='delete-msg-container'>
-                            <i class='fas fa-times-circle delete-msg-icon'></i>
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='received-message-line'>
-                    <div class='received-message'>
-                        <div class='sender-name'>
-                            Isuru
-                        </div>
-                        <div class='content'>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-                            of
-                            classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                            Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-                            Latin
-                            words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-                            classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
-                            1.10.3
-                            line in
-                            section 1.10.32.
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='sent-message-line'>
-                    <div class='sent-message'>
-                        <div class='delete-msg-container'>
-                            <i class='fas fa-times-circle delete-msg-icon'></i>
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='sent-message-line'>
-                    <div class='sent-message'>
-                        <div class='delete-msg-container'>
-                            <i class='fas fa-times-circle delete-msg-icon'></i>
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-                    </div>
-                </div>
-                <div class='received-message-line'>
-                    <div class='received-message'>
-                        <div class='sender-name'>
-                            Isuru
-                        </div>
-                        <div class='content'>
-                            Hello Machan
-                        </div>
-                        <div class='time'>
-                            09:28
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class='create-message-div' id='chat-window-01'>
-            <textarea class='chat-message'></textarea>
+        <div class='row-02' id='chat-window'>
+            <div class='results3' id='message-list'>";
+ //render msg
+ 
+$query3 = "SELECT Id, ChatId, SenderEmail, Message, PicSrc, Timestamp FROM chatmessages 
+ WHERE isGroupChat='1' AND ChatId='{$Id}' ORDER BY Timestamp";
+$results3 = mysqli_query($conn, $query3);
+
+if (mysqli_num_rows($results3) > 0 ) {
+while($row3 = mysqli_fetch_assoc($results3)) {
+$data = $row3["Id"]. ',' .$row3["ChatId"];
+if ($row3["PicSrc"] == '') {
+   if ($row3["SenderEmail"] == $email) {
+       echo "
+       <div class='sent-message-line' id='sent-message-line'>
+       <div class='sent-message' id='sent-message'>
+           <div class='delete-msg-container' id='delete-btn'>
+               <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+           </div>
+           <div class='content'>
+               ".$row3["Message"]."
+           </div>
+           <div class='time'>
+               ".$row3["Timestamp"]."
+           </div>
+       </div>
+   </div>";
+   } else {        
+       $query4="SELECT FirstName FROM Registeredmembers WHERE Email='{$row3['SenderEmail']}'";
+       $result4=mysqli_query($conn,$query4);
+       $row4=mysqli_fetch_assoc($result4);
+       
+       echo "<div class='received-message-line'>
+       <div class='received-message'>
+           <div class='sender-name'>
+               ".$row4["FirstName"]."
+           </div>
+           <div class='content'>
+               ".$row3["Message"]."
+           </div>
+           <div class='time'>
+               ".$row3["Timestamp"]."
+           </div>
+       </div>
+   </div>
+ ";
+   }
+}else{
+   $fileExt = explode('.', $row3["PicSrc"]);
+   $fileActualExt = strtolower(end($fileExt));
+   if($fileActualExt == "jpg" || $fileActualExt == "png" || $fileActualExt == "jpeg"
+       || $fileActualExt == "gif" ){
+       if ($row3["SenderEmail"] == $email) {
+           echo "<div class='sent-message-line' id='sent-message-line'>
+       <div class='sent-message' id='sent-message'>
+           <div class='delete-msg-container'>
+               <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+           </div>
+           <img src='../../uploads/group-chat/chat-files/".$row3["PicSrc"]."' width='99%' class='chat-pic' alt='chat-pic'/>
+           <a href='../../uploads/group-chat/chat-files/".$row3["PicSrc"]."' download>Download File</a>
+           <div class='content'>
+               ".$row3["Message"]."
+           </div>
+           <div class='time'>
+               ".$row3["Timestamp"]."
+           </div>
+       </div>
+   </div>";
+       } else {
+           echo "<div class='received-message-line'>
+       <div class='received-message'>
+           <div class='sender-name'>
+               ".$row4["FirstName"]."
+           </div>
+           <img src='../../uploads/group-chat/chat-files/".$row3["PicSrc"]."' width='99%' class='chat-pic' alt='chat-pic'/>
+           <a href='../../uploads/group-chat/chat-files/".$row3["PicSrc"]."' download>Download File</a>
+           <div class='content'>
+               ".$row3["Message"]."
+           </div>
+           <div class='time'>
+               ".$row3["Timestamp"]."
+           </div>
+       </div>
+   </div>
+ ";
+       }
+ }else{
+       if ($row3["SenderEmail"] == $email) {
+           echo "<div class='sent-message-line' id='sent-message-line'>
+       <div class='sent-message' id='sent-message'>
+           <div class='delete-msg-container'>
+               <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
+           </div>
+           <a href='../../uploads/private-chat-files/".$row3["PicSrc"]."' download>Download File</a>
+           <div class='content'>
+               ".$row3["Message"]."
+           </div>
+           <div class='time'>
+               ".$row3["Timestamp"]."
+           </div>
+       </div>
+   </div>";
+       } else {
+           echo "<div class='received-message-line'>
+                       <div class='received-message'>
+                           <div class='sender-name'>
+                               ".$row4["FirstName"]."
+                           </div>
+                           <a href='../../uploads/private-chat-files/".$row3["PicSrc"]."' download>Download File</a>
+                           <div class='content'>
+                               ".$row3["Message"]."
+                           </div>
+                           <div class='time'>
+                               ".$row3["Timestamp"]."
+                           </div>
+                       </div>
+                   </div>
+
+ ";
+       }
+   }
+}
+}
+}
+
+ //end of render message
+ 
+         echo"  </div>
+        </div>
+       <form class='create-message-div' id='chat-window-01' method='post' enctype='multipart/form-data' action='../../server/group-chat/sent-message.php'>
+            <textarea class='chat-message' id='message' name='message'></textarea>
+            <input type='text' id='msgId' name='msgId' value='{$row['Id']}' style='display:none'>
             <div class='button-set'>
-                <i class='fas fa-paper-plane chat-icon send-icon'></i>
-                <i class='fas fa-paperclip chat-icon attach-icon'></i>
-                <i class='fas fa-times-circle chat-icon clear-icon'></i>
+                <label class='messge-sent'>
+                  <input type='submit' name='submit-btn' id='submit-btn' class='messge-upload-btn btn' style='display:none' onclick=chat('{$row["Id"]}')>
+                  <i class='fas fa-paper-plane chat-icon send-icon'></i>
+                </label>
+                <label class='messge-sent'>
+                  <input type='file' name='file-message' id='file-btn' class='messge-upload-btn btn' style='display:none'>
+                  <i class='fas fa-paperclip chat-icon attach-icon'></i>
+                </label>
+                <label class='messge-sent'>
+                  <input type='reset' name='submit-btn' id='cancel-message-btn' class='messge-upload-btn btn' style='display:none'>
+                  <i class='fas fa-times-circle chat-icon clear-icon'></i>
+                </label>
             </div>
-        </div>";
+        </form>";        
 echo"   <div class= 'row-04' id='participants-list'> 
             <div class='title-02'>
                 Participants
-                    </div>
-            <div class='Participants-filter'>
+            </div>
+            <form class='Participants-filter' id='participants-filter'>
                 <div class='p_box-01'>
-                    <input class='participants-field' type='text' placeholder='First Name'/>
-                    <input class='participants-field' type='text' placeholder='Last Name'/>
+                    <input class='participants-field' type='text' placeholder='First Name' id='participants-firstName'/>
+                    <input class='participants-field' type='text' placeholder='Last Name' id='participants-lastName'/>
                 </div>
                     <div class='box-02'>
-                        <button class='filter-btn btn'>Filter</button>
+                      <input type='submit' value='Filter' class='filter-btn btn' onclick=fiterParticipants('{$row["Id"]}')></input>
                     </div>
-                </div>
-                 <div class='available-users-container'>
-                    <div class='available-users-item'>
-                        <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>
-                        <div class='names-btn-container01'>
-                            <div class='names-container02'>
-                                <div class='a-first-name'>First Name</div>
-                                <div class='a-last-name'>Last Name</div>
+            </form>
+            <div class='available-users-container' id='group-participants'>";
+
+$query2="SELECT registeredmembers.FirstName,registeredmembers.LastName,registeredmembers.PicSrc,participantgroups.UserEmail,participantgroups.GroupChatId FROM registeredmembers
+        INNER JOIN participantgroups ON registeredmembers.Email = participantgroups.UserEmail  WHERE GroupChatId='{$Id}'";
+$result2 =mysqli_query($conn, $query2);
+    if(mysqli_num_rows($result2) > 0){    
+         while($row2 = mysqli_fetch_assoc($result2)){
+            if($row2["PicSrc"] === 'user-default.png'){   
+                echo"<div class='available-users-item'>
+                                <img src='../../assets/images/user-default.png' width='10%' class='user-pic' alt='user-pic'>
+                                <div class='names-btn-container01'>
+                                    <div class='names-container02'>
+                                        <div class='a-first-name'>".$row2["FirstName"]." ".$row2["LastName"]."</div>
+                                        <input type='text' id='User-Email' value='{$row2['UserEmail']}' style='display:none'>
+                                        <input type='text' id='GroupId2' value='{$row['Id']}' style='display:none'>
+                                        <button class='remove-btn btn' onClick=OnclickRemove('{$row2["GroupChatId"]}')>Remove</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class='btn-container03'>
-                                <button class='remove-btn btn'>Remove</button>
+                       ";
+                }else{
+                    echo"<div class='available-users-item'>
+                            <img src='../../assets/images/".$row2["PicSrc"]."' width='10%' class='user-pic' alt='user-pic'>
+                            <div class='names-btn-container01'>
+                                <div class='names-container02'>
+                                <div class='a-first-name'>".$row2["FirstName"]." ".$row2["LastName"]."</div>
+                                    <input type='text' id='User-Email' value='{$row2['UserEmail']}' style='display:none'>
+                                    <input type='text' id='GroupId2' value='{$row['Id']}' style='display:none'>
+                                    <button class='remove-btn btn' onClick=OnclickRemove('{$row2["GroupChatId"]}')>Remove</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class='chat-button'>
-                    <button class='chat-btn btn onclick='HideChatWindow()'>View Chat</button>
+                   ";
+                }
+        }
+    }               
+          echo"  
+          </div>   
+           <div class='chat-button'>
+                    <button class='chat-btn btn' onclick='DisplayChatWindow()'>View Chat</button>
                 </div>   
             </div>";
 echo"       <div class='available-users' id='available-users'>
@@ -215,7 +259,7 @@ echo"       <div class='available-users' id='available-users'>
                         <input class='input-field' type='text' placeholder='First Name' id='first-name'/>
                         <input class='input-field' type='text' placeholder='Last Name' id='last-name'/>
                          <select class='input-field' id='select-batch'>
-                            <option value='All'>All</option>
+                            <option value='' disabled selected hidden>All</option>
                             <option value='2004/2005'>2004/2005</option>
                             <option value='2011/2012'>2011/2012</option>
                             <option value='2012/2013'>2012/2013</option>
@@ -232,30 +276,28 @@ echo"       <div class='available-users' id='available-users'>
                         </select>
                     </div>
                     <div class='box-02'>
-                        <input type='submit' value='Filter' class='filter-btn btn' onclick='fiterAvailableUsers()'></input>
+                        <input type='submit' value='Filter' class='filter-btn btn' onclick=fiterAvailableUsers('{$row["Id"]}')></input>
                     </div>
                 </form>                        
                 <div class='available-users-container' id='availableusers'>";
 
-$query1="SELECT Email,FirstName, LastName, PicSrc FROM registeredmembers WHERE Email != '{$email}'
-         AND Email NOT IN (SELECT UserEmail From participantgroups)";
-$result1 =mysqli_query($conn, $query1);
-    while($row1 = mysqli_fetch_assoc($result1)){
-        if(mysqli_num_rows($result1) > 0){
 
+$query1="SELECT Email,FirstName, LastName, PicSrc, Batch FROM registeredmembers WHERE Email != '{$email}' 
+         AND Email NOT IN(SELECT UserEmail FROM participantgroups WHERE GroupChatId ='{$Id}')";
+$result1 =mysqli_query($conn, $query1);
+if(mysqli_num_rows($result1) > 0){
+    while($row1 = mysqli_fetch_assoc($result1)){
          echo"<div class='available-users-item'>";
                 if($row1["PicSrc"] === 'user-default.png'){
-                    echo"   <img src='../../assets/images/user-default.png' width='12%' class='user-pic' alt='user-pic'>";
+                    echo"   <img src='../../assets/images/user-default.png' width='10%' class='user-pic' alt='user-pic'>";
                 }else{
                     echo"   <img src='../../uploads/profile-pics/".$row1["PicSrc"]."' width='14%' height='90%' class='user-pic' alt='user-pic'>";
                 }
             echo" <div class='names-btn-container01'>
                         <div class='names-container02'>
-                            <div class='a-first-name'>{$row1['FirstName']}</div>
-                            <div class='a-last-name'>{$row1['LastName']}</div>
-                        </div>
-                        <div class='btn-container03'>
-                           <button class='add-btn btn' onclick=onClickAddBtn('{$row1["Email"]}')>Add</button>
+                        <div class='a-first-name'>".$row1["FirstName"]." ".$row1["LastName"]."</div>
+                            <input type='text' id='GroupId' value='{$row['Id']}' style='display:none'>
+                            <button class='add-btn btn' onclick=onClickAddBtn('{$row1["Email"]}')>Add</button>
                         </div>
                     </div>
                 </div>";     
@@ -263,8 +305,12 @@ $result1 =mysqli_query($conn, $query1);
     }
         echo"</div>
                     <div class='chat-button'>
-                        <button class='chat-btn btn' onclick='HideChat()'>View Chat</button>
+                        <button class='chat-btn btn' onclick='DisplayChat()'>View Chat</button>
                     </div>                
                 </div>  
                     
          </div>";
+        }
+    
+    }
+

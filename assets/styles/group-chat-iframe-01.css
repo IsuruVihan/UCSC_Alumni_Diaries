@@ -206,6 +206,9 @@ body {
   width: 31%;
 
 }
+.add-btn{
+  width: 15%;
+}
 
 .label{
   cursor: pointer;
@@ -328,7 +331,7 @@ body {
   height: 70%;
   margin-top: 2px;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .result3 {
@@ -445,7 +448,7 @@ body {
   justify-content: space-between;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  height: 15%;
+  height: 13%;
   transition: all ease-in-out 0.5s;
   padding: 5px;
   margin-top: 20px;
@@ -576,6 +579,7 @@ body {
 .available-users-container {
   border-radius: 5px;
   justify-content: space-around;
+  border: 1px solid lightgray;
   align-content: center;
   overflow: hidden;
   overflow-y: scroll;
