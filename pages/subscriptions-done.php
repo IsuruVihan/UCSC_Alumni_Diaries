@@ -135,10 +135,10 @@
                         </div> 
                     </div>  -->
                 </div> <!-- flexbox-container2 -->
-                <div class='gen-rep-btn'>
+                <!-- <div class='gen-rep-btn'>
                     <button class='reportgeneratebutton'> Generate Reports
                     </button>
-                </div> <!-- gen rep btn-->
+                </div> gen rep btn -->
             </div> <!-- alldetails2 -->
         </div> <!-- card subs -->
     </div> <!-- left-col -->
