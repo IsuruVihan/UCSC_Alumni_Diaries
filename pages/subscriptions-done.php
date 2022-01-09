@@ -17,6 +17,27 @@
       
 </script>
 
+<script>
+      const Filterbutton = () => {
+            const firstName = $('#accepted-fname').val();
+            const lastName = $('#accepted-lname').val();
+            const batch = $('#accepted-batch').val();
+            const subtype = $('#accepted-subtype').val();
+            const email = $('#accepted-email').val();
+            const start_date = $('#start_date').val();
+            const end_date =$('#end_date').val();
+            $('#acceptedsubs').load("../server/subscriptions/accepted-subscriptions-filter.php", {
+                FirstName: firstName,
+                LastName: lastName,
+                Batch: batch,
+                SubType: subtype,
+                Email: email,
+                Start_Date: start_date,
+                End_Date: end_date
+            });     
+    }
+</script>
+
 <div class='main-box'>
     <div class='left-col'>
         <div class='card subs'>
@@ -27,14 +48,14 @@
                 <div class='filtermain2'>
                     <div class='filtermain2-row1'>
                         <div class='name1'>
-                            <input type='text' class='fname details-feild' placeholder='First name'>
+                            <input type='text' class='fname details-feild' placeholder='First name' id='accepted-fname'>
                         </div>
                         <div class='name2'>
-                            <input type='text' class='lname details-feild' placeholder='Last name'>
+                            <input type='text' class='lname details-feild' placeholder='Last name' id='accepted-lname'>
                         </div>
                         <div class='thebatch'>
-                            <select class='batch'>
-                                <option value='All'>Batch</option>
+                            <select class='batch' id='accepted-batch'>
+                                <option value=''>Batch</option>
                                 <option value='2012/2013'>2012/2013</option>
                                 <option value='2013/2014'>2013/2014</option>
                                 <option value='2014/2015'>2014/2015</option>
@@ -47,8 +68,8 @@
                             </select>
                         </div>
                         <div class='thesubtype'>
-                            <select class='stype'>
-                                <option value='Subscription Type'>Subscription</option>
+                            <select class='stype' id='accepted-subtype'>
+                                <option value=''>Subscription</option>
                                 <option value='Monthly'>Monthly</option>
                                 <option value='Annually'>Annually</option>
                             </select>
@@ -56,18 +77,18 @@
                     </div> <!-- filtermain2-row1-->
                     <div class='filtermain2-row2'>
                         <div class='theemail'>
-                            <input type='text' class='email details-field' placeholder='Email'>
+                            <input type='text' class='email details-field' placeholder='Email' id='accepted-email'>
                         </div>
                         <div class='fro'>
-                            <input class='from' type='text' placeholder='From' onmouseup="(this.type='date')">
+                            <input class='from' type='text' placeholder='From' onmouseup="(this.type='date')" id='start_date'>
                         </div>
                         <div class='t'>
-                            <input class='to' type='text' placeholder='To' onmouseup="(this.type='date')">
+                            <input class='to' type='text' placeholder='To' onmouseup="(this.type='date')" id='end_date'>
                         </div>
                     </div> <!-- filtermain2-row2-->
                     <div class='filtermain2-row3'>
                         <div class='fil'>
-                            <button class="filter-btn btn">Filter</button>
+                            <button class="filter-btn btn" onclick=Filterbutton()> Filter </button>
                         </div>
                     </div> 
                 </div> <!-- filtermain2 -->
