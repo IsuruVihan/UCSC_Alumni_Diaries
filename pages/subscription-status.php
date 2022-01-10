@@ -18,6 +18,25 @@
 </script>
 
 <script>
+      const Filterbutton = () => {
+            const firstName = $('#status-fname').val();
+            const lastName = $('#status-lname').val();
+            const batch = $('#status-batch').val();
+            const subscriptiontype = $('#status-subscriptiontype').val();
+            const email = $('#status-email').val();
+            const paymentstatus = $('#status-paymentstatus').val();
+            $('#statussubs').load("../server/subscriptions/subscription-status-filter.php", {
+                FirstName: firstName,
+                LastName: lastName,
+                Batch: batch,
+                SubscriptionType: subscriptiontype,
+                Email: email,
+                PaymentStatus: paymentstatus
+            });     
+    }
+</script>
+
+<script>
       const Banbtn = (email) => {
         $('#flash-message').load("../server/subscriptions/ban-status.php", {
             email: email
@@ -46,13 +65,13 @@
                 <div class='filtermain3'>
                     <div class='filterrow1'>
                     <div class='firstname-col2'>
-                            <input type='text' class='fname details-feild' placeholder='First Name'>
+                            <input type='text' class='fname details-feild' placeholder='First Name' id='status-fname'>
                         </div>
                         <div class='lastname-col2'>
-                            <input type='text' class='lname details-feild' placeholder='Last Name'>
+                            <input type='text' class='lname details-feild' placeholder='Last Name' id='status-lname'>
                         </div>
                         <div class='bat-col2'>
-                            <select class='batch'>
+                            <select class='batch' id='status-batch'>
                                 <option value='All'>Batch</option>
                                 <option value='2012/2013'>2012/2013</option>
                                 <option value='2013/2014'>2013/2014</option>
@@ -66,26 +85,26 @@
                             </select>
                         </div>
                         <div class='subscriptiontype-col2'>
-                            <select class='stype'>
-                                <option value='Subscription Type'>Subscription Type</option>
+                            <select class='stype' id='status-subscriptiontype'>
+                                <option value='All'>Subscription Type</option>
                                 <option value='Monthly'>Monthly</option>
-                                <option value='Annually'>Annually</option>
+                                <option value='Anually'>Annually</option>
                             </select>
                         </div>
                         <div class='emailaddress-col2'>
-                            <input type='text' class='emailsss details-field' placeholder='Email'>
+                            <input type='text' class='emailsss details-field' placeholder='Email' id='status-email'>
                         </div>
                         <div class='payments'>
-                            <select class='stype'>
-                                <option value='Payment Status'>Payment Status</option>
+                            <select class='stype' id='status-paymentstatus'>
+                                <option value='All'>Payment Status</option>
                                 <option value='Paid'>Paid</option>
-                                <option value='Not Paid'>Not Paid</option>
+                                <option value='NotPaid'>Not Paid</option>
                             </select>
                         </div>
                     </div> <!-- filterrow1 -->
                     <div class='filterrow2'>
                         <div class='filterbutton-col2'>
-                            <button class="filter-btn btn">Filter</button>
+                            <button class="filter-btn btn" onclick=Filterbutton()> Filter </button>
                         </div>
                     </div> <!-- filterrow2 -->
                 </div> <!-- filtermain3 -->
