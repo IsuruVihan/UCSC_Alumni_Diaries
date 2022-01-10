@@ -27,27 +27,48 @@ td {
     font-size: 0.8em;
 }
 
+.accept-btn, .remove-btn {
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+.accept-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.remove-btn:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+}
+
 .spend-approvals-h-1 {
-    width: 17%;
+    width: 15%;
     text-align: justify;
 }
 
 .spend-approvals-h-2 {
-    width: 32%;
+    width: 30%;
     text-align: justify;
 }
 
 .spend-approvals-h-3 {
-    width: 17%;
+    width: 10%;
     text-align: justify;
 }
 
 .spend-approvals-h-4 {
-    width: 17%;
+    width: 15%;
     text-align: justify;
 }
 
 .spend-approvals-h-5 {
-    width: 17%;
+    width: 15%;
+    text-align: justify;
+}
+
+.spend-approvals-h-6 {
+    width: 15%;
     text-align: justify;
 }

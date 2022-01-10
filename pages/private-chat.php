@@ -33,6 +33,20 @@
     ></iframe>
 </div>
 
-<script src='../js/private-chat.js'></script>
+<!--<script src='../js/private-chat.js'></script>-->
+
+<script>
+    const chat_list = document.getElementById('link-1');
+    const avail_user_list = document.getElementById('link-2');
+
+    const onClickChatList= () => {
+        chat_list.classList.add('clicked-link');
+        avail_user_list.classList.remove('clicked-link');
+    }
+    const onClickAvailUsers= () => {
+        chat_list.classList.remove('clicked-link');
+        avail_user_list.classList.add('clicked-link');
+    }
+</script>
 
 <?php include('../components/footer.php'); ?>

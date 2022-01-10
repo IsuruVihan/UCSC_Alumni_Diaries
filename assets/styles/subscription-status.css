@@ -252,6 +252,7 @@
     grid-row-start: rows2;
     grid-row-end: rows3;
     border: 1px solid lightgray;
+    /* border: 1px solid rgb(124, 8, 8); */
     border-radius: 5px;
     justify-content: flex-start;
     overflow: hidden;
@@ -260,7 +261,7 @@
     padding-right: 10px;
     padding-top: 10px;
     margin-top: 20px;
-    height: 665px;
+    height: 720px;
 }
 
 .flexbox-item3 {

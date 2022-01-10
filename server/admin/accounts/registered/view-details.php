@@ -61,6 +61,7 @@ while ($row = mysqli_fetch_assoc($results)) {
                     <div class='address details-field'>{$row['Address']}</div>
                 </div>
             </div>
+            
             <div class='iframe-nav-projectContribution'>
                 <div
                     class='contribution-iframe-link fontColorChange'

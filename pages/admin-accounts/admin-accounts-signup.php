@@ -1,12 +1,7 @@
 <link rel='stylesheet' href='../../assets/styles/signup-iframe.css'>
 
-<<<<<<< HEAD
-<div class='conatiner01' >  
-    <div class='container' >
-=======
 <div class='conatiner01'>
     <div class='container'>
->>>>>>> 1b8e9d8b3bcd5c15158e0d036c685c8ea01f73a0
         <div class='title'>Register Members</div>
         <form>
             <div class='input_box'>

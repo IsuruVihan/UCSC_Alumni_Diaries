@@ -11,6 +11,7 @@
                 + '#signup-gender, #signup-batch, #signup-address').removeClass('input-error, input-ok');
             $('#signup-init, #signup-fname, #signup-lname, #signup-nic, #signup-email, #signup-index, #signup-contact,'
                 + '#signup-address').val('');
+         
         });
         
         $('#signup-form').submit((event) => {

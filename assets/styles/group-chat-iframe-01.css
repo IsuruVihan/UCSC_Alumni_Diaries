@@ -43,6 +43,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   transition: all ease-in-out 0.5s;
+
 }
 
 .title {
@@ -63,7 +64,7 @@ body {
 
 .box-01 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .box-02 {
@@ -94,7 +95,7 @@ body {
 }
 
 .input-field-01 {
-  width: 45%;
+  width: 70%;
   height: 25px;
   background: white;
   border: 1px solid lightgray;
@@ -112,7 +113,6 @@ body {
   color: gray;
   font-family: "Nunito", serif;
 }
-
 .input-field:hover,
 .group-name:hover {
   border-color: #ffccc7;
@@ -134,7 +134,8 @@ body {
 }
 
 .list-items {
-  height: 20%;
+  height: 17%;
+  width:90%;
   border: 1px solid lightgray;
   border-radius: 5px;
   display: flex;
@@ -147,8 +148,9 @@ body {
 .name-buttons {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 100%;
+  margin-left: 5px;
   align-items: center;
 }
 
@@ -156,10 +158,10 @@ body {
   width: 100%;
   height: 60%;
   background: white;
-  border: 1px solid lightgray;
   border-radius: 5px;
   color: gray;
-  text-align: center;
+  text-align: left;
+  margin-left: 5px;
   font-family: "Nunito", serif;
 }
 
@@ -173,8 +175,15 @@ body {
 
 .user-pic {
   border: 1px solid lightgray;
-  border-radius: 5px;
+  border-radius: 100%;
   text-align: center;
+ 
+}
+.user-pic-02 {
+
+  border: 1px solid lightgray;
+  border-radius: 100%;
+ 
 }
 .create-btn {
   width: 30%;
@@ -189,13 +198,49 @@ body {
 .cancel-btn,
 .available-btn,
 .participants-btn,
-.chat-btn {
+.chat-btn{
   background: #595959;
   border: 1px solid #595959;
 }
 .chat-btn {
   width: 31%;
 
+}
+.add-btn{
+  width: 15%;
+}
+
+.label{
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: all ease-in-out 0.1s;
+  height:24px;
+  text-align: center;
+  font-family: "Nunito", serif;
+  font-size: 13px;
+  background: #595959;
+  border: 1px solid #595959;
+  width:50%;
+
+}
+.label-01{
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: all ease-in-out 0.1s;
+  height:20px;
+  text-align: center;
+  font-family: "Nunito", serif;
+  font-size: 13px;
+  background: #595959;
+  border: 1px solid #595959;
+  width:10%;
+  
+}
+.file-chosen{
+  margin-left: 0.3rem;
+  font-family: "Nunito", serif;
 }
 .view-btn:hover,
 .chat-btn:hover,
@@ -227,7 +272,8 @@ body {
   border: 1px solid  #237804;
 }
 
-.edit-btn:hover {
+.edit-btn:hover,
+.label:hover{
   background: #fa8c16;
   border-color: #fa8c16;
   color: white;
@@ -245,7 +291,7 @@ body {
 
 .edit-btn,
 .cancel-btn {
-  width: 15%;
+  width: 20%;
 }
 
 .chat-list {
@@ -265,7 +311,7 @@ body {
   grid-row-end: row3;
   margin-right: 5px;
   margin-left: 5px;
-  display: flex;
+  display:flex;
   flex-direction: column;
 }
 
@@ -285,10 +331,10 @@ body {
   height: 70%;
   margin-top: 2px;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
-.result3 {
+/* .result3 {
   width: 100%;
   border: 1px solid gray;
   border-radius: 5px;
@@ -298,7 +344,7 @@ body {
   gap: 10px;
   transition: all ease-in-out 0.5s;
   margin-bottom: 5px;
-}
+} */
 
 .results3 {
   border: 1px solid lightgray;
@@ -402,7 +448,7 @@ body {
   justify-content: space-between;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  height: 15%;
+  height: 13%;
   transition: all ease-in-out 0.5s;
   padding: 5px;
   margin-top: 20px;
@@ -490,7 +536,7 @@ body {
 
 .p_box-01 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .participants-list {
@@ -533,6 +579,7 @@ body {
 .available-users-container {
   border-radius: 5px;
   justify-content: space-around;
+  border: 1px solid lightgray;
   align-content: center;
   overflow: hidden;
   overflow-y: scroll;
@@ -581,7 +628,7 @@ body {
   width: 48%;
   height: 60%;
   background: white;
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
   border-radius: 5px;
   color: gray;
   font-family: "Nunito", serif;
@@ -608,11 +655,15 @@ body {
 
 .edit-project-name-div {
   display: none;
-  justify-content: space-evenly;
+}
+.new-button{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
 }
 .button-class {
   justify-items: center;
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -650,4 +701,9 @@ body {
   margin: auto;
   width: 57%;
   padding: 10px;
+}
+.pic{
+  display: flex;
+  flex-wrap: wrap;
+  display: row;
 }
