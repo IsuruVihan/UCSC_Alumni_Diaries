@@ -37,7 +37,7 @@
             id='sub-rej'
             class='section-link' 
             target='iframe'
-            onclick=onClickDone()
+            onclick=onClickRej()
         >Rejected</a>
         <a
             href='subscription-status.php' 
