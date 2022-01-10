@@ -1,3 +1,42 @@
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}
+
+.fa-fire{
+    background: gray;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-frown{
+    background:gray;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fire{
+    background: -webkit-linear-gradient(#DA1F05, #FFC11F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.frown{
+    /*background: -webkit-linear-gradient(#DA1F05,#BE7505);*/
+    background: #D49504;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -63,6 +102,20 @@
     background: white;
 }
 
+.filter-box-member-session {
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid lightgray;
+    padding: 3px 3px;
+    margin: 0.8em 3px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    justify-content:flex-end;
+    background: white;
+
+}
+
+
 .btn {
     cursor: pointer;
     border-radius: 5px;
@@ -91,6 +144,11 @@
     padding: 0 3px;
 }
 
+.filter-member-session{
+    margin-right: 5px;
+    width: 20%;
+}
+
 .create-notice-box {
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px lightgray;
@@ -107,7 +165,7 @@
     box-shadow: 1px 2px 4px lightgray;
     border-radius: 10px;
     transition: all ease-in-out 0.5s;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 3px;
     margin: 0.8em 0;
@@ -168,18 +226,36 @@
     padding: 5px 0;
 }
 
+.row-5 {
+    justify-content: flex-start;
+    display: flex;
+    padding: 5px 0;
+    margin-top: 0.2em;
+}
+
 .row-4 > button {
     flex-direction: row;
     width: 30%;
     margin: 0 0.4em;
 }
 
+
 .field-header {
-    border: 1px solid lightgray;
-    color: gray;
+    /*border: 1px solid lightgray;*/
+    /*color: gray;*/
     margin: 0 0.8em;
     border-radius: 5px;
     width: 50%;
+
+}
+
+.notice-timestamp {
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0.8em;
+    border-radius: 5px;
+
 }
 
 .input-field-title {
@@ -188,9 +264,18 @@
     background: white;
     border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray;
+
     font-family: "Nunito", serif;
     margin: 0 0.8em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.notice-title {
+    border: none;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
 }
 
 .input-field-title:hover, .field-header:hover, .create-notice-text:hover, .create-post-title:hover,
@@ -222,10 +307,14 @@
 }
 
 .notice-content {
-    border: 1px solid lightgray;
-    height: 10em;
+    min-height: 100%;
     margin: 0 0.8em;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    text-align: justify;
+    word-wrap: break-word;
 }
 
 .star-div-off {
@@ -236,7 +325,6 @@
 }
 
 .star-div-on {
-    display: none;
     color: rgb(255, 115, 0);
     margin: 0 0.8em;
 }
@@ -267,13 +355,29 @@
 
 .image-box-notice {
     background: white;
-    border: 1px solid lightgray;
+    /*border: 1px solid lightgray;*/
     border-radius: 5px;
     color: gray;
-    height: 100px;
-    width: 100px;
-    align-items: center;
-    margin: 0.8em 120px;
+    height: auto;
+    min-width: 100%;
+}
+
+.image-box-notice:hover {
+    cursor: pointer;
+}
+
+.image-box-notice-2 {
+    background: white;
+    /*border: 1px solid lightgray;*/
+    border-radius: 5px;
+    color: gray;
+    height: auto;
+    max-width: 100%;
+}
+
+.img-wrapBox {
+    display: flex;
+    padding: 0.8em;
 }
 
 .box-row {
@@ -328,6 +432,7 @@
     border-radius: 5px;
     color: gray;
     font-family: "Nunito", serif;
+    height: 30px;
 }
 
 .create-post-text {
@@ -353,21 +458,18 @@
 }
 
 .post-report {
-    box-shadow: 1px 2px 4px lightgray;
+    background: #fff1f0;
     border: 1px solid lightgray;
     display: none;
     flex-direction: column;
-    margin: 0.8em auto;
-    width: 60%;
-    height: 20%;
     border-radius: 5px;
     padding: 3px;
+    margin: 0.8em;
 }
 
 .report-txt {
     resize: none;
-    width: 96%;
-    height: 10em;
+    height: 20em;
     margin: 0 0.8em;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -387,8 +489,9 @@
 }
 
 .comment-report {
+    background: #fff1f0;
     box-shadow: 1px 2px 4px lightgray;
-    border: 1px solid lightgray;
+    border: 1px solid #f5222d;
     margin: 0.8em auto;
     display: none;
     flex-direction: column;
@@ -418,6 +521,11 @@
     flex-direction: row;
     width: 40%;
 }
+.filter-right-member-session {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
 
 .filter-right > button {
     margin: 0 3px;
@@ -430,81 +538,162 @@
     flex-direction: column;
     border-radius: 10px;
     margin-bottom: 0.8em;
+    padding: 5px;
+    background: #fafafa;
 }
 
 .post-content {
     border: 1px solid lightgray;
     border-radius: 10px;
     display: grid;
-    margin: 0.8em;
     padding: 0.8em;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "  dp  fname fname lname lname time time  . dlt "
-    "  dp  title title title title title title title . "
-    " pic pic pic txt txt txt txt txt txt "
-    " pic pic pic txt txt txt txt txt txt "
-    " pic pic pic txt txt txt txt txt txt "
-    " pic pic pic txt txt txt txt txt txt"
-    " report show-cmnt show-cmnt comment . like-dislike-cell like-dislike-cell like-dislike-cell like-dislike-cell";
-    place-self: center;
-    gap: 5px 5px;
+    grid-template-columns:[col1]100%[col2];
+    grid-template-rows: [line1]5%[line2] 5%[line3]35%[line4]50%/[line5]5%[line6];
+    column-gap:  5px;
+    margin: 2em;
+    background: white;
 }
 
+.post-content-row1{
+    grid-row: 1 / 2 ;
+    grid-column:1 / 2 ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.post-content-row1-1{
+    grid-row: 1 / 2 ;
+    grid-column:1 / 2 ;
+    display: flex;
+    flex-direction: row;
+}
+.post-edit-btn-box{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+
+.post-content-row1-edit{
+    display: none;
+    flex-direction: column; 
+    border-radius: 5px;
+    margin: 0;
+    height: 20em;
+}
+
+.post-title1{
+    grid-row:2 / 3 ;
+    grid-column:1 / 2 ;
+    align-self: center;
+}
+.post-button-set{
+    grid-row:5 / 6 ;
+    display: flex;
+    flex-direction: row;
+    grid-column:1 / 2 ;
+    justify-content: space-between;
+}
+.btn-set{
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    width:100%;
+    grid-row:3 / 4 ;
+    grid-column:1 / 2 ;
+}.content-edit{
+    width:100%;
+    height: 100%;
+}
+.pic-content-container{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height:500px;
+    grid-row:4 / 5 ;
+    grid-column:1 / 2 ;
+}
+.pic-hide{
+    height: 0;
+}
+.width-zero{
+    width: 0;
+}
+
+.pic-content-container > img{
+    height:100%;
+    max-width: 100%;
+}
 .post-field {
-    border: 1px solid lightgray;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
 }
 
 .dp-box {
-    border: 1px solid lightgray;
     grid-area: dp;
-    border-radius: 40%;
+    border-radius: 100%;
+    width:70px;
+    height: 70px;
 }
-
 .pic-box {
-    border: 1px solid lightgray;
-    grid-area: pic;
     border-radius: 10px;
 }
 
 .f-name {
-    grid-area: fname;
     height: 40px;
     background: white;
-    border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray;
     font-family: "Nunito", serif;
+    width: 50%;
+    font-weight: 600;
+
+}
+.name-time-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
 }
-
-.l-name {
-    grid-area: lname;
+.f-name-1 {
     height: 40px;
     background: white;
-    border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray;
     font-family: "Nunito", serif;
-}
+    width: 50%;
+    font-weight: 600;
+    padding-left: 30px;
 
+}
 .post-time {
     grid-area: time;
     height: 40px;
     background: white;
-    border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray;
     font-family: "Nunito", serif;
+    justify-self: flex-end;
+    font-size: 12px;
+}
+
+.post-time-1 {
+    grid-area: time;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    justify-self: flex-end;
+    font-size: 12px;
+
 }
 
 .post-delete {
-    width: 100%;
+    width: 100px;
     grid-area: dlt;
+    display: flex;
+    justify-content: center;
+    justify-self: flex-end;
 }
 
 .post-delete:hover {
@@ -514,30 +703,42 @@
 }
 
 .post-title {
-    width: 100%;
     grid-area: title;
-    height: 40px;
     background: white;
-    border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray;
     font-family: "Nunito", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
 }
 
 .post-text {
-    grid-area: txt;
-    height: 100%;
+    min-height: auto;
     background: white;
-    border: 1px solid lightgray;
     border-radius: 5px;
-    color: gray;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    padding: 5px;
 }
 
-.report-btn {
+.post-text-edit {
+    height: 90%;
     width: 100%;
-    grid-area: report;
-    justify-self: end;
+    background: white;
+    border-radius: 5px;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    padding: 5px;
+}
+.report-btn {
+    width:100px;
+    /*grid-area: report;*/
+    /*justify-self: end;*/
     margin-top: 0.8em;
+    margin-right: 1em;
 }
 
 .report-btn:hover {
@@ -546,12 +747,19 @@
     border-color: #f5222d;
     color: white;
 }
-
+.report-submit-button{
+    margin-right: 2px;
+}
+.save-changes-btn{
+    margin-right: 2px;
+    width:150px;
+}
 .comment-btn {
-    width: 100%;
-    grid-area: comment;
-    justify-self: end;
+    width: 100px;
+    /*grid-area: comment;*/
+    /*justify-self: end;*/
     margin-top: 0.8em;
+    margin-right: 1em;
 }
 
 .comment-btn:hover {
@@ -562,10 +770,9 @@
 }
 
 .show-comment-btn {
-    width: 100%;
-    grid-area: show-cmnt;
-    justify-self: end;
+    width: 150px;
     margin-top: 0.8em;
+    margin-right: 1em;
 }
 
 .show-comment-btn:hover {
@@ -578,13 +785,12 @@
 .like-dislike-cell {
     display: flex;
     flex-direction: row;
-    grid-area: like-dislike-cell;
-    justify-content: right;
     padding: 3px 5px;
 }
 
 .thumb-icon {
-    color: #096dd9;
+    /* color: #faad14; */
+    color: linear-gradient(rgb(143, 25, 44), rgb(78, 147, 170));  
     border: none;
     background-color: white;
     border-radius: 10px;
@@ -593,33 +799,44 @@
 
 .thumb-icon:hover {
     cursor: pointer;
-    box-shadow: 0 0 5px #096dd9;
+    
 }
 
 .post-like-count {
-    grid-area: like-count;
     width: fit-content;
     height: 23px;
-    border: 1px solid lightgray;
     margin-top: 0.8em;
     margin-left: 0.2em;
+    font-size:14px;
 }
 
 .post-dislike-count {
-    border: 1px solid lightgray;
-    grid-area: dislike-count;
     width: fit-content;
     height: 23px;
     margin-top: 0.8em;
     margin-left: 0.2em;
+    font-size:14px;
 }
-
+.comment-show-outer-box{
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin-bottom:5px ;
+    border-radius: 10px;
+}
+.comment-content-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.comment-form{
+    display: flex;
+    flex-direction: column;
+}
 .comment-box {
+    background: #f6ffed;
     border: 1px solid lightgray;
     border-radius: 10px;
-    height: 40%;
     margin: 0.8em;
-    display: none;
+    display:none;
     flex-direction: column;
 }
 
@@ -631,6 +848,7 @@
 }
 
 .add-comment {
+    background: #f0f5ff;
     display: none;
     flex-direction: column;
     border: 1px solid lightgray;
@@ -639,25 +857,70 @@
 }
 
 .comment-content {
+    background: white;
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 0.8em;
-    display: grid;
+    /*display: grid;*/
     margin: 0.8em;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 0.2fr;
-    grid-template-areas: 
-    "  .  c-fname c-lname c-lname c-time  c-button c-button"
-    "  c-dp c-txt c-txt c-txt c-txt c-likes c-likes "
-    "  c-dp c-txt c-txt c-txt c-txt  c-likes c-likes"
-    "  . c-txt c-txt c-txt c-txt  . . ";
-    gap: 5px 5px;
+    /*grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 0.2fr;*/
+    /*grid-template-areas:*/
+    /*"  c-dp  c-fname c-lname c-lname c-time  c-button c-button"*/
+    /*"  c-dp c-txt c-txt c-txt c-txt c-likes c-likes "*/
+    /*"  . c-txt c-txt c-txt c-txt  c-likes c-likes"*/
+    /*"  . c-txt c-txt c-txt c-txt  . . ";*/
+    /*gap: 5px 5px;*/
+    display: flex;
+    flex-direction: column;
+
+
+}
+.comment-content-show {
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 0.8em;
+    margin: 0.8em;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.comment-edit-box{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.comment-edit-btn-box{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    justify-content: flex-end;
+}
+.comment-box-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.user-info{
+    display: flex;
+    flex-direction: row;
+}
+.user-info-edit{
+    display: flex;
+    flex-direction: row;
 }
 
 .like-box {
     grid-area: c-likes;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+.like-box-show {
+    display: flex;
+    flex-direction: row;
 }
 
 .r-1 {
@@ -674,28 +937,47 @@
     padding: 0 40px;
 }
 
+.comment-author-info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px
+
+}
 .comment-dp {
     grid-area: c-dp;
     background: white;
     border: 1px solid lightgray;
-    border-radius: 10px;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+.text-fname-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    gap: 10px;
 }
 
 .c-fname {
-    grid-area: c-fname;
-    height: 40px;
+    height: fit-content;
     background: white;
-    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    width: fit-content;
+}
+.c-fname-show {
+    height: fit-content;
+    background: white;
     border-radius: 5px;
     color: gray;
-    width: 100%;
+
 }
 
 .c-lname {
     grid-area: c-lname;
     height: 40px;
     background: white;
-    border: 1px solid lightgray;
     border-radius: 5px;
     color: gray;
     width: 100%;
@@ -711,25 +993,55 @@
     width: 100%;
 }
 
+.c-time-show {
+
+    height: fit-content;
+    background: white;
+    border-radius: 5px;
+    color: black;
+    font-size: 12px;
+
+}
+
 .comment-buttons {
     display: flex;
     flex-direction: row;
-    grid-area: c-button;
     text-align: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+    margin-top: 0.8em;
+
+}
+.comment-buttons-show {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
 }
 
 .c-edit {
     margin: 0 0.2em;
     height: 23px;
     font-size: 14px;
+    width: fit-content;
+}
+.c-edit-show{
+    margin-right: 0.2em;
+    height: 23px;
+    font-size: 14px;
+    width: 80px;
 }
 
 .c-edit:hover {
-    background: #fa8c16;
-    border: 1px solid #fa8c16;
+    background: white;
+    border: 1px solid black;
     color: white;
+}
+
+.c-edit-show:hover {
+    background: white;
+    border: 1px solid black;
+    color: black;
 }
 
 .c-dlt {
@@ -737,9 +1049,18 @@
     height: 23px;
     font-size: 14px;
     text-align: center;
+    width: 80px;
 }
 
-.c-dlt:hover {
+.c-dlt-show {
+    margin-right: 0.2em;
+    height: 23px;
+    font-size: 14px;
+    text-align: center;
+    width: 80px;
+}
+
+.c-dlt:hover .c-dlt-show:hover {
     background: #237804;
     border: 1px solid #237804;
     color: white;
@@ -749,9 +1070,17 @@
     margin: 0 0.2em;
     height: 23px;
     font-size: 14px;
+    width: 80px;
 }
 
-.c-report:hover {
+.c-report-show {
+    /*margin: 0 0.2em;*/
+    height: 23px;
+    font-size: 14px;
+    width: 80px;
+}
+
+.c-report:hover .c-report-show:hover{
     background: #f5222d;
     border: 1px solid #f5222d;
     color: white;
@@ -759,7 +1088,6 @@
 
 .c-txt {
     grid-area: c-txt;
-    height: 100%;
     background: white;
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -767,6 +1095,19 @@
     font-family: "Nunito", serif;
     text-align: center;
     margin: 0;
+    resize: none;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+}
+
+.c-txt-show {
+    background: white;
+    border-radius: 10px;
+    color: black;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin: 5px;
     resize: none;
     padding: 10px;
 }
@@ -782,6 +1123,15 @@
     width: 50%;
     text-align: center;
 }
+.c-like-count-show {
+    height: 20px;
+    border-radius: 5px;
+    justify-self: start;
+    align-self: end;
+    padding: 2px;
+    width: 50%;
+    text-align: center;
+}
 
 .c-like {
     width: 60%;
@@ -789,6 +1139,7 @@
     place-self: end;
     height: 23px;
 }
+
 
 .c-like:hover {
     background: #096dd9;
@@ -812,7 +1163,6 @@
 
 .c-dislike-count {
     margin: 0;
-    border: 1px solid lightgray;
     grid-area: dislike-count;
     height: 20px;
     border-radius: 5px;
@@ -836,9 +1186,55 @@
 .hide-cmnt-btn {
     margin-top: 0.8em;
     width: fit-content;
-    margin-left: 21em;
+    margin-left: 15em;
 }
 
 .comments-row > .box-title {
     margin-left: 21em;
+}
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
+}
+
+.flashMsg {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.flashMsgHide {
+    display: none;
+}
+
+.edit-notice-container {
+    display: none;
+}
+
+.edit-notice-title {
+    text-align: center;
+    margin-bottom: 0 1em;
+}
+
+.edit-del-btn {
+    margin: 0 1em;
+}
+.post-input-btn{
+    width: 100px;
+    margin-right: 0.2em;
 }
