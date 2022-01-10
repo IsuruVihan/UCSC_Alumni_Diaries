@@ -143,6 +143,13 @@ if (mysqli_num_rows($results) > 0) {
             ";
         }
     }
+}else{
+    echo"
+    <div class='flexbox-item3'>
+    <p class='request-id'> No data </p>
+</div>
+
+";
 }
 
     
