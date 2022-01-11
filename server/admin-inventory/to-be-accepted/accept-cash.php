@@ -42,6 +42,19 @@ if (mail(
         $query4 = "UPDATE associationcash SET Amount = '$NewCashAmount' WHERE Id = '0'";
         mysqli_query($conn, $query4);
 
+        //notification
+        $query13 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+        $results13 = mysqli_query($conn, $query13);
+          
+        if (mysqli_num_rows($results13) > 0) {
+            while ($row13 = mysqli_fetch_assoc($results13)) {  
+                $query14 = "INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}','Rs.' '$amount' ' ' 'Cash Donation made by' ' ' '{$email}' ' ' 'has been accepted to the association')
+                ";
+                mysqli_query($conn, $query14);
+              
+            }
+        }
+
         echo"Donation has been accepted.";
 
     }else{
@@ -49,7 +62,7 @@ if (mail(
         mysqli_query($conn, $query5);
 
         $DonationFor = $row1['DonationFor'];
-        $query6 = "SELECT Status FROM projects WHERE Id = '{$DonationFor}'";
+        $query6 = "SELECT Name,Status FROM projects WHERE Id = '{$DonationFor}'";
         $results6 = mysqli_query($conn, $query6);
         $row6 = mysqli_fetch_assoc($results6);
 
@@ -77,7 +90,20 @@ if (mail(
 
             $query11 = "UPDATE associationcash SET Amount = '$NewCashAmount' WHERE Id = '0'";
             mysqli_query($conn, $query11);
+        } 
+        //notification
+        $query15 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+        $results15 = mysqli_query($conn, $query15);
+                 
+        if (mysqli_num_rows($results15) > 0) {
+            while ($row15 = mysqli_fetch_assoc($results15)) {  
+                $query16 = "INSERT INTO notifications (Email,Message) VALUES ('{$row15['Email']}','Rs.' '$amount' ' ' 'Cash Donation made by' ' ' '{$email}' ' ' 'has been accepted to the' ' ' '{$row6['Name']}')
+                 ";
+                 mysqli_query($conn, $query16);
+                     
+            }
         }
+       
         echo"Donation has been accepted.";
     }
 

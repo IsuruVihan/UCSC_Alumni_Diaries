@@ -43,3 +43,17 @@ if (mail(
 
 $query2 = "DELETE FROM itemdonations WHERE Id = '$id'";
 mysqli_query($conn, $query2);
+
+//notification
+$query13 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+$results13 = mysqli_query($conn, $query13);
+        
+if (mysqli_num_rows($results13) > 0) {
+    while ($row13 = mysqli_fetch_assoc($results13)) {  
+        $query14 = "INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}', '$item' ' ' 'Donation made by' ' ' '{$email}' ' ' 'to the' ' ' '{$row11['Name']}' ' ' 'has been deleted by {$_SESSION['Email']}')
+        ";
+        mysqli_query($conn, $query14);
+            
+    }
+}
+
