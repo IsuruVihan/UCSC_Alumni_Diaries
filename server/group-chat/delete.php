@@ -19,16 +19,16 @@ if (mysqli_num_rows($results) > 0) {
             $results2=mysqli_query($conn, $query2);
 
         if (mysqli_query($conn, $query2)) {
-          
+            //notification
             $query3 = "SELECT UserEmail FROM participantgroups WHERE GroupChatId = '{$Id}'";
             $result3=mysqli_query($conn, $query3);
-            $row3 = mysqli_fetch_assoc($result3);
 
-            $Email=$row3['UserEmail'];
-
-            $query4 = "INSERT INTO notifications (Email,Message) VALUES ('$Email','$Group_Name has delete by $Owner_Email')";
-            $result4=mysqli_query($conn, $query4);
-
+            if (mysqli_num_rows($result3) > 0) {
+                while ($row3 = mysqli_fetch_assoc($result3)) {  
+                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['UserEmail']}','$Group_Name has delete by $Owner_Email')";
+                    $result4=mysqli_query($conn, $query4);
+                }
+            }
             echo "Group has been deleted successfully";
         } else {
             echo "Server error";

@@ -10,7 +10,7 @@ $query = "INSERT INTO participantgroups (GroupChatId,UserEmail) VALUES ('$Id','$
 $results=mysqli_query($conn, $query);
 
 if ($results) {
-
+    // notification
     $query3 = "SELECT OwnerEmail,Name FROM groupchats WHERE Id = '{$Id}'";
     $result3=mysqli_query($conn, $query3);
     $row3 = mysqli_fetch_assoc($result3);

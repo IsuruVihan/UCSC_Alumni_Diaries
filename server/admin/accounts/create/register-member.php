@@ -3,6 +3,7 @@
 include('../../../../db/db-conn.php');
 include('../../../code-generator/PasswordGenerator.php');
 include('../../../email/body-templates/MemberAccountCreated.php');
+include('../../../session.php');
 
 $name_with_initials = trim($_POST['name_with_initials']);
 $first_name = preg_replace('/\s+/', '', trim($_POST['first_name']));
@@ -80,6 +81,18 @@ if (
                     )
                 ";
                 if (mysqli_query($conn, $query3)) {
+                    //notification
+                    // $query3 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+                    // $results3 = mysqli_query($conn, $query3);
+
+                    // if (mysqli_num_rows($results3) > 0) {
+                    //     while ($row3 = mysqli_fetch_assoc($results3)) {  
+                    //         $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$first_name} {$last_name} member account has been created by {$_SESSION['Email']}')
+                    //         ";
+                    //         mysqli_query($conn, $query4);
+                        
+                    //     }
+                    // } 
                     echo "
                         <div class='success-message'>
                             <b>{$first_name} {$last_name}</b> member account created

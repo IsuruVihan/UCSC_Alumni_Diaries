@@ -1,6 +1,7 @@
 <?php
     
     include('../../../db/db-conn.php');
+    include('../../session.php');
     
     $ProjectId = $_POST['ProjectId'];
     
@@ -67,7 +68,7 @@
 
     if (mysqli_num_rows($results13) > 0) {
         while ($row13 = mysqli_fetch_assoc($results13)) {  
-            $query12 = "INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}','{$row11['Name']}' '  ' 'Project has closed')
+            $query12 = "INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}','{$row11['Name']} Project has closed by {$_SESSION['Email']}')
             ";
             mysqli_query($conn, $query12);
         
@@ -79,7 +80,7 @@
 
     if (mysqli_num_rows($results14) > 0) {
         while ($row14 = mysqli_fetch_assoc($results14)) {  
-            $query15 = "INSERT INTO notifications (Email,Message) VALUES ('{$row14['Email']}','{$row11['Name']}' '  ' 'Project has closed')
+            $query15 = "INSERT INTO notifications (Email,Message) VALUES ('{$row14['Email']}','{$row11['Name']} Project has closed by {$_SESSION['Email']}')
             ";
             mysqli_query($conn, $query15);
         

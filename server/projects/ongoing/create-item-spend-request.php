@@ -1,4 +1,5 @@
 <?php
+    include ('../../../server/session.php');
     $conn = mysqli_connect("localhost", "root", "", "ucsc_alumni_diaries");
     
     $errors = "";
@@ -43,6 +44,29 @@
                         ";
                         
                         if (mysqli_query($conn, $query)) {
+
+                            //notification
+                            $query1 = "SELECT Quantity, ItemName, ProjectId FROM projectitems WHERE Id='{$item_id}'";  
+                            $results1 = mysqli_query($conn, $query1);
+                            $row1 = mysqli_fetch_assoc($results1);
+
+                            $query5 = "SELECT Name FROM projects WHERE Id='{$row1['ProjectId']}'";  
+                            $results5 = mysqli_query($conn, $query5);
+                            $row5 = mysqli_fetch_assoc($results5);
+
+                            $query4 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+                            $results4 = mysqli_query($conn, $query4);
+                            
+                            if (mysqli_num_rows($results4) > 0) {
+                                while ($row4 = mysqli_fetch_assoc($results4)) {  
+                                    $query3 = "INSERT INTO notifications (Email,Message) 
+                                    VALUES ('{$row4['Email']}','item spend request on {$row1['Quantity']}  {$row1['ItemName']} spend by {$row5['Name']} project has been submitted by {$_SESSION['Email']}')
+                                    ";
+                                    mysqli_query($conn, $query3);
+                                
+                                }
+                            }
+
                             header("Location: ../../../pages/ongoing-projects.php");
                             $messages = "Item spend request has been submitted successfully";
                         } else {

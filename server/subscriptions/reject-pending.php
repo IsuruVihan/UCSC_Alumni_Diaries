@@ -16,7 +16,7 @@
                 
         if (mysqli_num_rows($results6) > 0) {
             while ($row6 = mysqli_fetch_assoc($results6)) {  
-                $query7 = "INSERT INTO notifications (Email,Message) VALUES ('{$row6['Email']}', '{$row5['Email']}' ' ' 'subscription has been rejected by {$_SESSION['Email']}')
+                $query7 = "INSERT INTO notifications (Email,Message) VALUES ('{$row6['Email']}', '{$row5['Email']} subscription has been rejected by {$_SESSION['Email']}')
                 ";
                 mysqli_query($conn, $query7);
                     

@@ -18,5 +18,12 @@ $query1 = "DELETE commentsforposts,reactsforcomments FROM commentsforposts
              WHERE PostId='$id'";
 $result1 =mysqli_query($conn, $query1);
 
+//notification
+
+    $query3 = "INSERT INTO notifications (Email,Message) VALUES 
+    ('{$row0['OwnerEmail']}','{$_SESSION['Email']} delete your post')
+        ";
+    mysqli_query($conn, $query3);
+
 $query2 = "DELETE FROM reactsforposts WHERE PostId='$id'";
 $result2 =mysqli_query($conn, $query2);

@@ -6,6 +6,31 @@
 
 <?php include('../components/header.php'); ?>
 
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>
+
+<script>
+    $(document).ready(() => {
+        $('#scroll').load("../server/notification/notification-render.php");
+    });
+</script>
+<script>
+      const DeleteNotification = (id) => { 
+        $('#flash-message').load("../server/notification/delete.php", {
+            id: id
+        });
+        setTimeout(() => window.history.go(), 1);
+    }
+    const MarkNotification = (id) => {
+         $('#scroll').load("../server/notification/mark-notification.php", {
+             id: id
+         })
+    }     
+</script>
+
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> /Notifications
@@ -18,8 +43,9 @@
     <div class='card container-01'>
         <div class='title'>
             Notifications
-        </div>
-        <div class='scroll'>
+        </div> 
+        <div id='flash-message' class='flash-message'></div>
+        <div class='scroll' id='scroll'>
             <div class='list'>
                 <div class='box-01'>
                     <div class='text'>

@@ -85,9 +85,7 @@ elseif ($uploadOk == 0) {
             $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$_SESSION['Email']}', 'you have done the subscription sucessfully')
             ";
             mysqli_query($conn, $query5);
-                
-           
-
+    
         echo "The file " . htmlspecialchars(basename($_FILES["bank-slip"]["name"])) . " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file. ";

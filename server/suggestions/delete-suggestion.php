@@ -1,5 +1,6 @@
 <?php
     include('../../db/db-conn.php');
+    include ('../session.php');
     
     $id = $_POST['id'];
 
@@ -20,7 +21,7 @@
                 
                 if (mysqli_num_rows($results4) > 0) {
                     while ($row4 = mysqli_fetch_assoc($results4)) {  
-                        $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$row4['Email']}','suggestion submited by' ' ' '{$row3['Name']}' ' ' 'on' ' ' '{$row3['Title']}' ' ' 'now deleted from the sugesstion.')
+                        $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$row4['Email']}','suggestion submited by {$row3['Name']} on {$row3['Title']} now deleted from the sugesstion by {$_SESSION['Email']}')
                         ";
                         mysqli_query($conn, $query5);
                     
