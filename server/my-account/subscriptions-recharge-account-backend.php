@@ -70,7 +70,22 @@ elseif ($uploadOk == 0) {
         $query = "INSERT INTO subscriptionsdone (`Email`, `SubType`, `Amount`, `DonatedFrom`, `PayslipSrc`) 
                   VALUES ('{$_SESSION['Email']}','{$_SESSION['SubscriptionType']}','{$Amount}','Bank','{$fileNameNew}')";
         $result = mysqli_query($conn, $query);
-
+        //notification
+            $query3 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+            $results3 = mysqli_query($conn, $query3);
+                    
+            if (mysqli_num_rows($results3) > 0) {
+                while ($row3 = mysqli_fetch_assoc($results3)) {  
+                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}', '{$_SESSION['Email']} has done the subscription')
+                    ";
+                    mysqli_query($conn, $query4);
+                        
+                }
+            }
+            $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$_SESSION['Email']}', 'you have done the subscription sucessfully')
+            ";
+            mysqli_query($conn, $query5);
+    
         echo "The file " . htmlspecialchars(basename($_FILES["bank-slip"]["name"])) . " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file. ";

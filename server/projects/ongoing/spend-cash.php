@@ -42,6 +42,23 @@
                                         VALUES ('${pid}', '${amount}', '${description}', '${fileNameNew}')
                                     ";
                                     if (mysqli_query($conn, $query)) {
+
+                                        //notification
+                                        $query1 = "SELECT Name FROM projects WHERE Id='{$pid }'";  
+                                        $results1 = mysqli_query($conn, $query1);
+                                        $row1 = mysqli_fetch_assoc($results1);
+
+                                        $query2 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+                                        $results2 = mysqli_query($conn, $query2);
+                                        
+                                        if (mysqli_num_rows($results2) > 0) {
+                                            while ($row2 = mysqli_fetch_assoc($results2)) {  
+                                                $query3 = "INSERT INTO notifications (Email,Message) VALUES ('{$row2['Email']}','cash spend request has been submitted by' ' ' '{$row1['Name']}' ' ' 'project')
+                                                ";
+                                                mysqli_query($conn, $query3);
+                                            
+                                            }
+                                        }
                                         $messages = "Your cash spend request has been submitted";
                                         echo "Your cash spend request has been submitted";
                                     } else {

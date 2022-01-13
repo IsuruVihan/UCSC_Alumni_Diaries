@@ -2,6 +2,7 @@
 
 include('../../../../db/db-conn.php');
 include('../../../email/body-templates/MemberAccountRequestDeleted.php');
+include('../../../session.php');
 
 $Id = $_POST['Id'];
     
@@ -17,6 +18,19 @@ if (mysqli_num_rows($results2) > 0) {
         )) {
             $query = "DELETE FROM memberaccountrequests WHERE Id='${Id}'";
             if (mysqli_query($conn, $query)) {
+
+                //notification
+                $query3 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+                $results3 = mysqli_query($conn, $query3);
+                
+                if (mysqli_num_rows($results3) > 0) {
+                    while ($row3 = mysqli_fetch_assoc($results3)) {  
+                        $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['Email']} {$row2['FirstName']} {$row2['LastName']} member account request has deleted {$_SESSION['Email']}')
+                        ";
+                        mysqli_query($conn, $query4);
+                    
+                    }
+                }  
                 echo "
                     <div class='success-message'>
                         <b>{$row2['FirstName']} {$row2['LastName']} </b>

@@ -51,6 +51,20 @@ if (mail(
             $query6 = "INSERT INTO projectitems (ProjectId, ItemName, Quantity) 
         VALUES ('{$row2['DonationFor']}', '{$row2['ItemName']}', '{$row2['Quantity']}')";
             mysqli_query($conn, $query6);
+            
+               //notification
+               $query15 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+               $results15 = mysqli_query($conn, $query15);
+                           
+               if (mysqli_num_rows($results15) > 0) {
+                   while ($row15 = mysqli_fetch_assoc($results15)) {  
+                       $query16 = "INSERT INTO notifications (Email,Message) VALUES 
+                       ('{$row15['Email']}','Accepted the {$row2['ItemName']} donated by {$email} to the project {$row3['Name']} by {$_SESSION['Email']}' )
+                       ";
+                       mysqli_query($conn, $query16);
+                               
+                   }
+               }
         }
         $query7 = "INSERT INTO transfereditems (ItemName, Quantity, ProjectId, TransferedBy) 
                VALUES ('{$row2['ItemName']}', '{$row2['Quantity']}', '{$row2['DonationFor']}', '{$_SESSION['Email']}')";

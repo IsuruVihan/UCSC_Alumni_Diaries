@@ -1,6 +1,7 @@
 <?php
     
     include('../../../db/db-conn.php');
+    include('../../session.php');
     
     $ProjectId = $_POST['ProjectId'];
     
@@ -56,5 +57,34 @@
         $query10 = "UPDATE registeredmembers SET Availability = '1' WHERE Email = '{$row9['Email']}'";
         mysqli_query($conn, $query10);
     }
-    
+
+    //notification
+    $query11 = "SELECT Name FROM projects WHERE Id='{$ProjectId}'";
+    $result11 = mysqli_query($conn, $query11);
+    $row11 = mysqli_fetch_assoc($result11);
+
+    $query13 = "SELECT Email FROM committeemembers WHERE ProjectId = '{$ProjectId}'";
+    $results13 = mysqli_query($conn, $query13);
+
+    if (mysqli_num_rows($results13) > 0) {
+        while ($row13 = mysqli_fetch_assoc($results13)) {  
+            $query12 = "INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}','{$row11['Name']} Project has closed by {$_SESSION['Email']}')
+            ";
+            mysqli_query($conn, $query12);
+        
+        }
+    }
+
+    $query14 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+    $results14 = mysqli_query($conn, $query14);
+
+    if (mysqli_num_rows($results14) > 0) {
+        while ($row14 = mysqli_fetch_assoc($results14)) {  
+            $query15 = "INSERT INTO notifications (Email,Message) VALUES ('{$row14['Email']}','{$row11['Name']} Project has closed by {$_SESSION['Email']}')
+            ";
+            mysqli_query($conn, $query15);
+        
+        }
+    }
+
     echo "Project has been closed successfully!";

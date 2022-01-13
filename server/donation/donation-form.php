@@ -48,6 +48,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount) VALUES ('$donor_name','$donor_email','Association','$file','$donor_amount')";
             $result = mysqli_query($conn, $query);
         }
+        //notification
+        $query2 = "SELECT DonorName, Amount FROM cashdonations WHERE DonorName= '{$donor_name}'";  
+        $results2 = mysqli_query($conn, $query2);
+        $row2 = mysqli_fetch_assoc($results2);
+       
+        $query3 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+        $results3 = mysqli_query($conn, $query3);
+        
+        if (mysqli_num_rows($results3) > 0) {
+            while ($row3 = mysqli_fetch_assoc($results3)) {  
+                $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['DonorName']} has donate Rs.{$row2['Amount']} to the association')
+                ";
+                mysqli_query($conn, $query4);
+            
+            }
+        }        
     }
     
 }

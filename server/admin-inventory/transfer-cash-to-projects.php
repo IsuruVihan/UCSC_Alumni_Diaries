@@ -35,6 +35,36 @@ if(!empty($projectId) && !empty($amount) && $amount != 0 ){
                        VALUES ('{$amount}','{$projectId}','{$_SESSION['Email']}')";
             mysqli_query($conn, $query5);
 
+               //notification
+               $query12 = "SELECT Name FROM projects WHERE Id='{$projectId}'";  
+               $results12 = mysqli_query($conn, $query12);
+               $row12 = mysqli_fetch_assoc($results12); 
+   
+               $query13 = "SELECT Email FROM committeemembers WHERE ProjectId='{$projectId}'";  
+               $results13 = mysqli_query($conn, $query13);
+             
+               $query10 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
+               $results10 = mysqli_query($conn, $query10);
+               
+               if (mysqli_num_rows($results10) > 0) {
+                   while ($row10 = mysqli_fetch_assoc($results10)) {  
+                       $query11 = "INSERT INTO notifications (Email,Message)   
+                       VALUES ('{$row10['Email']}','{$_SESSION['Email']} has transfered Rs.{$amount} to project {$row12['Name']}')
+                       ";
+                       mysqli_query($conn, $query11);
+                   
+                   }
+               }
+               if (mysqli_num_rows($results13) > 0) {
+                    while ($row13 = mysqli_fetch_assoc($results13)) {  
+                        $query12 = "INSERT INTO notifications (Email,Message)   
+                        VALUES ('{$row13['Email']}','{$_SESSION['Email']} has transfered Rs.{$amount} to project {$row12['Name']}')
+                        ";
+                        mysqli_query($conn, $query12);
+                    
+                    }
+                }
+            
             echo"Cash Successfully Transferred";
         }else {
             echo "Insufficient cash to proceed the transfer";

@@ -48,6 +48,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = "INSERT INTO posts (OwnerEmail,Content ,PicSrc, isImportant,Title) VALUES ('$ownerEmail','$noticeBody','$file','1','$noticeTitle')";
         $result = mysqli_query($conn, $query);
     }
-
+    //notification
+    $query1 = "SELECT Email FROM registeredmembers";
+    $results1 = mysqli_query($conn, $query1);
+    
+    if (mysqli_num_rows($results1) > 0) {
+        while ($row1 = mysqli_fetch_assoc($results1)) {  
+            $query2 = "INSERT INTO notifications (Email,Message)   
+            VALUES ('{$row1['Email']}','New Important Notice has been submitted by {$ownerEmail} on {$noticeTitle}')
+            ";
+            mysqli_query($conn, $query2);
+        
+        }
+    }
 
 }

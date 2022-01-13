@@ -47,5 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $query = "INSERT INTO itemdonations (DonorName, DonorEmail, DonationFor, BillSrc, ItemName, Quantity) VALUES ('$item_donor','$item_email','$project_Id','$fileNameNew','$item_name','$item_quantity') ";
             $result = mysqli_query($conn, $query);
         }
+        
     }
 }
