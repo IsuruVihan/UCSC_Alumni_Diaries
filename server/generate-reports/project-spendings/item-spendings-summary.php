@@ -20,11 +20,11 @@ $query2 = "SELECT * FROM projectitemspendings WHERE ProjectId = '{$ProjectId}'";
 $query3 = "
         SELECT ItemName, Timestamp, SpentQuantity, Description, BillSrc, projectitemspendings.ItemId FROM projectitemspendings 
         INNER JOIN projectitems ON projectitems.Id = projectitemspendings.ItemId WHERE ProjectId = '$ProjectId' 
-         AND Status = 'Accepted'
+         AND Status = 'Paid'
     ";
 $query4="SELECT SUM(SpentQuantity) AS value_sum FROM projectitemspendings 
         INNER JOIN projectitems ON projectitems.Id = projectitemspendings.ItemId WHERE ProjectId = '$ProjectId' 
-         AND Status = 'Accepted'
+         AND Status = 'Paid'
          ";
 
 $results = mysqli_query($conn, $query);

@@ -40,7 +40,7 @@ $pdf->Cell(80);
 $pdf->Cell(50, 20, 'UCSC Alumni Association', 0, 0, 'C');
 $pdf->Ln(20);
 $pdf->SetFont('Arial', 'U', 15);
-$pdf->Cell(207, 30, 'Project cash spendings', 0, 0, 'C');
+$pdf->Cell(207, 30, 'Project Cash Spendings Summary', 0, 0, 'C');
 $pdf->Write(35, "\n", '', 0, 'C', true, 0, false, false, 0);
 
 while ($row = mysqli_fetch_assoc($results)) {
@@ -69,18 +69,10 @@ while ($row = mysqli_fetch_assoc($results)) {
 
     $row4 =mysqli_fetch_assoc($results4);
 
-//    $pdf->SetFont('Arial','',12);
-//    $pdf->Cell(140,10, 'Project cash spendings (LKR) - up to ' . $date,1,0,'L');
-//    $pdf->Cell(50,10, $row4['value_sum'],1,0,'C');
-
-
-//    while ($row2 = mysqli_fetch_assoc($results2)) {
-
-
         $pdf->Write(25, "\n", '', 0, 'C', true, 0, false, false, 0);
 
         $pdf->SetFont('Arial','BU',12);
-        $pdf->Cell(20, 10, 'Project Cash Spendings Summary');
+        $pdf->Cell(20, 10, 'Cash Spendings');
         $pdf->Write(15, "\n", '', 0, 'C', true, 0, false, false, 0);
 
         $pdf->SetFont('Arial','B',10);
