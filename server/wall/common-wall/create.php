@@ -34,18 +34,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         if ($errors) print_r($errors);
     }
-
-
+    
     $postContent = $_POST['post-content'];
     $ownerEmail = $_SESSION["Email"];
 
     if ( !empty($postContent) && empty($file_name)) {
-        $query = "INSERT INTO posts (OwnerEmail,Content,isImportant) VALUES ('$ownerEmail','$postContent','0')";
+        $query = "INSERT INTO posts (OwnerEmail, Content, isImportant) VALUES ('$ownerEmail','$postContent','0')";
         $result = mysqli_query($conn, $query);
     }
 
     if ( !empty($postContent) && !empty($file_name)) {
-        $query = "INSERT INTO posts (OwnerEmail,Content ,PicSrc, isImportant) VALUES ('$ownerEmail','$postContent','$file','0')";
+        $query = "INSERT INTO posts (OwnerEmail, Content, PicSrc, isImportant) VALUES ('$ownerEmail','$postContent','$file','0')";
         $result = mysqli_query($conn, $query);
     }
 

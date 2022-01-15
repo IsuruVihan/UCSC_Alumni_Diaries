@@ -32,8 +32,8 @@ if(!empty('$fileName') && !empty('$message')) {
                   VALUES ('1','{$email}','{$message}','{$newFileSrc}', '{$chatId}')";
         $results = mysqli_query($conn, $query);
     } else {
-        $query2 = "INSERT INTO chatmessages (isGroupChat, SenderEmail, Message, ChatId)
-                  VALUES ('1','{$email}','{$message}','{$chatId}')";
+        $query2 = "INSERT INTO chatmessages (isGroupChat, SenderEmail, Message, PicSrc, ChatId)
+                  VALUES ('1','{$email}','{$message}', '', '{$chatId}')";
         $results2 = mysqli_query($conn, $query2);
     }
 }

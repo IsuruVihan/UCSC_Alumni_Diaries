@@ -50,7 +50,7 @@
                 }
                 echo "
                     <li class='link'>
-                        <a href='../pages/alumnus.php' class='anchor-tag'>Alumnus</a>
+                        <a href='../pages/alumnus.php' class='anchor-tag'>Alumni</a>
                     </li>
                     <li class='link'>
                         <a href='../pages/notifications.php' class='anchor-tag'>Notifications</a>

@@ -11,12 +11,12 @@ $result2 = mysqli_query($conn, $query2);
 
 if($_SESSION['SubscriptionType'] == 'Annually'){
     while($row = mysqli_fetch_assoc($result1)) {
-        echo $row["Amount"];
+        echo "LKR " . $row["Amount"];
     }
 
 } else{
     while($row = mysqli_fetch_assoc($result2)) {
-        echo $row["Amount"];
+        echo "LKR " . $row["Amount"];
     }
 }
 

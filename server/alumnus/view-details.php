@@ -29,7 +29,19 @@ while ($row = mysqli_fetch_assoc($results)) {
         echo "
             <div class='account-details-container'>
                 <div class='img-container'>
-                <img src='{$row['PicSrc']}' height='100%' alt='profile-pic'/>
+        ";
+        
+        if ($row['PicSrc'] == 'user-default.png') {
+            echo "
+                    <img src='../assets/images/{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+            ";
+        } else {
+            echo "
+                    <img src='../uploads/profile-pics/{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+            ";
+        }
+        
+        echo "
                 </div>
                 <div class='acdc-text-field'>{$row['AccType']}</div>
             </div>
@@ -107,7 +119,19 @@ while ($row = mysqli_fetch_assoc($results)) {
         echo "
             <div class='account-details-container'>
                 <div class='img-container'>
-                    <img src='{$row['PicSrc']}' height='100%' alt='profile-pic'/>
+        ";
+        
+        if ($row['PicSrc'] == 'user-default.png') {
+            echo "
+                    <img src='../assets/images/{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+            ";
+        } else {
+            echo "
+                    <img src='../uploads/profile-pics/{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+            ";
+        }
+        
+        echo "
                 </div>
                 <div class='acdc-text-field'>{$row['AccType']}</div>
             </div>

@@ -3,6 +3,7 @@
 include('../../db/db-conn.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $fileNameNew = '';
     if (isset($_FILES['files'])) {
         $errors = [];
         $path = '../../uploads/donation/';
@@ -45,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $result = mysqli_query($conn, $query);
         }
         if (!empty($donor_name) && !empty($donor_email)  && !empty($donor_amount) && !empty($file_name)) {
-            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount) VALUES ('$donor_name','$donor_email','Association','$file','$donor_amount')";
+            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount) VALUES ('$donor_name','$donor_email','Association','$fileNameNew','$donor_amount')";
             $result = mysqli_query($conn, $query);
         }
         //notification

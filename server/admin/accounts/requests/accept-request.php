@@ -49,7 +49,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 '${row['ContactNumber']}',
                 '${row['Batch']}',
                 '${row['IndexNumber']}',
-                '../assets/images/user-default.png',
+                'user-default.png',
                 '${random_password_encrypted}',
                 'Member',
                 'Monthly',

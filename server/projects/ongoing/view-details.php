@@ -753,6 +753,7 @@
                                                     class='item-spend-input-field'
                                                     onchange=ChangeSelectedItem('1')
                                                 >
+                                                    <option>Select</option>
         ";
         
         if (mysqli_num_rows($results12) > 0) {

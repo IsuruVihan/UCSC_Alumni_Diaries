@@ -26,7 +26,19 @@ while ($row = mysqli_fetch_assoc($results)) {
             <div class='row-1'>
                 <div class='container-1'>
                     <div class='section-1'>
-                        <img src='{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+        ";
+        
+        if ($row['PicSrc'] == 'user-default.png') {
+            echo "
+                        <img src='../assets/images/{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+            ";
+        } else {
+            echo "
+                        <img src='../uploads/profile-pics/{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+            ";
+        }
+        
+        echo "
                         <div class='account-type'>{$row['AccType']}</div>
                     </div>
                     <div class='section-2'>
@@ -127,7 +139,19 @@ while ($row = mysqli_fetch_assoc($results)) {
             <div class='row-1'>
                 <div class='container-1'>
                     <div class='section-1'>
-                        <img src='{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+        ";
+        
+        if ($row['PicSrc'] == 'user-default.png') {
+            echo "
+                        <img src='../assets/images/{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+            ";
+        } else {
+            echo "
+                        <img src='../uploads/profile-pics/{$row['PicSrc']}' width='100%' class='user-pic' alt='user-pic'/>
+            ";
+        }
+        
+        echo "
                         <div class='account-type'>{$row['AccType']}</div>
                     </div>
                     <div class='section-2'>
@@ -204,8 +228,8 @@ while ($row = mysqli_fetch_assoc($results)) {
             while ($row3 = mysqli_fetch_assoc($results3)) {
                 echo "
                     <div class='result'>
-                        <div class='project-name'>{$row3['projects.Name']}</div>
-                        <div class='position'>{$row3['committeemembers.Type']}</div>
+                        <div class='project-name'>{$row3['Name']}</div>
+                        <div class='position'>{$row3['Type']}</div>
                     </div>
                 ";
             }

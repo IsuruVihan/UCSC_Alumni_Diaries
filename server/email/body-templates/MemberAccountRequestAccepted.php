@@ -5,8 +5,8 @@ function MemberAccountRequestAccepted($FirstName, $LastName, $Password) {
         Dear ${FirstName} ${LastName},
         
         We are happy to inform you that your member account request has been approved by the
-        top board of University of Colombo School of Computing Alumni Association. You can use
-        this link to log-in to your account. Your default password is mentioned below.
+        top board of University of Colombo School of Computing Alumni Association. Your default password is mentioned
+        below.
         
         ${Password}
         

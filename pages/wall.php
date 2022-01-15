@@ -825,37 +825,39 @@
 
             <!--Filter box -->
           <?php 
-          $query = "SELECT  OwnerEmail,Id FROM posts WHERE isImportant='0' ";
-          $results = mysqli_query($conn, $query);
-          $row = mysqli_fetch_assoc($results);
+            $query = "SELECT OwnerEmail, Id FROM posts WHERE isImportant='0'";
+            $results = mysqli_query($conn, $query);
 
-          if(isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "TopBoard") echo" 
-            <div class='filter-box'>
-            <div class='filter-left'>    
-                <input type='text' placeholder='Search by ID' class='input-field-title' id='id-input'>
-                <button class='filter-btn btn' onclick=FilterById({$row['Id']})>Filter</button>
-            </div>
-            <div class='filter-right'>
-                <button class='filter-btn btn' onclick=LitPosts({$row['Id']}) >Lit</button>
-                <button class='filter-btn btn' onclick=MyPosts({$row['Id']}) >My Posts</button>
-                <button class='filter-btn btn' onclick=AllPosts({$row['Id']}) >All</button>
-            </div>
-        </div>
-          ";    
-          else{
-              echo"
-              <div class='filter-box-member-session'>
-                    <button class='filter-btn btn filter-member-session' onclick=LitPosts({$row['Id']}) >Liked</button>
-                    <button class='filter-btn btn filter-member-session' onclick=MyPosts({$row['Id']}) >My Posts</button>
-                    <button class='filter-btn btn filter-member-session' onclick=AllPosts({$row['Id']}) >All</button>
-                </div>
-              ";
-          }
+            while ($row = mysqli_fetch_assoc($results)) {
+                if(isset($_SESSION["AccType"]) && $_SESSION["AccType"] == "TopBoard") {
+                    echo "
+                        <div class='filter-box'>
+                            <div class='filter-left'>
+                                <input type='text' placeholder='Search by ID' class='input-field-title' id='id-input'>
+                                <button class='filter-btn btn' onclick=FilterById('{$row['Id']}')>Filter</button>
+                            </div>
+                            <div class='filter-right'>
+                                <button class='filter-btn btn' onclick=LitPosts('{$row['Id']}') >Lit</button>
+                                <button class='filter-btn btn' onclick=MyPosts('{$row['Id']}') >My Posts</button>
+                                <button class='filter-btn btn' onclick=AllPosts('{$row['Id']}') >All</button>
+                            </div>
+                        </div>
+                    ";
+                } else {
+                    echo"
+                          <div class='filter-box-member-session'>
+                                <button class='filter-btn btn filter-member-session' onclick=LitPosts('{$row['Id']}') >Liked</button>
+                                <button class='filter-btn btn filter-member-session' onclick=MyPosts('{$row['Id']}') >My Posts</button>
+                                <button class='filter-btn btn filter-member-session' onclick=AllPosts('{$row['Id']}') >All</button>
+                          </div>
+                    ";
+                }
+                break;
+            }
           ?>
             <!--Post-->
             <div class="post-box" id='post-box'>
                 <span id="comment-del"></span>
-
             </div>        
         </div>
     </div>
