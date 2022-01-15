@@ -60,7 +60,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             $query = "DELETE FROM memberaccountrequests WHERE Id='${row['Id']}'";
             if (mysqli_query($conn, $query)) {
                 //notification
-                $query1 = "SELECT Email FROM registeredmembers WHERE Email='${row['Email']}'";  
+                $query1 = "SELECT * FROM registeredmembers WHERE Email='${row['Email']}'";  
                 $results1 = mysqli_query($conn, $query1);
                 $row1 = mysqli_fetch_assoc($results1);
 
@@ -69,7 +69,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 
                 if (mysqli_num_rows($results2) > 0) {
                     while ($row2 = mysqli_fetch_assoc($results2)) {  
-                        $query3 = "INSERT INTO notifications (Email,Message) VALUES ('{$row2['Email']}','{$row1['Email']} member account request has accept {$_SESSION['Email']}')
+                        $query3 = "INSERT INTO notifications (Email,Message) VALUES ('{$row2['Email']}','{$row1['FirstName']} {$row1['LastName']} member account request has accept {$_SESSION['Email']}')
                         ";
                         mysqli_query($conn, $query3);
                     

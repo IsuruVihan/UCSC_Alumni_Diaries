@@ -20,7 +20,7 @@
 
             if (mysqli_num_rows($results5) > 0) {
                 while ($row5 = mysqli_fetch_assoc($results5)) {  
-                    $query6 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}','you have been removed by {$_SESSION['Email']} from project {$row4['Name']}')
+                    $query6 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}','you have been removed from the commitee member position of {$row4['Name']} by {$_SESSION['Email']}')
                     ";
                     mysqli_query($conn, $query6);
                 

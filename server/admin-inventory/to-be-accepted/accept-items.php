@@ -59,7 +59,7 @@ if (mail(
                if (mysqli_num_rows($results15) > 0) {
                    while ($row15 = mysqli_fetch_assoc($results15)) {  
                        $query16 = "INSERT INTO notifications (Email,Message) VALUES 
-                       ('{$row15['Email']}','Accepted the {$row2['ItemName']} donated by {$email} to the project {$row3['Name']} by {$_SESSION['Email']}' )
+                       ('{$row15['Email']}','Accepted the {$row2['ItemName']} donated by {$email} to the {$row3['Name']} by {$_SESSION['Email']}' )
                        ";
                        mysqli_query($conn, $query16);
                                

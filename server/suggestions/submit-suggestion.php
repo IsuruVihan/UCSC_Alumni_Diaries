@@ -71,7 +71,7 @@
                 if (mysqli_query($conn, $query)) {
 
                 //notification
-                    $query2 = "SELECT Name FROM suggestions WHERE Name= '{$user_name}'";  
+                    $query2 = "SELECT Email FROM suggestions WHERE Email= '{$user_email}'";  
                     $results2 = mysqli_query($conn, $query2);
                     $row2 = mysqli_fetch_assoc($results2);
 
@@ -80,7 +80,7 @@
                     
                     if (mysqli_num_rows($results3) > 0) {
                         while ($row3 = mysqli_fetch_assoc($results3)) {  
-                            $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['Name']} now submited a new suggestion')
+                            $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['Email']} now submited a new suggestion')
                             ";
                             mysqli_query($conn, $query4);
                         

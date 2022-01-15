@@ -4,7 +4,7 @@
     
     $id = $_POST['id'];
 
-    $query3 = "SELECT Name, Title FROM suggestions";  
+    $query3 = "SELECT Email,Name, Title FROM suggestions";  
     $results3 = mysqli_query($conn, $query3);
     $row3 = mysqli_fetch_assoc($results3);
    
@@ -21,7 +21,7 @@
                 
                 if (mysqli_num_rows($results4) > 0) {
                     while ($row4 = mysqli_fetch_assoc($results4)) {  
-                        $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$row4['Email']}','suggestion submited by {$row3['Name']} on {$row3['Title']} now deleted from the sugesstion by {$_SESSION['Email']}')
+                        $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$row4['Email']}','suggestion submited by {$row3['Email']} on {$row3['Title']} now deleted by {$_SESSION['Email']}')
                         ";
                         mysqli_query($conn, $query5);
                     
