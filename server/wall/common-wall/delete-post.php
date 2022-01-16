@@ -21,7 +21,7 @@ $result1 =mysqli_query($conn, $query1);
 //notification
 
     $query3 = "INSERT INTO notifications (Email,Message) VALUES 
-    ('{$row0['OwnerEmail']}','{$_SESSION['Email']} delete your post')
+    ('{$row0['OwnerEmail']}','{$_SESSION['Email']} deleted your post')
         ";
     mysqli_query($conn, $query3);
 

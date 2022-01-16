@@ -17,7 +17,7 @@
 
             if (mysqli_num_rows($results3) > 0) {
                 while ($row3 = mysqli_fetch_assoc($results3)) {  
-                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$_SESSION['Email']} has deleted the post report submiited by {$row4['OwnerEmail']}')
+                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$_SESSION['Email']} has deleted the post report submited by {$row4['OwnerEmail']}')
                     ";
                     mysqli_query($conn, $query4);
                 

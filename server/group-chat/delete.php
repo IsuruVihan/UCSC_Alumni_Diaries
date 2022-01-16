@@ -25,7 +25,7 @@ if (mysqli_num_rows($results) > 0) {
 
             if (mysqli_num_rows($result3) > 0) {
                 while ($row3 = mysqli_fetch_assoc($result3)) {  
-                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['UserEmail']}','$Group_Name group has delete by $Owner_Email')";
+                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['UserEmail']}','$Group_Name group has been delete by $Owner_Email')";
                     $result4=mysqli_query($conn, $query4);
                 }
             }

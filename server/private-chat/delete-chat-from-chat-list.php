@@ -36,7 +36,7 @@ if ($results) {
   $row5 = mysqli_fetch_assoc($results5);
 
   $query3 = "INSERT INTO notifications (Email,Message) VALUES 
-            ('{$row4['Person2']}','you have been deleted from the chat list by' ' ' '{$row5['FirstName']}' ' ' '{$row5['LastName']}')
+            ('{$row4['Person2']}','you have been removed from the {$row5['FirstName']} {$row5['LastName']} chat list')
                       ";
                       mysqli_query($conn, $query3);
 

@@ -16,7 +16,7 @@ if ($results) {
     $row4 = mysqli_fetch_assoc($results4);
 
     $query2 = "INSERT INTO notifications (Email,Message) VALUES 
-              ('$email','you have added to the chat list by' ' ' '{$row4['FirstName']}' ' ' '{$row4['LastName']}')
+              ('$email','you have added to the {$row4['FirstName']} {$row4['LastName']} chat list')
                         ";
                         mysqli_query($conn, $query2);
     echo"User has been added to your chat list";

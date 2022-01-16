@@ -1,6 +1,7 @@
 <?php
     
     include('../../../db/db-conn.php');
+    include('../../session.php');
     
     $Email = $_POST['Email'];
     $ProjectId = $_POST['ProjectId'];
@@ -36,7 +37,7 @@
 
             if (mysqli_num_rows($results5) > 0) {
                 while ($row5 = mysqli_fetch_assoc($results5)) {  
-                    $query6 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}','your are now a cordinator of project {$row4['Name']}')
+                    $query6 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}','you have been added as cordinator of project {$row4['Name']} by {$_SESSION['Email']}')
                     ";
                     mysqli_query($conn, $query6);
                 

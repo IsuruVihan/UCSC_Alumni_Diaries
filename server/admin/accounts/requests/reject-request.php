@@ -30,7 +30,7 @@ if (mysqli_num_rows($results2) > 0) {
                 if (mysqli_num_rows($results4) > 0) {
                     while ($row4 = mysqli_fetch_assoc($results4)) {  
                         $query4 = "INSERT INTO notifications (Email,Message) 
-                        VALUES ('{$row4['Email']}','{$row3['FirstName']} {$row3['LastName']} member account request has reject by {$_SESSION['Email']}')
+                        VALUES ('{$row4['Email']}','{$row3['FirstName']} {$row3['LastName']} member account request has been reject by {$_SESSION['Email']}')
                         ";
                         mysqli_query($conn, $query4);
                     

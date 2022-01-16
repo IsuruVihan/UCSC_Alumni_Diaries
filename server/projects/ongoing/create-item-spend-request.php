@@ -46,9 +46,9 @@
                         if (mysqli_query($conn, $query)) {
 
                             //notification
-                            $query1 = "SELECT Quantity, ItemName, ProjectId FROM projectitems WHERE Id='{$item_id}'";  
-                            $results1 = mysqli_query($conn, $query1);
-                            $row1 = mysqli_fetch_assoc($results1);
+                            $query15="SELECT ItemName FROM projectitems WHERE Id='{$item_id}'";  
+                            $results15 = mysqli_query($conn, $query15);
+                            $row15 = mysqli_fetch_assoc($results15);
 
                             $query5 = "SELECT Name FROM projects WHERE Id='{$row1['ProjectId']}'";  
                             $results5 = mysqli_query($conn, $query5);
@@ -60,7 +60,7 @@
                             if (mysqli_num_rows($results4) > 0) {
                                 while ($row4 = mysqli_fetch_assoc($results4)) {  
                                     $query3 = "INSERT INTO notifications (Email,Message) 
-                                    VALUES ('{$row4['Email']}','item spend request on {$row1['Quantity']}  {$row1['ItemName']} spend by {$row5['Name']} project has been submitted by {$_SESSION['Email']}')
+                                    VALUES ('{$row4['Email']}','item spend request on $spend_qty {$row15['ItemName']} of {$row5['Name']} has been submitted by {$_SESSION['Email']}')
                                     ";
                                     mysqli_query($conn, $query3);
                                 

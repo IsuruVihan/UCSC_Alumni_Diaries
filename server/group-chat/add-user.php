@@ -18,7 +18,7 @@ if ($results) {
     $Group_Name=$row3['Name']; 
     $Owner_Email=$row3['OwnerEmail'];
 
-    $query2 = "INSERT INTO notifications (Email,Message) VALUES ('$email','You Have Added to the $Group_Name Group By $Owner_Email')";
+    $query2 = "INSERT INTO notifications (Email,Message) VALUES ('$email','You have been Added to the $Group_Name Group By $Owner_Email')";
     $result2=mysqli_query($conn, $query2);
 
     echo"User has been added to your group chat list";

@@ -39,6 +39,12 @@
             $query14="SELECT Email FROM committeemembers WHERE ProjectId='{$ProjectId}' AND Type='Coordinator'";  
             $results14 = mysqli_query($conn, $query14);
             $row14 = mysqli_fetch_assoc($results14);
+
+            $query15="SELECT projectitemspendings.Id, ItemName, SpentQuantity FROM projectitemspendings 
+                      INNER JOIN projectitems ON projectitemspendings.ItemId = projectitems.Id
+                      WHERE ProjectId='{$ProjectId}'";  
+            $results15 = mysqli_query($conn, $query15);
+            $row15 = mysqli_fetch_assoc($results15);
    
             $query10 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
             $results10 = mysqli_query($conn, $query10);
@@ -46,14 +52,14 @@
             if (mysqli_num_rows($results10) > 0) {
                 while ($row10 = mysqli_fetch_assoc($results10)) {  
                     $query11 = "INSERT INTO notifications (Email,Message)   
-                    VALUES ('{$row10['Email']}','Item spend request of {$row12['Name']} has been accepted by {$_SESSION['Email']}')
+                    VALUES ('{$row10['Email']}','Item spend request of {$row15['SpentQuantity']} {$row15['ItemName']} from {$row12['Name']} has been accepted by {$_SESSION['Email']}')
                     ";
                     mysqli_query($conn, $query11);
                 
                 }
             }
             $query12 = "INSERT INTO notifications (Email,Message)   
-            VALUES ('{$row14['Email']}','Item spend request of {$row12['Name']} has been accepted by {$_SESSION['Email']}')
+            VALUES ('{$row14['Email']}','Item spend request of {$row15['SpentQuantity']} {$row15['ItemName']} from {$row12['Name']} has been accepted by {$_SESSION['Email']}')
             ";
             mysqli_query($conn, $query12);
 

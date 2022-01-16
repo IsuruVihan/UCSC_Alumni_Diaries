@@ -80,7 +80,7 @@
                     
                     if (mysqli_num_rows($results3) > 0) {
                         while ($row3 = mysqli_fetch_assoc($results3)) {  
-                            $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['Email']} now submited a new suggestion')
+                            $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','A Suggestion has been submitted by {$row2['Email']}')
                             ";
                             mysqli_query($conn, $query4);
                         

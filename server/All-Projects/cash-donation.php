@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          
         if (mysqli_num_rows($results3) > 0) {
             while ($row3 = mysqli_fetch_assoc($results3)) {  
-                $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['DonorName']}' ' ' 'has donate' ' ' 'Rs.' '{$row2['Amount']}' ' ' 'to the' ' ' '{$row5['Name']}')
+                $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['DonorName']} has donate Rs.{$row2['Amount']} to the {$row5['Name']}')
                 ";
                 mysqli_query($conn, $query4);
              
