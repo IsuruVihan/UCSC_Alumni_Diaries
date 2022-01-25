@@ -4,7 +4,7 @@ include('../session.php');
 
 $email = $_SESSION['Email'];
 
-$query = "SELECT Id, Message, Timestamp, Status FROM notifications WHERE Email = '{$email}'";
+$query = "SELECT Id, Message, Timestamp, Status FROM notifications WHERE Email = '{$email}' ORDER BY Id DESC";
 $results = mysqli_query($conn, $query);
 if (mysqli_num_rows($results) > 0) {
     while ($row = mysqli_fetch_assoc($results)) {

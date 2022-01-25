@@ -25,7 +25,12 @@
 
        $query13 = "SELECT Email FROM committeemembers WHERE ProjectId='{$ProjectId}' AND Type='Coordinator'";  
        $results13 = mysqli_query($conn, $query13);
-       $row13 = mysqli_fetch_assoc($results13); 
+       $row13 = mysqli_fetch_assoc($results13);
+       
+        
+       $query14 = "SELECT SpentAmount FROM projectcashspendings WHERE ProjectId='{$ProjectId }'";  
+       $results14 = mysqli_query($conn, $query14);
+       $row14 = mysqli_fetch_assoc($results14);
 
        $query10 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
        $results10 = mysqli_query($conn, $query10);
@@ -33,14 +38,14 @@
        if (mysqli_num_rows($results10) > 0) {
            while ($row10 = mysqli_fetch_assoc($results10)) {  
                $query11 = "INSERT INTO notifications (Email,Message)   
-               VALUES ('{$row10['Email']}','cash spend request of project' ' ' '{$row12['Name']}' ' ' 'has been rejected by {$_SESSION['Email']}')
+               VALUES ('{$row10['Email']}','Rs.{$row14['SpentAmount']} cash spend request of {$row12['Name']} has been rejected by {$_SESSION['Email']}')
                ";
                mysqli_query($conn, $query11);
            
            }
        }
        $query12 = "INSERT INTO notifications (Email,Message)   
-       VALUES ('{$row13['Email']}','cash spend request of project' ' ' '{$row12['Name']}' ' ' 'has been rejected by {$_SESSION['Email']}')
+       VALUES ('{$row13['Email']}','Rs.{$row14['SpentAmount']} cash spend request of {$row12['Name']} has been rejected by {$_SESSION['Email']}')
        ";   
     mysqli_query($conn, $query12);
     $results2 = mysqli_query($conn, $query2);

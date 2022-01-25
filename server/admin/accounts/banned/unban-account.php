@@ -24,7 +24,7 @@ while ($row = mysqli_fetch_assoc($results)) {
             if (mysqli_num_rows($results3) > 0) {
                 while ($row3 = mysqli_fetch_assoc($results3)) {  
                     $query4 = "INSERT INTO notifications (Email,Message)   
-                    VALUES ('{$row3['Email']}','{$row['FirstName']} {$row['LastName']} member account has unbanned by {$_SESSION['Email']}')
+                    VALUES ('{$row3['Email']}','Member account of {$row['FirstName']} {$row['LastName']} has been unbanned by {$_SESSION['Email']}')
                     ";
                     mysqli_query($conn, $query4);
                 

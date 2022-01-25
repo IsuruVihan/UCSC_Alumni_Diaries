@@ -54,7 +54,7 @@ if(!empty($projectId) && !empty($quantity)){
                if (mysqli_num_rows($results10) > 0) {
                    while ($row10 = mysqli_fetch_assoc($results10)) {  
                        $query11 = "INSERT INTO notifications (Email,Message)   
-                       VALUES ('{$row10['Email']}','{$_SESSION['Email']} has transfered {$quantity} of {$ItemName} to project {$row12['Name']}')
+                       VALUES ('{$row10['Email']}','{$_SESSION['Email']} has transfered {$quantity} of {$ItemName} to {$row12['Name']}')
                        ";
                        mysqli_query($conn, $query11);
                    
@@ -63,7 +63,7 @@ if(!empty($projectId) && !empty($quantity)){
                if (mysqli_num_rows($results13) > 0) {
                     while ($row13 = mysqli_fetch_assoc($results13)) {  
                         $query12 = "INSERT INTO notifications (Email,Message)   
-                        VALUES ('{$row13['Email']}','{$_SESSION['Email']} has transfered {$quantity} of {$ItemName} to project {$row12['Name']}')
+                        VALUES ('{$row13['Email']}','{$_SESSION['Email']} has transfered {$quantity} of {$ItemName} to {$row12['Name']}')
                         ";
                         mysqli_query($conn, $query12);
                     

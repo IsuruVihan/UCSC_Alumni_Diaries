@@ -1,4 +1,6 @@
 <?php
+    include('../../session.php');
+
     $conn = mysqli_connect("localhost", "root", "", "ucsc_alumni_diaries");
     
     $errors = "";
@@ -48,12 +50,16 @@
                                         $results1 = mysqli_query($conn, $query1);
                                         $row1 = mysqli_fetch_assoc($results1);
 
+                                        $query4 = "SELECT SpentQuantity, FROM projectcashspendings WHERE ProjectId='{$pid }'";  
+                                        $results4 = mysqli_query($conn, $query4);
+                                        $row4 = mysqli_fetch_assoc($results4);
+
                                         $query2 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
                                         $results2 = mysqli_query($conn, $query2);
                                         
                                         if (mysqli_num_rows($results2) > 0) {
                                             while ($row2 = mysqli_fetch_assoc($results2)) {  
-                                                $query3 = "INSERT INTO notifications (Email,Message) VALUES ('{$row2['Email']}','cash spend request has been submitted by' ' ' '{$row1['Name']}' ' ' 'project')
+                                                $query3 = "INSERT INTO notifications (Email,Message) VALUES ('{$row2['Email']}','Rs.{$row4['SpentAmount']} cash spending request of {$row1['Name']} has been submited by {$_SESSION['Email']}')
                                                 ";
                                                 mysqli_query($conn, $query3);
                                             

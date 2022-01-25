@@ -1,6 +1,6 @@
 <?php
     
-    include('../../../session.php');
+    include('../../session.php');
     include('../../../db/db-conn.php');
     
     $ProjectId = $_POST['ProjectId'];
@@ -37,14 +37,14 @@
     if (mysqli_num_rows($results10) > 0) {
         while ($row10 = mysqli_fetch_assoc($results10)) {  
             $query11 = "INSERT INTO notifications (Email,Message)   
-            VALUES ('{$row10['Email']}','cash spend request of project' ' ' '{$row12['Name']}' ' ' 'has been rejected by {$_SESSION['Email']}')
+            VALUES ('{$row10['Email']}','Item spend request of {$row12['Name']} has been rejected by {$_SESSION['Email']}')
             ";
             mysqli_query($conn, $query11);
           
         }
     }
     $query12 = "INSERT INTO notifications (Email,Message)   
-    VALUES ('{$row13['Email']}','Item spend request of project {$row12['Name']} has been rejected by {$_SESSION['Email']}')
+    VALUES ('{$row13['Email']}','Item spend request of {$row12['Name']} has been rejected by {$_SESSION['Email']}')
     ";   
     mysqli_query($conn, $query12);
     $results2 = mysqli_query($conn, $query2);

@@ -1,6 +1,7 @@
 <?php
     
     include('../../../db/db-conn.php');
+    include('../../session.php');
     
     $Email = $_POST['Email'];
     $ProjectId = $_POST['ProjectId'];
@@ -20,7 +21,7 @@
 
             if (mysqli_num_rows($results4) > 0) {
                 while ($row4 = mysqli_fetch_assoc($results4)) {  
-                    $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$row4['Email']}','your are now a member of project {$row3['Name']}')
+                    $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$row4['Email']}','you have been added as commitee member of project {$row3['Name']} by {$_SESSION['Email']}')
                     ";
                     mysqli_query($conn, $query5);
                 

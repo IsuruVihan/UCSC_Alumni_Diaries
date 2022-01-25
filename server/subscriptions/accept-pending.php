@@ -1,7 +1,8 @@
 <?php
-    session_start();
+   
     
     include('../../db/db-conn.php');
+    include ('../session.php');
     
     $id = $_POST['id'];
     
@@ -9,7 +10,7 @@
     if (mysqli_query($conn, $query)) {
 
         //notification
-        $query5 = "SELECT Email FROM subscriptionsdone WHERE Status = 'Accepted'";
+        $query5 = "SELECT Email FROM subscriptionsdone WHERE Status = 'Accepted'  AND Id='{$id}'";;
         $results5 = mysqli_query($conn, $query5);
         $row5 = mysqli_fetch_assoc($results5);
 
