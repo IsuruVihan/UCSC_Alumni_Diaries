@@ -3,6 +3,7 @@ const change_password = document.getElementById("change-password");
 const contribution_page = document.getElementById("contribution");
 const involved_projects = document.getElementById("involved-projects");
 const subscription_page = document.getElementById("subscriptions");
+const activity_log = document.getElementById("activity-log");
 const subs_recharge = document.getElementById('subs-recharge');
 const recharge_details = document.getElementById('recharge-details');
 const contributions_cash = document.getElementById("contributions-cash");
@@ -22,6 +23,7 @@ const onclickChangePass= () => {
     contribution_page.classList.remove('clicked-link');
     involved_projects.classList.remove('clicked-link');
     subscription_page.classList.remove('clicked-link');
+    activity_log.classList.remove('clicked-link');
 }
 
 const onclickContribution= () => {
@@ -30,7 +32,7 @@ const onclickContribution= () => {
     contribution_page.classList.add('clicked-link');
     involved_projects.classList.remove('clicked-link');
     subscription_page.classList.remove('clicked-link');
-
+    activity_log.classList.remove('clicked-link');
 }
 
 const onclickProjects = () => {
@@ -39,6 +41,7 @@ const onclickProjects = () => {
     contribution_page.classList.remove('clicked-link');
     involved_projects.classList.add('clicked-link');
     subscription_page.classList.remove('clicked-link');
+    activity_log.classList.remove('clicked-link');
 }
 
 const onclickSubscriptions = () => {
@@ -47,6 +50,16 @@ const onclickSubscriptions = () => {
     contribution_page.classList.remove('clicked-link');
     involved_projects.classList.remove('clicked-link');
     subscription_page.classList.add('clicked-link');
+    activity_log.classList.remove('clicked-link');
+}
+
+const onclickActivityLog = () => {
+    account_details.classList.remove('clicked-link');
+    change_password.classList.remove('clicked-link');
+    contribution_page.classList.remove('clicked-link');
+    involved_projects.classList.remove('clicked-link');
+    subscription_page.classList.remove('clicked-link');
+    activity_log.classList.add('clicked-link');
 }
 
 const onClickRechargeAccount = () => {
