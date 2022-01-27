@@ -44,7 +44,7 @@ if (mysqli_num_rows($results) > 0) {
                 if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row['OwnerEmail']) {
                     echo "
                         <div class='post-content-row1' >
-                            <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                            <img src='../uploads/profile-pics/{$row1['PicSrc']}' alt='' class='dp-box' >
                             <div class='f-name'>{$row1['FirstName']} {$row1['LastName']}</div> 
                             <div class='post-time'>{$row['Timestamp']}</div>
                             <button class='filter-btn btn post-delete' id='post-delete-{$row['Id']}' onclick=PostDelete({$row['Id']}) >Delete</button>
@@ -52,7 +52,7 @@ if (mysqli_num_rows($results) > 0) {
                 else{
                     echo "
                         <div class='post-content-row1-1' >
-                             <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                             <img src='../uploads/profile-pics/{$row1['PicSrc']}' alt='' class='dp-box' >
                              <div class='name-time-flex'> 
                                  <div class='f-name-1'>{$row1['FirstName']} {$row1['LastName']}</div> 
                                  <div class='post-time-1'>{$row['Timestamp']}</div>
@@ -135,7 +135,7 @@ if (mysqli_num_rows($results) > 0) {
                             <!-- post edit-->
                             <form class='post-content-row1-edit'  id='post-edit-show-{$row['Id']}'>
                                 <div class='flex-row'>
-                                    <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                                    <img src='../uploads/profile-pics/{$row1['PicSrc']}' alt='' class='dp-box' >
                                 <div class='name-time-flex'> 
                                     <div class='f-name-1'>{$row1['FirstName']} {$row1['LastName']}</div> 
                                     <div class='post-time-1'>{$row['Timestamp']}</div>
@@ -207,7 +207,7 @@ if (mysqli_num_rows($results) > 0) {
                     if ($_SESSION["AccType"] == "TopBoard" || $_SESSION["Email"] == $row['OwnerEmail']) {
                 echo "
                             <div class='post-content-row1' >
-                                <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                                <img src='../uploads/profile-pics/{$row1['PicSrc']}' alt='' class='dp-box' >
                                 <div class='f-name'>{$row1['FirstName']} {$row1['LastName']}</div> 
                                 <div class='post-time'>{$row['Timestamp']}</div>
                                 <button class='filter-btn btn post-delete' id='post-delete-{$row['Id']}' onclick=PostDelete({$row['Id']}) >Delete</button>
@@ -215,7 +215,7 @@ if (mysqli_num_rows($results) > 0) {
                     else{
                 echo "
                             <div class='post-content-row1-1' >
-                                 <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                                 <img src='../uploads/profile-pics/{$row1['PicSrc']}' alt='' class='dp-box' >
                                  <div class='name-time-flex'> 
                                      <div class='f-name-1'>{$row1['FirstName']} {$row1['LastName']}</div> 
                                      <div class='post-time-1'>{$row['Timestamp']}</div>
@@ -299,7 +299,7 @@ if (mysqli_num_rows($results) > 0) {
                             <!-- post edit-->
                             <form class='post-content-row1-edit'  id='post-edit-show-{$row['Id']}'>
                                 <div class='flex-row'>
-                                    <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                                    <img src='../uploads/profile-pics/{$row1['PicSrc']}' alt='' class='dp-box' >
                                 <div class='name-time-flex'> 
                                     <div class='f-name-1'>{$row1['FirstName']} {$row1['LastName']}</div> 
                                     <div class='post-time-1'>{$row['Timestamp']}</div>
