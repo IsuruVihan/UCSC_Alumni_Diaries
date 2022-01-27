@@ -38,6 +38,14 @@
                 if (mysqli_num_rows($result2) > 0) {
                     $_SESSION["Banned"] = true;
                 }
+    
+                // Activity
+                $query3 = "
+                    INSERT INTO activitylog (Email, Section, Activity)
+                    VALUES ('{$_SESSION['Email']}', 'Login', 'Logged in')
+                ";
+                mysqli_query($conn, $query3);
+                
                 echo "1";
             }
         } else {
