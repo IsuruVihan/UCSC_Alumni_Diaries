@@ -1,5 +1,4 @@
 <?php
-   
     
     include('../../db/db-conn.php');
     include ('../session.php');
@@ -25,13 +24,19 @@
                     
             }
         }
-        $query8 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}', 'your subscription has been accepted by {$_SESSION['Email']}')
-        ";
+        $query8 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}', 'your subscription has been accepted by {$_SESSION['Email']}')";
         mysqli_query($conn, $query8);
-
-                echo "Accepted!";
+    
+        // Activity
+        $query9 = "
+            INSERT INTO activitylog (Email, Section, Activity)
+            VALUES ('{$_SESSION['Email']}', 'Admin - Subscriptions', 'Pending subscription (ID): {$id} Accepted')
+        ";
+        mysqli_query($conn, $query9);
+        
+        echo "Accepted!";
     }else {
-              echo "Server error";
+        echo "Server error";
     }
     
     $query2 = "SELECT Email FROM subscriptionsdone WHERE Id='{$id}'";

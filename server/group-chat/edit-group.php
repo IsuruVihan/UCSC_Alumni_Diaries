@@ -55,6 +55,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             $row['PicSrc'] = $newFileSrc;
             $query = "UPDATE groupchats SET OwnerEmail='{$_SESSION['Email']}', Name='{$name}', PicSrc='{$fileNameNew}'  WHERE Id='{$Id}'";
             mysqli_query($conn, $query);
+    
+            // Activity
+            $query7 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Chat', 'Edited a group chat details')
+            ";
+            mysqli_query($conn, $query7);
+            
             echo "The file ". htmlspecialchars( basename( $_FILES["file"]["name"])). " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file. ";

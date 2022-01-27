@@ -39,5 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     if (!empty($noticeTitle) && !empty($noticeBody) &&  empty($file_name)) {
         $query = "UPDATE posts SET Content='{$noticeBody}',isImportant='1',Title='{$noticeTitle}' WHERE Id='{$_POST['id']}'";
         $result = mysqli_query($conn, $query);
+    
+        // Activity
+        $query7 = "
+            INSERT INTO activitylog (Email, Section, Activity)
+            VALUES ('{$_SESSION['Email']}', 'Wall', 'Updated an important notice')
+        ";
+        mysqli_query($conn, $query7);
     }
 }

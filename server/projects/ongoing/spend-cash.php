@@ -67,6 +67,13 @@
                                         }
                                         $messages = "Your cash spend request has been submitted";
                                         echo "Your cash spend request has been submitted";
+    
+                                        // Activity
+                                        $query10 = "
+                                            INSERT INTO activitylog (Email, Section, Activity)
+                                            VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Cash spend LKR {$amount} of Project (ID): {$pid}')
+                                        ";
+                                        mysqli_query($conn, $query10);
                                     } else {
                                         unlink("../../../uploads/projects-spend-cash-quotations/" . $fileNameNew);
                                         $errors = "Server error";

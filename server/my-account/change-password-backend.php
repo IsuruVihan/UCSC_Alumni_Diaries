@@ -26,6 +26,13 @@ $regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-+!@#$%&*?]).*$/";
         $query = "UPDATE registeredmembers SET Password='$encPassword' WHERE Email='$email'";
         setcookie("UserEmail", "$encPassword", time() - 1 , "/");
         if (mysqli_query($conn, $query)) {
+            // Activity
+            $query7 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'My Account', 'Changed the password')
+            ";
+            mysqli_query($conn, $query7);
+            
             echo "1";
         } else {
             echo "<span class='message-error'>Server error</span>";

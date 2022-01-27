@@ -19,7 +19,13 @@ if(!empty($content)){
             $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$email} has submitted a report on post')
             ";
             mysqli_query($conn, $query4);
-        
+    
+            // Activity
+            $query7 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Wall', 'Reported a post')
+            ";
+            mysqli_query($conn, $query7);
         }
     }      
 }

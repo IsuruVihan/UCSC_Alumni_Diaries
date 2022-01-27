@@ -1,10 +1,8 @@
 <?php
 include('../../../db/db-conn.php');
 include ('../../../server/session.php');
-
- {
-
-    $query = "SELECT Content,PicSrc,OwnerEmail,Timestamp,Id FROM posts WHERE isImportant='0'";
+ 
+ $query = "SELECT Content,PicSrc,OwnerEmail,Timestamp,Id FROM posts WHERE isImportant='0'";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($results);
 
@@ -25,9 +23,14 @@ include ('../../../server/session.php');
     $results5 = mysqli_query($conn, $query5);
     $row5 = mysqli_fetch_assoc($results5);
 
-    $query6 = "INSERT INTO notifications (Email,Message) VALUES 
+    $query6 = "INSERT INTO notifications (Email,Message) VALUES
             ('{$row5['OwnerEmail']}','{$row4['FirstName']} {$row4['LastName']} has comment to your post')
                   ";
     mysqli_query($conn, $query6);
-
-}
+    
+    // Activity
+    $query7 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Wall', 'Added a comment')
+    ";
+    mysqli_query($conn, $query7);

@@ -59,11 +59,18 @@
                             
                             if (mysqli_num_rows($results4) > 0) {
                                 while ($row4 = mysqli_fetch_assoc($results4)) {  
-                                    $query3 = "INSERT INTO notifications (Email,Message) 
-                                    VALUES ('{$row4['Email']}','item spend request on $spend_qty {$row15['ItemName']} of {$row5['Name']} has been submitted by {$_SESSION['Email']}')
+                                    $query3 = "
+                                        INSERT INTO notifications (Email,Message)
+                                        VALUES ('{$row4['Email']}','item spend request on {$spend_qty} {$row15['ItemName']} of {$row5['Name']} has been submitted by {$_SESSION['Email']}')
                                     ";
                                     mysqli_query($conn, $query3);
-                                
+    
+                                    // Activity
+                                    $query16 = "
+                                        INSERT INTO activitylog (Email, Section, Activity)
+                                        VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Created Item spend request of {$row15['ItemName']} Qty. {$spend_qty}')
+                                   ";
+                                    mysqli_query($conn, $query16);
                                 }
                             }
 

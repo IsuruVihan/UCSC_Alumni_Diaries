@@ -50,10 +50,17 @@ $results13 = mysqli_query($conn, $query13);
         
 if (mysqli_num_rows($results13) > 0) {
     while ($row13 = mysqli_fetch_assoc($results13)) {  
-        $query14 = "INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}', '$item' ' ' 'Donation made by' ' ' '{$email}' ' ' 'to the' ' ' '{$row11['Name']}' ' ' 'has been deleted by {$_SESSION['Email']}')
+        $query14 = "
+            INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}', '$item' ' ' 'Donation made by' ' ' '{$email}' ' ' 'to the' ' ' '{$row11['Name']}' ' ' 'has been deleted by {$_SESSION['Email']}')
         ";
         mysqli_query($conn, $query14);
-            
+    
+        // Activity
+        $query17 = "
+            INSERT INTO activitylog (Email, Section, Activity)
+            VALUES ('{$_SESSION['Email']}', 'Admin - Inventory', 'Item donation (ID): {$id} for Project (ID): {$row1['DonationFor']} deleted')
+        ";
+        mysqli_query($conn, $query17);
     }
 }
 

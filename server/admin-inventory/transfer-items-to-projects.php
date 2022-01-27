@@ -53,11 +53,18 @@ if(!empty($projectId) && !empty($quantity)){
                
                if (mysqli_num_rows($results10) > 0) {
                    while ($row10 = mysqli_fetch_assoc($results10)) {  
-                       $query11 = "INSERT INTO notifications (Email,Message)   
-                       VALUES ('{$row10['Email']}','{$_SESSION['Email']} has transfered {$quantity} of {$ItemName} to {$row12['Name']}')
+                       $query11 = "
+                            INSERT INTO notifications (Email,Message)
+                            VALUES ('{$row10['Email']}','{$_SESSION['Email']} has transfered {$quantity} of {$ItemName} to {$row12['Name']}')
                        ";
                        mysqli_query($conn, $query11);
-                   
+    
+                       // Activity
+                       $query14 = "
+                            INSERT INTO activitylog (Email, Section, Activity)
+                            VALUES ('{$_SESSION['Email']}', 'Admin - Inventory', 'Transfered item: {$row1['ItemName']} Qty. {$quantity} to Project (ID): {$projectId}')
+                       ";
+                       mysqli_query($conn, $query14);
                    }
                }
                if (mysqli_num_rows($results13) > 0) {

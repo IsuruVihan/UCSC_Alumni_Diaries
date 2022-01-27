@@ -58,10 +58,18 @@
                 
                 }
             }
-            $query12 = "INSERT INTO notifications (Email,Message)   
-            VALUES ('{$row14['Email']}','Item spend request of {$row15['SpentQuantity']} {$row15['ItemName']} from {$row12['Name']} has been accepted by {$_SESSION['Email']}')
+            $query16 = "
+                INSERT INTO notifications (Email,Message)
+                VALUES ('{$row14['Email']}','Item spend request of {$row15['SpentQuantity']} {$row15['ItemName']} from {$row12['Name']} has been accepted by {$_SESSION['Email']}')
             ";
-            mysqli_query($conn, $query12);
+            mysqli_query($conn, $query16);
+    
+            // Activity
+            $query17 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Accepted Item spend request of {$row15['ItemName']} Qty. {$row15['SpentQuantity']} from Project (ID): {$ProjectId}')
+            ";
+            mysqli_query($conn, $query17);
 
             $results2 = mysqli_query($conn, $query2);
             $results3 = mysqli_query($conn, $query3);

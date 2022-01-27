@@ -30,6 +30,13 @@
     while ($row = mysqli_fetch_assoc($results)) {
         if ($row['Quantity'] >= $row['SpentQuantity']) {
             mysqli_query($conn, $query4);
+    
+            // Activity
+            $query10 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Items spend in request (ID): {$RequestId} of Project (ID): {$ProjectId}')
+            ";
+            mysqli_query($conn, $query10);
             
             $UpdatedQty = $row['Quantity'] - $row['SpentQuantity'];
             $query5 = "UPDATE projectitems SET Quantity = '{$UpdatedQty}' WHERE Id = '{$row['ItemId']}'";

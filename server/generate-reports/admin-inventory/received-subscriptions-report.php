@@ -146,6 +146,13 @@ if (mysqli_num_rows($results1) > 0) {
 
     $pdf->Output();
     ob_end_flush();
+    
+    // Activity
+    $query2 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Admin - Inventory', 'Received subscriptions - Report generated')
+    ";
+    mysqli_query($conn, $query2);
 } else {
     echo "No data";
 }

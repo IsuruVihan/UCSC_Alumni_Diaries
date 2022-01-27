@@ -3,7 +3,6 @@
     include('../../../db/db-conn.php');
     include('../../session.php');
     
-    
     $Id = $_POST['Id'];
     
     $query = "SELECT Email FROM committeemembers WHERE Type='Coordinator' AND ProjectId='{$Id}'";
@@ -23,10 +22,15 @@
         
             if (mysqli_num_rows($results4) > 0) {
                 while ($row4 = mysqli_fetch_assoc($results4)) {  
-                    $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$row4['Email']}','{$row3['Name']} has been start by {$_SESSION['Email']}')
-                    ";
+                    $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$row4['Email']}','{$row3['Name']} has been start by {$_SESSION['Email']}')";
                     mysqli_query($conn, $query5);
-                
+    
+                    // Activity
+                    $query8 = "
+                        INSERT INTO activitylog (Email, Section, Activity)
+                        VALUES ('{$_SESSION['Email']}', 'Projects - Not Started', 'Started Project (ID): {$Id}')
+                    ";
+                    mysqli_query($conn, $query8);
                 }
             }
         

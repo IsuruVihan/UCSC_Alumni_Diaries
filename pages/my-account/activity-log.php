@@ -8,6 +8,11 @@
         crossorigin="anonymous">
 </script>
 <script src='../../js/activity-log.js'></script>
+<script>
+    $(document).ready(() => {
+        $('#activity-items').load('../../server/my-account/activity-log.php');
+    });
+</script>
 
 <div class='activity-log'>
     <div class='heading'>Activity Log</div>
@@ -18,9 +23,20 @@
         </div>
         <div class='section-11'>
             <select class='input5' id='subType'>
-                <option value="" disabled selected hidden>Subscription Type</option>
-                <option value='Anually'>Annually</option>
-                <option value='Monthly'>Monthly</option>
+                <option value="" disabled selected hidden>Section</option>
+                <option value='Log In'>Log In</option>
+                <option value='Log Out'>Log Out</option>
+                <option value='Admin - Accounts'>Admin - Accounts</option>
+                <option value='Admin - Reports'>Admin - Reports</option>
+                <option value='Admin - Subscriptions'>Admin - Subscriptions</option>
+                <option value='Admin - Project Spendings'>Admin - Project Spendings</option>
+                <option value='Admin - Inventory'>Admin - Inventory</option>
+                <option value='Donations'>Donations</option>
+                <option value='Suggestions'>Suggestions</option>
+                <option value='Notifications'>Notifications</option>
+                <option value='Wall'>Wall</option>
+                <option value='Chat'>Chat</option>
+                <option value='My Account'>My Account</option>
             </select>
         </div>
         <div class='section-11'>
@@ -28,7 +44,18 @@
             <button onClick="window.location.reload();" class='all-btn btn'>All</button>
         </div>
     </form>
-    <div class='activity-table'>
-    
-    </div>
+    <table id='activity-table'>
+        <tr>
+            <th class='spend-approvals-h-1' style='text-align: center'>Timestamp</th>
+            <th class='spend-approvals-h-2' style='text-align: center'>Section</th>
+            <th class='spend-approvals-h-3' style='text-align: center'>Activity</th>
+        </tr>
+        <tbody id='activity-items'>
+            <tr>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

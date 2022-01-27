@@ -24,6 +24,13 @@ $result1 =mysqli_query($conn, $query1);
     ('{$row0['OwnerEmail']}','{$_SESSION['Email']} deleted your post')
         ";
     mysqli_query($conn, $query3);
+    
+    // Activity
+    $query4 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Wall', 'Post deleted')
+    ";
+    mysqli_query($conn, $query4);
 
 $query2 = "DELETE FROM reactsforposts WHERE PostId='$id'";
 $result2 =mysqli_query($conn, $query2);

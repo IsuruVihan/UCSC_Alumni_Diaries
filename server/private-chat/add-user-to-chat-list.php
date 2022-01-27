@@ -19,5 +19,13 @@ if ($results) {
               ('$email','you have added to the {$row4['FirstName']} {$row4['LastName']} chat list')
                         ";
                         mysqli_query($conn, $query2);
+    
+    // Activity
+    $query7 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Chat', 'Added a private chat')
+    ";
+    mysqli_query($conn, $query7);
+    
     echo"User has been added to your chat list";
 }

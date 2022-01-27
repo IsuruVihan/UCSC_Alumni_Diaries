@@ -13,6 +13,13 @@
     ";
     mysqli_query($conn, $query);
     
+    // Activity
+    $query10 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Sent a chat message in Project (ID): {$ProjectId} chat')
+    ";
+    mysqli_query($conn, $query10);
+    
     $query2 = "
         SELECT Id, SenderEmail, Message, committeechatmessages.PicSrc, Timestamp, FirstName FROM committeechatmessages
         INNER JOIN registeredmembers on committeechatmessages.SenderEmail = registeredmembers.Email

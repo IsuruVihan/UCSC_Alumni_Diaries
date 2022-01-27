@@ -92,7 +92,15 @@ if (
                     //         mysqli_query($conn, $query4);
                         
                     //     }
-                    // } 
+                    // }
+    
+                    // Activity
+                    $query4 = "
+                        INSERT INTO activitylog (Email, Section, Activity)
+                        VALUES ('{$_SESSION['Email']}', 'Admin - Accounts', 'Member account (EMAIL): {$email} created')
+                    ";
+                    mysqli_query($conn, $query4);
+                    
                     echo "
                         <div class='success-message'>
                             <b>{$first_name} {$last_name}</b> member account created

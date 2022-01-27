@@ -35,5 +35,11 @@ if(!empty('$fileName') && !empty('$message')) {
                   VALUES ('0','{$email}','{$message}', '', '{$chatId}')";
         $results2 = mysqli_query($conn, $query2);
     }
+    // Activity
+    $query7 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Chat', 'Sent a private chat message')
+    ";
+    mysqli_query($conn, $query7);
 }
 
