@@ -39,7 +39,13 @@ if ($results) {
             ('{$row4['Person2']}','you have been removed from the {$row5['FirstName']} {$row5['LastName']} chat list')
                       ";
                       mysqli_query($conn, $query3);
-
+    
+    // Activity
+    $query7 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Chat', 'Delete a private chat contact')
+    ";
+    mysqli_query($conn, $query7);
+    
     echo"User has been removed from your chat list";
 }
-

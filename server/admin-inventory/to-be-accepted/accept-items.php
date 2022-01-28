@@ -62,7 +62,13 @@ if (mail(
                        ('{$row15['Email']}','Accepted the {$row2['ItemName']} donated by {$email} to the {$row3['Name']} by {$_SESSION['Email']}' )
                        ";
                        mysqli_query($conn, $query16);
-                               
+    
+                       // Activity
+                       $query17 = "
+                            INSERT INTO activitylog (Email, Section, Activity)
+                            VALUES ('{$_SESSION['Email']}', 'Admin - Inventory', 'Item donation (ID): {$id} for Project (ID): {$row2['DonationFor']} accepted')
+                       ";
+                       mysqli_query($conn, $query17);
                    }
                }
         }

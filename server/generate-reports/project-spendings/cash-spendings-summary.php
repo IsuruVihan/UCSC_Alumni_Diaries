@@ -28,7 +28,6 @@ $results2 = mysqli_query($conn, $query2);
 $results3 = mysqli_query($conn, $query3);
 $results4 = mysqli_query($conn, $query4);
 
-
 ob_end_clean();
 ob_start();
 $pdf = new FPDF();
@@ -107,3 +106,10 @@ while ($row = mysqli_fetch_assoc($results)) {
 
 $pdf->Output();
 ob_end_flush();
+
+// Activity
+$query5 = "
+    INSERT INTO activitylog (Email, Section, Activity)
+    VALUES ('{$_SESSION['Email']}', 'Admin - Project Spendings', 'Project cash spend report generated')
+";
+mysqli_query($conn, $query5);

@@ -16,6 +16,7 @@ const onClickState = (id) => {
             document.getElementById("account-rejected").classList.remove("iframe-nav-state");
             document.getElementById("account-registered").classList.remove("iframe-nav-state");
             document.getElementById("account-banned").classList.remove("iframe-nav-state");
+            document.getElementById("activity-log").classList.remove("iframe-nav-state");
             break;
         case "account-request":
             document.getElementById("account-signup").classList.remove("iframe-nav-state");
@@ -23,6 +24,7 @@ const onClickState = (id) => {
             document.getElementById("account-rejected").classList.remove("iframe-nav-state");
             document.getElementById("account-registered").classList.remove("iframe-nav-state");
             document.getElementById("account-banned").classList.remove("iframe-nav-state");
+            document.getElementById("activity-log").classList.remove("iframe-nav-state");
             break;
         case "account-rejected":
             document.getElementById("account-signup").classList.remove("iframe-nav-state");
@@ -30,6 +32,7 @@ const onClickState = (id) => {
             document.getElementById("account-rejected").classList.add("iframe-nav-state");
             document.getElementById("account-registered").classList.remove("iframe-nav-state");
             document.getElementById("account-banned").classList.remove("iframe-nav-state");
+            document.getElementById("activity-log").classList.remove("iframe-nav-state");
             break;
         case "account-registered":
             document.getElementById("account-signup").classList.remove("iframe-nav-state");
@@ -37,6 +40,7 @@ const onClickState = (id) => {
             document.getElementById("account-rejected").classList.remove("iframe-nav-state");
             document.getElementById("account-registered").classList.add("iframe-nav-state");
             document.getElementById("account-banned").classList.remove("iframe-nav-state");
+            document.getElementById("activity-log").classList.remove("iframe-nav-state");
             break;
         case "account-banned":
             document.getElementById("account-signup").classList.remove("iframe-nav-state");
@@ -44,6 +48,15 @@ const onClickState = (id) => {
             document.getElementById("account-rejected").classList.remove("iframe-nav-state");
             document.getElementById("account-registered").classList.remove("iframe-nav-state");
             document.getElementById("account-banned").classList.add("iframe-nav-state");
+            document.getElementById("activity-log").classList.remove("iframe-nav-state");
+            break;
+        case "activity-log":
+            document.getElementById("account-signup").classList.remove("iframe-nav-state");
+            document.getElementById("account-request").classList.remove("iframe-nav-state");
+            document.getElementById("account-rejected").classList.remove("iframe-nav-state");
+            document.getElementById("account-registered").classList.remove("iframe-nav-state");
+            document.getElementById("account-banned").classList.remove("iframe-nav-state");
+            document.getElementById("activity-log").classList.add("iframe-nav-state");
     }
 }
 
@@ -55,6 +68,7 @@ const onClickPageShow = (id) => {
             document.getElementById("rejected-request").style.display = "none";
             document.getElementById("registered-account").style.display = "none";
             document.getElementById("banned-account").style.display = "none";
+            document.getElementById("activity-log-section").style.display = "none";
             break;
         case "account-request":
             document.getElementById("account-register").style.display = "none";
@@ -62,6 +76,7 @@ const onClickPageShow = (id) => {
             document.getElementById("rejected-request").style.display = "none";
             document.getElementById("registered-account").style.display = "none";
             document.getElementById("banned-account").style.display = "none";
+            document.getElementById("activity-log-section").style.display = "none";
             break;
         case "account-rejected":
             document.getElementById("account-register").style.display = "none";
@@ -69,6 +84,7 @@ const onClickPageShow = (id) => {
             document.getElementById("rejected-request").style.display = "flex";
             document.getElementById("registered-account").style.display = "none";
             document.getElementById("banned-account").style.display = "none";
+            document.getElementById("activity-log-section").style.display = "none";
             break;
         case "account-registered":
             document.getElementById("account-register").style.display = "none";
@@ -76,6 +92,7 @@ const onClickPageShow = (id) => {
             document.getElementById("rejected-request").style.display = "none";
             document.getElementById("registered-account").style.display = "flex";
             document.getElementById("banned-account").style.display = "none";
+            document.getElementById("activity-log-section").style.display = "none";
             break;
         case "account-banned":
             document.getElementById("account-register").style.display = "none";
@@ -83,6 +100,15 @@ const onClickPageShow = (id) => {
             document.getElementById("rejected-request").style.display = "none";
             document.getElementById("registered-account").style.display = "none";
             document.getElementById("banned-account").style.display = "flex";
+            document.getElementById("activity-log-section").style.display = "none";
+            break;
+        case "activity-log":
+            document.getElementById("account-register").style.display = "none";
+            document.getElementById("requests-account").style.display = "none";
+            document.getElementById("rejected-request").style.display = "none";
+            document.getElementById("registered-account").style.display = "none";
+            document.getElementById("banned-account").style.display = "none";
+            document.getElementById("activity-log-section").style.display = "flex";
     }
 }
 

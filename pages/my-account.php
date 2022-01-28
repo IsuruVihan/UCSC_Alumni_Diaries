@@ -27,6 +27,8 @@
         onclick='onclickProjects()' target='iframe'>Involved Projects</a>
         <a href='my-account/subscription.php' class='section-link ' id='subscriptions'
            onclick='onclickSubscriptions()' target='iframe'>Subscriptions</a>
+        <a href='my-account/activity-log.php' class='section-link ' id='activity-log'
+           onclick='onclickActivityLog()' target='iframe'>Activity Log</a>
     </div>
     <iframe
         class='section-2'

@@ -21,6 +21,13 @@ if(!empty($row1["PicSrc"])){
     $results2 = mysqli_query($conn, $query2);
 }
 
+// Activity
+$query7 = "
+    INSERT INTO activitylog (Email, Section, Activity)
+    VALUES ('{$_SESSION['Email']}', 'Chat', 'Delete a group chat message')
+";
+mysqli_query($conn, $query7);
+
 $query = "SELECT Id, ChatId, SenderEmail, Message, PicSrc, Timestamp FROM chatmessages
           WHERE isGroupChat='1' AND ChatId='{$chatId}' ORDER BY Timestamp";
 $results = mysqli_query($conn, $query);

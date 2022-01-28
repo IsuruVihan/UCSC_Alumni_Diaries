@@ -29,6 +29,14 @@ if (mysqli_num_rows($results) > 0) {
                     $result4=mysqli_query($conn, $query4);
                 }
             }
+    
+            // Activity
+            $query7 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Chat', 'Deleted a chat group')
+            ";
+            mysqli_query($conn, $query7);
+            
             echo "Group has been deleted successfully";
         } else {
             echo "Server error";

@@ -1,5 +1,6 @@
 <?php
     
+    include('../../session.php');
     include('../../../db/db-conn.php');
     
     $Id = $_POST['Id'];
@@ -19,6 +20,13 @@
             $query2 = "UPDATE projects SET Name='{$Name}', Description='{$Description}' WHERE Id='{$Id}'";
             if (mysqli_query($conn, $query2)) {
                 echo "<span class='message-success'>All changes has been saved</span>";
+    
+                // Activity
+                $query3 = "
+                    INSERT INTO activitylog (Email, Section, Activity)
+                    VALUES ('{$_SESSION['Email']}', 'Projects - Not Started', 'Changed project details of Project (ID): {$Id}')
+                ";
+                mysqli_query($conn, $query3);
             } else {
                 echo "<span class='message-error'>Server Error: " . mysqli_error($conn) . "</span>";
             }

@@ -123,6 +123,13 @@ if (mysqli_num_rows($results) > 0) {
 
     $pdf->Output();
     ob_end_flush();
+    
+    // Activity
+    $query4 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Admin - Accounts', 'Rejected member account request (EMAIL): {$row['Email']} Accepted')
+    ";
+    mysqli_query($conn, $query4);
 } else {
     echo "No data";
 }

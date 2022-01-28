@@ -12,14 +12,21 @@ $row1 = mysqli_fetch_assoc($results1);
 
 if(!empty($row1["PicSrc"])){
     $PicSrc = $row1["PicSrc"];
-    $query2 = "DELETE FROM chatmessages WHERE Id = '{$id}' AND isGroupChat = '0' ";
+    $query2 = "DELETE FROM chatmessages WHERE Id = '{$id}' AND isGroupChat = '0'";
     $results2 = mysqli_query($conn, $query2);
     $currentFile = '../../uploads/private-chat-files/'.$PicSrc;
     unlink($currentFile);
 }else{
-    $query2 = "DELETE FROM chatmessages WHERE Id = '{$id}' AND isGroupChat = '0' ";
+    $query2 = "DELETE FROM chatmessages WHERE Id = '{$id}' AND isGroupChat = '0'";
     $results2 = mysqli_query($conn, $query2);
 }
+
+// Activity
+$query7 = "
+    INSERT INTO activitylog (Email, Section, Activity)
+    VALUES ('{$_SESSION['Email']}', 'Chat', 'Delete a private chat message')
+";
+mysqli_query($conn, $query7);
 
 $query = "SELECT Id, ChatId, SenderEmail, Message, PicSrc, Timestamp FROM chatmessages
           WHERE isGroupChat='0' AND ChatId='{$chatId}' ORDER BY Timestamp";

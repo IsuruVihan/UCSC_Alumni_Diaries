@@ -68,10 +68,15 @@
 
     if (mysqli_num_rows($results13) > 0) {
         while ($row13 = mysqli_fetch_assoc($results13)) {  
-            $query12 = "INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}','{$row11['Name']} has been completed by {$_SESSION['Email']}')
-            ";
+            $query12 = "INSERT INTO notifications (Email,Message) VALUES ('{$row13['Email']}','{$row11['Name']} has been completed by {$_SESSION['Email']}')";
             mysqli_query($conn, $query12);
-        
+    
+            // Activity
+            $query16 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Completed Project (ID): {$ProjectId}')
+            ";
+            mysqli_query($conn, $query16);
         }
     }
 
@@ -80,10 +85,8 @@
 
     if (mysqli_num_rows($results14) > 0) {
         while ($row14 = mysqli_fetch_assoc($results14)) {  
-            $query15 = "INSERT INTO notifications (Email,Message) VALUES ('{$row14['Email']}','{$row11['Name']} has been completed by {$_SESSION['Email']}')
-            ";
+            $query15 = "INSERT INTO notifications (Email,Message) VALUES ('{$row14['Email']}','{$row11['Name']} has been completed by {$_SESSION['Email']}')";
             mysqli_query($conn, $query15);
-        
         }
     }
     echo "Project has been completed successfully!";

@@ -24,10 +24,15 @@ while ($row = mysqli_fetch_assoc($results)) {
             
             if (mysqli_num_rows($results3) > 0) {
                 while ($row3 = mysqli_fetch_assoc($results3)) {  
-                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','Member account of {$row['FirstName']} {$row['LastName']} banned by {$_SESSION['Email']}')
-                    ";
+                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','Member account of {$row['FirstName']} {$row['LastName']} banned by {$_SESSION['Email']}')";
                     mysqli_query($conn, $query4);
-                
+    
+                    // Activity
+                    $query5 = "
+                        INSERT INTO activitylog (Email, Section, Activity)
+                        VALUES ('{$_SESSION['Email']}', 'Admin - Accounts', 'Registered member (EMAIL): {$Email} Banned')
+                    ";
+                    mysqli_query($conn, $query5);
                 }
             } 
             echo "

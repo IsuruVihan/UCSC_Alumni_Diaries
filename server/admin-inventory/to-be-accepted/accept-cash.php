@@ -97,10 +97,17 @@ if (mail(
                  
         if (mysqli_num_rows($results15) > 0) {
             while ($row15 = mysqli_fetch_assoc($results15)) {  
-                $query16 = "INSERT INTO notifications (Email,Message) VALUES ('{$row15['Email']}','Rs.' '$amount' ' ' 'Cash Donation made by' ' ' '{$email}' ' ' 'has been accepted to the' ' ' '{$row6['Name']}')
-                 ";
+                $query16 = "
+                    INSERT INTO notifications (Email,Message) VALUES ('{$row15['Email']}', 'Rs. $amount Cash Donation made by {$email} has been accepted to the {$row6['Name']}')
+                ";
                  mysqli_query($conn, $query16);
-                     
+    
+                // Activity
+                $query17 = "
+                    INSERT INTO activitylog (Email, Section, Activity)
+                    VALUES ('{$_SESSION['Email']}', 'Admin - Inventory', 'Cash donation (ID): {$id} for association accepted')
+                ";
+                mysqli_query($conn, $query17);
             }
         }
        

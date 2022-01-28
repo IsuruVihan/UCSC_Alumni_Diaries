@@ -18,6 +18,14 @@
     $query9 = "SELECT * FROM projectcashspendings WHERE ProjectId='{$ProjectId}'";
     
     mysqli_query($conn, $query);
+    
+    // Activity
+    $query10 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Deleted Cash spend request (ID): {$RequestId} of Project (ID): {$ProjectId}')
+    ";
+    mysqli_query($conn, $query10);
+    
     $results2 = mysqli_query($conn, $query2);
     $results3 = mysqli_query($conn, $query3);
     $results9 = mysqli_query($conn, $query9);

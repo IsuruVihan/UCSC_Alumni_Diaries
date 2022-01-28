@@ -70,10 +70,15 @@ while ($row = mysqli_fetch_assoc($result)) {
             
             if (mysqli_num_rows($results2) > 0) {
                 while ($row2 = mysqli_fetch_assoc($results2)) {  
-                    $query3 = "INSERT INTO notifications (Email,Message) VALUES ('{$row2['Email']}','{$row1['FirstName']} {$row1['LastName']}   member account request has been accept by {$_SESSION['Email']}')
-                    ";
+                    $query3 = "INSERT INTO notifications (Email,Message) VALUES ('{$row2['Email']}','{$row1['FirstName']} {$row1['LastName']}   member account request has been accept by {$_SESSION['Email']}')";
                     mysqli_query($conn, $query3);
-                
+    
+                    // Activity
+                    $query4 = "
+                        INSERT INTO activitylog (Email, Section, Activity)
+                        VALUES ('{$_SESSION['Email']}', 'Admin - Accounts', 'Member account request (EMAIL): {$row['Email']} accepted')
+                    ";
+                    mysqli_query($conn, $query4);
                 }
             }         
                 echo "

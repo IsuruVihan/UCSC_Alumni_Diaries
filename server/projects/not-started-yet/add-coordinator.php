@@ -37,10 +37,15 @@
 
             if (mysqli_num_rows($results5) > 0) {
                 while ($row5 = mysqli_fetch_assoc($results5)) {  
-                    $query6 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}','you have been added as cordinator of project {$row4['Name']} by {$_SESSION['Email']}')
-                    ";
+                    $query6 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}','you have been added as cordinator of project {$row4['Name']} by {$_SESSION['Email']}')";
                     mysqli_query($conn, $query6);
-                
+    
+                    // Activity
+                    $query7 = "
+                        INSERT INTO activitylog (Email, Section, Activity)
+                        VALUES ('{$_SESSION['Email']}', 'Projects - Not Started', 'Added {$row5['Email']} as a coordinator for Project (ID): {$ProjectId}')
+                    ";
+                    mysqli_query($conn, $query7);
                 }
             }
 

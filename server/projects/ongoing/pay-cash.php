@@ -37,6 +37,13 @@
                 $query12 = "UPDATE projectcash SET Amount='{$Balance}' WHERE ProjectId='{$ProjectId}'";
                 mysqli_query($conn, $query12);
                 echo "Transaction has been completed successfully";
+    
+                // Activity
+                $query12 = "
+                    INSERT INTO activitylog (Email, Section, Activity)
+                    VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Cash spend for request (ID): {$RequestId} in Project (ID): {$ProjectId}')
+                ";
+                mysqli_query($conn, $query12);
             } else {
                 echo "No enough cash to complete the transaction";
             }

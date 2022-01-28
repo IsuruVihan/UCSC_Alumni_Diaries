@@ -1,5 +1,7 @@
 <?php
-include('../../db/db-conn.php');
+
+    include('../../db/db-conn.php');
+    include('../session.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cash_donor = $_POST['cash-donor'];
@@ -46,6 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount) VALUES ('$cash_donor','$cash_email','$Project_Id','$fileNameNew','$cash_amount') ";
             $result = mysqli_query($conn, $query);
         }
+        
+        // Activity
+        $query4 = "
+            INSERT INTO activitylog (Email, Section, Activity)
+            VALUES ('{$_SESSION['Email']}', 'Projects - All', 'Donated LKR {$cash_amount} for Project: (ID) {$Project_Id}')
+        ";
+        mysqli_query($conn, $query4);
+        
         //notification
         $query2 = "SELECT DonorName, Amount FROM cashdonations WHERE DonorName= '{$cash_donor}'";  
         $results2 = mysqli_query($conn, $query2);

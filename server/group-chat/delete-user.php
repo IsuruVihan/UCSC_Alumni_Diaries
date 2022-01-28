@@ -17,5 +17,13 @@ if ($results) {
 
     $query2 = "INSERT INTO notifications (Email,Message) VALUES ('$email','You Have been remove from the $Group_Name Group By $Owner_Email')";
     $result2=mysqli_query($conn, $query2);
+    
+    // Activity
+    $query7 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Chat', 'Removed a group chat participant')
+    ";
+    mysqli_query($conn, $query7);
+    
     echo"User has been delete from your group chat list";
 }

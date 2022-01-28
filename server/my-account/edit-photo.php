@@ -53,6 +53,14 @@ elseif ($uploadOk == 0) {
         $_SESSION['PicSrc'] = $newFileSrc;
         $query = "UPDATE registeredmembers SET PicSrc='{$_SESSION['PicSrc']}' WHERE Email='{$_SESSION['Email']}'";
         mysqli_query($conn, $query);
+    
+        // Activity
+        $query7 = "
+            INSERT INTO activitylog (Email, Section, Activity)
+            VALUES ('{$_SESSION['Email']}', 'My Account', 'Edited profile picture')
+        ";
+        mysqli_query($conn, $query7);
+        
         echo "The file ". htmlspecialchars( basename( $_FILES["new-photo"]["name"])). " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file. ";

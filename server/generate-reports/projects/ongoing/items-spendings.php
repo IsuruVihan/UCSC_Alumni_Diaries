@@ -88,3 +88,10 @@
     
     $pdf->Output();
     ob_end_flush();
+    
+    // Activity
+    $query16 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Projects - Ongoing', 'Item spent record of Project (ID): {$ProjectId} - Report generated')
+    ";
+    mysqli_query($conn, $query16);

@@ -25,10 +25,15 @@ if (mysqli_num_rows($results2) > 0) {
                 
                 if (mysqli_num_rows($results3) > 0) {
                     while ($row3 = mysqli_fetch_assoc($results3)) {  
-                        $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['FirstName']} {$row2['LastName']} member account request has been delete by {$_SESSION['Email']}')
-                        ";
+                        $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['FirstName']} {$row2['LastName']} member account request has been delete by {$_SESSION['Email']}')";
                         mysqli_query($conn, $query4);
-                    
+    
+                        // Activity
+                        $query5 = "
+                            INSERT INTO activitylog (Email, Section, Activity)
+                            VALUES ('{$_SESSION['Email']}', 'Admin - Accounts', 'Rejected member account request (EMAIL): {$row2['Email']} Deleted')
+                        ";
+                        mysqli_query($conn, $query5);
                     }
                 }  
                 echo "

@@ -1,4 +1,6 @@
 <?php
+    
+    include('../session.php');
     $conn = mysqli_connect("localhost", "root", "", "ucsc_alumni_diaries");
     
     $errors = "";
@@ -80,10 +82,15 @@
                     
                     if (mysqli_num_rows($results3) > 0) {
                         while ($row3 = mysqli_fetch_assoc($results3)) {  
-                            $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','A Suggestion has been submitted by {$row2['Email']}')
-                            ";
+                            $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','A Suggestion has been submitted by {$row2['Email']}')";
                             mysqli_query($conn, $query4);
-                        
+    
+                            // Activity
+                            $query5 = "
+                                INSERT INTO activitylog (Email, Section, Activity)
+                                VALUES ('{$_SESSION['Email']}', 'Suggestions', 'Suggestion submitted')
+                            ";
+                            mysqli_query($conn, $query5);
                         }
                     }      
                     $messages = "Your suggestion has been submitted successfully";

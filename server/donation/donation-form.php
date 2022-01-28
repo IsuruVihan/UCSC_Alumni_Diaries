@@ -1,6 +1,7 @@
 <?php
 
 include('../../db/db-conn.php');
+include('../session.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fileNameNew = '';
@@ -59,10 +60,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if (mysqli_num_rows($results3) > 0) {
             while ($row3 = mysqli_fetch_assoc($results3)) {  
-                $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['DonorName']} has donate Rs.{$row2['Amount']} to the association')
+                $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}','{$row2['DonorName']} has donate Rs.{$row2['Amount']} to the association')";
+                mysqli_query($conn, $query4);
+    
+                // Activity
+                $query4 = "
+                    INSERT INTO activitylog (Email, Section, Activity)
+                    VALUES ('{$_SESSION['Email']}', 'Donations', 'Cash donation of LKR {$donor_amount} submitted for association - Report generated')
                 ";
                 mysqli_query($conn, $query4);
-            
             }
         }        
     }

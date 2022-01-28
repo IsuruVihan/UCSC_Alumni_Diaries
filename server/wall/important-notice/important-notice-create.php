@@ -58,7 +58,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             VALUES ('{$row1['Email']}','New Important Notice has been submitted by {$ownerEmail} on {$noticeTitle}')
             ";
             mysqli_query($conn, $query2);
-        
+    
+            // Activity
+            $query7 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Wall', 'Published an important notice')
+            ";
+            mysqli_query($conn, $query7);
+            
         }
     }
 

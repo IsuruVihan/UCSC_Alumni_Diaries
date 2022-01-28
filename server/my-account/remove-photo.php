@@ -11,5 +11,13 @@ else{
     $_SESSION['PicSrc'] = 'user-default.png';
     $query = "UPDATE registeredmembers SET PicSrc='user-default.png' WHERE Email='{$_SESSION['Email']}'";
     mysqli_query($conn, $query);
+    
+    // Activity
+    $query7 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Wall', 'Removed the profile picture')
+    ";
+    mysqli_query($conn, $query7);
+    
     echo "Your profile picture has been removed.";
 }

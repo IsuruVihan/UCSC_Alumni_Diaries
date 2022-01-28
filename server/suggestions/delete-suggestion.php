@@ -26,8 +26,15 @@
                         mysqli_query($conn, $query5);
                     
                     }
-                }      
-
+                }
+    
+                // Activity
+                $query6 = "
+                    INSERT INTO activitylog (Email, Section, Activity)
+                    VALUES ('{$_SESSION['Email']}', 'Suggestions', 'Suggestion (ID): {$id} deleted')
+                ";
+                mysqli_query($conn, $query6);
+                
                 echo "Suggestion has been deleted successfully";
             } else {
                 echo "Server error";

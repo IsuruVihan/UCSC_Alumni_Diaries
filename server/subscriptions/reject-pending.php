@@ -22,11 +22,17 @@
                     
             }
         }
-        $query8 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}', 'your subscription has been rejected by {$_SESSION['Email']}')
-        ";
+        $query8 = "INSERT INTO notifications (Email,Message) VALUES ('{$row5['Email']}', 'your subscription has been rejected by {$_SESSION['Email']}')";
         mysqli_query($conn, $query8);
-
-                echo "Rejected!";
-        }else {
-              echo "Server error";
-           }
+    
+        // Activity
+        $query9 = "
+            INSERT INTO activitylog (Email, Section, Activity)
+            VALUES ('{$_SESSION['Email']}', 'Admin - Subscriptions', 'Pending subscription (ID): {$id} Rejected')
+        ";
+        mysqli_query($conn, $query9);
+        
+        echo "Rejected!";
+    } else {
+        echo "Server error";
+    }

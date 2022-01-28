@@ -36,6 +36,13 @@ if(isset($_POST['submit'])){
                         '$group_name'
                   )";  
                   if (mysqli_query($conn, $query)) {
+                      // Activity
+                      $query7 = "
+                        INSERT INTO activitylog (Email, Section, Activity)
+                        VALUES ('{$_SESSION['Email']}', 'Chat', 'Created a chat group')
+                      ";
+                      mysqli_query($conn, $query7);
+                      
                      header("Location: ../../pages/group-chat/group-chat.php");
                   }else{
                   echo "Server error";

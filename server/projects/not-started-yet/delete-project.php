@@ -1,5 +1,6 @@
 <?php
     
+    include('../../session.php');
     include('../../../db/db-conn.php');
     
     $Id = $_POST['Id'];
@@ -23,6 +24,13 @@
     if (!mysqli_query($conn, $query4)) {
         $haveErrors = 1;
     }
+    
+    // Activity
+    $query5 = "
+        INSERT INTO activitylog (Email, Section, Activity)
+        VALUES ('{$_SESSION['Email']}', 'Projects - Not Started', 'Deleted Project (ID): {$Id}')
+    ";
+    mysqli_query($conn, $query5);
     
     if ($haveErrors == 1) {
         echo "<span class='message-error'>Server Error: " . mysqli_error($conn) . "</span>";

@@ -1,5 +1,6 @@
 <?php
-
+    
+    include('../../../session.php');
 include('../../../../db/db-conn.php');
 include('../../../email/body-templates/MemberAccountRemoved.php');
 
@@ -27,6 +28,13 @@ while ($row = mysqli_fetch_assoc($results)) {
                             <b>{$row['FirstName']} {$row['LastName']}</b> member account has been removed
                         </div>
                     ";
+    
+                    // Activity
+                    $query5 = "
+                        INSERT INTO activitylog (Email, Section, Activity)
+                        VALUES ('{$_SESSION['Email']}', 'Admin - Accounts', 'Registered member (EMAIL): {$Email} Removed')
+                    ";
+                    mysqli_query($conn, $query5);
                 } else {
                     echo "
                         <div class='error-message'>Server Error: " . mysqli_error($conn) . "</div>

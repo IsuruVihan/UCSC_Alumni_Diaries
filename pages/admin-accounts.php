@@ -18,6 +18,11 @@
                 + '#signup-address').val('');
         });
 
+        $('#activity-filter').submit((event) => {
+            event.preventDefault();
+            alert('Tahikei');
+        });
+        
         $('#signup-form').submit((event) => {
             event.preventDefault();
             let isComplete = true;
@@ -157,6 +162,19 @@
                 Batch: batch
             });
         });
+
+        $('#activity-log-users').load("../server/admin/accounts/activity-log/render-list.php");
+        $('#activity-log-filter').submit((event) => {
+            event.preventDefault();
+            const firstName = $('#activity-log-fname').val();
+            const lastName = $('#activity-log-lname').val();
+            const batch = $('#activity-log-batch').val();
+            $('#activity-log-users').load("../server/admin/accounts/activity-log/filter.php", {
+                FirstName: firstName,
+                LastName: lastName,
+                Batch: batch
+            });
+        });
     });
     
     const ViewMemberAccountRequestDetails = (id) => {
@@ -214,6 +232,11 @@
             Email: email
         });
     }
+    const ViewMemberActivityLog = (email) => {
+        $('#result-details').load("../server/admin/accounts/activity-log/view-details.php", {
+            Email: email
+        });
+    }
     const RemoveBannedAccount = (email) => {
         $('#message-container').load("../server/admin/accounts/banned/remove-account.php", {
             Email: email
@@ -224,16 +247,17 @@
             Email: email
         });
     }
+    const FilterUserActivities = (email, from, to, section) => {
+        $('#activity-items').load("../server/admin/accounts/activity-log/activity-filter.php", {
+            Email: email,
+            From: from,
+            To: to,
+            Section: section.options[section.selectedIndex].value
+        });
+    }
 </script>
 
-<div id='message-container'>
-<!--    <div class='error-message'>-->
-<!--        Hello World-->
-<!--    </div>-->
-<!--    <div class='success-message'>-->
-<!--        Hello World-->
-<!--    </div>-->
-</div>
+<div id='message-container'></div>
 <div class='main-container'>
     <p class='breadcrumb'>
         <a href='home.php'>Home</a> /
@@ -274,6 +298,12 @@
                 target='iframe'
                 onclick="onClickState('account-banned'); onClickPageShow('account-banned')"
             >Banned</a>
+            <a
+                class='iframe-nav-link'
+                id='activity-log'
+                target='iframe'
+                onclick="onClickState('activity-log'); onClickPageShow('activity-log')"
+            >Activity Log</a>
         </div>
         <div class='iframe-display'>
             <!-- Register form -->
@@ -388,18 +418,7 @@
                         <input type='submit' class='filter-btn btn' value='Filter'/>
                     </div>
                 </form>
-                <div class='results' id='registered-members'>
-                    <!--
-                    <div class='result' onmouseover="DisplayButtons('reg-1')" onmouseout="HideButtons('reg-1')">
-                        <p class='request-id'>FirstName</p>
-                        <p class='request-id'>LastName</p>
-                        <p class='request-id'>Batch</p>
-                        <div class='buttons' id='reg-1'>
-                            <button class='view-btn btn'>View</button>
-                        </div>
-                    </div>
-                    -->
-                </div>
+                <div class='results' id='registered-members'></div>
             </div>
             <!-- rejected accounts -->
             <div class='card rejected-requests' id='rejected-request'>
@@ -434,17 +453,7 @@
                         <input type='submit' class='filter-btn btn' value='Filter'/>
                     </div>
                 </form>
-                <div class='results' id='rejected-member-account-requests'>
-                    <!--
-                    <div class='result' onmouseover=DisplayButtons('rej-req-1') onmouseout=HideButtons('rej-req-1')>
-                        <p class='request-id'>RequestID 1</p>
-                        <div class='buttons' id='rej-req-1'>
-                            <button class='view-btn btn'>View</button>
-                            <button class='delete-btn btn'>Delete</button>
-                        </div>
-                    </div>
-                    -->
-                </div>
+                <div class='results' id='rejected-member-account-requests'></div>
             </div>
             <!-- banned accounts -->
             <div class='card banned' id='banned-account'>
@@ -479,18 +488,7 @@
                         <input type='submit' class='filter-btn btn' value='Filter'/>
                     </div>
                 </form>
-                <div class='results' id='banned-member-accounts'>
-                    <!--
-                    <div class='result' onmouseover="DisplayButtons('ban-7')" onmouseout="HideButtons('ban-7')">
-                        <p class='request-id'>FirstName</p>
-                        <p class='request-id'>LastName</p>
-                        <p class='request-id'>Batch</p>
-                        <div class='buttons' id='ban-7'>
-                            <button class='view-btn btn'>View</button>
-                        </div>
-                    </div>
-                    -->
-                </div>
+                <div class='results' id='banned-member-accounts'></div>
             </div>
             <!-- account requests -->
             <div class='card account-requests' id='requests-account'>
@@ -525,96 +523,71 @@
                         <input type='submit' class='filter-btn btn' value='Filter'/>
                     </div>
                 </form>
-                <div class='results' id='member-account-requests'>
-                    <!--
-                    <div class='result' onmouseover=DisplayButtons('acc-req-7') onmouseout=HideButtons('acc-req-7')>
-                        <p class='request-id'>RequestID 7</p>
-                        <div class='buttons' id='acc-req-7'>
-                            <button class='view-btn btn' id='acc-req-7'>View</button>
-                        </div>
+                <div class='results' id='member-account-requests'></div>
+            </div>
+            <!-- activity log -->
+            <div class='card activity-log' id='activity-log-section'>
+                <div class='title'>Activity Log</div>
+                <form id='activity-log-filter' class='filter'>
+                    <div class='col1'>
+                        <input id='activity-log-fname' class='input-field' type='text' placeholder='First Name'/>
+                        <input id='activity-log-lname' class='input-field' type='text' placeholder='Last Name'/>
+                        <select id='activity-log-batch' class='input-field'>
+                            <option value='All'>All</option>
+                            <option value='2004/2005'>2004/2005</option>
+                            <option value='2005/2006'>2005/2006</option>
+                            <option value='2006/2007'>2006/2007</option>
+                            <option value='2007/2008'>2007/2008</option>
+                            <option value='2008/2009'>2008/2009</option>
+                            <option value='2009/2010'>2009/2010</option>
+                            <option value='2010/2011'>2010/2011</option>
+                            <option value='2011/2012'>2011/2012</option>
+                            <option value='2012/2013'>2012/2013</option>
+                            <option value='2013/2014'>2013/2014</option>
+                            <option value='2014/2015'>2014/2015</option>
+                            <option value='2015/2016'>2015/2016</option>
+                            <option value='2016/2017'>2016/2017</option>
+                            <option value='2017/2018'>2017/2018</option>
+                            <option value='2018/2019'>2018/2019</option>
+                            <option value='2019/2020'>2019/2020</option>
+                            <option value='2020/2021'>2020/2021</option>
+                            <option value='2021/2022'>2021/2022</option>
+                        </select>
                     </div>
-                    -->
-                </div>
+<!--                    <div class='col1'>-->
+<!--                        <input id='activity-log-from' class='input-field' type='date'/>-->
+<!--                        <input id='activity-log-to' class='input-field' type='date'/>-->
+<!--                        <select id='activity-log-section' class='input-field'>-->
+<!--                            <option value='All'>All</option>-->
+<!--                            <option value='Login'>Log In</option>-->
+<!--                            <option value='Logout'>Log Out</option>-->
+<!--                            <option value='Admin - Accounts'>Admin - Accounts</option>-->
+<!--                            <option value='Admin - Reports'>Admin - Reports</option>-->
+<!--                            <option value='Admin - Subscriptions'>Admin - Subscriptions</option>-->
+<!--                            <option value='Admin - Project Spendings'>Admin - Project Spendings</option>-->
+<!--                            <option value='Admin - Inventory'>Admin - Inventory</option>-->
+<!--                            <option value='Donations'>Donations</option>-->
+<!--                            <option value='Suggestions'>Suggestions</option>-->
+<!--                            <option value='Notifications'>Notifications</option>-->
+<!--                            <option value='Wall'>Wall</option>-->
+<!--                            <option value='Chat'>Chat</option>-->
+<!--                            <option value='My Account'>My Account</option>-->
+<!--                            <option value='Projects - All'>Projects - All</option>-->
+<!--                            <option value='Projects - Not Started'>Projects - Not Started</option>-->
+<!--                            <option value='Projects - Ongoing'>Projects - Ongoing</option>-->
+<!--                            <option value='Projects - Completed'>Projects - Completed</option>-->
+<!--                            <option value='Projects - Closed'>Projects - Closed</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+                    <div class='col2'>
+                        <input type='submit' class='filter-btn btn' value='Filter'/>
+                    </div>
+                </form>
+                <div class='results' id='activity-log-users'></div>
             </div>
         </div>
     </div>
-    <div class='details' id='result-details'>
-        <!--
-        <div class='details-title'>Details</div>
-        <div class='row-1'>
-            <div class='container-1'>
-                <div class='section-1'>
-                    <img src='../assets/images/user-default.png' width='100%' class='user-pic' alt='user-pic'/>
-                    <div class='account-type'>Account Type</div>
-                </div>
-                <div class='section-2'>
-                    <div class='subscription-type'>Subscription Type</div>
-                    <div class='due-date'>Due Date</div>
-                    <button class='recharge-report-btn btn'>Recharge Report</button>
-                </div>
-                <div class='section-3'>
-                    <div class='sec-row-1'>
-                        <button class='accept-btn btn'>Accept</button>
-                        <button class='remove-btn btn'>Remove</button>
-                    </div>
-                    <div class='sec-row-2'>
-                        <button class='ban-btn btn'>Ban</button>
-                        <button class='unban-btn btn'>Unban</button>
-                    </div>
-                </div>
-            </div>
-            <div class='container-2'>
-                <div class='full-name details-field'>Full Name</div>
-                <div class='middle-section'>
-                    <div class='mid-sec-row'>
-                        <div class='first-name details-field'>First Name</div>
-                        <div class='last-name details-field'>Last Name</div>
-                    </div>
-                    <div class='mid-sec-row'>
-                        <div class='gender details-field'>Gender</div>
-                        <div class='batch details-field'>Batch</div>
-                    </div>
-                    <div class='mid-sec-row'>
-                        <div class='nic details-field'>NIC</div>
-                        <div class='contact-number details-field'>Contact Number</div>
-                    </div>
-                </div>
-                <div class='email details-field'>Email</div>
-                <div class='address details-field'>Address</div>
-            </div>
-        </div>
-        
-        <div class='iframe-nav-projectContribution'>
-            <div class='contribution-iframe-link fontColorChange' target='iframe-2' id='contributions'
-                     onclick="fontColorChanger()">
-                Contributions
-            </div>
-            <div class='contribution-iframe-link' target='iframe-2' id='involved-projects'
-                     onclick="fontColorChangerProjects()">
-                Projects
-            </div>
-        </div>
-
-        <div class='iframe-display-projectContribution'>
-            <div class='contributions' id='member-contribution'>
-                <div class='list'>
-                    <div class='result'>
-                        <div class='project-name'>Project Name</div>
-                        <div class='amount'>Amount</div>
-                    </div>
-                </div>
-            </div>
-            <div class='involved-projects' id='member-involved-projects'>
-                <div class='list'>
-                    <div class='result'>
-                        <div class='project-name'>Project Name</div>
-                        <div class='position'>Position</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-    </div>
+    <div class='details' id='result-details'></div>
 </div>
 
 <?php include('../components/footer.php'); ?>

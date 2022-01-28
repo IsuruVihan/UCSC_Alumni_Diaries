@@ -25,12 +25,18 @@ switch ($_POST['click']) {
                       ('{$row2['OwnerEmail']}','{$row1['FirstName']} {$row1['LastName']} has like to your post')
                         ";
             mysqli_query($conn, $query3);
+    
+            // Activity
+            $query7 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Wall', 'Reacted to a post')
+            ";
+            mysqli_query($conn, $query7);
+            
             echo 'done';
-
         break;
 
     case '2' :
-
             $id = $_POST['id'];
             $email = $_SESSION['Email'];
             $react = 'Dislike';
@@ -51,27 +57,47 @@ switch ($_POST['click']) {
                       ('{$row5['OwnerEmail']}','{$row4['FirstName']} {$row4['LastName']} has Dislike to your post')
                         ";
             mysqli_query($conn, $query6);
+    
+            // Activity
+            $query7 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Wall', 'Reacted to a post')
+            ";
+            mysqli_query($conn, $query7);
+            
             echo 'done';
-
         break;
 
     case '3' :
-
             $id = $_POST['id'];
 
             $query = "DELETE FROM reactsforposts WHERE PostId='$id' ";
             $result = mysqli_query($conn, $query);
+    
+            // Activity
+            $query7 = "
+                INSERT INTO activitylog (Email, Section, Activity)
+                VALUES ('{$_SESSION['Email']}', 'Wall', 'Removed a reacted from a post')
+            ";
+            mysqli_query($conn, $query7);
+            
             echo 'done';
-
         break;
 
     case '4' :
-
         $id = $_POST['id'];
         $react = 'Like';
 
-        $query = "UPDATE reactsforposts SET ReactType='$react' WHERE PostId='$id' ";
+        $query = "UPDATE reactsforposts SET ReactType='$react' WHERE PostId='$id'";
         $result = mysqli_query($conn, $query);
+    
+        // Activity
+        $query7 = "
+            INSERT INTO activitylog (Email, Section, Activity)
+            VALUES ('{$_SESSION['Email']}', 'Wall', 'Reacted to a post')
+        ";
+        mysqli_query($conn, $query7);
+        
         echo 'done';
 
         break;
@@ -83,11 +109,15 @@ switch ($_POST['click']) {
 
         $query = "UPDATE reactsforposts SET ReactType='$react' WHERE PostId='$id'";
         $result = mysqli_query($conn, $query);
+    
+        // Activity
+        $query7 = "
+            INSERT INTO activitylog (Email, Section, Activity)
+            VALUES ('{$_SESSION['Email']}', 'Wall', 'Reacted to a post')
+        ";
+        mysqli_query($conn, $query7);
         echo 'done';
-
         break;
-
-
 }
 
         
