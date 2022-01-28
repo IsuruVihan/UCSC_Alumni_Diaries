@@ -213,6 +213,10 @@ body {
     display: none;
 }
 
+.activity-log {
+    display: none;
+}
+
 .details {
     background: white;
     grid-column-start: col3;
