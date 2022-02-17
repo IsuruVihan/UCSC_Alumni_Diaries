@@ -1,6 +1,5 @@
 <?php
     
-    include('../session.php');
     $conn = mysqli_connect("localhost", "root", "", "ucsc_alumni_diaries");
     
     $errors = "";

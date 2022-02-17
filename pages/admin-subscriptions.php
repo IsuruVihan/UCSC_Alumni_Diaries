@@ -1,10 +1,16 @@
 <?php include('../server/session.php'); ?>
 
+<?php
+    if (!(isset($_SESSION['Email']) && $_SESSION['AccType'] == 'TopBoard')) {
+        header('Location: home.php');
+    }
+?>
+
+<?php include('../components/header.php'); ?>
+
 <link rel='stylesheet' href='../assets/styles/admin-subscriptions-iframe.css'/>
 <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
-
-<?php include('../components/header.php'); ?>
 
 <div class='main-container'>
     <p class='breadcrumb'>

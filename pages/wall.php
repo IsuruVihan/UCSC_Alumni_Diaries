@@ -1,4 +1,11 @@
 <?php include('../server/session.php'); ?>
+
+<?php
+    if (!isset($_SESSION['Email'])) {
+        header('Location: home.php');
+    }
+?>
+
 <?php include('../components/header.php'); ?>
 
 
