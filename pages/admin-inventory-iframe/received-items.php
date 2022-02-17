@@ -57,106 +57,13 @@
                        onmouseup="(this.type='date')">
             </div>
             <div class='col3'>
-                <select class='input-avu3'>
-                    <option value="" disabled selected hidden>Project</option>
-                    <option value='2018/2019'>2018/2019</option>
-                    <option value='2018/2019'>2019/2020</option>
-                    <option value='2018/2019'>2020/2021</option>
-                </select>
+                <select class='input-avu3'></select>
             </div>
             <div class='col2'>
                 <button class='filter-btn btn'>Filter</button>
                 <button class='generate-reports-btn btn'>Generate Report</button>
             </div>
         </form>
-        <div class='received-items-container' id='received-items-container'>
-            <div class='received-items-item'>
-                <div class='label'>
-                    Donor's Name :
-                </div>
-                <div class='sec-1'>
-                    {$row1['DonorName']}
-                </div>
-                <div class='label'>
-                    Donor's Email :
-                </div>
-                <div class='sec-1'>
-                    {$row1['Email']}
-                </div>
-                <div class='label'>
-                    Item Name :
-                </div>
-                <div class='sec-1'>
-                    {$row1['DonorName']}
-                </div>
-                <div class='label'>
-                    Item Quantity :
-                </div>
-                <div class='sec-1'>
-                    Item Quantity
-                </div>
-                <div class='sec-3'>
-                    time
-                </div>
-            </div>
-            <div class='received-items-item'>
-                <div class='label'>
-                    Donor's Name :
-                </div>
-                <div class='sec-1'>
-                    Donor Name
-                </div>
-                <div class='label'>
-                    Donor's Email :
-                </div>
-                <div class='sec-1'>
-                    Donor Email
-                </div>
-                <div class='label'>
-                    Item Name :
-                </div>
-                <div class='sec-1'>
-                    Item Name
-                </div>
-                <div class='label'>
-                    Item Quantity :
-                </div>
-                <div class='sec-1'>
-                    Item Quantity
-                </div>
-                <div class='sec-3'>
-                    time
-                </div>
-            </div>
-            <div class='received-items-item'>
-                <div class='label'>
-                    Donor's Name :
-                </div>
-                <div class='sec-1'>
-                    Donor Name
-                </div>
-                <div class='label'>
-                    Donor's Email :
-                </div>
-                <div class='sec-1'>
-                    Donor Email
-                </div>
-                <div class='label'>
-                    Item Name :
-                </div>
-                <div class='sec-1'>
-                    Item Name
-                </div>
-                <div class='label'>
-                    Item Quantity :
-                </div>
-                <div class='sec-1'>
-                    Item Quantity
-                </div>
-                <div class='sec-3'>
-                    time
-                </div>
-            </div>
-        </div>
+        <div class='received-items-container' id='received-items-container'></div>
     </div>
 </div>

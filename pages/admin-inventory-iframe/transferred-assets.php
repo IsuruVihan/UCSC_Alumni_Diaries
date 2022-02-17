@@ -77,52 +77,15 @@
                        onmouseup="(this.type='date')">
             </div>
             <div class='col3'>
-                <select class='input-avu3'>
-                    <option value="" disabled selected hidden>Transferred To</option>
-                    <option value='2018/2019'>2018/2019</option>
-                    <option value='2018/2019'>2019/2020</option>
-                    <option value='2018/2019'>2020/2021</option>
-                </select>
+                <select class='input-avu3'></select>
             </div>
             <div class='col2'>
                 <button class="filter-btn btn">Filter</button>
                 <button class="generate-reports-btn btn">Generate Reports</button>
             </div>
         </form>
-        <div class='cash-transfers-container' id='cash-transfers-container'>
-            <div class='cash-transfers-item'>
-                <div class='label'>
-                    Transferred To :
-                </div>
-                <div class='sec-1'>
-                    Transferred To
-                </div>
-                <div class='label'>
-                    Received From :
-                </div>
-                <div class='sec-1'>
-                    Received From
-                </div>
-                <div class='label'>
-                    Amount :
-                </div>
-                <div class='sec-1'>
-                    Amount
-                </div>
-                <div class='label'>
-                    BIll Attachment :
-                </div>
-                <div class='sec-1'>
-                    Bill Attachment
-                </div>
-                <div class='sec-3'>
-                    time
-                </div>
-            </div>
-        </div>
-        <div class='cash-transfers-total' id='cash-transfers-total'>
-
-        </div>
+        <div class='cash-transfers-container' id='cash-transfers-container'></div>
+        <div class='cash-transfers-total' id='cash-transfers-total'></div>
     </div>
     <div class='item-transfers'>
         <div class='title'>
@@ -140,49 +103,14 @@
                        onmouseup="(this.type='date')">
             </div>
             <div class='col3'>
-                <select class='input-avu3'>
-                    <option value="" disabled selected hidden>Transfer To</option>
-                    <option value='2018/2019'>2018/2019</option>
-                    <option value='2018/2019'>2019/2020</option>
-                    <option value='2018/2019'>2020/2021</option>
-                </select>
+                <select class='input-avu3'></select>
             </div>
             <div class='col2'>
                 <button class="filter-btn btn">Filter</button>
                 <button class="generate-reports-btn btn">Generate Reports</button>
             </div>
         </form>
-        <div class='item-transfers-container' id='item-transfers-container'>
-            <div class='item-transfers-item'>
-                <div class='label'>
-                    Item Name :
-                </div>
-                <div class='sec-1'>
-                    Item Name
-                </div>
-                <div class='label'>
-                    Quantity :
-                </div>
-                <div class='sec-1'>
-                    Quantity
-                </div>
-                <div class='label'>
-                    Transferred To :
-                </div>
-                <div class='sec-1'>
-                    Transferred To
-                </div>
-                <div class='label'>
-                    Received From :
-                </div>
-                <div class='sec-1'>
-                    Received From
-                </div>
-                <div class='sec-3'>
-                    time
-                </div>
-            </div>
-        </div>
+        <div class='item-transfers-container' id='item-transfers-container'></div>
     </div>
 </div>
 
@@ -194,9 +122,5 @@
     $(document).ready(() => {
         $('#transferred-items-filter-field').load("../../server/admin-inventory/transferred-assets/transferred-items-filter-field.php");
     });
-
-</script>
-
-<script>
 
 </script>
