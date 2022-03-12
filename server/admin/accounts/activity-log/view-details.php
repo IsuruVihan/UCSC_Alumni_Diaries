@@ -39,34 +39,36 @@
                 <button class='filter-btn btn' onclick=FilterUserActivities('{$Email}',document.getElementById('activity-log-from').value,document.getElementById('activity-log-to').value,document.getElementById('activity-log-section2'))>Filter</button>
             </div>
         </div>
-        <table id='activity-table' style='text-align: center; border: 1px solid gray; margin-top: 20px;'>
-            <tr style='text-align: center; border: 1px solid black; background: black; color: white;'>
-                <th class='spend-approvals-h-1' style='text-align: center; width: 20%;'>Timestamp</th>
-                <th class='spend-approvals-h-2' style='text-align: center width: 20%;'>Section</th>
-                <th class='spend-approvals-h-3' style='text-align: center width: 60%;'>Activity</th>
-            </tr>
-            <tbody id='activity-items'>
+        <div style='height: 85%; overflow-y: scroll; margin-top: 20px'>
+            <table id='activity-table' style='text-align: center; border: 1px solid gray'>
+                <tr style='text-align: center; border: 1px solid black; background: black; color: white;'>
+                    <th class='spend-approvals-h-1' style='text-align: center; width: 20%;'>Timestamp</th>
+                    <th class='spend-approvals-h-2' style='text-align: center width: 20%;'>Section</th>
+                    <th class='spend-approvals-h-3' style='text-align: center width: 60%;'>Activity</th>
+                </tr>
+                <tbody id='activity-items' style='background: #95a5a6;'>
     ";
     
     if (mysqli_num_rows($results) > 0) {
         while ($row = mysqli_fetch_assoc($results)) {
                 echo "
-                <tr>
-                    <td>{$row['Timestamp']}</td>
-                    <td>{$row['Section']}</td>
-                    <td>{$row['Activity']}</td>
-                </tr>
+                    <tr>
+                        <td>{$row['Timestamp']}</td>
+                        <td>{$row['Section']}</td>
+                        <td>{$row['Activity']}</td>
+                    </tr>
                 ";
         }
     } else {
                 echo "
-                <tr>
-                    <td colspan='3'>No data</td>
-                </tr>
+                    <tr>
+                        <td colspan='3'>No data</td>
+                    </tr>
                 ";
     }
     
     echo "
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     ";

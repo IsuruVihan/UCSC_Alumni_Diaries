@@ -20,7 +20,6 @@
 
         $('#activity-filter').submit((event) => {
             event.preventDefault();
-            alert('Tahikei');
         });
         
         $('#signup-form').submit((event) => {
@@ -554,31 +553,6 @@
                             <option value='2021/2022'>2021/2022</option>
                         </select>
                     </div>
-<!--                    <div class='col1'>-->
-<!--                        <input id='activity-log-from' class='input-field' type='date'/>-->
-<!--                        <input id='activity-log-to' class='input-field' type='date'/>-->
-<!--                        <select id='activity-log-section' class='input-field'>-->
-<!--                            <option value='All'>All</option>-->
-<!--                            <option value='Login'>Log In</option>-->
-<!--                            <option value='Logout'>Log Out</option>-->
-<!--                            <option value='Admin - Accounts'>Admin - Accounts</option>-->
-<!--                            <option value='Admin - Reports'>Admin - Reports</option>-->
-<!--                            <option value='Admin - Subscriptions'>Admin - Subscriptions</option>-->
-<!--                            <option value='Admin - Project Spendings'>Admin - Project Spendings</option>-->
-<!--                            <option value='Admin - Inventory'>Admin - Inventory</option>-->
-<!--                            <option value='Donations'>Donations</option>-->
-<!--                            <option value='Suggestions'>Suggestions</option>-->
-<!--                            <option value='Notifications'>Notifications</option>-->
-<!--                            <option value='Wall'>Wall</option>-->
-<!--                            <option value='Chat'>Chat</option>-->
-<!--                            <option value='My Account'>My Account</option>-->
-<!--                            <option value='Projects - All'>Projects - All</option>-->
-<!--                            <option value='Projects - Not Started'>Projects - Not Started</option>-->
-<!--                            <option value='Projects - Ongoing'>Projects - Ongoing</option>-->
-<!--                            <option value='Projects - Completed'>Projects - Completed</option>-->
-<!--                            <option value='Projects - Closed'>Projects - Closed</option>-->
-<!--                        </select>-->
-<!--                    </div>-->
                     <div class='col2'>
                         <input type='submit' class='filter-btn btn' value='Filter'/>
                     </div>
