@@ -30,35 +30,3 @@
         </tbody>
     </table>
 </div>
-
-
-
-
-
-
-<!--    <div class='projects-container'>-->
-<!--        <div class='projects-item'>-->
-<!--           <p class='item-label'>ProjectName</p>-->
-<!--            <p class='item-label'>Position</p>-->
-<!--        </div>-->
-<!--       <div class='projects-item'>-->
-<!--            <p class='item-label'>ProjectName</p>-->
-<!--            <p class='item-label'>Position</p>-->
-<!--        </div>-->
-<!--        <div class='projects-item'>-->
-<!--            <p class='item-label'>ProjectName</p>-->
-<!--            <p class='item-label'>Position</p>-->
-<!--        </div>-->
-<!--        <div class='projects-item'>-->
-<!--            <p class='item-label'>ProjectName</p>-->
-<!--            <p class='item-label'>Position</p>-->
-<!--        </div>-->
-<!--        <div class='projects-item'>-->
-<!--            <p class='item-label'>ProjectName</p>-->
-<!--            <p class='item-label'>Position</p>-->
-<!--        </div>-->
-<!--        <div class='projects-item'>-->
-<!--            <p class='item-label'>ProjectName</p>-->
-<!--            <p class='item-label'>Position</p>-->
-<!--        </div>-->
-<!--    </div>-->

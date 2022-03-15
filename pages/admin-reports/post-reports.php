@@ -31,52 +31,6 @@
                         Post Reports
                   </div> 
                   <div class='flexbox-container' id='repo'>
-                        <!-- <div class='flexbox-item'>
-                              <div class='rdetails'>
-                                    <div class='propic'>
-                                          <img class='img' src='../../assets/images/user-default.png' width='100%' height=''
-                                               class='user-pic' alt='user-pic'/>
-                                    </div> 
-                                    <div class='reporter'>
-                                          <div class='reporter-name'>
-                                                <div class='fname'>
-                                                      <label class='alllabels'> Reporter Name </label>
-                                                      <div class='first-name list-details'> First Name (Reporter)
-                                                      </div>
-                                                </div>
-                                                <div class='lname'>
-                                                      <label class='alllabels'> </label>
-                                                      <div class='last-name list-details'> Last Name (Reporter)
-                                                      </div>
-                                                </div>
-                                          </div>
-                                          <div class='report-post'>
-                                                <div class='id'>
-                                                      <label class='alllabels'> Reported Post ID </label>
-                                                      <div class='post-id list-details'> Reported Post ID
-                                                      </div>
-                                                </div>
-                                                <div class='owner'>
-                                                      <label class='alllabels'> Post Owner </label>
-                                                      <div class='post-owner list-details'> Post Owner
-                                                      </div>
-                                                </div>
-                                          </div> 
-                                          <div class='cause'>
-                                                <div class='report-cause'>
-                                                      <label class='alllabels'> Cause for Reporting </label>
-                                                      <div class='the-cause list-details'> Cause for Reporting
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div> 
-                              </div> 
-                              <div class='rdelete'>
-                                    <input type='reset' class='delete-btn' value='Delete'>
-                              </div>
-                        </div>  -->
-
-                        
                   </div> <!-- flexbox container -->
             </div> <!-- card reports -->
       </div> <!-- post reports -->

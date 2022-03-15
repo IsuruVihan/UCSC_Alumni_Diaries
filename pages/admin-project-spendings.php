@@ -1,6 +1,14 @@
 <?php include('../server/session.php'); ?>
-<?php include('../components/header.php'); ?>
+
 <?php include('../db/db-conn.php'); ?>
+
+<?php
+    if (!(isset($_SESSION['Email']) && $_SESSION['AccType'] == 'TopBoard')) {
+        header('Location: home.php');
+    }
+?>
+
+<?php include('../components/header.php'); ?>
 
 <link rel="stylesheet" href="../assets/styles/project-spendings.css">
 <script src="https://use.fontawesome.com/3e9045be79.js" >
