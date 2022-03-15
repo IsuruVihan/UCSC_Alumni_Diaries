@@ -40,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (($cash_amount > 0) && filter_var($cash_email, FILTER_VALIDATE_EMAIL)){
         if (!empty($cash_donor) && !empty($cash_email) && !empty($cash_amount) && empty($file_name)) {
-            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, Amount) VALUES ('$cash_donor','$cash_email','$Project_Id','$cash_amount')" ;
+            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, Amount, DonatedFrom) VALUES ('$cash_donor','$cash_email','$Project_Id','$cash_amount', 'Bank')" ;
             $result = mysqli_query($conn, $query);
 
         }
         if (!empty($cash_donor) && !empty($cash_email) && !empty($file_name) && !empty($cash_amount)) {
-            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount) VALUES ('$cash_donor','$cash_email','$Project_Id','$fileNameNew','$cash_amount') ";
+            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount, DonatedFrom) VALUES ('$cash_donor','$cash_email','$Project_Id','$fileNameNew','$cash_amount', 'Bank')";
             $result = mysqli_query($conn, $query);
         }
         

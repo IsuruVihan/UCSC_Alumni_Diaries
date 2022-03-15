@@ -1,5 +1,6 @@
 <?php include('../server/session.php'); ?>
 
+<link rel="stylesheet" href="../assets/styles/payhere-modal.css">
 <link rel='stylesheet' href='../assets/styles/our-projects.css'/>
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
@@ -247,8 +248,18 @@
             $(item_Donator, item_Email,item_Name,item_Quantity).val('');
         
         });
-    }    
-     
+    }
+
+    const PayHereModalOpen = (id) => {
+        const modal = '#PayHereModal-' + id;
+        $(modal).css({display: "block"});
+    }
+
+    const PayHereModalClose = (id) => {
+        const modal = '#PayHereModal-' + id;
+        $(modal).css({display: "none"});
+    }
+    
 </script>
 
 <div class='main-container'>

@@ -1,5 +1,7 @@
-<?php 
+<?php
+
 include('../../db/db-conn.php');
+include('../../deploy/app-credentials.php');
 
 $Id  = $_POST['Id'];
 
@@ -98,10 +100,41 @@ echo"
                 <button class='submit-btn btn' id='submit-cash-{$row['Id']}' onclick=cashDonation('{$row['Id']}')>Submit</button>
                 <input type='reset'  class='cancel-btn btn' id='cancel-cash-{$row['Id']}' value='Cancel' />     
             </div>
-        </form> 
+        </form>
+        <div id='PayHereModal-{$row['Id']}' class='payhere-modal'>
+            <div class='payhere-modal-content'>
+                <span class='payhere-close' id='modal-span-{$row['Id']}' onclick=PayHereModalClose('{$row['Id']}')>&times;</span>
+                <img src='../assets/images/payhere.png' alt='payhere'><br><br>
+                <h2>{$row['Name']}</h2>
+                <form method='post' action='https://sandbox.payhere.lk/pay/checkout'>
+                    <input type='hidden' name='merchant_id' value='1219524'>
+                    <input type='hidden' name='return_url' value='{$URL}UCSC_Alumni_Diaries/pages/our-projects.php'>
+                    <input type='hidden' name='cancel_url' value='{$URL}UCSC_Alumni_Diaries/pages/our-projects.php'>
+                    <input type='hidden' name='notify_url' value='{$URL}UCSC_Alumni_Diaries/server/All-Projects/payhere.php'>
+                    
+                    <label for='first_name'>Name:</label><br>
+                    <input type='text' class='input-field text-field' name='first_name' value='Isuru Harischandra'><br><br>
+                    <label for='email'>Email:</label><br>
+                    <input type='text' class='input-field text-field' name='email' value='isuruvihan@gmail.com'><br><br>
+                    <label for='amount'>Cash Amount (LKR):</label><br>
+                    <input type='text' class='input-field text-field' name='amount' value='1000'><br><br>
+                    
+                    <input type='hidden' name='order_id' value='{$row['Id']}'> <!-- Project ID -->
+                    <input type='hidden' name='items' value='hidden'>
+                    <input type='hidden' name='currency' value='LKR'>
+                    <input type='hidden' name='last_name' value='hidden'>
+                    <input type='hidden' name='phone' value='hidden'>
+                    <input type='hidden' name='address' value='hidden'>
+                    <input type='hidden' name='city' value='hidden'>
+                    <input type='hidden' name='country' value='hidden'>
+                    
+                    <input type='submit' class='submit-btn btn' value='Donate Cash'>
+                </form>
+            </div>
+        </div>
         <div class='container-02'>
             <p class='project-name'>Donate via pay here</p>
-            <button class='pay-btn btn'></button>
+            <button class='pay-btn btn' onclick=PayHereModalOpen('{$row['Id']}')></button>
         </div>
         <form class='container-03' id='item-donation-{$row['Id']}' enctype='multipart/form-data' >
             <div class='title'>
