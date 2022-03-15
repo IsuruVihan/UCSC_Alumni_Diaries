@@ -1,5 +1,13 @@
 <?php include('../server/session.php'); ?>
 
+<?php
+    if (!isset($_SESSION['Email'])) {
+        header('Location: home.php');
+    }
+?>
+
+<?php include('../components/header.php'); ?>
+
 <link rel='stylesheet' href='../assets/styles/ongoing_projects-modal.css' />
 <link rel='stylesheet' href='../assets/styles/ongoing_projects.css' />
 <link rel='stylesheet' href='../assets/styles/ongoing-projects-details.css' />
@@ -19,8 +27,6 @@
 <link rel='stylesheet' href='../assets/styles/ongoing-projects-assets-items-records.css' />
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
-
-<?php include('../components/header.php'); ?>
 
 <script>
     $(document).ready(() => {

@@ -32,6 +32,9 @@
             </div>
         </div>
     </a>
+<?php
+    if (isset($_SESSION['Email'])) {
+        echo "
     <a class='card-link' href='./not-started-yet-projects.php'>
         <div class='card' id='accounts-card'>
             <p class='title'>
@@ -92,6 +95,9 @@
             </div>
         </div>
     </a>
+        ";
+    }
+?>
 </div>
 
 <?php include('../components/footer.php'); ?>

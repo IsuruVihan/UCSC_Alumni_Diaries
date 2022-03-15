@@ -1,11 +1,19 @@
 <?php include('../server/session.php'); ?>
 
+<?php include('../db/db-conn.php'); ?>
+
+<?php
+    if (!isset($_SESSION['Email'])) {
+        header('Location: home.php');
+    }
+?>
+
+<?php include('../components/header.php'); ?>
+
 <link rel='stylesheet' href='../assets/styles/not_started_yet_projects.css'/>
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 <script src='../js/not-started-yet-projects.js'></script>
-
-<?php include('../components/header.php'); ?>
 
 <div class='main-container'>
     <p class='breadcrumb'>
@@ -27,8 +35,6 @@
         >Project details</a>
         
 <?php
-    include('../db/db-conn.php');
-    
     $query = "SELECT * FROM registeredmembers WHERE Email='{$_SESSION['Email']}' AND AccType='TopBoard'";
     $results = mysqli_query($conn, $query);
     if (mysqli_num_rows($results) > 0) {
