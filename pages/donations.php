@@ -118,10 +118,11 @@
 </div>
 <div class='container'>
     <div class='card container-02'>
+        <div class='box'>
+            <p class='project-name'>Donate via pay here</p>
+            <button class='pay-btn btn'></button>
+        </div>
         <form name='donation-form' id='donation-form' methos='post' enctype='multipart/form-data'>
-            <div class='box'>
-                <p> Proceed via pay here..</p>
-            </div>
             <div class='box-01'>
                 <div class='col-03'>
                     <label class='label'> Donor Name </label>

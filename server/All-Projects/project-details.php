@@ -101,7 +101,7 @@ echo"
         </form> 
         <div class='container-02'>
             <p class='project-name'>Donate via pay here</p>
-            <button class='pay-btn btn'>Pay here</button>  
+            <button class='pay-btn btn'></button>
         </div>
         <form class='container-03' id='item-donation-{$row['Id']}' enctype='multipart/form-data' >
             <div class='title'>

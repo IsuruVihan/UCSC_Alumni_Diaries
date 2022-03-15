@@ -105,9 +105,12 @@
             </div>
             <div class='section-10'>
                 <button type="submit" name="bank-slip-submit" id="change-pic-submit" class="submit-btn btn">Submit</button>
-                <button class='pay-pal-btn btn'>Pay Pal</button>
             </div>
         </form>
+        <div class='container-022'>
+            <p class='project-name'>Recharge account via PayHere</p>
+            <button class='pay-btn btn'></button>
+        </div>
     </div>
 </div>
 

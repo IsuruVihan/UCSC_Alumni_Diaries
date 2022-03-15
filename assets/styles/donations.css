@@ -47,11 +47,28 @@
 }
 
 .box {
+  margin-top: 5px;
+  height: 10%;
   display: flex;
-  height: 15%;
-  border-radius: 5px;
-  border: 1px solid lightgray;
+  justify-content: space-around;
+  align-items: center;
   color: gray;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.pay-btn {
+  width: 120px;
+  height: 30px;
+  box-shadow: 2px 4px 8px lightgray;
+  border: none;
+  background: url(../images/payhere.png);
+  background-size: cover;
+  transition: all ease-in-out 0.5s;
+}
+
+.pay-btn:hover {
+  box-shadow: 1px 2px 4px gray;
 }
 
 .box-01 {

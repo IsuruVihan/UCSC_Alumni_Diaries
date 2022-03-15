@@ -143,11 +143,24 @@
 }
 
 .submit-btn,
-.cancel-btn,
-.pay-btn {
+.cancel-btn {
   width: 25%;
   background: #595959;
   border: 1px solid #595959;
+}
+
+.pay-btn {
+  width: 120px;
+  height: 30px;
+  box-shadow: 2px 4px 8px lightgray;
+  border: none;
+  background: url(../images/payhere.png);
+  background-size: cover;
+  transition: all ease-in-out 0.5s;
+}
+
+.pay-btn:hover {
+  box-shadow: 1px 2px 4px gray;
 }
 
 .submit-btn:hover {
@@ -158,11 +171,6 @@
 .cancel-btn:hover {
   background: #f5222d;
   border: 1px solid #f5222d;
-}
-
-.pay-btn:hover {
-  background: #f56522;
-  border: 1px solid #f56522;
 }
 
 .filter-btn {
@@ -297,7 +305,8 @@
   margin-top: 5px;
   height: 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   color: gray;
 }
 
