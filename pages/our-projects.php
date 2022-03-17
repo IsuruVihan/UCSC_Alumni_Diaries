@@ -281,7 +281,7 @@
                 <input class='input-field date-field' type='date' placeholder='End Date'  id='end_date'/>
             </div>
             <div class='col02'>
-                <input type='submit' class='filter-btn btn' value='Filter'></input>
+                <input type='submit' class='filter-btn btn' value='Filter'/>
             </div>
         </form>
         <div class='scroll' id='projectList'>

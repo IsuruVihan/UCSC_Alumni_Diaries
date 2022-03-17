@@ -27,3 +27,14 @@
     $new_Amount = $new_Amount + (double)$payhere_amount;
     $query3 = "UPDATE projectcash SET Amount = '$new_Amount' WHERE ProjectId = '$order_id'";
     mysqli_query($conn, $query3);
+    
+//    $donated_cash = 0;
+//    $query6 = "SELECT CashDonated FROM registeredmembers WHERE Email = '$cash_email'";
+//    $results6 = mysqli_query($conn, $query6);
+//    while ($row6 = mysqli_fetch_assoc($results6)) {
+//        $donated_cash = $row6['CashDonated'];
+//    }
+//    $donated_cash = $donated_cash + $cash_amount;
+//
+//    $query7 = "UPDATE registeredmembers SET CashDonated = '$donated_cash' WHERE Email = '$cash_email'";
+//    mysqli_query($conn, $query7);

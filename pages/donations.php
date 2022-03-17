@@ -149,13 +149,23 @@
     ";
 ?>
                     <label for='first_name'>Name:</label><br>
-                    <input type='text' class='input-field text-field' name='first_name' value='Isuru Harischandra'><br><br>
+                    <input type='text' class='input-field text-field' name='first_name' value=''><br><br>
                     <label for='email'>Email:</label><br>
-                    <input type='text' class='input-field text-field' name='email' value='isuruvihan@gmail.com'><br><br>
+                    <input type='text' class='input-field text-field' name='email' value=''><br><br>
                     <label for='amount'>Cash Amount (LKR):</label><br>
-                    <input type='text' class='input-field text-field' name='amount' value='1000'><br><br>
+                    <input type='text' class='input-field text-field' name='amount' value=''><br><br>
     
+<?php
+    if (isset($_SESSION['Email'])) {
+        echo "
+                    <input type='hidden' name='order_id' value='{$_SESSION['Email']}'>
+        ";
+    } else {
+        echo "
                     <input type='hidden' name='order_id' value='hidden'>
+        ";
+    }
+?>
                     <input type='hidden' name='items' value='hidden'>
                     <input type='hidden' name='currency' value='LKR'>
                     <input type='hidden' name='last_name' value='hidden'>

@@ -20,7 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $file_tmp = $_FILES['files']['tmp_name'][$i];
             $file_type = $_FILES['files']['type'][$i];
             $file_size = $_FILES['files']['size'][$i];
-            $file_ext = strtolower(end(explode('.', $_FILES['files']['name'][$i])));
+            $arr = explode('.', $_FILES['files']['name'][$i]);
+            $file_ext = strtolower(end($arr));
 
             $fileNameNew = uniqid('', true) . "." . $file_ext;
             $file = $path . $fileNameNew;
@@ -55,6 +56,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             VALUES ('{$_SESSION['Email']}', 'Projects - All', 'Donated LKR {$cash_amount} for Project: (ID) {$Project_Id}')
         ";
         mysqli_query($conn, $query4);
+        
+        $donated_cash = 0;
+        $query6 = "SELECT CashDonated FROM registeredmembers WHERE Email = '$cash_email'";
+        $results6 = mysqli_query($conn, $query6);
+        while ($row6 = mysqli_fetch_assoc($results6)) {
+            $donated_cash = $row6['CashDonated'];
+        }
+        $donated_cash = $donated_cash + $cash_amount;
+        
+        $query7 = "UPDATE registeredmembers SET CashDonated = '$donated_cash' WHERE Email = '$cash_email'";
+        mysqli_query($conn, $query7);
         
         //notification
         $query2 = "SELECT DonorName, Amount FROM cashdonations WHERE DonorName= '{$cash_donor}'";  
