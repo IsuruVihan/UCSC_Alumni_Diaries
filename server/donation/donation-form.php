@@ -43,13 +43,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if (($donor_amount > 0) && filter_var($donor_email, FILTER_VALIDATE_EMAIL)){
         if (!empty($donor_name) && !empty($donor_email) && !empty($donor_amount) && empty($file_name)) {
-            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, Amount) VALUES ('$donor_name','$donor_email','Association','$donor_amount')";
+            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, Amount, DonatedFrom) VALUES ('$donor_name','$donor_email','Association','$donor_amount', 'Bank')";
             $result = mysqli_query($conn, $query);
         }
         if (!empty($donor_name) && !empty($donor_email)  && !empty($donor_amount) && !empty($file_name)) {
-            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount) VALUES ('$donor_name','$donor_email','Association','$fileNameNew','$donor_amount')";
+            $query = "INSERT INTO cashdonations (DonorName, DonorEmail, DonationFor, PayslipSrc, Amount, DonatedFrom) VALUES ('$donor_name','$donor_email','Association','$fileNameNew','$donor_amount', 'Bank')";
             $result = mysqli_query($conn, $query);
         }
+    
+        $donated_cash = 0;
+        $query6 = "SELECT CashDonated FROM registeredmembers WHERE Email = '$donor_email'";
+        $results6 = mysqli_query($conn, $query6);
+        while ($row6 = mysqli_fetch_assoc($results6)) {
+            $donated_cash = $row6['CashDonated'];
+        }
+        $donated_cash = $donated_cash + $donor_amount;
+    
+        $query7 = "UPDATE registeredmembers SET CashDonated = '$donated_cash' WHERE Email = '$donor_email'";
+        mysqli_query($conn, $query7);
+        
         //notification
         $query2 = "SELECT DonorName, Amount FROM cashdonations WHERE DonorName= '{$donor_name}'";  
         $results2 = mysqli_query($conn, $query2);

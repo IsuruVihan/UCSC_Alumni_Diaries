@@ -240,14 +240,6 @@
             const modal = '#myModal-' + id;
             $(modal).css({display: "none"});
         }
-        // $(window).click(function(e) {
-        //     const id= e.target.id;
-        //     const modal=document.getElementById(id);
-        // //meke target.id === myModal kiyana eke aga number ekak vatenna hadanna.ethakota
-        //     if (e.target.id === 'myModal-23') {
-        //                 modal.style.display = "none";
-        //             }
-        // });
 
         const DisplayPostReport = (id) => {
             const postReport = '#post-report-box-'+id;

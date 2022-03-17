@@ -1,9 +1,11 @@
 <?php include('../server/session.php'); ?>
 
+<link rel="stylesheet" href="../assets/styles/payhere-modal.css">
 <link rel='stylesheet' href='../assets/styles/donations.css'/>
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
       integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous'/>
 
+<?php include('../deploy/app-credentials.php'); ?>
 <?php include('../components/header.php'); ?>
 <script>
     $(document).ready(()=>{
@@ -107,6 +109,16 @@
             }
         }); 
     });
+    
+    const PayHereModalOpen = () => {
+        const modal = '#PayHereModal';
+        $(modal).css({display: "block"});
+    }
+
+    const PayHereModalClose = () => {
+        const modal = '#PayHereModal';
+        $(modal).css({display: "none"});
+    }
 </script>
 <div class='main-container'>
     <p class='breadcrumb'>
@@ -118,10 +130,55 @@
 </div>
 <div class='container'>
     <div class='card container-02'>
-        <form name='donation-form' id='donation-form' methos='post' enctype='multipart/form-data'>
-            <div class='box'>
-                <p> Proceed via pay here..</p>
+        <div class='box'>
+            <p class='project-name'>Donate via pay here</p>
+            <button class='pay-btn btn' onclick=PayHereModalOpen()></button>
+        </div>
+        <div id='PayHereModal' class='payhere-modal'>
+            <div class='payhere-modal-content'>
+                <span class='payhere-close' id='modal-span' onclick=PayHereModalClose()>&times;</span>
+                <img src='../assets/images/payhere.png' alt='payhere'><br><br>
+                <h2>UCSC Alumni Association</h2>
+                <form method='post' action='https://sandbox.payhere.lk/pay/checkout'>
+                    <input type='hidden' name='merchant_id' value='1219524'>
+<?php
+    echo "
+                    <input type='hidden' name='return_url' value='{$URL}UCSC_Alumni_Diaries/pages/donations.php'>
+                    <input type='hidden' name='cancel_url' value='{$URL}UCSC_Alumni_Diaries/pages/donations.php'>
+                    <input type='hidden' name='notify_url' value='{$URL}UCSC_Alumni_Diaries/server/donation/payhere.php'>
+    ";
+?>
+                    <label for='first_name'>Name:</label><br>
+                    <input type='text' class='input-field text-field' name='first_name' value=''><br><br>
+                    <label for='email'>Email:</label><br>
+                    <input type='text' class='input-field text-field' name='email' value=''><br><br>
+                    <label for='amount'>Cash Amount (LKR):</label><br>
+                    <input type='text' class='input-field text-field' name='amount' value=''><br><br>
+    
+<?php
+    if (isset($_SESSION['Email'])) {
+        echo "
+                    <input type='hidden' name='order_id' value='{$_SESSION['Email']}'>
+        ";
+    } else {
+        echo "
+                    <input type='hidden' name='order_id' value='hidden'>
+        ";
+    }
+?>
+                    <input type='hidden' name='items' value='hidden'>
+                    <input type='hidden' name='currency' value='LKR'>
+                    <input type='hidden' name='last_name' value='hidden'>
+                    <input type='hidden' name='phone' value='hidden'>
+                    <input type='hidden' name='address' value='hidden'>
+                    <input type='hidden' name='city' value='hidden'>
+                    <input type='hidden' name='country' value='hidden'>
+    
+                    <input type='submit' class='submit-btn btn' value='Donate Cash'>
+                </form>
             </div>
+        </div>
+        <form name='donation-form' id='donation-form' methos='post' enctype='multipart/form-data'>
             <div class='box-01'>
                 <div class='col-03'>
                     <label class='label'> Donor Name </label>
