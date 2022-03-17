@@ -1,26 +1,24 @@
 <?php
-session_start();
+    
+    include('../../server/session.php');
+    include('../../db/db-conn.php');
 
-include('../../db/db-conn.php');
-$conn = mysqli_connect("localhost", "root", "", "ucsc_alumni_diaries");
-
-$query1 = "SELECT Amount FROM subscriptiontypes WHERE TypeName='Annually'";
+$query1 = "SELECT Amount FROM subscriptiontypes WHERE TypeName='Anually'";
 $result1 = mysqli_query($conn, $query1);
 
 $query2 = "SELECT Amount FROM subscriptiontypes WHERE TypeName='Monthly'";
 $result2 = mysqli_query($conn, $query2);
 
-if($_SESSION['SubscriptionType'] == 'Annually'){
+$Amount = 0;
+if($_SESSION['SubscriptionType'] == 'Anually'){
     while($row = mysqli_fetch_assoc($result1)) {
         $Amount = $row["Amount"];
     }
-
 } else{
     while($row = mysqli_fetch_assoc($result2)) {
         $Amount = $row["Amount"];
     }
 }
-
 
 $file = $_FILES['bank-slip'];
 $fileName = $_FILES['bank-slip']['name'];
@@ -66,24 +64,23 @@ elseif ($uploadOk == 0) {
         $fileName = $_FILES['bank-slip']['tmp_name'];
 
 //        $_SESSION['PicSrc'] = $newFileSrc;
-
-        $query = "INSERT INTO subscriptionsdone (`Email`, `SubType`, `Amount`, `DonatedFrom`, `PayslipSrc`) 
-                  VALUES ('{$_SESSION['Email']}','{$_SESSION['SubscriptionType']}','{$Amount}','Bank','{$fileNameNew}')";
-        $result = mysqli_query($conn, $query);
+        $query = "INSERT INTO subscriptionsdone (Email, SubType, Amount, DonatedFrom, PayslipSrc) VALUES ('{$_SESSION['Email']}','{$_SESSION['SubscriptionType']}','{$Amount}','Bank','{$fileNameNew}')";
+        mysqli_query($conn, $query);
+        
+        $query6 = "";
+        
+        
         //notification
             $query3 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
             $results3 = mysqli_query($conn, $query3);
                     
             if (mysqli_num_rows($results3) > 0) {
                 while ($row3 = mysqli_fetch_assoc($results3)) {  
-                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}', '{$_SESSION['Email']} has done the subscription')
-                    ";
+                    $query4 = "INSERT INTO notifications (Email,Message) VALUES ('{$row3['Email']}', '{$_SESSION['Email']} has done the subscription')";
                     mysqli_query($conn, $query4);
-                        
                 }
             }
-            $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$_SESSION['Email']}', 'you have done the subscription sucessfully')
-            ";
+            $query5 = "INSERT INTO notifications (Email,Message) VALUES ('{$_SESSION['Email']}', 'you have done the subscription sucessfully')";
             mysqli_query($conn, $query5);
     
         echo "The file " . htmlspecialchars(basename($_FILES["bank-slip"]["name"])) . " has been uploaded.";

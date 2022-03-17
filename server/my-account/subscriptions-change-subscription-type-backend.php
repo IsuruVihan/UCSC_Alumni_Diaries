@@ -1,4 +1,5 @@
 <?php
+
 include('../../db/db-conn.php');
 include('../../server/session.php');
 
@@ -22,10 +23,7 @@ if($lastPaymentDate < $DateBeforeAWeek){
     echo "<span class='error-msg1'>It is the existing subscription type</span>";
 }else{
     $_SESSION['SubscriptionType'] = $sub_type;
-    $query1 = "UPDATE registeredmembers
-               SET subscriptiontype = '$sub_type'
-               WHERE Email = '{$_SESSION['Email']}'";
-    $result1=mysqli_query($conn, $query1);
-
+    $query1 = "UPDATE registeredmembers SET SubscriptionType = '$sub_type' WHERE Email = '{$_SESSION['Email']}'";
+    mysqli_query($conn, $query1);
     echo "<span class='success-msg1'>Subscription type has been changed</span>";
 }
