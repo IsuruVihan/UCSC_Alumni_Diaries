@@ -52,9 +52,32 @@
                     <li class='link'>
                         <a href='../pages/alumnus.php' class='anchor-tag'>Alumni</a>
                     </li>
+                ";
+                
+                $query = "SELECT COUNT(*) AS Count FROM notifications WHERE Email = '{$_SESSION['Email']}' AND Status = 'NotViewed'";
+                $results = mysqli_query($conn, $query);
+                $count = 0;
+                while ($row = mysqli_fetch_assoc($results)) {
+                    $count = $row['Count'];
+                }
+                
+                if ($count > 0) {
+                    echo "
+                    <li class='link'>
+                        <a href='../pages/notifications.php' class='anchor-tag'>
+                            Notifications <b>{$count}</b>
+                        </a>
+                    </li>
+                    ";
+                } else {
+                    echo "
                     <li class='link'>
                         <a href='../pages/notifications.php' class='anchor-tag'>Notifications</a>
                     </li>
+                    ";
+                }
+                
+                echo "
                     <li class='link'>
                         <a href='../pages/wall.php' class='anchor-tag'>Wall</a>
                     </li>
