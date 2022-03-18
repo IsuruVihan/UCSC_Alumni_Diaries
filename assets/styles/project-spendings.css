@@ -1,0 +1,421 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+
+.admin-project-spendings {
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    border-radius: 10px;
+    background: #fafafa;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.5fr;
+    grid-template-areas: 'all-project cash-spending'
+                         'all-project  item-spending';
+    height: 140vh;
+}
+
+.container-col-1 {
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    border-radius: 10px;
+    margin: 0.8em 0;
+    grid-area: all-project;
+    height: 100%;
+}
+
+.scroll-box1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0.8em;
+    overflow-y: scroll;
+    height: 80%;
+}
+
+.cash-spendings {
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    border-radius: 10px;
+    margin: 0.8em;
+    grid-area: cash-spending;
+    height: 95%;
+}
+
+.item-spendings {
+    box-shadow: 1px 2px 4px lightgray;
+    background: white;
+    border-radius: 10px;
+    margin: 0.8em;
+    grid-area: item-spending;
+    height: 100%;
+}
+
+.filter-box {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.8em;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.filter-row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.date-field {
+    width: 45%;
+}
+
+.text-field {
+    width: 45%;
+}
+
+.drop-down {
+    width: 35%;
+    margin: 0 0.8em;
+}
+
+.input-field {
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    margin: 0 0.8em;
+}
+
+.input-field:hover {
+    border-color: #ffccc7;
+}
+
+.filter-btn {
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito', serif;
+    width: 10%;
+    margin: 0 0.8em;
+    border-radius: 5px;
+}
+
+.filter-btn:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.container-heading {
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 1.6em;
+}
+
+.project-description {
+    border: 1px solid lightgray;
+    margin: 0.8em;
+    border-radius: 5px;
+    padding: 0.2em 0;
+    background: #fafafa;
+}
+
+.project-detail-box {
+    display: flex;
+    flex-direction: column;
+    padding-right: 8px;
+
+}
+
+.project-detail-box-col1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0.3em;
+    margin-bottom: 5px;
+}
+
+.details-field {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    margin: 0 3px;
+    background: white;
+}
+
+.p-name {
+    grid-area: name;
+    height: 35px;
+    width: 100%;
+}
+
+.p-s-date {
+    grid-area: s-date;
+    font-size: 12px;
+    height: 35px;
+    width: 40%;
+}
+
+.p-e-date {
+    grid-area: e-date;
+    height: 35px;
+    width: 40%;
+    margin-bottom: 0.2em;
+}
+
+.p-cordi {
+    grid-area: coordinator;
+    height: 35px;
+    width: 100%;
+    margin: 5px 0.8em 3px 3px;
+}
+
+.p-description {
+    grid-area: description;
+    height: 70px;
+    width: 100%;
+    margin-right: 0.8em;
+}
+
+.view-btn {
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito', serif;
+    width: fit-content;
+    height: 35px !important;
+}
+
+.view-btn:hover, .generate-report-btn:hover {
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+}
+
+.cash-spend-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:0.5fr 0.5fr;
+    grid-template-areas: 'detail' 'gen-btn';
+}
+
+.cash-spendings-row1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 0.8em 0.8em 0;
+    overflow-y: scroll;
+    height: 250px;
+    grid-area: detail;
+}
+
+.cash-spendings-row2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    padding: 3px 5px;
+    border-radius: 10px;
+    grid-area: gen-btn;
+    margin: 2em 0.8em 0.8em;
+}
+
+.item-spendings-row1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 0.8em 0.8em 0;
+    overflow-y: scroll;
+    height: 250px;
+    grid-area: detail;
+}
+
+.item-spendings-row2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    margin: 0.8em;
+    padding: 3px 5px;
+    border-radius: 10px;
+    grid-area: gen-btn;
+}
+
+.spend-detail-flex {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0.4em 0.8em;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background: #fafafa
+}
+
+.spend-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -3px;
+    margin-right: -3px;
+
+}
+
+.item-spend-detail {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0.4em 0.8em;
+    padding: 5px;
+    background: #fafafa;
+}
+
+.cash-spend-description {
+    height: 70px;
+    margin: 3px 1px;
+    text-align: center;
+}
+
+.timestamp, .cost {
+    margin: 3px 5px;
+    width: 40%;
+    height: 35px;
+    text-align: center;
+}
+
+.bill-attach {
+    margin: 3px 5px;
+    width: 15%;
+    height: 35px;
+    text-align: center;
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito', serif;
+    border-radius: 5px;
+}
+
+.bill-attach:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.qty {
+    margin: 3px 5px;
+    width: 20%;
+    height: 35px;
+    text-align: center;
+}
+
+.item-name {
+    margin: 3px 5px;
+    width: 40%;
+    height: 35px;
+    text-align: center;
+}
+
+.generate-report-btn {
+    background: gray;
+    border: 1px solid gray;
+    height: 35px;
+    color: white;
+    width: 40%;
+    margin: 0 0.8em;
+    border-radius: 5px;
+}
+
+.total {
+    margin: 3px 5px;
+    width: 40%;
+    height: 35px;
+    text-align: center;
+}
+
+.item-spend-row {
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 0 auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 70%;
+
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.image-box-notice-2{
+    display: block;
+    margin: 0 auto;
+
+}
+.bill-download{
+    margin-top: 0;
+    display: flex;
+    justify-content: center
+}

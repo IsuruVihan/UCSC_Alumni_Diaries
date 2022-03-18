@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+
+.suggestions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-suggestion-form {
+    box-shadow: 2px 4px 8px lightgray;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-field {
+    width: 100%;
+    height: 35px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: gray;
+    font-family: "Nunito", serif;
+}
+
+.input-field:hover {
+    border-color: #ffccc7;
+}
+
+.text-area {
+    height: 10em;
+    overflow: hidden;
+    overflow-y: scroll;
+    resize: none;
+    padding: 10px;
+}
+
+.section-2 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+::-webkit-file-upload-button {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+    width: 15%;
+    background: gray;
+    border: 1px solid gray;
+}
+
+::-webkit-file-upload-button:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 30px;
+}
+
+.accept-btn, .remove-btn, .download-btn {
+    width: 49%;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+.remove-btn3 {
+    width: 100%;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+.accept-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.download-btn:hover {
+    background: #096dd9;
+    border: 1px solid #096dd9;
+}
+
+.remove-btn:hover, .remove-btn2:hover, .remove-btn3:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+}
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
+}
+
+.all-suggestions {
+    width: 100%;
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1.5em;
+}
+
+.box {
+    background: white;
+    box-shadow: 4px 8px 16px lightgray;
+    width: 26em;
+    height: 40em;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    padding: 1em;
+    display: grid;
+    grid-template-rows: [row1] 10% [row2] 5% [row3] 35% [row4] 40% [row5] 10% [row6];
+    grid-template-columns: [col1] 50% [col2] 50% [col3];
+    row-gap: 5px;
+}
+
+.box2 {
+    background: white;
+    box-shadow: 4px 8px 16px lightgray;
+    width: 26em;
+    height: 40em;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    padding: 1em;
+    display: grid;
+    grid-template-rows: [row1] 10% [row2] 5% [row3] 75% [row4] 10% [row5];
+    grid-template-columns: [col1] 50% [col2] 50% [col3];
+    row-gap: 5px;
+}
+
+.box:hover, .box2:hover {
+    box-shadow: 1px 2px 4px gray;
+}
+
+.box-section {
+    /*border: 1px solid gray;*/
+}
+
+.box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 700;
+    grid-column-start: col1;
+    grid-column-end: col3;
+    grid-row-start: row1;
+    grid-row-end: row2;
+}
+
+.box-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-start: col1;
+    grid-column-end: col2;
+    grid-row-start: row2;
+    grid-row-end: row3;
+}
+
+.box-email {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-start: col2;
+    grid-column-end: col3;
+    grid-row-start: row2;
+    grid-row-end: row3;
+}
+
+.box-content {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-align: justify;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    padding: 10px;
+    color: gray;
+    font-weight: bold;
+    grid-column-start: col1;
+    grid-column-end: col3;
+    grid-row-start: row3;
+    grid-row-end: row4;
+}
+
+.box-pic {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    grid-column-start: col1;
+    grid-column-end: col3;
+    grid-row-start: row4;
+    grid-row-end: row5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-download {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column-start: col1;
+    grid-column-end: col3;
+    grid-row-start: row5;
+    grid-row-end: row6;
+}
+
+.box-download2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: col1;
+    grid-column-end: col3;
+    grid-row-start: row4;
+    grid-row-end: row5;
+}
+
+.download {
+    text-decoration: none;
+    color: white;
+}

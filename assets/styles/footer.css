@@ -1,0 +1,63 @@
+.footer {
+    margin-top: 10em;
+    box-shadow: 2px 4px 8px gray;
+}
+
+.top {
+    display: flex;
+    padding: 2em 4em;
+    background: white;
+}
+
+.logo-img {
+    margin: 0;
+    padding: 0;
+}
+
+.links-container {
+    flex-grow: 2;
+}
+
+.social-media-container {
+    flex-grow: 2;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 650;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.4em;
+    font-size: 1.1em;
+}
+
+.footer-list-item {
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+
+.footer-icon {
+    margin-right: 1em;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-list-item:hover, .footer-link:hover {
+    color: red;
+    transition: all ease-in-out 0.5s;
+}
+
+.copyright {
+    background: white;
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+    padding: 0.5em;
+    border-top: 1px solid lightgray;
+}

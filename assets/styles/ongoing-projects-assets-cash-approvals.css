@@ -1,0 +1,74 @@
+#cash-approvals{
+    display: none;
+}
+table {
+    font-family: "Nunito", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #434343;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+td {
+    font-size: 0.8em;
+}
+
+.accept-btn, .remove-btn {
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+.accept-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.remove-btn:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+}
+
+.spend-approvals-h-1 {
+    width: 15%;
+    text-align: justify;
+}
+
+.spend-approvals-h-2 {
+    width: 30%;
+    text-align: justify;
+}
+
+.spend-approvals-h-3 {
+    width: 10%;
+    text-align: justify;
+}
+
+.spend-approvals-h-4 {
+    width: 15%;
+    text-align: justify;
+}
+
+.spend-approvals-h-5 {
+    width: 15%;
+    text-align: justify;
+}
+
+.spend-approvals-h-6 {
+    width: 15%;
+    text-align: justify;
+}

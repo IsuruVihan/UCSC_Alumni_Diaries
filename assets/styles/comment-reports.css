@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+.main-box {
+    background: #fafafa;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    height: 94vh;
+    display: grid;
+    grid-template-columns: [col1] 100% [col2];
+    /* padding-left: 6.7em;
+    padding-right: 6.7em; */
+    font-size: 15px;
+    /* border: solid 2px red; */
+    justify-content: center;
+    font-family: Nunito;
+}
+
+.commentreports {
+    grid-column-start: col1;
+    grid-column-end: col2;
+    background: #fafafa;
+    padding-right: 10px;
+}
+
+/* .card {
+    background: white;
+    height: 87.5vh;
+}
+
+.card, .details {
+    box-shadow: 2px 3px 4px lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all ease-in-out 0.5s;
+    font-family: Nunito;
+} */
+
+.title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.flexbox-container {
+    border: 2px solid lightgray;
+    /* border: 2px solid rgb(74, 10, 179); */
+    border-radius: 5px;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 530px;
+    margin: 15px;
+}
+
+.flexbox-item {
+    width: 97.5%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+    margin: 5px;
+    border: 2px solid lightgray;
+    /* padding: 1em 5px; */
+    /* border: 2px solid rgb(156, 102, 132); */
+    /* height: 250px; */
+}
+
+.rdetails {
+    display: grid;
+    grid-template-columns: [c1] 20% [c2] 80% [c3];
+    padding-right: 5px;
+    /* border: 2px solid rgb(39, 212, 16); */
+}
+
+.propic {
+    grid-column-start: c1;
+    grid-column-end: c2;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding-bottom: 80px; */
+    /* border: 2px solid rgb(212, 16, 16); */
+}
+
+.c-reporter {
+    grid-column-start: c2;
+    grid-column-end: c3;
+    display: grid;
+    /* grid-template-rows: [roo1] 24.5% [roo2] 24.5% [roo3] 24.5% [roo4] 26.5% [roo5]; */
+    grid-template-rows: [roo1] 20% [roo2] 20% [roo3] 20% [roo4] 40% [roo5];
+}
+
+.c-reporter-name {
+    margin-top: 10px;
+    grid-row-start: roo1;
+    grid-row-end: roo2;
+    display: grid;
+    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
+}
+
+.cfname {
+    grid-column-start: ccc1;
+    grid-column-end: ccc2;
+    display: flex;
+    flex-direction: column;
+    /* padding-right: 5px; */
+    /* padding-top: 6px; */
+}
+
+.cfirst-name {
+    width: 95%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.c-report-post {
+    grid-row-start: roo2;
+    grid-row-end: roo3;
+    display: grid;
+    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
+}
+
+.clname {
+    grid-column-start: ccc2;
+    grid-column-end: ccc3;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-left: 5px;
+}
+
+.clast-name {
+    width: 96%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.list-details {
+    font-family: "Nunito", serif;
+    padding: 2px;
+    text-align: center;
+}
+
+.alllabels {
+    font-weight: 600;
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+}
+
+.c-report-comment {
+    grid-row-start: roo2;
+    grid-row-end: roo3;
+    display: grid;
+    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
+    padding-top: 5px;
+}
+
+.cid {
+    grid-column-start: ccc1;
+    grid-column-end: ccc2;
+    display: flex;
+    flex-direction: column;
+    padding-right: 5px;
+    padding-top: 4px;
+}
+
+.cpost-id {
+    width: 96%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.cowner {
+    grid-column-start: ccc2;
+    grid-column-end: ccc3;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+
+.cpost-owner {
+    width: 96%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.rcid {
+    grid-column-start: ccc1;
+    grid-column-end: ccc2;
+    display: flex;
+    flex-direction: column;
+    padding-right: 5px;
+    padding-top: 9px;
+}
+
+.commentdetails {
+    grid-row-start: roo3;
+    grid-row-end: roo4;
+    display: grid;
+    grid-template-columns: [ccc1] 50% [ccc2] 50% [ccc3];
+}
+
+.rcowner {
+    grid-column-start: ccc2;
+    grid-column-end: ccc3;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-top: 9px;
+}
+
+.rcause {
+    grid-row-start: roo4;
+    grid-row-end: roo5;
+    display: grid;
+    grid-template-rows: [rr1] 100% [rr2];
+}
+
+.report-cause {
+    grid-row-start: rr1;
+    grid-row-end: rr2;
+    display: flex;
+    flex-direction: column;
+    padding-top: 13px;
+}
+
+.thee-cause {
+    width: 98%;
+    height: 100px;
+    resize: none;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.rdelete {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding-right: 10px; */
+    padding: 20px;
+}
+
+.delete-btn {
+    width: 15%;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 35px;
+    font-family: 'Nunito', serif;
+}
+
+.delete-btn:hover {
+    background: #f5222d;
+    border-color: #f5222d;
+    color: white;
+}
+

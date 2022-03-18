@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+}
+
+.admin-account-iframe{
+    display: grid;
+    grid-template-columns: [col1] 20% [col2] 80% [col3];
+    grid-template-rows: [row1] 100% [row2];
+    column-gap: 5px;
+}
+
+.iframe-nav{
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col1;
+    grid-column-end: col2;
+    box-shadow: 1px 2px 4px lightgray;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.iframe-display{
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col2;
+    grid-column-end: col3;
+    box-shadow: 1px 2px 4px lightgray;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.iframe-nav-link {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Nunito" ,sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
+}
+.iframe-nav-state{
+    background: #096dd9;
+}
+.iframe-nav-link:hover {
+    background: #096dd9;
+}
+
+.iframe-nav-projectContribution{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.contribution-iframe-link{
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;  
+}
+
+.contribution-iframe-link:hover{
+    cursor: pointer;
+}
+
+.iframe-display-projectContribution{
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px lightgray;
+    background-color: white;
+    height: 12em;
+}
+
+.fontColorChange{
+    color:black;
+}

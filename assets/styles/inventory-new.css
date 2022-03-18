@@ -1,0 +1,1004 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    font-family: 'Nunito', sans-serif;
+    background: #fafafa;
+}
+
+.main-container {
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+
+/*.inventory {*/
+/*    display: grid;*/
+/*    height: 190vh;*/
+/*    background: #fafafa;*/
+/*    grid-template-columns: [line1] 27.5% [line2] 27.5% [line3] 45% [line4];*/
+/*    grid-template-rows: [row1] 65% [row2] 35% [row3];*/
+/*    margin: 0 6.7em 10vh;*/
+/*}*/
+
+.available-assets {
+    /*grid-column-start: line1;*/
+    /*grid-column-end: line2;*/
+    /*grid-row-start: row1;*/
+    /*grid-row-end: row2;*/
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.transfers {
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 1px 2px 4px lightgrey;*/
+    /*background-color: white;*/
+    /*grid-column-start: line2;*/
+    /*grid-column-end: line3;*/
+    /*grid-row-start: row1;*/
+    /*grid-row-end: row2;*/
+    /*margin-right: 5px;*/
+    /*margin-left: 5px;*/
+    /*margin-bottom: 5px;*/
+    display: flex;
+    flex-direction: row;
+    /*padding: 3px;*/
+    width: 100%;
+    height: 96.5%;
+}
+
+.to-be-accepted {
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 1px 2px 4px lightgrey;*/
+    /*background-color: white;*/
+    /*grid-column-start: line1;*/
+    /*grid-column-end: line3;*/
+    /*grid-row-start: row2;*/
+    /*grid-row-end: row3;*/
+    /*margin-right: 5px;*/
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    height: 98%;
+}
+
+.received {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    background-color: white;
+    grid-column-start: line3;
+    grid-column-end: line4;
+    grid-row-start: row1;
+    grid-row-end: row3;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.available-cash {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30%;
+    width: 49.5%;
+    background: white;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.cash {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20%;
+    width: 70%;
+}
+
+.trans-to1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    align-self: center;
+    width: 100%;
+    height: 45%;
+}
+
+.col1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    height: 40%;
+    width: 100%;
+}
+
+.input-avu1 {
+    width: 70%;
+    height: 11%;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+}
+
+.input-avu2 {
+    width: 49%;
+    height: 99%;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.input-avu1:hover, .input-avu2:hover, .input-avu3:hover, .input-avu4:hover {
+    border-color: #ffccc7;
+}
+
+.col2 {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 0.5em;
+    width: 97.5%;
+    height: 40%;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 0.5em;
+    width: 97.5%;
+    height: 40%;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+}
+
+.submit-btn, .filter-btn {
+    width: 22%;
+    margin-top: 10px;
+    background: gray;
+    border: 1px solid gray;
+}
+
+.generate-reports-btn {
+    width: 50%;
+    margin-top: 10px;
+    background: gray;
+    border: 1px solid gray;
+}
+
+.submit-btn:hover, .filter-btn:hover, .subscriptions-filter-btn:hover, .bill-btn:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.generate-reports-btn:hover, .subscriptions-gen-repo-btn:hover {
+    background: #096dd9;
+    border-color: #096dd9;
+    color: white;
+}
+
+.available-items {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+    width: 49.5%;
+    background-color: white;
+    padding-top: 20px;
+    margin-right: 10px;
+}
+
+.available-items-container {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 90%;
+    margin: 20px;
+}
+
+.available-items-card {
+    height: 27%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 5px;
+    padding: 3px;
+}
+
+.item-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 10%;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.label {
+    height: 5%;
+    width: 70%;
+    text-align: left;
+}
+
+.item-quantity {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 100%;
+    width: 48%;
+    text-align: center;
+}
+
+.trans-to2 {
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.col3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    width: 100%;
+    height: 40%;
+}
+
+.generate-reports {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.cash-transfers{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-content: center;*/
+    height: 100%;
+    width: 49%;
+    background: white;
+    /*margin-bottom: 3px;*/
+    /*margin-top: 20px;*/
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 10px;
+    padding-top: 20px;
+}
+
+.item-transfers {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-content: center;*/
+    height: 100%;
+    width: 49%;
+    background: white;
+    /*margin-bottom: 3px;*/
+    /*margin-top: 5px;*/
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+
+.filter-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 10px 5px;
+}
+
+.col4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    height: 40%;
+    width: 98%;
+}
+.cash-transfers-container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 70%;
+    padding: 3px;
+    margin: 5px;
+}
+
+.item-transfers-container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 78%;
+    padding: 3px;
+    margin: 5px;
+}
+
+.to-be-acc-cash-container, .to-be-acc-items-container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 73%;
+    padding: 3px;
+    margin: 5px;
+}
+
+.cash-transfers-item{
+    height: 38%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.item-transfers-item {
+    height: 45%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.sec-1 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 10%;
+    text-align: center;
+}
+
+.sec-1-1 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 7.5%;
+    text-align: center;
+}
+
+.sec-2 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 8%;
+    text-align: center;
+}
+
+.sec-2-1 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 6%;
+    text-align: center;
+}
+
+.sec-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: 100%;
+    margin-right: 15px;
+}
+
+.cash-transfers-total {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 8%;
+    width: 60%;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+.sec-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.to-be-acc-cash {
+    background: white;
+    height: 100%;
+    width: 50%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+    padding: 4px;
+    margin-right: 10px;
+}
+
+.to-be-acc-item {
+    background: white;
+    height: 100%;
+    width: 50%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+    padding: 4px;
+    /*margin: 3px;*/
+}
+
+.to-be-acc-cash-item {
+    height: 53%;
+    width: 96%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.to-be-acc-items-item{
+    height: 60%;
+    width: 96%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 7px;
+}
+
+.sec-5 {
+    height: 90%;
+    width: 29%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.accept-btn, .delete-btn, .bill-btn {
+    width: 25%;
+    background: gray;
+    color: white;
+    border: 1px solid gray;
+}
+
+.accept-btn:hover {
+    background: #237804;
+    border: 1px solid #237804;
+}
+
+.delete-btn:hover {
+    background: red;
+    border: 1px solid red;
+}
+
+.received-cash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /*background: white;*/
+    margin: 0;
+    /*padding: 3px;*/
+    /*margin-bottom: 7px;*/
+    /*margin-top: 7px;*/
+}
+
+.cash-for-association, .cash-for-projects {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48%;
+    height: 97%;
+    background: white;
+    padding: 7px;
+}
+
+.cash-received-filter-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*margin-left: 5px;*/
+    /*margin-right: 5px;*/
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.received-cash-container {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 80%;
+    padding: 3px;
+}
+
+.received-cash-item {
+    height: 48%;
+    width: 96%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.received-cash-item-for-association {
+    height: 45%;
+    width: 96%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.input-avu3 {
+    width: 98.75%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.btn-container-received-cash {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-evenly;
+    margin-top: 7px;
+    /*padding-right: 30px;*/
+}
+
+.received-items-main-container{
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 1px 2px 4px lightgrey;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 99%;
+    width: 99%;
+    /*background: white;*/
+    /*padding-right: 5px;*/
+    /*padding-left: 5px;*/
+    /*margin-bottom: 5px;*/
+}
+
+.received-items {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 99%;
+    width: 60%;
+    background: white;
+    padding-right: 7px;
+    padding-left: 7px;
+    /*margin-bottom: 5px;*/
+}
+
+.received-items-container {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 75%;
+    padding: 3px;
+}
+
+.received-items-item {
+    height: 55%;
+    width: 97%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.subscriptions-main-container{
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 1px 2px 4px lightgrey;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 99%;
+    width: 99%;
+    /*background: white;*/
+    /*padding-right: 5px;*/
+    /*padding-left: 5px;*/
+    /*margin-bottom: 5px;*/
+}
+
+.subscriptions {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 99%;
+    width: 60%;
+    background: white;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
+}
+
+.subscriptions-filter-field {
+    /*height: 18%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.input-avu4 {
+    width: 33%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.subscriptions-filter-btn {
+    width: 17%;
+    margin-top: 2px;
+    background: gray;
+    border: 1px solid gray;
+}
+
+.subscriptions-gen-repo-btn {
+    width: 38%;
+    margin-top: 2px;
+    background: gray;
+    border: 1px solid gray;
+}
+
+.subs-filter-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    height: 40%;
+    width: 96.75%;
+    margin-bottom: 5px;
+}
+
+.subscriptions-container {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    align-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 75%;
+    margin: 5px;
+    padding: 3px;
+}
+
+.subscription-item {
+    height: 42%;
+    width: 97%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    margin: 3px;
+}
+
+.sec-6 {
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 5px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 7.5%;
+    text-align: center;
+}
+
+.label-sec{
+    height: 5%;
+    width: 70%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.label1{
+    height: 5%;
+    width: 48%;
+    text-align: left;
+}
+
+.sec-7 {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 100%;
+    text-align: center;
+}
+
+.available-items-card:hover, .cash-transfers-item:hover, .item-transfers-item:hover, .to-be-acc-cash-item:hover,
+.to-be-acc-items-item:hover, .received-cash-item:hover, .subscription-item:hover {
+    box-shadow: 0 0 5px gray;
+    cursor: pointer;
+}
+
+.received-assets {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.received-assets-section-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /*gap: 10px;*/
+}
+
+.received-assets-section-2 {
+    border: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.received-section-link {
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 5px;*/
+    /*height: 35px;*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /*background: gray;*/
+    color: #8c8c8c;
+    font-size: 1.3em;
+    font-weight: 800;
+    font-family: "Nunito" ,sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
+}
+
+.received-section-link:hover {
+    color: black;
+}
+
+.clicked-link{
+    color: black;
+    animation: fadeIn 1s;
+}
+
+.bank-slip-modal {
+    display: none; /* Hidden by default */
+    border-radius: 5px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 70%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Modal Content/Box */
+.bank-slip-modal-content {
+    background-color: #fefefe;
+    border-radius: 5px;
+    margin: 0.5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 60%;
+}
+
+.modal-image-container{
+    height: 90%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,1240 @@
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}
+
+.fa-fire{
+    background: gray;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-frown{
+    background:gray;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fire{
+    background: -webkit-linear-gradient(#DA1F05, #FFC11F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.frown{
+    /*background: -webkit-linear-gradient(#DA1F05,#BE7505);*/
+    background: #D49504;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+
+.wall {
+    margin-left: 6.7em;
+    margin-right: 6.7em;
+    display: grid;
+    grid-template-columns: [line1] 30% [line2] 70% [line3];
+    grid-template-rows: [rowline1]1fr[rowline2];
+    gap: 15px;
+}
+
+.important-notice {
+    box-shadow: 1px 2px 4px lightgray;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.common-wall {
+    box-shadow: 1px 2px 4px lightgray;
+    padding: 20px;
+    background: white;
+    transition: all ease-in-out 0.5s;
+    border-radius: 10px;
+}
+
+.grid-title {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 5px;
+}
+
+.filter-box {
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid lightgray;
+    padding: 3px 3px;
+    margin: 0.8em 3px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    justify-content: space-between;
+    background: white;
+}
+
+.filter-box-member-session {
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid lightgray;
+    padding: 3px 3px;
+    margin: 0.8em 3px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    justify-content:flex-end;
+    background: white;
+
+}
+
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all ease-in-out 0.1s;
+    height: 25px;
+}
+
+.filter-btn {
+    width: 38%;
+    background: gray;
+    border: 1px solid gray;
+    font-family: 'Nunito', serif;
+}
+
+.filter-btn:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+
+.upload-btn {
+    height: 20px;
+    font-size: 12px;
+    width: fit-content;
+    padding: 0 3px;
+}
+
+.filter-member-session{
+    margin-right: 5px;
+    width: 20%;
+}
+
+.create-notice-box {
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    margin: 0.8em 0;
+}
+
+.edit-notice-box {
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    margin: 0.8em 0;
+}
+
+.create-notice-text {
+    resize: none;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 10em;
+    margin: 0 0.8em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.box-title {
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    margin: 0.8em 0;
+}
+
+.row-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.row-1-gap {
+    margin-top: 1em;
+}
+
+.row-2 {
+    justify-content: center;
+    display: flex;
+}
+
+.row-2 > label {
+    text-align: center;
+    margin: 0.8em 0;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 3px;
+}
+
+.row-3 {
+    justify-content: center;
+    display: flex;
+}
+
+.row-4 {
+    margin-top: 0.2em;
+    justify-content: center;
+    display: flex;
+    padding: 5px 0;
+}
+
+.row-5 {
+    justify-content: flex-start;
+    display: flex;
+    padding: 5px 0;
+    margin-top: 0.2em;
+}
+
+.row-4 > button {
+    flex-direction: row;
+    width: 30%;
+    margin: 0 0.4em;
+}
+
+
+.field-header {
+    /*border: 1px solid lightgray;*/
+    /*color: gray;*/
+    margin: 0 0.8em;
+    border-radius: 5px;
+    width: 50%;
+
+}
+
+.notice-timestamp {
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0.8em;
+    border-radius: 5px;
+
+}
+
+.input-field-title {
+    width: 100%;
+    height: 25px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    font-family: "Nunito", serif;
+    margin: 0 0.8em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.notice-title {
+    border: none;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.input-field-title:hover, .field-header:hover, .create-notice-text:hover, .create-post-title:hover,
+.create-post-text:hover, .field-hover:hover {
+    border-color: #ffccc7;
+}
+
+.input-field-message {
+    width: 100%;
+    height: 100px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin: 0 0.8em;
+}
+
+.notice-box {
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    margin: 0.8em 0;
+}
+
+.notice-content {
+    min-height: 100%;
+    margin: 0 0.8em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.star-div-off {
+    display: block;
+    color: gray;
+    margin: 0 0.8em;
+    cursor: pointer;
+}
+
+.star-div-on {
+    color: rgb(255, 115, 0);
+    margin: 0 0.8em;
+}
+
+.edit-btn:hover {
+    background: #fa8c16;
+    border: 1px solid #fa8c16;
+    color: white;
+}
+
+.dlt-btn:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+    color: white;
+}
+
+.image-box {
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    height: 150px;
+    width: 500px;
+    align-items: center;
+    margin: 0 0.8em;
+    object-fit: scale-down;
+}
+
+.image-box-notice {
+    background: white;
+    /*border: 1px solid lightgray;*/
+    border-radius: 5px;
+    color: gray;
+    height: auto;
+    min-width: 100%;
+}
+
+.image-box-notice:hover {
+    cursor: pointer;
+}
+
+.image-box-notice-2 {
+    background: white;
+    /*border: 1px solid lightgray;*/
+    border-radius: 5px;
+    color: gray;
+    height: auto;
+    max-width: 100%;
+}
+
+.img-wrapBox {
+    display: flex;
+    padding: 0.8em;
+}
+
+.box-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.create-post-box {
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px lightgray;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0.8em 3px;
+}
+
+.row-0 {
+    display: flex;
+    flex-direction: row;
+}
+
+.wall-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wall-top-row > p {
+    margin-left: 18em;
+}
+
+.create-post-button {
+    width: 100px;
+    margin-top: 0.4em;
+    margin-left: 20em;
+}
+
+.create-post-button:hover {
+    background: #237804;
+    border-color: #237804;
+    color: white;
+}
+
+.create-post-title {
+    margin: 0.8em;
+    text-align: center;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    font-family: "Nunito", serif;
+    height: 30px;
+}
+
+.create-post-text {
+    resize: none;
+    width: 120%;
+    height: 150px;
+    margin: 0 0.8em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.create-post-buttons {
+    margin: 0.8em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.create-post-buttons > button {
+    width: 120px;
+    margin: 0.2em;
+}
+
+.post-report {
+    background: #fff1f0;
+    border: 1px solid lightgray;
+    display: none;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 0.8em;
+}
+
+.report-txt {
+    resize: none;
+    height: 20em;
+    margin: 0 0.8em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.input-field-report {
+    height: 100px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin: 0 0.8em;
+}
+
+.comment-report {
+    background: #fff1f0;
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid #f5222d;
+    margin: 0.8em auto;
+    display: none;
+    flex-direction: column;
+    width: 60%;
+    height: 50%;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.filter-left {
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+}
+
+.filter-left > button {
+    margin: 0 3px;
+}
+
+.filter-left > input {
+    width: 120px;
+    margin: 0 0.2em;
+}
+
+.filter-right {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+.filter-right-member-session {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.filter-right > button {
+    margin: 0 3px;
+}
+
+.post-box {
+    box-shadow: 1px 2px 4px lightgray;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 0.8em;
+    padding: 5px;
+    background: #fafafa;
+}
+
+.post-content {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: grid;
+    padding: 0.8em;
+    grid-template-columns:[col1]100%[col2];
+    grid-template-rows: [line1]5%[line2] 5%[line3]35%[line4]50%/[line5]5%[line6];
+    column-gap:  5px;
+    margin: 2em;
+    background: white;
+}
+
+.post-content-row1{
+    grid-row: 1 / 2 ;
+    grid-column:1 / 2 ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.post-content-row1-1{
+    grid-row: 1 / 2 ;
+    grid-column:1 / 2 ;
+    display: flex;
+    flex-direction: row;
+}
+.post-edit-btn-box{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+
+.post-content-row1-edit{
+    display: none;
+    flex-direction: column; 
+    border-radius: 5px;
+    margin: 0;
+    height: 20em;
+}
+
+.post-title1{
+    grid-row:2 / 3 ;
+    grid-column:1 / 2 ;
+    align-self: center;
+}
+.post-button-set{
+    grid-row:5 / 6 ;
+    display: flex;
+    flex-direction: row;
+    grid-column:1 / 2 ;
+    justify-content: space-between;
+}
+.btn-set{
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    width:100%;
+    grid-row:3 / 4 ;
+    grid-column:1 / 2 ;
+}.content-edit{
+    width:100%;
+    height: 100%;
+}
+.pic-content-container{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height:500px;
+    grid-row:4 / 5 ;
+    grid-column:1 / 2 ;
+}
+.pic-hide{
+    height: 0;
+}
+.width-zero{
+    width: 0;
+}
+
+.pic-content-container > img{
+    height:100%;
+    max-width: 100%;
+}
+.post-field {
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dp-box {
+    grid-area: dp;
+    border-radius: 100%;
+    width:70px;
+    height: 70px;
+}
+.pic-box {
+    border-radius: 10px;
+}
+
+.f-name {
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    width: 50%;
+    font-weight: 600;
+
+}
+.name-time-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.f-name-1 {
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    width: 50%;
+    font-weight: 600;
+    padding-left: 30px;
+
+}
+.post-time {
+    grid-area: time;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    justify-self: flex-end;
+    font-size: 12px;
+}
+
+.post-time-1 {
+    grid-area: time;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    justify-self: flex-end;
+    font-size: 12px;
+
+}
+
+.post-delete {
+    width: 100px;
+    grid-area: dlt;
+    display: flex;
+    justify-content: center;
+    justify-self: flex-end;
+}
+
+.post-delete:hover {
+    background: #f5222d;
+    border: 1px solid #f5222d;
+    color: white;
+}
+
+.post-title {
+    grid-area: title;
+    background: white;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.post-text {
+    min-height: auto;
+    background: white;
+    border-radius: 5px;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    padding: 5px;
+}
+
+.post-text-edit {
+    height: 90%;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    padding: 5px;
+}
+.report-btn {
+    width:100px;
+    /*grid-area: report;*/
+    /*justify-self: end;*/
+    margin-top: 0.8em;
+    margin-right: 1em;
+}
+
+.report-btn:hover {
+    cursor: pointer;
+    background: #f5222d;
+    border-color: #f5222d;
+    color: white;
+}
+.report-submit-button{
+    margin-right: 2px;
+}
+.save-changes-btn{
+    margin-right: 2px;
+    width:150px;
+}
+.comment-btn {
+    width: 100px;
+    /*grid-area: comment;*/
+    /*justify-self: end;*/
+    margin-top: 0.8em;
+    margin-right: 1em;
+}
+
+.comment-btn:hover {
+    cursor: pointer;
+    background: #237804;
+    border-color: #237804;
+    color: white;
+}
+
+.show-comment-btn {
+    width: 150px;
+    margin-top: 0.8em;
+    margin-right: 1em;
+}
+
+.show-comment-btn:hover {
+    cursor: pointer;
+    background: #237804;
+    border-color: #237804;
+    color: white;
+}
+
+.like-dislike-cell {
+    display: flex;
+    flex-direction: row;
+    padding: 3px 5px;
+}
+
+.thumb-icon {
+    /* color: #faad14; */
+    color: linear-gradient(rgb(143, 25, 44), rgb(78, 147, 170));  
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 0.2em
+}
+
+.thumb-icon:hover {
+    cursor: pointer;
+    
+}
+
+.post-like-count {
+    width: fit-content;
+    height: 23px;
+    margin-top: 0.8em;
+    margin-left: 0.2em;
+    font-size:14px;
+}
+
+.post-dislike-count {
+    width: fit-content;
+    height: 23px;
+    margin-top: 0.8em;
+    margin-left: 0.2em;
+    font-size:14px;
+}
+.comment-show-outer-box{
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin-bottom:5px ;
+    border-radius: 10px;
+}
+.comment-content-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.comment-form{
+    display: flex;
+    flex-direction: column;
+}
+.comment-box {
+    background: #f6ffed;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 0.8em;
+    display:none;
+    flex-direction: column;
+}
+
+.comment-title:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px lightgray;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+}
+
+.add-comment {
+    background: #f0f5ff;
+    display: none;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 0.8em;
+}
+
+.comment-content {
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 0.8em;
+    /*display: grid;*/
+    margin: 0.8em;
+    /*grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 0.2fr;*/
+    /*grid-template-areas:*/
+    /*"  c-dp  c-fname c-lname c-lname c-time  c-button c-button"*/
+    /*"  c-dp c-txt c-txt c-txt c-txt c-likes c-likes "*/
+    /*"  . c-txt c-txt c-txt c-txt  c-likes c-likes"*/
+    /*"  . c-txt c-txt c-txt c-txt  . . ";*/
+    /*gap: 5px 5px;*/
+    display: flex;
+    flex-direction: column;
+
+
+}
+.comment-content-show {
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 0.8em;
+    margin: 0.8em;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.comment-edit-box{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.comment-edit-btn-box{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    justify-content: flex-end;
+}
+.comment-box-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.user-info{
+    display: flex;
+    flex-direction: row;
+}
+.user-info-edit{
+    display: flex;
+    flex-direction: row;
+}
+
+.like-box {
+    grid-area: c-likes;
+    display: flex;
+    flex-direction: row;
+}
+.like-box-show {
+    display: flex;
+    flex-direction: row;
+}
+
+.r-1 {
+    display: flex;
+    flex-direction: row;
+    margin: 0.8em 0;
+    padding: 0 40px;
+}
+
+.r-2 {
+    display: flex;
+    flex-direction: row;
+    margin: 0.8em 0;
+    padding: 0 40px;
+}
+
+.comment-author-info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px
+
+}
+.comment-dp {
+    grid-area: c-dp;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+.text-fname-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.c-fname {
+    height: fit-content;
+    background: white;
+    border-radius: 5px;
+    font-family: "Nunito", serif;
+    width: fit-content;
+}
+.c-fname-show {
+    height: fit-content;
+    background: white;
+    border-radius: 5px;
+    color: gray;
+
+}
+
+.c-lname {
+    grid-area: c-lname;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    color: gray;
+    width: 100%;
+}
+
+.c-time {
+    grid-area: c-time;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+    width: 100%;
+}
+
+.c-time-show {
+
+    height: fit-content;
+    background: white;
+    border-radius: 5px;
+    color: black;
+    font-size: 12px;
+
+}
+
+.comment-buttons {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0.8em;
+
+}
+.comment-buttons-show {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.c-edit {
+    margin: 0 0.2em;
+    height: 23px;
+    font-size: 14px;
+    width: fit-content;
+}
+.c-edit-show{
+    margin-right: 0.2em;
+    height: 23px;
+    font-size: 14px;
+    width: 80px;
+}
+
+.c-edit:hover {
+    background: white;
+    border: 1px solid black;
+    color: white;
+}
+
+.c-edit-show:hover {
+    background: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.c-dlt {
+    margin: 0 0.2em;
+    height: 23px;
+    font-size: 14px;
+    text-align: center;
+    width: 80px;
+}
+
+.c-dlt-show {
+    margin-right: 0.2em;
+    height: 23px;
+    font-size: 14px;
+    text-align: center;
+    width: 80px;
+}
+
+.c-dlt:hover .c-dlt-show:hover {
+    background: #237804;
+    border: 1px solid #237804;
+    color: white;
+}
+
+.c-report {
+    margin: 0 0.2em;
+    height: 23px;
+    font-size: 14px;
+    width: 80px;
+}
+
+.c-report-show {
+    /*margin: 0 0.2em;*/
+    height: 23px;
+    font-size: 14px;
+    width: 80px;
+}
+
+.c-report:hover .c-report-show:hover{
+    background: #f5222d;
+    border: 1px solid #f5222d;
+    color: white;
+}
+
+.c-txt {
+    grid-area: c-txt;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    color: gray;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin: 0;
+    resize: none;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+}
+
+.c-txt-show {
+    background: white;
+    border-radius: 10px;
+    color: black;
+    font-family: "Nunito", serif;
+    text-align: center;
+    margin: 5px;
+    resize: none;
+    padding: 10px;
+}
+
+.c-like-count {
+    border: 1px solid lightgray;
+    grid-area: like-count;
+    height: 20px;
+    border-radius: 5px;
+    justify-self: start;
+    align-self: end;
+    padding: 2px;
+    width: 50%;
+    text-align: center;
+}
+.c-like-count-show {
+    height: 20px;
+    border-radius: 5px;
+    justify-self: start;
+    align-self: end;
+    padding: 2px;
+    width: 50%;
+    text-align: center;
+}
+
+.c-like {
+    width: 60%;
+    grid-area: like;
+    place-self: end;
+    height: 23px;
+}
+
+
+.c-like:hover {
+    background: #096dd9;
+    border: 1px solid #096dd9;
+    color: white;
+}
+
+.c-dislike {
+    width: 60%;
+    grid-area: dislike;
+    justify-self: end;
+    height: 23px;
+    margin: 0;
+}
+
+.c-dislike:hover {
+    background: #096dd9;
+    border: 1px solid #096dd9;
+    color: white;
+}
+
+.c-dislike-count {
+    margin: 0;
+    grid-area: dislike-count;
+    height: 20px;
+    border-radius: 5px;
+    justify-self: start;
+    padding: 2px;
+    width: 50%;
+    text-align: center;
+}
+
+.show-comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.comments-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hide-cmnt-btn {
+    margin-top: 0.8em;
+    width: fit-content;
+    margin-left: 15em;
+}
+
+.comments-row > .box-title {
+    margin-left: 21em;
+}
+
+.input-error {
+    border: 1px solid #f5222d !important;
+}
+
+.input-ok {
+    border: 1px solid #237804 !important;
+}
+
+.message-error {
+    color: #f5222d !important;
+    font-weight: 600;
+}
+
+.message-success {
+    color: #237804 !important;
+    font-weight: 600 !important;
+}
+
+.flashMsg {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.flashMsgHide {
+    display: none;
+}
+
+.edit-notice-container {
+    display: none;
+}
+
+.edit-notice-title {
+    text-align: center;
+    margin-bottom: 0 1em;
+}
+
+.edit-del-btn {
+    margin: 0 1em;
+}
+.post-input-btn{
+    width: 100px;
+    margin-right: 0.2em;
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin-top: 5vh;
+    padding-left: 6.7em;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    cursor: pointer;
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+
+.chats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 1.5em;
+    background: #fafafa;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card {
+    cursor: pointer;
+    background: white;
+    box-shadow: 4px 8px 16px lightgray;
+    border-radius: 10px;
+    width: 13vw;
+    height: 45vh;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 0 0.5em;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5s;
+}
+
+.card:hover {
+    box-shadow: 1px 2px 4px gray;
+}
+
+.title {
+    color: black;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.img-container {
+    height: 50%;
+    width: 100%;
+}
+
+.list {
+    position: relative;
+    top: 1.5em;
+    font-size: 15px;
+    color: gray;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.list > li {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 3px 15px;
+    padding: 1px 0;
+    transition: all ease-in-out 0.5s;
+}
+
+.list > li:hover {
+    color: white;
+    background: gray;
+}
