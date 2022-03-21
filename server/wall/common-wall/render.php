@@ -137,8 +137,14 @@ if (mysqli_num_rows($results) > 0) {
                 <!-- post edit-->
                         
                 <form class='post-content-row1-edit'  id='post-edit-show-{$row['Id']}'>
-                    <div class='flex-row'>
-                    <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                    <div class='flex-row'>";
+            if ($_SESSION['PicSrc'] == 'user-default.png') {
+                echo"
+                    <img src='../assets/images/{$_SESSION['PicSrc']}' alt='' class='dp-box'>
+                    ";
+            }else {
+                echo"<img src='../uploads/profile-pics/{$_SESSION['PicSrc']}' alt='' class='dp-box'>";
+            } echo"
                     <div class='name-time-flex'> 
                         <div class='f-name-1'>{$row1['FirstName']} {$row1['LastName']}</div> 
                         <div class='post-time-1'>{$row['Timestamp']}</div>
@@ -324,8 +330,15 @@ if (mysqli_num_rows($results) > 0) {
 
                         <!-- post edit-->
                         <form class='post-content-row1-edit'  id='post-edit-show-{$row['Id']}'>
-                            <div class='flex-row'>
-                                <img src='../uploads/profile-pics/617684565c2019.51339900.jpg' alt='' class='dp-box' >
+                            <div class='flex-row'>";
+            if ($_SESSION['PicSrc'] == 'user-default.png') {
+                echo"
+                    <img src='../assets/images/{$_SESSION['PicSrc']}' alt='' class='dp-box'>
+                    ";
+            }else {
+                echo"<img src='../uploads/profile-pics/{$_SESSION['PicSrc']}' alt='' class='dp-box'>";
+            }
+            echo"
                             <div class='name-time-flex'> 
                                 <div class='f-name-1'>{$row1['FirstName']} {$row1['LastName']}</div> 
                                 <div class='post-time-1'>{$row['Timestamp']}</div>
