@@ -30,7 +30,17 @@ $results3 = mysqli_query($conn, $query3);
 <div class='comment-show-outer-box'>
         <div class='comment-content-wrapper' id='comment-content-wrapper-{$row3['Id']}'>
             <div class='user-info'>
-                <img src='../uploads/profile-pics/{$row3['PicSrc']}' alt='' class='comment-dp'>
+            ";
+        if ($row3['PicSrc'] == 'user-default.png') {
+            echo "
+                                        <img src='../assets/images/{$row3['PicSrc']}' alt='' class='comment-dp'>
+                                        ";
+        } else {
+            echo "
+                                        <img src='../uploads/profile-pics/{$row3['PicSrc']}' alt='' class='comment-dp'>
+                                        ";
+        }
+              echo "
                 <div class='comment-author-info'>
                     <div class='c-fname-show '>{$row3['FirstName']} {$row3['LastName']}</div>
                     <div class='c-time-show'>{$row3['Timestamp']}</div>

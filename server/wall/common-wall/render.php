@@ -172,9 +172,20 @@ if (mysqli_num_rows($results) > 0) {
                                 <div class='box-title '>Add Comment</div>
                                 <form class='comment-content' id='add-comment-form-{$row['Id']}'   enctype='multipart/form-data'>
                                     <div class='user-info'>
-                                        <img src='' alt='' class='comment-dp'>
+                                        ";
+
+            if ($_SESSION['PicSrc'] == 'user-default.png') {
+                echo "
+                                        <img src='../assets/images/{$_SESSION['PicSrc']}' alt='' class='comment-dp'>
+                                        ";
+            } else {
+                echo "
+                                        <img src='../uploads/profile-pics/{$_SESSION['PicSrc']}' alt='' class='comment-dp'>
+                                        ";
+            }
+                                        echo "
                                         <div class='text-fname-box'>
-                                            <div class='c-fname field-hover'> First Name</div>
+                                            <div class='c-fname field-hover'>{$_SESSION['FirstName']} {$_SESSION['LastName']}</div>
                                             <input type='text' value='{$row['Id']}' name='post-id-no' hidden>
                                             <textarea class='c-txt field-hover' placeholder='Enter your comment here' name='comment-body' id='comment-body'></textarea> 
                                         </div>
@@ -346,9 +357,19 @@ if (mysqli_num_rows($results) > 0) {
                                 <div class='box-title '>Add Comment</div>
                                 <form class='comment-content' id='add-comment-form-{$row['Id']}'   enctype='multipart/form-data'>
                                     <div class='user-info'>
-                                        <img src='' alt='' class='comment-dp'>
+                                    ";
+                            if ($_SESSION['PicSrc'] == 'user-default.png') {
+                                echo "
+                                        <img src='../assets/images/{$_SESSION['PicSrc']}' alt='' class='comment-dp'>
+                                        ";
+                            } else {
+                                echo "
+                                        <img src='../uploads/profile-pics/{$_SESSION['PicSrc']}' alt='' class='comment-dp'>
+                                        ";
+                            }
+                            echo "
                                         <div class='text-fname-box'>
-                                            <div class='c-fname field-hover'> First Name</div>
+                                            <div class='c-fname field-hover'>{$_SESSION['FirstName']} {$_SESSION['LastName']}</div>
                                             <input type='text' value='{$row['Id']}' name='post-id-no' hidden>
                                             <textarea class='c-txt field-hover' placeholder='Enter your comment here' name='comment-body' id='comment-body'></textarea> 
                                         </div>

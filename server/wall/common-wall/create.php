@@ -24,9 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $errors[] = 'Extension not allowed: ' . $file_name . ' ' . $file_type;
             }
 
-            if ($file_size > 2097152) {
-                $errors[] = 'File size exceeds limit: ' . $file_name . ' ' . $file_type;
-            }
+//            if ($file_size > 2097152) {
+//                $errors[] = 'File size exceeds limit: ' . $file_name . ' ' . $file_type;
+//            }
 
             if (empty($errors)) {
                 move_uploaded_file($file_tmp, $file);
