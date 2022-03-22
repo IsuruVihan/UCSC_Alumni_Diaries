@@ -1,6 +1,7 @@
 <?php
 
 include('../../../../db/db-conn.php');
+include('../../../../server/session.php');
 
 $Email = trim($_POST['Email']);
 
@@ -8,11 +9,11 @@ $query3 = "
     SELECT projects.Name, committeemembers.Type
     FROM projects
     INNER JOIN committeemembers ON projects.Id=committeemembers.ProjectId
-    WHERE projects.Status='Ongoing' OR projects.Status='Completed'
+    WHERE (projects.Status='Ongoing' OR projects.Status='Completed') AND committeemembers.Email = '$Email'
 ";
 $results3 = mysqli_query($conn, $query3);
 
-$query4 = "SELECT DonationFor, Amount FROM cashdonations WHERE DonorEmail={$Email}";
+$query4 = "SELECT DonationFor, Amount FROM cashdonations WHERE DonorEmail={$_SESSION['Email']}";
 $results4 = mysqli_query($conn, $query4);
 
 $query = "SELECT * FROM registeredmembers WHERE Email='{$Email}'";
@@ -46,12 +47,20 @@ while ($row = mysqli_fetch_assoc($results)) {
                         <div class='due-date'>{$row['SubscriptionDue']}</div>
                         <button class='recharge-report-btn btn'>Recharge Report</button>
                     </div>
+        ";
+    
+        if ($row['Email'] != $_SESSION['Email']) {
+            echo "
                     <div class='section-3'>
                         <div class='sec-row-2'>
+                            <button class='ban-btn btn' onclick=BanMemberAccount('{$row['Email']}')>Ban</button>
                             <button class='remove-btn btn' onclick=RemoveMemberAccount('{$row['Email']}')>Remove</button>
-                            <button class='unban-btn btn' onclick=UnbanMemberAccount('{$row['Email']}')>Unban</button>
                         </div>
                     </div>
+            ";
+        }
+        
+        echo "
                 </div>
                 <div class='container-2'>
                     <div class='full-name details-field'>{$row['NameWithInitials']}</div>
@@ -116,8 +125,8 @@ while ($row = mysqli_fetch_assoc($results)) {
             while ($row3 = mysqli_fetch_assoc($results3)) {
                 echo "
                     <div class='result'>
-                        <div class='project-name'>{$row3['projects.Name']}</div>
-                        <div class='position'>{$row3['committeemembers.Type']}</div>
+                        <div class='project-name'>{$row3['Name']}</div>
+                        <div class='position'>{$row3['Type']}</div>
                     </div>
                 ";
             }
@@ -159,12 +168,20 @@ while ($row = mysqli_fetch_assoc($results)) {
                         <div class='due-date'>{$row['SubscriptionDue']}</div>
                         <button class='recharge-report-btn btn'>Recharge Report</button>
                     </div>
+        ";
+        
+        if ($row['Email'] != $_SESSION['Email']) {
+            echo "
                     <div class='section-3'>
                         <div class='sec-row-2'>
                             <button class='ban-btn btn' onclick=BanMemberAccount('{$row['Email']}')>Ban</button>
                             <button class='remove-btn btn' onclick=RemoveMemberAccount('{$row['Email']}')>Remove</button>
                         </div>
                     </div>
+            ";
+        }
+        
+        echo "
                 </div>
                 <div class='container-2'>
                     <div class='full-name details-field'>{$row['NameWithInitials']}</div>

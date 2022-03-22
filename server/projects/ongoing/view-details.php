@@ -33,12 +33,13 @@
     $query8 = "SELECT SpentAmount FROM projectcashspendings WHERE ProjectId='{$Id}' AND Status='Paid'";
     $query9 = "SELECT * FROM projectcashspendings WHERE ProjectId='{$Id}'";
     $query10 = "SELECT SpentAmount, Description, BillSrc, Timestamp FROM projectcashspendings WHERE ProjectId='{$Id}' AND Status = 'Paid'";
-    $query11 = "
-        SELECT projectitems.Id, ItemName, Quantity, Status FROM projectitems
-        LEFT JOIN projectitemspendings
-        ON projectitems.Id = projectitemspendings.ItemId
-        WHERE ProjectId='{$Id}'
-    ";
+//    $query11 = "
+//        SELECT projectitems.Id, ItemName, Quantity, Status FROM projectitems
+//        LEFT JOIN projectitemspendings
+//        ON projectitems.Id = projectitemspendings.ItemId
+//        WHERE ProjectId='{$Id}'
+//    ";
+    $query11 = "SELECT Id, ItemName, Quantity FROM projectitems WHERE ProjectId='{$Id}'";
     $query12 = "SELECT Id, ItemName FROM projectitems WHERE ProjectId='{$Id}' AND Quantity > '0'";
     $query13 = "
         SELECT projectitemspendings.Id, ItemName, SpentQuantity, Description, BillSrc, Status, Timestamp
