@@ -15,7 +15,7 @@
     $results4 = mysqli_query($conn, $query4);
     
     $query6 = "
-        SELECT Email, FirstName, LastName, Batch FROM registeredmembers WHERE Availability='1' AND AccType='Member'
+        SELECT Email, FirstName, LastName, Batch, PicSrc FROM registeredmembers WHERE Availability='1' AND AccType='Member'
     ";
     $results6 = mysqli_query($conn, $query6);
     $results7 = mysqli_query($conn, $query6);
@@ -130,7 +130,7 @@
         
                 if (mysqli_num_rows($results2) > 0) {
                     while ($row2 = mysqli_fetch_assoc($results2)) {
-                        $query3 = "SELECT FirstName, LastName, Batch FROM registeredmembers WHERE Email='{$row2['Email']}'";
+                        $query3 = "SELECT FirstName, LastName, Batch, PicSrc FROM registeredmembers WHERE Email='{$row2['Email']}'";
                         $results3 = mysqli_query($conn, $query3);
                         while ($row3 = mysqli_fetch_assoc($results3)) {
                             $ArgumentString = $row2['Email'] . "," . "$Id";
@@ -547,7 +547,7 @@
                                     ";
                                 } else {
                                     echo "
-                                    <img src='{$row5['PicSrc']}' alt='coord-pic' height='100%'/>
+                                    <img src='../../../uploads/profile-pics/{$row5['PicSrc']}' alt='coord-pic' height='100%'/>
                                     ";
                                 }
                     
