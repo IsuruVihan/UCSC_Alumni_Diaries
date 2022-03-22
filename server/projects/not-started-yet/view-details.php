@@ -269,7 +269,7 @@
                                     ";
                                 } else {
                                     echo "
-                                    <img src='{$row5['PicSrc']}' alt='coord-pic' height='100%'/>
+                                    <img src='../../../uploads/profile-pics/{$row5['PicSrc']}' alt='coord-pic' height='100%'/>
                                     ";
                                 }
                         

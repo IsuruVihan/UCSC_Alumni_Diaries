@@ -17,7 +17,7 @@
     border-radius: 5px;
     display: grid;
     grid-template-rows: [row1] 100% [row2];
-    grid-template-columns: [col1] 20% [col2] 80% [col3];
+    grid-template-columns: [col1] 25% [col2] 75% [col3];
 }
 
 .coordinator-coord-pic {
