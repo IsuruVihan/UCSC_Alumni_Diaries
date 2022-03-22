@@ -21,10 +21,20 @@
         echo "
             <div class='results'>
                 <div class='result'>
-                    <img src='../assets/images/{$row['PicSrc']}' height='100%' alt='user' class='coord-pic'/>
-                    <div class='fname'>{$row['FirstName']}</div>
+                ";
+                 if ($row['PicSrc']==='user-default.png') {
+                                    echo "
+                                    <img src='../assets/images/user-default.png' alt='coord-pic' height='100%'/>
+                                    ";
+                                } else {
+                                    echo "
+                                    <img src='../uploads/profile-pics/{$row['PicSrc']}' alt='coord-pic' height='100%'/>
+                                    ";
+                                }
+                    echo"<div class='fname'>{$row['FirstName']}</div>
                     <div class='lname'>{$row['LastName']}</div>
                 </div>
             </div>
-        ";
+            ";
+
     }

@@ -65,7 +65,7 @@
                     echo "
                     <li class='link'>
                         <a href='../pages/notifications.php' class='anchor-tag'>
-                            Notifications <b>{$count}</b>
+                            <b>Notifications</b> <b style='background: red; border-radius: 100%; color: white; padding: 3px'>{$count}</b>
                         </a>
                     </li>
                     ";

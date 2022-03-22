@@ -19,8 +19,20 @@
                 <div class='title project-name-div' id='project-name-div'>{$row['Name']}</div>
                 <div class='project-status'>Started on: {$row['Timestamp']}</div>
                 <div class='project-description' id='project-description'>{$row['Description']}</div>
-                <div class='coord'>
-                    <img src='../assets/images/{$row2['PicSrc']}' height='100%' alt='user' class='coord-pic'/>
+                <div class='coord'>";
+
+            if ($row2['PicSrc']==='user-default.png') {
+                echo "
+                                    <img src='../assets/images/user-default.png' alt='coord-pic' height='100%'/>
+                                    ";
+            } else {
+                echo "
+                                    <img src='../uploads/profile-pics/{$row2['PicSrc']}' alt='coord-pic' height='100%'/>
+                                    ";
+            }
+
+            echo "
+                    
                     <p class='coord-fname'>{$row2['FirstName']}</p>
                     <p class='coord-lname'>{$row2['LastName']}</p>
                 </div>

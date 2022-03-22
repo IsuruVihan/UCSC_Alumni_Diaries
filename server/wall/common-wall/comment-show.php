@@ -30,7 +30,17 @@ $results3 = mysqli_query($conn, $query3);
 <div class='comment-show-outer-box'>
         <div class='comment-content-wrapper' id='comment-content-wrapper-{$row3['Id']}'>
             <div class='user-info'>
+            ";
+        if ($row3['PicSrc'] == 'user-default.png') {
+            echo "
+                <img src='../assets/images/{$row3['PicSrc']}' alt='' class='comment-dp'>
+                 ";
+        } else {
+            echo "
                 <img src='../uploads/profile-pics/{$row3['PicSrc']}' alt='' class='comment-dp'>
+                 ";
+        }
+        echo "
                 <div class='comment-author-info'>
                     <div class='c-fname-show '>{$row3['FirstName']} {$row3['LastName']}</div>
                     <div class='c-time-show'>{$row3['Timestamp']}</div>
@@ -102,8 +112,15 @@ $results3 = mysqli_query($conn, $query3);
 
         <!--comment edit-->
         <form class='comment-edit-box' id='comment-edit-box-{$row3['Id']}' >     
-                <div class='user-info-edit'>
-                    <img src='' alt='' class='comment-dp'>
+                <div class='user-info-edit'>";
+        if ($_SESSION['PicSrc'] == 'user-default.png') {
+            echo"
+                    <img src='../assets/images/{$_SESSION['PicSrc']}' alt='' class='comment-dp'>
+                    ";
+        }else {
+            echo"<img src='../uploads/profile-pics/{$_SESSION['PicSrc']}' alt='' class='comment-dp'>";
+        }
+            echo"
                     <div class='comment-author-info'>
                         <div class='c-fname-show '>{$row3['FirstName']} {$row3['LastName']}</div>
                         <div class='c-time-show'>{$row3['Timestamp']}</div>
