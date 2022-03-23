@@ -9,6 +9,14 @@
 <?php
 
 if (isset($_SESSION["AccType"]) && $_SESSION["AccType"]=="TopBoard") {
+    if ($_SESSION['Banned']) {
+        echo "
+        <p class='banned-account'>
+            Your account has been banned. Contact top board committee of UCSC Alumni Association for more details.
+        </p>
+        ";
+    }
+    
     echo "
         <div class='main-container'>
             <p class='main-title'>
@@ -60,6 +68,14 @@ if (isset($_SESSION["AccType"]) && $_SESSION["AccType"]=="TopBoard") {
         </div>
     ";
 } elseif (isset($_SESSION["AccType"]) && $_SESSION["AccType"]=="Member") {
+    if ($_SESSION['Banned']) {
+        echo "
+        <p class='banned-account'>
+            Your account has been banned. Contact top board committee of UCSC Alumni Association for more details.
+        </p>
+        ";
+    }
+    
     echo "
         <div class='main-container'>
             <p class='main-title'>

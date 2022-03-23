@@ -33,7 +33,7 @@
         </div>
     </a>
 <?php
-    if (isset($_SESSION['Email'])) {
+    if (isset($_SESSION['Email']) && !$_SESSION['Banned']) {
         echo "
     <a class='card-link' href='./not-started-yet-projects.php'>
         <div class='card' id='accounts-card'>

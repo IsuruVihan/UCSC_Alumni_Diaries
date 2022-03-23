@@ -191,3 +191,14 @@
 .link-4:hover {
     color: #ffd666;
 }
+
+.banned-account {
+    border: 2px solid red;
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: red;
+    border-radius: 5px;
+}

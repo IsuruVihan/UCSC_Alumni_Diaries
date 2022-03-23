@@ -3,7 +3,7 @@
 <?php include('../db/db-conn.php'); ?>
 
 <?php
-    if (!(isset($_SESSION['Email']) && $_SESSION['AccType'] == 'TopBoard')) {
+    if (!(isset($_SESSION['Email']) && $_SESSION['AccType'] == 'TopBoard') || $_SESSION['Banned']) {
         header('Location: home.php');
     }
 ?>
