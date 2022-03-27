@@ -21,9 +21,9 @@ while ($row = mysqli_fetch_assoc($results)) {
                 //notification
                 $query3 = "SELECT Email FROM registeredmembers WHERE AccType='TopBoard'";
                 $results3 = mysqli_query($conn, $query3);
-                
+            
                 if (mysqli_num_rows($results3) > 0) {
-                    while ($row3 = mysqli_fetch_assoc($results3)) {  
+                    while ($row3 = mysqli_fetch_assoc($results3)) {
                         $query4 = "INSERT INTO notifications (Email,Message)   
                         VALUES ('{$row3['Email']}','Member Account of {$row['FirstName']} {$row['LastName']} has been unbanned by {$_SESSION['Email']}')
                         ";
@@ -31,20 +31,21 @@ while ($row = mysqli_fetch_assoc($results)) {
                     
                     }
                 }
-    
-            echo "
+            
+                echo "
                 <div class='success-message'>
                     <b>{$row['FirstName']} {$row['LastName']}</b> member account has been unbanned
                 </div>
             ";
-        } else {
-            echo "
+            } else {
+                echo "
                 <div class='error-message'>Server Error: " . mysqli_error($conn) . "</div>
             ";
-        }
-    } else {
-        echo "
+            }
+        } else {
+            echo "
             <div class='error-message'>Email not sent</div>
         ";
+        }
     }
 }

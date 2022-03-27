@@ -53,7 +53,7 @@ while ($row = mysqli_fetch_assoc($results)) {
             echo "
                     <div class='section-3'>
                         <div class='sec-row-2'>
-                            <button class='ban-btn btn' onclick=BanMemberAccount('{$row['Email']}')>Ban</button>
+                            <button class='unban-btn btn' onclick=UnbanMemberAccount('{$row['Email']}')>Unban</button>
                             <button class='remove-btn btn' onclick=RemoveMemberAccount('{$row['Email']}')>Remove</button>
                         </div>
                     </div>
