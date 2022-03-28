@@ -20,7 +20,7 @@
                 <div class='project-status'>Started on: {$row['Timestamp']}</div>
                 <div class='project-description' id='project-description'>{$row['Description']}</div>
                 <div class='coord'>
-                    <img src='../assets/images/{$row2['PicSrc']}' height='100%' alt='user' class='coord-pic'/>
+                    <img src='../uploads/profile-pics/{$row2['PicSrc']}' height='100%' alt='user' class='coord-pic'/>
                     <p class='coord-fname'>{$row2['FirstName']}</p>
                     <p class='coord-lname'>{$row2['LastName']}</p>
                 </div>

@@ -373,8 +373,6 @@
                 const form = document.getElementById(ReportNoHash);
                 const formDataFive = new FormData(form);
 
-                
-
                 fetch(url, {
                     method: 'POST',
                     body: formDataFive,

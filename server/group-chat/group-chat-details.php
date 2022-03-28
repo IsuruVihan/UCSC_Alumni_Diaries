@@ -135,7 +135,7 @@ if (mysqli_num_rows($results3) > 0 ) {
             }else{
                 if ($row3["SenderEmail"] == $email) {
                     echo "
-                    div class='sent-message-line' id='sent-message-line'>
+                    <div class='sent-message-line' id='sent-message-line'>
                         <div class='sent-message' id='sent-message'>
                             <div class='delete-msg-container'>
                                 <i class='fas fa-times-circle delete-msg-icon' onclick=onClickDeleteMsg('{$data}')></i>
@@ -216,7 +216,7 @@ if(mysqli_num_rows($result2) > 0){
     while($row2 = mysqli_fetch_assoc($result2)){
         if($row2["PicSrc"] === 'user-default.png'){   
             echo"<div class='available-users-item'>
-                    <img src='../../assets/images/user-default.png' width='10%' class='user-pic' alt='user-pic'>
+                    <img src='../assets/images/user-default.png' width='10%' class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>".$row2["FirstName"]." ".$row2["LastName"]."</div>
@@ -228,7 +228,7 @@ if(mysqli_num_rows($result2) > 0){
                     </div>";
         }else{
             echo"<div class='available-users-item'>
-                    <img src='../../assets/images/".$row2["PicSrc"]."' width='10%' class='user-pic' alt='user-pic'>
+                    <img src='../../uploads/profile-pics/".$row2["PicSrc"]."' width='10%' class='user-pic' alt='user-pic'>
                     <div class='names-btn-container01'>
                         <div class='names-container02'>
                             <div class='a-first-name'>".$row2["FirstName"]." ".$row2["LastName"]."</div>

@@ -21,7 +21,7 @@
         echo "
             <div class='results'>
                 <div class='result'>
-                    <img src='../assets/images/{$row['PicSrc']}' height='100%' alt='user' class='coord-pic'/>
+                    <img src='../uploads/profile-pics/{$row['PicSrc']}' height='100%' alt='user' class='coord-pic'/>
                     <div class='fname'>{$row['FirstName']}</div>
                     <div class='lname'>{$row['LastName']}</div>
                 </div>
